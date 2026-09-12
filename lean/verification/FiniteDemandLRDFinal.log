@@ -1,0 +1,5 @@
+'OrdinalFormal.LRDFinal.valid_accessible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.LRDFinal.seed_accessible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.LRDFinal.standard_wellFounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.LRDFinal.standard_isWellOrder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.LRDFinal.standard_step_wellFounded' depends on axioms: [propext, Classical.choice, Quot.sound]

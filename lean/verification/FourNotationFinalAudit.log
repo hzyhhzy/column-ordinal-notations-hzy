@@ -1,0 +1,25 @@
+OrdinalFormal.YFiniteDemand.expansion_wellFounded : WellFounded (ZeroY.ExpansionStep OneY.Numeric.expand)
+OrdinalFormal.YFiniteDemand.generated_strictWellOrder :
+  YesMetaZFC.BMS.StabilityFrame.StrictWellOrder OneY.Numeric.GeneratedExpr OneY.Numeric.GeneratedLt
+OrdinalFormal.YFiniteDemand.with_top_isWellOrder :
+  IsWellOrder OrdinalFormal.YFiniteDemand.WithTop OrdinalFormal.YFiniteDemand.WithTopLt
+OrdinalFormal.RPDFiniteDemand.standard_strictWellOrder :
+  IsWellOrder OrdinalFormal.RPDWellOrderingReduction.StandardDiagram OrdinalFormal.RPDWellOrderingReduction.StandardLt
+OrdinalFormal.RPDFiniteDemand.standard_with_top_strictWellOrder :
+  IsWellOrder OrdinalFormal.RPDTermOrder.StandardTerm OrdinalFormal.RPDTermOrder.Lt
+OrdinalFormal.LRDFinal.standard_isWellOrder :
+  IsWellOrder OrdinalFormal.LRDWellOrderingReduction.StandardDiagram OrdinalFormal.LRDWellOrderingReduction.StandardLt
+OrdinalFormal.Omega3Final.standard_isWellOrder :
+  IsWellOrder OrdinalFormal.Omega3WellOrderingReduction.StandardDiagram
+    OrdinalFormal.Omega3WellOrderingReduction.StandardLt
+OrdinalFormal.Omega3Final.with_top_isWellOrder :
+  IsWellOrder OrdinalFormal.Omega3WellOrderingReduction.StandardTerm OrdinalFormal.Omega3WellOrderingReduction.TermLt
+'OrdinalFormal.YFiniteDemand.expansion_wellFounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.YFiniteDemand.generated_strictWellOrder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.YFiniteDemand.with_top_isWellOrder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.RPDFiniteDemand.standard_with_top_strictWellOrder' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OrdinalFormal.LRDFinal.standard_isWellOrder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.Omega3Final.standard_isWellOrder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.Omega3Final.with_top_isWellOrder' depends on axioms: [propext, Classical.choice, Quot.sound]

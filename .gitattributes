@@ -1,0 +1,8 @@
+# Keep text checkouts consistent across platforms.
+* text=auto eol=lf
+
+# The release checker verifies the original NER scripts byte for byte.
+*.ne-rewritten.js -text
+
+# ReportLab PDFs can be ASCII-only but must never undergo text conversion.
+*.pdf binary

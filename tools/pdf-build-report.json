@@ -1,0 +1,66 @@
+[
+  {
+    "source": "notations/RPD/definition.md",
+    "pdf": "notations/RPD/definition.pdf",
+    "pages": 3,
+    "bytes": 580872,
+    "sha256": "4af1914c42cebada87c85d137993d616cb3d529edd36173a764c7790d1020092",
+    "warnings": []
+  },
+  {
+    "source": "notations/RPD/definition.zh-CN.md",
+    "pdf": "notations/RPD/definition.zh-CN.pdf",
+    "pages": 3,
+    "bytes": 672707,
+    "sha256": "ac03502ab970a411b98b8ea62e240ec576f29b86663b7ab0f0c757b02bce9ccc",
+    "warnings": []
+  },
+  {
+    "source": "notations/LRD/definition.md",
+    "pdf": "notations/LRD/definition.pdf",
+    "pages": 3,
+    "bytes": 580040,
+    "sha256": "2f4f6b768bda1e33739f4420d2bc6802763ed5f4a731ac25f407306e1326882e",
+    "warnings": []
+  },
+  {
+    "source": "notations/LRD/definition.zh-CN.md",
+    "pdf": "notations/LRD/definition.zh-CN.pdf",
+    "pages": 3,
+    "bytes": 683668,
+    "sha256": "0a1d200c2d8b5cc1b6b24a3a2bed00dc76e034b9e0f47fca5e889bf3804a8a9b",
+    "warnings": []
+  },
+  {
+    "source": "notations/Omega-LRD3/definition.md",
+    "pdf": "notations/Omega-LRD3/definition.pdf",
+    "pages": 4,
+    "bytes": 568380,
+    "sha256": "90e502b184be5a1da70a54e8a06fb0e6a2403f75c087847ac7fa72ed21dd3c47",
+    "warnings": []
+  },
+  {
+    "source": "notations/Omega-LRD3/definition.zh-CN.md",
+    "pdf": "notations/Omega-LRD3/definition.zh-CN.pdf",
+    "pages": 3,
+    "bytes": 684194,
+    "sha256": "6aa4832776225aa378772b826294f7fb8e32bee957fe11ebb65a047d8dc0976c",
+    "warnings": []
+  },
+  {
+    "source": "proofs/paper/well-ordering.md",
+    "pdf": "proofs/paper/well-ordering.pdf",
+    "pages": 13,
+    "bytes": 1780987,
+    "sha256": "d1a27d2ff86c554884712892ed1c688a3cd90413318e98ef46ce5c6046f40280",
+    "warnings": []
+  },
+  {
+    "source": "proofs/paper/well-ordering.zh-CN.md",
+    "pdf": "proofs/paper/well-ordering.zh-CN.pdf",
+    "pages": 9,
+    "bytes": 1852867,
+    "sha256": "af2a03a64daab6bcae5aa5d62e43e2e737301dbe65a48564aeb010e37a2371fa",
+    "warnings": []
+  }
+]

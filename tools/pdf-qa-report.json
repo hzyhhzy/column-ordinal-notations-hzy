@@ -1,0 +1,49 @@
+{
+  "date": "2026-09-13",
+  "renderer": "Poppler pdftoppm, 95 dpi",
+  "scope": "All eight delivered PDFs, after final formula and pagination fixes.",
+  "visual_review": "All page contact sheets inspected; selected dense formula and Chinese pages inspected at page resolution.",
+  "files": [
+    {
+      "pdf": "notations/LRD/definition.pdf",
+      "pages": 3,
+      "bounds_issues": []
+    },
+    {
+      "pdf": "notations/LRD/definition.zh-CN.pdf",
+      "pages": 3,
+      "bounds_issues": []
+    },
+    {
+      "pdf": "notations/Omega-LRD3/definition.pdf",
+      "pages": 4,
+      "bounds_issues": []
+    },
+    {
+      "pdf": "notations/Omega-LRD3/definition.zh-CN.pdf",
+      "pages": 3,
+      "bounds_issues": []
+    },
+    {
+      "pdf": "notations/RPD/definition.pdf",
+      "pages": 3,
+      "bounds_issues": []
+    },
+    {
+      "pdf": "notations/RPD/definition.zh-CN.pdf",
+      "pages": 3,
+      "bounds_issues": []
+    },
+    {
+      "pdf": "proofs/paper/well-ordering.pdf",
+      "pages": 13,
+      "bounds_issues": []
+    },
+    {
+      "pdf": "proofs/paper/well-ordering.zh-CN.pdf",
+      "pages": 9,
+      "bounds_issues": []
+    }
+  ],
+  "total_pages": 41
+}

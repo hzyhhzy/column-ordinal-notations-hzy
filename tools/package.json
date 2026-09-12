@@ -1,0 +1,10 @@
+{
+  "name": "ordinal-notations-document-tools",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Local PDF formula rendering; not required by the expanders or Lean proofs.",
+  "dependencies": {
+    "mathjax-full": "3.2.2",
+    "sharp": "0.35.4"
+  }
+}
