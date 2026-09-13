@@ -1,4 +1,4 @@
-"""Check bilingual entry points, relative links, selected scripts, and Lean closure.
+"""Check bilingual files, links, snapshots, Lean closure, and verification receipts.
 
 Uses only the standard library. It does not install packages or run expansions.
 """
@@ -16,6 +16,7 @@ NER_HASHES = {
     'notations/RPD/RPD-mountain.ne-rewritten.js': 'a679d2a0e081729f628cebc694379925233acab4c96bfb6d05ea8f83f1c1c24b',
     'notations/LRD/LRD.ne-rewritten.js': '394fe4763e82708a99d66c2d88d3926c86c4be92ec35174b9205a292550740b1',
     'notations/Omega-LRD3/Omega-LRD3.ne-rewritten.js': 'fe33b1a35891e9efb9eb5932ab94456053769b6b58df41ea9f36eb57a262f3ab',
+    'notations/ARD/ARD-arcs.ne-rewritten.js': 'bf354fb3540e1971267ccf05e30703b36a72b80fd12c1a72c5152e0d38007f8d',
 }
 
 
@@ -26,6 +27,80 @@ def release_files(folder=ROOT):
                 yield from release_files(child)
         else:
             yield child
+
+
+def sha256_lf(path):
+    return hashlib.sha256(path.read_bytes().replace(b'\r\n', b'\n')).hexdigest()
+
+
+def check_lean_receipt(problems):
+    """Reject a successful but stale build record; this does not rerun Lean."""
+    folder = ROOT/'lean'
+    manifest = json.loads((folder/'sources.json').read_text(encoding='utf-8'))
+    receipt = json.loads((folder/'VERIFICATION.json').read_text(encoding='utf-8'))
+    modules = receipt.get('modules', {})
+    expected = manifest['modules']
+    if receipt.get('complete') is not True:
+        problems.append('Lean verification receipt is incomplete')
+    if set(modules) != set(expected):
+        problems.append('Lean verification receipt does not cover the current source closure')
+    if receipt.get('total_proof_modules') != len(expected):
+        problems.append('Lean verification receipt has a stale module count')
+    if receipt.get('axiom_reports') != sum(record['axiom_reports'] for record in modules.values()):
+        problems.append('Lean verification receipt has an inconsistent axiom-report total')
+    version = receipt.get('compiler_version_output', '')
+    if not version or version.strip() != receipt.get('compiler'):
+        problems.append('Lean verification receipt lacks consistent raw compiler-version output')
+    fingerprints, visiting = {}, set()
+
+    def fingerprint(module):
+        if module not in expected:
+            return module
+        if module in fingerprints:
+            return fingerprints[module]
+        if module in visiting:
+            raise ValueError(f'Cycle in Lean verification manifest: {module}')
+        visiting.add(module)
+        record = expected[module]
+        value = hashlib.sha256((record['sha256'] + version + ''.join(
+            fingerprint(dep) for dep in record['imports'])).encode()).hexdigest()
+        visiting.remove(module)
+        fingerprints[module] = value
+        return value
+
+    for module in expected:
+        if fingerprint(module) != modules.get(module, {}).get('fingerprint'):
+            problems.append(f'Stale Lean module/dependency fingerprint: {module}')
+    for relative, field in (
+        ('sources.json', 'sources_manifest_sha256_lf'),
+        ('build.py', 'build_script_sha256_lf'),
+        ('lakefile.lean', 'lakefile_sha256_lf'),
+        ('lake-manifest.json', 'lake_manifest_sha256_lf'),
+    ):
+        if sha256_lf(folder/relative) != receipt.get(field):
+            problems.append(f'Stale Lean verification input hash: {relative}')
+    logs = receipt.get('final_logs', {})
+    required = {'FiniteDemandYFinal', 'FiniteDemandRPDFinal', 'FiniteDemandLRDFinal',
+                'OmegaLRD3Final', 'ARDFinal', manifest['target']}
+    if not required <= set(logs):
+        problems.append('Lean verification receipt is missing current final theorem logs')
+    allowed_axioms = {'propext', 'Classical.choice', 'Quot.sound'}
+    for module, record in logs.items():
+        path = (folder/record['path']).resolve()
+        if not path.is_relative_to((folder/'verification').resolve()) or not path.is_file():
+            problems.append(f'Invalid Lean final-log path: {module}')
+            continue
+        if sha256_lf(path) != record['sha256_lf']:
+            problems.append(f'Stale Lean final-log hash: {module}')
+        content = path.read_text(encoding='utf-8')
+        reports = re.findall(
+            r"'([^']+)' (?:depends on axioms:\s*\[([^\]]*)\]|does not depend on any axioms)", content)
+        if (len(reports) != record['axiom_reports'] or
+                len(reports) != modules.get(module, {}).get('axiom_reports')):
+            problems.append(f'Incomplete Lean final-log axiom reports: {module}')
+        for _, report in reports:
+            if {item.strip() for item in report.split(',') if item.strip()} - allowed_axioms:
+                problems.append(f'Unexpected axiom in Lean final log: {module}')
 
 
 def main():
@@ -59,15 +134,16 @@ def main():
                 problems.append(f'Broken link: {path.relative_to(ROOT)} -> {target}')
     expected_pdfs = {
         f'notations/{notation}/definition{lang}.pdf'
-        for notation in ('RPD','LRD','Omega-LRD3') for lang in ('','.zh-CN')
-    } | {f'proofs/paper/well-ordering{lang}.pdf' for lang in ('','.zh-CN')}
+        for notation in ('RPD','LRD','Omega-LRD3','ARD') for lang in ('','.zh-CN')
+    } | {f'proofs/paper/{paper}{lang}.pdf'
+         for paper in ('well-ordering','ard-well-ordering') for lang in ('','.zh-CN')}
     actual_pdfs = {p.relative_to(ROOT).as_posix() for p in pdfs}
     if actual_pdfs != expected_pdfs:
         problems.append(f'PDF inventory mismatch: {actual_pdfs ^ expected_pdfs}')
     for path in pdfs:
         if not path.with_suffix('.md').is_file() or path.stat().st_size < 1000:
             problems.append(f'Invalid PDF/source pair: {path.relative_to(ROOT)}')
-    if {p.name for p in (ROOT/'notations').iterdir() if p.is_dir()} != {'RPD','LRD','Omega-LRD3'}:
+    if {p.name for p in (ROOT/'notations').iterdir() if p.is_dir()} != {'RPD','LRD','Omega-LRD3','ARD'}:
         problems.append('Unexpected notation directory')
     for relative, expected in NER_HASHES.items():
         actual = hashlib.sha256((ROOT/relative).read_bytes()).hexdigest()
@@ -82,10 +158,16 @@ def main():
                 problems.append(f'Private absolute path: {path.relative_to(ROOT)}')
     report_file = ROOT/'tools/pdf-build-report.json'
     if report_file.exists():
-        for record in json.loads(report_file.read_text(encoding='utf-8')):
+        records = json.loads(report_file.read_text(encoding='utf-8'))
+        if {record['pdf'].replace('\\','/') for record in records} != expected_pdfs:
+            problems.append('PDF build report does not cover the current PDF inventory')
+        for record in records:
             path = ROOT/record['pdf'].replace('\\','/')
             if hashlib.sha256(path.read_bytes()).hexdigest() != record['sha256']:
                 problems.append(f'Stale PDF report hash: {record["pdf"]}')
+    else:
+        problems.append('Missing PDF build report')
+    check_lean_receipt(problems)
     result = subprocess.run([sys.executable, '-B', str(ROOT/'lean/build.py'), '--check-only'],
                             text=True, encoding='utf-8', capture_output=True, timeout=40)
     if result.returncode:
@@ -96,7 +178,7 @@ def main():
         print('\n'.join(problems))
         raise SystemExit(1)
     print(f'PASS: {len(markdown)} bilingual Markdown files, {len(pdfs)} PDFs, {links} local links, '
-          f'3 unchanged NER scripts; {len(files)} release files, {sum(p.stat().st_size for p in files):,} bytes.')
+          f'{len(NER_HASHES)} pinned NER snapshots; {len(files)} release files, {sum(p.stat().st_size for p in files):,} bytes.')
 
 
 if __name__ == '__main__':

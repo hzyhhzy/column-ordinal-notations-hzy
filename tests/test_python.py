@@ -2,7 +2,7 @@
 
 Run: python -B tests/test_python.py
 Set NOTATION_NODE to a Node executable if it is not available on PATH.
-The three notation modules themselves do not need Node or this test bridge.
+The notation modules themselves do not need Node or this test bridge.
 """
 
 from __future__ import annotations
@@ -40,11 +40,13 @@ MODULES = {
     "rpd": load("rpd", "notations/RPD/rpd.py"),
     "lrd": load("lrd", "notations/LRD/lrd.py"),
     "omega3": load("omega3", "notations/Omega-LRD3/omega_lrd3.py"),
+    "ard": load("ard", "notations/ARD/ard.py"),
 }
 CLASSES = {
     "rpd": MODULES["rpd"].RPD,
     "lrd": MODULES["lrd"].LRD,
     "omega3": MODULES["omega3"].OmegaLRD3,
+    "ard": MODULES["ard"].AnchoredRows,
 }
 
 
@@ -71,7 +73,7 @@ def sample_graphs(name):
                 pending.append(child)
 
     rng = random.Random(37691)
-    if name == "rpd":
+    if name in ("rpd", "ard"):
         rows = [0, 1, 2]
     elif name == "lrd":
         Row = MODULES[name].Row
@@ -84,7 +86,8 @@ def sample_graphs(name):
             column = []
             for _ in range(2):
                 p = rng.randrange(j)
-                column.append((rng.choice(rows), p, rng.randrange(p + 1)))
+                row = rng.randrange(j) if name == "ard" else rng.choice(rows)
+                column.append((row, p, rng.randrange(p + 1)))
             columns.append(column)
         result.append(cls(columns))
     return result
@@ -108,13 +111,13 @@ class Definitions(unittest.TestCase):
                         module.TOP[n]
 
     def test_seeds(self):
-        for name in ("rpd", "omega3"):
+        for name in ("rpd", "omega3", "ard"):
             cls, module = CLASSES[name], MODULES[name]
             for n in range(6):
                 deadline()
                 self.assertEqual(module.TOP[n], cls.seed(n))
                 self.assertGreater(module.TOP, cls.seed(n))
-                if name == "omega3":
+                if name in ("omega3", "ard"):
                     self.assertEqual(len(cls.seed(n).columns), n)
                     if n:
                         self.assertEqual(cls.seed(n)[0], cls.seed(n-1))
@@ -140,7 +143,7 @@ class Definitions(unittest.TestCase):
 
     def test_root_closure_and_structure(self):
         for name, cls in CLASSES.items():
-            row = (0 if name == "rpd" else MODULES[name].Row()
+            row = (0 if name in ("rpd", "ard") else MODULES[name].Row()
                    if name == "lrd" else cls())
             small = cls([[], [], [(row, 1, 1)]])
             repeated = cls([[], [], [(row, 1, 0), (row, 1, 1), (row, 1, 1)]])
@@ -212,7 +215,7 @@ class Definitions(unittest.TestCase):
         self.assertEqual(process.returncode, 0, process.stderr)
         summary = json.loads(process.stdout)
         self.assertEqual(summary["expansions"], 4*len(cases))
-        self.assertEqual(summary["comparisons"], 300)
+        self.assertEqual(summary["comparisons"], 100*len(MODULES))
         print("JS cross-check:", summary, flush=True)
 
     def test_omega3_independent_tuple_definition(self):

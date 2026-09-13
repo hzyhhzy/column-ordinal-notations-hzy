@@ -1,4 +1,4 @@
-"""Render the eight bilingual definition/proof PDFs; no network is used.
+"""Render the twelve bilingual definition/proof PDFs; no network is used.
 
 Requires Pandoc, Node with mathjax-full/sharp, reportlab, pypdf, and local fonts.
 The output files sit beside their Markdown sources. Formula PNGs are temporary.
@@ -146,6 +146,14 @@ class Renderer:
             # A slightly tighter scholarly leading avoids a two-line final page.
             self.styles['body'].leading = 15.1
             self.styles['body'].spaceAfter = 5.0
+        if source.parent.name == 'ARD' and not self.zh:
+            # Keep the final definition paragraph together on the third page.
+            self.styles['body'].leading = 15.5
+            self.styles['body'].spaceAfter = 5.5
+        if self.zh and source.name.startswith('ard-well-ordering'):
+            # Reserve room for CJK hanging punctuation at a list's right edge.
+            self.styles['body'].rightIndent = 4
+            self.styles['small'].rightIndent = 4
         for level, size in [(1, 22), (2, 15), (3, 12), (4, 10.8), (5, 10.2)]:
             self.styles[f'h{level}'] = ParagraphStyle(
                 f'h{level}', fontName='CJKBold' if self.zh else 'BodyBold',
@@ -334,7 +342,7 @@ class Renderer:
         destination = self.source.with_suffix('.pdf')
         label = self.source.parent.name
         if label == 'paper':
-            label = 'Y · RPD · LRD · Ω-LRD3'
+            label = 'ARD' if self.source.name.startswith('ard-') else 'Y · RPD · LRD · Ω-LRD3'
         doc = SimpleDocTemplate(str(destination), pagesize=A4,
                                 leftMargin=50, rightMargin=50, topMargin=48, bottomMargin=48,
                                 title=label + (' - 中文' if self.zh else ' - English'),
@@ -372,8 +380,9 @@ def main():
     args = parser.parse_args()
     sources = [ROOT / p for p in args.sources] if args.sources else [
         ROOT / f'notations/{notation}/definition{lang}.md'
-        for notation in ('RPD', 'LRD', 'Omega-LRD3') for lang in ('', '.zh-CN')
-    ] + [ROOT / f'proofs/paper/well-ordering{lang}.md' for lang in ('', '.zh-CN')]
+        for notation in ('RPD', 'LRD', 'Omega-LRD3', 'ARD') for lang in ('', '.zh-CN')
+    ] + [ROOT / f'proofs/paper/{paper}{lang}.md'
+         for paper in ('well-ordering', 'ard-well-ordering') for lang in ('', '.zh-CN')]
     for source in sources:
         if not source.is_file():
             raise FileNotFoundError(source)
@@ -402,6 +411,10 @@ def main():
             for warning in report['warnings']:
                 print('  REVIEW:', warning)
         report_path = ROOT / 'tools/pdf-build-report.json'
+        if args.sources and report_path.exists():
+            changed = {record['source'] for record in reports}
+            previous = json.loads(report_path.read_text(encoding='utf-8'))
+            reports = [record for record in previous if record['source'] not in changed] + reports
         report_path.write_text(json.dumps(reports, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
         print('Review rendered page images before publishing. Build report:', report_path)
     finally:

@@ -4,15 +4,18 @@ This package is the 2026-09-13 source snapshot for [column-ordinal-notations-hzy
 
 ## Notation implementations
 
-The NER scripts are byte-identical copies of the selected working versions. No expansion, comparison, display mode, or resource guard was changed when packaging them.
+The original three NER scripts remain byte-identical to their selected working versions. The ARD addition updates only its header comment and displayed proof-status sentence. No expansion, comparison, display mode, or resource guard was changed when packaging them. The hashes below pin the delivered bytes.
 
 | Script | SHA-256 |
 | --- | --- |
 | `notations/RPD/RPD-mountain.ne-rewritten.js` | `a679d2a0e081729f628cebc694379925233acab4c96bfb6d05ea8f83f1c1c24b` |
 | `notations/LRD/LRD.ne-rewritten.js` | `394fe4763e82708a99d66c2d88d3926c86c4be92ec35174b9205a292550740b1` |
 | `notations/Omega-LRD3/Omega-LRD3.ne-rewritten.js` | `fe33b1a35891e9efb9eb5932ab94456053769b6b58df41ea9f36eb57a262f3ab` |
+| `notations/ARD/ARD-arcs.ne-rewritten.js` | `bf354fb3540e1971267ccf05e30703b36a72b80fd12c1a72c5152e0d38007f8d` |
 
 RPD is the current column-comparison, mountain-display version, not the earlier history-ordered notation. LRD uses its fixed ordinal polynomial rows. Ω-LRD3 uses the inclusive packet through index `b` and its single-column seed tower. No other Ω-LRD implementation is included.
+
+ARD means *Anchored Row Diagrams*. It uses earlier-column addresses as row anchors and moves all four edge coordinates. The selected standalone browser script is the arc-view version, including circled/capsule root labels; its mathematical rules and resource guards were not changed for this addition. Its Python module retains the readable `AnchoredRows` class and maximum-root compression. The earlier mountain-only ARD renderer is not included as a duplicate implementation.
 
 The Python files expose independent standard-library mathematical cores. RPD and LRD were adapted from existing simple cores; Ω-LRD3 was packaged from its rules and independently checked against the earlier finite-tuple reference in `tests/omega3_tuple_reference.py`. These implementations do not contain truncation rules or decide standard-domain membership. Bounded tests are evidence about implementation agreement, not a universal interpreter-equivalence theorem or a substitute for well-ordering proofs.
 
@@ -21,6 +24,8 @@ The host application is [ne-rewritten](https://smilelee-lyx.github.io/ne-rewritt
 ## Proof sources
 
 The joint paper is a full bilingual presentation of the four-system weak-KP argument, not merely a translated abstract. Its source-manuscript reference is *A Short Proof of 1-Y Well-Ordering in KP with ω₁* (the user-supplied simplified manuscript). The manuscript is **not redistributed**; its identifying hash and the public background references are in the [paper bibliography](proofs/paper/well-ordering.md). Readers do not need a path on the original author's computer.
+
+The separate [ARD paper](proofs/paper/ard-well-ordering.md) extends the finite-demand method to dynamic row references. It includes the guarded relation, closed-height supply, four-coordinate splice, standard-domain argument and weak-theory axiom accounting. Both language versions are full papers. The ordinary Lean implementation constructs the required relation and initial supply rather than taking them as assumptions. The finite-union specification and compressed/full-root comparison bridges are explicit additional theorems, not claims inferred from interpreter tests.
 
 The finite Y geometry is pinned to [Phyrion1343/1Y-Well-Ordering-Lean](https://github.com/Phyrion1343/1Y-Well-Ordering-Lean/tree/1689b21131b488ec2ba2515bd630360371a2389d), revision `1689b21131b488ec2ba2515bd630360371a2389d`. The package preserves the inherited-ancestry Y definition and explicitly does not claim global equivalence with Naruyoko's original JavaScript. The ordinary Lean proof and the restricted-axiom paper proof have different verification scopes.
 

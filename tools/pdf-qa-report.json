@@ -1,49 +1,85 @@
 {
   "date": "2026-09-13",
   "renderer": "Poppler pdftoppm, 95 dpi",
-  "scope": "All eight delivered PDFs, after final formula and pagination fixes.",
-  "visual_review": "All page contact sheets inspected; selected dense formula and Chinese pages inspected at page resolution.",
+  "scope": "All twelve delivered PDFs, with the original eight preserved and four new ARD publications.",
+  "visual_review": "All 25 new ARD pages inspected in contact sheets; selected dense formula, Chinese, and final pages also inspected at page resolution after the last changes. The unchanged original 41 pages retain their earlier visual review. All 66 pages were rendered again and passed text/image boundary checks.",
+  "corrections": [
+    "Removed a one-line orphan final page from the English ARD definition by a small leading adjustment.",
+    "Reserved four points for CJK hanging punctuation in the Chinese ARD proof; rerendered and reinspected all its pages."
+  ],
   "files": [
+    {
+      "pdf": "notations/ARD/definition.pdf",
+      "pages": 3,
+      "sha256": "708d0bf2c4c90f9af6542a509d36204caadc325f780ae55dda49d7b496b04e06",
+      "bounds_issues": []
+    },
+    {
+      "pdf": "notations/ARD/definition.zh-CN.pdf",
+      "pages": 3,
+      "sha256": "3a9ee4639b35e855fbcf010c61c5dcf2fc8acc297a2167a1cff0cc1b55d38883",
+      "bounds_issues": []
+    },
     {
       "pdf": "notations/LRD/definition.pdf",
       "pages": 3,
+      "sha256": "2f4f6b768bda1e33739f4420d2bc6802763ed5f4a731ac25f407306e1326882e",
       "bounds_issues": []
     },
     {
       "pdf": "notations/LRD/definition.zh-CN.pdf",
       "pages": 3,
+      "sha256": "0a1d200c2d8b5cc1b6b24a3a2bed00dc76e034b9e0f47fca5e889bf3804a8a9b",
       "bounds_issues": []
     },
     {
       "pdf": "notations/Omega-LRD3/definition.pdf",
       "pages": 4,
+      "sha256": "90e502b184be5a1da70a54e8a06fb0e6a2403f75c087847ac7fa72ed21dd3c47",
       "bounds_issues": []
     },
     {
       "pdf": "notations/Omega-LRD3/definition.zh-CN.pdf",
       "pages": 3,
+      "sha256": "6aa4832776225aa378772b826294f7fb8e32bee957fe11ebb65a047d8dc0976c",
       "bounds_issues": []
     },
     {
       "pdf": "notations/RPD/definition.pdf",
       "pages": 3,
+      "sha256": "4af1914c42cebada87c85d137993d616cb3d529edd36173a764c7790d1020092",
       "bounds_issues": []
     },
     {
       "pdf": "notations/RPD/definition.zh-CN.pdf",
       "pages": 3,
+      "sha256": "ac03502ab970a411b98b8ea62e240ec576f29b86663b7ab0f0c757b02bce9ccc",
+      "bounds_issues": []
+    },
+    {
+      "pdf": "proofs/paper/ard-well-ordering.pdf",
+      "pages": 11,
+      "sha256": "4739a217edbdaff5e867b8fc568f23f5dced283a1d6247495ea034d0bf313dd4",
+      "bounds_issues": []
+    },
+    {
+      "pdf": "proofs/paper/ard-well-ordering.zh-CN.pdf",
+      "pages": 8,
+      "sha256": "f4c3a4da0495c510336d3f948bc7579c17f80c82d98c2cafe4986bf61915dda4",
       "bounds_issues": []
     },
     {
       "pdf": "proofs/paper/well-ordering.pdf",
       "pages": 13,
+      "sha256": "d1a27d2ff86c554884712892ed1c688a3cd90413318e98ef46ce5c6046f40280",
       "bounds_issues": []
     },
     {
       "pdf": "proofs/paper/well-ordering.zh-CN.pdf",
       "pages": 9,
+      "sha256": "af2a03a64daab6bcae5aa5d62e43e2e737301dbe65a48564aeb010e37a2371fa",
       "bounds_issues": []
     }
   ],
-  "total_pages": 41
+  "total_pages": 66
 }

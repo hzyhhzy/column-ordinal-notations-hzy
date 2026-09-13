@@ -11,6 +11,6 @@ require YesMetaZFC from git
 @[default_target]
 lean_lib OrdinalNotations where
   srcDir := "src"
-  roots := #[`FiniteDemandClosedSupply, `FiniteDemandColumnWellFounded, `FiniteDemandCore, `FiniteDemandEndpointAgreement, `FiniteDemandFinitaryClosure, `FiniteDemandHostAmbient, `FiniteDemandInitialRepresentation, `FiniteDemandLRDFinal, `FiniteDemandOrdinalHeight, `FiniteDemandRPDFinal, `FiniteDemandRecursion, `FiniteDemandReflection, `FiniteDemandWitnesses, `FiniteDemandYFinal, `FourNotationFinalAudit, `LRDOrdinalRows, `NatSemanticTransport, `OmegaLRD3Final, `OneY, `OrdinalFormal, `OrdinalRowLanguage, `ZeroY]
-  globs := #[.one `FourNotationFinalAudit]
+  roots := #[`ARDClosedSupply, `ARDCompression, `ARDCore, `ARDDecrease, `ARDDefinitionFidelity, `ARDDemandCore, `ARDDemandRecursion, `ARDDemandReflection, `ARDDomain, `ARDEndpointAgreement, `ARDFinal, `ARDFiniteUnion, `FiveNotationFinalAudit, `ARDInitialRepresentation, `ARDOrderReduction, `ARDPrefixOrder, `ARDSemanticWellFounded, `ARDSplice, `ARDStageDemands, `ARDStageProof, `ARDStructure, `ARDWitnesses, `FiniteDemandClosedSupply, `FiniteDemandColumnWellFounded, `FiniteDemandCore, `FiniteDemandEndpointAgreement, `FiniteDemandFinitaryClosure, `FiniteDemandHostAmbient, `FiniteDemandInitialRepresentation, `FiniteDemandLRDFinal, `FiniteDemandOrdinalHeight, `FiniteDemandRPDFinal, `FiniteDemandRecursion, `FiniteDemandReflection, `FiniteDemandWitnesses, `FiniteDemandYFinal, `FourNotationFinalAudit, `LRDOrdinalRows, `NatSemanticTransport, `OmegaLRD3Final, `OneY, `OrdinalFormal, `OrdinalRowLanguage, `ZeroY]
+  globs := #[.one `FiveNotationFinalAudit]
   moreLeanArgs := #["-M", "2048", "-j", "1"]

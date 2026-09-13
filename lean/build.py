@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Bounded, source-closed verification of the four ordinary Lean proofs."""
+"""Bounded, source-closed verification of the five ordinary Lean proofs."""
 from __future__ import annotations
 
 import argparse

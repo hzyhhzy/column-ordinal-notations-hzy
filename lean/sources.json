@@ -1,5 +1,5 @@
 {
-  "target": "FourNotationFinalAudit",
+  "target": "FiveNotationFinalAudit",
   "modules": {
     "OrdinalFormal.ReflectionTransport": {
       "source": "ordinal-formalization/OrdinalFormal/ReflectionTransport.lean",
@@ -2445,6 +2445,252 @@
       "origin": "local",
       "original_sha256_lf": "36bcab5c3bcc0164caa1baf39146661cfbf4427db645411da000fd504c270d28",
       "distribution": "bundled local proof source"
+    },
+    "ARDClosedSupply": {
+      "source": "ordinal-formalization/ard/ClosedSupply.lean",
+      "imports": [
+        "ARDEndpointAgreement",
+        "FiniteDemandFinitaryClosure",
+        "FiniteDemandOrdinalHeight"
+      ],
+      "sha256": "3f2a0aa1b3d765cd3e514ec66838c44fe3ad91827361a6049b0c089a8e3f7f96",
+      "origin": "local",
+      "original_sha256_lf": "3f2a0aa1b3d765cd3e514ec66838c44fe3ad91827361a6049b0c089a8e3f7f96",
+      "distribution": "bundled local proof source"
+    },
+    "ARDCompression": {
+      "source": "ordinal-formalization/ard/Compression.lean",
+      "imports": [
+        "ARDStructure",
+        "OrdinalFormal.RPDFiniteUnion"
+      ],
+      "sha256": "e0f154289dd6fe77bf8810e2acbec6ef6180499ce740c91e99d0bcb4b670166d",
+      "origin": "local",
+      "original_sha256_lf": "e0f154289dd6fe77bf8810e2acbec6ef6180499ce740c91e99d0bcb4b670166d",
+      "distribution": "bundled local proof source"
+    },
+    "ARDCore": {
+      "source": "ordinal-formalization/ard/Core.lean",
+      "imports": [
+        "OrdinalFormal.GenericSortedColumns",
+        "OrdinalFormal.SpliceConstruction"
+      ],
+      "sha256": "3f9ae03ce71d3e96a6eedcda306baff5fc1ce56cd8afc7e4f5e13458440cfb03",
+      "origin": "local",
+      "original_sha256_lf": "3f9ae03ce71d3e96a6eedcda306baff5fc1ce56cd8afc7e4f5e13458440cfb03",
+      "distribution": "bundled local proof source"
+    },
+    "ARDDecrease": {
+      "source": "ordinal-formalization/ard/Decrease.lean",
+      "imports": [
+        "ARDStructure",
+        "OrdinalFormal.GeneratedColumnDecrease"
+      ],
+      "sha256": "1866ea23f9d56536b972ee5b123a09bc611adc48d7c2ab98dbcd7098d32c6f45",
+      "origin": "local",
+      "original_sha256_lf": "1866ea23f9d56536b972ee5b123a09bc611adc48d7c2ab98dbcd7098d32c6f45",
+      "distribution": "bundled local proof source"
+    },
+    "ARDDefinitionFidelity": {
+      "source": "ordinal-formalization/ard/DefinitionFidelity.lean",
+      "imports": [
+        "ARDFiniteUnion",
+        "ARDOrderReduction",
+        "OrdinalFormal.RPDFiniteUnion"
+      ],
+      "sha256": "fcf1ffe7a6562d392a41d52344798bd7b97e67d79de363a2cd8d9365419c436c",
+      "origin": "local",
+      "original_sha256_lf": "fcf1ffe7a6562d392a41d52344798bd7b97e67d79de363a2cd8d9365419c436c",
+      "distribution": "bundled local proof source"
+    },
+    "ARDDemandCore": {
+      "source": "ordinal-formalization/ard/DemandCore.lean",
+      "imports": [
+        "ARDCore",
+        "Mathlib.SetTheory.Ordinal.Basic",
+        "Mathlib.Order.RelClasses"
+      ],
+      "sha256": "10b3eec9cbd566906d4c4712d04dd9729a97dd0592e803350e11cce210861992",
+      "origin": "local",
+      "original_sha256_lf": "10b3eec9cbd566906d4c4712d04dd9729a97dd0592e803350e11cce210861992",
+      "distribution": "bundled local proof source"
+    },
+    "ARDDemandRecursion": {
+      "source": "ordinal-formalization/ard/DemandRecursion.lean",
+      "imports": [
+        "ARDDemandCore"
+      ],
+      "sha256": "3200b14bf551b60a0021f798cf6a2f94b70c8655ccc7c28c5dbb9382be591cc9",
+      "origin": "local",
+      "original_sha256_lf": "3200b14bf551b60a0021f798cf6a2f94b70c8655ccc7c28c5dbb9382be591cc9",
+      "distribution": "bundled local proof source"
+    },
+    "ARDDemandReflection": {
+      "source": "ordinal-formalization/ard/DemandReflection.lean",
+      "imports": [
+        "ARDDemandRecursion"
+      ],
+      "sha256": "3ffaf679c712fc8abc29399b7319c4302e81571f1a97b7a2a96dd25957708061",
+      "origin": "local",
+      "original_sha256_lf": "3ffaf679c712fc8abc29399b7319c4302e81571f1a97b7a2a96dd25957708061",
+      "distribution": "bundled local proof source"
+    },
+    "ARDDomain": {
+      "source": "ordinal-formalization/ard/Domain.lean",
+      "imports": [
+        "ARDCore",
+        "ARDPrefixOrder",
+        "OrdinalFormal.Comparison"
+      ],
+      "sha256": "4ed2df0c0f87ee79f0149893e53228f540d05a0eb73d533078b463f5c992c4c6",
+      "origin": "local",
+      "original_sha256_lf": "4ed2df0c0f87ee79f0149893e53228f540d05a0eb73d533078b463f5c992c4c6",
+      "distribution": "bundled local proof source"
+    },
+    "ARDEndpointAgreement": {
+      "source": "ordinal-formalization/ard/EndpointAgreement.lean",
+      "imports": [
+        "ARDWitnesses"
+      ],
+      "sha256": "a9033a9440b22fb81eeaa51782ef4f8c7d4b4065724be3568252e6a627859349",
+      "origin": "local",
+      "original_sha256_lf": "a9033a9440b22fb81eeaa51782ef4f8c7d4b4065724be3568252e6a627859349",
+      "distribution": "bundled local proof source"
+    },
+    "ARDFinal": {
+      "source": "ordinal-formalization/ard/Final.lean",
+      "imports": [
+        "ARDInitialRepresentation",
+        "ARDStageProof",
+        "ARDSemanticWellFounded",
+        "ARDOrderReduction",
+        "ARDDefinitionFidelity"
+      ],
+      "sha256": "fd1d9760859c015d014dd58ef8cf65128a54be27586cfe1073d62f9554db8dee",
+      "origin": "local",
+      "original_sha256_lf": "fd1d9760859c015d014dd58ef8cf65128a54be27586cfe1073d62f9554db8dee",
+      "distribution": "bundled local proof source"
+    },
+    "ARDFiniteUnion": {
+      "source": "ordinal-formalization/ard/FiniteUnion.lean",
+      "imports": [
+        "ARDStructure",
+        "OrdinalFormal.BlockFiniteUnion"
+      ],
+      "sha256": "1188d5306e5a0fb56a9fd32c84a7d2ab34d236e874cbc318139206213ae0b841",
+      "origin": "local",
+      "original_sha256_lf": "1188d5306e5a0fb56a9fd32c84a7d2ab34d236e874cbc318139206213ae0b841",
+      "distribution": "bundled local proof source"
+    },
+    "FiveNotationFinalAudit": {
+      "source": "ordinal-formalization/ard/FiveFinal.lean",
+      "imports": [
+        "FourNotationFinalAudit",
+        "ARDFinal",
+        "ARDCompression"
+      ],
+      "sha256": "228db08be080c81a63141300fff586394e1ef1e41ae132e36b84c1e558b02f7d",
+      "origin": "local",
+      "original_sha256_lf": "228db08be080c81a63141300fff586394e1ef1e41ae132e36b84c1e558b02f7d",
+      "distribution": "bundled local proof source"
+    },
+    "ARDInitialRepresentation": {
+      "source": "ordinal-formalization/ard/InitialRepresentation.lean",
+      "imports": [
+        "ARDClosedSupply",
+        "FiniteDemandHostAmbient"
+      ],
+      "sha256": "33ed1e727e7b7b0a349c5b15d90096a80d245517f5834d105909108fb5fe77ca",
+      "origin": "local",
+      "original_sha256_lf": "33ed1e727e7b7b0a349c5b15d90096a80d245517f5834d105909108fb5fe77ca",
+      "distribution": "bundled local proof source"
+    },
+    "ARDOrderReduction": {
+      "source": "ordinal-formalization/ard/OrderReduction.lean",
+      "imports": [
+        "ARDDomain",
+        "ARDDecrease"
+      ],
+      "sha256": "2b239108687049d2c8f9ce235bd2a32f7bfc790f99844a18670f31a1768f6148",
+      "origin": "local",
+      "original_sha256_lf": "2b239108687049d2c8f9ce235bd2a32f7bfc790f99844a18670f31a1768f6148",
+      "distribution": "bundled local proof source"
+    },
+    "ARDPrefixOrder": {
+      "source": "ordinal-formalization/ard/PrefixOrder.lean",
+      "imports": [
+        "OrdinalFormal.Reachability"
+      ],
+      "sha256": "ae74262f12311fa3e0580f0e7bb43a0ae66bc91d297ac7e222d5a30764fb06f1",
+      "origin": "local",
+      "original_sha256_lf": "ae74262f12311fa3e0580f0e7bb43a0ae66bc91d297ac7e222d5a30764fb06f1",
+      "distribution": "bundled local proof source"
+    },
+    "ARDSemanticWellFounded": {
+      "source": "ordinal-formalization/ard/SemanticWellFounded.lean",
+      "imports": [
+        "ARDDomain"
+      ],
+      "sha256": "46e9984569ca08016f38d812fcf1a1b0712e68679f05de7d96eb55c6d4e765a0",
+      "origin": "local",
+      "original_sha256_lf": "46e9984569ca08016f38d812fcf1a1b0712e68679f05de7d96eb55c6d4e765a0",
+      "distribution": "bundled local proof source"
+    },
+    "ARDSplice": {
+      "source": "ordinal-formalization/ard/Splice.lean",
+      "imports": [
+        "ARDCore"
+      ],
+      "sha256": "86b168b99cd4ec23e93fe9840a3a3f63a202d5393bd4ddadf505d9f5fb1e9695",
+      "origin": "local",
+      "original_sha256_lf": "86b168b99cd4ec23e93fe9840a3a3f63a202d5393bd4ddadf505d9f5fb1e9695",
+      "distribution": "bundled local proof source"
+    },
+    "ARDStageDemands": {
+      "source": "ordinal-formalization/ard/StageDemands.lean",
+      "imports": [
+        "ARDStructure",
+        "ARDSplice"
+      ],
+      "sha256": "0455c69028cf6145be4b93cedd3998f4161a1f9e344e184a5092e60e8b17c410",
+      "origin": "local",
+      "original_sha256_lf": "0455c69028cf6145be4b93cedd3998f4161a1f9e344e184a5092e60e8b17c410",
+      "distribution": "bundled local proof source"
+    },
+    "ARDStageProof": {
+      "source": "ordinal-formalization/ard/StageProof.lean",
+      "imports": [
+        "ARDStageDemands"
+      ],
+      "sha256": "1860c9c5db048413ec15d590f5baecb75c6cad76a98523f6ecfad900178a630a",
+      "origin": "local",
+      "original_sha256_lf": "1860c9c5db048413ec15d590f5baecb75c6cad76a98523f6ecfad900178a630a",
+      "distribution": "bundled local proof source"
+    },
+    "ARDStructure": {
+      "source": "ordinal-formalization/ard/Structure.lean",
+      "imports": [
+        "ARDCore",
+        "OrdinalFormal.ExpansionValidity"
+      ],
+      "sha256": "981bb69289f505c85a60a20174d415db3d49aad0cb717009c05f57a9eec60d7c",
+      "origin": "local",
+      "original_sha256_lf": "981bb69289f505c85a60a20174d415db3d49aad0cb717009c05f57a9eec60d7c",
+      "distribution": "bundled local proof source"
+    },
+    "ARDWitnesses": {
+      "source": "ordinal-formalization/ard/Witnesses.lean",
+      "imports": [
+        "ARDDemandReflection",
+        "Mathlib.Data.List.Shortlex",
+        "Mathlib.Order.WellFounded",
+        "Mathlib.Data.Countable.Basic"
+      ],
+      "sha256": "ac3a1545250ae222f13983e0f23d6ac090e5af69bc2353d2c88379c8e35e18fe",
+      "origin": "local",
+      "original_sha256_lf": "2a8e914dbb7ea3bf7697e5da48afba649a18541f6ed03d1bcda13ba6f0e33e3e",
+      "distribution": "bundled local proof source",
+      "release_change": "One redundant trailing blank line removed; proof source otherwise unchanged."
     }
   },
   "external": [

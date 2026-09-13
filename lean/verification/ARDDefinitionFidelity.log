@@ -1,0 +1,6 @@
+'OrdinalFormal.ARD.Fidelity.control_eq_paper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.ARD.Fidelity.paperResult_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.ARD.Fidelity.standard_expand_eq_paper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.ARD.Fidelity.standard_paper_fs_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.ARD.Fidelity.paper_term_fs_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.ARD.Fidelity.paper_standard_iff' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -62,5 +62,37 @@
     "bytes": 1852867,
     "sha256": "af2a03a64daab6bcae5aa5d62e43e2e737301dbe65a48564aeb010e37a2371fa",
     "warnings": []
+  },
+  {
+    "source": "notations/ARD/definition.zh-CN.md",
+    "pdf": "notations/ARD/definition.zh-CN.pdf",
+    "pages": 3,
+    "bytes": 651900,
+    "sha256": "3a9ee4639b35e855fbcf010c61c5dcf2fc8acc297a2167a1cff0cc1b55d38883",
+    "warnings": []
+  },
+  {
+    "source": "proofs/paper/ard-well-ordering.md",
+    "pdf": "proofs/paper/ard-well-ordering.pdf",
+    "pages": 11,
+    "bytes": 1912543,
+    "sha256": "4739a217edbdaff5e867b8fc568f23f5dced283a1d6247495ea034d0bf313dd4",
+    "warnings": []
+  },
+  {
+    "source": "notations/ARD/definition.md",
+    "pdf": "notations/ARD/definition.pdf",
+    "pages": 3,
+    "bytes": 519354,
+    "sha256": "708d0bf2c4c90f9af6542a509d36204caadc325f780ae55dda49d7b496b04e06",
+    "warnings": []
+  },
+  {
+    "source": "proofs/paper/ard-well-ordering.zh-CN.md",
+    "pdf": "proofs/paper/ard-well-ordering.zh-CN.pdf",
+    "pages": 8,
+    "bytes": 2112609,
+    "sha256": "f4c3a4da0495c510336d3f948bc7579c17f80c82d98c2cafe4986bf61915dda4",
+    "warnings": []
   }
 ]

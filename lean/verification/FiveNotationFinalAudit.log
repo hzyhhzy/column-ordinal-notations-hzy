@@ -1,0 +1,14 @@
+'OrdinalFormal.YFiniteDemand.with_top_isWellOrder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.RPDFiniteDemand.standard_with_top_strictWellOrder' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OrdinalFormal.LRDFinal.standard_isWellOrder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.Omega3Final.with_top_isWellOrder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.ARD.standard_with_top_strictWellOrder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.ARD.paper_standard_with_top_strictWellOrder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.ARD.valid_step_wellFounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.ARD.Fidelity.standard_paper_fs_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.ARD.Fidelity.paper_standard_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.ARD.Compression.normalize_eq_fullRoots' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.ARD.Compression.normalize_graphCompare' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.ARD.Compression.control_normalize' depends on axioms: [propext, Classical.choice, Quot.sound]
