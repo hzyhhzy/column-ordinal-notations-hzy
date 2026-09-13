@@ -18,6 +18,7 @@ Command, from the package root:
 ```sh
 python -B tests/test_python.py
 python -B tests/test_ard.py
+node --max-old-space-size=256 tests/adjacency_views.cjs
 ```
 
 The seven test methods passed. The bounded sample included:
@@ -36,7 +37,9 @@ The separate ARD suite passed 120 graph cases and 480 expansions against an inde
 
 The ARD arc-renderer suite additionally passed 240 random cases, 480 expansions, 480 comparisons, 241 counts, 22 drawings with 525 relations/root frames, 2,395 lane checks, 24,601 label-pair checks, 8,710 drawn-segment checks, 17,036 frame-line checks, 6 flip pairs, and 8 guard cases. It ran in approximately 1.1 seconds with a 192 MiB old-generation heap limit and approximately 126 MiB peak reported RSS. The Node limits are not hard caps on total process memory. These are geometry and API checks, not screenshots from a live browser.
 
-The original three Python command-line examples also passed. Their NER files remain byte-for-byte unchanged. The published ARD arc script differs from its selected research snapshot only in two proof-status prose passages; no rule, comparison, drawing or guard was changed. All delivered SHA-256 values are in [SOURCES.md](SOURCES.md). The Ω-LRD3 tuple reference's separate bounded self-check passed 7 seeds, 37 states, 148 descent checks, and 111 prefix checks.
+The original three Python command-line examples also passed. LRD and Ω-LRD3's NER files remain byte-for-byte unchanged. The updated RPD and ARD scripts embed the entire previously published scripts from `542d47a` unchanged, with registration metadata and two adjacency displays added around them. All delivered SHA-256 values are in [SOURCES.md](SOURCES.md). The Ω-LRD3 tuple reference's separate bounded self-check passed 7 seeds, 37 states, 148 descent checks, and 111 prefix checks.
+
+The portable adjacency suite passed 168 graphs and text round trips, 672 unchanged expansions, 160 comparisons, 498 text-prefix checks, 168 complete diagrams containing 942 relation entries, 420 old-display comparisons and 20 input/resource guards. It pins the embedded old cores by normalized source hashes and checks that both new display helpers agree. Diagram checks cover whole shaded diagonal index cells, the stepped upper-triangular boundary, removal of external axis labels, exact original counts above the tables, and preservation of complete relation tables when counts report a resource limit. It ran in approximately 1.3 seconds with a 256 MiB old-generation heap limit and about 87 MiB reported RSS. Light, dark, empty and multi-digit full previews were rendered offline and visually inspected; this is not a live-browser end-to-end test. The mathematical and proof sources were not changed by this display update.
 
 These are finite tests. They do not establish equivalence on every input, certify standardness of arbitrary parsed graphs, or replace a well-ordering proof. A full live-browser integration test was not repeated during packaging.
 

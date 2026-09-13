@@ -285,10 +285,11 @@ async function render(raw, invert = false) {
 }
 
 async function main() {
-  assert.equal(await invoke('arcs.id'), 'ard-arcs-v01');
-  assert.equal(await invoke('arcs.name'), 'ARD（弧线图）');
+  assert.equal(await invoke('arcs.id'), 'ard-adjacency-v01');
+  assert.equal(await invoke('arcs.name'), 'ARD（邻接表试用版）');
   assert.equal(await invoke('arcs.display.name'), '列表');
-  assert.deepEqual(native(await invoke('Object.keys(arcs.display_equiv)')), ['计数序列', '弧线图']);
+  assert.deepEqual(native(await invoke('Object.keys(arcs.display_equiv)')),
+    ['计数序列', '弧线图', '邻接表（文字）', '邻接表（图）']);
   assert(await invoke('arcs.FS===arcs.FS_alter && arcs.FS===arcs.FS_short'));
   assert(await invoke('!arcs.display_equiv["计数序列"].from_display'));
   assert.deepEqual(native(await invoke('arcs.init()')), ['Limit of ARD', '[]', '∅']);

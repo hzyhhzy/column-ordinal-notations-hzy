@@ -4,16 +4,16 @@
 
 ## 记号实现
 
-原有三份 NER 脚本继续与选定工作版本逐字节一致。新加入的 ARD 只更新文件头注释和界面的证明状态句子；打包未更改展开、比较、显示方式或资源保护。下表哈希固定交付文件的实际字节。
+LRD、Ω-LRD3 继续与选定工作版本逐字节一致。RPD、ARD 新增文字和三角表格两种邻接表显示，并更新注册信息；每份文件完整嵌入提交 `542d47a` 中此前发布的原脚本，统一换行符后核验原文不变。展开、比较、已有显示和原资源保护均保留，新视图另设完整输出保护。下表哈希固定交付文件的实际字节。
 
 | 脚本 | SHA-256 |
 | --- | --- |
-| `notations/RPD/RPD-mountain.ne-rewritten.js` | `a679d2a0e081729f628cebc694379925233acab4c96bfb6d05ea8f83f1c1c24b` |
+| `notations/RPD/RPD-mountain.ne-rewritten.js` | `447eaed4e88604a29ba4ccef329b05c57ef30d935b0a31166ff519805e352026` |
 | `notations/LRD/LRD.ne-rewritten.js` | `394fe4763e82708a99d66c2d88d3926c86c4be92ec35174b9205a292550740b1` |
 | `notations/Omega-LRD3/Omega-LRD3.ne-rewritten.js` | `fe33b1a35891e9efb9eb5932ab94456053769b6b58df41ea9f36eb57a262f3ab` |
-| `notations/ARD/ARD-arcs.ne-rewritten.js` | `bf354fb3540e1971267ccf05e30703b36a72b80fd12c1a72c5152e0d38007f8d` |
+| `notations/ARD/ARD-arcs.ne-rewritten.js` | `ab4f05ef1fb65b6308e710cbbc98c173310f9c3073ce3a57082863af708841d6` |
 
-RPD 是当前按列比较、带山脉图显示的版本，不是早期按操作历史排序的记号。LRD 使用固定的序数多项式行标。Ω-LRD3 的生成包包含至指标 `b`，顶端基本列采用每级只加一列的种子塔。不收录其他 Ω-LRD 实现。
+RPD 是当前按列比较、带山脉图及邻接表显示的版本，不是早期按操作历史排序的记号。浏览器菜单名为 `RDP`，记号及文件名仍为 RPD。LRD 使用固定的序数多项式行标。Ω-LRD3 的生成包包含至指标 `b`，顶端基本列采用每级只加一列的种子塔。不收录其他 Ω-LRD 实现。
 
 ARD 全称为 *Anchored Row Diagrams*（锚定行图）。它用此前列的地址作为行锚，四个关系坐标一起移动。所选独立浏览器脚本为弧线图版本，根标签保留圆圈或胶囊外框；本次加入未改数学规则及资源保护。Python 模块保留可读的 `AnchoredRows` 类与最大根压缩。未把旧山脉图 ARD 另作为重复实现收录。
 

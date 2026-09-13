@@ -1,3 +1,8 @@
+// Standalone ARD adjacency-view trial; published mathematical core is embedded unchanged.
+(function (register) {
+'use strict';
+let definition;
+(function (register_notation) {
 /* ARD arcs v0.1 — Anchored Row Diagrams (formerly Anchored-Rows).
    Standalone ne-rewritten custom notation; no imports, network or storage.
    Triples are (row anchor, parent, maximum root), all zero-based.
@@ -445,3 +450,257 @@ register_notation({
     diagram,svg}
 });
 })();
+})(value => { if (definition) throw Error('Duplicate notation registration'); definition = value; });
+
+// Shared presentation-only source. The two delivered scripts inline this file.
+// It never changes an expression, expansion rule, comparison, or existing view.
+function addAdjacencyDisplays(notation, config) {
+  'use strict';
+  const TEXT = '邻接表（文字）', TABLE = '邻接表（图）';
+  const limits = Object.freeze({ ms: config.ms, work: 1000000,
+    text: 1000000, slots: 500000, layers: 256, cells: 250000,
+    dimension: 32768, pixels: 30000000, svg: 2500000, label: 160 });
+  const escape = value => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  function fail(reason) {
+    const error = Error(config.label + ' 邻接表：' + reason + '超限；未返回截断结果，请查看原列表。');
+    error.name = 'AdjacencyViewLimit'; throw error;
+  }
+  function budget() {
+    const started = Date.now(); let work = 0;
+    return () => {
+      if (++work > limits.work || ((work & 255) === 0 && Date.now() - started > limits.ms))
+        fail('计算预算');
+    };
+  }
+  function inspect(raw, tick) {
+    const input = config.read(raw);
+    if (input === null) return null;
+    const columns = [], layers = new Map(); let groups = 0;
+    for (let j = 0; j < input.length; j++) {
+      tick(); const column = new Map(); columns.push(column);
+      for (const [rawK, rawP, rawQ] of input[j]) {
+        tick(); const k = BigInt(rawK).toString(), p = Number(rawP), q = BigInt(rawQ);
+        if (k.length > limits.label) fail('层标文字');
+        if (!column.has(k)) column.set(k, new Map());
+        const row = column.get(k), old = row.get(p);
+        if (old === undefined) groups++;
+        if (old === undefined || q > old) row.set(p, q);
+      }
+      for (const [k, parents] of column) {
+        tick(); if (!layers.has(k)) layers.set(k, { k, entries: [] });
+        for (const [p, q] of parents) layers.get(k).entries.push({ k, p, q: String(q), j });
+      }
+    }
+    return { columns, layers: [...layers.values()].sort((a, b) =>
+      BigInt(a.k) < BigInt(b.k) ? -1 : BigInt(a.k) > BigInt(b.k) ? 1 : 0), groups };
+  }
+  function plain(raw) {
+    const tick = budget(), graph = inspect(raw, tick);
+    if (graph === null) return config.top;
+    if (!graph.columns.length) return '∅';
+    const output = []; let slots = 0, chars = 0;
+    for (const column of graph.columns) {
+      tick(); let highest = -1n;
+      for (const k of column.keys()) if (BigInt(k) > highest) highest = BigInt(k);
+      if (highest >= BigInt(limits.slots)) fail('文字空层数');
+      slots += Number(highest + 1n); if (slots > limits.slots) fail('文字格位数');
+      const rows = Array(Number(highest + 1n)).fill('');
+      for (const [k, parents] of column) {
+        tick(); let end = -1;
+        for (const p of parents.keys()) end = Math.max(end, p);
+        slots += end + 1; if (slots > limits.slots) fail('文字格位数');
+        const cells = Array(end + 1).fill('');
+        for (const [p, q] of parents) { tick(); cells[p] = String(q); }
+        rows[Number(k)] = cells.join(',');
+      }
+      const text = '[' + rows.join(';') + ']'; chars += text.length;
+      if (chars > limits.text) fail('文字长度');
+      output.push(text);
+    }
+    return output.join('');
+  }
+  function fromDisplay(raw) {
+    if (typeof raw !== 'string') throw TypeError('请输入邻接表文字。');
+    if (raw.length > limits.text) fail('输入文字');
+    const tick = budget(), text = raw.replace(/\s/g, '');
+    if (!text || text === '0' || text === '∅') return notation.display.plain('∅');
+    if (text === config.top.replace(/\s/g, '')) return notation.display.plain(config.top);
+    let cursor = 0, j = 0, slots = 0; const columns = [];
+    for (const match of text.matchAll(/\[([^\[\]]*)\]/g)) {
+      tick();
+      if (match.index !== cursor) throw TypeError('邻接表应为连续的 [列][列]。');
+      if (j >= config.width) fail('输入列数');
+      cursor += match[0].length;
+      if (!/^[\d,;]*$/.test(match[1])) throw TypeError('邻接表内只允许自然数、逗号和分号。');
+      const rows = match[1].split(';'), triples = [];
+      slots += rows.length;
+      for (let k = 0; k < rows.length; k++) {
+        tick(); if (!rows[k]) continue;
+        const cells = rows[k].split(','); slots += cells.length;
+        if (slots > limits.slots) fail('输入格位数');
+        if (cells.length > j) throw TypeError('第 ' + j + ' 列只能引用此前的父列。');
+        for (let p = 0; p < cells.length; p++) {
+          tick(); if (cells[p] === '') continue;
+          if (cells[p].length > limits.label) fail('根数值文字');
+          const q = BigInt(cells[p]);
+          if (q > BigInt(p)) throw TypeError('最大根不能超过父列。');
+          if (config.anchored && k >= j) throw TypeError('ARD 行锚必须在子列之前。');
+          triples.push('(' + k + ',' + p + ',' + q + ')');
+        }
+      }
+      if (slots > limits.slots) fail('输入空层数');
+      columns.push('[' + triples.join(',') + ']'); j++;
+    }
+    if (!j || cursor !== text.length) throw TypeError('邻接表应为连续的 [列][列]。');
+    return notation.display.plain(columns.join(''));
+  }
+  function textHTML(raw) {
+    return '<span style="font-family:inherit;white-space:nowrap">' + escape(plain(raw)) + '</span>';
+  }
+  function latex(raw) {
+    const text = plain(raw);
+    return text === '∅' ? '\\varnothing' : '\\text{' + text + '}';
+  }
+  function message(text, warning = false) {
+    return { width: Math.max(160, Array.from(text).length * 14 + 24), height: 48,
+      elements: [], extra_text: [{ text, x: 12, y: 24, size: 13, align: 'left',
+        color: { type: warning ? 'red' : 'text' } }],
+      _adjacency: { complete: !warning, warning, layers: [], entries: [] } };
+  }
+  function diagram(raw, data = {}) {
+    const tick = budget(), graph = inspect(raw, tick);
+    if (graph === null) return message(config.top);
+    const size = graph.columns.length;
+    const layers = data.invert_vertical ? graph.layers.slice().reverse() : graph.layers;
+    if (layers.length > limits.layers || layers.length * size * (size + 1) / 2 > limits.cells)
+      fail('完整三角表格数');
+    let digits = String(Math.max(0, size - 1)).length;
+    for (const layer of layers) for (const entry of layer.entries) {
+      tick(); digits = Math.max(digits, entry.q.length);
+    }
+    // Uniform compact cells align all layers, including diagonal index cells.
+    // Counts are a separate line, not column headings or coordinate labels.
+    const cell = Math.ceil(digits * 7.4 + 3), rowHeight = 14, padding = 4, gap = 8;
+    const layerWidth = Math.max(8, ...layers.map(layer => layer.k.length * 7.4));
+    const left = padding + layerWidth + 6, firstTableY = 28;
+    const tableWidth = size * cell, tableHeight = size * rowHeight;
+    const columnWidths = Array(size).fill(cell);
+    const columnXs = Array.from({ length: size }, (_, j) => left + (j + 0.5) * cell);
+    const minimumWidth = layers.length ? Math.ceil(left + tableWidth + padding) : 16;
+    const height = layers.length ? firstTableY + layers.length * (tableHeight + gap) - gap + padding : 24;
+    if (minimumWidth > limits.dimension || height > limits.dimension || minimumWidth * height > limits.pixels)
+      fail('完整表格画布');
+    const elements = [], extra_text = [], entries = [], tables = [];
+    function line(x1, y1, x2, y2, kind, k, weight = 0.65) {
+      tick(); elements.push({ type: 'line', x1, y1, x2, y2, stroke: true,
+        stroke_color: { type: 'gray' }, width: weight, _adjacency: { kind, k } });
+    }
+    function label(text, x, y, kind, fields = {}, color = 'text', align = 'center') {
+      tick(); extra_text.push({ text: String(text), x, y, size: 12, align,
+        color: { type: color }, _adjacency: { kind, ...fields } });
+    }
+    for (let index = 0; index < layers.length; index++) {
+      tick(); const layer = layers[index], y = firstTableY + index * (tableHeight + gap);
+      label(layer.k, left - 6, y + tableHeight / 2, 'layer', { k: layer.k }, 'text', 'right');
+      // Keep p<=j. The shaded p=j cells carry both coordinate labels; only
+      // actual relations (p<j) contain q. NER supports lines but not rectangles,
+      // so a butt-capped line one row thick fills each whole diagonal cell.
+      for (let j = 0; j < size; j++) {
+        tick(); const cy = y + (j + 0.5) * rowHeight;
+        elements.push({ type: 'line', x1: left + j * cell, y1: cy,
+          x2: left + (j + 1) * cell, y2: cy, stroke: true, width: rowHeight,
+          stroke_color: { color: { r: 93, g: 155, b: 217, a: 0.24 } },
+          _adjacency: { kind: 'diagonal-background', k: layer.k, j } });
+        label(j, columnXs[j], cy, 'diagonal-index', { k: layer.k, j });
+      }
+      for (let p = 0; p <= size; p++) {
+        line(left + Math.max(0, p - 1) * cell, y + p * rowHeight, left + tableWidth, y + p * rowHeight,
+          'grid-horizontal', layer.k);
+      }
+      for (let j = 0; j <= size; j++) {
+        line(left + j * cell, y, left + j * cell, y + Math.min(size, j + 1) * rowHeight,
+          'grid-vertical', layer.k);
+      }
+      for (const entry of layer.entries) {
+        const x = columnXs[entry.j], cy = y + (entry.p + 0.5) * rowHeight;
+        label(entry.q, x, cy, 'cell', entry); entries.push({ ...entry, x, y: cy });
+      }
+      tables.push({ k: layer.k, x: left, y, width: tableWidth, height: tableHeight });
+    }
+    // Reuse the existing exact counter, including its existing error handling.
+    // Do this after geometry so an exhausted counter does not suppress the graph.
+    let countText = config.countText(raw), countComplete = /^\d+(?:,\d+)*$/.test(countText);
+    const countWidth = text => Array.from(text).reduce((sum, ch) => sum +
+      (ch.charCodeAt(0) > 127 ? 14 : 8.5), 2 * padding);
+    const maximumCountWidth = Math.min(limits.dimension, Math.floor(limits.pixels / height));
+    if (countWidth(countText) > maximumCountWidth) {
+      countText = '计数序列文字过长；未截断显示'; countComplete = false;
+    }
+    const width = Math.ceil(Math.max(minimumWidth, countWidth(countText)));
+    if (width > limits.dimension || width * height > limits.pixels) fail('完整表格画布');
+    extra_text.unshift({ text: countText, x: padding, y: 11, size: 14, align: 'left',
+      color: { type: countComplete ? 'text' : 'red' }, _adjacency: { kind: 'counts' } });
+    return { width, height, elements, extra_text, _adjacency: { complete: true,
+      columns: size, groups: graph.groups, layers: tables, entries, cell, columnWidths, columnXs, rowHeight,
+      countText, countComplete, triangular: true } };
+  }
+  function safeDiagram(raw, data) {
+    try { return diagram(raw, data); }
+    catch (error) {
+      if (error.name !== 'AdjacencyViewLimit') throw error;
+      return message(error.message, true);
+    }
+  }
+  const color = spec => spec.color ? 'rgba(' + [spec.color.r, spec.color.g, spec.color.b,
+    spec.color.a ?? 1].join(',') + ')' : spec.type === 'gray' ? 'var(--color-text-muted,#999999)' :
+    spec.type === 'red' ? 'var(--color-danger,#bb5147)' : 'currentColor';
+  function svg(raw) {
+    const value = safeDiagram(raw), tick = budget(), parts = [
+      '<svg xmlns="http://www.w3.org/2000/svg" role="img" width="' + value.width +
+      '" height="' + value.height + '" viewBox="0 0 ' + value.width + ' ' + value.height +
+      '" style="display:block;max-width:none;font-family:inherit" aria-label="' + config.label + ' 分层邻接表">',
+      '<title>' + config.label + ' 分层邻接表</title>',
+      '<desc>最上方是计数序列，随后每层一张上三角邻接表；完整对角格用淡色背景填入列号，同时充当行列标。左侧裸数字为层号，其余格内数字为最大根 q。无外侧行列号。</desc>'
+    ];
+    for (const line of value.elements) {
+      tick(); parts.push('<line x1="' + line.x1 + '" y1="' + line.y1 + '" x2="' + line.x2 +
+        '" y2="' + line.y2 + '" stroke="' + color(line.stroke_color) + '" stroke-width="' + line.width +
+        '" stroke-linecap="butt"/>');
+    }
+    for (const text of value.extra_text) {
+      tick(); const meta = text._adjacency;
+      const cell = meta?.kind === 'cell' ? ' data-adjacency="' + [meta.k, meta.p, meta.q, meta.j].join(',') + '"' : '';
+      parts.push('<text x="' + text.x + '" y="' + text.y + '" font-size="' + text.size +
+        '" dominant-baseline="middle" text-anchor="' + ({ left: 'start', center: 'middle', right: 'end' }[text.align]) +
+        '" fill="' + color(text.color) + '"' + cell + '>' + escape(text.text) + '</text>');
+    }
+    parts.push('</svg>'); const result = parts.join('');
+    if (result.length > limits.svg) fail('完整 SVG 文字');
+    return result;
+  }
+  const oldControl = notation.draw_diagram;
+  notation.id = config.id;
+  notation.name = config.displayName || config.label + '（邻接表试用版）';
+  if (config.displayName) notation.simple_name = config.displayName;
+  notation.description = [...notation.description,
+    '本试用版新增邻接表（文字）和邻接表（图），原有显示、展开及比较不变。',
+    '文字：每列一对 []；分号从层 0 起分层，逗号从父列 0 起定位，格内填最大根 q。内部空位保留，尾部空位省略；0 不是空位。',
+    '图：最上方是计数序列，其下每层一张上三角表；只裁去必空的下三角，不删任何关系。完整对角格用淡色背景填列号，同时标识该行和该列。层号在左侧，不加 k=，不画外侧行列号。',
+    '两种新视图均可由纯文本导回列表。计数复用原精确算法；超限明确提示，不代填近似数字。表格完整显示全部关系。'
+  ];
+  notation.display_equiv = { ...notation.display_equiv,
+    [TEXT]: { name: TEXT, plain, html: textHTML, latex, from_display: fromDisplay },
+    [TABLE]: { name: TABLE, plain, html: svg, latex, from_display: fromDisplay }
+  };
+  notation.draw_diagram = { ...oldControl,
+    default_data: { ...oldControl.default_data, current_equiv: undefined },
+    draw_diagram: (raw, data = {}) => data.current_equiv === TABLE || data.current_equiv === TEXT ?
+      safeDiagram(raw, data) : oldControl.draw_diagram(raw, data)
+  };
+  notation.debug = { ...notation.debug, adjacency_text: plain, adjacency_from_text: fromDisplay,
+    adjacency_diagram: diagram, adjacency_svg: svg, adjacency_limits: limits };
+}
+addAdjacencyDisplays(definition, {label:'ARD',top:'Limit of ARD',id:'ard-adjacency-v01',width:8192,ms:1000,anchored:true,countText:raw=>definition.display_equiv['计数序列'].plain(raw),read:raw=>{const g=definition.debug.parse(raw);return g===null?null:g.cols.map(col=>col.map(e=>[e.k,e.p,e.q]));}});
+register(definition);
+})(register_notation);

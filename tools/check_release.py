@@ -13,10 +13,10 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 IGNORED = {'.build', '.lake', 'tmp', '__pycache__', 'node_modules', '.git'}
 NER_HASHES = {
-    'notations/RPD/RPD-mountain.ne-rewritten.js': 'a679d2a0e081729f628cebc694379925233acab4c96bfb6d05ea8f83f1c1c24b',
+    'notations/RPD/RPD-mountain.ne-rewritten.js': '447eaed4e88604a29ba4ccef329b05c57ef30d935b0a31166ff519805e352026',
     'notations/LRD/LRD.ne-rewritten.js': '394fe4763e82708a99d66c2d88d3926c86c4be92ec35174b9205a292550740b1',
     'notations/Omega-LRD3/Omega-LRD3.ne-rewritten.js': 'fe33b1a35891e9efb9eb5932ab94456053769b6b58df41ea9f36eb57a262f3ab',
-    'notations/ARD/ARD-arcs.ne-rewritten.js': 'bf354fb3540e1971267ccf05e30703b36a72b80fd12c1a72c5152e0d38007f8d',
+    'notations/ARD/ARD-arcs.ne-rewritten.js': 'ab4f05ef1fb65b6308e710cbbc98c173310f9c3073ce3a57082863af708841d6',
 }
 
 

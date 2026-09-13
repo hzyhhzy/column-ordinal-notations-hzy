@@ -4,16 +4,16 @@ This package is the 2026-09-13 source snapshot for [column-ordinal-notations-hzy
 
 ## Notation implementations
 
-The original three NER scripts remain byte-identical to their selected working versions. The ARD addition updates only its header comment and displayed proof-status sentence. No expansion, comparison, display mode, or resource guard was changed when packaging them. The hashes below pin the delivered bytes.
+LRD and Ω-LRD3 remain byte-identical to their selected working versions. RPD and ARD now add text and triangular-table adjacency displays and updated registration metadata. Each embeds its entire previously published script from commit `542d47a` unchanged (verified after line-ending normalization); expansion, comparison, existing displays and original resource guards are preserved. The new views have their own complete-output guards. The hashes below pin the delivered bytes.
 
 | Script | SHA-256 |
 | --- | --- |
-| `notations/RPD/RPD-mountain.ne-rewritten.js` | `a679d2a0e081729f628cebc694379925233acab4c96bfb6d05ea8f83f1c1c24b` |
+| `notations/RPD/RPD-mountain.ne-rewritten.js` | `447eaed4e88604a29ba4ccef329b05c57ef30d935b0a31166ff519805e352026` |
 | `notations/LRD/LRD.ne-rewritten.js` | `394fe4763e82708a99d66c2d88d3926c86c4be92ec35174b9205a292550740b1` |
 | `notations/Omega-LRD3/Omega-LRD3.ne-rewritten.js` | `fe33b1a35891e9efb9eb5932ab94456053769b6b58df41ea9f36eb57a262f3ab` |
-| `notations/ARD/ARD-arcs.ne-rewritten.js` | `bf354fb3540e1971267ccf05e30703b36a72b80fd12c1a72c5152e0d38007f8d` |
+| `notations/ARD/ARD-arcs.ne-rewritten.js` | `ab4f05ef1fb65b6308e710cbbc98c173310f9c3073ce3a57082863af708841d6` |
 
-RPD is the current column-comparison, mountain-display version, not the earlier history-ordered notation. LRD uses its fixed ordinal polynomial rows. Ω-LRD3 uses the inclusive packet through index `b` and its single-column seed tower. No other Ω-LRD implementation is included.
+RPD is the current column-comparison version with mountain and adjacency displays, not the earlier history-ordered notation. Its browser menu name is `RDP`; the notation and file names remain RPD. LRD uses its fixed ordinal polynomial rows. Ω-LRD3 uses the inclusive packet through index `b` and its single-column seed tower. No other Ω-LRD implementation is included.
 
 ARD means *Anchored Row Diagrams*. It uses earlier-column addresses as row anchors and moves all four edge coordinates. The selected standalone browser script is the arc-view version, including circled/capsule root labels; its mathematical rules and resource guards were not changed for this addition. Its Python module retains the readable `AnchoredRows` class and maximum-root compression. The earlier mountain-only ARD renderer is not included as a duplicate implementation.
 
