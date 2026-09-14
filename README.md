@@ -1,10 +1,10 @@
 # Column Ordinal Notations - HZY · [中文版](README.zh-CN.md)
 
-At 20:00 on September 11, @Phyrion published a [well-ordering proof for the Y-sequence system](https://github.com/Phyrion1343/1Y-Well-Ordering-Lean). Shortly afterwards, @test_alpha0 reduced the required axiomatic foundation to $KP_\omega+\text{there exists an uncountable ordinal}$. This repository collects RPD, LRD, Ω-LRD3, ARD, IPD, and ARD2, notation systems devised by GPT6-astra after studying those proofs, together with their well-ordering proofs. RPD is expected to be at least as strong as Y while admitting a much shorter definition; this strength comparison has not been proved. LRD and Ω-LRD3 are further extensions of that construction. ARD makes row labels into references to earlier columns, so the row coordinate itself moves during expansion. IPD uses finite-level iterated tree profiles and relocates references even inside nested heads. ARD2 returns to three natural-number coordinates, allowing both row and root SELF references and full-context root packages. All six admit paper well-ordering proofs in the same axiomatic system. Their order-type relationships with omega-Y and other familiar notation systems are currently unknown.
+At 20:00 on September 11, @Phyrion published a [well-ordering proof for the Y-sequence system](https://github.com/Phyrion1343/1Y-Well-Ordering-Lean). Shortly afterwards, @test_alpha0 reduced the required axiomatic foundation to $KP_\omega+\text{there exists an uncountable ordinal}$. This repository collects RPD, LRD, Ω-LRD3, ARD, IPD, and ARD2, notation systems devised by GPT6-astra after studying those proofs, together with their well-ordering proofs. RPD is expected to be at least as strong as Y while admitting a much shorter definition; exploratory arguments for this comparison are kept in the research directory, not in the verified theorem collection. LRD and Ω-LRD3 are further extensions of that construction. ARD makes row labels into references to earlier columns, so the row coordinate itself moves during expansion. IPD uses finite-level iterated tree profiles and relocates references even inside nested heads. ARD2 returns to three natural-number coordinates, allowing both row and root SELF references and full-context root packages. All six admit paper well-ordering proofs in the same axiomatic system. Their order-type relationships with omega-Y and other familiar notation systems are currently unknown.
 
 Definitions, executable fundamental sequences, and well-ordering proofs for column-diagram ordinal notations. This source snapshot was prepared on **2026-09-14** for [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy). The suffix `hzy` refers to the repository owner's name.
 
-The new notation implementations are **RPD, LRD, Ω-LRD3, ARD, IPD and ARD2**. The proof collection covers **Y, RPD, LRD, Ω-LRD3, ARD, IPD and ARD2**. Other Ω-LRD variants and historical experiments are deliberately excluded.
+The new notation implementations are **RPD, LRD, Ω-LRD3, ARD, IPD and ARD2**. The proof collection covers **Y, RPD, LRD, Ω-LRD3, ARD, IPD and ARD2**. Other Ω-LRD variants and historical experimental implementations are deliberately excluded.
 
 ## Definitions and expanders
 
@@ -48,7 +48,13 @@ Each notation has independent build configuration, outputs and verification rece
 
 The Lean project formalizes the ordinary mathematical well-ordering theorems. **It does not encode a derivation in the weak object theory above.** The paper's axiom ledger and the Lean kernel checks are distinct results.
 
-Y means the fixed upstream inherited-ancestry definition, pinned to commit `1689b21131b488ec2ba2515bd630360371a2389d`. A full equivalence proof between that definition and the original Naruyoko JavaScript on every legal input is not claimed here. No comparison of the seven order types, optimal axiom-strength claim, or proof-theoretic ordinal comparison is included.
+Y means the fixed upstream inherited-ancestry definition, pinned to commit `1689b21131b488ec2ba2515bd630360371a2389d`. A full equivalence proof between that definition and the original Naruyoko JavaScript on every legal input is not claimed here. The verified proof collection includes no comparison of the seven order types, optimal axiom-strength claim, or proof-theoretic ordinal comparison. Separate research notes record exploratory comparison arguments and candidates.
+
+## Exploratory order-type comparisons
+
+The separate [research directory](research/README.md) contains derivations and comparison drafts, not additional certified theorems. The current [IPD comparison overview (Chinese)](research/ordinal-comparisons-20260914/README.zh-CN.md) covers the paper-level Y≤RPD argument, proposed IPD upper bounds for RPD/Y/wY/ARD/TPD, and the subsequent ARD2–IPD investigation. The notes distinguish paper arguments, local lemmas, bounded checks, and unproved candidates; archiving them does not establish an end-to-end Lean comparison.
+
+Supporting manuscripts and candidate data are included. Experimental code and private source manuscripts are not bundled. Historical test reports and the current status of the formal proofs must be read separately.
 
 ## Checks and PDF regeneration
 
@@ -93,6 +99,7 @@ notations/
   IPD/                           Bilingual definitions, PDFs, tree-view JS, Python
   ARD2/                          Bilingual definitions, PDFs, five-view JS, Python
 proofs/paper/                    Joint, ARD, IPD and ARD2 proofs; bilingual correspondence audit
+research/                       Comparison drafts, candidates and historical research notes
 lean/                           Source closure, dependency pins, bounded build
 tests/                          Bounded expander and verifier regression tests
 tools/                          Reproducible PDF generation and QA

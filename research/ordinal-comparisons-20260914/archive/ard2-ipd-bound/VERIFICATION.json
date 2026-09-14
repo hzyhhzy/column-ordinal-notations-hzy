@@ -1,0 +1,45 @@
+{
+  "checked_at_utc": "2026-09-14 10:50:56",
+  "research_start_utc": "2026-09-14 09:54:07",
+  "research_requested_until_utc": "2026-09-14 10:54:07",
+  "research_completed_at_utc": "2026-09-14 10:54:11",
+  "ordinal_comparison_proved": false,
+  "candidate_only": "ARD2 <= IPD A3[2]",
+  "uniform_macro_closure_proved": false,
+  "source_sha256": {
+    "full_context.py": "d3dc649179d4b5db1765125b50e5346a6aaa7703b8070a367416aec0db24e595",
+    "ipd.py": "12d3f08fd38fc51aa78b9972bae2d5e02fc8efc09de085a9b1752880948ebab1",
+    "IPD.ne-rewritten.js": "acc1a1c2ae260da9be7d13e14ac17d84a92679f82efe97aa85cd0e3b072f6011"
+  },
+  "local_word_audit": {
+    "adjacent_order_pairs": 18304,
+    "zero_lower_floor_pairs": 18304,
+    "seed_captures": 11,
+    "seed_first_steps": 44,
+    "fixed_wrapper_obstructions": 5,
+    "max_nodes": 2477,
+    "seconds": 0.765
+  },
+  "independent_ner_replays": {
+    "records": [
+      {"source_path": [3, 2, 1], "preparations": 329, "matched_edges": 9},
+      {"source_path": [3, 1, 2], "preparations": 21555, "matched_edges": 7},
+      {"source_path": [3, 2, 2], "preparations": 329, "matched_edges": 15},
+      {"source_path": [3, 2, 3], "preparations": 329, "matched_edges": 21},
+      {"source_path": [3, 3, 1], "preparations": 4806, "matched_edges": 14}
+    ],
+    "all_prepared_states_match": true,
+    "all_endpoints_match": true,
+    "all_pointwise_covers_match": true,
+    "milliseconds": 5462,
+    "rss_megabytes": 151
+  },
+  "inconclusive_searches": [
+    "Continuation by [1] or [2] from the carried cover of S3[2][2]: sixteen beam-search layers did not complete it.",
+    "The same continuations with a control-barrier preparation reached the bounded per-operation work budget.",
+    "S4[2] and S5[2] control switches: 12000 local preparations did not finish the selected search template."
+  ],
+  "definition_files_modified": false,
+  "formal_repository_modified": false,
+  "commit_or_push": false
+}

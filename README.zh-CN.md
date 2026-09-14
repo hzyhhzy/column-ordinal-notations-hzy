@@ -1,10 +1,10 @@
 # 列图序数记号 - HZY · [English](README.md)
 
-9 月 11 日 20:00，@Phyrion 公布了 [Y 序列的良序证明](https://github.com/Phyrion1343/1Y-Well-Ordering-Lean)。不久后，@test_alpha0 进一步将所需的公理体系降低到 $KP_\omega+\text{存在不可数序数}$。本仓库收录 GPT6-astra 在阅读上述证明后设计的 RPD、LRD、Ω-LRD3、ARD、IPD、ARD2，以及它们的良序证明。其中，RPD 预计强度不小于 Y 序列，但定义所需篇幅短得多；这一强度比较尚未证明。LRD 和 Ω-LRD3 则是在此基础上进一步扩展得到的记号。ARD 则把行标改为此前列的地址，使行坐标本身也随展开移动。IPD 则使用有限层迭代树轮廓，连嵌套头内的引用也随列搬运。ARD2 回到每组仅三个自然数坐标的形式，允许行与根同时引用本列，并生成覆盖全上下文的根包。六者均有同一公理体系下的纸面良序证明。它们与 omega-Y 等其他常见记号的序型大小关系暂时未知。
+9 月 11 日 20:00，@Phyrion 公布了 [Y 序列的良序证明](https://github.com/Phyrion1343/1Y-Well-Ordering-Lean)。不久后，@test_alpha0 进一步将所需的公理体系降低到 $KP_\omega+\text{存在不可数序数}$。本仓库收录 GPT6-astra 在阅读上述证明后设计的 RPD、LRD、Ω-LRD3、ARD、IPD、ARD2，以及它们的良序证明。其中，RPD 预计强度不小于 Y 序列，但定义所需篇幅短得多；有关相对强度的探索性论证另存研究目录，尚未作为正式比较定理收录。LRD 和 Ω-LRD3 则是在此基础上进一步扩展得到的记号。ARD 则把行标改为此前列的地址，使行坐标本身也随展开移动。IPD 则使用有限层迭代树轮廓，连嵌套头内的引用也随列搬运。ARD2 回到每组仅三个自然数坐标的形式，允许行与根同时引用本列，并生成覆盖全上下文的根包。六者均有同一公理体系下的纸面良序证明。它们与 omega-Y 等其他常见记号的序型大小关系暂时未知。
 
 本仓库收录列图序数记号的定义、可执行基本列展开器和良序证明。源码快照整理于 **2026-09-14**，仓库地址为 [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy)。名称中的 `hzy` 来自仓库所有者的名字。
 
-新记号实现收录 **RPD、LRD、Ω-LRD3、ARD、IPD、ARD2**；证明覆盖 **Y、RPD、LRD、Ω-LRD3、ARD、IPD、ARD2**。其他 Ω-LRD 版本及历史实验均不收录。
+新记号实现收录 **RPD、LRD、Ω-LRD3、ARD、IPD、ARD2**；证明覆盖 **Y、RPD、LRD、Ω-LRD3、ARD、IPD、ARD2**。其他 Ω-LRD 版本及历史实验实现均不收录。
 
 ## 定义与展开器
 
@@ -48,7 +48,13 @@ $$
 
 Lean 工程形式化通常数学意义的良序定理，**不是在 Lean 中编码上述弱对象理论的推导**。论文的公理账本与 Lean 内核检查是两项不同成果。
 
-Y 指固定上游提交 `1689b21131b488ec2ba2515bd630360371a2389d` 的继承祖先定义。这里不声称已完成该定义与原 Naruyoko JavaScript 在全部合法输入上的等价证明，也不收录七者序型比较、最优公理强度或证明论序数比较。
+Y 指固定上游提交 `1689b21131b488ec2ba2515bd630360371a2389d` 的继承祖先定义。这里不声称已完成该定义与原 Naruyoko JavaScript 在全部合法输入上的等价证明，正式证明部分也不收录七者序型比较、最优公理强度或证明论序数比较；另设研究目录保存未纳入正式定理的比较论证与候选。
+
+## 序型比较研究（非正式定理）
+
+新增的[研究目录](research/README.md)专门保存推导与比较草稿，与正式证明分开放置。当前收录 [IPD 比较总览](research/ordinal-comparisons-20260914/README.zh-CN.md)、Y≤RPD 的纸面比较思路、RPD/Y/wY/ARD/TPD 的 IPD 上界候选，以及 ARD2 与 IPD 的后续研究。每份总结区分纸面论证、局部引理、有限核验和未证候选；归档不等于完成跨记号的 Lean 认证。
+
+关键原稿与候选数据一并保存，实验代码及私人来源稿不随文档归档。历史测试记录与正式仓库当前证明进度应分别阅读。
 
 ## 验证与重新生成 PDF
 
@@ -93,6 +99,7 @@ notations/
   IPD/                           双语定义、PDF、树形图 JS、Python
   ARD2/                          双语定义、PDF、五视图 JS、Python
 proofs/paper/                    合写、ARD、IPD、ARD2 证明及双语定义对应审计
+research/                       比较推导、未证候选及历史研究文稿
 lean/                           源码依赖集合、固定版本与有界构建工具
 tests/                          有界展开器与构建验证器回归测试
 tools/                          可复现 PDF 生成及 QA
