@@ -1,0 +1,697 @@
+{
+  "target": "ARD2Final",
+  "modules": {
+    "OrdinalFormal.ReflectionTransport": {
+      "source": "ordinal-formalization/OrdinalFormal/ReflectionTransport.lean",
+      "imports": [
+        "Std"
+      ],
+      "sha256": "9fdb5764b5a040b497519655e2e56c53207c772889446ca096665d931cceee7c",
+      "origin": "local",
+      "original_sha256_lf": "9fdb5764b5a040b497519655e2e56c53207c772889446ca096665d931cceee7c",
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/ReflectionTransport.lean"
+    },
+    "FiniteDemandCore": {
+      "source": "ordinal-formalization/finite-demand/Core.lean",
+      "imports": [
+        "Mathlib.SetTheory.Ordinal.Basic",
+        "Mathlib.Order.RelClasses",
+        "OrdinalFormal.ReflectionTransport"
+      ],
+      "sha256": "0478abd8771233e01e3c229536f8c3894edbf6746649437d5e6bbc02874c6edc",
+      "origin": "local",
+      "original_sha256_lf": "0478abd8771233e01e3c229536f8c3894edbf6746649437d5e6bbc02874c6edc",
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/FiniteDemandCore.lean"
+    },
+    "FiniteDemandRecursion": {
+      "source": "ordinal-formalization/finite-demand/Recursion.lean",
+      "imports": [
+        "FiniteDemandCore"
+      ],
+      "sha256": "a4bc0b64194c2007f27d4283b8a672c147292c405ba7de9d090b879ad5bb9a3e",
+      "origin": "local",
+      "original_sha256_lf": "a4bc0b64194c2007f27d4283b8a672c147292c405ba7de9d090b879ad5bb9a3e",
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/FiniteDemandRecursion.lean"
+    },
+    "FiniteDemandReflection": {
+      "source": "ordinal-formalization/finite-demand/Reflection.lean",
+      "imports": [
+        "FiniteDemandRecursion"
+      ],
+      "sha256": "9cec3f77de54c9bdd126d4c9259b231dc5cbfe2384f75ad7ab551b0d63aa9ffa",
+      "origin": "local",
+      "original_sha256_lf": "9cec3f77de54c9bdd126d4c9259b231dc5cbfe2384f75ad7ab551b0d63aa9ffa",
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/FiniteDemandReflection.lean"
+    },
+    "FiniteDemandWitnesses": {
+      "source": "ordinal-formalization/finite-demand/Witnesses.lean",
+      "imports": [
+        "FiniteDemandReflection",
+        "Mathlib.Data.List.Shortlex",
+        "Mathlib.Order.WellFounded",
+        "Mathlib.Data.Countable.Basic"
+      ],
+      "sha256": "f8e9dfecb0db0e3c5f91c2c09620dfa4d358f2be24795edc9a39f765b56b76e3",
+      "origin": "local",
+      "original_sha256_lf": "f8e9dfecb0db0e3c5f91c2c09620dfa4d358f2be24795edc9a39f765b56b76e3",
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/FiniteDemandWitnesses.lean"
+    },
+    "FiniteDemandEndpointAgreement": {
+      "source": "ordinal-formalization/finite-demand/EndpointAgreement.lean",
+      "imports": [
+        "FiniteDemandWitnesses"
+      ],
+      "sha256": "39b0d02681f716d1dc43bc4694cc9905625c53263b8197f294dd17ad7d9f1667",
+      "origin": "local",
+      "original_sha256_lf": "39b0d02681f716d1dc43bc4694cc9905625c53263b8197f294dd17ad7d9f1667",
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/FiniteDemandEndpointAgreement.lean"
+    },
+    "FiniteDemandFinitaryClosure": {
+      "source": "ordinal-formalization/finite-demand/FinitaryClosure.lean",
+      "imports": [
+        "Mathlib.Data.Set.Countable",
+        "Mathlib.Data.List.Basic"
+      ],
+      "sha256": "862e5e7f958e54e5798a66601a51ee0ffb1c71af3b89a683284f6e8d219acb9a",
+      "origin": "local",
+      "original_sha256_lf": "862e5e7f958e54e5798a66601a51ee0ffb1c71af3b89a683284f6e8d219acb9a",
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/FiniteDemandFinitaryClosure.lean"
+    },
+    "FiniteDemandOrdinalHeight": {
+      "source": "ordinal-formalization/finite-demand/OrdinalHeight.lean",
+      "imports": [
+        "Mathlib.SetTheory.Ordinal.Family",
+        "Mathlib.Data.Set.Countable"
+      ],
+      "sha256": "f760e1ad8a3f793e59f4400a1b593b6e3caf70df396af89c25fc6509e42ec9e9",
+      "origin": "local",
+      "original_sha256_lf": "f760e1ad8a3f793e59f4400a1b593b6e3caf70df396af89c25fc6509e42ec9e9",
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/FiniteDemandOrdinalHeight.lean"
+    },
+    "FiniteDemandClosedSupply": {
+      "source": "ordinal-formalization/finite-demand/ClosedSupply.lean",
+      "imports": [
+        "FiniteDemandEndpointAgreement",
+        "FiniteDemandFinitaryClosure",
+        "FiniteDemandOrdinalHeight"
+      ],
+      "sha256": "663daeb82308c163c8211e66ae5460367dff7436083084d2887e351bbff19ba6",
+      "origin": "local",
+      "original_sha256_lf": "663daeb82308c163c8211e66ae5460367dff7436083084d2887e351bbff19ba6",
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/FiniteDemandClosedSupply.lean"
+    },
+    "OrdinalFormal.Columns": {
+      "source": "ordinal-formalization/OrdinalFormal/Columns.lean",
+      "imports": [
+        "Std"
+      ],
+      "sha256": "9ca6fa12bd47e29771ecabe5623008542f4ab0b12072d25ee33ccef17bda84d4",
+      "origin": "local",
+      "original_sha256_lf": "9ca6fa12bd47e29771ecabe5623008542f4ab0b12072d25ee33ccef17bda84d4",
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/Columns.lean"
+    },
+    "OrdinalFormal.ColumnRepresentation": {
+      "source": "ordinal-formalization/OrdinalFormal/ColumnRepresentation.lean",
+      "imports": [
+        "OrdinalFormal.Columns",
+        "OrdinalFormal.ReflectionTransport"
+      ],
+      "sha256": "13cc4df4ac86d00ba5a41a4f0faeac30078f807e440975862cda4dc8d56425e6",
+      "origin": "local",
+      "original_sha256_lf": "13cc4df4ac86d00ba5a41a4f0faeac30078f807e440975862cda4dc8d56425e6",
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/ColumnRepresentation.lean"
+    },
+    "FiniteDemandInitialRepresentation": {
+      "source": "ordinal-formalization/finite-demand/InitialRepresentation.lean",
+      "imports": [
+        "FiniteDemandClosedSupply",
+        "OrdinalFormal.ColumnRepresentation"
+      ],
+      "sha256": "abd287de4ebaf71798bb9c7cd8de71c27846b372fd01cd5829853764f8c4c227",
+      "origin": "local",
+      "original_sha256_lf": "abd287de4ebaf71798bb9c7cd8de71c27846b372fd01cd5829853764f8c4c227",
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/FiniteDemandInitialRepresentation.lean"
+    },
+    "FiniteDemandHostAmbient": {
+      "source": "ordinal-formalization/finite-demand/HostAmbient.lean",
+      "imports": [
+        "FiniteDemandInitialRepresentation",
+        "Mathlib.SetTheory.Cardinal.Aleph"
+      ],
+      "sha256": "d8d23903490dab6b6b16ffd8ff83c7aec850f3ba945b7a822bb20a55a10aa781",
+      "origin": "local",
+      "original_sha256_lf": "d8d23903490dab6b6b16ffd8ff83c7aec850f3ba945b7a822bb20a55a10aa781",
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/FiniteDemandHostAmbient.lean"
+    },
+    "OrdinalFormal.Reachability": {
+      "source": "ordinal-formalization/OrdinalFormal/Reachability.lean",
+      "imports": [
+        "Std"
+      ],
+      "sha256": "8d8b2c42492344d6c4505940339ce6f1c774f6b244c3ee4daddc31deb4299f53",
+      "origin": "local",
+      "original_sha256_lf": "8d8b2c42492344d6c4505940339ce6f1c774f6b244c3ee4daddc31deb4299f53",
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/Reachability.lean"
+    },
+    "OrdinalFormal.ExpansionValidity": {
+      "source": "ordinal-formalization/OrdinalFormal/ExpansionValidity.lean",
+      "imports": [
+        "OrdinalFormal.Columns"
+      ],
+      "sha256": "24f599ae15d3d13bb0536dba9e88d6e7366b12e3fde01076ba6c4f3c0fd0b364",
+      "origin": "local",
+      "original_sha256_lf": "24f599ae15d3d13bb0536dba9e88d6e7366b12e3fde01076ba6c4f3c0fd0b364",
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/ExpansionValidity.lean"
+    },
+    "OrdinalFormal.ActualBlockGeometry": {
+      "source": "ordinal-formalization/OrdinalFormal/ActualBlockGeometry.lean",
+      "imports": [
+        "OrdinalFormal.ExpansionValidity",
+        "OrdinalFormal.ColumnRepresentation"
+      ],
+      "sha256": "8efde04967c62cb148d57129d060c71c29b07fd4524af08250d90beb32382c36",
+      "origin": "local",
+      "original_sha256_lf": "8efde04967c62cb148d57129d060c71c29b07fd4524af08250d90beb32382c36",
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/ActualBlockGeometry.lean"
+    },
+    "OrdinalFormal.SpliceConstruction": {
+      "source": "ordinal-formalization/OrdinalFormal/SpliceConstruction.lean",
+      "imports": [
+        "OrdinalFormal.ReflectionTransport"
+      ],
+      "sha256": "425de33bd41d0698b1b62e18639a20c9b25827982793aac7eb5be4befb72e250",
+      "origin": "local",
+      "original_sha256_lf": "425de33bd41d0698b1b62e18639a20c9b25827982793aac7eb5be4befb72e250",
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/SpliceConstruction.lean"
+    },
+    "OrdinalFormal.RPD": {
+      "source": "ordinal-formalization/OrdinalFormal/RPD.lean",
+      "imports": [
+        "OrdinalFormal.Columns"
+      ],
+      "sha256": "a54dad4c4a4d115281a68b3191f19455e2bbb46817ff3611b38397dbae90ebef",
+      "origin": "local",
+      "original_sha256_lf": "a54dad4c4a4d115281a68b3191f19455e2bbb46817ff3611b38397dbae90ebef",
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/RPD.lean"
+    },
+    "OrdinalFormal.Comparison": {
+      "source": "ordinal-formalization/OrdinalFormal/Comparison.lean",
+      "imports": [
+        "OrdinalFormal.Columns",
+        "OrdinalFormal.RPD"
+      ],
+      "sha256": "dcad9a6f2cb12831e82efdeedab64a4004a28cb27bc777b17dd0387101962dec",
+      "origin": "local",
+      "original_sha256_lf": "dcad9a6f2cb12831e82efdeedab64a4004a28cb27bc777b17dd0387101962dec",
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/Comparison.lean"
+    },
+    "OrdinalFormal.RPDDecrease": {
+      "source": "ordinal-formalization/OrdinalFormal/RPDDecrease.lean",
+      "imports": [
+        "OrdinalFormal.RPD",
+        "OrdinalFormal.Comparison",
+        "OrdinalFormal.ExpansionValidity",
+        "OrdinalFormal.ColumnRepresentation"
+      ],
+      "sha256": "d0328ca0693f942120636e23265b37f837d92d1b7cdb9dbd9c15590d3493068d",
+      "origin": "local",
+      "original_sha256_lf": "d0328ca0693f942120636e23265b37f837d92d1b7cdb9dbd9c15590d3493068d",
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/RPDDecrease.lean"
+    },
+    "OrdinalFormal.LRD": {
+      "source": "ordinal-formalization/OrdinalFormal/LRD.lean",
+      "imports": [
+        "OrdinalFormal.Columns"
+      ],
+      "sha256": "b764095b79a423319e715ffe4b503289d7a26a2d82ba955fd8162b84a6d09adc",
+      "origin": "local",
+      "original_sha256_lf": "b764095b79a423319e715ffe4b503289d7a26a2d82ba955fd8162b84a6d09adc",
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/LRD.lean"
+    },
+    "OrdinalFormal.Domains": {
+      "source": "ordinal-formalization/OrdinalFormal/Domains.lean",
+      "imports": [
+        "OrdinalFormal.RPD",
+        "OrdinalFormal.LRD",
+        "OrdinalFormal.Reachability"
+      ],
+      "sha256": "dba9d5c191edd0508a06f44cb41f8e04ac02614558468797fbd5ad2c302a55b5",
+      "origin": "local",
+      "original_sha256_lf": "d387a8d64271353c88bf12ce734a33e4526e651c89838a00f5c466186caae499",
+      "distribution": "bundled local proof source",
+      "release_change": "Removed unused obsolete notation declarations/imports; retained RPD/LRD proof terms unchanged",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/Domains.lean"
+    },
+    "OrdinalFormal.RPDGeometry": {
+      "source": "ordinal-formalization/OrdinalFormal/RPDGeometry.lean",
+      "imports": [
+        "OrdinalFormal.RPD",
+        "OrdinalFormal.Comparison",
+        "OrdinalFormal.ColumnRepresentation",
+        "OrdinalFormal.Reachability"
+      ],
+      "sha256": "c54d30ed0b8ef526f08bb8944daf27cd0fc10766d1081ea4009df9e94db64ae4",
+      "origin": "local",
+      "original_sha256_lf": "c54d30ed0b8ef526f08bb8944daf27cd0fc10766d1081ea4009df9e94db64ae4",
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/RPDGeometry.lean"
+    },
+    "OrdinalFormal.StandardValidity": {
+      "source": "ordinal-formalization/OrdinalFormal/StandardValidity.lean",
+      "imports": [
+        "OrdinalFormal.Domains",
+        "OrdinalFormal.ExpansionValidity",
+        "OrdinalFormal.RPDGeometry"
+      ],
+      "sha256": "71d43989a80559642fe63c2687ba6d09348aab3d14496fdf2d418d06706190d2",
+      "origin": "local",
+      "original_sha256_lf": "ece21a4a752068a87f78733c91a13c95681976f2d1790ebb39f41354b3d41197",
+      "distribution": "bundled local proof source",
+      "release_change": "Removed unused obsolete notation declarations/imports; retained RPD/LRD proof terms unchanged",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/StandardValidity.lean"
+    },
+    "OrdinalFormal.RPDSortedColumns": {
+      "source": "ordinal-formalization/OrdinalFormal/RPDSortedColumns.lean",
+      "imports": [
+        "OrdinalFormal.RPDDecrease",
+        "OrdinalFormal.StandardValidity"
+      ],
+      "sha256": "c0a1cd1be2e6c56b66db6fe8100935120ad40be9986c2670ed96210ba2808469",
+      "origin": "local",
+      "original_sha256_lf": "c0a1cd1be2e6c56b66db6fe8100935120ad40be9986c2670ed96210ba2808469",
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/RPDSortedColumns.lean"
+    },
+    "OrdinalFormal.GenericSortedColumns": {
+      "source": "ordinal-formalization/OrdinalFormal/GenericSortedColumns.lean",
+      "imports": [
+        "OrdinalFormal.Comparison",
+        "OrdinalFormal.ColumnRepresentation"
+      ],
+      "sha256": "81b7f04ceba41be7f1843ee0d281b676e53644965a49294de90bb0f3a63fdf89",
+      "origin": "local",
+      "original_sha256_lf": "81b7f04ceba41be7f1843ee0d281b676e53644965a49294de90bb0f3a63fdf89",
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/GenericSortedColumns.lean"
+    },
+    "OrdinalFormal.BlockFiniteUnion": {
+      "source": "ordinal-formalization/OrdinalFormal/BlockFiniteUnion.lean",
+      "imports": [
+        "OrdinalFormal.ActualBlockGeometry",
+        "OrdinalFormal.GenericSortedColumns"
+      ],
+      "sha256": "6185c50468a36c3fb8f32defbfe3202545b739699bc2f98b2cad27fc2bc16e7d",
+      "origin": "local",
+      "original_sha256_lf": "6185c50468a36c3fb8f32defbfe3202545b739699bc2f98b2cad27fc2bc16e7d",
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/BlockFiniteUnion.lean"
+    },
+    "OrdinalFormal.RPDFiniteUnion": {
+      "source": "ordinal-formalization/OrdinalFormal/RPDFiniteUnion.lean",
+      "imports": [
+        "OrdinalFormal.BlockFiniteUnion",
+        "OrdinalFormal.RPDSortedColumns"
+      ],
+      "sha256": "2b723f8267f2ef62fade6561d92253ee1a696620e8844894c7ce3fc148ae9461",
+      "origin": "local",
+      "original_sha256_lf": "2b723f8267f2ef62fade6561d92253ee1a696620e8844894c7ce3fc148ae9461",
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/RPDFiniteUnion.lean"
+    },
+    "OrdinalFormal.GeneratedColumnDecrease": {
+      "source": "ordinal-formalization/OrdinalFormal/GeneratedColumnDecrease.lean",
+      "imports": [
+        "OrdinalFormal.GenericSortedColumns",
+        "OrdinalFormal.RPDDecrease"
+      ],
+      "sha256": "8e6073958965c9a1cb736deb7d96bd8c27c0be8e68700ea6661e60a49e39c2f1",
+      "origin": "local",
+      "original_sha256_lf": "8e6073958965c9a1cb736deb7d96bd8c27c0be8e68700ea6661e60a49e39c2f1",
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/GeneratedColumnDecrease.lean"
+    },
+    "ARDPrefixOrder": {
+      "source": "ordinal-formalization/ard/PrefixOrder.lean",
+      "imports": [
+        "OrdinalFormal.Reachability"
+      ],
+      "sha256": "ae74262f12311fa3e0580f0e7bb43a0ae66bc91d297ac7e222d5a30764fb06f1",
+      "origin": "local",
+      "original_sha256_lf": "ae74262f12311fa3e0580f0e7bb43a0ae66bc91d297ac7e222d5a30764fb06f1",
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/ARDPrefixOrder.lean"
+    },
+    "ARD2ClosedSupply": {
+      "source": "lean/src/ARD2ClosedSupply.lean",
+      "imports": [
+        "ARD2EndpointAgreement",
+        "FiniteDemandFinitaryClosure",
+        "FiniteDemandOrdinalHeight"
+      ],
+      "sha256": "eeae82d550f007434f15ed97c6bf20cbec4efe7a3c8688ca24795862eb1fb0cd",
+      "origin": "local",
+      "original_sha256_lf": "eeae82d550f007434f15ed97c6bf20cbec4efe7a3c8688ca24795862eb1fb0cd",
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2ClosedSupply.lean"
+    },
+    "ARD2Compression": {
+      "source": "lean/src/ARD2Compression.lean",
+      "imports": [
+        "ARD2Structure",
+        "OrdinalFormal.RPDFiniteUnion"
+      ],
+      "sha256": "8946e2ea23091e679fd0cb843e223d982ee4a06e2085ab8ba5f3ef9c3ccb3c80",
+      "origin": "local",
+      "original_sha256_lf": "8946e2ea23091e679fd0cb843e223d982ee4a06e2085ab8ba5f3ef9c3ccb3c80",
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2Compression.lean"
+    },
+    "ARD2Core": {
+      "source": "lean/src/ARD2Core.lean",
+      "imports": [
+        "OrdinalFormal.GenericSortedColumns",
+        "OrdinalFormal.SpliceConstruction"
+      ],
+      "sha256": "961f9dc5551e5113e9b22ec3d6539385c02b8844e7eafd3570a2120f36749601",
+      "origin": "local",
+      "original_sha256_lf": "961f9dc5551e5113e9b22ec3d6539385c02b8844e7eafd3570a2120f36749601",
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2Core.lean"
+    },
+    "ARD2Decrease": {
+      "source": "lean/src/ARD2Decrease.lean",
+      "imports": [
+        "ARD2Structure",
+        "OrdinalFormal.GeneratedColumnDecrease"
+      ],
+      "sha256": "9dd8e762821f9d5dbe53b2802866a119f2ea9dc500526601e65ddaab0091b3b6",
+      "origin": "local",
+      "original_sha256_lf": "9dd8e762821f9d5dbe53b2802866a119f2ea9dc500526601e65ddaab0091b3b6",
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2Decrease.lean"
+    },
+    "ARD2DefinitionFidelity": {
+      "source": "lean/src/ARD2DefinitionFidelity.lean",
+      "imports": [
+        "ARD2FiniteUnion",
+        "ARD2OrderReduction",
+        "OrdinalFormal.RPDFiniteUnion"
+      ],
+      "sha256": "588db250de2bb82cc63967a63230eaab445002a882e76311870d83e0b80288ce",
+      "origin": "local",
+      "original_sha256_lf": "588db250de2bb82cc63967a63230eaab445002a882e76311870d83e0b80288ce",
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2DefinitionFidelity.lean"
+    },
+    "ARD2DemandCore": {
+      "source": "lean/src/ARD2DemandCore.lean",
+      "imports": [
+        "ARD2Core",
+        "Mathlib.SetTheory.Ordinal.Basic",
+        "Mathlib.Order.RelClasses"
+      ],
+      "sha256": "301f4c8d5b2f91a3b0512475c25c533e9a8ba5efe017b08242cf1b811baeb225",
+      "origin": "local",
+      "original_sha256_lf": "301f4c8d5b2f91a3b0512475c25c533e9a8ba5efe017b08242cf1b811baeb225",
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2DemandCore.lean"
+    },
+    "ARD2DemandRecursion": {
+      "source": "lean/src/ARD2DemandRecursion.lean",
+      "imports": [
+        "ARD2DemandCore"
+      ],
+      "sha256": "6e1cc7241ba3065aa34da11d3224b68da5c38d03d3b0e730c3d062b060943c83",
+      "origin": "local",
+      "original_sha256_lf": "6e1cc7241ba3065aa34da11d3224b68da5c38d03d3b0e730c3d062b060943c83",
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2DemandRecursion.lean"
+    },
+    "ARD2DemandReflection": {
+      "source": "lean/src/ARD2DemandReflection.lean",
+      "imports": [
+        "ARD2DemandRecursion"
+      ],
+      "sha256": "924bd065502a9e41aa31339a3821a504523490d1a23b9b98429dd957c2864f21",
+      "origin": "local",
+      "original_sha256_lf": "924bd065502a9e41aa31339a3821a504523490d1a23b9b98429dd957c2864f21",
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2DemandReflection.lean"
+    },
+    "ARD2Domain": {
+      "source": "lean/src/ARD2Domain.lean",
+      "imports": [
+        "ARD2Core",
+        "ARDPrefixOrder",
+        "OrdinalFormal.Comparison"
+      ],
+      "sha256": "50dfcd2e33daffd6719a8b2b3ca240a61971cad4b34e3f5df09c444a1871567f",
+      "origin": "local",
+      "original_sha256_lf": "50dfcd2e33daffd6719a8b2b3ca240a61971cad4b34e3f5df09c444a1871567f",
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2Domain.lean"
+    },
+    "ARD2EndpointAgreement": {
+      "source": "lean/src/ARD2EndpointAgreement.lean",
+      "imports": [
+        "ARD2Witnesses"
+      ],
+      "sha256": "3cdfef927af281c4cbd9be8c49ef64b92db7688b2556a09e309d87b3e129a60d",
+      "origin": "local",
+      "original_sha256_lf": "3cdfef927af281c4cbd9be8c49ef64b92db7688b2556a09e309d87b3e129a60d",
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2EndpointAgreement.lean"
+    },
+    "ARD2Final": {
+      "source": "lean/src/ARD2Final.lean",
+      "imports": [
+        "ARD2InitialRepresentation",
+        "ARD2StageProof",
+        "ARD2SemanticWellFounded",
+        "ARD2OrderReduction",
+        "ARD2DefinitionFidelity"
+      ],
+      "sha256": "8469237c097ad061057c39c70b8bd7cea2cf11f8d40bb1b26bbafc44f405430e",
+      "origin": "local",
+      "original_sha256_lf": "8469237c097ad061057c39c70b8bd7cea2cf11f8d40bb1b26bbafc44f405430e",
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2Final.lean"
+    },
+    "ARD2FiniteUnion": {
+      "source": "lean/src/ARD2FiniteUnion.lean",
+      "imports": [
+        "ARD2Structure",
+        "OrdinalFormal.BlockFiniteUnion"
+      ],
+      "sha256": "74fb82d0b61d11417cf939e5c238c244e8d806dbdfca1d98b1df182748277cd7",
+      "origin": "local",
+      "original_sha256_lf": "74fb82d0b61d11417cf939e5c238c244e8d806dbdfca1d98b1df182748277cd7",
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2FiniteUnion.lean"
+    },
+    "ARD2InitialRepresentation": {
+      "source": "lean/src/ARD2InitialRepresentation.lean",
+      "imports": [
+        "ARD2ClosedSupply",
+        "FiniteDemandHostAmbient"
+      ],
+      "sha256": "22660ae9bedcb71fbdd1870b8e9e7ae0c194b0c71bf6cb751489396b14e956e1",
+      "origin": "local",
+      "original_sha256_lf": "22660ae9bedcb71fbdd1870b8e9e7ae0c194b0c71bf6cb751489396b14e956e1",
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2InitialRepresentation.lean"
+    },
+    "ARD2OrderReduction": {
+      "source": "lean/src/ARD2OrderReduction.lean",
+      "imports": [
+        "ARD2Domain",
+        "ARD2Decrease"
+      ],
+      "sha256": "34fbf6e25f3c3e80a1c9c7a5243798d0026a6b15503e169c93c217407b680319",
+      "origin": "local",
+      "original_sha256_lf": "34fbf6e25f3c3e80a1c9c7a5243798d0026a6b15503e169c93c217407b680319",
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2OrderReduction.lean"
+    },
+    "ARD2SemanticWellFounded": {
+      "source": "lean/src/ARD2SemanticWellFounded.lean",
+      "imports": [
+        "ARD2Domain"
+      ],
+      "sha256": "6d717679dd23299b9ff2d508f5e29ed7ce44d94ad2701b2b1ed56ad39d39a06c",
+      "origin": "local",
+      "original_sha256_lf": "6d717679dd23299b9ff2d508f5e29ed7ce44d94ad2701b2b1ed56ad39d39a06c",
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2SemanticWellFounded.lean"
+    },
+    "ARD2Splice": {
+      "source": "lean/src/ARD2Splice.lean",
+      "imports": [
+        "ARD2Core"
+      ],
+      "sha256": "64274bf8d2c2fbee0cd8166d185c6c9d2754be088c2214ecc675a3a495ce6f47",
+      "origin": "local",
+      "original_sha256_lf": "64274bf8d2c2fbee0cd8166d185c6c9d2754be088c2214ecc675a3a495ce6f47",
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2Splice.lean"
+    },
+    "ARD2StageDemands": {
+      "source": "lean/src/ARD2StageDemands.lean",
+      "imports": [
+        "ARD2Structure",
+        "ARD2Splice"
+      ],
+      "sha256": "353f2a83a845f9de42f64ee88899609e11f71f999f2435a094ab39ad55f39020",
+      "origin": "local",
+      "original_sha256_lf": "353f2a83a845f9de42f64ee88899609e11f71f999f2435a094ab39ad55f39020",
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2StageDemands.lean"
+    },
+    "ARD2StageProof": {
+      "source": "lean/src/ARD2StageProof.lean",
+      "imports": [
+        "ARD2StageDemands"
+      ],
+      "sha256": "c74a36dea43fa6a4f73354a179458c27b9104543727c9900c67265b4984f5ca9",
+      "origin": "local",
+      "original_sha256_lf": "c74a36dea43fa6a4f73354a179458c27b9104543727c9900c67265b4984f5ca9",
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2StageProof.lean"
+    },
+    "ARD2Structure": {
+      "source": "lean/src/ARD2Structure.lean",
+      "imports": [
+        "ARD2Core",
+        "OrdinalFormal.ExpansionValidity"
+      ],
+      "sha256": "951ddfe5a55b684da48e5e8722b0535b68260f7fdbe666e324cede9016101daa",
+      "origin": "local",
+      "original_sha256_lf": "951ddfe5a55b684da48e5e8722b0535b68260f7fdbe666e324cede9016101daa",
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2Structure.lean"
+    },
+    "ARD2Templates": {
+      "source": "lean/src/ARD2Templates.lean",
+      "imports": [
+        "ARD2DemandReflection",
+        "Mathlib.Data.Countable.Basic"
+      ],
+      "sha256": "891fcf15c6d2fa646ac4c9c9f365d9830a3366fa4ea1484792ecc159e2cb4bc8",
+      "origin": "local",
+      "original_sha256_lf": "891fcf15c6d2fa646ac4c9c9f365d9830a3366fa4ea1484792ecc159e2cb4bc8",
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2Templates.lean"
+    },
+    "ARD2Witnesses": {
+      "source": "lean/src/ARD2Witnesses.lean",
+      "imports": [
+        "ARD2Templates",
+        "Mathlib.Data.List.Shortlex"
+      ],
+      "sha256": "2f5ad6a10f589661c1f2887b0076da857ba94412a5d36f6dec58173bf5f78825",
+      "origin": "local",
+      "original_sha256_lf": "2f5ad6a10f589661c1f2887b0076da857ba94412a5d36f6dec58173bf5f78825",
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2Witnesses.lean"
+    }
+  },
+  "external": [
+    "Mathlib.Data.Countable.Basic",
+    "Mathlib.Data.List.Basic",
+    "Mathlib.Data.List.Shortlex",
+    "Mathlib.Data.Set.Countable",
+    "Mathlib.Order.RelClasses",
+    "Mathlib.Order.WellFounded",
+    "Mathlib.SetTheory.Cardinal.Aleph",
+    "Mathlib.SetTheory.Ordinal.Basic",
+    "Mathlib.SetTheory.Ordinal.Family",
+    "Std"
+  ],
+  "hash_convention": "SHA-256 of UTF-8 bytes after CRLF to LF normalization",
+  "upstream": {
+    "mathlib": {
+      "url": "https://github.com/leanprover-community/mathlib4",
+      "revision": "eba3d887fc52c98627f4b81507c0efc3096e91b9",
+      "license": "Apache-2.0"
+    }
+  },
+  "schema_version": 2,
+  "project": "ARD2",
+  "repository_root": "../..",
+  "targets": [
+    "ARD2Final",
+    "ARD2Compression"
+  ]
+}

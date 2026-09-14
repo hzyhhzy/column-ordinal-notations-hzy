@@ -1,0 +1,1688 @@
+{
+  "schema_version": 2,
+  "policy": "independent-lean-v2.1",
+  "project": "LRD",
+  "targets": [
+    "FiniteDemandLRDFinal"
+  ],
+  "compiler": "Lean (version 4.33.1, x86_64-w64-windows-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "environment": {
+    "policy": "independent-lean-v2.1",
+    "verifier_sha256_lf": "7f9880d9bbf7aac16820c6e1aa6e0f1a41a000e06b363c0550f84acdde23ce69",
+    "compiler_version_output": "Lean (version 4.33.1, x86_64-w64-windows-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)\n",
+    "compiler_executable_sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+    "actual_compiler_sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+    "lean_sysroot_artifacts": {
+      "sha256": "d04cc0492704687a64762644e65d0f69f7ea656917ed9c9c0382007f791f9486",
+      "olean_files": 2485,
+      "import_sidecars": 9932,
+      "runtime_binaries": 20,
+      "bytes": 2504109528
+    },
+    "dependency_revisions": [
+      {
+        "name": "Cli",
+        "scope": "leanprover",
+        "url": "https://github.com/leanprover/lean4-cli",
+        "rev": "da07ca808b6718cb2aed14dba154e5a08b8f8ecf",
+        "subDir": null
+      },
+      {
+        "name": "LeanSearchClient",
+        "scope": "leanprover-community",
+        "url": "https://github.com/leanprover-community/LeanSearchClient",
+        "rev": "0498c7c070c143a3bf7379f4d99a2c63bb9d9715",
+        "subDir": null
+      },
+      {
+        "name": "Qq",
+        "scope": "leanprover-community",
+        "url": "https://github.com/leanprover-community/quote4",
+        "rev": "ee41917ae11d38479fb8fb24745f7ca4bf0a784d",
+        "subDir": null
+      },
+      {
+        "name": "aesop",
+        "scope": "leanprover-community",
+        "url": "https://github.com/leanprover-community/aesop",
+        "rev": "57d3325be72a842920813bcb40f96a6f7393c185",
+        "subDir": null
+      },
+      {
+        "name": "batteries",
+        "scope": "leanprover-community",
+        "url": "https://github.com/leanprover-community/batteries",
+        "rev": "2c810760f0a0c4536b397dbe30ca9b2f2f467366",
+        "subDir": null
+      },
+      {
+        "name": "importGraph",
+        "scope": "leanprover-community",
+        "url": "https://github.com/leanprover-community/import-graph",
+        "rev": "18a90119a5d316358fde6c86e0ca24e59212e32c",
+        "subDir": null
+      },
+      {
+        "name": "mathlib",
+        "scope": "",
+        "url": "https://github.com/leanprover-community/mathlib4",
+        "rev": "eba3d887fc52c98627f4b81507c0efc3096e91b9",
+        "subDir": null
+      },
+      {
+        "name": "plausible",
+        "scope": "leanprover-community",
+        "url": "https://github.com/leanprover-community/plausible",
+        "rev": "b1c4a69a7e247ab7df20460212001673d74f08c0",
+        "subDir": null
+      },
+      {
+        "name": "proofwidgets",
+        "scope": "leanprover-community",
+        "url": "https://github.com/leanprover-community/ProofWidgets4",
+        "rev": "b1436dc749e722c9920036b52cdc43b3451d0b69",
+        "subDir": null
+      }
+    ],
+    "external_artifact_trees": [
+      {
+        "sha256": "ae1673c16d2c7e830e297b9a7e38fc849c460c9edbbeb121bcfadc606f43b659",
+        "olean_files": 891,
+        "import_sidecars": 3564,
+        "runtime_binaries": 0,
+        "bytes": 632811040
+      },
+      {
+        "sha256": "d10db2ebb7034785083b6ed744a8d90b7ed1ad0f25588a1bc578f0fe28781890",
+        "olean_files": 132,
+        "import_sidecars": 528,
+        "runtime_binaries": 0,
+        "bytes": 97139296
+      },
+      {
+        "sha256": "2c74cfe6e4efc42293fbdadb5ad85aa7ffe82fe958feecc929ba1ae3c9d1525f",
+        "olean_files": 76,
+        "import_sidecars": 304,
+        "runtime_binaries": 0,
+        "bytes": 60442344
+      },
+      {
+        "sha256": "ffcb0362823bfd773d7f4cca94fa7b50112e26404c1196574d6e41bf78de46b1",
+        "olean_files": 10,
+        "import_sidecars": 40,
+        "runtime_binaries": 0,
+        "bytes": 3969424
+      },
+      {
+        "sha256": "8b3694c06c82edbdc455510cbf5c3b21197c4c837d05c079a63e1b217ab806de",
+        "olean_files": 4,
+        "import_sidecars": 16,
+        "runtime_binaries": 0,
+        "bytes": 3709664
+      },
+      {
+        "sha256": "33d7982f26de9c28cf4720e2785782f2edf16bfdf9a112ee19bfd63b4e41a8da",
+        "olean_files": 13,
+        "import_sidecars": 52,
+        "runtime_binaries": 0,
+        "bytes": 9612688
+      },
+      {
+        "sha256": "bc9e5c291008e5ca35d5a11d9c498747d9539d8ccd6e4b84f8d0747ce973dd04",
+        "olean_files": 10,
+        "import_sidecars": 40,
+        "runtime_binaries": 0,
+        "bytes": 7180080
+      },
+      {
+        "sha256": "771b289781a2b528f335e5afeadd5ef9c6b792d17d3f77b978372c4b646bdbdc",
+        "olean_files": 14,
+        "import_sidecars": 56,
+        "runtime_binaries": 0,
+        "bytes": 15721952
+      }
+    ]
+  },
+  "inputs": {
+    "lean/LRD/lakefile.lean": "2270a25dcb5773837d8f18ef1d073ddb77f56e5d7b3b0f20e55c26572e0e8761",
+    "lean/LRD/lake-manifest.json": "20bef99e7bf861d5463173896e204b6a70ecf37ec968b4d5b1c3e0b385d7e22f",
+    "lean/LRD/lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71",
+    "lean/LRD/sources.json": "079cd5866a539517fee3844106da1bafc07c929870a3426d0729d023c8805deb",
+    "lean/LRD/build.py": "b094699d71583fd2701ebcfa86cd65f425eac23ca6f8e1151d7ef4c461592e6b",
+    "lean/verification_core.py": "7f9880d9bbf7aac16820c6e1aa6e0f1a41a000e06b363c0550f84acdde23ce69"
+  },
+  "owner_inputs": {
+    "shared": {
+      "lean/shared/lakefile.lean": "0862bf7d07399ede04dbd3df9812d14e6c02353631bfae46fe2248fae6344f5b",
+      "lean/shared/lake-manifest.json": "23cc0df8a87b0d5940269c60ba49efe968a49ec2909e2de2e18354933337617b",
+      "lean/shared/lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    },
+    "LRD": {
+      "lean/LRD/lakefile.lean": "2270a25dcb5773837d8f18ef1d073ddb77f56e5d7b3b0f20e55c26572e0e8761",
+      "lean/LRD/lake-manifest.json": "20bef99e7bf861d5463173896e204b6a70ecf37ec968b4d5b1c3e0b385d7e22f",
+      "lean/LRD/lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  "closure_sha256": "e4e5b1d6015bf8f7a810a50ff63a0196ea16fd864a28f4c2734dc02fdaa721d8",
+  "complete": true,
+  "modules": {
+    "OrdinalFormal.ReflectionTransport": {
+      "fingerprint": "efbc63b453b38322c673f4cc3b30d4ed837b196c0255a4b3c8592f4c0a19700f",
+      "olean_sha256": "ba8046511bb0bdc39cf87521a6dbf22b41487ed0a153e146574b84eb30ab15f3",
+      "artifact_bundle": {
+        ".olean": "ba8046511bb0bdc39cf87521a6dbf22b41487ed0a153e146574b84eb30ab15f3"
+      },
+      "log_sha256_lf": "001a3bac01b4b34a73a70d56f19b22946b1a895d9f1cfe57dbbf7d11f0badd15",
+      "reports": [
+        {
+          "requested": "representation_splice",
+          "name": "OrdinalFormal.ReflectionTransport.representation_splice",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "virtual_demands_from_templates",
+          "name": "OrdinalFormal.ReflectionTransport.virtual_demands_from_templates",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "exists_bounded_representation_splice",
+          "name": "OrdinalFormal.ReflectionTransport.exists_bounded_representation_splice",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "blockScheme_bounded_representations",
+          "name": "OrdinalFormal.ReflectionTransport.blockScheme_bounded_representations",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "wellFounded_of_lowerable_labels",
+          "name": "OrdinalFormal.ReflectionTransport.wellFounded_of_lowerable_labels",
+          "axioms": []
+        },
+        {
+          "requested": "exists_bounded_representation_splice_with_lower_rows",
+          "name": "OrdinalFormal.ReflectionTransport.exists_bounded_representation_splice_with_lower_rows",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "generatedBlockScheme_bounded_representations",
+          "name": "OrdinalFormal.ReflectionTransport.generatedBlockScheme_bounded_representations",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "representation_rootWeakening",
+          "name": "OrdinalFormal.ReflectionTransport.representation_rootWeakening",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "diagram_step_wellFounded_of_initial_and_lowering",
+          "name": "OrdinalFormal.ReflectionTransport.diagram_step_wellFounded_of_initial_and_lowering",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "bounded_representation_of_proper_prefix",
+          "name": "OrdinalFormal.ReflectionTransport.bounded_representation_of_proper_prefix",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 10,
+      "seconds": 3.516,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "FiniteDemandCore": {
+      "fingerprint": "543211a1c1f6d54beb8d55d6d4d358179450eba2ca5ed609f1601e27ff36f49d",
+      "olean_sha256": "b9f54da9b8d79a761757f980b39af97f733b42a54172916a3c13bdbcad9b0f5b",
+      "artifact_bundle": {
+        ".olean": "b9f54da9b8d79a761757f980b39af97f733b42a54172916a3c13bdbcad9b0f5b"
+      },
+      "log_sha256_lf": "582110d0d6fe422d23d9fcd9b5bda09eb6aaa6e326bc992d39b3931b0101cf52",
+      "reports": [
+        {
+          "requested": "FiniteDemand.earlier_wellFounded",
+          "name": "FiniteDemand.earlier_wellFounded",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.representation_transfer",
+          "name": "FiniteDemand.representation_transfer",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.rule_congr",
+          "name": "FiniteDemand.rule_congr",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 3,
+      "seconds": 8.358,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "FiniteDemandRecursion": {
+      "fingerprint": "dbc661c594b0a545a51159cbc9d9133078416cf646dadb482e1d404e88f039ff",
+      "olean_sha256": "89165e3eafbd58d070ffd744eea8bf68af0cab4c8664aa50f9a86e66885df97f",
+      "artifact_bundle": {
+        ".olean": "89165e3eafbd58d070ffd744eea8bf68af0cab4c8664aa50f9a86e66885df97f"
+      },
+      "log_sha256_lf": "26d416718424a4170689b7317711d0c9e6d3ebd2a4a0b3762153a6135297b6b2",
+      "reports": [
+        {
+          "requested": "FiniteDemand.relation_iff",
+          "name": "FiniteDemand.relation_iff",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.relation_unique",
+          "name": "FiniteDemand.relation_unique",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 2,
+      "seconds": 8.173,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "FiniteDemandReflection": {
+      "fingerprint": "0f8c18aacd5b72f7bcfc120943dd46f65d9135f3774cc0677cd7c1af160acec1",
+      "olean_sha256": "d39c25e8691f15c3402bb421c8372d57347ab5845517b14e2434537f90c5b8a0",
+      "artifact_bundle": {
+        ".olean": "d39c25e8691f15c3402bb421c8372d57347ab5845517b14e2434537f90c5b8a0"
+      },
+      "log_sha256_lf": "86c0c215f412b41734db58fc8a5967e2bf6737aee40ae403567e7d6bf17ca773",
+      "reports": [
+        {
+          "requested": "FiniteDemand.strict",
+          "name": "FiniteDemand.strict",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.root_weaken",
+          "name": "FiniteDemand.root_weaken",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.lower_rows",
+          "name": "FiniteDemand.lower_rows",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.finite_reflection",
+          "name": "FiniteDemand.finite_reflection",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 4,
+      "seconds": 8.283,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "FiniteDemandWitnesses": {
+      "fingerprint": "5d6a6727cae3cb68abc009c8f5177daf3b2d3e2f52b37897033978aab2a48dd2",
+      "olean_sha256": "e3df5fdf919a758fc75f1476eca95124334c5e5eb5c3e8b7971ff0a5c72d17ac",
+      "artifact_bundle": {
+        ".olean": "e3df5fdf919a758fc75f1476eca95124334c5e5eb5c3e8b7971ff0a5c72d17ac"
+      },
+      "log_sha256_lf": "0cea0303d855fb815e012f37d7f93c6ffb6a2f68a5d7e64744c877296aca8f5c",
+      "reports": [
+        {
+          "requested": "FiniteDemand.exists_bad",
+          "name": "FiniteDemand.exists_bad",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.leastBad_spec",
+          "name": "FiniteDemand.leastBad_spec",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.badOp_lt",
+          "name": "FiniteDemand.badOp_lt",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.leastExtension_spec",
+          "name": "FiniteDemand.leastExtension_spec",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.extOp_lt",
+          "name": "FiniteDemand.extOp_lt",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 5,
+      "seconds": 8.941,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "FiniteDemandEndpointAgreement": {
+      "fingerprint": "a7de56483c7258578d8843eaf8df72256d098b34a2aaacdd360db33ee300f420",
+      "olean_sha256": "9cb3e16f719501b141e44a44c6223a7ab44fc48772e88ee39fd0afc6cc38e46e",
+      "artifact_bundle": {
+        ".olean": "9cb3e16f719501b141e44a44c6223a7ab44fc48772e88ee39fd0afc6cc38e46e"
+      },
+      "log_sha256_lf": "b065ae5619b8f8971e83236a959839bc96ce31221c35b8c5e39298fe41909467",
+      "reports": [
+        {
+          "requested": "FiniteDemand.endpoint_agreement",
+          "name": "FiniteDemand.endpoint_agreement",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.closed_reflects",
+          "name": "FiniteDemand.closed_reflects",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.closed_heights_related",
+          "name": "FiniteDemand.closed_heights_related",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 3,
+      "seconds": 8.604,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "FiniteDemandFinitaryClosure": {
+      "fingerprint": "e887161670498b406306c185b8a4278471c40d04ca63ee9935fb0cab417b664b",
+      "olean_sha256": "6ed1892fd1d939628989cfc828228244dbfcabae77a782a656937fb212e868e1",
+      "artifact_bundle": {
+        ".olean": "6ed1892fd1d939628989cfc828228244dbfcabae77a782a656937fb212e868e1"
+      },
+      "log_sha256_lf": "1420a516ec64fbf43bf8e60063c4847fe2db0ae98871b091bd8ac7df7e2a2ddb",
+      "reports": [
+        {
+          "requested": "FiniteDemand.FinitaryClosure.apply_mem",
+          "name": "FiniteDemand.FinitaryClosure.apply_mem",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.FinitaryClosure.countable",
+          "name": "FiniteDemand.FinitaryClosure.countable",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.FinitaryClosure.invariant",
+          "name": "FiniteDemand.FinitaryClosure.invariant",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 3,
+      "seconds": 7.585,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "FiniteDemandOrdinalHeight": {
+      "fingerprint": "c271e75cf468665ec51eab1c906584986c191ca3db328c93b74bf404e944d7b3",
+      "olean_sha256": "250fd388497ce57be6a01772c9ce5ea512ec6e4dd979c6242a19cfefa7c8b33d",
+      "artifact_bundle": {
+        ".olean": "250fd388497ce57be6a01772c9ce5ea512ec6e4dd979c6242a19cfefa7c8b33d"
+      },
+      "log_sha256_lf": "ce82958d0245c935b5779df76b58add1e7792feb8c8d06910c8a89eb33bd73e7",
+      "reports": [
+        {
+          "requested": "FiniteDemand.OrdinalHeight.mem_iff_lt",
+          "name": "FiniteDemand.OrdinalHeight.mem_iff_lt",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.OrdinalHeight.height_lt",
+          "name": "FiniteDemand.OrdinalHeight.height_lt",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 2,
+      "seconds": 7.837,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "FiniteDemandClosedSupply": {
+      "fingerprint": "2ab5e2867c9f7c2ebe9d176fe101572a75505695965ad26c428f496c15b1b900",
+      "olean_sha256": "d7c8dc940b17e6d9670302af373ea08b287c45e8ac8f2666ef539be0fe555e95",
+      "artifact_bundle": {
+        ".olean": "d7c8dc940b17e6d9670302af373ea08b287c45e8ac8f2666ef539be0fe555e95"
+      },
+      "log_sha256_lf": "d3ab526bce723f0e4bd0d1f41b5ac88a4a6aa325d6871cb484f9ac835b0cb8c6",
+      "reports": [
+        {
+          "requested": "FiniteDemand.ClosedSupply.hull_bounded",
+          "name": "FiniteDemand.ClosedSupply.hull_bounded",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.ClosedSupply.hull_downward",
+          "name": "FiniteDemand.ClosedSupply.hull_downward",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.ClosedSupply.nextHeight_spec",
+          "name": "FiniteDemand.ClosedSupply.nextHeight_spec",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.ClosedSupply.exists_closed_above",
+          "name": "FiniteDemand.ClosedSupply.exists_closed_above",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 4,
+      "seconds": 8.904,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "OrdinalFormal.Columns": {
+      "fingerprint": "2d4b456a162fd3e5dcf6c1ae88ee0355f8e85f23228b0116d7b292f3f705d69a",
+      "olean_sha256": "56fa959e79054fe81bacc145220e11c0101d646f1e9d9ce901bc2b88b485e7ac",
+      "artifact_bundle": {
+        ".olean": "56fa959e79054fe81bacc145220e11c0101d646f1e9d9ce901bc2b88b485e7ac"
+      },
+      "log_sha256_lf": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reports": [],
+      "axiom_reports": 0,
+      "seconds": 2.686,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "OrdinalFormal.ColumnRepresentation": {
+      "fingerprint": "9507b217d5b4de663361c1c4d35ffa38247f960c26e3dea0189cf32166834649",
+      "olean_sha256": "7361e6d0e8a4801bd3f8169c7ccdf004b5ef2c7f89f2d360544f5cd59e8a9ef3",
+      "artifact_bundle": {
+        ".olean": "7361e6d0e8a4801bd3f8169c7ccdf004b5ef2c7f89f2d360544f5cd59e8a9ef3"
+      },
+      "log_sha256_lf": "e117bd41620eb6ab3d6522281198927e71a4c8db02c73f129b19f76ffea29386",
+      "reports": [
+        {
+          "requested": "holds_iff_representation",
+          "name": "OrdinalFormal.ColumnRepresentation.holds_iff_representation",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "normalize_valid",
+          "name": "OrdinalFormal.ColumnRepresentation.normalize_valid",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "holds_normalize",
+          "name": "OrdinalFormal.ColumnRepresentation.holds_normalize",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "moveEntry_atom_succ",
+          "name": "OrdinalFormal.ColumnRepresentation.moveEntry_atom_succ",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "ordinarySeam_nat_guard",
+          "name": "OrdinalFormal.ColumnRepresentation.ordinarySeam_nat_guard",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 5,
+      "seconds": 2.805,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "FiniteDemandInitialRepresentation": {
+      "fingerprint": "b12140ee66d27df7860733eb4f4633bfe2f43b0ee2cf119c56751e0d87a8abe3",
+      "olean_sha256": "b4438d4abcb9eecc2e2c281a55cf3e4347cf91f3321f0438c45adb73d06f9996",
+      "artifact_bundle": {
+        ".olean": "b4438d4abcb9eecc2e2c281a55cf3e4347cf91f3321f0438c45adb73d06f9996"
+      },
+      "log_sha256_lf": "01d0d3a1bd724d4b22acd1c2445363aa94b949ca384c4dfb35360d9f0bd307fe",
+      "reports": [
+        {
+          "requested": "FiniteDemand.heightSequence_strictMono",
+          "name": "FiniteDemand.heightSequence_strictMono",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.heightSequence_represents",
+          "name": "FiniteDemand.heightSequence_represents",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.initial_columns",
+          "name": "FiniteDemand.initial_columns",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 3,
+      "seconds": 8.758,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "FiniteDemandHostAmbient": {
+      "fingerprint": "57d7ea4e81f9f195b58d6d7a3aed8a70287b2de89658915eb88d2d7f09a226ba",
+      "olean_sha256": "2a80b4844f12a58dfd3727d0b6d219f31090676fd816dc7e46fedac227762852",
+      "artifact_bundle": {
+        ".olean": "2a80b4844f12a58dfd3727d0b6d219f31090676fd816dc7e46fedac227762852"
+      },
+      "log_sha256_lf": "6341125115e2e51c0cf5065c0db77eff84b3bfb7008ea7cb43e42c22c0353af5",
+      "reports": [
+        {
+          "requested": "FiniteDemand.HostAmbient.omegaOne_uncountable",
+          "name": "FiniteDemand.HostAmbient.omegaOne_uncountable",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.HostAmbient.enumerate_covers",
+          "name": "FiniteDemand.HostAmbient.enumerate_covers",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.HostAmbient.actual",
+          "name": "FiniteDemand.HostAmbient.actual",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 3,
+      "seconds": 8.613,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "OrdinalFormal.ExpansionValidity": {
+      "fingerprint": "9e36b178feab31b819cae1e8ac5bb950bbecfe522e424bf946b18783b981eb79",
+      "olean_sha256": "b1d979e15baf7e2cb7a9e3948d60b2c42d314346fa5cef697145ea2330e4f1f2",
+      "artifact_bundle": {
+        ".olean": "b1d979e15baf7e2cb7a9e3948d60b2c42d314346fa5cef697145ea2330e4f1f2"
+      },
+      "log_sha256_lf": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reports": [],
+      "axiom_reports": 0,
+      "seconds": 2.967,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "OrdinalFormal.ActualBlockGeometry": {
+      "fingerprint": "d824bcd87c2f7e20377caf8488d9f23bee2193f3cb1f058725181c10bed57f8a",
+      "olean_sha256": "3dd149d196c7d9e75503d58aadddc8606c5a6e474302f881585a48743c4d8850",
+      "artifact_bundle": {
+        ".olean": "3dd149d196c7d9e75503d58aadddc8606c5a6e474302f881585a48743c4d8850"
+      },
+      "log_sha256_lf": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reports": [],
+      "axiom_reports": 0,
+      "seconds": 2.556,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "OrdinalFormal.SpliceConstruction": {
+      "fingerprint": "706608db2b943ecb4e695c85a6c6ca58987c9fe982f6bb48c2545ef96ce6533b",
+      "olean_sha256": "b448d21f7dbe7604c312469fcd938db257f77b5a9c70b4e61b855c2703e170aa",
+      "artifact_bundle": {
+        ".olean": "b448d21f7dbe7604c312469fcd938db257f77b5a9c70b4e61b855c2703e170aa"
+      },
+      "log_sha256_lf": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reports": [],
+      "axiom_reports": 0,
+      "seconds": 2.442,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "OrdinalFormal.GeneratedStagedReflection": {
+      "fingerprint": "a660ac5426618e13f36d8623ed3da370516a46c423e5a7c5bab52c45786c528c",
+      "olean_sha256": "c24298e4afd8dae373a026ffe55d89f9ca5095980ea33b83d26dd352382fc054",
+      "artifact_bundle": {
+        ".olean": "c24298e4afd8dae373a026ffe55d89f9ca5095980ea33b83d26dd352382fc054"
+      },
+      "log_sha256_lf": "cce89aa89943edfef032cbff823aa6a2c15c635c525b657963039bb4d073fba8",
+      "reports": [
+        {
+          "requested": "needs_hold",
+          "name": "OrdinalFormal.GeneratedStagedReflection.needs_hold",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "reflect_actual_stage",
+          "name": "OrdinalFormal.GeneratedStagedReflection.reflect_actual_stage",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "splice_actual_stage",
+          "name": "OrdinalFormal.GeneratedStagedReflection.splice_actual_stage",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "all_stages",
+          "name": "OrdinalFormal.GeneratedStagedReflection.all_stages",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "fs_bounded",
+          "name": "OrdinalFormal.GeneratedStagedReflection.fs_bounded",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 5,
+      "seconds": 3.152,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "OrdinalFormal.Reachability": {
+      "fingerprint": "d8c42e31c7ddb0153c44a6d3b3dbfcde138e7445a62c911e82637fd244ace128",
+      "olean_sha256": "6147ba0524db8117967cfc17eac45d24158153549201c8308656913090ac360d",
+      "artifact_bundle": {
+        ".olean": "6147ba0524db8117967cfc17eac45d24158153549201c8308656913090ac360d"
+      },
+      "log_sha256_lf": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reports": [],
+      "axiom_reports": 0,
+      "seconds": 2.615,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "OrdinalFormal.GeneratedSemanticWellFounded": {
+      "fingerprint": "8cb3b5d3e3a97fda787033cfbdf5de84565c90edf8f6381f6917a1a6d1a43560",
+      "olean_sha256": "b0664685f2445b642d247a8f6b5294933d437c611ad6e92153a59f2f77251e56",
+      "artifact_bundle": {
+        ".olean": "b0664685f2445b642d247a8f6b5294933d437c611ad6e92153a59f2f77251e56"
+      },
+      "log_sha256_lf": "05941a1662ae03039849b4383c5a6470447f3795f3225cf0162fcee86dec9fcd",
+      "reports": [
+        {
+          "requested": "accessible_of_last_label",
+          "name": "OrdinalFormal.GeneratedSemanticWellFounded.accessible_of_last_label",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "valid_accessible_of_semantics",
+          "name": "OrdinalFormal.GeneratedSemanticWellFounded.valid_accessible_of_semantics",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "valid_step_wellFounded_of_semantics",
+          "name": "OrdinalFormal.GeneratedSemanticWellFounded.valid_step_wellFounded_of_semantics",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 3,
+      "seconds": 2.411,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "FiniteDemandColumnWellFounded": {
+      "fingerprint": "04533a768accd23f24c4a678ad1aa88c65b69df48767e12b2e61ed01a8202dd9",
+      "olean_sha256": "d603073e79e4c5c11e5f26aaccc4752dc9e48d8f0e4491d4fa6ea2af797fc1a9",
+      "artifact_bundle": {
+        ".olean": "d603073e79e4c5c11e5f26aaccc4752dc9e48d8f0e4491d4fa6ea2af797fc1a9"
+      },
+      "log_sha256_lf": "208dd8963e9970b1c96e459646568834c04e580dc9b6a0009dc93fa4f9a55838",
+      "reports": [
+        {
+          "requested": "FiniteDemand.valid_accessible_in_ambient",
+          "name": "FiniteDemand.valid_accessible_in_ambient",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.valid_accessible",
+          "name": "FiniteDemand.valid_accessible",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 2,
+      "seconds": 8.523,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "OrdinalRowLanguage": {
+      "fingerprint": "cba8fe2dd8873e9025ac913b2fd86bce35281996d6df546398cd84543208f1be",
+      "olean_sha256": "ee81759bdee919ae8ac3d737bf1aa64c8201759a6c0700f64ade6e3ff6d51fac",
+      "artifact_bundle": {
+        ".olean": "ee81759bdee919ae8ac3d737bf1aa64c8201759a6c0700f64ade6e3ff6d51fac"
+      },
+      "log_sha256_lf": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reports": [],
+      "axiom_reports": 0,
+      "seconds": 9.821,
+      "certification": "fresh-source-compilation"
+    },
+    "OrdinalFormal.RPD": {
+      "fingerprint": "5251985b2bb70352a01e948cf8cadefe1a867f65a3d8e1c1a71c6c51271ae8dc",
+      "olean_sha256": "0426e4289ddee6da53307cdfd242efe87ddc92217270d302749ecd347b207e56",
+      "artifact_bundle": {
+        ".olean": "0426e4289ddee6da53307cdfd242efe87ddc92217270d302749ecd347b207e56"
+      },
+      "log_sha256_lf": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reports": [],
+      "axiom_reports": 0,
+      "seconds": 2.333,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "OrdinalFormal.Comparison": {
+      "fingerprint": "13281229d8c544635c7ee39564d774265747551fafdd0e7672c5d43030365cb3",
+      "olean_sha256": "7f8aef0e9371ddd7eede96e7ba99e48cde3c960ee62790bb255c6b2d648b1ee1",
+      "artifact_bundle": {
+        ".olean": "7f8aef0e9371ddd7eede96e7ba99e48cde3c960ee62790bb255c6b2d648b1ee1"
+      },
+      "log_sha256_lf": "4a10a126c3488c301a2e5962fff1068b8f08607bbb9601230ac26cd83097bfb6",
+      "reports": [
+        {
+          "requested": "listCompare_lt_iff_lex",
+          "name": "OrdinalFormal.Comparison.listCompare_lt_iff_lex",
+          "axioms": [
+            "propext"
+          ]
+        },
+        {
+          "requested": "graphCompare_lt_trans",
+          "name": "OrdinalFormal.Comparison.graphCompare_lt_trans",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "rpd_cmp_lt_trans",
+          "name": "OrdinalFormal.Comparison.rpd_cmp_lt_trans",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "rpd_cmp_lt_irrefl",
+          "name": "OrdinalFormal.Comparison.rpd_cmp_lt_irrefl",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 4,
+      "seconds": 2.512,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "OrdinalFormal.GenericSortedColumns": {
+      "fingerprint": "d29eed334abe0c65f0372c737504e928308b49736c9465d5a84ced09041da0b2",
+      "olean_sha256": "0f754ce10748f759b6777882dfa0a65f4a3dfaae45f9ef796861a45514d19020",
+      "artifact_bundle": {
+        ".olean": "0f754ce10748f759b6777882dfa0a65f4a3dfaae45f9ef796861a45514d19020"
+      },
+      "log_sha256_lf": "b0cb11d35da9307a34902dae2f3049b52980341be41bd28a828d948008a97174",
+      "reports": [
+        {
+          "requested": "compare_lt_of_deleted_pivot",
+          "name": "OrdinalFormal.GenericSortedColumns.compare_lt_of_deleted_pivot",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "expand_canonical",
+          "name": "OrdinalFormal.GenericSortedColumns.expand_canonical",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 2,
+      "seconds": 2.539,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "OrdinalFormal.RPDDecrease": {
+      "fingerprint": "064384a9daad148d14a342984e143116dc4399df3e930c81fca6f88456b8c737",
+      "olean_sha256": "fcbd4e58739739e9a44d54865162707eecda655e73d88c71db721b1955599b45",
+      "artifact_bundle": {
+        ".olean": "fcbd4e58739739e9a44d54865162707eecda655e73d88c71db721b1955599b45"
+      },
+      "log_sha256_lf": "fc4756958b20a3ca540c646314c6ebc51d73c45dd0a902f3af8fab39bd38c1ab",
+      "reports": [
+        {
+          "requested": "rpd_fs_zero_lt",
+          "name": "OrdinalFormal.RPDDecrease.rpd_fs_zero_lt",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "rpd_fs_positive_lt_iff",
+          "name": "OrdinalFormal.RPDDecrease.rpd_fs_positive_lt_iff",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "controller_not_firstColumn",
+          "name": "OrdinalFormal.RPDDecrease.controller_not_firstColumn",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "firstColumn_retains",
+          "name": "OrdinalFormal.RPDDecrease.firstColumn_retains",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "firstColumn_retains_above_control",
+          "name": "OrdinalFormal.RPDDecrease.firstColumn_retains_above_control",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 5,
+      "seconds": 2.923,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "OrdinalFormal.GeneratedColumnDecrease": {
+      "fingerprint": "2493fdc7ac080e6c55325a3d8a07f1555e117257d5207e0b79609ad809c44287",
+      "olean_sha256": "cacf8b83f1316713b1e4193c7ecf967b9299493f43cd1178bc7668e097cab0dc",
+      "artifact_bundle": {
+        ".olean": "cacf8b83f1316713b1e4193c7ecf967b9299493f43cd1178bc7668e097cab0dc"
+      },
+      "log_sha256_lf": "bfdc2c5b524a64cf85d218d1fb8fb843b688c0e33606d997a29a4b57134f6f7a",
+      "reports": [
+        {
+          "requested": "firstColumn_entry",
+          "name": "OrdinalFormal.GeneratedColumnDecrease.firstColumn_entry",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "expand_lt",
+          "name": "OrdinalFormal.GeneratedColumnDecrease.expand_lt",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 2,
+      "seconds": 2.618,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "OrdinalFormal.ColumnMap": {
+      "fingerprint": "f4fc33cbf6aae8c7efdff62ad897c7eb73114e276b019751c41d2ff123e5590f",
+      "olean_sha256": "fee54dc99fa2aeafd1890dc5fc03bc65fea40537047d32e72161ab56fab0ec9e",
+      "artifact_bundle": {
+        ".olean": "fee54dc99fa2aeafd1890dc5fc03bc65fea40537047d32e72161ab56fab0ec9e"
+      },
+      "log_sha256_lf": "8b54fb810da5b80d493f4dbf98279f6bd15af83618154a3f72f9660ecb2de1f4",
+      "reports": [
+        {
+          "requested": "graphCompare_map",
+          "name": "OrdinalFormal.ColumnMap.graphCompare_map",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "normalizeColumn_map",
+          "name": "OrdinalFormal.ColumnMap.normalizeColumn_map",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "control_map",
+          "name": "OrdinalFormal.ColumnMap.control_map",
+          "axioms": [
+            "propext"
+          ]
+        },
+        {
+          "requested": "block_map",
+          "name": "OrdinalFormal.ColumnMap.block_map",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "expand_map",
+          "name": "OrdinalFormal.ColumnMap.expand_map",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "valid_map_iff",
+          "name": "OrdinalFormal.ColumnMap.valid_map_iff",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 6,
+      "seconds": 2.843,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "OrdinalFormal.LRD": {
+      "fingerprint": "bb40dd9f9f4dd061b4f1f1ae4321cd85fdc718ef4bd7ce68d3d9491157c47e6e",
+      "olean_sha256": "195b1e21d94dd4a1ccc8f3f3bab483ecc0cc52fcd14c4337b773d7f82d5acf73",
+      "artifact_bundle": {
+        ".olean": "195b1e21d94dd4a1ccc8f3f3bab483ecc0cc52fcd14c4337b773d7f82d5acf73"
+      },
+      "log_sha256_lf": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reports": [],
+      "axiom_reports": 0,
+      "seconds": 2.354,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "OrdinalFormal.LRDStructure": {
+      "fingerprint": "e4b533465824fbe1cfe3d1a9efeb6eaf242cb1e51de7bb276cd8db13942473e1",
+      "olean_sha256": "dd8c92e3e1f370e7a4ab7bd7fdd6605497ecf9fcbd293f6ef947ae9d348bf943",
+      "artifact_bundle": {
+        ".olean": "dd8c92e3e1f370e7a4ab7bd7fdd6605497ecf9fcbd293f6ef947ae9d348bf943"
+      },
+      "log_sha256_lf": "432dc66956200d4951a297ac765ad27d9cdd890ad1df8d843827ffd1b0eb8645",
+      "reports": [
+        {
+          "requested": "row_cmp_eq_iff_normal_eq",
+          "name": "OrdinalFormal.LRDStructure.row_cmp_eq_iff_normal_eq",
+          "axioms": [
+            "propext"
+          ]
+        },
+        {
+          "requested": "approx_normal",
+          "name": "OrdinalFormal.LRDStructure.approx_normal",
+          "axioms": [
+            "propext"
+          ]
+        },
+        {
+          "requested": "package_normal",
+          "name": "OrdinalFormal.LRDStructure.package_normal",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "row_cmp_lt_trans",
+          "name": "OrdinalFormal.LRDStructure.row_cmp_lt_trans",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "normalRowCmp_eq_iff",
+          "name": "OrdinalFormal.LRDStructure.normalRowCmp_eq_iff",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 5,
+      "seconds": 2.375,
+      "certification": "fresh-source-compilation"
+    },
+    "OrdinalFormal.LRDCanonical": {
+      "fingerprint": "73dc7096089334be3d9926227d2db84e120242043f3554687cbfaa2d3df1eae2",
+      "olean_sha256": "741a37566c5d9446c0bf6689530bc9a0cce023b894850b22788c19d7a366471b",
+      "artifact_bundle": {
+        ".olean": "741a37566c5d9446c0bf6689530bc9a0cce023b894850b22788c19d7a366471b"
+      },
+      "log_sha256_lf": "56e77a88fcfa550f2d65ec620823269176d901289d631f6e9b450d56363db72b",
+      "reports": [
+        {
+          "requested": "rowsIn_expand",
+          "name": "OrdinalFormal.LRDCanonical.rowsIn_expand",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "standard_canonical",
+          "name": "OrdinalFormal.LRDCanonical.standard_canonical",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "cmp_eq_iff_standard",
+          "name": "OrdinalFormal.LRDCanonical.cmp_eq_iff_standard",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 3,
+      "seconds": 2.373,
+      "certification": "fresh-source-compilation"
+    },
+    "OrdinalFormal.LRDRowDecrease": {
+      "fingerprint": "c65e152236475d968fdfe9c492843d9d26e55791acf62f8e234fd45cbe512c38",
+      "olean_sha256": "25f043c9ad5660ac7da7761ac966fc696b76dd62a19e41e6a36394421a342df2",
+      "artifact_bundle": {
+        ".olean": "25f043c9ad5660ac7da7761ac966fc696b76dd62a19e41e6a36394421a342df2"
+      },
+      "log_sha256_lf": "63702a08623d0d168dac8677e58f454dc2fb31d10333c803f8ed0c3b028efe3a",
+      "reports": [
+        {
+          "requested": "row_approx_lt",
+          "name": "OrdinalFormal.LRDRowDecrease.row_approx_lt",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "package_lt",
+          "name": "OrdinalFormal.LRDRowDecrease.package_lt",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 2,
+      "seconds": 2.43,
+      "certification": "fresh-source-compilation"
+    },
+    "OrdinalFormal.LRDNormalLift": {
+      "fingerprint": "7dfaa877a06c582964927792b62fd4ccf88fed11c4cb10b0d8edefb0c21f9bca",
+      "olean_sha256": "b5167754666b6351733f3ef4df6c19c1a4ea1134a5f564f2a632eeccd35cbee8",
+      "artifact_bundle": {
+        ".olean": "b5167754666b6351733f3ef4df6c19c1a4ea1134a5f564f2a632eeccd35cbee8"
+      },
+      "log_sha256_lf": "df1d22cb8b3f12835d5c0a922108952ed1307a6e2ce984fc26c50bc2a95b3a40",
+      "reports": [
+        {
+          "requested": "fs_lift",
+          "name": "OrdinalFormal.LRDNormalLift.fs_lift",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "erase_lift_standard",
+          "name": "OrdinalFormal.LRDNormalLift.erase_lift_standard",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "expand_erase",
+          "name": "OrdinalFormal.LRDNormalLift.expand_erase",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "normalRowCompareSound",
+          "name": "OrdinalFormal.LRDNormalLift.normalRowCompareSound",
+          "axioms": [
+            "propext"
+          ]
+        },
+        {
+          "requested": "normalPackage_lt",
+          "name": "OrdinalFormal.LRDNormalLift.normalPackage_lt",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 5,
+      "seconds": 2.354,
+      "certification": "fresh-source-compilation"
+    },
+    "OrdinalFormal.Domains": {
+      "fingerprint": "7d0287660d2fb7d2dd82eb16af97df236e25b23e6369cd6fd7f4cd7d6c03ada0",
+      "olean_sha256": "c29d1c7eb0891307f7de099aed5251baa2fcaf8c29f8e5b6b04854fa1bf4304a",
+      "artifact_bundle": {
+        ".olean": "c29d1c7eb0891307f7de099aed5251baa2fcaf8c29f8e5b6b04854fa1bf4304a"
+      },
+      "log_sha256_lf": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reports": [],
+      "axiom_reports": 0,
+      "seconds": 2.25,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "OrdinalFormal.RPDGeometry": {
+      "fingerprint": "be0939186789e575167030e3c63608f808aa895d210b9ffd456ae436330eed71",
+      "olean_sha256": "2661c50e5d62991a2d96070ca15e8b3c30a6e22ef9d98cb8641e0f0e2bbd898c",
+      "artifact_bundle": {
+        ".olean": "2661c50e5d62991a2d96070ca15e8b3c30a6e22ef9d98cb8641e0f0e2bbd898c"
+      },
+      "log_sha256_lf": "2a8bfd2a6bf2c256a12e79894f0df00df8b0f09d2c74d2fbe693f6d768558fc2",
+      "reports": [
+        {
+          "requested": "seed_fs_one",
+          "name": "OrdinalFormal.RPDGeometry.seed_fs_one",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "seed_reachable",
+          "name": "OrdinalFormal.RPDGeometry.seed_reachable",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 2,
+      "seconds": 2.514,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "OrdinalFormal.StandardValidity": {
+      "fingerprint": "2c86417b9001b10026170dbfc0ae6c6e8c3a605b8d4a405307ceaeb35fb5fb80",
+      "olean_sha256": "f9af33b59edc06367b22e96c4f94be6bdd13a04fabb1dd6b0b082ee6f91b6bcc",
+      "artifact_bundle": {
+        ".olean": "f9af33b59edc06367b22e96c4f94be6bdd13a04fabb1dd6b0b082ee6f91b6bcc"
+      },
+      "log_sha256_lf": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reports": [],
+      "axiom_reports": 0,
+      "seconds": 2.323,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "OrdinalFormal.LRDColumnDecrease": {
+      "fingerprint": "5e9efb475689e515c498ba79631ab66a3c238d51272e9a76456d2a7a3797caee",
+      "olean_sha256": "a1f7e96d45c31dc4be537a70f095f432d1765facc1380525554f3c8ef63f3ac1",
+      "artifact_bundle": {
+        ".olean": "a1f7e96d45c31dc4be537a70f095f432d1765facc1380525554f3c8ef63f3ac1"
+      },
+      "log_sha256_lf": "dea6b6a44485878cb64753a21e7cf5f708b6402210c9afb2e522aa5be1635985",
+      "reports": [
+        {
+          "requested": "standard_canonical",
+          "name": "OrdinalFormal.LRDColumnDecrease.standard_canonical",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "fs_lt",
+          "name": "OrdinalFormal.LRDColumnDecrease.fs_lt",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "cmp_lt_trans",
+          "name": "OrdinalFormal.LRDColumnDecrease.cmp_lt_trans",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 3,
+      "seconds": 2.44,
+      "certification": "fresh-source-compilation"
+    },
+    "OrdinalFormal.LRDRowWellFounded": {
+      "fingerprint": "07af6bc18cbc491c767f1d8eb2cf10b27dc38a3fe4825bdcf2b793eb04c0f9bf",
+      "olean_sha256": "1642cb69d2247b6e7ea8bd9305173f2ba9b7735025c1522f9f5fb7ae634c9e7e",
+      "artifact_bundle": {
+        ".olean": "1642cb69d2247b6e7ea8bd9305173f2ba9b7735025c1522f9f5fb7ae634c9e7e"
+      },
+      "log_sha256_lf": "1e92e2bcb44f8558bb4f5526d638a9876c60ca457f9be7e53685f0c759016294",
+      "reports": [
+        {
+          "requested": "actual_row_cmp_wellFounded",
+          "name": "OrdinalFormal.LRDRowWellFounded.actual_row_cmp_wellFounded",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "normalRowCmp_wellFounded",
+          "name": "OrdinalFormal.LRDRowWellFounded.normalRowCmp_wellFounded",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 2,
+      "seconds": 2.388,
+      "certification": "fresh-source-compilation"
+    },
+    "LRDOrdinalRows": {
+      "fingerprint": "1c6e5c5764dbfc2b63c1aaf893a984975ca58dd51d6e4a15d82ffc63bc3132f7",
+      "olean_sha256": "50009b328f7f892b314ab251dbd0de9403d49f33b78e64b6c27357676e5a32f8",
+      "artifact_bundle": {
+        ".olean": "50009b328f7f892b314ab251dbd0de9403d49f33b78e64b6c27357676e5a32f8"
+      },
+      "log_sha256_lf": "4cd1ca63eb6d6da84fdd83b1f008f0d097fb127116c19c87035c485ff5a2dab3",
+      "reports": [
+        {
+          "requested": "normalRowWellOrder",
+          "name": "OrdinalFormal.LRDOrdinalRows.normalRowWellOrder",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "ordinalCode_lt_iff",
+          "name": "OrdinalFormal.LRDOrdinalRows.ordinalCode_lt_iff",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "sigma_lt_omegaOne",
+          "name": "OrdinalFormal.LRDOrdinalRows.sigma_lt_omegaOne",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "embedRow_injective",
+          "name": "OrdinalFormal.LRDOrdinalRows.embedRow_injective",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "package_code_lt",
+          "name": "OrdinalFormal.LRDOrdinalRows.package_code_lt",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 5,
+      "seconds": 8.467,
+      "certification": "fresh-source-compilation"
+    },
+    "OrdinalFormal.ColumnReachability": {
+      "fingerprint": "4252d84e0d9fd7d57c6f6599da38006ae62a6a6010b7e177ed93609bc36d0f00",
+      "olean_sha256": "9f1982feab277ccda8cf03ff312a6477fe173c649d3ee1fa160f6a7b1d8f8a7b",
+      "artifact_bundle": {
+        ".olean": "9f1982feab277ccda8cf03ff312a6477fe173c649d3ee1fa160f6a7b1d8f8a7b"
+      },
+      "log_sha256_lf": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reports": [],
+      "axiom_reports": 0,
+      "seconds": 2.375,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "OrdinalFormal.LRDWellOrderingReduction": {
+      "fingerprint": "5a444cd8fb3e833e3408c5b27bc5bd7d2bb10b0baf3168df814d523c2797f84d",
+      "olean_sha256": "912fd6041d72c80a52233941e70ba554e27eacfe416f0562d907df54aee8fe9f",
+      "artifact_bundle": {
+        ".olean": "912fd6041d72c80a52233941e70ba554e27eacfe416f0562d907df54aee8fe9f"
+      },
+      "log_sha256_lf": "22bb004d3490ca2fcc2349eb45293aca37d31748004d13b81c9c2e859fc53be4",
+      "reports": [
+        {
+          "requested": "standard_total_of_seed_accessible",
+          "name": "OrdinalFormal.LRDWellOrderingReduction.standard_total_of_seed_accessible",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "standard_wellFounded_of_seed_accessible",
+          "name": "OrdinalFormal.LRDWellOrderingReduction.standard_wellFounded_of_seed_accessible",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 2,
+      "seconds": 2.252,
+      "certification": "fresh-source-compilation"
+    },
+    "FiniteDemandLRDFinal": {
+      "fingerprint": "626f9d0ecfc2f72d732fe0ae0a922759d8a92c9e14c6034f9bc066b86de501a6",
+      "olean_sha256": "e826441027d79cf109092230637a584b3d8c3cd94c445e88bc6064bf4bb938e7",
+      "artifact_bundle": {
+        ".olean": "e826441027d79cf109092230637a584b3d8c3cd94c445e88bc6064bf4bb938e7"
+      },
+      "log_sha256_lf": "fff975fbe82f8cb19929e4cbb0b40076542acd0b878727435e3e1d3e206d495a",
+      "reports": [
+        {
+          "requested": "OrdinalFormal.LRDFinal.valid_accessible",
+          "name": "OrdinalFormal.LRDFinal.valid_accessible",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "OrdinalFormal.LRDFinal.seed_accessible",
+          "name": "OrdinalFormal.LRDFinal.seed_accessible",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "OrdinalFormal.LRDFinal.standard_wellFounded",
+          "name": "OrdinalFormal.LRDFinal.standard_wellFounded",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "OrdinalFormal.LRDFinal.standard_isWellOrder",
+          "name": "OrdinalFormal.LRDFinal.standard_isWellOrder",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "OrdinalFormal.LRDFinal.standard_step_wellFounded",
+          "name": "OrdinalFormal.LRDFinal.standard_step_wellFounded",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 5,
+      "seconds": 8.661,
+      "certification": "fresh-source-compilation"
+    }
+  },
+  "verified_on": "2026-09-14",
+  "fresh_modules": 10,
+  "reused_modules": 31,
+  "limits": {
+    "concurrent_compilers": 1,
+    "compiler_threads": 1,
+    "memory_mb": 2048,
+    "seconds_per_module": 120
+  },
+  "scope": "Ordinary Lean, not an internal KP derivation; no order-type comparison or VM verification.",
+  "mathlib_rebuilt_from_source": false,
+  "network_bootstrap_tested": false,
+  "total_proof_modules": 41,
+  "axiom_reports": 110,
+  "wall_seconds": 43.871,
+  "verification_kind": "source-checked scope with explicitly certified artifact reuse",
+  "final_logs": {
+    "FiniteDemandLRDFinal": {
+      "path": "verification/FiniteDemandLRDFinal.log",
+      "sha256_lf": "fff975fbe82f8cb19929e4cbb0b40076542acd0b878727435e3e1d3e206d495a",
+      "axiom_reports": 5
+    },
+    "OrdinalFormal.GeneratedSemanticWellFounded": {
+      "path": "verification/OrdinalFormal.GeneratedSemanticWellFounded.log",
+      "sha256_lf": "05941a1662ae03039849b4383c5a6470447f3795f3225cf0162fcee86dec9fcd",
+      "axiom_reports": 3
+    }
+  }
+}

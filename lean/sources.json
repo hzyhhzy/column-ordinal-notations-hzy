@@ -9,7 +9,9 @@
       "sha256": "9fdb5764b5a040b497519655e2e56c53207c772889446ca096665d931cceee7c",
       "origin": "local",
       "original_sha256_lf": "9fdb5764b5a040b497519655e2e56c53207c772889446ca096665d931cceee7c",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/ReflectionTransport.lean"
     },
     "FiniteDemandCore": {
       "source": "ordinal-formalization/finite-demand/Core.lean",
@@ -21,7 +23,9 @@
       "sha256": "0478abd8771233e01e3c229536f8c3894edbf6746649437d5e6bbc02874c6edc",
       "origin": "local",
       "original_sha256_lf": "0478abd8771233e01e3c229536f8c3894edbf6746649437d5e6bbc02874c6edc",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/FiniteDemandCore.lean"
     },
     "FiniteDemandRecursion": {
       "source": "ordinal-formalization/finite-demand/Recursion.lean",
@@ -31,7 +35,9 @@
       "sha256": "a4bc0b64194c2007f27d4283b8a672c147292c405ba7de9d090b879ad5bb9a3e",
       "origin": "local",
       "original_sha256_lf": "a4bc0b64194c2007f27d4283b8a672c147292c405ba7de9d090b879ad5bb9a3e",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/FiniteDemandRecursion.lean"
     },
     "FiniteDemandReflection": {
       "source": "ordinal-formalization/finite-demand/Reflection.lean",
@@ -41,7 +47,9 @@
       "sha256": "9cec3f77de54c9bdd126d4c9259b231dc5cbfe2384f75ad7ab551b0d63aa9ffa",
       "origin": "local",
       "original_sha256_lf": "9cec3f77de54c9bdd126d4c9259b231dc5cbfe2384f75ad7ab551b0d63aa9ffa",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/FiniteDemandReflection.lean"
     },
     "FiniteDemandWitnesses": {
       "source": "ordinal-formalization/finite-demand/Witnesses.lean",
@@ -54,7 +62,9 @@
       "sha256": "f8e9dfecb0db0e3c5f91c2c09620dfa4d358f2be24795edc9a39f765b56b76e3",
       "origin": "local",
       "original_sha256_lf": "f8e9dfecb0db0e3c5f91c2c09620dfa4d358f2be24795edc9a39f765b56b76e3",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/FiniteDemandWitnesses.lean"
     },
     "FiniteDemandEndpointAgreement": {
       "source": "ordinal-formalization/finite-demand/EndpointAgreement.lean",
@@ -64,7 +74,9 @@
       "sha256": "39b0d02681f716d1dc43bc4694cc9905625c53263b8197f294dd17ad7d9f1667",
       "origin": "local",
       "original_sha256_lf": "39b0d02681f716d1dc43bc4694cc9905625c53263b8197f294dd17ad7d9f1667",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/FiniteDemandEndpointAgreement.lean"
     },
     "FiniteDemandFinitaryClosure": {
       "source": "ordinal-formalization/finite-demand/FinitaryClosure.lean",
@@ -75,7 +87,9 @@
       "sha256": "862e5e7f958e54e5798a66601a51ee0ffb1c71af3b89a683284f6e8d219acb9a",
       "origin": "local",
       "original_sha256_lf": "862e5e7f958e54e5798a66601a51ee0ffb1c71af3b89a683284f6e8d219acb9a",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/FiniteDemandFinitaryClosure.lean"
     },
     "FiniteDemandOrdinalHeight": {
       "source": "ordinal-formalization/finite-demand/OrdinalHeight.lean",
@@ -86,7 +100,9 @@
       "sha256": "f760e1ad8a3f793e59f4400a1b593b6e3caf70df396af89c25fc6509e42ec9e9",
       "origin": "local",
       "original_sha256_lf": "f760e1ad8a3f793e59f4400a1b593b6e3caf70df396af89c25fc6509e42ec9e9",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/FiniteDemandOrdinalHeight.lean"
     },
     "FiniteDemandClosedSupply": {
       "source": "ordinal-formalization/finite-demand/ClosedSupply.lean",
@@ -98,7 +114,9 @@
       "sha256": "663daeb82308c163c8211e66ae5460367dff7436083084d2887e351bbff19ba6",
       "origin": "local",
       "original_sha256_lf": "663daeb82308c163c8211e66ae5460367dff7436083084d2887e351bbff19ba6",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/FiniteDemandClosedSupply.lean"
     },
     "OrdinalFormal.Columns": {
       "source": "ordinal-formalization/OrdinalFormal/Columns.lean",
@@ -108,7 +126,9 @@
       "sha256": "9ca6fa12bd47e29771ecabe5623008542f4ab0b12072d25ee33ccef17bda84d4",
       "origin": "local",
       "original_sha256_lf": "9ca6fa12bd47e29771ecabe5623008542f4ab0b12072d25ee33ccef17bda84d4",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/Columns.lean"
     },
     "OrdinalFormal.ColumnRepresentation": {
       "source": "ordinal-formalization/OrdinalFormal/ColumnRepresentation.lean",
@@ -119,7 +139,9 @@
       "sha256": "13cc4df4ac86d00ba5a41a4f0faeac30078f807e440975862cda4dc8d56425e6",
       "origin": "local",
       "original_sha256_lf": "13cc4df4ac86d00ba5a41a4f0faeac30078f807e440975862cda4dc8d56425e6",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/ColumnRepresentation.lean"
     },
     "FiniteDemandInitialRepresentation": {
       "source": "ordinal-formalization/finite-demand/InitialRepresentation.lean",
@@ -130,7 +152,9 @@
       "sha256": "abd287de4ebaf71798bb9c7cd8de71c27846b372fd01cd5829853764f8c4c227",
       "origin": "local",
       "original_sha256_lf": "abd287de4ebaf71798bb9c7cd8de71c27846b372fd01cd5829853764f8c4c227",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/FiniteDemandInitialRepresentation.lean"
     },
     "FiniteDemandHostAmbient": {
       "source": "ordinal-formalization/finite-demand/HostAmbient.lean",
@@ -141,7 +165,9 @@
       "sha256": "d8d23903490dab6b6b16ffd8ff83c7aec850f3ba945b7a822bb20a55a10aa781",
       "origin": "local",
       "original_sha256_lf": "d8d23903490dab6b6b16ffd8ff83c7aec850f3ba945b7a822bb20a55a10aa781",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/FiniteDemandHostAmbient.lean"
     },
     "OneY.RootIndexed.Representation": {
       "source": "upstream-1Y/formalization/OneY/RootIndexed/Representation.lean",
@@ -150,7 +176,9 @@
       ],
       "sha256": "7de83df2493421ea274825de6d8706aa7b65cd94347c00d67142edb5109f72ae",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/RootIndexed/Representation.lean"
     },
     "NatSemanticTransport": {
       "source": "ordinal-formalization/y-audit/NatSemanticTransport.lean",
@@ -161,7 +189,9 @@
       "sha256": "23624f9b1b6bfdf0227ddc6ca415f6339e6beed78793bde2ea80d54f008ba1f6",
       "origin": "local",
       "original_sha256_lf": "23624f9b1b6bfdf0227ddc6ca415f6339e6beed78793bde2ea80d54f008ba1f6",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "Y",
+      "file": "lean/Y/src/NatSemanticTransport.lean"
     },
     "OneY.Forest": {
       "source": "upstream-1Y/formalization/OneY/Forest.lean",
@@ -170,7 +200,9 @@
       ],
       "sha256": "7c382392e077d910cc62a14d90f6c511096a98c1345a390ceb0c042e83c54440",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/Forest.lean"
     },
     "ZeroY.Syntax": {
       "source": "upstream-1Y/formalization/ZeroY/Syntax.lean",
@@ -179,7 +211,9 @@
       ],
       "sha256": "4d57490168005abc0b7585aca6b727369e12d4d7b21cfe10b4036423391ca326",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Syntax.lean"
     },
     "YesMetaZFC.BMS.Reference": {
       "source": "BMS/YesMetaZFC/BMS/Reference.lean",
@@ -188,7 +222,9 @@
       ],
       "sha256": "d11bf85cae9a5f9dfe95f748f05b352fb298db58ab2c63f7cd53d02cba4abf15",
       "origin": "BMS",
-      "distribution": "external Lake dependency; source not bundled"
+      "distribution": "external Lake dependency; source not bundled",
+      "owner": "Y",
+      "external": true
     },
     "ZeroY.Mountain": {
       "source": "upstream-1Y/formalization/ZeroY/Mountain.lean",
@@ -198,7 +234,9 @@
       ],
       "sha256": "8e9e856d0d8413b9037db13f37827e8e477c7317acbdd2b24222e9b52931c8e2",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Mountain.lean"
     },
     "YesMetaZFC.BMS.Array": {
       "source": "BMS/YesMetaZFC/BMS/Array.lean",
@@ -207,7 +245,9 @@
       ],
       "sha256": "22089646061b7dadfe73e0e1d2914ce971266e99d9a739cd35f3aa16c19cabe6",
       "origin": "BMS",
-      "distribution": "external Lake dependency; source not bundled"
+      "distribution": "external Lake dependency; source not bundled",
+      "owner": "Y",
+      "external": true
     },
     "YesMetaZFC.BMS.Parent": {
       "source": "BMS/YesMetaZFC/BMS/Parent.lean",
@@ -217,7 +257,9 @@
       ],
       "sha256": "21e99ddac5f5467e6242245be48e945f2517557b75a6c3671c1f9e10fd8013fc",
       "origin": "BMS",
-      "distribution": "external Lake dependency; source not bundled"
+      "distribution": "external Lake dependency; source not bundled",
+      "owner": "Y",
+      "external": true
     },
     "ZeroY.Mountain.Termination": {
       "source": "upstream-1Y/formalization/ZeroY/Mountain/Termination.lean",
@@ -227,7 +269,9 @@
       ],
       "sha256": "9526db6a5b0828c703d10174eba98b0088f8f890ff9058715e15c9771f6a328f",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Mountain/Termination.lean"
     },
     "YesMetaZFC.BMS.Ancestor": {
       "source": "BMS/YesMetaZFC/BMS/Ancestor.lean",
@@ -236,7 +280,9 @@
       ],
       "sha256": "a17a1c64094594c635358b1d7485f048fe0722d35a76f12ed7765da1afa7189e",
       "origin": "BMS",
-      "distribution": "external Lake dependency; source not bundled"
+      "distribution": "external Lake dependency; source not bundled",
+      "owner": "Y",
+      "external": true
     },
     "ZeroY.Forest.Stack": {
       "source": "upstream-1Y/formalization/ZeroY/Forest/Stack.lean",
@@ -246,7 +292,9 @@
       ],
       "sha256": "3b1b3284032d60cb899a9aaae83cc7344ff87487c7274247d4368fe9470d63de",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Forest/Stack.lean"
     },
     "OneY.ForestBridge": {
       "source": "upstream-1Y/formalization/OneY/ForestBridge.lean",
@@ -256,7 +304,9 @@
       ],
       "sha256": "dbf108d34830f65e1b82bdd8a53c72c750e21732158e8d0cefe653d4e2a96438",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/ForestBridge.lean"
     },
     "ZeroY.Forest.Blocker": {
       "source": "upstream-1Y/formalization/ZeroY/Forest/Blocker.lean",
@@ -265,7 +315,9 @@
       ],
       "sha256": "2fc316a118b79a5f659920b64459d8393ac4c9e7056e0bec86cd01b2e58affe7",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Forest/Blocker.lean"
     },
     "ZeroY.Forest.Comparison": {
       "source": "upstream-1Y/formalization/ZeroY/Forest/Comparison.lean",
@@ -274,7 +326,9 @@
       ],
       "sha256": "6d383db4a1a349eda69ff1700a62ecc19041927b28c08eb4abfc88f0e1f17e76",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Forest/Comparison.lean"
     },
     "ZeroY.Decode": {
       "source": "upstream-1Y/formalization/ZeroY/Decode.lean",
@@ -284,7 +338,9 @@
       ],
       "sha256": "97297aca0e787a55af9702970afb6ac54f96dfb46f04e41feb832fc49b968e50",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Decode.lean"
     },
     "ZeroY.Mountain.SumInverse": {
       "source": "upstream-1Y/formalization/ZeroY/Mountain/SumInverse.lean",
@@ -294,7 +350,9 @@
       ],
       "sha256": "143777a74b52d3ba6aaeee6a2df45fa98ab4fc0241829ef72d2b45f8ffef3a9b",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Mountain/SumInverse.lean"
     },
     "ZeroY.Mountain.Roots": {
       "source": "upstream-1Y/formalization/ZeroY/Mountain/Roots.lean",
@@ -304,7 +362,9 @@
       ],
       "sha256": "e7a2a688ab637fae6c189021321c0e930415015597be8cd45788b200231deb59",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Mountain/Roots.lean"
     },
     "ZeroY.MatrixOrder": {
       "source": "upstream-1Y/formalization/ZeroY/MatrixOrder.lean",
@@ -313,7 +373,9 @@
       ],
       "sha256": "f466563b6031063a5350b9d2b3c64971e38ed0aab1e7b738c7a09313e9201ced",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/MatrixOrder.lean"
     },
     "ZeroY.PaddedOrder": {
       "source": "upstream-1Y/formalization/ZeroY/PaddedOrder.lean",
@@ -322,7 +384,9 @@
       ],
       "sha256": "e5223e4786daa455ed130571d5538502dd71b6762d76b20315e98d08f68d3a58",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/PaddedOrder.lean"
     },
     "YesMetaZFC.BMS.Expansion": {
       "source": "BMS/YesMetaZFC/BMS/Expansion.lean",
@@ -331,7 +395,9 @@
       ],
       "sha256": "407ddedcba505d957b66e25ab01ecffae42c92f6ec3648ea33a081080c97d89d",
       "origin": "BMS",
-      "distribution": "external Lake dependency; source not bundled"
+      "distribution": "external Lake dependency; source not bundled",
+      "owner": "Y",
+      "external": true
     },
     "YesMetaZFC.BMS.Generation": {
       "source": "BMS/YesMetaZFC/BMS/Generation.lean",
@@ -340,7 +406,9 @@
       ],
       "sha256": "4a9d14f8611a4fe2a73615851fce3d9b911ec2604ac4693927a5f167e64f9575",
       "origin": "BMS",
-      "distribution": "external Lake dependency; source not bundled"
+      "distribution": "external Lake dependency; source not bundled",
+      "owner": "Y",
+      "external": true
     },
     "YesMetaZFC.BMS.Decomposition": {
       "source": "BMS/YesMetaZFC/BMS/Decomposition.lean",
@@ -349,7 +417,9 @@
       ],
       "sha256": "2d1e1dd7152eca4e89db916e770e4fd337c81af65cc57ad0fcf819142f892fd4",
       "origin": "BMS",
-      "distribution": "external Lake dependency; source not bundled"
+      "distribution": "external Lake dependency; source not bundled",
+      "owner": "Y",
+      "external": true
     },
     "YesMetaZFC.BMS.Lemma25": {
       "source": "BMS/YesMetaZFC/BMS/Lemma25.lean",
@@ -358,7 +428,9 @@
       ],
       "sha256": "12e5f2963502cb9b3c4bb4b9bb49a117a7996b7dfc99fb46f860d3d0e4bf4db4",
       "origin": "BMS",
-      "distribution": "external Lake dependency; source not bundled"
+      "distribution": "external Lake dependency; source not bundled",
+      "owner": "Y",
+      "external": true
     },
     "YesMetaZFC.BMS.Stability": {
       "source": "BMS/YesMetaZFC/BMS/Stability.lean",
@@ -367,7 +439,9 @@
       ],
       "sha256": "4a7a75355158e1b877b779902274091f8f2002772f9465857d8f15cb34ae78da",
       "origin": "BMS",
-      "distribution": "external Lake dependency; source not bundled"
+      "distribution": "external Lake dependency; source not bundled",
+      "owner": "Y",
+      "external": true
     },
     "YesMetaZFC.BMS.FiniteReflection": {
       "source": "BMS/YesMetaZFC/BMS/FiniteReflection.lean",
@@ -376,7 +450,9 @@
       ],
       "sha256": "6b12fb0d0f41219948d6566fe28ebfdcf7ca9822e74666af0efb5e85ee7a2099",
       "origin": "BMS",
-      "distribution": "external Lake dependency; source not bundled"
+      "distribution": "external Lake dependency; source not bundled",
+      "owner": "Y",
+      "external": true
     },
     "YesMetaZFC.BMS.ExpansionOrder": {
       "source": "BMS/YesMetaZFC/BMS/ExpansionOrder.lean",
@@ -385,7 +461,9 @@
       ],
       "sha256": "868a4e012ae154182188b9157c88879b19ff96c8e0f54c2dca5858fee277d51f",
       "origin": "BMS",
-      "distribution": "external Lake dependency; source not bundled"
+      "distribution": "external Lake dependency; source not bundled",
+      "owner": "Y",
+      "external": true
     },
     "YesMetaZFC.BMS.WellFoundedness": {
       "source": "BMS/YesMetaZFC/BMS/WellFoundedness.lean",
@@ -395,7 +473,9 @@
       ],
       "sha256": "b75f71889c7fbba929c9adeb8a0f168e8c5fab3080381e83ef8efd9a54060a05",
       "origin": "BMS",
-      "distribution": "external Lake dependency; source not bundled"
+      "distribution": "external Lake dependency; source not bundled",
+      "owner": "Y",
+      "external": true
     },
     "ZeroY.BMS.AnyArray": {
       "source": "upstream-1Y/formalization/ZeroY/BMS/AnyArray.lean",
@@ -404,7 +484,9 @@
       ],
       "sha256": "331c0db08f9bc14a36c1c99f2d2cf8f23c0b247bf044e912ed9f3fc555f0e4e1",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/BMS/AnyArray.lean"
     },
     "ZeroY.Transport": {
       "source": "upstream-1Y/formalization/ZeroY/Transport.lean",
@@ -413,7 +495,9 @@
       ],
       "sha256": "94cc5ebb5c7206cc5dbc594599ddea5cd15b3cfebadff6887c9e4173dd9f66b3",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Transport.lean"
     },
     "ZeroY.BMS.PaddedDescent": {
       "source": "upstream-1Y/formalization/ZeroY/BMS/PaddedDescent.lean",
@@ -424,7 +508,9 @@
       ],
       "sha256": "718680bae808b68aa9434f10cb2b55942a90445ec6879c09c7dfa58f0f9d7d27",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/BMS/PaddedDescent.lean"
     },
     "ZeroY.Forest.MatrixParents": {
       "source": "upstream-1Y/formalization/ZeroY/Forest/MatrixParents.lean",
@@ -435,7 +521,9 @@
       ],
       "sha256": "02a5ab7de33967e83a70dd03da1e249ea6ca999efc09861c3b0b686c39ff4485",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Forest/MatrixParents.lean"
     },
     "OneY.ForestFrame": {
       "source": "upstream-1Y/formalization/OneY/ForestFrame.lean",
@@ -446,7 +534,9 @@
       ],
       "sha256": "b7033bb93345abb3b354493efe391377f9f72abd65e73fdb5b3eb97325b6af53",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/ForestFrame.lean"
     },
     "ZeroY.Encode": {
       "source": "upstream-1Y/formalization/ZeroY/Encode.lean",
@@ -456,7 +546,9 @@
       ],
       "sha256": "b5bc022d94d9f188d77cc8b87b797f77bd9c5635a2d10914bc54d9a021f31efe",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Encode.lean"
     },
     "ZeroY.Mountain.Encoding": {
       "source": "upstream-1Y/formalization/ZeroY/Mountain/Encoding.lean",
@@ -467,7 +559,9 @@
       ],
       "sha256": "48b4d574ddd8ca7114b9ed381f2e0cb2a75c1c83f1a945effc9658770b4002c6",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Mountain/Encoding.lean"
     },
     "ZeroY.RoundTrip": {
       "source": "upstream-1Y/formalization/ZeroY/RoundTrip.lean",
@@ -479,7 +573,9 @@
       ],
       "sha256": "dfce8a1d169f8018e5ec71e0b30bed4d5e206947afb4ba14d37bc742b6ab1412",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/RoundTrip.lean"
     },
     "ZeroY.Image": {
       "source": "upstream-1Y/formalization/ZeroY/Image.lean",
@@ -488,7 +584,9 @@
       ],
       "sha256": "b4d9a55f59c302c82d97df4d0b725f12f49a94c6dc8dbda4d5391e01667c9d9a",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Image.lean"
     },
     "ZeroY.SequenceOrder": {
       "source": "upstream-1Y/formalization/ZeroY/SequenceOrder.lean",
@@ -497,7 +595,9 @@
       ],
       "sha256": "d3572a9f7d7a88f543beab152f294234f0df1b1dde26f101a6e2364cdc768fd8",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/SequenceOrder.lean"
     },
     "ZeroY.OrderEmbedding": {
       "source": "upstream-1Y/formalization/ZeroY/OrderEmbedding.lean",
@@ -510,7 +610,9 @@
       ],
       "sha256": "821e752eecf956d6be04d60a02ecf7da11c69231987aab7e154a0a693d261561",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/OrderEmbedding.lean"
     },
     "ZeroY.Reversible": {
       "source": "upstream-1Y/formalization/ZeroY/Reversible.lean",
@@ -521,7 +623,9 @@
       ],
       "sha256": "187e3d74ff94488492c2ddc38a1340ff0e8513c71c052bfac70bdc2a7b68bc7a",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Reversible.lean"
     },
     "ZeroY.Structural.Prefix": {
       "source": "upstream-1Y/formalization/ZeroY/Structural/Prefix.lean",
@@ -530,7 +634,9 @@
       ],
       "sha256": "9dbfb8a984d5afb9b2147eebaa60226a13b58d8cea8dbbb490695ffea6875fa8",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Structural/Prefix.lean"
     },
     "ZeroY.Mountain.CommonChain": {
       "source": "upstream-1Y/formalization/ZeroY/Mountain/CommonChain.lean",
@@ -539,7 +645,9 @@
       ],
       "sha256": "cb37492eeeac14f0722342599922bb65601c049067cfaf8add586f6c89ec5dfe",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Mountain/CommonChain.lean"
     },
     "ZeroY.Structural.DecodeTower": {
       "source": "upstream-1Y/formalization/ZeroY/Structural/DecodeTower.lean",
@@ -550,7 +658,9 @@
       ],
       "sha256": "1510f4d4862bddad28525420892b52e6a2613534e0ba2540c485db6d37f76807",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Structural/DecodeTower.lean"
     },
     "ZeroY.PaddedExt": {
       "source": "upstream-1Y/formalization/ZeroY/PaddedExt.lean",
@@ -559,7 +669,9 @@
       ],
       "sha256": "7308a4895baad19479b9b0fa2473711fc73f2cc5fba3e70bbc422df04ffce800",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/PaddedExt.lean"
     },
     "ZeroY.Structural.Recognition": {
       "source": "upstream-1Y/formalization/ZeroY/Structural/Recognition.lean",
@@ -571,7 +683,9 @@
       ],
       "sha256": "f6833f95da3c44e696dbcf7157ee0eaa576420fc3c992a87d44cc154cec91fa6",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Structural/Recognition.lean"
     },
     "ZeroY.Structural.RawRecognition": {
       "source": "upstream-1Y/formalization/ZeroY/Structural/RawRecognition.lean",
@@ -580,7 +694,9 @@
       ],
       "sha256": "b20c519649a73971beb2de486b1c3a1e3dd4671b4f082d2de4e1eeb2d49be4bd",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Structural/RawRecognition.lean"
     },
     "OneY.ForestFrameMatrix": {
       "source": "upstream-1Y/formalization/OneY/ForestFrameMatrix.lean",
@@ -590,7 +706,9 @@
       ],
       "sha256": "7a52b76794bd83411ac037ce3a7aab5d98bdfee8adeaf943b4311ae0e7d7fd6e",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/ForestFrameMatrix.lean"
     },
     "OneY.DepthMatrix": {
       "source": "upstream-1Y/formalization/OneY/DepthMatrix.lean",
@@ -599,7 +717,9 @@
       ],
       "sha256": "f6a62464ee7265ac2a00917a9dd011477e11e4a12da242d19e6bea719b2c818e",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/DepthMatrix.lean"
     },
     "OneY.Numeric": {
       "source": "upstream-1Y/formalization/OneY/Numeric.lean",
@@ -609,7 +729,9 @@
       ],
       "sha256": "932d4fc392667e84b2346ebd0a6c8b20ea27806c65de0ab2d97ea0c3a00a31fd",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/Numeric.lean"
     },
     "OneY.SparseComparison": {
       "source": "upstream-1Y/formalization/OneY/SparseComparison.lean",
@@ -619,7 +741,9 @@
       ],
       "sha256": "dadf1f5e33b915c79084a84e140da143ffa7d5a475f88841bd143ab6d9f1b794",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/SparseComparison.lean"
     },
     "OneY.SparseBlocker": {
       "source": "upstream-1Y/formalization/OneY/SparseBlocker.lean",
@@ -630,7 +754,9 @@
       ],
       "sha256": "946f86e152d9a1fb500f301462c00e757bfa282e76ad992591973e93c02b5909",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/SparseBlocker.lean"
     },
     "OneY.Geometry": {
       "source": "upstream-1Y/formalization/OneY/Geometry.lean",
@@ -639,7 +765,9 @@
       ],
       "sha256": "026a82bc46f3332be44e7bda7786c65067aa8c7baf20743bf1a2756c46be8a16",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/Geometry.lean"
     },
     "OneY.RootGeometry": {
       "source": "upstream-1Y/formalization/OneY/RootGeometry.lean",
@@ -649,7 +777,9 @@
       ],
       "sha256": "5ec1a7f7a88d057cf34f58f179f4afb269dcd57fa71a7018a13b1788f5f3c8a8",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/RootGeometry.lean"
     },
     "OneY.NumericGeometry": {
       "source": "upstream-1Y/formalization/OneY/NumericGeometry.lean",
@@ -661,7 +791,9 @@
       ],
       "sha256": "450d6ed7444deb3acc51aa5a3d8dd37097c6897868f5dcaac8da2ffac16592f5",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/NumericGeometry.lean"
     },
     "OneY.NumericRoots": {
       "source": "upstream-1Y/formalization/OneY/NumericRoots.lean",
@@ -670,7 +802,9 @@
       ],
       "sha256": "6538216629597ce96de195fcb307edd61ce0c432f99ca7572bcfd5db8cf0eef6",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/NumericRoots.lean"
     },
     "OneY.SparseDepth": {
       "source": "upstream-1Y/formalization/OneY/SparseDepth.lean",
@@ -680,7 +814,9 @@
       ],
       "sha256": "09d34005b679704d61259a7d16957b0ccab1cc0bafab7617332b591fcbdec766",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/SparseDepth.lean"
     },
     "OneY.TopComparison": {
       "source": "upstream-1Y/formalization/OneY/TopComparison.lean",
@@ -689,7 +825,9 @@
       ],
       "sha256": "f0eb7d14a9459aca47997fc8ffe0bcca7c8c1d0fc4bd249148f8c8287815b654",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TopComparison.lean"
     },
     "OneY.NumericFrame": {
       "source": "upstream-1Y/formalization/OneY/NumericFrame.lean",
@@ -700,7 +838,9 @@
       ],
       "sha256": "71c6150511688282522e650019c953278216d8a0ddb2486c534ad1154e89fb73",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/NumericFrame.lean"
     },
     "ZeroY.Structural.ExpansionParents": {
       "source": "upstream-1Y/formalization/ZeroY/Structural/ExpansionParents.lean",
@@ -710,7 +850,9 @@
       ],
       "sha256": "2ab4c61f527de313573f72a37ba80ef1da7e92a48737eac17e2dcb7a6cfb0bd7",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Structural/ExpansionParents.lean"
     },
     "ZeroY.Structural.ExpansionCoordinates": {
       "source": "upstream-1Y/formalization/ZeroY/Structural/ExpansionCoordinates.lean",
@@ -719,7 +861,9 @@
       ],
       "sha256": "b6390e7ec58592a209276c8675fcdad564b4eceddd08455cae383e79b0991688",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Structural/ExpansionCoordinates.lean"
     },
     "ZeroY.Structural.DepthExpansion": {
       "source": "upstream-1Y/formalization/ZeroY/Structural/DepthExpansion.lean",
@@ -728,7 +872,9 @@
       ],
       "sha256": "6d50dc2262431a45a960176a7025bfd9700275c978f90499a1ceb46f5b51719d",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Structural/DepthExpansion.lean"
     },
     "ZeroY.Structural.BlockerExpansion": {
       "source": "upstream-1Y/formalization/ZeroY/Structural/BlockerExpansion.lean",
@@ -737,7 +883,9 @@
       ],
       "sha256": "0370d5cab8539609d1d9230e602035e3d1e319b1225e2b895d1c0110595ff870",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Structural/BlockerExpansion.lean"
     },
     "ZeroY.Forest.AncestorMonotone": {
       "source": "upstream-1Y/formalization/ZeroY/Forest/AncestorMonotone.lean",
@@ -747,7 +895,9 @@
       ],
       "sha256": "6741786b54af968be053c7301c739a9de12e8ba612d56236d59678755d5e3351",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Forest/AncestorMonotone.lean"
     },
     "ZeroY.Structural.CopyOrder": {
       "source": "upstream-1Y/formalization/ZeroY/Structural/CopyOrder.lean",
@@ -760,7 +910,9 @@
       ],
       "sha256": "dac0abac5e4d1577a81604217fffecd8ae0602ec8dad238d6016bfcd1cb1ed76",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Structural/CopyOrder.lean"
     },
     "ZeroY.Structural.Expansion": {
       "source": "upstream-1Y/formalization/ZeroY/Structural/Expansion.lean",
@@ -770,7 +922,9 @@
       ],
       "sha256": "de7748d16f23baa2233fa153ecb9a5bc4a7c90b16babb2f75d44aa90a4797ac0",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Structural/Expansion.lean"
     },
     "ZeroY.Expansion": {
       "source": "upstream-1Y/formalization/ZeroY/Expansion.lean",
@@ -780,7 +934,9 @@
       ],
       "sha256": "45cc6e7a600a6144bf41985a69c2e7ed69955d83e53a310ec3f6fff72511c20a",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Expansion.lean"
     },
     "ZeroY.Structural.ExpansionParentAlignment": {
       "source": "upstream-1Y/formalization/ZeroY/Structural/ExpansionParentAlignment.lean",
@@ -790,7 +946,9 @@
       ],
       "sha256": "0a3283aec654b9a3d83a4293d25432a4e515f1ed52d1cbbff9a597b7ca155ac4",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Structural/ExpansionParentAlignment.lean"
     },
     "OneY.RelativeBlocker": {
       "source": "upstream-1Y/formalization/OneY/RelativeBlocker.lean",
@@ -802,7 +960,9 @@
       ],
       "sha256": "80cb269fac67d94d36982bb5cecbd26caa3c44b81a19291ebcfd931ec5e1eb8f",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/RelativeBlocker.lean"
     },
     "OneY.NumericFrameBlocker": {
       "source": "upstream-1Y/formalization/OneY/NumericFrameBlocker.lean",
@@ -812,7 +972,9 @@
       ],
       "sha256": "5b9c34cb73332da424044f34d3cf6c832325e2e2da38cb617ddc3e90ba3424eb",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/NumericFrameBlocker.lean"
     },
     "OneY.Pseudo": {
       "source": "upstream-1Y/formalization/OneY/Pseudo.lean",
@@ -822,7 +984,9 @@
       ],
       "sha256": "5efc7251c0873671e962cbbaa54e95d309050855cdaf7c56ecb20e3d2cc493dc",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/Pseudo.lean"
     },
     "OneY.ExtractionGeometry": {
       "source": "upstream-1Y/formalization/OneY/ExtractionGeometry.lean",
@@ -832,7 +996,9 @@
       ],
       "sha256": "67bb64589fda27f08cf506e0bf75a376b8f4be8ea217f4f3828b9fef4783e1e6",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/ExtractionGeometry.lean"
     },
     "OneY.Extraction": {
       "source": "upstream-1Y/formalization/OneY/Extraction.lean",
@@ -841,7 +1007,9 @@
       ],
       "sha256": "51c095c15005eaa6be330db8bb85a916c9d34a4a76c32defab75abc79ec42fc2",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/Extraction.lean"
     },
     "OneY.BadRoot": {
       "source": "upstream-1Y/formalization/OneY/BadRoot.lean",
@@ -850,7 +1018,9 @@
       ],
       "sha256": "a66230f6669614937d943c503e52b4ff581bdd5cfc15228a3a6a33a21d2c37b4",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/BadRoot.lean"
     },
     "OneY.CopyCoordinates": {
       "source": "upstream-1Y/formalization/OneY/CopyCoordinates.lean",
@@ -859,7 +1029,9 @@
       ],
       "sha256": "cdb13dd7d461771283d3f9c3bf8ce31c4a4fd9e8af30b39f2ae9e3010acd03d0",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/CopyCoordinates.lean"
     },
     "OneY.TerminalCopy": {
       "source": "upstream-1Y/formalization/OneY/TerminalCopy.lean",
@@ -869,7 +1041,9 @@
       ],
       "sha256": "b40088136c376f560e3241aa6627a46192bee49e8705b59b6a39eb1d3b76ce73",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopy.lean"
     },
     "OneY.TerminalCopyNesting": {
       "source": "upstream-1Y/formalization/OneY/TerminalCopyNesting.lean",
@@ -878,7 +1052,9 @@
       ],
       "sha256": "e993de071dc9709b9f91c9383969a50c3dca13e202801514f7f88b2b3f2314b1",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopyNesting.lean"
     },
     "OneY.TerminalCopyNumeric": {
       "source": "upstream-1Y/formalization/OneY/TerminalCopyNumeric.lean",
@@ -888,7 +1064,9 @@
       ],
       "sha256": "aefe8840496df0b2409e7250aae3d1ddb1fc794635c57e75ab8441db4bb75725",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopyNumeric.lean"
     },
     "ZeroY.Expansion.Context": {
       "source": "upstream-1Y/formalization/ZeroY/Expansion/Context.lean",
@@ -899,7 +1077,9 @@
       ],
       "sha256": "27e68f3bee476089fe6860501523b1ce6e0a01966345af4e8e71593f4df18a17",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Expansion/Context.lean"
     },
     "OneY.TerminalFrame": {
       "source": "upstream-1Y/formalization/OneY/TerminalFrame.lean",
@@ -910,7 +1090,9 @@
       ],
       "sha256": "3eea61582b704792b0add1ea91156ffa4b8b2ee0c5c0153643726ce2426fa129",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalFrame.lean"
     },
     "OneY.OrdinaryCopy": {
       "source": "upstream-1Y/formalization/OneY/OrdinaryCopy.lean",
@@ -920,7 +1102,9 @@
       ],
       "sha256": "95c86b49bb2fa7135f73f9aef8c15977581cb67d30230d204564d0a4187e15b3",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/OrdinaryCopy.lean"
     },
     "OneY.OrdinaryCopyRoots": {
       "source": "upstream-1Y/formalization/OneY/OrdinaryCopyRoots.lean",
@@ -929,7 +1113,9 @@
       ],
       "sha256": "8ee1216e1d43080b76646fc175116fa220123072e8c3a243f3f2a5595d411f4c",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/OrdinaryCopyRoots.lean"
     },
     "OneY.Reconstruction": {
       "source": "upstream-1Y/formalization/OneY/Reconstruction.lean",
@@ -938,7 +1124,9 @@
       ],
       "sha256": "f1cac3ea2a69b191549e98a0c684c4f2888e8a29eae5e54f1d22309658da0b62",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/Reconstruction.lean"
     },
     "OneY.ReconstructionNumeric": {
       "source": "upstream-1Y/formalization/OneY/ReconstructionNumeric.lean",
@@ -948,7 +1136,9 @@
       ],
       "sha256": "2bf8011f12525d744338f267fc213e32171903ab1b4295a8d36fefd89f6e1840",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/ReconstructionNumeric.lean"
     },
     "OneY.OrdinaryCopyReconstruction": {
       "source": "upstream-1Y/formalization/OneY/OrdinaryCopyReconstruction.lean",
@@ -958,7 +1148,9 @@
       ],
       "sha256": "2f7168a915ca50c64076a27cb1155c0c181e5c5e664fd96cbbb6780112602a6b",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/OrdinaryCopyReconstruction.lean"
     },
     "OneY.TerminalCopyReconstruction": {
       "source": "upstream-1Y/formalization/OneY/TerminalCopyReconstruction.lean",
@@ -968,7 +1160,9 @@
       ],
       "sha256": "b7b54cad6ba4e2f15c0bf03bc2f2042fc53f5b4c3fff34b37b78fcf23cde498a",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopyReconstruction.lean"
     },
     "OneY.TerminalFrameParents": {
       "source": "upstream-1Y/formalization/OneY/TerminalFrameParents.lean",
@@ -978,7 +1172,9 @@
       ],
       "sha256": "9b10c7a7b33d8b83c29ad5a0198518a0bce82ba2be8784cf2e49652892eed150",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalFrameParents.lean"
     },
     "OneY.TerminalFrameDepths": {
       "source": "upstream-1Y/formalization/OneY/TerminalFrameDepths.lean",
@@ -987,7 +1183,9 @@
       ],
       "sha256": "fd4bc50ad185bb5283d69ddb57738693b97c8fe84cb32ce5f82f31bc87a9c7c8",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalFrameDepths.lean"
     },
     "OneY.DecoratedColumn": {
       "source": "upstream-1Y/formalization/OneY/DecoratedColumn.lean",
@@ -996,7 +1194,9 @@
       ],
       "sha256": "eaf7118c24ef3fe3fa2621dd5c28a57d23f2c1dd661667570df209ed46675393",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/DecoratedColumn.lean"
     },
     "OneY.LowerCopy": {
       "source": "upstream-1Y/formalization/OneY/LowerCopy.lean",
@@ -1006,7 +1206,9 @@
       ],
       "sha256": "cce6d636a0a3e23d8c7ef6e941c0a4e3d81e37fbb79f469248c74621dbd2d633",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopy.lean"
     },
     "OneY.LowerCopyNesting": {
       "source": "upstream-1Y/formalization/OneY/LowerCopyNesting.lean",
@@ -1015,7 +1217,9 @@
       ],
       "sha256": "5e972648dbe70bae072779f080af8abd9dfb12811ee5c3ffe7b172d892abf8e7",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyNesting.lean"
     },
     "OneY.LowerCopyDominance": {
       "source": "upstream-1Y/formalization/OneY/LowerCopyDominance.lean",
@@ -1027,7 +1231,9 @@
       ],
       "sha256": "668b3d7d86e5537eaa0acdcc9ac608afbb476842318f14fa33bfcb187c442e5f",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyDominance.lean"
     },
     "OneY.LowerCopyDepths": {
       "source": "upstream-1Y/formalization/OneY/LowerCopyDepths.lean",
@@ -1036,7 +1242,9 @@
       ],
       "sha256": "efc7f8ed413cc484963daf194423d6e435c397ee676ae713789c6801a85e23ec",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyDepths.lean"
     },
     "OneY.LowerCopyComparison": {
       "source": "upstream-1Y/formalization/OneY/LowerCopyComparison.lean",
@@ -1048,7 +1256,9 @@
       ],
       "sha256": "e1ef0b5468255e856bb8b19523cb0cbadd5d4d2dde6088e09eed94d989b0262a",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyComparison.lean"
     },
     "OneY.TerminalCopyComparison": {
       "source": "upstream-1Y/formalization/OneY/TerminalCopyComparison.lean",
@@ -1059,7 +1269,9 @@
       ],
       "sha256": "fbcb03e2245626c66ce64a2ca67a051597958579066859315223232e2af6c569",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopyComparison.lean"
     },
     "OneY.ReconstructionComparison": {
       "source": "upstream-1Y/formalization/OneY/ReconstructionComparison.lean",
@@ -1068,7 +1280,9 @@
       ],
       "sha256": "a648fafc2e117644daeafd849d63b81116f6fd5f882b821ab78368dee46620c2",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/ReconstructionComparison.lean"
     },
     "OneY.DecoratedBlocker": {
       "source": "upstream-1Y/formalization/OneY/DecoratedBlocker.lean",
@@ -1077,7 +1291,9 @@
       ],
       "sha256": "b7b8f7238bd41ce7d517edd0a836f35ad59e89f263bef85751130134d33dd213",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/DecoratedBlocker.lean"
     },
     "OneY.DecoratedBlockerExpansion": {
       "source": "upstream-1Y/formalization/OneY/DecoratedBlockerExpansion.lean",
@@ -1086,7 +1302,9 @@
       ],
       "sha256": "9ce5a77a581565ccf3cb1726a5f1fa567063268fbd01ccd6851cd08dd65ec965",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/DecoratedBlockerExpansion.lean"
     },
     "OneY.NumericDecoratedFrame": {
       "source": "upstream-1Y/formalization/OneY/NumericDecoratedFrame.lean",
@@ -1097,7 +1315,9 @@
       ],
       "sha256": "7c8781989cafd86998b1ac43854bf6ab54c03ec31ddb0886cc63f3e4bccf9bc1",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/NumericDecoratedFrame.lean"
     },
     "OneY.OrdinaryCopySelection": {
       "source": "upstream-1Y/formalization/OneY/OrdinaryCopySelection.lean",
@@ -1108,7 +1328,9 @@
       ],
       "sha256": "4ce7bca2aab61c2755837f4419181463db3c793d93ae4052b1d6315d39c083ae",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/OrdinaryCopySelection.lean"
     },
     "OneY.OrdinaryCopyForest": {
       "source": "upstream-1Y/formalization/OneY/OrdinaryCopyForest.lean",
@@ -1117,7 +1339,9 @@
       ],
       "sha256": "7eec97048b561f751510fe7a381a6698088a7b41d8e33b3da32f5376619342c7",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/OrdinaryCopyForest.lean"
     },
     "OneY.OrdinaryCopyNumeric": {
       "source": "upstream-1Y/formalization/OneY/OrdinaryCopyNumeric.lean",
@@ -1126,7 +1350,9 @@
       ],
       "sha256": "0973fc3ba4e8a84055477946d5b8bd4830302f91475a9380ab5901d11e1b6064",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/OrdinaryCopyNumeric.lean"
     },
     "OneY.OrdinaryCopyPseudo": {
       "source": "upstream-1Y/formalization/OneY/OrdinaryCopyPseudo.lean",
@@ -1136,7 +1362,9 @@
       ],
       "sha256": "81cc25b3239ed029b7e2527b095e8f56fbaf2eb5a968b26b76c9a488d8b192e3",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/OrdinaryCopyPseudo.lean"
     },
     "OneY.OrdinaryCopyExtraction": {
       "source": "upstream-1Y/formalization/OneY/OrdinaryCopyExtraction.lean",
@@ -1147,7 +1375,9 @@
       ],
       "sha256": "35a6b446610747b3c1af6c43cf647b6ebf6794724cc6ed2540ecd0ff2deb599e",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/OrdinaryCopyExtraction.lean"
     },
     "OneY.TerminalCopyCanonical": {
       "source": "upstream-1Y/formalization/OneY/TerminalCopyCanonical.lean",
@@ -1157,7 +1387,9 @@
       ],
       "sha256": "68011cf351bbc54456ee91d88a127a344dc5e7a5dc79ef021706ca03725f681d",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopyCanonical.lean"
     },
     "OneY.TerminalDecoratedRecovery": {
       "source": "upstream-1Y/formalization/OneY/TerminalDecoratedRecovery.lean",
@@ -1167,7 +1399,9 @@
       ],
       "sha256": "7bdc5cb8f99196e3b98de0b7a25aec4169b9a141d0fe589d0c83307b3cdd26e5",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalDecoratedRecovery.lean"
     },
     "OneY.ReconstructionTop": {
       "source": "upstream-1Y/formalization/OneY/ReconstructionTop.lean",
@@ -1176,7 +1410,9 @@
       ],
       "sha256": "e5e22afb31680cbd6788a60303c11653718cb9ceac97dea45ddb0633464e7fa7",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/ReconstructionTop.lean"
     },
     "OneY.TerminalCopyTopBound": {
       "source": "upstream-1Y/formalization/OneY/TerminalCopyTopBound.lean",
@@ -1187,7 +1423,9 @@
       ],
       "sha256": "148bef5c8e683b2c69d67b7cb99dfeabd5e194f73b78f9ce11c01b766d02201a",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopyTopBound.lean"
     },
     "OneY.TerminalCopyComplete": {
       "source": "upstream-1Y/formalization/OneY/TerminalCopyComplete.lean",
@@ -1197,7 +1435,9 @@
       ],
       "sha256": "2fa4b8a9746a6720ef0e4c8fda680e4fa942d6833e36f1470f86aecb21419d32",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopyComplete.lean"
     },
     "OneY.TerminalCopyRoots": {
       "source": "upstream-1Y/formalization/OneY/TerminalCopyRoots.lean",
@@ -1208,7 +1448,9 @@
       ],
       "sha256": "403073f68283ae19cfb4637a96d2782030383944bfbe02bd381eb8c6cfb5500a",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopyRoots.lean"
     },
     "OneY.PseudoCollapse": {
       "source": "upstream-1Y/formalization/OneY/PseudoCollapse.lean",
@@ -1217,7 +1459,9 @@
       ],
       "sha256": "5d49e706b4611cf3306edfa23fc9fc086b00da9b942db41a67653d1e01630afe",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/PseudoCollapse.lean"
     },
     "OneY.PseudoSelection": {
       "source": "upstream-1Y/formalization/OneY/PseudoSelection.lean",
@@ -1228,7 +1472,9 @@
       ],
       "sha256": "c3d7739c0c458e3df268653aa7ede65c5500c8ddb05b68fded6db3fac2453974",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/PseudoSelection.lean"
     },
     "OneY.TerminalCopyExtraction": {
       "source": "upstream-1Y/formalization/OneY/TerminalCopyExtraction.lean",
@@ -1238,7 +1484,9 @@
       ],
       "sha256": "2fdf8b345fed99bc0433bba44c6b67a2fa70b18c331b7e4df964e372c4d0d69f",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopyExtraction.lean"
     },
     "OneY.TerminalCopyRebuild": {
       "source": "upstream-1Y/formalization/OneY/TerminalCopyRebuild.lean",
@@ -1248,7 +1496,9 @@
       ],
       "sha256": "42fdc4e7335a442ce288a7c797e1a01aa269414c78a3fe1645790728ff4b7242",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopyRebuild.lean"
     },
     "OneY.TopForestGeometry": {
       "source": "upstream-1Y/formalization/OneY/TopForestGeometry.lean",
@@ -1258,7 +1508,9 @@
       ],
       "sha256": "81768ae4f7adb96b7c7cc108acd79b22770e4368500e3fe2ca65d8e7a07ed9dd",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TopForestGeometry.lean"
     },
     "OneY.ActiveGeometry": {
       "source": "upstream-1Y/formalization/OneY/ActiveGeometry.lean",
@@ -1269,7 +1521,9 @@
       ],
       "sha256": "cef48b41e7797934fda64557f09dd5cc21c489e2b8d80a4dc5aec403cb09335b",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/ActiveGeometry.lean"
     },
     "OneY.LowerCopyRoots": {
       "source": "upstream-1Y/formalization/OneY/LowerCopyRoots.lean",
@@ -1278,7 +1532,9 @@
       ],
       "sha256": "97597efd4659fd1f44d437e33380e72de8279e2823b974d61e019b714c65541a",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyRoots.lean"
     },
     "OneY.LowerCopyBlocker": {
       "source": "upstream-1Y/formalization/OneY/LowerCopyBlocker.lean",
@@ -1290,7 +1546,9 @@
       ],
       "sha256": "734918d8516d93702737d8c0846bca7060f47b9e0a143108341cc62c5e8ab7d5",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyBlocker.lean"
     },
     "OneY.TerminalCopyTransport": {
       "source": "upstream-1Y/formalization/OneY/TerminalCopyTransport.lean",
@@ -1301,7 +1559,9 @@
       ],
       "sha256": "a7ea601f65125f14152fc653358804748ce7241ba34a819622e744b3fda921e7",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopyTransport.lean"
     },
     "OneY.FrameCopy": {
       "source": "upstream-1Y/formalization/OneY/FrameCopy.lean",
@@ -1311,7 +1571,9 @@
       ],
       "sha256": "03ed1b508213701ef3f3b5e3c22aff0762e994bb282e92cdae32e1f1184994b6",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/FrameCopy.lean"
     },
     "OneY.TerminalCopyBottom": {
       "source": "upstream-1Y/formalization/OneY/TerminalCopyBottom.lean",
@@ -1321,7 +1583,9 @@
       ],
       "sha256": "707dd81a251e2ebae1cd9372c999f4dc5721df561af798c68564452228346eee",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopyBottom.lean"
     },
     "OneY.TerminalCopyBottomRecovery": {
       "source": "upstream-1Y/formalization/OneY/TerminalCopyBottomRecovery.lean",
@@ -1330,7 +1594,9 @@
       ],
       "sha256": "288fa964d9309c55e2bb11ae262f91f475d33f9e109e7bb1ec5fc9526394854f",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopyBottomRecovery.lean"
     },
     "OneY.TerminalCopySeamComparison": {
       "source": "upstream-1Y/formalization/OneY/TerminalCopySeamComparison.lean",
@@ -1339,7 +1605,9 @@
       ],
       "sha256": "4dae272a20882aea889fa101107f1f040213fe1c49bcb6a5f8ddc554747ec8ce",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopySeamComparison.lean"
     },
     "OneY.TerminalCopyExternalSeam": {
       "source": "upstream-1Y/formalization/OneY/TerminalCopyExternalSeam.lean",
@@ -1348,7 +1616,9 @@
       ],
       "sha256": "548c56403bb62db848e78f05b50c70460a0cd48aa146b037ee1524545f6cae2a",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopyExternalSeam.lean"
     },
     "OneY.TerminalCopyExternal": {
       "source": "upstream-1Y/formalization/OneY/TerminalCopyExternal.lean",
@@ -1357,7 +1627,9 @@
       ],
       "sha256": "286c2c65ad3b5a4736e7e3ced758a0e3515a285ca4f169b936c1c3c01ec8fb7e",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopyExternal.lean"
     },
     "OneY.TerminalCopyDepths": {
       "source": "upstream-1Y/formalization/OneY/TerminalCopyDepths.lean",
@@ -1366,7 +1638,9 @@
       ],
       "sha256": "d3505d52e8f1bc81b055844f76745fc5fc98014749b1118ac4c9a4309a8c5cb2",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopyDepths.lean"
     },
     "OneY.TerminalCopyUpperOrder": {
       "source": "upstream-1Y/formalization/OneY/TerminalCopyUpperOrder.lean",
@@ -1375,7 +1649,9 @@
       ],
       "sha256": "4900a9dff46f67c6cd68487a92d2e5bc79c057ce8840759a70e286359f241ee7",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopyUpperOrder.lean"
     },
     "OneY.TerminalCopyLinear": {
       "source": "upstream-1Y/formalization/OneY/TerminalCopyLinear.lean",
@@ -1384,7 +1660,9 @@
       ],
       "sha256": "51edf5e3ae46eb64da65de57be528d1021b2e71cbc0249c65c4ecb625b24aae7",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopyLinear.lean"
     },
     "OneY.Build": {
       "source": "upstream-1Y/formalization/OneY/Build.lean",
@@ -1393,7 +1671,9 @@
       ],
       "sha256": "7019863d4ff59d2ce47c5fdd27c88d4dc4a0dd883663ca197c766e61d600c563",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/Build.lean"
     },
     "OneY.RootSearch": {
       "source": "upstream-1Y/formalization/OneY/RootSearch.lean",
@@ -1402,7 +1682,9 @@
       ],
       "sha256": "be1fc38af48c554edde6d67f2d286a25a5d2e403c6678959546d2b7ab81e3c81",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/RootSearch.lean"
     },
     "OneY.TowerReconstruction": {
       "source": "upstream-1Y/formalization/OneY/TowerReconstruction.lean",
@@ -1412,7 +1694,9 @@
       ],
       "sha256": "9ecd2d86e4b75f97d4fafa7a5f64d119bab248fa7f9eab0640783c4aaf692902",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TowerReconstruction.lean"
     },
     "OneY.Expansion": {
       "source": "upstream-1Y/formalization/OneY/Expansion.lean",
@@ -1427,7 +1711,9 @@
       ],
       "sha256": "e6f55877dd525aa230779bf2d19f9514bd1425faa834c613397c0fa38813dc18",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/Expansion.lean"
     },
     "OneY.ExpansionProperties": {
       "source": "upstream-1Y/formalization/OneY/ExpansionProperties.lean",
@@ -1436,7 +1722,9 @@
       ],
       "sha256": "687ef5a266a3a94eb7b825ce605729c924bc3f1f4d2ece12fd5409b43849c56b",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/ExpansionProperties.lean"
     },
     "OneY.TowerCopyAssembly": {
       "source": "upstream-1Y/formalization/OneY/TowerCopyAssembly.lean",
@@ -1446,7 +1734,9 @@
       ],
       "sha256": "ed437e97257c33540ef33317c39ef67cd4d699f778a976b8b3f5d9945022b88a",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TowerCopyAssembly.lean"
     },
     "OneY.Prefix": {
       "source": "upstream-1Y/formalization/OneY/Prefix.lean",
@@ -1457,7 +1747,9 @@
       ],
       "sha256": "7e50b2828ef5da8b765172aae92b5961244aaa971e3b730d8624fc7351724f5e",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/Prefix.lean"
     },
     "OneY.TerminalTowerRebuild": {
       "source": "upstream-1Y/formalization/OneY/TerminalTowerRebuild.lean",
@@ -1467,7 +1759,9 @@
       ],
       "sha256": "91cb439cc4db9528b128fc743e5f5f33cf0fe7ae4fa92afc881313d936a5afcd",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalTowerRebuild.lean"
     },
     "OneY.RootIndexed.Diagram": {
       "source": "upstream-1Y/formalization/OneY/RootIndexed/Diagram.lean",
@@ -1477,7 +1771,9 @@
       ],
       "sha256": "55a7ce732c70341206223089f57bb78a072e2aa88d3eed0dd0b3cf0e4b02b5ec",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/RootIndexed/Diagram.lean"
     },
     "OneY.RootIndexed.Prefix": {
       "source": "upstream-1Y/formalization/OneY/RootIndexed/Prefix.lean",
@@ -1487,7 +1783,9 @@
       ],
       "sha256": "ba2b975b7f22cabd15a347f99064f13c17d3a7f89bcef847d06fc0ccecb44e8b",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/RootIndexed/Prefix.lean"
     },
     "OneY.RootIndexed.CopyCoordinates": {
       "source": "upstream-1Y/formalization/OneY/RootIndexed/CopyCoordinates.lean",
@@ -1497,7 +1795,9 @@
       ],
       "sha256": "c8114dbbb946b4ae7557a2c32a2cde1dba6a055644ea280a4959f1282777ad60",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/RootIndexed/CopyCoordinates.lean"
     },
     "OneY.RootIndexed.TerminalRoots": {
       "source": "upstream-1Y/formalization/OneY/RootIndexed/TerminalRoots.lean",
@@ -1507,7 +1807,9 @@
       ],
       "sha256": "4de24ca40ba7422b8c30ee0a89ae453b5acaa59f68902b38526845e3ff3b0764",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/RootIndexed/TerminalRoots.lean"
     },
     "OneY.RootIndexed.CopyDiagram": {
       "source": "upstream-1Y/formalization/OneY/RootIndexed/CopyDiagram.lean",
@@ -1519,7 +1821,9 @@
       ],
       "sha256": "ec217589d245147922054835fd519071bfd77ad2d9aeca5bee4f090f490076a8",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/RootIndexed/CopyDiagram.lean"
     },
     "OneY.ExpansionRebuildPrefix": {
       "source": "upstream-1Y/formalization/OneY/ExpansionRebuildPrefix.lean",
@@ -1530,7 +1834,9 @@
       ],
       "sha256": "c7f4972716a6590457d9df39370f984ff76fcd45b6d4afcb05e0e06f98fa6ad6",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/ExpansionRebuildPrefix.lean"
     },
     "OneY.ReconstructionComparisonPrefix": {
       "source": "upstream-1Y/formalization/OneY/ReconstructionComparisonPrefix.lean",
@@ -1540,7 +1846,9 @@
       ],
       "sha256": "1d2a9c217f5237caa47369af853659367bea566c13a1fbfa989f230f789ec61e",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/ReconstructionComparisonPrefix.lean"
     },
     "OneY.LowerCopyBadBlocker": {
       "source": "upstream-1Y/formalization/OneY/LowerCopyBadBlocker.lean",
@@ -1550,7 +1858,9 @@
       ],
       "sha256": "da16c9a0c5778671c73a3bb2a1b8941d9aa49cfa407dbada228644595cd0a9a6",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyBadBlocker.lean"
     },
     "OneY.LowerCopyCanonical": {
       "source": "upstream-1Y/formalization/OneY/LowerCopyCanonical.lean",
@@ -1560,7 +1870,9 @@
       ],
       "sha256": "53c3e6c1510f610ee30eead7d106407bb069d98b006ebc8babe68ab601529f60",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyCanonical.lean"
     },
     "OneY.LowerCopyBottom": {
       "source": "upstream-1Y/formalization/OneY/LowerCopyBottom.lean",
@@ -1570,7 +1882,9 @@
       ],
       "sha256": "59f26e80df2e1ef9bdde802b7d775e4eeb15c4863139c6520014ca084e585214",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyBottom.lean"
     },
     "OneY.LowerCopyBottomRecovery": {
       "source": "upstream-1Y/formalization/OneY/LowerCopyBottomRecovery.lean",
@@ -1579,7 +1893,9 @@
       ],
       "sha256": "9bb1bac0f738e612f48d69d90009a714d261320173b5d8e0e0a305184c72013d",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyBottomRecovery.lean"
     },
     "OneY.LowerCopyTransport": {
       "source": "upstream-1Y/formalization/OneY/LowerCopyTransport.lean",
@@ -1588,7 +1904,9 @@
       ],
       "sha256": "dd2c5b48a854547cee83164310f453abb87f1ea30a48c74d29ec8340048daf54",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyTransport.lean"
     },
     "OneY.LowerCopyTopForest": {
       "source": "upstream-1Y/formalization/OneY/LowerCopyTopForest.lean",
@@ -1599,7 +1917,9 @@
       ],
       "sha256": "d937e282f23c7445b62fb750cf57b05697e176b25670201369d1acca5be53e3f",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyTopForest.lean"
     },
     "OneY.LowerCopyRebuild": {
       "source": "upstream-1Y/formalization/OneY/LowerCopyRebuild.lean",
@@ -1611,7 +1931,9 @@
       ],
       "sha256": "619f1d215ffc1ddab4d6b86f8a1192ff9d53012aa23a9dda5b54521982632aa5",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyRebuild.lean"
     },
     "OneY.LowerCopyLayerTransport": {
       "source": "upstream-1Y/formalization/OneY/LowerCopyLayerTransport.lean",
@@ -1621,7 +1943,9 @@
       ],
       "sha256": "12ff65e3a5f0061c6ff30683c3f68cbe7303278cde6a7ec9c55d0faf5c2c0f55",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyLayerTransport.lean"
     },
     "OneY.LowerCopyPseudoSeam": {
       "source": "upstream-1Y/formalization/OneY/LowerCopyPseudoSeam.lean",
@@ -1630,7 +1954,9 @@
       ],
       "sha256": "f76bf1bc18efe54ff0cfa858a7db29f18db7c116aa70753664bacca0016157ce",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyPseudoSeam.lean"
     },
     "OneY.LowerCopyPseudoHigh": {
       "source": "upstream-1Y/formalization/OneY/LowerCopyPseudoHigh.lean",
@@ -1640,7 +1966,9 @@
       ],
       "sha256": "cdeffcf66f89cc7d89ef3020d9583319a827ed0c0b5bb576c88c20bb048ff16c",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyPseudoHigh.lean"
     },
     "OneY.LowerCopyPseudoOutside": {
       "source": "upstream-1Y/formalization/OneY/LowerCopyPseudoOutside.lean",
@@ -1649,7 +1977,9 @@
       ],
       "sha256": "c8afb004f0b6b786cfad8be10a315f8f5e6e915085cfb2455a96873792175792",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyPseudoOutside.lean"
     },
     "OneY.FirstMatch": {
       "source": "upstream-1Y/formalization/OneY/FirstMatch.lean",
@@ -1659,7 +1989,9 @@
       ],
       "sha256": "97a213cba72a3e9b8bfeed5eab376a53cfcadfef3e11d9b4f8d1b783392a665d",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/FirstMatch.lean"
     },
     "OneY.LowerCopyPseudoLow": {
       "source": "upstream-1Y/formalization/OneY/LowerCopyPseudoLow.lean",
@@ -1669,7 +2001,9 @@
       ],
       "sha256": "21668281cc7ec016de01f701821d720e0b3ddfc4b82e8c3ff9b603fbd8b445d6",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyPseudoLow.lean"
     },
     "OneY.SingleContraction": {
       "source": "upstream-1Y/formalization/OneY/SingleContraction.lean",
@@ -1680,7 +2014,9 @@
       ],
       "sha256": "19965fd57dc8bac1ca5b67b05acabe1a0ddac18673a65399b687259a5657e6f7",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/SingleContraction.lean"
     },
     "OneY.LowerCopyPseudo": {
       "source": "upstream-1Y/formalization/OneY/LowerCopyPseudo.lean",
@@ -1691,7 +2027,9 @@
       ],
       "sha256": "35d294470f6f3dc9cfcf39546daabb44b621436958a6cb0a27e375b60fc212eb",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyPseudo.lean"
     },
     "OneY.LowerCopyTopBound": {
       "source": "upstream-1Y/formalization/OneY/LowerCopyTopBound.lean",
@@ -1703,7 +2041,9 @@
       ],
       "sha256": "9e1f4e450c311fc556c1b461a60805840d252a01fdbfc9a02dfc0f7e415c8d88",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyTopBound.lean"
     },
     "OneY.LowerCopyLayerTopBound": {
       "source": "upstream-1Y/formalization/OneY/LowerCopyLayerTopBound.lean",
@@ -1714,7 +2054,9 @@
       ],
       "sha256": "6fa3a0d8a11e74916bc0008ca62ce79b48b4e348dd9d105f335165b8d17f1e3a",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyLayerTopBound.lean"
     },
     "OneY.LowerTowerInputs": {
       "source": "upstream-1Y/formalization/OneY/LowerTowerInputs.lean",
@@ -1725,7 +2067,9 @@
       ],
       "sha256": "8563c256d25a3319ddd48de95f4198906cbd9dc022e8532e15ea9463622a4b58",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerTowerInputs.lean"
     },
     "OneY.LowerTowerRebuild": {
       "source": "upstream-1Y/formalization/OneY/LowerTowerRebuild.lean",
@@ -1734,7 +2078,9 @@
       ],
       "sha256": "a9c4f305a5fccb1405fff135beec792ff7608eb27679f3b594b449d76bf1015b",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerTowerRebuild.lean"
     },
     "OneY.ExpansionCanonical": {
       "source": "upstream-1Y/formalization/OneY/ExpansionCanonical.lean",
@@ -1744,7 +2090,9 @@
       ],
       "sha256": "ea8addd9292c8bc8d55d90cc84fbcd9b4d15a138ac9c6ee9eaa563b9102445ce",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/ExpansionCanonical.lean"
     },
     "OneY.ExpansionOrder": {
       "source": "upstream-1Y/formalization/OneY/ExpansionOrder.lean",
@@ -1754,7 +2102,9 @@
       ],
       "sha256": "38f3f614064a994af552bd427c6544c7d03cc47d7fe96e5cf3186b89c21d336e",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/ExpansionOrder.lean"
     },
     "OneY.RootIndexed.LowerAtoms": {
       "source": "upstream-1Y/formalization/OneY/RootIndexed/LowerAtoms.lean",
@@ -1764,7 +2114,9 @@
       ],
       "sha256": "776c3efc63a9ea0b900b189e6d451ba4fbfdeb7ee8e3ff3a8b86f7b278f45b18",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/RootIndexed/LowerAtoms.lean"
     },
     "OneY.RootIndexed.VirtualNeeds": {
       "source": "upstream-1Y/formalization/OneY/RootIndexed/VirtualNeeds.lean",
@@ -1773,7 +2125,9 @@
       ],
       "sha256": "e85b3198ec2a3ac6ee7f27193c9571bd8e4b71239cb528b4af90591280ffc9f5",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/RootIndexed/VirtualNeeds.lean"
     },
     "OneY.RootIndexed.OrdinaryAtoms": {
       "source": "upstream-1Y/formalization/OneY/RootIndexed/OrdinaryAtoms.lean",
@@ -1784,7 +2138,9 @@
       ],
       "sha256": "b6c4ba17aa25723f32701961f43e44af7b1f115d9e9913384742e5233ac0222d",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/RootIndexed/OrdinaryAtoms.lean"
     },
     "OneY.RootIndexed.SpliceGeometry": {
       "source": "upstream-1Y/formalization/OneY/RootIndexed/SpliceGeometry.lean",
@@ -1794,7 +2150,9 @@
       ],
       "sha256": "3bd963a91ee85aa62ffe584758e32de06d6dc15aab34c0b47fb464fa1251c3f8",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/RootIndexed/SpliceGeometry.lean"
     },
     "OneY.RootIndexed.ActualScheme": {
       "source": "upstream-1Y/formalization/OneY/RootIndexed/ActualScheme.lean",
@@ -1803,7 +2161,9 @@
       ],
       "sha256": "98650ec5e503c952393d74c0bffad3439c6c6810178261d945b283812d1fa937",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/RootIndexed/ActualScheme.lean"
     },
     "OneY.RootIndexed.ExpansionWellFounded": {
       "source": "upstream-1Y/formalization/OneY/RootIndexed/ExpansionWellFounded.lean",
@@ -1814,7 +2174,9 @@
       ],
       "sha256": "7e8c4d6850b621a24aa0a35e38d1a4f6dac89b8f3420333d0f764a9aed1b3b09",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/RootIndexed/ExpansionWellFounded.lean"
     },
     "ZeroY.Dynamics.Definitions": {
       "source": "upstream-1Y/formalization/ZeroY/Dynamics/Definitions.lean",
@@ -1824,7 +2186,9 @@
       ],
       "sha256": "9b9fa7a80b57c18317afa3d2244e1b7d8e64eeb533925f4af24d60fc6eafb8ca",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Dynamics/Definitions.lean"
     },
     "ZeroY.Expansion.CopyRows": {
       "source": "upstream-1Y/formalization/ZeroY/Expansion/CopyRows.lean",
@@ -1836,7 +2200,9 @@
       ],
       "sha256": "af199762df3e32d558fbc3f96384bffaf455848d55259227014adf86da65616c",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Expansion/CopyRows.lean"
     },
     "ZeroY.Expansion.Prefix": {
       "source": "upstream-1Y/formalization/ZeroY/Expansion/Prefix.lean",
@@ -1848,7 +2214,9 @@
       ],
       "sha256": "bef5820249ea0618fb6fdfe707e658d4435077058844d965157d1c97a927c573",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Expansion/Prefix.lean"
     },
     "ZeroY.Expansion.Conjugacy": {
       "source": "upstream-1Y/formalization/ZeroY/Expansion/Conjugacy.lean",
@@ -1860,7 +2228,9 @@
       ],
       "sha256": "b2c61cdde4bd7a89a3b3c5bd8380ac1645bb6b081653251f4ef47655bc21ef9b",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Expansion/Conjugacy.lean"
     },
     "ZeroY.Dynamics.Prefix": {
       "source": "upstream-1Y/formalization/ZeroY/Dynamics/Prefix.lean",
@@ -1870,7 +2240,9 @@
       ],
       "sha256": "c2db8d95fb715663185ce7047e7dea7757ca93245da440526dcecd2f0a8d2d45",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Dynamics/Prefix.lean"
     },
     "OneY.Dynamics": {
       "source": "upstream-1Y/formalization/OneY/Dynamics.lean",
@@ -1882,7 +2254,9 @@
       ],
       "sha256": "acc0cfa08aa654c161e2dea6c539dfab448923a198c90a87b136cd83099a93c0",
       "origin": "1Y",
-      "distribution": "bundled unchanged; Apache-2.0"
+      "distribution": "bundled unchanged; Apache-2.0",
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/Dynamics.lean"
     },
     "OrdinalFormal.Reachability": {
       "source": "ordinal-formalization/OrdinalFormal/Reachability.lean",
@@ -1892,7 +2266,9 @@
       "sha256": "8d8b2c42492344d6c4505940339ce6f1c774f6b244c3ee4daddc31deb4299f53",
       "origin": "local",
       "original_sha256_lf": "8d8b2c42492344d6c4505940339ce6f1c774f6b244c3ee4daddc31deb4299f53",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/Reachability.lean"
     },
     "FiniteDemandYFinal": {
       "source": "ordinal-formalization/finite-demand/YFinal.lean",
@@ -1905,7 +2281,9 @@
       "sha256": "e2ad30090d83c2aff05040ca66c33a5675cb65619e0efa79f5978cc9a20e8eb3",
       "origin": "local",
       "original_sha256_lf": "e2ad30090d83c2aff05040ca66c33a5675cb65619e0efa79f5978cc9a20e8eb3",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "Y",
+      "file": "lean/Y/src/FiniteDemandYFinal.lean"
     },
     "OrdinalFormal.ExpansionValidity": {
       "source": "ordinal-formalization/OrdinalFormal/ExpansionValidity.lean",
@@ -1915,7 +2293,9 @@
       "sha256": "24f599ae15d3d13bb0536dba9e88d6e7366b12e3fde01076ba6c4f3c0fd0b364",
       "origin": "local",
       "original_sha256_lf": "24f599ae15d3d13bb0536dba9e88d6e7366b12e3fde01076ba6c4f3c0fd0b364",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/ExpansionValidity.lean"
     },
     "OrdinalFormal.ActualBlockGeometry": {
       "source": "ordinal-formalization/OrdinalFormal/ActualBlockGeometry.lean",
@@ -1926,7 +2306,9 @@
       "sha256": "8efde04967c62cb148d57129d060c71c29b07fd4524af08250d90beb32382c36",
       "origin": "local",
       "original_sha256_lf": "8efde04967c62cb148d57129d060c71c29b07fd4524af08250d90beb32382c36",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/ActualBlockGeometry.lean"
     },
     "OrdinalFormal.SpliceConstruction": {
       "source": "ordinal-formalization/OrdinalFormal/SpliceConstruction.lean",
@@ -1936,7 +2318,9 @@
       "sha256": "425de33bd41d0698b1b62e18639a20c9b25827982793aac7eb5be4befb72e250",
       "origin": "local",
       "original_sha256_lf": "425de33bd41d0698b1b62e18639a20c9b25827982793aac7eb5be4befb72e250",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/SpliceConstruction.lean"
     },
     "OrdinalFormal.GeneratedStagedReflection": {
       "source": "ordinal-formalization/OrdinalFormal/GeneratedStagedReflection.lean",
@@ -1947,7 +2331,9 @@
       "sha256": "76794d460ba0d53a1d0d4951b7ae921f9d58a38569b4df316111f1060e669334",
       "origin": "local",
       "original_sha256_lf": "76794d460ba0d53a1d0d4951b7ae921f9d58a38569b4df316111f1060e669334",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/GeneratedStagedReflection.lean"
     },
     "OrdinalFormal.GeneratedSemanticWellFounded": {
       "source": "ordinal-formalization/OrdinalFormal/GeneratedSemanticWellFounded.lean",
@@ -1958,7 +2344,9 @@
       "sha256": "05f00317b90248da1118318b0eab7cc1ab1a32f4bec6411918d1786f19fedff5",
       "origin": "local",
       "original_sha256_lf": "05f00317b90248da1118318b0eab7cc1ab1a32f4bec6411918d1786f19fedff5",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/GeneratedSemanticWellFounded.lean"
     },
     "FiniteDemandColumnWellFounded": {
       "source": "ordinal-formalization/finite-demand/ColumnWellFounded.lean",
@@ -1969,7 +2357,9 @@
       "sha256": "1e1ade5f4bc23adec16cacc44e2f921f7b638cf7ca22eda7ff0cd30e0b55e4db",
       "origin": "local",
       "original_sha256_lf": "1e1ade5f4bc23adec16cacc44e2f921f7b638cf7ca22eda7ff0cd30e0b55e4db",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/FiniteDemandColumnWellFounded.lean"
     },
     "OrdinalFormal.RPD": {
       "source": "ordinal-formalization/OrdinalFormal/RPD.lean",
@@ -1979,7 +2369,9 @@
       "sha256": "a54dad4c4a4d115281a68b3191f19455e2bbb46817ff3611b38397dbae90ebef",
       "origin": "local",
       "original_sha256_lf": "a54dad4c4a4d115281a68b3191f19455e2bbb46817ff3611b38397dbae90ebef",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/RPD.lean"
     },
     "OrdinalFormal.Comparison": {
       "source": "ordinal-formalization/OrdinalFormal/Comparison.lean",
@@ -1990,7 +2382,9 @@
       "sha256": "dcad9a6f2cb12831e82efdeedab64a4004a28cb27bc777b17dd0387101962dec",
       "origin": "local",
       "original_sha256_lf": "dcad9a6f2cb12831e82efdeedab64a4004a28cb27bc777b17dd0387101962dec",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/Comparison.lean"
     },
     "OrdinalFormal.RPDDecrease": {
       "source": "ordinal-formalization/OrdinalFormal/RPDDecrease.lean",
@@ -2003,7 +2397,9 @@
       "sha256": "d0328ca0693f942120636e23265b37f837d92d1b7cdb9dbd9c15590d3493068d",
       "origin": "local",
       "original_sha256_lf": "d0328ca0693f942120636e23265b37f837d92d1b7cdb9dbd9c15590d3493068d",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/RPDDecrease.lean"
     },
     "OrdinalFormal.LRD": {
       "source": "ordinal-formalization/OrdinalFormal/LRD.lean",
@@ -2013,7 +2409,9 @@
       "sha256": "b764095b79a423319e715ffe4b503289d7a26a2d82ba955fd8162b84a6d09adc",
       "origin": "local",
       "original_sha256_lf": "b764095b79a423319e715ffe4b503289d7a26a2d82ba955fd8162b84a6d09adc",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/LRD.lean"
     },
     "OrdinalFormal.Domains": {
       "source": "ordinal-formalization/OrdinalFormal/Domains.lean",
@@ -2026,7 +2424,9 @@
       "origin": "local",
       "original_sha256_lf": "d387a8d64271353c88bf12ce734a33e4526e651c89838a00f5c466186caae499",
       "distribution": "bundled local proof source",
-      "release_change": "Removed unused obsolete notation declarations/imports; retained RPD/LRD proof terms unchanged"
+      "release_change": "Removed unused obsolete notation declarations/imports; retained RPD/LRD proof terms unchanged",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/Domains.lean"
     },
     "OrdinalFormal.RPDGeometry": {
       "source": "ordinal-formalization/OrdinalFormal/RPDGeometry.lean",
@@ -2039,7 +2439,9 @@
       "sha256": "c54d30ed0b8ef526f08bb8944daf27cd0fc10766d1081ea4009df9e94db64ae4",
       "origin": "local",
       "original_sha256_lf": "c54d30ed0b8ef526f08bb8944daf27cd0fc10766d1081ea4009df9e94db64ae4",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/RPDGeometry.lean"
     },
     "OrdinalFormal.StandardValidity": {
       "source": "ordinal-formalization/OrdinalFormal/StandardValidity.lean",
@@ -2052,7 +2454,9 @@
       "origin": "local",
       "original_sha256_lf": "ece21a4a752068a87f78733c91a13c95681976f2d1790ebb39f41354b3d41197",
       "distribution": "bundled local proof source",
-      "release_change": "Removed unused obsolete notation declarations/imports; retained RPD/LRD proof terms unchanged"
+      "release_change": "Removed unused obsolete notation declarations/imports; retained RPD/LRD proof terms unchanged",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/StandardValidity.lean"
     },
     "OrdinalFormal.RPDSortedColumns": {
       "source": "ordinal-formalization/OrdinalFormal/RPDSortedColumns.lean",
@@ -2063,7 +2467,9 @@
       "sha256": "c0a1cd1be2e6c56b66db6fe8100935120ad40be9986c2670ed96210ba2808469",
       "origin": "local",
       "original_sha256_lf": "c0a1cd1be2e6c56b66db6fe8100935120ad40be9986c2670ed96210ba2808469",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/RPDSortedColumns.lean"
     },
     "OrdinalFormal.ColumnReachability": {
       "source": "ordinal-formalization/OrdinalFormal/ColumnReachability.lean",
@@ -2074,7 +2480,9 @@
       "sha256": "b86474b20111c36b1ec8ff16c49c1f8fb780f404ba1396e09df9478fcfd88d72",
       "origin": "local",
       "original_sha256_lf": "b86474b20111c36b1ec8ff16c49c1f8fb780f404ba1396e09df9478fcfd88d72",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/ColumnReachability.lean"
     },
     "OrdinalFormal.RPDWellOrderingReduction": {
       "source": "ordinal-formalization/OrdinalFormal/RPDWellOrderingReduction.lean",
@@ -2085,7 +2493,9 @@
       "sha256": "ee108bff4fde7c6621edc43bfea9c771afe3b1756decc9ce8820ff5ce5cdc670",
       "origin": "local",
       "original_sha256_lf": "ee108bff4fde7c6621edc43bfea9c771afe3b1756decc9ce8820ff5ce5cdc670",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "RPD",
+      "file": "lean/RPD/src/OrdinalFormal/RPDWellOrderingReduction.lean"
     },
     "OrdinalFormal.RPDTermOrder": {
       "source": "ordinal-formalization/OrdinalFormal/RPDTermOrder.lean",
@@ -2095,7 +2505,9 @@
       "sha256": "741fa7d141eaf0acbd7b9f8650f8fd1841b5888e1dd2fd2aa0170c88cf4d1aff",
       "origin": "local",
       "original_sha256_lf": "741fa7d141eaf0acbd7b9f8650f8fd1841b5888e1dd2fd2aa0170c88cf4d1aff",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "RPD",
+      "file": "lean/RPD/src/OrdinalFormal/RPDTermOrder.lean"
     },
     "OrdinalFormal.GenericSortedColumns": {
       "source": "ordinal-formalization/OrdinalFormal/GenericSortedColumns.lean",
@@ -2106,7 +2518,9 @@
       "sha256": "81b7f04ceba41be7f1843ee0d281b676e53644965a49294de90bb0f3a63fdf89",
       "origin": "local",
       "original_sha256_lf": "81b7f04ceba41be7f1843ee0d281b676e53644965a49294de90bb0f3a63fdf89",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/GenericSortedColumns.lean"
     },
     "OrdinalFormal.BlockFiniteUnion": {
       "source": "ordinal-formalization/OrdinalFormal/BlockFiniteUnion.lean",
@@ -2117,7 +2531,9 @@
       "sha256": "6185c50468a36c3fb8f32defbfe3202545b739699bc2f98b2cad27fc2bc16e7d",
       "origin": "local",
       "original_sha256_lf": "6185c50468a36c3fb8f32defbfe3202545b739699bc2f98b2cad27fc2bc16e7d",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/BlockFiniteUnion.lean"
     },
     "OrdinalFormal.RPDFiniteUnion": {
       "source": "ordinal-formalization/OrdinalFormal/RPDFiniteUnion.lean",
@@ -2128,7 +2544,9 @@
       "sha256": "2b723f8267f2ef62fade6561d92253ee1a696620e8844894c7ce3fc148ae9461",
       "origin": "local",
       "original_sha256_lf": "2b723f8267f2ef62fade6561d92253ee1a696620e8844894c7ce3fc148ae9461",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/RPDFiniteUnion.lean"
     },
     "OrdinalFormal.RPDDefinitionFidelity": {
       "source": "ordinal-formalization/OrdinalFormal/RPDDefinitionFidelity.lean",
@@ -2138,7 +2556,9 @@
       "sha256": "3b24c8437687c9bc1d05512adcec5051df75ef47c8c071eeab847d476e21b91a",
       "origin": "local",
       "original_sha256_lf": "3b24c8437687c9bc1d05512adcec5051df75ef47c8c071eeab847d476e21b91a",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "RPD",
+      "file": "lean/RPD/src/OrdinalFormal/RPDDefinitionFidelity.lean"
     },
     "FiniteDemandRPDFinal": {
       "source": "ordinal-formalization/finite-demand/RPDFinal.lean",
@@ -2151,7 +2571,9 @@
       "origin": "local",
       "original_sha256_lf": "04ec15051240f4886d7255e219fabf3ab9b91a604b4a36f9dad369446dc02e33",
       "distribution": "bundled local proof source",
-      "release_change": "Comment-only clarification: paper KP proof versus object-language Lean certification"
+      "release_change": "Comment-only clarification: paper KP proof versus object-language Lean certification",
+      "owner": "RPD",
+      "file": "lean/RPD/src/FiniteDemandRPDFinal.lean"
     },
     "OrdinalRowLanguage": {
       "source": "ordinal-formalization/ordinal-row/Language.lean",
@@ -2162,7 +2584,9 @@
       "sha256": "ecf4a742a51d4c4c8abb023528d1f1f7e951a5c105c0a57c078b51b610f017e8",
       "origin": "local",
       "original_sha256_lf": "ecf4a742a51d4c4c8abb023528d1f1f7e951a5c105c0a57c078b51b610f017e8",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "LRD",
+      "file": "lean/LRD/src/OrdinalRowLanguage.lean"
     },
     "OrdinalFormal.GeneratedColumnDecrease": {
       "source": "ordinal-formalization/OrdinalFormal/GeneratedColumnDecrease.lean",
@@ -2173,7 +2597,9 @@
       "sha256": "8e6073958965c9a1cb736deb7d96bd8c27c0be8e68700ea6661e60a49e39c2f1",
       "origin": "local",
       "original_sha256_lf": "8e6073958965c9a1cb736deb7d96bd8c27c0be8e68700ea6661e60a49e39c2f1",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/GeneratedColumnDecrease.lean"
     },
     "OrdinalFormal.ColumnMap": {
       "source": "ordinal-formalization/OrdinalFormal/ColumnMap.lean",
@@ -2183,7 +2609,9 @@
       "sha256": "cff6e76f5231e6e0ca62a7d4d5aa46fc97b7d82e413991fb13b857d56c4cf66c",
       "origin": "local",
       "original_sha256_lf": "cff6e76f5231e6e0ca62a7d4d5aa46fc97b7d82e413991fb13b857d56c4cf66c",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/ColumnMap.lean"
     },
     "OrdinalFormal.LRDStructure": {
       "source": "ordinal-formalization/OrdinalFormal/LRDStructure.lean",
@@ -2194,7 +2622,9 @@
       "sha256": "7321665c35cad03db2229633dc719c1cf17385020d215c70b47ef6778d27aab9",
       "origin": "local",
       "original_sha256_lf": "7321665c35cad03db2229633dc719c1cf17385020d215c70b47ef6778d27aab9",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "LRD",
+      "file": "lean/LRD/src/OrdinalFormal/LRDStructure.lean"
     },
     "OrdinalFormal.LRDCanonical": {
       "source": "ordinal-formalization/OrdinalFormal/LRDCanonical.lean",
@@ -2205,7 +2635,9 @@
       "sha256": "089a007c8119eaa562b8cfeb0466ef04da56743895eacd62333fe688ab6f691c",
       "origin": "local",
       "original_sha256_lf": "089a007c8119eaa562b8cfeb0466ef04da56743895eacd62333fe688ab6f691c",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "LRD",
+      "file": "lean/LRD/src/OrdinalFormal/LRDCanonical.lean"
     },
     "OrdinalFormal.LRDRowDecrease": {
       "source": "ordinal-formalization/OrdinalFormal/LRDRowDecrease.lean",
@@ -2215,7 +2647,9 @@
       "sha256": "caefe3ecb4f06bb021449810c965b6da26aad923f910460dd0e0677870bed5b4",
       "origin": "local",
       "original_sha256_lf": "caefe3ecb4f06bb021449810c965b6da26aad923f910460dd0e0677870bed5b4",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "LRD",
+      "file": "lean/LRD/src/OrdinalFormal/LRDRowDecrease.lean"
     },
     "OrdinalFormal.LRDNormalLift": {
       "source": "ordinal-formalization/OrdinalFormal/LRDNormalLift.lean",
@@ -2227,7 +2661,9 @@
       "sha256": "55af5ee06e3f37040c8ba0271a37f141a57de80b75da16e97ee64a5e2388d35c",
       "origin": "local",
       "original_sha256_lf": "55af5ee06e3f37040c8ba0271a37f141a57de80b75da16e97ee64a5e2388d35c",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "LRD",
+      "file": "lean/LRD/src/OrdinalFormal/LRDNormalLift.lean"
     },
     "OrdinalFormal.LRDColumnDecrease": {
       "source": "ordinal-formalization/OrdinalFormal/LRDColumnDecrease.lean",
@@ -2239,7 +2675,9 @@
       "sha256": "0393ee3b155de2709de8dbb7ec5e2d781a6e8040246bbd00986fa657209bbaca",
       "origin": "local",
       "original_sha256_lf": "0393ee3b155de2709de8dbb7ec5e2d781a6e8040246bbd00986fa657209bbaca",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "LRD",
+      "file": "lean/LRD/src/OrdinalFormal/LRDColumnDecrease.lean"
     },
     "OrdinalFormal.LRDRowWellFounded": {
       "source": "ordinal-formalization/OrdinalFormal/LRDRowWellFounded.lean",
@@ -2249,7 +2687,9 @@
       "sha256": "8c634370911f17326c580e59ae7ad20b52b5dd094e1ba04f6b914425229ec821",
       "origin": "local",
       "original_sha256_lf": "8c634370911f17326c580e59ae7ad20b52b5dd094e1ba04f6b914425229ec821",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "LRD",
+      "file": "lean/LRD/src/OrdinalFormal/LRDRowWellFounded.lean"
     },
     "LRDOrdinalRows": {
       "source": "ordinal-formalization/ordinal-row/LRDOrdinalRows.lean",
@@ -2262,7 +2702,9 @@
       "sha256": "f392622f3bbacb357604c804235f39a3d93f3cbc625e6f81400bbb64abadd9fb",
       "origin": "local",
       "original_sha256_lf": "f392622f3bbacb357604c804235f39a3d93f3cbc625e6f81400bbb64abadd9fb",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "LRD",
+      "file": "lean/LRD/src/LRDOrdinalRows.lean"
     },
     "OrdinalFormal.LRDWellOrderingReduction": {
       "source": "ordinal-formalization/OrdinalFormal/LRDWellOrderingReduction.lean",
@@ -2273,7 +2715,9 @@
       "sha256": "434f91af340838a73b06154af61bb89c1a85022219a466fb4de3e85621e5fae6",
       "origin": "local",
       "original_sha256_lf": "434f91af340838a73b06154af61bb89c1a85022219a466fb4de3e85621e5fae6",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "LRD",
+      "file": "lean/LRD/src/OrdinalFormal/LRDWellOrderingReduction.lean"
     },
     "FiniteDemandLRDFinal": {
       "source": "ordinal-formalization/finite-demand/LRDFinal.lean",
@@ -2286,7 +2730,9 @@
       "origin": "local",
       "original_sha256_lf": "1b8843d8a2a88d88b4df26863d565c20716a27564052363fca4a75adfc100c1c",
       "distribution": "bundled local proof source",
-      "release_change": "Comment-only clarification: paper KP proof versus object-language Lean certification"
+      "release_change": "Comment-only clarification: paper KP proof versus object-language Lean certification",
+      "owner": "LRD",
+      "file": "lean/LRD/src/FiniteDemandLRDFinal.lean"
     },
     "OrdinalFormal.OmegaLRD3": {
       "source": "ordinal-formalization/OrdinalFormal/OmegaLRD3.lean",
@@ -2296,7 +2742,9 @@
       "sha256": "7721432dd1efd67d77ab23ab4337f8c908c93f8666c55de1215f4f4814926238",
       "origin": "local",
       "original_sha256_lf": "7721432dd1efd67d77ab23ab4337f8c908c93f8666c55de1215f4f4814926238",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "Omega-LRD3",
+      "file": "lean/Omega-LRD3/src/OrdinalFormal/OmegaLRD3.lean"
     },
     "OrdinalFormal.Omega3Structure": {
       "source": "ordinal-formalization/OrdinalFormal/Omega3Structure.lean",
@@ -2306,7 +2754,9 @@
       "sha256": "adf5157f5c55ab9b3bb2ada401910fc08d47dbbcfa88982a6d8ebce52ab62d37",
       "origin": "local",
       "original_sha256_lf": "adf5157f5c55ab9b3bb2ada401910fc08d47dbbcfa88982a6d8ebce52ab62d37",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "Omega-LRD3",
+      "file": "lean/Omega-LRD3/src/OrdinalFormal/Omega3Structure.lean"
     },
     "OrdinalFormal.Omega3Comparison": {
       "source": "ordinal-formalization/OrdinalFormal/Omega3Comparison.lean",
@@ -2318,7 +2768,9 @@
       "sha256": "42db79c7805c9523dd0d21def1a6a53f7a8428b3d0db32f3a356f778ae2e001b",
       "origin": "local",
       "original_sha256_lf": "42db79c7805c9523dd0d21def1a6a53f7a8428b3d0db32f3a356f778ae2e001b",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "Omega-LRD3",
+      "file": "lean/Omega-LRD3/src/OrdinalFormal/Omega3Comparison.lean"
     },
     "OrdinalFormal.Omega3Domains": {
       "source": "ordinal-formalization/OrdinalFormal/Omega3Domains.lean",
@@ -2329,7 +2781,9 @@
       "sha256": "f842709ab4d4c2c40d1c39d47a6564592f693ee64e9fb161a07fcc7292f66f8f",
       "origin": "local",
       "original_sha256_lf": "f842709ab4d4c2c40d1c39d47a6564592f693ee64e9fb161a07fcc7292f66f8f",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "Omega-LRD3",
+      "file": "lean/Omega-LRD3/src/OrdinalFormal/Omega3Domains.lean"
     },
     "OrdinalFormal.RowInvariant": {
       "source": "ordinal-formalization/OrdinalFormal/RowInvariant.lean",
@@ -2339,7 +2793,9 @@
       "sha256": "b6fbb20ed7407ac41584f3ab18db17af4680aa432940e5ed00f7968c4bf63365",
       "origin": "local",
       "original_sha256_lf": "b6fbb20ed7407ac41584f3ab18db17af4680aa432940e5ed00f7968c4bf63365",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "Omega-LRD3",
+      "file": "lean/Omega-LRD3/src/OrdinalFormal/RowInvariant.lean"
     },
     "OrdinalFormal.Omega3RowDomain": {
       "source": "ordinal-formalization/OrdinalFormal/Omega3RowDomain.lean",
@@ -2351,7 +2807,9 @@
       "sha256": "2df74bbc5d7354a498ebc261a359a32bcd0e74b883c9983b400e1c082e90c608",
       "origin": "local",
       "original_sha256_lf": "2df74bbc5d7354a498ebc261a359a32bcd0e74b883c9983b400e1c082e90c608",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "Omega-LRD3",
+      "file": "lean/Omega-LRD3/src/OrdinalFormal/Omega3RowDomain.lean"
     },
     "OrdinalFormal.Omega3Validity": {
       "source": "ordinal-formalization/OrdinalFormal/Omega3Validity.lean",
@@ -2362,7 +2820,9 @@
       "sha256": "f710f1d3e62a6b14c78b2b8cf57e3c9e1ee9e70d3dbda42a99d5aeeded4dc088",
       "origin": "local",
       "original_sha256_lf": "f710f1d3e62a6b14c78b2b8cf57e3c9e1ee9e70d3dbda42a99d5aeeded4dc088",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "Omega-LRD3",
+      "file": "lean/Omega-LRD3/src/OrdinalFormal/Omega3Validity.lean"
     },
     "OrdinalFormal.Omega3ColumnDecrease": {
       "source": "ordinal-formalization/OrdinalFormal/Omega3ColumnDecrease.lean",
@@ -2375,7 +2835,9 @@
       "sha256": "296024ca272a84bb215d0bc3843dfc226c7148382efc90e4b5ae99d366f17a6e",
       "origin": "local",
       "original_sha256_lf": "296024ca272a84bb215d0bc3843dfc226c7148382efc90e4b5ae99d366f17a6e",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "Omega-LRD3",
+      "file": "lean/Omega-LRD3/src/OrdinalFormal/Omega3ColumnDecrease.lean"
     },
     "OrdinalFormal.Omega3WellOrderingReduction": {
       "source": "ordinal-formalization/OrdinalFormal/Omega3WellOrderingReduction.lean",
@@ -2386,7 +2848,9 @@
       "sha256": "e1a1f421319710de44c191588082b644f18b1f84a5b2f85598d222c66fcb3723",
       "origin": "local",
       "original_sha256_lf": "e1a1f421319710de44c191588082b644f18b1f84a5b2f85598d222c66fcb3723",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "Omega-LRD3",
+      "file": "lean/Omega-LRD3/src/OrdinalFormal/Omega3WellOrderingReduction.lean"
     },
     "OrdinalFormal.FiniteUnionWellFounded": {
       "source": "ordinal-formalization/OrdinalFormal/FiniteUnionWellFounded.lean",
@@ -2396,7 +2860,9 @@
       "sha256": "46273eee11cb7f9698b7d61b7aa42c2f104174d864fd76ae8f2fa198d0efa0c9",
       "origin": "local",
       "original_sha256_lf": "46273eee11cb7f9698b7d61b7aa42c2f104174d864fd76ae8f2fa198d0efa0c9",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "Omega-LRD3",
+      "file": "lean/Omega-LRD3/src/OrdinalFormal/FiniteUnionWellFounded.lean"
     },
     "OrdinalFormal.Omega3RowPool": {
       "source": "ordinal-formalization/OrdinalFormal/Omega3RowPool.lean",
@@ -2407,7 +2873,9 @@
       "sha256": "1b4b63ee9fb2359721a518d4584cfe75e7b110011cf42d86e1fd484cb197c135",
       "origin": "local",
       "original_sha256_lf": "1b4b63ee9fb2359721a518d4584cfe75e7b110011cf42d86e1fd484cb197c135",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "Omega-LRD3",
+      "file": "lean/Omega-LRD3/src/OrdinalFormal/Omega3RowPool.lean"
     },
     "OrdinalFormal.Omega3Countable": {
       "source": "ordinal-formalization/OrdinalFormal/Omega3Countable.lean",
@@ -2419,7 +2887,9 @@
       "sha256": "1800a0bac3aa2d46167317323f9a993f72bfbf015b70f11adb216d550984d9d4",
       "origin": "local",
       "original_sha256_lf": "1800a0bac3aa2d46167317323f9a993f72bfbf015b70f11adb216d550984d9d4",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "Omega-LRD3",
+      "file": "lean/Omega-LRD3/src/OrdinalFormal/Omega3Countable.lean"
     },
     "OmegaLRD3Final": {
       "source": "ordinal-formalization/omega3-audit/Final.lean",
@@ -2431,7 +2901,9 @@
       "sha256": "b96c90220c99c680179b9c0cc861a9427be091f9381746c873be5e318e4c72be",
       "origin": "local",
       "original_sha256_lf": "b96c90220c99c680179b9c0cc861a9427be091f9381746c873be5e318e4c72be",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "Omega-LRD3",
+      "file": "lean/Omega-LRD3/src/OmegaLRD3Final.lean"
     },
     "FourNotationFinalAudit": {
       "source": "ordinal-formalization/omega3-audit/FourFinal.lean",
@@ -2444,7 +2916,9 @@
       "sha256": "36bcab5c3bcc0164caa1baf39146661cfbf4427db645411da000fd504c270d28",
       "origin": "local",
       "original_sha256_lf": "36bcab5c3bcc0164caa1baf39146661cfbf4427db645411da000fd504c270d28",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "aggregate",
+      "file": "lean/src/FourNotationFinalAudit.lean"
     },
     "ARDClosedSupply": {
       "source": "ordinal-formalization/ard/ClosedSupply.lean",
@@ -2456,7 +2930,9 @@
       "sha256": "3f2a0aa1b3d765cd3e514ec66838c44fe3ad91827361a6049b0c089a8e3f7f96",
       "origin": "local",
       "original_sha256_lf": "3f2a0aa1b3d765cd3e514ec66838c44fe3ad91827361a6049b0c089a8e3f7f96",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDClosedSupply.lean"
     },
     "ARDCompression": {
       "source": "ordinal-formalization/ard/Compression.lean",
@@ -2467,7 +2943,9 @@
       "sha256": "e0f154289dd6fe77bf8810e2acbec6ef6180499ce740c91e99d0bcb4b670166d",
       "origin": "local",
       "original_sha256_lf": "e0f154289dd6fe77bf8810e2acbec6ef6180499ce740c91e99d0bcb4b670166d",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDCompression.lean"
     },
     "ARDCore": {
       "source": "ordinal-formalization/ard/Core.lean",
@@ -2478,7 +2956,9 @@
       "sha256": "3f9ae03ce71d3e96a6eedcda306baff5fc1ce56cd8afc7e4f5e13458440cfb03",
       "origin": "local",
       "original_sha256_lf": "3f9ae03ce71d3e96a6eedcda306baff5fc1ce56cd8afc7e4f5e13458440cfb03",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDCore.lean"
     },
     "ARDDecrease": {
       "source": "ordinal-formalization/ard/Decrease.lean",
@@ -2489,7 +2969,9 @@
       "sha256": "1866ea23f9d56536b972ee5b123a09bc611adc48d7c2ab98dbcd7098d32c6f45",
       "origin": "local",
       "original_sha256_lf": "1866ea23f9d56536b972ee5b123a09bc611adc48d7c2ab98dbcd7098d32c6f45",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDDecrease.lean"
     },
     "ARDDefinitionFidelity": {
       "source": "ordinal-formalization/ard/DefinitionFidelity.lean",
@@ -2501,7 +2983,9 @@
       "sha256": "fcf1ffe7a6562d392a41d52344798bd7b97e67d79de363a2cd8d9365419c436c",
       "origin": "local",
       "original_sha256_lf": "fcf1ffe7a6562d392a41d52344798bd7b97e67d79de363a2cd8d9365419c436c",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDDefinitionFidelity.lean"
     },
     "ARDDemandCore": {
       "source": "ordinal-formalization/ard/DemandCore.lean",
@@ -2513,7 +2997,9 @@
       "sha256": "10b3eec9cbd566906d4c4712d04dd9729a97dd0592e803350e11cce210861992",
       "origin": "local",
       "original_sha256_lf": "10b3eec9cbd566906d4c4712d04dd9729a97dd0592e803350e11cce210861992",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDDemandCore.lean"
     },
     "ARDDemandRecursion": {
       "source": "ordinal-formalization/ard/DemandRecursion.lean",
@@ -2523,7 +3009,9 @@
       "sha256": "3200b14bf551b60a0021f798cf6a2f94b70c8655ccc7c28c5dbb9382be591cc9",
       "origin": "local",
       "original_sha256_lf": "3200b14bf551b60a0021f798cf6a2f94b70c8655ccc7c28c5dbb9382be591cc9",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDDemandRecursion.lean"
     },
     "ARDDemandReflection": {
       "source": "ordinal-formalization/ard/DemandReflection.lean",
@@ -2533,7 +3021,9 @@
       "sha256": "3ffaf679c712fc8abc29399b7319c4302e81571f1a97b7a2a96dd25957708061",
       "origin": "local",
       "original_sha256_lf": "3ffaf679c712fc8abc29399b7319c4302e81571f1a97b7a2a96dd25957708061",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDDemandReflection.lean"
     },
     "ARDDomain": {
       "source": "ordinal-formalization/ard/Domain.lean",
@@ -2545,7 +3035,9 @@
       "sha256": "4ed2df0c0f87ee79f0149893e53228f540d05a0eb73d533078b463f5c992c4c6",
       "origin": "local",
       "original_sha256_lf": "4ed2df0c0f87ee79f0149893e53228f540d05a0eb73d533078b463f5c992c4c6",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDDomain.lean"
     },
     "ARDEndpointAgreement": {
       "source": "ordinal-formalization/ard/EndpointAgreement.lean",
@@ -2555,7 +3047,9 @@
       "sha256": "a9033a9440b22fb81eeaa51782ef4f8c7d4b4065724be3568252e6a627859349",
       "origin": "local",
       "original_sha256_lf": "a9033a9440b22fb81eeaa51782ef4f8c7d4b4065724be3568252e6a627859349",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDEndpointAgreement.lean"
     },
     "ARDFinal": {
       "source": "ordinal-formalization/ard/Final.lean",
@@ -2569,7 +3063,9 @@
       "sha256": "fd1d9760859c015d014dd58ef8cf65128a54be27586cfe1073d62f9554db8dee",
       "origin": "local",
       "original_sha256_lf": "fd1d9760859c015d014dd58ef8cf65128a54be27586cfe1073d62f9554db8dee",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDFinal.lean"
     },
     "ARDFiniteUnion": {
       "source": "ordinal-formalization/ard/FiniteUnion.lean",
@@ -2580,7 +3076,9 @@
       "sha256": "1188d5306e5a0fb56a9fd32c84a7d2ab34d236e874cbc318139206213ae0b841",
       "origin": "local",
       "original_sha256_lf": "1188d5306e5a0fb56a9fd32c84a7d2ab34d236e874cbc318139206213ae0b841",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDFiniteUnion.lean"
     },
     "FiveNotationFinalAudit": {
       "source": "ordinal-formalization/ard/FiveFinal.lean",
@@ -2592,7 +3090,9 @@
       "sha256": "228db08be080c81a63141300fff586394e1ef1e41ae132e36b84c1e558b02f7d",
       "origin": "local",
       "original_sha256_lf": "228db08be080c81a63141300fff586394e1ef1e41ae132e36b84c1e558b02f7d",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "aggregate",
+      "file": "lean/src/FiveNotationFinalAudit.lean"
     },
     "ARDInitialRepresentation": {
       "source": "ordinal-formalization/ard/InitialRepresentation.lean",
@@ -2603,7 +3103,9 @@
       "sha256": "33ed1e727e7b7b0a349c5b15d90096a80d245517f5834d105909108fb5fe77ca",
       "origin": "local",
       "original_sha256_lf": "33ed1e727e7b7b0a349c5b15d90096a80d245517f5834d105909108fb5fe77ca",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDInitialRepresentation.lean"
     },
     "ARDOrderReduction": {
       "source": "ordinal-formalization/ard/OrderReduction.lean",
@@ -2614,7 +3116,9 @@
       "sha256": "2b239108687049d2c8f9ce235bd2a32f7bfc790f99844a18670f31a1768f6148",
       "origin": "local",
       "original_sha256_lf": "2b239108687049d2c8f9ce235bd2a32f7bfc790f99844a18670f31a1768f6148",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDOrderReduction.lean"
     },
     "ARDPrefixOrder": {
       "source": "ordinal-formalization/ard/PrefixOrder.lean",
@@ -2624,7 +3128,9 @@
       "sha256": "ae74262f12311fa3e0580f0e7bb43a0ae66bc91d297ac7e222d5a30764fb06f1",
       "origin": "local",
       "original_sha256_lf": "ae74262f12311fa3e0580f0e7bb43a0ae66bc91d297ac7e222d5a30764fb06f1",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "shared",
+      "file": "lean/shared/src/ARDPrefixOrder.lean"
     },
     "ARDSemanticWellFounded": {
       "source": "ordinal-formalization/ard/SemanticWellFounded.lean",
@@ -2634,7 +3140,9 @@
       "sha256": "46e9984569ca08016f38d812fcf1a1b0712e68679f05de7d96eb55c6d4e765a0",
       "origin": "local",
       "original_sha256_lf": "46e9984569ca08016f38d812fcf1a1b0712e68679f05de7d96eb55c6d4e765a0",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDSemanticWellFounded.lean"
     },
     "ARDSplice": {
       "source": "ordinal-formalization/ard/Splice.lean",
@@ -2644,7 +3152,9 @@
       "sha256": "86b168b99cd4ec23e93fe9840a3a3f63a202d5393bd4ddadf505d9f5fb1e9695",
       "origin": "local",
       "original_sha256_lf": "86b168b99cd4ec23e93fe9840a3a3f63a202d5393bd4ddadf505d9f5fb1e9695",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDSplice.lean"
     },
     "ARDStageDemands": {
       "source": "ordinal-formalization/ard/StageDemands.lean",
@@ -2655,7 +3165,9 @@
       "sha256": "0455c69028cf6145be4b93cedd3998f4161a1f9e344e184a5092e60e8b17c410",
       "origin": "local",
       "original_sha256_lf": "0455c69028cf6145be4b93cedd3998f4161a1f9e344e184a5092e60e8b17c410",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDStageDemands.lean"
     },
     "ARDStageProof": {
       "source": "ordinal-formalization/ard/StageProof.lean",
@@ -2665,7 +3177,9 @@
       "sha256": "1860c9c5db048413ec15d590f5baecb75c6cad76a98523f6ecfad900178a630a",
       "origin": "local",
       "original_sha256_lf": "1860c9c5db048413ec15d590f5baecb75c6cad76a98523f6ecfad900178a630a",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDStageProof.lean"
     },
     "ARDStructure": {
       "source": "ordinal-formalization/ard/Structure.lean",
@@ -2676,7 +3190,9 @@
       "sha256": "981bb69289f505c85a60a20174d415db3d49aad0cb717009c05f57a9eec60d7c",
       "origin": "local",
       "original_sha256_lf": "981bb69289f505c85a60a20174d415db3d49aad0cb717009c05f57a9eec60d7c",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDStructure.lean"
     },
     "ARDWitnesses": {
       "source": "ordinal-formalization/ard/Witnesses.lean",
@@ -2690,7 +3206,9 @@
       "origin": "local",
       "original_sha256_lf": "2a8e914dbb7ea3bf7697e5da48afba649a18541f6ed03d1bcda13ba6f0e33e3e",
       "distribution": "bundled local proof source",
-      "release_change": "One redundant trailing blank line removed; proof source otherwise unchanged."
+      "release_change": "One redundant trailing blank line removed; proof source otherwise unchanged.",
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDWitnesses.lean"
     },
     "IPDClosedSupply": {
       "source": "ordinal-formalization/ipd/ClosedSupply.lean",
@@ -2702,7 +3220,9 @@
       "sha256": "87b75ed7716ac12d9d5e0446309cdb35097ec03249ad9dc60746992b2f0e798b",
       "origin": "local",
       "original_sha256_lf": "87b75ed7716ac12d9d5e0446309cdb35097ec03249ad9dc60746992b2f0e798b",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDClosedSupply.lean"
     },
     "IPDColumnOrder": {
       "source": "ordinal-formalization/ipd/ColumnOrder.lean",
@@ -2712,7 +3232,9 @@
       "sha256": "777f2503ee7ce2eb1612aec6ea2d5cd469d9737c08cd402a6e4dbd97b564bce8",
       "origin": "local",
       "original_sha256_lf": "777f2503ee7ce2eb1612aec6ea2d5cd469d9737c08cd402a6e4dbd97b564bce8",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDColumnOrder.lean"
     },
     "IPDDecrease": {
       "source": "ordinal-formalization/ipd/Decrease.lean",
@@ -2723,7 +3245,9 @@
       "sha256": "f5274037c0897f76eddd0181fe67bb5ce014c9c3b7874f74b4ee7d6c2d15d576",
       "origin": "local",
       "original_sha256_lf": "f5274037c0897f76eddd0181fe67bb5ce014c9c3b7874f74b4ee7d6c2d15d576",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDDecrease.lean"
     },
     "IPDDemandCore": {
       "source": "ordinal-formalization/ipd/DemandCore.lean",
@@ -2735,7 +3259,9 @@
       "sha256": "d72160757f920923287b1fb6441b42a5d84f6e1e5c900b2e667f873d215051a2",
       "origin": "local",
       "original_sha256_lf": "d72160757f920923287b1fb6441b42a5d84f6e1e5c900b2e667f873d215051a2",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDDemandCore.lean"
     },
     "IPDDemandRecursion": {
       "source": "ordinal-formalization/ipd/DemandRecursion.lean",
@@ -2745,7 +3271,9 @@
       "sha256": "2ee79da927b4c5edf53972bceb40e894323f503a90cfd131177c39e2f33c419d",
       "origin": "local",
       "original_sha256_lf": "2ee79da927b4c5edf53972bceb40e894323f503a90cfd131177c39e2f33c419d",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDDemandRecursion.lean"
     },
     "IPDEndpointAgreement": {
       "source": "ordinal-formalization/ipd/EndpointAgreement.lean",
@@ -2755,7 +3283,9 @@
       "sha256": "bf85784026031532d22f643c3c859ebdd48ce27fe6d3dc4d6ab4dfd43a61c21d",
       "origin": "local",
       "original_sha256_lf": "bf85784026031532d22f643c3c859ebdd48ce27fe6d3dc4d6ab4dfd43a61c21d",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDEndpointAgreement.lean"
     },
     "IPDFiniteLabels": {
       "source": "ordinal-formalization/ipd/FiniteLabels.lean",
@@ -2765,7 +3295,9 @@
       "sha256": "2e92215983046a2072861a3cfeaaaf242ed4de946cc0eb796391b170e3fe3e98",
       "origin": "local",
       "original_sha256_lf": "2e92215983046a2072861a3cfeaaaf242ed4de946cc0eb796391b170e3fe3e98",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDFiniteLabels.lean"
     },
     "IPDGraphController": {
       "source": "ordinal-formalization/ipd/GraphController.lean",
@@ -2775,7 +3307,9 @@
       "sha256": "57f6b5894be77642dc3797cdd315692b40188552d994e32a6a9485a6ff76dabe",
       "origin": "local",
       "original_sha256_lf": "57f6b5894be77642dc3797cdd315692b40188552d994e32a6a9485a6ff76dabe",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDGraphController.lean"
     },
     "IPDGraphCore": {
       "source": "ordinal-formalization/ipd/GraphCore.lean",
@@ -2786,7 +3320,9 @@
       "sha256": "7d4b0582bb7b21640bf3c9fea1f0bda37748ee26179bee872b6159b855dd0ae0",
       "origin": "local",
       "original_sha256_lf": "7d4b0582bb7b21640bf3c9fea1f0bda37748ee26179bee872b6159b855dd0ae0",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDGraphCore.lean"
     },
     "IPDGraphGeometry": {
       "source": "ordinal-formalization/ipd/GraphGeometry.lean",
@@ -2797,7 +3333,9 @@
       "sha256": "1c26618aab6a18a036e909b5fee30c439475c22dc8baabb543870eb57134e0e3",
       "origin": "local",
       "original_sha256_lf": "1c26618aab6a18a036e909b5fee30c439475c22dc8baabb543870eb57134e0e3",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDGraphGeometry.lean"
     },
     "IPDGraphNormalization": {
       "source": "ordinal-formalization/ipd/GraphNormalization.lean",
@@ -2807,7 +3345,9 @@
       "sha256": "155639b0caca5ee0d3d38e27e0b95f10756923a2df3be680598311aef5174d4c",
       "origin": "local",
       "original_sha256_lf": "155639b0caca5ee0d3d38e27e0b95f10756923a2df3be680598311aef5174d4c",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDGraphNormalization.lean"
     },
     "IPDGraphValidity": {
       "source": "ordinal-formalization/ipd/GraphValidity.lean",
@@ -2818,7 +3358,9 @@
       "sha256": "647a17c7fc2f3d10c8524afc54d833d7108ba7537d60fa727e1fc8a80bd8c416",
       "origin": "local",
       "original_sha256_lf": "647a17c7fc2f3d10c8524afc54d833d7108ba7537d60fa727e1fc8a80bd8c416",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDGraphValidity.lean"
     },
     "IPDInitialRepresentation": {
       "source": "ordinal-formalization/ipd/InitialRepresentation.lean",
@@ -2830,7 +3372,9 @@
       "sha256": "e56d0b593d2c92cac85e3896484e69394f5595562844078510c41ad64e0ffe7e",
       "origin": "local",
       "original_sha256_lf": "e56d0b593d2c92cac85e3896484e69394f5595562844078510c41ad64e0ffe7e",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDInitialRepresentation.lean"
     },
     "IPDProfileAtoms": {
       "source": "ordinal-formalization/ipd/ProfileAtoms.lean",
@@ -2841,7 +3385,9 @@
       "sha256": "2a5336185bc3740ed7b64bd3285108345dc300e9ab73b70e61697864dfa6ef56",
       "origin": "local",
       "original_sha256_lf": "2a5336185bc3740ed7b64bd3285108345dc300e9ab73b70e61697864dfa6ef56",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDProfileAtoms.lean"
     },
     "IPDProfileCountable": {
       "source": "ordinal-formalization/ipd/ProfileCountable.lean",
@@ -2854,7 +3400,9 @@
       "sha256": "cbbc9d8a5cae0f67199c8c779cbe5dc68fce27860793a1170e1bd8b935cad62b",
       "origin": "local",
       "original_sha256_lf": "cbbc9d8a5cae0f67199c8c779cbe5dc68fce27860793a1170e1bd8b935cad62b",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDProfileCountable.lean"
     },
     "IPDProfileIdentity": {
       "source": "ordinal-formalization/ipd/ProfileIdentity.lean",
@@ -2865,7 +3413,9 @@
       "sha256": "cafc6fe1f015c148994eff7ae388c96f239f152dcba7bc6ff09c9532667131de",
       "origin": "local",
       "original_sha256_lf": "cafc6fe1f015c148994eff7ae388c96f239f152dcba7bc6ff09c9532667131de",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDProfileIdentity.lean"
     },
     "IPDProfileLower": {
       "source": "ordinal-formalization/ipd/ProfileLower.lean",
@@ -2876,7 +3426,9 @@
       "sha256": "4dc318bda62e890d1fafe11bbe23b607e4e6a8deef051513015b5b5adbc9cbb9",
       "origin": "local",
       "original_sha256_lf": "4dc318bda62e890d1fafe11bbe23b607e4e6a8deef051513015b5b5adbc9cbb9",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDProfileLower.lean"
     },
     "IPDProfileOrder": {
       "source": "ordinal-formalization/ipd/ProfileOrder.lean",
@@ -2887,7 +3439,9 @@
       "sha256": "8ae3097cc388192efa6d85f69b8ea0b5c87f21af8fc35b07b0af8690da2ad92f",
       "origin": "local",
       "original_sha256_lf": "8ae3097cc388192efa6d85f69b8ea0b5c87f21af8fc35b07b0af8690da2ad92f",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDProfileOrder.lean"
     },
     "IPDProfileRename": {
       "source": "ordinal-formalization/ipd/ProfileRename.lean",
@@ -2897,7 +3451,9 @@
       "sha256": "27a85a9305e50836833407016630c19d71cee65c0503510b98af66e0a946d912",
       "origin": "local",
       "original_sha256_lf": "27a85a9305e50836833407016630c19d71cee65c0503510b98af66e0a946d912",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDProfileRename.lean"
     },
     "IPDProfileSubstitution": {
       "source": "ordinal-formalization/ipd/ProfileSubstitution.lean",
@@ -2907,7 +3463,9 @@
       "sha256": "0e73e2f0a2c88ef56b43bb5da7cebff9444e3277a3d271f46463f87df8d81112",
       "origin": "local",
       "original_sha256_lf": "0e73e2f0a2c88ef56b43bb5da7cebff9444e3277a3d271f46463f87df8d81112",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDProfileSubstitution.lean"
     },
     "IPDProfileValidity": {
       "source": "ordinal-formalization/ipd/ProfileValidity.lean",
@@ -2919,7 +3477,9 @@
       "sha256": "ab3a245fa19d506610221fd078be134740afcf1dd5ff007427c4dcd850c467b8",
       "origin": "local",
       "original_sha256_lf": "ab3a245fa19d506610221fd078be134740afcf1dd5ff007427c4dcd850c467b8",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDProfileValidity.lean"
     },
     "IPDSeeds": {
       "source": "ordinal-formalization/ipd/Seeds.lean",
@@ -2929,7 +3489,9 @@
       "sha256": "433144d13d5f61b7c66413a78b6631bcd6807bcad0359044f4a61a3641c78177",
       "origin": "local",
       "original_sha256_lf": "433144d13d5f61b7c66413a78b6631bcd6807bcad0359044f4a61a3641c78177",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDSeeds.lean"
     },
     "IPDSemanticEdges": {
       "source": "ordinal-formalization/ipd/SemanticEdges.lean",
@@ -2940,7 +3502,9 @@
       "sha256": "f9f23b9c122e8b21c1cffded80c444925bea98840cebdc3438ba90c97f6f2a87",
       "origin": "local",
       "original_sha256_lf": "f9f23b9c122e8b21c1cffded80c444925bea98840cebdc3438ba90c97f6f2a87",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDSemanticEdges.lean"
     },
     "IPDSemanticWellFounded": {
       "source": "ordinal-formalization/ipd/SemanticWellFounded.lean",
@@ -2952,7 +3516,9 @@
       "sha256": "c591279909400d6777a234cb945e10a48e1dcfad45205d547679ac51fafbd1c2",
       "origin": "local",
       "original_sha256_lf": "c591279909400d6777a234cb945e10a48e1dcfad45205d547679ac51fafbd1c2",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDSemanticWellFounded.lean"
     },
     "IPDSpliceLabels": {
       "source": "ordinal-formalization/ipd/SpliceLabels.lean",
@@ -2963,7 +3529,9 @@
       "sha256": "958e5219ea1c8a9787519dcb1c6464612d0eb1887758f2411d7b719c56c5570b",
       "origin": "local",
       "original_sha256_lf": "958e5219ea1c8a9787519dcb1c6464612d0eb1887758f2411d7b719c56c5570b",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDSpliceLabels.lean"
     },
     "IPDStageFacts": {
       "source": "ordinal-formalization/ipd/StageFacts.lean",
@@ -2974,7 +3542,9 @@
       "sha256": "90ce9ef191c70ac27d3f171ca4edb26834a5571e8c8255ea7263e80e8f5144f9",
       "origin": "local",
       "original_sha256_lf": "90ce9ef191c70ac27d3f171ca4edb26834a5571e8c8255ea7263e80e8f5144f9",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDStageFacts.lean"
     },
     "IPDStageSplice": {
       "source": "ordinal-formalization/ipd/StageSplice.lean",
@@ -2984,7 +3554,9 @@
       "sha256": "457280c5f1c96d0be044a96066d10a28a8433d6984be14b31a8631b2b6c0ff1a",
       "origin": "local",
       "original_sha256_lf": "457280c5f1c96d0be044a96066d10a28a8433d6984be14b31a8631b2b6c0ff1a",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDStageSplice.lean"
     },
     "IPDStandardOrder": {
       "source": "ordinal-formalization/ipd/StandardOrder.lean",
@@ -2997,7 +3569,9 @@
       "sha256": "bc660f88bac50512d40698f53b22f9c191b1248a2e89ff130c3a763883782edc",
       "origin": "local",
       "original_sha256_lf": "bc660f88bac50512d40698f53b22f9c191b1248a2e89ff130c3a763883782edc",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDStandardOrder.lean"
     },
     "IPDTemplates": {
       "source": "ordinal-formalization/ipd/Templates.lean",
@@ -3008,7 +3582,9 @@
       "sha256": "c456f111a9b5031c7b48c956fbc1698ca351e6a47451ce6326d990eb275e2e04",
       "origin": "local",
       "original_sha256_lf": "c456f111a9b5031c7b48c956fbc1698ca351e6a47451ce6326d990eb275e2e04",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDTemplates.lean"
     },
     "IPDTree": {
       "source": "ordinal-formalization/ipd/Tree.lean",
@@ -3018,7 +3594,9 @@
       "sha256": "84631c449366013bad5a45eae2888e32a82d4ca495f696cc6bbbf9349bca65e3",
       "origin": "local",
       "original_sha256_lf": "84631c449366013bad5a45eae2888e32a82d4ca495f696cc6bbbf9349bca65e3",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDTree.lean"
     },
     "IPDTreeCompare": {
       "source": "ordinal-formalization/ipd/TreeCompare.lean",
@@ -3029,7 +3607,9 @@
       "sha256": "b0ae66b5070812e39d34a2878ab13a7aa4c8d2a94d224116f0d6509a5fa31e29",
       "origin": "local",
       "original_sha256_lf": "b0ae66b5070812e39d34a2878ab13a7aa4c8d2a94d224116f0d6509a5fa31e29",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDTreeCompare.lean"
     },
     "IPDTreeLinearOrder": {
       "source": "ordinal-formalization/ipd/TreeLinearOrder.lean",
@@ -3040,7 +3620,9 @@
       "sha256": "0ce025c8191c18cca149ba66b09e45f4b213ba5e603719695ad4ff9e7efc89fb",
       "origin": "local",
       "original_sha256_lf": "0ce025c8191c18cca149ba66b09e45f4b213ba5e603719695ad4ff9e7efc89fb",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDTreeLinearOrder.lean"
     },
     "IPDTreeLocalRename": {
       "source": "ordinal-formalization/ipd/TreeLocalRename.lean",
@@ -3050,7 +3632,9 @@
       "sha256": "71ecfc9b3a18a1310143613ceb565a3c02e95d102b7b3a63caf9fbb868f47630",
       "origin": "local",
       "original_sha256_lf": "71ecfc9b3a18a1310143613ceb565a3c02e95d102b7b3a63caf9fbb868f47630",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDTreeLocalRename.lean"
     },
     "IPDTreeLower": {
       "source": "ordinal-formalization/ipd/TreeLower.lean",
@@ -3060,7 +3644,9 @@
       "sha256": "0d3e0cb50d14114d944d393256bc166ca991b68b37e7140db2982d0044b99cd3",
       "origin": "local",
       "original_sha256_lf": "0d3e0cb50d14114d944d393256bc166ca991b68b37e7140db2982d0044b99cd3",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDTreeLower.lean"
     },
     "IPDTreeLowerClosure": {
       "source": "ordinal-formalization/ipd/TreeLowerClosure.lean",
@@ -3070,7 +3656,9 @@
       "sha256": "78c7b3cce604291b339bfd957467f318e3d07399ed7bb7d8e5767b84d011a27f",
       "origin": "local",
       "original_sha256_lf": "78c7b3cce604291b339bfd957467f318e3d07399ed7bb7d8e5767b84d011a27f",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDTreeLowerClosure.lean"
     },
     "IPDTreeOrder": {
       "source": "ordinal-formalization/ipd/TreeOrder.lean",
@@ -3080,7 +3668,9 @@
       "sha256": "c2643b4c9fc45b3202b581b10ae0c5cf67d8a2879de2111cedd3384bf86defa5",
       "origin": "local",
       "original_sha256_lf": "c2643b4c9fc45b3202b581b10ae0c5cf67d8a2879de2111cedd3384bf86defa5",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDTreeOrder.lean"
     },
     "IPDTreeRename": {
       "source": "ordinal-formalization/ipd/TreeRename.lean",
@@ -3090,7 +3680,9 @@
       "sha256": "a8c58d4b9ad6e18036e8f65dba0cc3d7b18dc2aa4c947b0327dfba9a2dce0e23",
       "origin": "local",
       "original_sha256_lf": "a8c58d4b9ad6e18036e8f65dba0cc3d7b18dc2aa4c947b0327dfba9a2dce0e23",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDTreeRename.lean"
     },
     "IPDTreeSupport": {
       "source": "ordinal-formalization/ipd/TreeSupport.lean",
@@ -3101,7 +3693,9 @@
       "sha256": "e9d74010a322eb7dec0b12e14c98b205c72bdb9e9653e38bd20c1f1703077b55",
       "origin": "local",
       "original_sha256_lf": "e9d74010a322eb7dec0b12e14c98b205c72bdb9e9653e38bd20c1f1703077b55",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDTreeSupport.lean"
     },
     "IPDTreeWellFounded": {
       "source": "ordinal-formalization/ipd/TreeWellFounded.lean",
@@ -3111,7 +3705,9 @@
       "sha256": "c5d0dd0e89349443fb015e0ddbfe3a4372d15e9021784af27763272f02b2fb7d",
       "origin": "local",
       "original_sha256_lf": "c5d0dd0e89349443fb015e0ddbfe3a4372d15e9021784af27763272f02b2fb7d",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDTreeWellFounded.lean"
     },
     "IPDWitnesses": {
       "source": "ordinal-formalization/ipd/Witnesses.lean",
@@ -3122,7 +3718,9 @@
       "sha256": "2449f1a71e20f362cbec4fc4c1f96174e4334ad95f64a84d03816dc9dc60db45",
       "origin": "local",
       "original_sha256_lf": "2449f1a71e20f362cbec4fc4c1f96174e4334ad95f64a84d03816dc9dc60db45",
-      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name",
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDWitnesses.lean"
     },
     "SixNotationFinalAudit": {
       "source": "release/SixNotationFinalAudit.lean",
@@ -3133,7 +3731,9 @@
       ],
       "sha256": "030fc5e765004850741651c0557324100f00a8f22d52527fea8ee25d82ed1fb5",
       "origin": "local",
-      "distribution": "release-only joint final audit; no new mathematical assumptions"
+      "distribution": "release-only joint final audit; no new mathematical assumptions",
+      "owner": "aggregate",
+      "file": "lean/src/SixNotationFinalAudit.lean"
     },
     "ARD2ClosedSupply": {
       "source": "lean/src/ARD2ClosedSupply.lean",
@@ -3145,7 +3745,9 @@
       "sha256": "eeae82d550f007434f15ed97c6bf20cbec4efe7a3c8688ca24795862eb1fb0cd",
       "origin": "local",
       "original_sha256_lf": "eeae82d550f007434f15ed97c6bf20cbec4efe7a3c8688ca24795862eb1fb0cd",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2ClosedSupply.lean"
     },
     "ARD2Compression": {
       "source": "lean/src/ARD2Compression.lean",
@@ -3156,7 +3758,9 @@
       "sha256": "8946e2ea23091e679fd0cb843e223d982ee4a06e2085ab8ba5f3ef9c3ccb3c80",
       "origin": "local",
       "original_sha256_lf": "8946e2ea23091e679fd0cb843e223d982ee4a06e2085ab8ba5f3ef9c3ccb3c80",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2Compression.lean"
     },
     "ARD2Core": {
       "source": "lean/src/ARD2Core.lean",
@@ -3167,7 +3771,9 @@
       "sha256": "961f9dc5551e5113e9b22ec3d6539385c02b8844e7eafd3570a2120f36749601",
       "origin": "local",
       "original_sha256_lf": "961f9dc5551e5113e9b22ec3d6539385c02b8844e7eafd3570a2120f36749601",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2Core.lean"
     },
     "ARD2Decrease": {
       "source": "lean/src/ARD2Decrease.lean",
@@ -3178,7 +3784,9 @@
       "sha256": "9dd8e762821f9d5dbe53b2802866a119f2ea9dc500526601e65ddaab0091b3b6",
       "origin": "local",
       "original_sha256_lf": "9dd8e762821f9d5dbe53b2802866a119f2ea9dc500526601e65ddaab0091b3b6",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2Decrease.lean"
     },
     "ARD2DefinitionFidelity": {
       "source": "lean/src/ARD2DefinitionFidelity.lean",
@@ -3190,7 +3798,9 @@
       "sha256": "588db250de2bb82cc63967a63230eaab445002a882e76311870d83e0b80288ce",
       "origin": "local",
       "original_sha256_lf": "588db250de2bb82cc63967a63230eaab445002a882e76311870d83e0b80288ce",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2DefinitionFidelity.lean"
     },
     "ARD2DemandCore": {
       "source": "lean/src/ARD2DemandCore.lean",
@@ -3202,7 +3812,9 @@
       "sha256": "301f4c8d5b2f91a3b0512475c25c533e9a8ba5efe017b08242cf1b811baeb225",
       "origin": "local",
       "original_sha256_lf": "301f4c8d5b2f91a3b0512475c25c533e9a8ba5efe017b08242cf1b811baeb225",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2DemandCore.lean"
     },
     "ARD2DemandRecursion": {
       "source": "lean/src/ARD2DemandRecursion.lean",
@@ -3212,7 +3824,9 @@
       "sha256": "6e1cc7241ba3065aa34da11d3224b68da5c38d03d3b0e730c3d062b060943c83",
       "origin": "local",
       "original_sha256_lf": "6e1cc7241ba3065aa34da11d3224b68da5c38d03d3b0e730c3d062b060943c83",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2DemandRecursion.lean"
     },
     "ARD2DemandReflection": {
       "source": "lean/src/ARD2DemandReflection.lean",
@@ -3222,7 +3836,9 @@
       "sha256": "924bd065502a9e41aa31339a3821a504523490d1a23b9b98429dd957c2864f21",
       "origin": "local",
       "original_sha256_lf": "924bd065502a9e41aa31339a3821a504523490d1a23b9b98429dd957c2864f21",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2DemandReflection.lean"
     },
     "ARD2Domain": {
       "source": "lean/src/ARD2Domain.lean",
@@ -3234,7 +3850,9 @@
       "sha256": "50dfcd2e33daffd6719a8b2b3ca240a61971cad4b34e3f5df09c444a1871567f",
       "origin": "local",
       "original_sha256_lf": "50dfcd2e33daffd6719a8b2b3ca240a61971cad4b34e3f5df09c444a1871567f",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2Domain.lean"
     },
     "ARD2EndpointAgreement": {
       "source": "lean/src/ARD2EndpointAgreement.lean",
@@ -3244,7 +3862,9 @@
       "sha256": "3cdfef927af281c4cbd9be8c49ef64b92db7688b2556a09e309d87b3e129a60d",
       "origin": "local",
       "original_sha256_lf": "3cdfef927af281c4cbd9be8c49ef64b92db7688b2556a09e309d87b3e129a60d",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2EndpointAgreement.lean"
     },
     "ARD2Final": {
       "source": "lean/src/ARD2Final.lean",
@@ -3258,7 +3878,9 @@
       "sha256": "8469237c097ad061057c39c70b8bd7cea2cf11f8d40bb1b26bbafc44f405430e",
       "origin": "local",
       "original_sha256_lf": "8469237c097ad061057c39c70b8bd7cea2cf11f8d40bb1b26bbafc44f405430e",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2Final.lean"
     },
     "ARD2FiniteUnion": {
       "source": "lean/src/ARD2FiniteUnion.lean",
@@ -3269,7 +3891,9 @@
       "sha256": "74fb82d0b61d11417cf939e5c238c244e8d806dbdfca1d98b1df182748277cd7",
       "origin": "local",
       "original_sha256_lf": "74fb82d0b61d11417cf939e5c238c244e8d806dbdfca1d98b1df182748277cd7",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2FiniteUnion.lean"
     },
     "ARD2InitialRepresentation": {
       "source": "lean/src/ARD2InitialRepresentation.lean",
@@ -3280,7 +3904,9 @@
       "sha256": "22660ae9bedcb71fbdd1870b8e9e7ae0c194b0c71bf6cb751489396b14e956e1",
       "origin": "local",
       "original_sha256_lf": "22660ae9bedcb71fbdd1870b8e9e7ae0c194b0c71bf6cb751489396b14e956e1",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2InitialRepresentation.lean"
     },
     "ARD2OrderReduction": {
       "source": "lean/src/ARD2OrderReduction.lean",
@@ -3291,7 +3917,9 @@
       "sha256": "34fbf6e25f3c3e80a1c9c7a5243798d0026a6b15503e169c93c217407b680319",
       "origin": "local",
       "original_sha256_lf": "34fbf6e25f3c3e80a1c9c7a5243798d0026a6b15503e169c93c217407b680319",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2OrderReduction.lean"
     },
     "ARD2SemanticWellFounded": {
       "source": "lean/src/ARD2SemanticWellFounded.lean",
@@ -3301,7 +3929,9 @@
       "sha256": "6d717679dd23299b9ff2d508f5e29ed7ce44d94ad2701b2b1ed56ad39d39a06c",
       "origin": "local",
       "original_sha256_lf": "6d717679dd23299b9ff2d508f5e29ed7ce44d94ad2701b2b1ed56ad39d39a06c",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2SemanticWellFounded.lean"
     },
     "ARD2Splice": {
       "source": "lean/src/ARD2Splice.lean",
@@ -3311,7 +3941,9 @@
       "sha256": "64274bf8d2c2fbee0cd8166d185c6c9d2754be088c2214ecc675a3a495ce6f47",
       "origin": "local",
       "original_sha256_lf": "64274bf8d2c2fbee0cd8166d185c6c9d2754be088c2214ecc675a3a495ce6f47",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2Splice.lean"
     },
     "ARD2StageDemands": {
       "source": "lean/src/ARD2StageDemands.lean",
@@ -3322,7 +3954,9 @@
       "sha256": "353f2a83a845f9de42f64ee88899609e11f71f999f2435a094ab39ad55f39020",
       "origin": "local",
       "original_sha256_lf": "353f2a83a845f9de42f64ee88899609e11f71f999f2435a094ab39ad55f39020",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2StageDemands.lean"
     },
     "ARD2StageProof": {
       "source": "lean/src/ARD2StageProof.lean",
@@ -3332,7 +3966,9 @@
       "sha256": "c74a36dea43fa6a4f73354a179458c27b9104543727c9900c67265b4984f5ca9",
       "origin": "local",
       "original_sha256_lf": "c74a36dea43fa6a4f73354a179458c27b9104543727c9900c67265b4984f5ca9",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2StageProof.lean"
     },
     "ARD2Structure": {
       "source": "lean/src/ARD2Structure.lean",
@@ -3343,7 +3979,9 @@
       "sha256": "951ddfe5a55b684da48e5e8722b0535b68260f7fdbe666e324cede9016101daa",
       "origin": "local",
       "original_sha256_lf": "951ddfe5a55b684da48e5e8722b0535b68260f7fdbe666e324cede9016101daa",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2Structure.lean"
     },
     "ARD2Templates": {
       "source": "lean/src/ARD2Templates.lean",
@@ -3354,7 +3992,9 @@
       "sha256": "891fcf15c6d2fa646ac4c9c9f365d9830a3366fa4ea1484792ecc159e2cb4bc8",
       "origin": "local",
       "original_sha256_lf": "891fcf15c6d2fa646ac4c9c9f365d9830a3366fa4ea1484792ecc159e2cb4bc8",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2Templates.lean"
     },
     "ARD2Witnesses": {
       "source": "lean/src/ARD2Witnesses.lean",
@@ -3365,7 +4005,9 @@
       "sha256": "2f5ad6a10f589661c1f2887b0076da857ba94412a5d36f6dec58173bf5f78825",
       "origin": "local",
       "original_sha256_lf": "2f5ad6a10f589661c1f2887b0076da857ba94412a5d36f6dec58173bf5f78825",
-      "distribution": "bundled local proof source"
+      "distribution": "bundled local proof source",
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2Witnesses.lean"
     },
     "SevenNotationFinalAudit": {
       "source": "lean/src/SevenNotationFinalAudit.lean",
@@ -3377,7 +4019,9 @@
       "sha256": "3b59cd17dd6ef83d2f2053f663c2e5c9b8da7de6b6f2912b09223005f7ddc4d7",
       "origin": "local",
       "original_sha256_lf": "3b59cd17dd6ef83d2f2053f663c2e5c9b8da7de6b6f2912b09223005f7ddc4d7",
-      "distribution": "release-only joint final audit; no new mathematical assumptions"
+      "distribution": "release-only joint final audit; no new mathematical assumptions",
+      "owner": "aggregate",
+      "file": "lean/src/SevenNotationFinalAudit.lean"
     }
   },
   "external": [
@@ -3417,5 +4061,11 @@
       "revision": "eba3d887fc52c98627f4b81507c0efc3096e91b9",
       "license": "Apache-2.0"
     }
-  }
+  },
+  "schema_version": 2,
+  "project": "aggregate",
+  "repository_root": "..",
+  "targets": [
+    "SevenNotationFinalAudit"
+  ]
 }

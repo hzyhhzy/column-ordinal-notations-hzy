@@ -1,0 +1,6 @@
+'OrdinalFormal.ColumnMap.graphCompare_map' depends on axioms: [propext, Quot.sound]
+'OrdinalFormal.ColumnMap.normalizeColumn_map' depends on axioms: [propext, Quot.sound]
+'OrdinalFormal.ColumnMap.control_map' depends on axioms: [propext]
+'OrdinalFormal.ColumnMap.block_map' depends on axioms: [propext, Quot.sound]
+'OrdinalFormal.ColumnMap.expand_map' depends on axioms: [propext, Quot.sound]
+'OrdinalFormal.ColumnMap.valid_map_iff' depends on axioms: [propext, Quot.sound]

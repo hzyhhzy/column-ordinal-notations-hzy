@@ -107,7 +107,7 @@
       "name": "mathlib",
       "manifestFile": "lake-manifest.json",
       "inputRev": "eba3d887fc52c98627f4b81507c0efc3096e91b9",
-      "inherited": false,
+      "inherited": true,
       "configFile": "lakefile.lean"
     },
     {
@@ -119,8 +119,80 @@
       "name": "YesMetaZFC",
       "manifestFile": "lake-manifest.json",
       "inputRev": "bae7e3d741f24a56d80da9b99c1345562cd10c2d",
-      "inherited": false,
+      "inherited": true,
       "configFile": "lakefile.toml"
+    },
+    {
+      "type": "path",
+      "dir": "shared",
+      "name": "ordinalnotations_shared",
+      "scope": "",
+      "inherited": true,
+      "configFile": "lakefile.lean",
+      "manifestFile": "lake-manifest.json"
+    },
+    {
+      "type": "path",
+      "dir": "Y",
+      "name": "ordinalnotations_y",
+      "scope": "",
+      "inherited": false,
+      "configFile": "lakefile.lean",
+      "manifestFile": "lake-manifest.json"
+    },
+    {
+      "type": "path",
+      "dir": "RPD",
+      "name": "ordinalnotations_rpd",
+      "scope": "",
+      "inherited": false,
+      "configFile": "lakefile.lean",
+      "manifestFile": "lake-manifest.json"
+    },
+    {
+      "type": "path",
+      "dir": "LRD",
+      "name": "ordinalnotations_lrd",
+      "scope": "",
+      "inherited": false,
+      "configFile": "lakefile.lean",
+      "manifestFile": "lake-manifest.json"
+    },
+    {
+      "type": "path",
+      "dir": "Omega-LRD3",
+      "name": "ordinalnotations_omega3",
+      "scope": "",
+      "inherited": false,
+      "configFile": "lakefile.lean",
+      "manifestFile": "lake-manifest.json"
+    },
+    {
+      "type": "path",
+      "dir": "ARD",
+      "name": "ordinalnotations_ard",
+      "scope": "",
+      "inherited": false,
+      "configFile": "lakefile.lean",
+      "manifestFile": "lake-manifest.json"
+    },
+    {
+      "type": "path",
+      "dir": "IPD",
+      "name": "ordinalnotations_ipd",
+      "scope": "",
+      "inherited": false,
+      "configFile": "lakefile.lean",
+      "manifestFile": "lake-manifest.json"
+    },
+    {
+      "type": "path",
+      "dir": "ARD2",
+      "name": "ordinalnotations_ard2",
+      "scope": "",
+      "inherited": false,
+      "configFile": "lakefile.lean",
+      "manifestFile": "lake-manifest.json"
     }
   ],
   "name": "ordinalnotations",

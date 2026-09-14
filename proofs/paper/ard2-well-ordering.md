@@ -1,6 +1,6 @@
 # ARD2: well-ordering of full-context anchored diagrams · [中文版](ard2-well-ordering.zh-CN.md)
 
-2026-09-14. [PDF](ard2-well-ordering.pdf) · [definition](../../notations/ARD2/definition.md) · [Python](../../notations/ARD2/ard2.py) · [NER](../../notations/ARD2/ARD2.ne-rewritten.js) · [ordinary Lean](../../lean/src/ARD2Final.lean).
+2026-09-14. [PDF](ard2-well-ordering.pdf) · [definition](../../notations/ARD2/definition.md) · [Python](../../notations/ARD2/ard2.py) · [NER](../../notations/ARD2/ARD2.ne-rewritten.js) · [ordinary Lean](../../lean/ARD2/src/ARD2Final.lean).
 
 ARD2 is the full-context variant of ARD: both row anchors and roots may refer to their own column, while parents remain strictly earlier. This paper proves the actual finite expansion rule, not that ARD2 exceeds ARD or is at least as strong as IPD. Software resource guards are not mathematical rules. The weak-theory paper argument and ordinary Lean kernel verification are separate deliverables.
 

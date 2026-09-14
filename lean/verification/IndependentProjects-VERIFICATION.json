@@ -1,0 +1,118 @@
+{
+  "verified_on": "2026-09-14",
+  "scope": "Initial independent project verification plus optional aggregate; ordinary Lean only. Later cache-recheck retries are not counted as new initial modules.",
+  "projects": {
+    "shared": {
+      "receipt": "shared/VERIFICATION.json",
+      "sha256_lf": "d77dfe31b28a820ffdcc48b6076f60615bb8c3f6e638af84bcaef4247ba92632",
+      "modules": 35,
+      "axiom_reports": 93,
+      "fresh_modules": 35,
+      "reused_modules": 0,
+      "verification_seconds": 156.087
+    },
+    "Y": {
+      "receipt": "Y/VERIFICATION.json",
+      "sha256_lf": "80e3ebfc5e9db335701479f21b04960480cc517ccf78de6c4ce69d763fd9df02",
+      "modules": 189,
+      "axiom_reports": 422,
+      "fresh_modules": 175,
+      "reused_modules": 14,
+      "verification_seconds": 781.714
+    },
+    "RPD": {
+      "receipt": "RPD/VERIFICATION.json",
+      "sha256_lf": "78099857b29bd1d220c392c1eb15240b1a0f545874468f542fdaa26b38269b52",
+      "modules": 36,
+      "axiom_reports": 91,
+      "fresh_modules": 4,
+      "reused_modules": 32,
+      "verification_seconds": 16.048
+    },
+    "LRD": {
+      "receipt": "LRD/VERIFICATION.json",
+      "sha256_lf": "6eb34726262c4d6d71ed2d849af57ed86482a62943bbedacb6f9569d5873425d",
+      "modules": 41,
+      "axiom_reports": 110,
+      "fresh_modules": 10,
+      "reused_modules": 31,
+      "verification_seconds": 43.871
+    },
+    "Omega-LRD3": {
+      "receipt": "Omega-LRD3/VERIFICATION.json",
+      "sha256_lf": "89f6fd758b5804c94f6ac079d6f244b36bb3cb68203743013e813f165e9bc6cf",
+      "modules": 44,
+      "axiom_reports": 119,
+      "fresh_modules": 13,
+      "reused_modules": 31,
+      "verification_seconds": 45.133
+    },
+    "ARD": {
+      "receipt": "ARD/VERIFICATION.json",
+      "sha256_lf": "c1c7e5a876ae1b67c8185e26fed9fafb9afb066af37f61841d069b10e126b46a",
+      "modules": 50,
+      "axiom_reports": 156,
+      "fresh_modules": 20,
+      "reused_modules": 30,
+      "verification_seconds": 98.868
+    },
+    "IPD": {
+      "receipt": "IPD/VERIFICATION.json",
+      "sha256_lf": "968ed5a221a661bdc3af71ad770cb7efff4b6cb5889fc60c92de2f44eacad41d",
+      "modules": 55,
+      "axiom_reports": 166,
+      "fresh_modules": 40,
+      "reused_modules": 15,
+      "verification_seconds": 320.9
+    },
+    "ARD2": {
+      "receipt": "ARD2/VERIFICATION.json",
+      "sha256_lf": "4cafd0f9cd7c9de69a7d06d3d0d46ceba8e2e6ca5c12e154f294fb808ec65658",
+      "modules": 51,
+      "axiom_reports": 160,
+      "fresh_modules": 21,
+      "reused_modules": 30,
+      "verification_seconds": 107.582
+    },
+    "aggregate": {
+      "receipt": "VERIFICATION.json",
+      "sha256_lf": "93fdb478f7aeca5ef502f3428c85c0a013894de5ef04ed5647b49159ac020215",
+      "modules": 322,
+      "axiom_reports": 866,
+      "fresh_modules": 4,
+      "reused_modules": 318,
+      "verification_seconds": 44.624
+    }
+  },
+  "distinct_proof_modules": 322,
+  "distinct_axiom_reports": 866,
+  "all_distinct_proof_modules_freshly_compiled_in_new_layout": true,
+  "every_distinct_module_freshly_compiled_once_in_initial_verification": true,
+  "subsequent_cross_scope_reuse": "Explicitly certified schema-2 shared/leaf artifacts; not fresh per-scope closure builds",
+  "lean_source_files_changed": 0,
+  "bundled_source_files": 310,
+  "moved_source_files": 306,
+  "source_migration_receipt": "verification/ProjectLayout-VERIFICATION.json",
+  "mathlib_rebuilt_from_source": false,
+  "network_bootstrap_tested": false,
+  "proof_builds_performed_by": "Bounded verification_core.py using pinned Lean 4.33.1",
+  "complete_lake_build_claimed": false,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "limits": {
+    "concurrent_compilers": 1,
+    "compiler_threads": 1,
+    "memory_mb": 2048,
+    "seconds_per_module": 120
+  },
+  "final_read_only_consistency_check": {
+    "public_and_local_receipts_current": true,
+    "all_local_artifact_bundles_and_logs_checked": true,
+    "actual_compiler_sysroot_and_external_environment_rehashed": true,
+    "kernel_rerun_in_this_check": false
+  },
+  "cache_recheck_note": "During separate --resume tests, two transient Windows file-replacement permission errors interrupted RPD and ARD2 local checkpoints. Both were marked incomplete, their original public successful receipts were preserved, and their retries passed. The final read-only audit verifies all current local and public evidence."
+}

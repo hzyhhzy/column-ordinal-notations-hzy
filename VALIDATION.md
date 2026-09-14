@@ -67,13 +67,39 @@ ARD2 has its own title and 2026-09-14 footer. Formula bodies and numbered tags w
 
 ## Lean source verification
 
-The package contains 310 Lean source modules and describes 12 additional pinned external BMS modules. `python lean/build.py --check-only` verifies the complete 322-module import closure, bundled hashes, and exact Lake glob inventory without downloading anything. External BMS bytes are additionally hash-checked when their source checkout is supplied for compilation.
+The source union remains **310 bundled modules plus 12 pinned external BMS modules: 322 in total**. The split moves 306 files into shared and seven private notation projects; four aggregate modules remain in place. The exact bytes of all 310 bundled files were compared: mathematical sources and module names are unchanged.
 
-A fresh sequential rebuild of **all 322 proof-source modules passed**, with **866 axiom reports**. The [public receipt](lean/VERIFICATION.json) and [Lean instructions](lean/README.md) identify this seven-system rebuild. ARD2 contributes 21 proof modules and one joint audit. Earlier four-, five- and six-system receipts remain historical records, not substitutes for rebuilding ARD2.
+Projects have independent source manifests, Lake configurations, toolchains, lockfiles, outputs and verification receipts. Exact closures are shared 35, Y 189, RPD 36, LRD 41, Ω-LRD3 44, ARD 50, IPD 55 and ARD2 51. These counts include overlapping shared dependencies, not disjoint module sets. Only Y depends on external BMS.
 
-Only existing Lean and pinned Mathlib/auxiliary-package artifacts were reused. Y, external BMS and local notation proofs were compiled from checked sources, not research-project proof caches. This is not a fresh network bootstrap or a rebuild of Mathlib. Real Lake separately loaded the exact published configuration offline and checked all 310 modules' unique import/build ownership and default enumeration. A previously insufficient joint-audit-only glob was corrected; both the config and the new exact-inventory check are delivered. This Lake test is not a claim that `lake build` was run to completion.
+`python lean/ARD2/build.py --check-only` checks only ARD2's exact closure, source hashes and project Lake enumeration, without loading another notation. The root `python lean/build.py --check-only` is an optional repository-wide check.
 
-Accepted reported axioms are only `propext`, `Classical.choice`, and `Quot.sound`, or a subset. Build limits and actual selected logs are in [lean/README.md](lean/README.md). Generated build artifacts are excluded from release source.
+The pre-split fresh sequential seven-system rebuild genuinely passed **322 modules / 866 axiom reports** in 1638.176 seconds. Its [unchanged archived receipt](lean/verification/SevenNotation-Monolithic-VERIFICATION.json) records that run and is not relabeled as a new-layout build.
+
+Nine regression groups in `python -B tests/test_lean_verifier.py` passed: exact nine-project closures, all five import-artifact fingerprints, per-module cleanup, external-cache shadowing rejection, named/count-checked axiom logs, stale/incomplete receipts, project locks, unrelated-project fingerprint stability, and current import syntax/nested comments. These tests use temporary data and never pass fake artifacts to Lean; the actual kernel checks come from the source compilations below.
+
+The independent projects genuinely passed, with separate receipts:
+
+| Project receipt | Closure modules | Axiom reports | Newly compiled | Explicitly certified reuse |
+| --- | --- | --- | --- | --- |
+| [shared](lean/shared/VERIFICATION.json) | 35 | 93 | 35 | 0 |
+| [Y](lean/Y/VERIFICATION.json) | 189 | 422 | 175 | 14 |
+| [RPD](lean/RPD/VERIFICATION.json) | 36 | 91 | 4 | 32 |
+| [LRD](lean/LRD/VERIFICATION.json) | 41 | 110 | 10 | 31 |
+| [Ω-LRD3](lean/Omega-LRD3/VERIFICATION.json) | 44 | 119 | 13 | 31 |
+| [ARD](lean/ARD/VERIFICATION.json) | 50 | 156 | 20 | 30 |
+| [IPD](lean/IPD/VERIFICATION.json) | 55 | 166 | 40 | 15 |
+| [ARD2](lean/ARD2/VERIFICATION.json) | 51 | 160 | 21 | 30 |
+| [Optional aggregate](lean/VERIFICATION.json) | 322 | 866 | 4 | 318 |
+
+The shared foundation is compiled fresh first; leaves reuse only that newly certified shared baseline, and the aggregate reuses those certified leaf/shared artifacts and compiles four joint modules. The [combined check](lean/verification/IndependentProjects-VERIFICATION.json) compares every module's fingerprint, complete import-artifact hashes and reports, confirming that, in the initial migration verification, **all 322 distinct modules were freshly compiled exactly once, with all 866 distinct axiom reports passing**. Closure sizes overlap; their sum is not a count of distinct modules.
+
+Real Lake passed 18 checks across nine exact configurations for loading, unique ownership, default enumeration and import lookup. The [configuration/migration receipt](lean/verification/ProjectLayout-VERIFICATION.json) distinguishes these checks from a completed `lake build`. Adding an intentionally broken new project and an unrelated broken Y source in a scratch copy left both ARD2 checks passing; loading the broken project itself failed as a negative control.
+
+The final read-only consistency check rehashed the actual compiler, implicit sysroot and external import artifacts, then validated all nine projects' public/local receipts, complete artifact bundles and logs. All passed; this check does not rerun the Lean kernel. During additional `--resume` tests, RPD and ARD2 each encountered a transient Windows file-replacement refusal. Failed checkpoints were correctly marked incomplete, original public successful receipts stayed unchanged, and both retries passed. Initial compilation statistics are recorded separately from these later retries.
+
+The source verifier accepts only reported `propext`, `Classical.choice`, `Quot.sound`, or subsets. Compilation uses existing Lean and pinned Mathlib/auxiliary artifacts, but builds local proofs from checked sources. No fresh network bootstrap or Mathlib source rebuild is claimed. The [Lean guide](lean/README.md) documents resource bounds and cache inputs; generated binaries and local caches are not distributed.
+
+The documentation link migration changes only relative source URLs, not formulas or visible labels. The PDF renderer emits only labels for relative links, so all 20 PDFs remain unchanged. Three old Lean addresses in ARD2's JS/Python explanatory text are corrected separately without changing expansion rules; the other five notation implementations stay unchanged.
 
 ## Scope that remains explicit
 

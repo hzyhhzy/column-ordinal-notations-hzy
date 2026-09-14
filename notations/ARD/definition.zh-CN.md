@@ -1,6 +1,6 @@
 # ARD：行锚图 · [English](definition.md)
 
-发布定义，2026-09-13。[PDF](definition.zh-CN.pdf) · [NER 弧线图展开器](ARD-arcs.ne-rewritten.js) · [Python](ard.py) · [良序证明](../../proofs/paper/ard-well-ordering.zh-CN.md) · [普通 Lean 入口](../../lean/src/ARDFinal.lean)。
+发布定义，2026-09-13。[PDF](definition.zh-CN.pdf) · [NER 弧线图展开器](ARD-arcs.ne-rewritten.js) · [Python](ard.py) · [良序证明](../../proofs/paper/ard-well-ordering.zh-CN.md) · [普通 Lean 入口](../../lean/ARD/src/ARDFinal.lean)。
 
 ARD 即 **Anchored Row Diagrams（行锚图）**。一个式子是有限图，不是操作路径。它的行标是更早列的地址；复制来源块时，行锚与根、父、子列一起移动。软件中的资源保护不是数学规则。
 

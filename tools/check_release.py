@@ -18,7 +18,20 @@ NER_HASHES = {
     'notations/Omega-LRD3/Omega-LRD3.ne-rewritten.js': 'fe33b1a35891e9efb9eb5932ab94456053769b6b58df41ea9f36eb57a262f3ab',
     'notations/ARD/ARD-arcs.ne-rewritten.js': 'ab4f05ef1fb65b6308e710cbbc98c173310f9c3073ce3a57082863af708841d6',
     'notations/IPD/IPD.ne-rewritten.js': 'acc1a1c2ae260da9be7d13e14ac17d84a92679f82efe97aa85cd0e3b072f6011',
-    'notations/ARD2/ARD2.ne-rewritten.js': '34d9239cee3871fb2908452022b9831c9d687f19c910745725f36231f8016907',
+    'notations/ARD2/ARD2.ne-rewritten.js': 'e0d4eb14056ee54a6d4a8d2475241469ba33f07d38c406cfa9b20c648407380d',
+}
+LEAN_ROOTS = {
+    'Y': ['FiniteDemandYFinal'],
+    'RPD': ['FiniteDemandRPDFinal'],
+    'LRD': ['FiniteDemandLRDFinal'],
+    'Omega-LRD3': ['OmegaLRD3Final'],
+    'ARD': ['ARDFinal', 'ARDCompression'],
+    'IPD': ['IPDStandardOrder', 'IPDTreeCompare'],
+    'ARD2': ['ARD2Final', 'ARD2Compression'],
+    'shared': ['ARDPrefixOrder', 'FiniteDemandColumnWellFounded',
+               'OrdinalFormal.ColumnMap', 'OrdinalFormal.ColumnReachability',
+               'OrdinalFormal.GeneratedColumnDecrease', 'OrdinalFormal.RPDFiniteUnion'],
+    'aggregate': ['SevenNotationFinalAudit'],
 }
 
 
@@ -35,75 +48,96 @@ def sha256_lf(path):
     return hashlib.sha256(path.read_bytes().replace(b'\r\n', b'\n')).hexdigest()
 
 
+def load_release_lean_plans(repository):
+    """Check the exact nine-scope catalog without requiring completed receipts."""
+    sys.dont_write_bytecode = True
+    sys.path.insert(0, str(repository / 'lean'))
+    from verification_core import load_plan
+    layout = json.loads((repository / 'lean/layout.json').read_text(encoding='utf-8'))
+    if layout.get('schema_version') != 1 or layout.get('file_base') != 'repository':
+        raise ValueError('Unsupported source-ownership layout')
+    projects = layout['projects']
+    if set(projects) != set(LEAN_ROOTS):
+        raise ValueError('Layout must contain exactly seven notations, shared, and aggregate')
+    plans = {}
+    for name, roots in LEAN_ROOTS.items():
+        item = projects[name]
+        directory = 'lean' if name == 'aggregate' else 'lean/' + name
+        if item.get('directory') != directory or item.get('manifest') != directory + '/sources.json':
+            raise ValueError(f'Unexpected project directory/manifest: {name}')
+        plan = load_plan(repository / directory, allow_missing_bms=True)
+        if plan['repository'] != repository.resolve() or plan['manifest']['project'] != name:
+            raise ValueError(f'Layout/project/repository identity mismatch: {name}')
+        if plan['targets'] != roots or item.get('targets') != roots:
+            raise ValueError(f'Missing or changed final/bridge roots: {name}')
+        expected_owned = sorted(module for module, record in plan['records'].items()
+                                if record['owner'] == name and record.get('origin') != 'BMS')
+        expected_external = sorted(module for module, record in plan['records'].items()
+                                   if record.get('origin') == 'BMS')
+        for field, expected in (
+            ('owned_modules', expected_owned), ('external_modules', expected_external),
+            ('closure_modules', sorted(plan['records'])), ('external', sorted(plan['external'])),
+        ):
+            if item.get(field) != expected:
+                raise ValueError(f'Layout {field} differs from actual exact scope: {name}')
+        if expected_external and name not in ('Y', 'aggregate'):
+            raise ValueError(f'External BMS unexpectedly required outside Y: {name}')
+        plans[name] = plan
+    canonical = plans['aggregate']['records']
+    owned = {}
+    for name, plan in plans.items():
+        for module, record in plan['records'].items():
+            if module not in canonical or record != canonical[module]:
+                raise ValueError(f'Conflicting per-project source record: {name}/{module}')
+            if record['owner'] not in plans:
+                raise ValueError(f'Unknown source owner: {module}')
+            if record.get('origin') != 'BMS' and record.get('external'):
+                raise ValueError(f'Bundled source incorrectly marked external: {module}')
+            if record['owner'] == name:
+                if module in owned:
+                    raise ValueError(f'Duplicate physical source ownership: {module}')
+                owned[module] = {'owner': name, **(
+                    {'external': True} if record.get('origin') == 'BMS' else {'file': record['file']})}
+    if owned != layout['modules'] or set(owned) != set(canonical):
+        raise ValueError('Aggregate/layout does not exactly cover uniquely owned sources and external BMS')
+    leaf_union = set().union(*(set(plan['records']) for name, plan in plans.items()
+                              if name not in ('shared', 'aggregate')))
+    joint = {module for module, record in canonical.items() if record['owner'] == 'aggregate'}
+    if leaf_union | joint != set(canonical) or leaf_union & joint:
+        raise ValueError('Aggregate must be precisely the seven leaf closures plus joint audit entries')
+    return plans
+
+
 def check_lean_receipt(problems):
-    """Reject a successful but stale build record; this does not rerun Lean."""
-    folder = ROOT/'lean'
-    manifest = json.loads((folder/'sources.json').read_text(encoding='utf-8'))
-    receipt = json.loads((folder/'VERIFICATION.json').read_text(encoding='utf-8'))
-    modules = receipt.get('modules', {})
-    expected = manifest['modules']
-    if receipt.get('complete') is not True:
-        problems.append('Lean verification receipt is incomplete')
-    if set(modules) != set(expected):
-        problems.append('Lean verification receipt does not cover the current source closure')
-    if receipt.get('total_proof_modules') != len(expected):
-        problems.append('Lean verification receipt has a stale module count')
-    if receipt.get('axiom_reports') != sum(record['axiom_reports'] for record in modules.values()):
-        problems.append('Lean verification receipt has an inconsistent axiom-report total')
-    version = receipt.get('compiler_version_output', '')
-    if not version or version.strip() != receipt.get('compiler'):
-        problems.append('Lean verification receipt lacks consistent raw compiler-version output')
-    fingerprints, visiting = {}, set()
-
-    def fingerprint(module):
-        if module not in expected:
-            return module
-        if module in fingerprints:
-            return fingerprints[module]
-        if module in visiting:
-            raise ValueError(f'Cycle in Lean verification manifest: {module}')
-        visiting.add(module)
-        record = expected[module]
-        value = hashlib.sha256((record['sha256'] + version + ''.join(
-            fingerprint(dep) for dep in record['imports'])).encode()).hexdigest()
-        visiting.remove(module)
-        fingerprints[module] = value
-        return value
-
-    for module in expected:
-        if fingerprint(module) != modules.get(module, {}).get('fingerprint'):
-            problems.append(f'Stale Lean module/dependency fingerprint: {module}')
-    for relative, field in (
-        ('sources.json', 'sources_manifest_sha256_lf'),
-        ('build.py', 'build_script_sha256_lf'),
-        ('lakefile.lean', 'lakefile_sha256_lf'),
-        ('lake-manifest.json', 'lake_manifest_sha256_lf'),
-    ):
-        if sha256_lf(folder/relative) != receipt.get(field):
-            problems.append(f'Stale Lean verification input hash: {relative}')
-    logs = receipt.get('final_logs', {})
-    required = {'FiniteDemandYFinal', 'FiniteDemandRPDFinal', 'FiniteDemandLRDFinal',
-                'OmegaLRD3Final', 'ARDFinal', 'IPDStandardOrder', 'IPDTreeCompare',
-                'ARD2Final', 'ARD2Compression', 'ARD2DefinitionFidelity', manifest['target']}
-    if not required <= set(logs):
-        problems.append('Lean verification receipt is missing current final theorem logs')
-    allowed_axioms = {'propext', 'Classical.choice', 'Quot.sound'}
-    for module, record in logs.items():
-        path = (folder/record['path']).resolve()
-        if not path.is_relative_to((folder/'verification').resolve()) or not path.is_file():
-            problems.append(f'Invalid Lean final-log path: {module}')
-            continue
-        if sha256_lf(path) != record['sha256_lf']:
-            problems.append(f'Stale Lean final-log hash: {module}')
-        content = path.read_text(encoding='utf-8')
-        reports = re.findall(
-            r"'([^']+)' (?:depends on axioms:\s*\[([^\]]*)\]|does not depend on any axioms)", content)
-        if (len(reports) != record['axiom_reports'] or
-                len(reports) != modules.get(module, {}).get('axiom_reports')):
-            problems.append(f'Incomplete Lean final-log axiom reports: {module}')
-        for _, report in reports:
-            if {item.strip() for item in report.split(',') if item.strip()} - allowed_axioms:
-                problems.append(f'Unexpected axiom in Lean final log: {module}')
+    """Require current public receipts for all exact scopes; never use archives."""
+    try:
+        plans = load_release_lean_plans(ROOT)
+    except (ValueError, KeyError, OSError) as error:
+        problems.append('Independent Lean layout check failed: ' + str(error))
+        return
+    from verification_core import validate_receipt
+    receipts = {}
+    for name, plan in plans.items():
+        try:
+            path = plan['directory'] / 'VERIFICATION.json'
+            if not path.is_file():
+                raise ValueError('Missing current public VERIFICATION.json (historical receipts do not count)')
+            receipt = json.loads(path.read_text(encoding='utf-8'))
+            if not isinstance(receipt.get('final_logs'), dict):
+                raise ValueError('Public receipt lacks its final/bridge logs')
+            validate_receipt(plan, receipt)
+            receipts[name] = receipt
+        except (ValueError, KeyError, OSError) as error:
+            problems.append(f'Independent Lean receipt check failed ({name}): {error}')
+    if len(receipts) != len(plans):
+        return
+    aggregate = receipts['aggregate']['modules']
+    for name, receipt in receipts.items():
+        for module, record in receipt['modules'].items():
+            if record['fingerprint'] != aggregate[module]['fingerprint']:
+                problems.append(f'Cross-project source/environment disagreement: {name}/{module}')
+    if not problems:
+        print(f'Independent Lean receipts current: {len(plans)} scopes, {len(aggregate)} distinct modules')
 
 
 def main():

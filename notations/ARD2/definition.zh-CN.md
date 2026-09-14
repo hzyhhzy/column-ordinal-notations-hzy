@@ -1,6 +1,6 @@
 # ARD2：全上下文行锚图 · [English](definition.md)
 
-定义，2026-09-14。[PDF](definition.zh-CN.pdf) · [NER 展开器](ARD2.ne-rewritten.js) · [Python](ard2.py) · [良序证明](../../proofs/paper/ard2-well-ordering.zh-CN.md) · [普通 Lean 入口](../../lean/src/ARD2Final.lean)。
+定义，2026-09-14。[PDF](definition.zh-CN.pdf) · [NER 展开器](ARD2.ne-rewritten.js) · [Python](ard2.py) · [良序证明](../../proofs/paper/ard2-well-ordering.zh-CN.md) · [普通 Lean 入口](../../lean/ARD2/src/ARD2Final.lean)。
 
 ARD2 是 **Anchored Row Diagrams（行锚图）** 的全上下文版本。一个表达式是有限列图，不是操作路径；每个关系组仍只有三个自然数坐标。与 ARD 不同，行锚和根都可以引用当前列，根也不必在父列之前。软件资源保护不是数学规则。
 
@@ -91,7 +91,7 @@ $$
 
 展开保持合法性。对每个有限图 $G$，旧末列以前的全部列保持不变，且 $G[n]$ 是 $G[n+1]$ 的完整列前缀；若旧末列非空，则是真前缀。从非零图出发的每一步展开，都严格降低指定列序。
 
-[纸面证明](../../proofs/paper/ard2-well-ordering.zh-CN.md) 与[普通 Lean 入口](../../lean/src/ARD2Final.lean) 区分以下两项结论：
+[纸面证明](../../proofs/paper/ard2-well-ordering.zh-CN.md) 与[普通 Lean 入口](../../lean/ARD2/src/ARD2Final.lean) 区分以下两项结论：
 
 - **全部合法有限图：** 非零展开关系良基。纸面证明构造每次展开严格下降的序数秩；Lean 给出 `valid_step_wellFounded`。
 - **标准域：** 指定列序在 $U$ 上良序，加入最大外顶端后仍良序。Lean 给出 `standard_strictWellOrder`、`standard_with_top_strictWellOrder`，以及纸面定义标准域版本 `paper_standard_with_top_strictWellOrder`。
@@ -105,7 +105,7 @@ $$
 
 是合法图的列序降链，但不是展开链。第二项结论中的标准域限制不能删去。
 
-纸面公理上界为 $KP_\omega+\text{“存在不可数序数”}$，包含完整集合归纳，不包含幂集或选择公理。实际普通 Lean 证明已经编译成功，最终公理报告只使用 `propext`、`Classical.choice`、`Quot.sound`。这**不是**在 Lean 中编码该弱体系的语法和内部推导。[定义一致性模块](../../lean/src/ARD2DefinitionFidelity.lean) 将纸面有限规则及其可达域与 Lean 定义连接起来，但并不验证 Python 或 JavaScript 虚拟机。编译与验证状态见仓库[验证记录](../../VALIDATION.zh-CN.md)。
+纸面公理上界为 $KP_\omega+\text{“存在不可数序数”}$，包含完整集合归纳，不包含幂集或选择公理。实际普通 Lean 证明已经编译成功，最终公理报告只使用 `propext`、`Classical.choice`、`Quot.sound`。这**不是**在 Lean 中编码该弱体系的语法和内部推导。[定义一致性模块](../../lean/ARD2/src/ARD2DefinitionFidelity.lean) 将纸面有限规则及其可达域与 Lean 定义连接起来，但并不验证 Python 或 JavaScript 虚拟机。编译与验证状态见仓库[验证记录](../../VALIDATION.zh-CN.md)。
 
 这里没有证明 ARD2 与 ARD、RPD、Y、wY 或 IPD 之间的序型不等式。“ARD2”这个名称、共用证明方法及更大的有限计数，都不能证明它对应更大的序数，也不能证明前序段关系。不声称上述公理上界最优。
 

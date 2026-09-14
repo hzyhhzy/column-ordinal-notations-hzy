@@ -3,14 +3,23 @@ open Lake DSL
 
 package ordinalnotations
 
-require mathlib from git
-  "https://github.com/leanprover-community/mathlib4" @ "eba3d887fc52c98627f4b81507c0efc3096e91b9"
-require YesMetaZFC from git
-  "https://github.com/EgoFakeFantasy/BMS-Well-Ordering-Lean" @ "bae7e3d741f24a56d80da9b99c1345562cd10c2d"
+require ordinalnotations_y from "Y"
+require ordinalnotations_rpd from "RPD"
+require ordinalnotations_lrd from "LRD"
+require ordinalnotations_omega3 from "Omega-LRD3"
+require ordinalnotations_ard from "ARD"
+require ordinalnotations_ipd from "IPD"
+require ordinalnotations_ard2 from "ARD2"
 
+/-- Exact module ownership lets sibling projects share Lean namespaces without overlap. -/
 @[default_target]
 lean_lib OrdinalNotations where
   srcDir := "src"
-  roots := #[`IPDClosedSupply, `IPDColumnOrder, `IPDDecrease, `IPDDemandCore, `IPDDemandRecursion, `IPDEndpointAgreement, `IPDFiniteLabels, `IPDGraphController, `IPDGraphCore, `IPDGraphGeometry, `IPDGraphNormalization, `IPDGraphValidity, `IPDInitialRepresentation, `IPDProfileAtoms, `IPDProfileCountable, `IPDProfileIdentity, `IPDProfileLower, `IPDProfileOrder, `IPDProfileRename, `IPDProfileSubstitution, `IPDProfileValidity, `IPDSeeds, `IPDSemanticEdges, `IPDSemanticWellFounded, `IPDSpliceLabels, `IPDStageFacts, `IPDStageSplice, `IPDStandardOrder, `IPDTemplates, `IPDTree, `IPDTreeCompare, `IPDTreeLinearOrder, `IPDTreeLocalRename, `IPDTreeLower, `IPDTreeLowerClosure, `IPDTreeOrder, `IPDTreeRename, `IPDTreeSupport, `IPDTreeWellFounded, `IPDWitnesses, `SixNotationFinalAudit, `ARDClosedSupply, `ARDCompression, `ARDCore, `ARDDecrease, `ARDDefinitionFidelity, `ARDDemandCore, `ARDDemandRecursion, `ARDDemandReflection, `ARDDomain, `ARDEndpointAgreement, `ARDFinal, `ARDFiniteUnion, `FiveNotationFinalAudit, `ARDInitialRepresentation, `ARDOrderReduction, `ARDPrefixOrder, `ARDSemanticWellFounded, `ARDSplice, `ARDStageDemands, `ARDStageProof, `ARDStructure, `ARDWitnesses, `FiniteDemandClosedSupply, `FiniteDemandColumnWellFounded, `FiniteDemandCore, `FiniteDemandEndpointAgreement, `FiniteDemandFinitaryClosure, `FiniteDemandHostAmbient, `FiniteDemandInitialRepresentation, `FiniteDemandLRDFinal, `FiniteDemandOrdinalHeight, `FiniteDemandRPDFinal, `FiniteDemandRecursion, `FiniteDemandReflection, `FiniteDemandWitnesses, `FiniteDemandYFinal, `FourNotationFinalAudit, `LRDOrdinalRows, `NatSemanticTransport, `OmegaLRD3Final, `OneY, `OrdinalFormal, `OrdinalRowLanguage, `ZeroY, `ARD2ClosedSupply, `ARD2Compression, `ARD2Core, `ARD2Decrease, `ARD2DefinitionFidelity, `ARD2DemandCore, `ARD2DemandRecursion, `ARD2DemandReflection, `ARD2Domain, `ARD2EndpointAgreement, `ARD2Final, `ARD2FiniteUnion, `ARD2InitialRepresentation, `ARD2OrderReduction, `ARD2SemanticWellFounded, `ARD2Splice, `ARD2StageDemands, `ARD2StageProof, `ARD2Structure, `ARD2Templates, `ARD2Witnesses, `SevenNotationFinalAudit]
-  globs := #[.one `IPDClosedSupply, .one `IPDColumnOrder, .one `IPDDecrease, .one `IPDDemandCore, .one `IPDDemandRecursion, .one `IPDEndpointAgreement, .one `IPDFiniteLabels, .one `IPDGraphController, .one `IPDGraphCore, .one `IPDGraphGeometry, .one `IPDGraphNormalization, .one `IPDGraphValidity, .one `IPDInitialRepresentation, .one `IPDProfileAtoms, .one `IPDProfileCountable, .one `IPDProfileIdentity, .one `IPDProfileLower, .one `IPDProfileOrder, .one `IPDProfileRename, .one `IPDProfileSubstitution, .one `IPDProfileValidity, .one `IPDSeeds, .one `IPDSemanticEdges, .one `IPDSemanticWellFounded, .one `IPDSpliceLabels, .one `IPDStageFacts, .one `IPDStageSplice, .one `IPDStandardOrder, .one `IPDTemplates, .one `IPDTree, .one `IPDTreeCompare, .one `IPDTreeLinearOrder, .one `IPDTreeLocalRename, .one `IPDTreeLower, .one `IPDTreeLowerClosure, .one `IPDTreeOrder, .one `IPDTreeRename, .one `IPDTreeSupport, .one `IPDTreeWellFounded, .one `IPDWitnesses, .one `SixNotationFinalAudit, .one `ARDClosedSupply, .one `ARDCompression, .one `ARDCore, .one `ARDDecrease, .one `ARDDefinitionFidelity, .one `ARDDemandCore, .one `ARDDemandRecursion, .one `ARDDemandReflection, .one `ARDDomain, .one `ARDEndpointAgreement, .one `ARDFinal, .one `ARDFiniteUnion, .one `FiveNotationFinalAudit, .one `ARDInitialRepresentation, .one `ARDOrderReduction, .one `ARDPrefixOrder, .one `ARDSemanticWellFounded, .one `ARDSplice, .one `ARDStageDemands, .one `ARDStageProof, .one `ARDStructure, .one `ARDWitnesses, .one `FiniteDemandClosedSupply, .one `FiniteDemandColumnWellFounded, .one `FiniteDemandCore, .one `FiniteDemandEndpointAgreement, .one `FiniteDemandFinitaryClosure, .one `FiniteDemandHostAmbient, .one `FiniteDemandInitialRepresentation, .one `FiniteDemandLRDFinal, .one `FiniteDemandOrdinalHeight, .one `FiniteDemandRPDFinal, .one `FiniteDemandRecursion, .one `FiniteDemandReflection, .one `FiniteDemandWitnesses, .one `FiniteDemandYFinal, .one `FourNotationFinalAudit, .one `LRDOrdinalRows, .one `NatSemanticTransport, .one `OmegaLRD3Final, .submodules `OneY, .submodules `OrdinalFormal, .one `OrdinalRowLanguage, .submodules `ZeroY, .one `ARD2ClosedSupply, .one `ARD2Compression, .one `ARD2Core, .one `ARD2Decrease, .one `ARD2DefinitionFidelity, .one `ARD2DemandCore, .one `ARD2DemandRecursion, .one `ARD2DemandReflection, .one `ARD2Domain, .one `ARD2EndpointAgreement, .one `ARD2Final, .one `ARD2FiniteUnion, .one `ARD2InitialRepresentation, .one `ARD2OrderReduction, .one `ARD2SemanticWellFounded, .one `ARD2Splice, .one `ARD2StageDemands, .one `ARD2StageProof, .one `ARD2Structure, .one `ARD2Templates, .one `ARD2Witnesses, .one `SevenNotationFinalAudit]
+  roots := #[]
+  globs := #[
+    .one `FiveNotationFinalAudit,
+    .one `FourNotationFinalAudit,
+    .one `SevenNotationFinalAudit,
+    .one `SixNotationFinalAudit
+  ]
   moreLeanArgs := #["-M", "2048", "-j", "1"]

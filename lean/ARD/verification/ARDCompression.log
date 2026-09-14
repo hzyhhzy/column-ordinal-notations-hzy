@@ -1,0 +1,5 @@
+'OrdinalFormal.ARD.Compression.normalize_eq_fullRoots' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.ARD.Compression.compressed_iff_sorted_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.ARD.Compression.normalize_compare' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.ARD.Compression.normalize_graphCompare' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.ARD.Compression.control_normalize' depends on axioms: [propext, Classical.choice, Quot.sound]

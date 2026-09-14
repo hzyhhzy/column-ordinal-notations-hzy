@@ -1,6 +1,6 @@
 # ARD2: full-context anchored row diagrams · [中文版](definition.zh-CN.md)
 
-Definition, 2026-09-14. [PDF](definition.pdf) · [NER expander](ARD2.ne-rewritten.js) · [Python](ard2.py) · [well-ordering proof](../../proofs/paper/ard2-well-ordering.md) · [ordinary Lean entry point](../../lean/src/ARD2Final.lean).
+Definition, 2026-09-14. [PDF](definition.pdf) · [NER expander](ARD2.ne-rewritten.js) · [Python](ard2.py) · [well-ordering proof](../../proofs/paper/ard2-well-ordering.md) · [ordinary Lean entry point](../../lean/ARD2/src/ARD2Final.lean).
 
 ARD2 is the full-context variant of **Anchored Row Diagrams**. An expression is a finite column diagram, not a path of operations. Each relation group still has just three natural-number coordinates. Unlike ARD, both its row anchor and its root may refer to the current column, and a root need not precede its parent. Software resource guards are not mathematical rules.
 
@@ -91,7 +91,7 @@ Standardness is finite reachability from these seeds, not accessibility or the e
 
 Expansion preserves legality. For every finite $G$, all columns before its old last column remain unchanged, and $G[n]$ is a complete-column prefix of $G[n+1]$. That prefix is proper when the old last column is nonempty. Every expansion from a nonzero graph strictly decreases the specified column order.
 
-The [paper](../../proofs/paper/ard2-well-ordering.md) and [ordinary Lean entry point](../../lean/src/ARD2Final.lean) distinguish two conclusions:
+The [paper](../../proofs/paper/ard2-well-ordering.md) and [ordinary Lean entry point](../../lean/ARD2/src/ARD2Final.lean) distinguish two conclusions:
 
 - **All legal finite graphs:** the nonzero expansion relation is well-founded. The paper constructs an ordinal-valued rank decreasing on every such step; Lean proves `valid_step_wellFounded`.
 - **The standard domain:** the specified column order is a well-order on $U$, also after adding the greatest external top. Lean proves `standard_strictWellOrder`, `standard_with_top_strictWellOrder`, and the paper-defined-domain version `paper_standard_with_top_strictWellOrder`.
@@ -105,7 +105,7 @@ $$
 
 is a legal column-order descending chain, but not an expansion chain. The standard-domain restriction in the second conclusion cannot be dropped.
 
-The paper's axiom bound is $KP_\omega+\text{“there exists an uncountable ordinal”}$, with full Set Induction and without Power Set or Choice. The actual ordinary Lean proof has compiled; its final axiom reports use only `propext`, `Classical.choice`, and `Quot.sound`. This is **not** a Lean encoding of the weak theory's syntax and an internal derivation in that theory. The [definition-fidelity module](../../lean/src/ARD2DefinitionFidelity.lean) connects the finite paper rule and its reachable domain to the Lean definitions; it is not a proof about a Python or JavaScript virtual machine. See the repository [validation record](../../VALIDATION.md) for verification status.
+The paper's axiom bound is $KP_\omega+\text{“there exists an uncountable ordinal”}$, with full Set Induction and without Power Set or Choice. The actual ordinary Lean proof has compiled; its final axiom reports use only `propext`, `Classical.choice`, and `Quot.sound`. This is **not** a Lean encoding of the weak theory's syntax and an internal derivation in that theory. The [definition-fidelity module](../../lean/ARD2/src/ARD2DefinitionFidelity.lean) connects the finite paper rule and its reachable domain to the Lean definitions; it is not a proof about a Python or JavaScript virtual machine. See the repository [validation record](../../VALIDATION.md) for verification status.
 
 No inequality between ARD2 and ARD, RPD, Y, wY or IPD is established here. In particular, the name “ARD2,” shared proof methods and larger finite counts do not prove a larger ordinal or an initial-segment relationship. The axiom bound is not claimed to be optimal.
 

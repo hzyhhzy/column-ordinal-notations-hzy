@@ -1,0 +1,2394 @@
+{
+  "schema_version": 2,
+  "policy": "independent-lean-v2.1",
+  "project": "IPD",
+  "targets": [
+    "IPDStandardOrder",
+    "IPDTreeCompare"
+  ],
+  "compiler": "Lean (version 4.33.1, x86_64-w64-windows-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "environment": {
+    "policy": "independent-lean-v2.1",
+    "verifier_sha256_lf": "7f9880d9bbf7aac16820c6e1aa6e0f1a41a000e06b363c0550f84acdde23ce69",
+    "compiler_version_output": "Lean (version 4.33.1, x86_64-w64-windows-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)\n",
+    "compiler_executable_sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+    "actual_compiler_sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+    "lean_sysroot_artifacts": {
+      "sha256": "d04cc0492704687a64762644e65d0f69f7ea656917ed9c9c0382007f791f9486",
+      "olean_files": 2485,
+      "import_sidecars": 9932,
+      "runtime_binaries": 20,
+      "bytes": 2504109528
+    },
+    "dependency_revisions": [
+      {
+        "name": "Cli",
+        "scope": "leanprover",
+        "url": "https://github.com/leanprover/lean4-cli",
+        "rev": "da07ca808b6718cb2aed14dba154e5a08b8f8ecf",
+        "subDir": null
+      },
+      {
+        "name": "LeanSearchClient",
+        "scope": "leanprover-community",
+        "url": "https://github.com/leanprover-community/LeanSearchClient",
+        "rev": "0498c7c070c143a3bf7379f4d99a2c63bb9d9715",
+        "subDir": null
+      },
+      {
+        "name": "Qq",
+        "scope": "leanprover-community",
+        "url": "https://github.com/leanprover-community/quote4",
+        "rev": "ee41917ae11d38479fb8fb24745f7ca4bf0a784d",
+        "subDir": null
+      },
+      {
+        "name": "aesop",
+        "scope": "leanprover-community",
+        "url": "https://github.com/leanprover-community/aesop",
+        "rev": "57d3325be72a842920813bcb40f96a6f7393c185",
+        "subDir": null
+      },
+      {
+        "name": "batteries",
+        "scope": "leanprover-community",
+        "url": "https://github.com/leanprover-community/batteries",
+        "rev": "2c810760f0a0c4536b397dbe30ca9b2f2f467366",
+        "subDir": null
+      },
+      {
+        "name": "importGraph",
+        "scope": "leanprover-community",
+        "url": "https://github.com/leanprover-community/import-graph",
+        "rev": "18a90119a5d316358fde6c86e0ca24e59212e32c",
+        "subDir": null
+      },
+      {
+        "name": "mathlib",
+        "scope": "",
+        "url": "https://github.com/leanprover-community/mathlib4",
+        "rev": "eba3d887fc52c98627f4b81507c0efc3096e91b9",
+        "subDir": null
+      },
+      {
+        "name": "plausible",
+        "scope": "leanprover-community",
+        "url": "https://github.com/leanprover-community/plausible",
+        "rev": "b1c4a69a7e247ab7df20460212001673d74f08c0",
+        "subDir": null
+      },
+      {
+        "name": "proofwidgets",
+        "scope": "leanprover-community",
+        "url": "https://github.com/leanprover-community/ProofWidgets4",
+        "rev": "b1436dc749e722c9920036b52cdc43b3451d0b69",
+        "subDir": null
+      }
+    ],
+    "external_artifact_trees": [
+      {
+        "sha256": "ae1673c16d2c7e830e297b9a7e38fc849c460c9edbbeb121bcfadc606f43b659",
+        "olean_files": 891,
+        "import_sidecars": 3564,
+        "runtime_binaries": 0,
+        "bytes": 632811040
+      },
+      {
+        "sha256": "d10db2ebb7034785083b6ed744a8d90b7ed1ad0f25588a1bc578f0fe28781890",
+        "olean_files": 132,
+        "import_sidecars": 528,
+        "runtime_binaries": 0,
+        "bytes": 97139296
+      },
+      {
+        "sha256": "2c74cfe6e4efc42293fbdadb5ad85aa7ffe82fe958feecc929ba1ae3c9d1525f",
+        "olean_files": 76,
+        "import_sidecars": 304,
+        "runtime_binaries": 0,
+        "bytes": 60442344
+      },
+      {
+        "sha256": "ffcb0362823bfd773d7f4cca94fa7b50112e26404c1196574d6e41bf78de46b1",
+        "olean_files": 10,
+        "import_sidecars": 40,
+        "runtime_binaries": 0,
+        "bytes": 3969424
+      },
+      {
+        "sha256": "8b3694c06c82edbdc455510cbf5c3b21197c4c837d05c079a63e1b217ab806de",
+        "olean_files": 4,
+        "import_sidecars": 16,
+        "runtime_binaries": 0,
+        "bytes": 3709664
+      },
+      {
+        "sha256": "33d7982f26de9c28cf4720e2785782f2edf16bfdf9a112ee19bfd63b4e41a8da",
+        "olean_files": 13,
+        "import_sidecars": 52,
+        "runtime_binaries": 0,
+        "bytes": 9612688
+      },
+      {
+        "sha256": "bc9e5c291008e5ca35d5a11d9c498747d9539d8ccd6e4b84f8d0747ce973dd04",
+        "olean_files": 10,
+        "import_sidecars": 40,
+        "runtime_binaries": 0,
+        "bytes": 7180080
+      },
+      {
+        "sha256": "771b289781a2b528f335e5afeadd5ef9c6b792d17d3f77b978372c4b646bdbdc",
+        "olean_files": 14,
+        "import_sidecars": 56,
+        "runtime_binaries": 0,
+        "bytes": 15721952
+      }
+    ]
+  },
+  "inputs": {
+    "lean/IPD/lakefile.lean": "8ba92a6da998258e736b768265a8593a4c344f3990f3969567f396a0fbb88dfc",
+    "lean/IPD/lake-manifest.json": "8c26a4c172ed54892430528f345a15ed99799fde6cf19b62ea13ed8dd28de252",
+    "lean/IPD/lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71",
+    "lean/IPD/sources.json": "83ecd64defb3a99b17a76392f895a2d049bd1374f9d07ad01c9327e3655ce38c",
+    "lean/IPD/build.py": "b094699d71583fd2701ebcfa86cd65f425eac23ca6f8e1151d7ef4c461592e6b",
+    "lean/verification_core.py": "7f9880d9bbf7aac16820c6e1aa6e0f1a41a000e06b363c0550f84acdde23ce69"
+  },
+  "owner_inputs": {
+    "shared": {
+      "lean/shared/lakefile.lean": "0862bf7d07399ede04dbd3df9812d14e6c02353631bfae46fe2248fae6344f5b",
+      "lean/shared/lake-manifest.json": "23cc0df8a87b0d5940269c60ba49efe968a49ec2909e2de2e18354933337617b",
+      "lean/shared/lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    },
+    "IPD": {
+      "lean/IPD/lakefile.lean": "8ba92a6da998258e736b768265a8593a4c344f3990f3969567f396a0fbb88dfc",
+      "lean/IPD/lake-manifest.json": "8c26a4c172ed54892430528f345a15ed99799fde6cf19b62ea13ed8dd28de252",
+      "lean/IPD/lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  "closure_sha256": "3d04a13ba30ab5ea81d34dffc574c26ee5b31cac6e6357c763805ccc2f0ee9c0",
+  "complete": true,
+  "modules": {
+    "IPDTree": {
+      "fingerprint": "63c281a7d1875c25a9e2cb22537bed276e1fc5fa7f24efdf6b16a6bfb94deace",
+      "olean_sha256": "b33c9ef59310c2f480d9879aa09ed39efd4fa091a04c13fad772dfcb6f7c3c3a",
+      "artifact_bundle": {
+        ".olean": "b33c9ef59310c2f480d9879aa09ed39efd4fa091a04c13fad772dfcb6f7c3c3a"
+      },
+      "log_sha256_lf": "de2e1e8578ea677c69a4cc49b775f6542309d80f1bc5492aa16b5a32b4f88414",
+      "reports": [
+        {
+          "requested": "IPD.Tree.zero_acc",
+          "name": "IPD.Tree.zero_acc",
+          "axioms": []
+        }
+      ],
+      "axiom_reports": 1,
+      "seconds": 7.734,
+      "certification": "fresh-source-compilation"
+    },
+    "IPDTreeWellFounded": {
+      "fingerprint": "a9e43c30f45640763b0a7f317388cd216c095f86906a212ebbcea34e27db54b7",
+      "olean_sha256": "f1f220439e21ea323079a93cc21e238fd52f0b7123a2eb80f82e18239b426faf",
+      "artifact_bundle": {
+        ".olean": "f1f220439e21ea323079a93cc21e238fd52f0b7123a2eb80f82e18239b426faf"
+      },
+      "log_sha256_lf": "cfc4cc9ba31d3ac4823e4d6366e5a85948a4a26773c64c7c725693046d1e5a6c",
+      "reports": [
+        {
+          "requested": "IPD.Tree.node_acc",
+          "name": "IPD.Tree.node_acc",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Tree.lpo_wellFounded",
+          "name": "IPD.Tree.lpo_wellFounded",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Tree.lpo_irrefl",
+          "name": "IPD.Tree.lpo_irrefl",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 3,
+      "seconds": 7.578,
+      "certification": "fresh-source-compilation"
+    },
+    "IPDTreeOrder": {
+      "fingerprint": "44ddf2edf5209fadbff932fbb9e541fba61bf62a8f81842d453d474796e7b5a6",
+      "olean_sha256": "e1a4a26fa72b7ac557bf5607afe7572950835608306f4f4340a71b4ec443a8b6",
+      "artifact_bundle": {
+        ".olean": "e1a4a26fa72b7ac557bf5607afe7572950835608306f4f4340a71b4ec443a8b6"
+      },
+      "log_sha256_lf": "99d0a429050206262a14785e80c7febbd2120c4eb5a86f8ef7ef472673b09976",
+      "reports": [
+        {
+          "requested": "IPD.Tree.lpo_trichotomy",
+          "name": "IPD.Tree.lpo_trichotomy",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Tree.lpo_trans",
+          "name": "IPD.Tree.lpo_trans",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Tree.leaf_lt_nonleaf",
+          "name": "IPD.Tree.leaf_lt_nonleaf",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 3,
+      "seconds": 7.606,
+      "certification": "fresh-source-compilation"
+    },
+    "IPDTreeLinearOrder": {
+      "fingerprint": "aa2e77fc1ede51bbb6554a64e5b6f5fa3ced9aff6258e88a265bbfff33a7bb07",
+      "olean_sha256": "eaca1f1907faac59802b98f23816e8b28e8b03b42fbf0e72ad75ec9ab15604a8",
+      "artifact_bundle": {
+        ".olean": "eaca1f1907faac59802b98f23816e8b28e8b03b42fbf0e72ad75ec9ab15604a8"
+      },
+      "log_sha256_lf": "703f15838455dfa0fb64cf16bcc2321f088b6362adee3c6813222b01e8b682e1",
+      "reports": [
+        {
+          "requested": "IPD.Tree.linearOrder",
+          "name": "IPD.Tree.linearOrder",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Tree.wellFoundedLT",
+          "name": "IPD.Tree.wellFoundedLT",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Tree.lt_iff_lpo",
+          "name": "IPD.Tree.lt_iff_lpo",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 3,
+      "seconds": 7.583,
+      "certification": "fresh-source-compilation"
+    },
+    "IPDTreeRename": {
+      "fingerprint": "ac47c82792fec472a934ee0c8d6adc5bc4aea5314cb07202c2b025c23476e32d",
+      "olean_sha256": "6922662048b16cc284c17ba64fc5084e743e6a5d9b122989e1ca637901fd9f59",
+      "artifact_bundle": {
+        ".olean": "6922662048b16cc284c17ba64fc5084e743e6a5d9b122989e1ca637901fd9f59"
+      },
+      "log_sha256_lf": "87e46cf1e09c893811f5a6fa41c16fe91e0530928e2df01da1fa04a9022458d4",
+      "reports": [
+        {
+          "requested": "IPD.Tree.rename_comp",
+          "name": "IPD.Tree.rename_comp",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Tree.rename_lpo",
+          "name": "IPD.Tree.rename_lpo",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Tree.rename_lpo_iff",
+          "name": "IPD.Tree.rename_lpo_iff",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Tree.rename_injective",
+          "name": "IPD.Tree.rename_injective",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 4,
+      "seconds": 7.714,
+      "certification": "fresh-source-compilation"
+    },
+    "IPDProfileOrder": {
+      "fingerprint": "d9de06a43698b682ed87cecfe56efd1051c504d799fe28830df86fb237b86fe1",
+      "olean_sha256": "b488afff7fa3d91f4620c23793dec2283b4997012c71f950f912677391ce3e9c",
+      "artifact_bundle": {
+        ".olean": "b488afff7fa3d91f4620c23793dec2283b4997012c71f950f912677391ce3e9c"
+      },
+      "log_sha256_lf": "608fc4499fd051bcad22e274f21004438247a3c7c2636ff55d9bcec8dcb63ee2",
+      "reports": [
+        {
+          "requested": "IPD.layer_wellFounded",
+          "name": "IPD.layer_wellFounded",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.profile_wellFounded",
+          "name": "IPD.profile_wellFounded",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.profile_lt_of_level_lt",
+          "name": "IPD.profile_lt_of_level_lt",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 3,
+      "seconds": 7.612,
+      "certification": "fresh-source-compilation"
+    },
+    "IPDProfileRename": {
+      "fingerprint": "d8b1f5cffa4d04c62490d79766f29d468abe00d06a7c4a640828fe2f2f039eda",
+      "olean_sha256": "5d59a6dbb76d93aaf39f54e70d0009a7928ddb11b49f6366410111d14de5472d",
+      "artifact_bundle": {
+        ".olean": "5d59a6dbb76d93aaf39f54e70d0009a7928ddb11b49f6366410111d14de5472d"
+      },
+      "log_sha256_lf": "a8b3b4f0c1df5b2c96d9f43c54bb28fc3af90bb440ff1aaea9ebdbd17eafa7bd",
+      "reports": [
+        {
+          "requested": "IPD.Layer.rename_strictMono",
+          "name": "IPD.Layer.rename_strictMono",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.renameProfile_strictMono",
+          "name": "IPD.renameProfile_strictMono",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.renameProfile_lt_iff",
+          "name": "IPD.renameProfile_lt_iff",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 3,
+      "seconds": 7.637,
+      "certification": "fresh-source-compilation"
+    },
+    "IPDTreeLocalRename": {
+      "fingerprint": "07033dc7c9333d09d1096da1984e13ae3ca64c10ccb95231afff78a32b3b8cc3",
+      "olean_sha256": "4ddb38d5f1f01d47199502849665c98372e434394b288997a27beb20e0235cbb",
+      "artifact_bundle": {
+        ".olean": "4ddb38d5f1f01d47199502849665c98372e434394b288997a27beb20e0235cbb"
+      },
+      "log_sha256_lf": "b85abf29a03849761d2a45b8456aa0b854463e8ba5741e63a510b32867d4c309",
+      "reports": [
+        {
+          "requested": "IPD.Tree.rename_lpo_on",
+          "name": "IPD.Tree.rename_lpo_on",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Tree.rename_lpo_iff_on",
+          "name": "IPD.Tree.rename_lpo_iff_on",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 2,
+      "seconds": 7.65,
+      "certification": "fresh-source-compilation"
+    },
+    "IPDProfileAtoms": {
+      "fingerprint": "cbe298f6ffd06b9acb2ed828f5427ce142b6d4f89ab6293b4343692b3b918565",
+      "olean_sha256": "8c95c31ca29e236a84489c84de49c5a57f3cde83359f75902eccb7a695335af1",
+      "artifact_bundle": {
+        ".olean": "8c95c31ca29e236a84489c84de49c5a57f3cde83359f75902eccb7a695335af1"
+      },
+      "log_sha256_lf": "c13938d02c233cfb1f1f388d50a3631934472021bf356c4683abe7b4f2498ee8",
+      "reports": [
+        {
+          "requested": "IPD.Layer.rename_lt_iff_on",
+          "name": "IPD.Layer.rename_lt_iff_on",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.renameProfile_lt_iff_on",
+          "name": "IPD.renameProfile_lt_iff_on",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 2,
+      "seconds": 7.633,
+      "certification": "fresh-source-compilation"
+    },
+    "IPDTreeLowerClosure": {
+      "fingerprint": "6e770d8a269a8bf2bc5727a6e98c1d19a7bb463ce81d28a008d65903bd483466",
+      "olean_sha256": "87ba4a99667760c707a8ac1805360832278c56547e2356263aa11dc9c8c820e7",
+      "artifact_bundle": {
+        ".olean": "87ba4a99667760c707a8ac1805360832278c56547e2356263aa11dc9c8c820e7"
+      },
+      "log_sha256_lf": "d6e823d9bc5bfb0423b71f3aed4b4ab7e2ddf9ef8ab1f240b0f13b2b79a8bc12",
+      "reports": [
+        {
+          "requested": "IPD.Tree.replacements_properties",
+          "name": "IPD.Tree.replacements_properties",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Tree.closureRound_lt",
+          "name": "IPD.Tree.closureRound_lt",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Tree.rounds_lt",
+          "name": "IPD.Tree.rounds_lt",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 3,
+      "seconds": 7.722,
+      "certification": "fresh-source-compilation"
+    },
+    "IPDTreeLower": {
+      "fingerprint": "d9396ebb881cd3c90957d8ad81d324928184358771d9025b17039164009dff54",
+      "olean_sha256": "f486c385b250364f417a4cbeb2de5b877e31738432df2360cc8c4530f59208aa",
+      "artifact_bundle": {
+        ".olean": "f486c385b250364f417a4cbeb2de5b877e31738432df2360cc8c4530f59208aa"
+      },
+      "log_sha256_lf": "220ba75c1c1aa5a0f9e6674952041dbe0fc85defb2748ed552c3ccd0857e1dc6",
+      "reports": [
+        {
+          "requested": "IPD.Tree.lower_lt",
+          "name": "IPD.Tree.lower_lt",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Tree.lower_none_iff",
+          "name": "IPD.Tree.lower_none_iff",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 2,
+      "seconds": 7.73,
+      "certification": "fresh-source-compilation"
+    },
+    "IPDProfileLower": {
+      "fingerprint": "7f140a4389ab1080925ee51281cf8824cc5325a88cc756de5f44378e33e2d882",
+      "olean_sha256": "34ff150e28a2252f6396f974dac83cfe314662c329913874692ff6bd7771f90e",
+      "artifact_bundle": {
+        ".olean": "34ff150e28a2252f6396f974dac83cfe314662c329913874692ff6bd7771f90e"
+      },
+      "log_sha256_lf": "4fb31f03725dc546d5465c1a4d6c8939f02464f757ed0d13aab18b14b9e48663",
+      "reports": [
+        {
+          "requested": "IPD.Layer.lower_lt",
+          "name": "IPD.Layer.lower_lt",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.lowerProfile_lt",
+          "name": "IPD.lowerProfile_lt",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 2,
+      "seconds": 7.646,
+      "certification": "fresh-source-compilation"
+    },
+    "IPDGraphCore": {
+      "fingerprint": "5605c12e37b455837b1e72238d0645b91b849425424de33f9b2aaafb1d2543d8",
+      "olean_sha256": "fd2750e8cafa81e6a12925345a23fb6a4fa043c765be7ab2f40130a0cf92e749",
+      "artifact_bundle": {
+        ".olean": "fd2750e8cafa81e6a12925345a23fb6a4fa043c765be7ab2f40130a0cf92e749"
+      },
+      "log_sha256_lf": "3b519ea6a33990034fb32fa91bf3a12258e3bab409afbe1aba6cecc61af7b41c",
+      "reports": [
+        {
+          "requested": "IPD.shift_strictMono",
+          "name": "IPD.shift_strictMono",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.expand_zero",
+          "name": "IPD.expand_zero",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.expand_prefix",
+          "name": "IPD.expand_prefix",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.blocks_length",
+          "name": "IPD.blocks_length",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 4,
+      "seconds": 7.721,
+      "certification": "fresh-source-compilation"
+    },
+    "IPDProfileCountable": {
+      "fingerprint": "27988e906ded1797f98f8fff3c080b6647f645f6321f62bf89c8537b9fe82427",
+      "olean_sha256": "be782df046367026de72edfb854bee4c564daf2cc7758ce53ef57ffc19bb7d89",
+      "artifact_bundle": {
+        ".olean": "be782df046367026de72edfb854bee4c564daf2cc7758ce53ef57ffc19bb7d89"
+      },
+      "log_sha256_lf": "4f518ca9d828443a31d1daf8a3ccccd1ec1e1f9af7a7d812e7893199b4bd9a8d",
+      "reports": [
+        {
+          "requested": "IPD.Tree.code_injective",
+          "name": "IPD.Tree.code_injective",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.profileCountable",
+          "name": "IPD.profileCountable",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 2,
+      "seconds": 7.9,
+      "certification": "fresh-source-compilation"
+    },
+    "IPDDemandCore": {
+      "fingerprint": "e7a88737b92e1fa2aa305127bc7edab65227aa86c47e602c37fba04592149475",
+      "olean_sha256": "e0aea64ead4329fe22d7e981204034e990be03c346db2159ebefc7febfddb3a5",
+      "artifact_bundle": {
+        ".olean": "e0aea64ead4329fe22d7e981204034e990be03c346db2159ebefc7febfddb3a5"
+      },
+      "log_sha256_lf": "3df8cf47921a8f38b0e1a8743079449c9400ff43b67f513c44a1671f84d02d59",
+      "reports": [
+        {
+          "requested": "IPD.Semantics.earlier_wellFounded",
+          "name": "IPD.Semantics.earlier_wellFounded",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Semantics.shapeCountable",
+          "name": "IPD.Semantics.shapeCountable",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Semantics.rule_congr",
+          "name": "IPD.Semantics.rule_congr",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 3,
+      "seconds": 8.026,
+      "certification": "fresh-source-compilation"
+    },
+    "IPDDemandRecursion": {
+      "fingerprint": "b3db54bbda99ff13f9555acbc2ee2b96dd6dd24c798ebb76b1a3e100088bfdac",
+      "olean_sha256": "cb73d18ed8e78342907192dca37e9de1b57ac4adf008befa0d6e9bd6bcb5ea4e",
+      "artifact_bundle": {
+        ".olean": "cb73d18ed8e78342907192dca37e9de1b57ac4adf008befa0d6e9bd6bcb5ea4e"
+      },
+      "log_sha256_lf": "9d578df73fa27b4e27008ac997b263f19d405330ff9653c6d59fd0891a848a97",
+      "reports": [
+        {
+          "requested": "IPD.Semantics.relation_iff",
+          "name": "IPD.Semantics.relation_iff",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Semantics.profile_weaken",
+          "name": "IPD.Semantics.profile_weaken",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Semantics.finite_reflection",
+          "name": "IPD.Semantics.finite_reflection",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 3,
+      "seconds": 7.932,
+      "certification": "fresh-source-compilation"
+    },
+    "IPDTreeSupport": {
+      "fingerprint": "2c606acb649a5b657a080711327821511a1e0cf5b28caf39c5e3859b556392a6",
+      "olean_sha256": "3e7ca9835bc275d2dc5b13a9f10d7e50c6ab0abd51392a2f75f1350cd5581338",
+      "artifact_bundle": {
+        ".olean": "3e7ca9835bc275d2dc5b13a9f10d7e50c6ab0abd51392a2f75f1350cd5581338"
+      },
+      "log_sha256_lf": "9e05513b2eed5d3bc50c01c14e3d7b9a49454295653d4e5163a79ed8ed2f54ce",
+      "reports": [
+        {
+          "requested": "IPD.Tree.all_rename",
+          "name": "IPD.Tree.all_rename",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Tree.closureRound_all",
+          "name": "IPD.Tree.closureRound_all",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Tree.lower_all",
+          "name": "IPD.Tree.lower_all",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 3,
+      "seconds": 7.75,
+      "certification": "fresh-source-compilation"
+    },
+    "IPDProfileValidity": {
+      "fingerprint": "64aa0d9e0c4cc3ad88fc21862351008111f6143e9e1970dfb819f462eb6830b0",
+      "olean_sha256": "df0486ce59808af78a267f0244dc485ac2c5c0953f002d465a6d7221bb5075cb",
+      "artifact_bundle": {
+        ".olean": "df0486ce59808af78a267f0244dc485ac2c5c0953f002d465a6d7221bb5075cb"
+      },
+      "log_sha256_lf": "ec43f5b7e274621e98eec01e767a37c520744a7656ccadfe453c84bc76fb8e31",
+      "reports": [
+        {
+          "requested": "IPD.Layer.rename_all",
+          "name": "IPD.Layer.rename_all",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Layer.lower_valid",
+          "name": "IPD.Layer.lower_valid",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.lowerProfile_valid",
+          "name": "IPD.lowerProfile_valid",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 3,
+      "seconds": 7.748,
+      "certification": "fresh-source-compilation"
+    },
+    "IPDProfileSubstitution": {
+      "fingerprint": "ad29467115f16438f86c1e954b26266cbb0438ea212b0fba10f4d11c2bce54f3",
+      "olean_sha256": "df567b784890512516f4fd42c8b532dde62dd7e0107be25c8b49e397c62f067a",
+      "artifact_bundle": {
+        ".olean": "df567b784890512516f4fd42c8b532dde62dd7e0107be25c8b49e397c62f067a"
+      },
+      "log_sha256_lf": "a19e435c95cd6c6a95543111695a991ec632837609490307a2899430bc9642f4",
+      "reports": [
+        {
+          "requested": "IPD.renameProfile_comp",
+          "name": "IPD.renameProfile_comp",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.renameProfile_congr_on",
+          "name": "IPD.renameProfile_congr_on",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.profileAtoms_mono",
+          "name": "IPD.profileAtoms_mono",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 3,
+      "seconds": 7.719,
+      "certification": "fresh-source-compilation"
+    },
+    "IPDTemplates": {
+      "fingerprint": "a9f441c71dea105c96441b8ca84d0f9756ad3311a0537dbec4971e032c496ca2",
+      "olean_sha256": "b805cb37caede6ebd0f928fb57a8417c095eadc9b7259853d95b1344496da8c6",
+      "artifact_bundle": {
+        ".olean": "b805cb37caede6ebd0f928fb57a8417c095eadc9b7259853d95b1344496da8c6"
+      },
+      "log_sha256_lf": "3bd95f8c10f73f1a591a29731ffa91c821b1bbcd6f462d378624909ac886614f",
+      "reports": [
+        {
+          "requested": "IPD.Semantics.templateCountable",
+          "name": "IPD.Semantics.templateCountable",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Semantics.Template.eval_relocate",
+          "name": "IPD.Semantics.Template.eval_relocate",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Semantics.template_lt_endpoint_iff",
+          "name": "IPD.Semantics.template_lt_endpoint_iff",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Semantics.template_valid_endpoint_iff",
+          "name": "IPD.Semantics.template_valid_endpoint_iff",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 4,
+      "seconds": 8.132,
+      "certification": "fresh-source-compilation"
+    },
+    "IPDWitnesses": {
+      "fingerprint": "3fc92306eb4d34a3cbcd6f695f5cb09d15951c7da784a952059a69403775d104",
+      "olean_sha256": "9735050cccc446354f272eeabc92a084c44d0c83d395487b693974e6167c51d8",
+      "artifact_bundle": {
+        ".olean": "9735050cccc446354f272eeabc92a084c44d0c83d395487b693974e6167c51d8"
+      },
+      "log_sha256_lf": "ad823c33c8c6877a7f71ee58ed7498b4aeaa535678a94a517189379bbb491b78",
+      "reports": [
+        {
+          "requested": "IPD.Semantics.exists_bad",
+          "name": "IPD.Semantics.exists_bad",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Semantics.leastBad_spec",
+          "name": "IPD.Semantics.leastBad_spec",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Semantics.badOp_lt",
+          "name": "IPD.Semantics.badOp_lt",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Semantics.leastExtension_spec",
+          "name": "IPD.Semantics.leastExtension_spec",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Semantics.extOp_lt",
+          "name": "IPD.Semantics.extOp_lt",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 5,
+      "seconds": 8.219,
+      "certification": "fresh-source-compilation"
+    },
+    "IPDEndpointAgreement": {
+      "fingerprint": "3a442cb8926a068f3a1266935c140c2246894ef8ccf2000e827879eb0d645a4d",
+      "olean_sha256": "0a16f09baf686300cce91967ba5f7d3a1e7ffd11bc34527e522874f10f88d542",
+      "artifact_bundle": {
+        ".olean": "0a16f09baf686300cce91967ba5f7d3a1e7ffd11bc34527e522874f10f88d542"
+      },
+      "log_sha256_lf": "d5d9d17238a04a3f52c98f1aaef52d187a97c3cb4e8430ffd241ecfc6f8b9a95",
+      "reports": [
+        {
+          "requested": "IPD.Semantics.admissible_endpoint_iff",
+          "name": "IPD.Semantics.admissible_endpoint_iff",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Semantics.endpoint_agreement",
+          "name": "IPD.Semantics.endpoint_agreement",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Semantics.closed_reflects",
+          "name": "IPD.Semantics.closed_reflects",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Semantics.closed_heights_related",
+          "name": "IPD.Semantics.closed_heights_related",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 4,
+      "seconds": 8.041,
+      "certification": "fresh-source-compilation"
+    },
+    "FiniteDemandFinitaryClosure": {
+      "fingerprint": "e887161670498b406306c185b8a4278471c40d04ca63ee9935fb0cab417b664b",
+      "olean_sha256": "6ed1892fd1d939628989cfc828228244dbfcabae77a782a656937fb212e868e1",
+      "artifact_bundle": {
+        ".olean": "6ed1892fd1d939628989cfc828228244dbfcabae77a782a656937fb212e868e1"
+      },
+      "log_sha256_lf": "1420a516ec64fbf43bf8e60063c4847fe2db0ae98871b091bd8ac7df7e2a2ddb",
+      "reports": [
+        {
+          "requested": "FiniteDemand.FinitaryClosure.apply_mem",
+          "name": "FiniteDemand.FinitaryClosure.apply_mem",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.FinitaryClosure.countable",
+          "name": "FiniteDemand.FinitaryClosure.countable",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.FinitaryClosure.invariant",
+          "name": "FiniteDemand.FinitaryClosure.invariant",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 3,
+      "seconds": 7.585,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "FiniteDemandOrdinalHeight": {
+      "fingerprint": "c271e75cf468665ec51eab1c906584986c191ca3db328c93b74bf404e944d7b3",
+      "olean_sha256": "250fd388497ce57be6a01772c9ce5ea512ec6e4dd979c6242a19cfefa7c8b33d",
+      "artifact_bundle": {
+        ".olean": "250fd388497ce57be6a01772c9ce5ea512ec6e4dd979c6242a19cfefa7c8b33d"
+      },
+      "log_sha256_lf": "ce82958d0245c935b5779df76b58add1e7792feb8c8d06910c8a89eb33bd73e7",
+      "reports": [
+        {
+          "requested": "FiniteDemand.OrdinalHeight.mem_iff_lt",
+          "name": "FiniteDemand.OrdinalHeight.mem_iff_lt",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.OrdinalHeight.height_lt",
+          "name": "FiniteDemand.OrdinalHeight.height_lt",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 2,
+      "seconds": 7.837,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "IPDClosedSupply": {
+      "fingerprint": "664aadf4f8d8ca025868ab0a79abbf0a3a715f5c599f4e6d3519b5a1b4858842",
+      "olean_sha256": "f8527571131d05825cdc9c49a7af897b1188e8e26a391b590241380f96103101",
+      "artifact_bundle": {
+        ".olean": "f8527571131d05825cdc9c49a7af897b1188e8e26a391b590241380f96103101"
+      },
+      "log_sha256_lf": "cac34624bd02e4cf19a142f3d64872a05b825370ddc66adeea7661246f3ae37a",
+      "reports": [
+        {
+          "requested": "IPD.Semantics.ClosedSupply.hull_countable",
+          "name": "IPD.Semantics.ClosedSupply.hull_countable",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Semantics.ClosedSupply.hull_downward",
+          "name": "IPD.Semantics.ClosedSupply.hull_downward",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Semantics.ClosedSupply.nextHeight_spec",
+          "name": "IPD.Semantics.ClosedSupply.nextHeight_spec",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Semantics.ClosedSupply.exists_closed_above",
+          "name": "IPD.Semantics.ClosedSupply.exists_closed_above",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 4,
+      "seconds": 8.073,
+      "certification": "fresh-source-compilation"
+    },
+    "IPDFiniteLabels": {
+      "fingerprint": "52af638984cc09e70099fd2f4d569ff684c53e1569590fcb296f82d8d27d34cb",
+      "olean_sha256": "9cff66664bf7a25e5216f22c6027a4662d89b197e1bc678afd3c69f90a4ff37a",
+      "artifact_bundle": {
+        ".olean": "9cff66664bf7a25e5216f22c6027a4662d89b197e1bc678afd3c69f90a4ff37a"
+      },
+      "log_sha256_lf": "a5958067d9ba56095518986a903985ad31cdbc108494786d1f7d897225a3501e",
+      "reports": [
+        {
+          "requested": "IPD.Semantics.representation_labels",
+          "name": "IPD.Semantics.representation_labels",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Semantics.Template.ofEdge_eval",
+          "name": "IPD.Semantics.Template.ofEdge_eval",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Semantics.finite_reflection_nat",
+          "name": "IPD.Semantics.finite_reflection_nat",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 3,
+      "seconds": 8.028,
+      "certification": "fresh-source-compilation"
+    },
+    "OrdinalFormal.ReflectionTransport": {
+      "fingerprint": "efbc63b453b38322c673f4cc3b30d4ed837b196c0255a4b3c8592f4c0a19700f",
+      "olean_sha256": "ba8046511bb0bdc39cf87521a6dbf22b41487ed0a153e146574b84eb30ab15f3",
+      "artifact_bundle": {
+        ".olean": "ba8046511bb0bdc39cf87521a6dbf22b41487ed0a153e146574b84eb30ab15f3"
+      },
+      "log_sha256_lf": "001a3bac01b4b34a73a70d56f19b22946b1a895d9f1cfe57dbbf7d11f0badd15",
+      "reports": [
+        {
+          "requested": "representation_splice",
+          "name": "OrdinalFormal.ReflectionTransport.representation_splice",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "virtual_demands_from_templates",
+          "name": "OrdinalFormal.ReflectionTransport.virtual_demands_from_templates",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "exists_bounded_representation_splice",
+          "name": "OrdinalFormal.ReflectionTransport.exists_bounded_representation_splice",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "blockScheme_bounded_representations",
+          "name": "OrdinalFormal.ReflectionTransport.blockScheme_bounded_representations",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "wellFounded_of_lowerable_labels",
+          "name": "OrdinalFormal.ReflectionTransport.wellFounded_of_lowerable_labels",
+          "axioms": []
+        },
+        {
+          "requested": "exists_bounded_representation_splice_with_lower_rows",
+          "name": "OrdinalFormal.ReflectionTransport.exists_bounded_representation_splice_with_lower_rows",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "generatedBlockScheme_bounded_representations",
+          "name": "OrdinalFormal.ReflectionTransport.generatedBlockScheme_bounded_representations",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "representation_rootWeakening",
+          "name": "OrdinalFormal.ReflectionTransport.representation_rootWeakening",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "diagram_step_wellFounded_of_initial_and_lowering",
+          "name": "OrdinalFormal.ReflectionTransport.diagram_step_wellFounded_of_initial_and_lowering",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "bounded_representation_of_proper_prefix",
+          "name": "OrdinalFormal.ReflectionTransport.bounded_representation_of_proper_prefix",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 10,
+      "seconds": 3.516,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "FiniteDemandCore": {
+      "fingerprint": "543211a1c1f6d54beb8d55d6d4d358179450eba2ca5ed609f1601e27ff36f49d",
+      "olean_sha256": "b9f54da9b8d79a761757f980b39af97f733b42a54172916a3c13bdbcad9b0f5b",
+      "artifact_bundle": {
+        ".olean": "b9f54da9b8d79a761757f980b39af97f733b42a54172916a3c13bdbcad9b0f5b"
+      },
+      "log_sha256_lf": "582110d0d6fe422d23d9fcd9b5bda09eb6aaa6e326bc992d39b3931b0101cf52",
+      "reports": [
+        {
+          "requested": "FiniteDemand.earlier_wellFounded",
+          "name": "FiniteDemand.earlier_wellFounded",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.representation_transfer",
+          "name": "FiniteDemand.representation_transfer",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.rule_congr",
+          "name": "FiniteDemand.rule_congr",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 3,
+      "seconds": 8.358,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "FiniteDemandRecursion": {
+      "fingerprint": "dbc661c594b0a545a51159cbc9d9133078416cf646dadb482e1d404e88f039ff",
+      "olean_sha256": "89165e3eafbd58d070ffd744eea8bf68af0cab4c8664aa50f9a86e66885df97f",
+      "artifact_bundle": {
+        ".olean": "89165e3eafbd58d070ffd744eea8bf68af0cab4c8664aa50f9a86e66885df97f"
+      },
+      "log_sha256_lf": "26d416718424a4170689b7317711d0c9e6d3ebd2a4a0b3762153a6135297b6b2",
+      "reports": [
+        {
+          "requested": "FiniteDemand.relation_iff",
+          "name": "FiniteDemand.relation_iff",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.relation_unique",
+          "name": "FiniteDemand.relation_unique",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 2,
+      "seconds": 8.173,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "FiniteDemandReflection": {
+      "fingerprint": "0f8c18aacd5b72f7bcfc120943dd46f65d9135f3774cc0677cd7c1af160acec1",
+      "olean_sha256": "d39c25e8691f15c3402bb421c8372d57347ab5845517b14e2434537f90c5b8a0",
+      "artifact_bundle": {
+        ".olean": "d39c25e8691f15c3402bb421c8372d57347ab5845517b14e2434537f90c5b8a0"
+      },
+      "log_sha256_lf": "86c0c215f412b41734db58fc8a5967e2bf6737aee40ae403567e7d6bf17ca773",
+      "reports": [
+        {
+          "requested": "FiniteDemand.strict",
+          "name": "FiniteDemand.strict",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.root_weaken",
+          "name": "FiniteDemand.root_weaken",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.lower_rows",
+          "name": "FiniteDemand.lower_rows",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.finite_reflection",
+          "name": "FiniteDemand.finite_reflection",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 4,
+      "seconds": 8.283,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "FiniteDemandWitnesses": {
+      "fingerprint": "5d6a6727cae3cb68abc009c8f5177daf3b2d3e2f52b37897033978aab2a48dd2",
+      "olean_sha256": "e3df5fdf919a758fc75f1476eca95124334c5e5eb5c3e8b7971ff0a5c72d17ac",
+      "artifact_bundle": {
+        ".olean": "e3df5fdf919a758fc75f1476eca95124334c5e5eb5c3e8b7971ff0a5c72d17ac"
+      },
+      "log_sha256_lf": "0cea0303d855fb815e012f37d7f93c6ffb6a2f68a5d7e64744c877296aca8f5c",
+      "reports": [
+        {
+          "requested": "FiniteDemand.exists_bad",
+          "name": "FiniteDemand.exists_bad",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.leastBad_spec",
+          "name": "FiniteDemand.leastBad_spec",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.badOp_lt",
+          "name": "FiniteDemand.badOp_lt",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.leastExtension_spec",
+          "name": "FiniteDemand.leastExtension_spec",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.extOp_lt",
+          "name": "FiniteDemand.extOp_lt",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 5,
+      "seconds": 8.941,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "FiniteDemandEndpointAgreement": {
+      "fingerprint": "a7de56483c7258578d8843eaf8df72256d098b34a2aaacdd360db33ee300f420",
+      "olean_sha256": "9cb3e16f719501b141e44a44c6223a7ab44fc48772e88ee39fd0afc6cc38e46e",
+      "artifact_bundle": {
+        ".olean": "9cb3e16f719501b141e44a44c6223a7ab44fc48772e88ee39fd0afc6cc38e46e"
+      },
+      "log_sha256_lf": "b065ae5619b8f8971e83236a959839bc96ce31221c35b8c5e39298fe41909467",
+      "reports": [
+        {
+          "requested": "FiniteDemand.endpoint_agreement",
+          "name": "FiniteDemand.endpoint_agreement",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.closed_reflects",
+          "name": "FiniteDemand.closed_reflects",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.closed_heights_related",
+          "name": "FiniteDemand.closed_heights_related",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 3,
+      "seconds": 8.604,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "FiniteDemandClosedSupply": {
+      "fingerprint": "2ab5e2867c9f7c2ebe9d176fe101572a75505695965ad26c428f496c15b1b900",
+      "olean_sha256": "d7c8dc940b17e6d9670302af373ea08b287c45e8ac8f2666ef539be0fe555e95",
+      "artifact_bundle": {
+        ".olean": "d7c8dc940b17e6d9670302af373ea08b287c45e8ac8f2666ef539be0fe555e95"
+      },
+      "log_sha256_lf": "d3ab526bce723f0e4bd0d1f41b5ac88a4a6aa325d6871cb484f9ac835b0cb8c6",
+      "reports": [
+        {
+          "requested": "FiniteDemand.ClosedSupply.hull_bounded",
+          "name": "FiniteDemand.ClosedSupply.hull_bounded",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.ClosedSupply.hull_downward",
+          "name": "FiniteDemand.ClosedSupply.hull_downward",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.ClosedSupply.nextHeight_spec",
+          "name": "FiniteDemand.ClosedSupply.nextHeight_spec",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.ClosedSupply.exists_closed_above",
+          "name": "FiniteDemand.ClosedSupply.exists_closed_above",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 4,
+      "seconds": 8.904,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "OrdinalFormal.Columns": {
+      "fingerprint": "2d4b456a162fd3e5dcf6c1ae88ee0355f8e85f23228b0116d7b292f3f705d69a",
+      "olean_sha256": "56fa959e79054fe81bacc145220e11c0101d646f1e9d9ce901bc2b88b485e7ac",
+      "artifact_bundle": {
+        ".olean": "56fa959e79054fe81bacc145220e11c0101d646f1e9d9ce901bc2b88b485e7ac"
+      },
+      "log_sha256_lf": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reports": [],
+      "axiom_reports": 0,
+      "seconds": 2.686,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "OrdinalFormal.ColumnRepresentation": {
+      "fingerprint": "9507b217d5b4de663361c1c4d35ffa38247f960c26e3dea0189cf32166834649",
+      "olean_sha256": "7361e6d0e8a4801bd3f8169c7ccdf004b5ef2c7f89f2d360544f5cd59e8a9ef3",
+      "artifact_bundle": {
+        ".olean": "7361e6d0e8a4801bd3f8169c7ccdf004b5ef2c7f89f2d360544f5cd59e8a9ef3"
+      },
+      "log_sha256_lf": "e117bd41620eb6ab3d6522281198927e71a4c8db02c73f129b19f76ffea29386",
+      "reports": [
+        {
+          "requested": "holds_iff_representation",
+          "name": "OrdinalFormal.ColumnRepresentation.holds_iff_representation",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "normalize_valid",
+          "name": "OrdinalFormal.ColumnRepresentation.normalize_valid",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "holds_normalize",
+          "name": "OrdinalFormal.ColumnRepresentation.holds_normalize",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "moveEntry_atom_succ",
+          "name": "OrdinalFormal.ColumnRepresentation.moveEntry_atom_succ",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "ordinarySeam_nat_guard",
+          "name": "OrdinalFormal.ColumnRepresentation.ordinarySeam_nat_guard",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 5,
+      "seconds": 2.805,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "FiniteDemandInitialRepresentation": {
+      "fingerprint": "b12140ee66d27df7860733eb4f4633bfe2f43b0ee2cf119c56751e0d87a8abe3",
+      "olean_sha256": "b4438d4abcb9eecc2e2c281a55cf3e4347cf91f3321f0438c45adb73d06f9996",
+      "artifact_bundle": {
+        ".olean": "b4438d4abcb9eecc2e2c281a55cf3e4347cf91f3321f0438c45adb73d06f9996"
+      },
+      "log_sha256_lf": "01d0d3a1bd724d4b22acd1c2445363aa94b949ca384c4dfb35360d9f0bd307fe",
+      "reports": [
+        {
+          "requested": "FiniteDemand.heightSequence_strictMono",
+          "name": "FiniteDemand.heightSequence_strictMono",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.heightSequence_represents",
+          "name": "FiniteDemand.heightSequence_represents",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.initial_columns",
+          "name": "FiniteDemand.initial_columns",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 3,
+      "seconds": 8.758,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "FiniteDemandHostAmbient": {
+      "fingerprint": "57d7ea4e81f9f195b58d6d7a3aed8a70287b2de89658915eb88d2d7f09a226ba",
+      "olean_sha256": "2a80b4844f12a58dfd3727d0b6d219f31090676fd816dc7e46fedac227762852",
+      "artifact_bundle": {
+        ".olean": "2a80b4844f12a58dfd3727d0b6d219f31090676fd816dc7e46fedac227762852"
+      },
+      "log_sha256_lf": "6341125115e2e51c0cf5065c0db77eff84b3bfb7008ea7cb43e42c22c0353af5",
+      "reports": [
+        {
+          "requested": "FiniteDemand.HostAmbient.omegaOne_uncountable",
+          "name": "FiniteDemand.HostAmbient.omegaOne_uncountable",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.HostAmbient.enumerate_covers",
+          "name": "FiniteDemand.HostAmbient.enumerate_covers",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "FiniteDemand.HostAmbient.actual",
+          "name": "FiniteDemand.HostAmbient.actual",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 3,
+      "seconds": 8.613,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "IPDInitialRepresentation": {
+      "fingerprint": "5a983879999c76e9517fdc521294e64bb70e75b843e51d144731c89af2e4c178",
+      "olean_sha256": "25fd3f713bdbb6b1d91b72c6890d65ea2278744fdada9622791f37a44ca70532",
+      "artifact_bundle": {
+        ".olean": "25fd3f713bdbb6b1d91b72c6890d65ea2278744fdada9622791f37a44ca70532"
+      },
+      "log_sha256_lf": "10f5b9e06e065cbff265466c199d25210b97b0587266c0fb2de38476746c6e0e",
+      "reports": [
+        {
+          "requested": "IPD.Semantics.heightSequence_represents",
+          "name": "IPD.Semantics.heightSequence_represents",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Semantics.initial",
+          "name": "IPD.Semantics.initial",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 2,
+      "seconds": 8.645,
+      "certification": "fresh-source-compilation"
+    },
+    "IPDGraphNormalization": {
+      "fingerprint": "74547a71873760d910fbee43b02beae8fa7426b190ce456347261cdbbe12bb28",
+      "olean_sha256": "2a11885f5a96618d1ea23a346493190f0612357f46b3d980eb67f11ea70993f6",
+      "artifact_bundle": {
+        ".olean": "2a11885f5a96618d1ea23a346493190f0612357f46b3d980eb67f11ea70993f6"
+      },
+      "log_sha256_lf": "39f792f377e8f527824a63eb394d0a8f1bf7f8d8a553e3b7e85626fc4b9d023b",
+      "reports": [
+        {
+          "requested": "IPD.normalize_mem",
+          "name": "IPD.normalize_mem",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.normalize_canonical",
+          "name": "IPD.normalize_canonical",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.normalize_eq_self",
+          "name": "IPD.normalize_eq_self",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.expand_canonical",
+          "name": "IPD.expand_canonical",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 4,
+      "seconds": 7.662,
+      "certification": "fresh-source-compilation"
+    },
+    "IPDGraphValidity": {
+      "fingerprint": "58380225e6f22b393a393b89efa8e08063d1b64548eedbd3856ae5afaa3fcab5",
+      "olean_sha256": "0187280bc65e22ef0651b0f033c1c38b60e0019183585860f6e7e2c6c6c590f2",
+      "artifact_bundle": {
+        ".olean": "0187280bc65e22ef0651b0f033c1c38b60e0019183585860f6e7e2c6c6c590f2"
+      },
+      "log_sha256_lf": "81f0d7a298538686c1e0cc7ecbdaba252b2dc6a3082d983f0020d4ba929c07a3",
+      "reports": [
+        {
+          "requested": "IPD.moveEdge_valid",
+          "name": "IPD.moveEdge_valid",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.seam_valid",
+          "name": "IPD.seam_valid",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.stage_valid",
+          "name": "IPD.stage_valid",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.expand_valid",
+          "name": "IPD.expand_valid",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 4,
+      "seconds": 7.846,
+      "certification": "fresh-source-compilation"
+    },
+    "IPDGraphController": {
+      "fingerprint": "8fb7bf2877069b0caefa446d3fc0e0a34283d6c1eb6ecf98ae4a458c9f204f75",
+      "olean_sha256": "d45a32d6d6649dacc1cc10333ca6ce4625ea53a337524617a649283bafcb9726",
+      "artifact_bundle": {
+        ".olean": "d45a32d6d6649dacc1cc10333ca6ce4625ea53a337524617a649283bafcb9726"
+      },
+      "log_sha256_lf": "89dd17153a0ae3a571c57b37dd1c518180bdf8bf59a8c0bf39fc6611872cd3b3",
+      "reports": [
+        {
+          "requested": "IPD.controller_max",
+          "name": "IPD.controller_max",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.moveEdge_controlLt",
+          "name": "IPD.moveEdge_controlLt",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.seam_spec",
+          "name": "IPD.seam_spec",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 3,
+      "seconds": 7.749,
+      "certification": "fresh-source-compilation"
+    },
+    "IPDSemanticEdges": {
+      "fingerprint": "b56f13089a23e7e9ed5dc0f8f2c827acde02365711b13f7fe6d70fce00708010",
+      "olean_sha256": "09b0e1ae1620bd6113417fe15ce547b82c947704893b07ab2b00b53b95b829f0",
+      "artifact_bundle": {
+        ".olean": "09b0e1ae1620bd6113417fe15ce547b82c947704893b07ab2b00b53b95b829f0"
+      },
+      "log_sha256_lf": "42f59bdf78851e46971c526ef2ce598d4eea768b33b471ad4f87e40b0f2e06f0",
+      "reports": [
+        {
+          "requested": "IPD.Semantics.endpoint_weaken",
+          "name": "IPD.Semantics.endpoint_weaken",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Semantics.control_admissible",
+          "name": "IPD.Semantics.control_admissible",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Semantics.seam_usable",
+          "name": "IPD.Semantics.seam_usable",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 3,
+      "seconds": 8.127,
+      "certification": "fresh-source-compilation"
+    },
+    "IPDGraphGeometry": {
+      "fingerprint": "1ea58d6f583217d5174e8673ea591bed78373a3cd1e3f1eab8e9320c344966e1",
+      "olean_sha256": "075720827a28275d41220057924861eb1105f6235be8338a0c8e1f9aa09f6133",
+      "artifact_bundle": {
+        ".olean": "075720827a28275d41220057924861eb1105f6235be8338a0c8e1f9aa09f6133"
+      },
+      "log_sha256_lf": "b234e6a26e9e3df935b821d081b99ab82b41ae9b12aeda5f3135594cc0aaea57",
+      "reports": [
+        {
+          "requested": "IPD.stageWidth_succ",
+          "name": "IPD.stageWidth_succ",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.shift_block_transition",
+          "name": "IPD.shift_block_transition",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 2,
+      "seconds": 8.215,
+      "certification": "fresh-source-compilation"
+    },
+    "IPDSpliceLabels": {
+      "fingerprint": "3231776aeea0b8fb02d4735552ddf836b9c1002503f9d1e1d9198dc1ca92f220",
+      "olean_sha256": "13a61858504b48ebbedf826e79b4d757503d2a2aab4038dd99358304e1ebdf04",
+      "artifact_bundle": {
+        ".olean": "13a61858504b48ebbedf826e79b4d757503d2a2aab4038dd99358304e1ebdf04"
+      },
+      "log_sha256_lf": "64daca44b2d2f8445669917a298aabaa92bd9b7f1af77a3d70b8a8b9c556f371",
+      "reports": [
+        {
+          "requested": "IPD.Semantics.shifted_profile_reuse",
+          "name": "IPD.Semantics.shifted_profile_reuse",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Semantics.shifted_endpoint_profile_reuse",
+          "name": "IPD.Semantics.shifted_endpoint_profile_reuse",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Semantics.splice_seam_relation",
+          "name": "IPD.Semantics.splice_seam_relation",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 3,
+      "seconds": 8.401,
+      "certification": "fresh-source-compilation"
+    },
+    "IPDStageFacts": {
+      "fingerprint": "2719f02f838764d3fbeb1be433449e486b97f11154ec9bcbaeb3d25c0583194b",
+      "olean_sha256": "de7516e54be2f74210b216f19ec971867b3b1b57137de1adfb577f181d361e64",
+      "artifact_bundle": {
+        ".olean": "de7516e54be2f74210b216f19ec971867b3b1b57137de1adfb577f181d361e64"
+      },
+      "log_sha256_lf": "e181aee91cdedc93cb0482fa5ec830ef3ae904d67700cfc8bbebb24163c1de9f",
+      "reports": [
+        {
+          "requested": "IPD.Semantics.stage_init",
+          "name": "IPD.Semantics.stage_init",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Semantics.sourceFacts_splice",
+          "name": "IPD.Semantics.sourceFacts_splice",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Semantics.oldNeeds_splice",
+          "name": "IPD.Semantics.oldNeeds_splice",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 3,
+      "seconds": 8.459,
+      "certification": "fresh-source-compilation"
+    },
+    "IPDStageSplice": {
+      "fingerprint": "ae49bf58b2f1fb5d5cc1ba5c84efe5bb6a8974a92a1a03c4263b62783e882d58",
+      "olean_sha256": "70d35836b7997f511c53bc3bf42df3a5255967f4fe726bce61c411a3f5f2acb3",
+      "artifact_bundle": {
+        ".olean": "70d35836b7997f511c53bc3bf42df3a5255967f4fe726bce61c411a3f5f2acb3"
+      },
+      "log_sha256_lf": "9aa955dbef32e7e2954a5248abc44260b349b55f9a32915cae5f1300e0b3f6c2",
+      "reports": [
+        {
+          "requested": "IPD.Semantics.splice_representation",
+          "name": "IPD.Semantics.splice_representation",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Semantics.stage_step",
+          "name": "IPD.Semantics.stage_step",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Semantics.stages_represented",
+          "name": "IPD.Semantics.stages_represented",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 3,
+      "seconds": 8.607,
+      "certification": "fresh-source-compilation"
+    },
+    "OrdinalFormal.Reachability": {
+      "fingerprint": "d8c42e31c7ddb0153c44a6d3b3dbfcde138e7445a62c911e82637fd244ace128",
+      "olean_sha256": "6147ba0524db8117967cfc17eac45d24158153549201c8308656913090ac360d",
+      "artifact_bundle": {
+        ".olean": "6147ba0524db8117967cfc17eac45d24158153549201c8308656913090ac360d"
+      },
+      "log_sha256_lf": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reports": [],
+      "axiom_reports": 0,
+      "seconds": 2.615,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "IPDSemanticWellFounded": {
+      "fingerprint": "d854848d7cbb6ac6742962f1b4cd82530c7f963d77b70802502e59e2dc9db35c",
+      "olean_sha256": "43729b2365f054396991a2a49fceb784870b6e759fa8679bb9b76b2efacacf82",
+      "artifact_bundle": {
+        ".olean": "43729b2365f054396991a2a49fceb784870b6e759fa8679bb9b76b2efacacf82"
+      },
+      "log_sha256_lf": "678c9a4937f6d0078629c63f59486df7a2257694816cc69028ae9cb763d4fca8",
+      "reports": [
+        {
+          "requested": "IPD.Semantics.expand_bounded",
+          "name": "IPD.Semantics.expand_bounded",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Semantics.valid_accessible",
+          "name": "IPD.Semantics.valid_accessible",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Semantics.valid_step_wellFounded",
+          "name": "IPD.Semantics.valid_step_wellFounded",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 3,
+      "seconds": 8.569,
+      "certification": "fresh-source-compilation"
+    },
+    "IPDColumnOrder": {
+      "fingerprint": "d68ffcd3cf715c86fd4ea5642c5a610c40f2d3b06295b5c4e6b46a390a021e62",
+      "olean_sha256": "6d3e17724c8b629b096737f2123f5e85ef5ff88b75c5ff83e0bce5819eba61a2",
+      "artifact_bundle": {
+        ".olean": "6d3e17724c8b629b096737f2123f5e85ef5ff88b75c5ff83e0bce5819eba61a2"
+      },
+      "log_sha256_lf": "a346ca5e7a11282ee90ace4990992e014dbddd2f6a7b43e408489479fb91cebb",
+      "reports": [
+        {
+          "requested": "IPD.graphLt_trans",
+          "name": "IPD.graphLt_trans",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.sorted_deleted_pivot",
+          "name": "IPD.sorted_deleted_pivot",
+          "axioms": [
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.normalize_deleted_pivot",
+          "name": "IPD.normalize_deleted_pivot",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 3,
+      "seconds": 8.057,
+      "certification": "fresh-source-compilation"
+    },
+    "IPDProfileIdentity": {
+      "fingerprint": "969cb79a5f4018cf8d7df9ad667950c430fb37e5e4706d80fc7470e9225e2810",
+      "olean_sha256": "3ba7e272d7546f133bbf8639db9537ae360713cb4a0575a595db191288640fa0",
+      "artifact_bundle": {
+        ".olean": "3ba7e272d7546f133bbf8639db9537ae360713cb4a0575a595db191288640fa0"
+      },
+      "log_sha256_lf": "9e50a9b66ee14a60f809047d1fe18d0196bea0771d9b47428070b2b9e6748f6a",
+      "reports": [
+        {
+          "requested": "IPD.Layer.rename_id",
+          "name": "IPD.Layer.rename_id",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.moveEdge_zero",
+          "name": "IPD.moveEdge_zero",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 2,
+      "seconds": 8.498,
+      "certification": "fresh-source-compilation"
+    },
+    "IPDDecrease": {
+      "fingerprint": "ded2f3f470e88f98b988e6f5789d7caf2451ce97b75c834d96413779dba843f6",
+      "olean_sha256": "83d5ff3a47bbe5460d7d4dfddf1319ff59a2f0e22ad19bd7bdd96cb229213f4e",
+      "artifact_bundle": {
+        ".olean": "83d5ff3a47bbe5460d7d4dfddf1319ff59a2f0e22ad19bd7bdd96cb229213f4e"
+      },
+      "log_sha256_lf": "c316fc468333d5c04c85b2036f9e4daf60aeb24f18567379638f1b35e04d17b4",
+      "reports": [
+        {
+          "requested": "IPD.firstColumn_lt",
+          "name": "IPD.firstColumn_lt",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.expand_lt",
+          "name": "IPD.expand_lt",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 2,
+      "seconds": 8.623,
+      "certification": "fresh-source-compilation"
+    },
+    "IPDSeeds": {
+      "fingerprint": "bee189413db9ec22bb4d2c975e6d7707590ce72c8c926c7d9affcec5254d008d",
+      "olean_sha256": "d8c76186121cabf517107141b2e349d0d26e200fefe339457f21167015e43e3e",
+      "artifact_bundle": {
+        ".olean": "d8c76186121cabf517107141b2e349d0d26e200fefe339457f21167015e43e3e"
+      },
+      "log_sha256_lf": "752d81f1b9a5d8145a72342ba91321fad2dcc72a71b174675f54d818a06d4a1d",
+      "reports": [
+        {
+          "requested": "IPD.seed_valid",
+          "name": "IPD.seed_valid",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.seed_succ_one",
+          "name": "IPD.seed_succ_one",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 2,
+      "seconds": 8.713,
+      "certification": "fresh-source-compilation"
+    },
+    "ARDPrefixOrder": {
+      "fingerprint": "89c44f123ef5bc6e3d737a3f3eeb79c8352e94050bed94ce3f8217f3e3f6e3e4",
+      "olean_sha256": "70ea4b0a64e37b36a3f2f7960429a1b130d4baeafddef32f7a1e8348380af977",
+      "artifact_bundle": {
+        ".olean": "70ea4b0a64e37b36a3f2f7960429a1b130d4baeafddef32f7a1e8348380af977"
+      },
+      "log_sha256_lf": "0212255434391718e06797eb3eb0ea9485818d5bd7489680620004dcd102164a",
+      "reports": [
+        {
+          "requested": "covered_total",
+          "name": "OrdinalFormal.PrefixOrder.covered_total",
+          "axioms": [
+            "propext"
+          ]
+        },
+        {
+          "requested": "covered_wellFounded",
+          "name": "OrdinalFormal.PrefixOrder.covered_wellFounded",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 2,
+      "seconds": 2.318,
+      "certification": "reused-current-schema-2",
+      "reused_from": "shared"
+    },
+    "IPDStandardOrder": {
+      "fingerprint": "a5f057c81b345964f2f10cb65271e7b5a61a64e3d84de2541e19ade0e33628e8",
+      "olean_sha256": "0e5de51c811af50458248d75da168410272cee78ce112852d28231c04af21cda",
+      "artifact_bundle": {
+        ".olean": "0e5de51c811af50458248d75da168410272cee78ce112852d28231c04af21cda"
+      },
+      "log_sha256_lf": "d1b8445372d4b171c1df12a95166b274a188aded588dac089cee527499cfc204",
+      "reports": [
+        {
+          "requested": "IPD.standard_wellFounded",
+          "name": "IPD.standard_wellFounded",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.standard_total",
+          "name": "IPD.standard_total",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.term_wellFounded",
+          "name": "IPD.term_wellFounded",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 3,
+      "seconds": 8.89,
+      "certification": "fresh-source-compilation"
+    },
+    "IPDTreeCompare": {
+      "fingerprint": "474f4a3b8927e4f696921773c943efa8fff8287825e5d4d421a74a27ac04b0c6",
+      "olean_sha256": "4598876b2e7a33abfd988a671fa67d06db51509799b2e52137517d8e58604603",
+      "artifact_bundle": {
+        ".olean": "4598876b2e7a33abfd988a671fa67d06db51509799b2e52137517d8e58604603"
+      },
+      "log_sha256_lf": "126998b8372134c1e8e1a2ae7ff05b0fbacd8e2c013f758f40fb42d8f7b25a88",
+      "reports": [
+        {
+          "requested": "IPD.Tree.cmp_node_rule",
+          "name": "IPD.Tree.cmp_node_rule",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Tree.cmp_zero_node",
+          "name": "IPD.Tree.cmp_zero_node",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "IPD.Tree.cmp_node_zero",
+          "name": "IPD.Tree.cmp_node_zero",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 3,
+      "seconds": 8.35,
+      "certification": "fresh-source-compilation"
+    }
+  },
+  "verified_on": "2026-09-14",
+  "fresh_modules": 40,
+  "reused_modules": 15,
+  "limits": {
+    "concurrent_compilers": 1,
+    "compiler_threads": 1,
+    "memory_mb": 2048,
+    "seconds_per_module": 120
+  },
+  "scope": "Ordinary Lean, not an internal KP derivation; no order-type comparison or VM verification.",
+  "mathlib_rebuilt_from_source": false,
+  "network_bootstrap_tested": false,
+  "total_proof_modules": 55,
+  "axiom_reports": 166,
+  "wall_seconds": 320.9,
+  "verification_kind": "source-checked scope with explicitly certified artifact reuse",
+  "final_logs": {
+    "IPDSemanticWellFounded": {
+      "path": "verification/IPDSemanticWellFounded.log",
+      "sha256_lf": "678c9a4937f6d0078629c63f59486df7a2257694816cc69028ae9cb763d4fca8",
+      "axiom_reports": 3
+    },
+    "IPDStandardOrder": {
+      "path": "verification/IPDStandardOrder.log",
+      "sha256_lf": "d1b8445372d4b171c1df12a95166b274a188aded588dac089cee527499cfc204",
+      "axiom_reports": 3
+    },
+    "IPDTreeCompare": {
+      "path": "verification/IPDTreeCompare.log",
+      "sha256_lf": "126998b8372134c1e8e1a2ae7ff05b0fbacd8e2c013f758f40fb42d8f7b25a88",
+      "axiom_reports": 3
+    }
+  }
+}

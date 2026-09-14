@@ -13,7 +13,7 @@ LRD、Ω-LRD3 继续与选定工作版本逐字节一致。RPD、ARD 新增文�
 | `notations/Omega-LRD3/Omega-LRD3.ne-rewritten.js` | `fe33b1a35891e9efb9eb5932ab94456053769b6b58df41ea9f36eb57a262f3ab` |
 | `notations/ARD/ARD-arcs.ne-rewritten.js` | `ab4f05ef1fb65b6308e710cbbc98c173310f9c3073ce3a57082863af708841d6` |
 | `notations/IPD/IPD.ne-rewritten.js` | `acc1a1c2ae260da9be7d13e14ac17d84a92679f82efe97aa85cd0e3b072f6011` |
-| `notations/ARD2/ARD2.ne-rewritten.js` | `34d9239cee3871fb2908452022b9831c9d687f19c910745725f36231f8016907` |
+| `notations/ARD2/ARD2.ne-rewritten.js` | `e0d4eb14056ee54a6d4a8d2475241469ba33f07d38c406cfa9b20c648407380d` |
 
 RPD 是当前按列比较、带山脉图及邻接表显示的版本，不是早期按操作历史排序的记号。浏览器菜单名为 `RDP`，记号及文件名仍为 RPD。LRD 使用固定的序数多项式行标。Ω-LRD3 的生成包包含至指标 `b`，顶端基本列采用每级只加一列的种子塔。不收录其他 Ω-LRD 实现。
 
@@ -21,7 +21,7 @@ ARD 全称为 *Anchored Row Diagrams*（锚定行图）。它用此前列的地�
 
 IPD 全称为 *Iterated Profile Diagrams*（迭代轮廓图）。零起始 JS 与可读 Python 均与已证明的参考版本逐字节一致；`notations/IPD/ipd.py` 的 SHA-256 为 `12d3f08fd38fc51aa78b9972bae2d5e02fc8efc09de085a9b1752880948ebab1`。所有嵌套头中的 ROOT/SELF 都参与移动，保留列表、计数和完整树形显示；`FS`、`FS_alter`、`FS_short` 规则相同。冻结代码的历史注释以当前论文为准。不收录实验性的 TPD、wY 比较草稿。
 
-ARD2 是 Anchored Row Diagrams 的全上下文版本。新增可读的 `ARD2` Python 类与 NER 脚本使用行、根两种 SELF，并生成直到接缝自身的根包。保留精确的列表／计数／弧线／文字邻接／表格邻接显示；局部计数专门适配双 SELF 规则，不套用旧 ARD 捷径。旧记号源码及规则均未改变。
+ARD2 是 Anchored Row Diagrams 的全上下文版本。新增可读的 `ARD2` Python 类与 NER 脚本使用行、根两种 SELF，并生成直到接缝自身的根包。保留精确的列表／计数／弧线／文字邻接／表格邻接显示；局部计数专门适配双 SELF 规则，不套用旧 ARD 捷径。旧记号源码及规则均未改变。Lean 子项目重组时，只更新 NER 脚本中的两处说明路径及 Python 文档字符串中的一处路径，数学与绘图算法均未改动；因此 ARD2 两个实现文件不再与提交 `e2bdd08` 逐字节一致。Python 文件当前 SHA-256 为 `05a9b14d9897db8e64e2c907eb3d3e326e6768600e1c7fcb27cd336990fb2e68`；其他五个记号实现与全部二十份 PDF 仍与该提交逐字节一致。
 
 Python 文件提供只依赖标准库的独立数学核心。RPD、LRD 由已有简易核心整理；Ω-LRD3 按规则实现，并与 `tests/omega3_tuple_reference.py` 内的旧有限元组参考独立对照。它们不设数学截断规则，也不判断标准域成员资格。有界测试是实现一致性的证据，不是全输入解释器等价定理，也不能替代良序证明。
 
@@ -39,7 +39,11 @@ Python 文件提供只依赖标准库的独立数学核心。RPD、LRD 由已有
 
 有限 Y 几何固定到 [Phyrion1343/1Y-Well-Ordering-Lean](https://github.com/Phyrion1343/1Y-Well-Ordering-Lean/tree/1689b21131b488ec2ba2515bd630360371a2389d)，提交为 `1689b21131b488ec2ba2515bd630360371a2389d`。本包保留继承祖先 Y 定义，明确不声称它与原 Naruyoko JavaScript 全域等价。普通 Lean 证明与限定公理体系的纸面证明具有不同验证范围。
 
-Lean 的完整导入依赖集合及换行归一化的源码哈希见 [lean/sources.json](lean/sources.json)；固定依赖版本、仅在发布副本中的改动及最终定理索引见 [lean/README.zh-CN.md](lean/README.zh-CN.md)。
+七个 Lean 证明现在是同一仓库内的独立子项目。各自精确源码导入清单为 [Y](lean/Y/sources.json)（189 模块）、[RPD](lean/RPD/sources.json)（36）、[LRD](lean/LRD/sources.json)（41）、[Ω-LRD3](lean/Omega-LRD3/sources.json)（44）、[ARD](lean/ARD/sources.json)（50）、[IPD](lean/IPD/sources.json)（55）、[ARD2](lean/ARD2/sources.json)（51）。每份清单是本项目的完整依赖闭包，包含需要的共享模块及相应压缩根／树比较附加入口，而不是把总闭包复制七遍。只有 Y 包含 12 个固定外部 BMS 模块。
+
+[共享包](lean/shared/sources.json) 拥有 35 个源码模块，同一物理源文件由各记号复用，不重复复制；每个记号只导入自己需要的共享子集。有些共享文件仍保留历史 RPD／LRD／ARD 前缀，因为其中同时包含被复用的有限引理及原有声明，不能按文件名前缀判断项目归属。[布局清单](lean/layout.json) 记录每个模块的归属与仓库相对文件路径；源码记录的 `source` 保留溯源含义，`file` 才是当前内置文件位置。
+
+[总清单](lean/sources.json) 仍覆盖全部 322 个模块，`lean/src` 只保留四个联合审计入口。本次迁移 306 个文件，310 个内置 Lean 文件的字节及模块名均未改变；161 个上游 Y 模块现位于 `lean/Y/src`，外部 BMS 源码仍不内置。换行归一化哈希与原始上游记录均保留。固定依赖版本、验证状态及最终定理索引见 [lean/README.zh-CN.md](lean/README.zh-CN.md)。
 
 ## 许可证边界
 

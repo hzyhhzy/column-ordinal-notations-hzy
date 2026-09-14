@@ -1,0 +1,16 @@
+OrdinalFormal.GeneratedSemanticWellFounded.valid_step_wellFounded_of_semantics.{u, v} {Row : Type u} {Label : Type v}
+  (cmp : Row → Row → Ordering) (package : Package Row) (rowLt : Row → Row → Prop) (lt : Label → Label → Prop)
+  (D : Label → Prop) (R : Row → Label → Label → Label → Prop) (hWF : WellFounded lt)
+  (hTrans : ∀ {a b c : Label}, lt a b → lt b c → lt a c)
+  (hStrict : ∀ {k : Row} {index a b : Label}, R k index a b → lt a b)
+  (hWeak : ∀ {k : Row} {small large p c : Label}, lt small large → R k large p c → R k small p c)
+  (hLower : ReflectionTransport.LowerRows rowLt lt R)
+  (hPackage : ∀ (high : Row) (b : Nat) (low : Row), low ∈ package high b → rowLt low high)
+  (laws : ColumnRepresentation.RowCompareSound cmp rowLt)
+  (reflection : ReflectionTransport.FiniteReflection rowLt lt D R)
+  (initial : ∀ (g : Graph Row), Valid g → ∃ f, ColumnRepresentation.Holds lt D R g f) :
+  WellFounded fun a b => Step cmp package a.val b.val
+'OrdinalFormal.GeneratedSemanticWellFounded.accessible_of_last_label' depends on axioms: [propext, Quot.sound]
+'OrdinalFormal.GeneratedSemanticWellFounded.valid_accessible_of_semantics' depends on axioms: [propext, Quot.sound]
+'OrdinalFormal.GeneratedSemanticWellFounded.valid_step_wellFounded_of_semantics' depends on axioms: [propext,
+ Quot.sound]

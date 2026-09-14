@@ -7,7 +7,7 @@ let definition;
 /* ARD2 v0.1 — full-context anchored row diagrams.
    Standalone custom notation; no imports, network or persistent storage.
    At child j: 0 <= row, maximum root <= j and 0 <= parent < j.
-   Ordinary Lean: ../../lean/src/ARD2Final.lean; paper proof:
+   Ordinary Lean: ../../lean/ARD2/src/ARD2Final.lean; paper proof:
    ../../proofs/paper/ard2-well-ordering.md. No internal KP proof-system encoding
    and no order-type comparison or optimal axiom bound is claimed. */
 (function () {
@@ -395,7 +395,7 @@ register_notation({
   id:'ard2-v01',name:'ARD2',simple_name:'ARD2',
   description:[
     'ARD2：全上下文行锚图，每组只有三个自然数。普通 Lean 已证明全部合法图的非零展开良基及标准域列序良序；未证明与 IPD 等记号的大小关系。',
-    '仓库证明：lean/src/ARD2Final.lean；proofs/paper/ard2-well-ordering.zh-CN.md。弱体系上界为 KP_omega＋存在不可数序数的纸面证明；不声称已在 Lean 内编码该体系的推导，也不声称上界最优。',
+    '仓库证明：lean/ARD2/src/ARD2Final.lean；proofs/paper/ard2-well-ordering.zh-CN.md。弱体系上界为 KP_omega＋存在不可数序数的纸面证明；不声称已在 Lean 内编码该体系的推导，也不声称上界最优。',
     '每列 [...]；(k,p,q) 为行锚、父列、最大根，根 0…q 全包含。第 j 列要求 0≤k,q≤j、0≤p<j；行与根都允许 SELF。',
     '控制按 (k,q,p) 最大；切点为控制父。复制搬移所有坐标；低行包 (h,φ_b(p),N_b) 的根包含接缝自身 N_b。',
     '有限非零式 [0] 删末列；G[n] 是 G[n+1] 的完整列前缀。按最早不同列及递减 (p,k,q) 组列表比较。',

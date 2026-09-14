@@ -1,6 +1,6 @@
 # ARD: anchored row diagrams · [中文版](definition.zh-CN.md)
 
-Release definition, 2026-09-13. [PDF](definition.pdf) · [NER arc-diagram expander](ARD-arcs.ne-rewritten.js) · [Python](ard.py) · [well-ordering proof](../../proofs/paper/ard-well-ordering.md) · [ordinary Lean entry point](../../lean/src/ARDFinal.lean).
+Release definition, 2026-09-13. [PDF](definition.pdf) · [NER arc-diagram expander](ARD-arcs.ne-rewritten.js) · [Python](ard.py) · [well-ordering proof](../../proofs/paper/ard-well-ordering.md) · [ordinary Lean entry point](../../lean/ARD/src/ARDFinal.lean).
 
 ARD means **Anchored Row Diagrams**. An expression is a finite diagram, not a path of operations. Its row labels are addresses of earlier columns. When a source block is copied, the row anchor moves along with the root, parent and child. Resource guards in the software are not mathematical rules.
 

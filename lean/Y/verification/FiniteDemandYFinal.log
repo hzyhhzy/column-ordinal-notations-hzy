@@ -1,0 +1,4 @@
+'OrdinalFormal.YFiniteDemand.expansion_wellFounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.YFiniteDemand.generated_strictWellOrder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.YFiniteDemand.descendants_strictWellOrder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.YFiniteDemand.with_top_isWellOrder' depends on axioms: [propext, Classical.choice, Quot.sound]

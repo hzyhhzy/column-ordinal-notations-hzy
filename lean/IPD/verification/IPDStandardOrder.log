@@ -1,0 +1,3 @@
+'IPD.standard_wellFounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IPD.standard_total' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IPD.term_wellFounded' depends on axioms: [propext, Classical.choice, Quot.sound]

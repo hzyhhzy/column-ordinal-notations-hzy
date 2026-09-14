@@ -13,7 +13,7 @@ LRD and Ω-LRD3 remain byte-identical to their selected working versions. RPD an
 | `notations/Omega-LRD3/Omega-LRD3.ne-rewritten.js` | `fe33b1a35891e9efb9eb5932ab94456053769b6b58df41ea9f36eb57a262f3ab` |
 | `notations/ARD/ARD-arcs.ne-rewritten.js` | `ab4f05ef1fb65b6308e710cbbc98c173310f9c3073ce3a57082863af708841d6` |
 | `notations/IPD/IPD.ne-rewritten.js` | `acc1a1c2ae260da9be7d13e14ac17d84a92679f82efe97aa85cd0e3b072f6011` |
-| `notations/ARD2/ARD2.ne-rewritten.js` | `34d9239cee3871fb2908452022b9831c9d687f19c910745725f36231f8016907` |
+| `notations/ARD2/ARD2.ne-rewritten.js` | `e0d4eb14056ee54a6d4a8d2475241469ba33f07d38c406cfa9b20c648407380d` |
 
 RPD is the current column-comparison version with mountain and adjacency displays, not the earlier history-ordered notation. Its browser menu name is `RDP`; the notation and file names remain RPD. LRD uses its fixed ordinal polynomial rows. Ω-LRD3 uses the inclusive packet through index `b` and its single-column seed tower. No other Ω-LRD implementation is included.
 
@@ -21,7 +21,7 @@ ARD means *Anchored Row Diagrams*. It uses earlier-column addresses as row ancho
 
 IPD means *Iterated Profile Diagrams*. Its zero-start JS and readable Python are byte-identical to the proved reference versions. `notations/IPD/ipd.py` has SHA-256 `12d3f08fd38fc51aa78b9972bae2d5e02fc8efc09de085a9b1752880948ebab1`. It relocates ROOT/SELF references inside all nested heads, retains list/count/complete-tree displays, and uses identical `FS`, `FS_alter` and `FS_short` rules. Frozen historical comments are superseded by the current paper. No experimental TPD or wY comparison draft is included.
 
-ARD2 is the full-context variant of Anchored Row Diagrams. The new readable `ARD2` Python class and NER script use both row and root SELF coordinates and generate roots through the seam itself. They retain exact list/count/arc/text-adjacency/table-adjacency displays; the local counter is specific to the two-SELF rule, not the old ARD shortcut. Neither older notation sources nor their rules were changed.
+ARD2 is the full-context variant of Anchored Row Diagrams. The new readable `ARD2` Python class and NER script use both row and root SELF coordinates and generate roots through the seam itself. They retain exact list/count/arc/text-adjacency/table-adjacency displays; the local counter is specific to the two-SELF rule, not the old ARD shortcut. Neither older notation sources nor their rules were changed. During the Lean subproject reorganization, two explanatory source paths in the NER script and one docstring path in Python were updated; the mathematical and rendering algorithms were not changed. ARD2's implementation files are therefore not byte-identical to commit `e2bdd08`. The Python file now has SHA-256 `05a9b14d9897db8e64e2c907eb3d3e326e6768600e1c7fcb27cd336990fb2e68`; the other five notation implementations and all twenty PDFs remain byte-identical to that commit.
 
 The Python files expose independent standard-library mathematical cores. RPD and LRD were adapted from existing simple cores; Ω-LRD3 was packaged from its rules and independently checked against the earlier finite-tuple reference in `tests/omega3_tuple_reference.py`. These implementations do not contain truncation rules or decide standard-domain membership. Bounded tests are evidence about implementation agreement, not a universal interpreter-equivalence theorem or a substitute for well-ordering proofs.
 
@@ -39,7 +39,11 @@ The [ARD2 paper](proofs/paper/ard2-well-ordering.md) gives the bounded pair-prio
 
 The finite Y geometry is pinned to [Phyrion1343/1Y-Well-Ordering-Lean](https://github.com/Phyrion1343/1Y-Well-Ordering-Lean/tree/1689b21131b488ec2ba2515bd630360371a2389d), revision `1689b21131b488ec2ba2515bd630360371a2389d`. The package preserves the inherited-ancestry Y definition and explicitly does not claim global equivalence with Naruyoko's original JavaScript. The ordinary Lean proof and the restricted-axiom paper proof have different verification scopes.
 
-The exact Lean import closure and normalized source hashes are in [lean/sources.json](lean/sources.json); dependency pins, changes made only to release copies, and the final theorem index are in [lean/README.md](lean/README.md).
+The seven Lean proofs now have independent subprojects in the same repository. Their exact source-import manifests are [Y](lean/Y/sources.json) (189 modules), [RPD](lean/RPD/sources.json) (36), [LRD](lean/LRD/sources.json) (41), [Ω-LRD3](lean/Omega-LRD3/sources.json) (44), [ARD](lean/ARD/sources.json) (50), [IPD](lean/IPD/sources.json) (55), and [ARD2](lean/ARD2/sources.json) (51). These are complete per-project closures, including shared dependencies and the extra compressed-root or tree-comparison entry points where applicable, not seven copies of the aggregate closure. Only Y includes the 12 pinned external BMS modules.
+
+The [shared package](lean/shared/sources.json) owns 35 source modules. Its physical source files are reused without duplication; each notation imports only its required subset. Some shared filenames retain historical RPD/LRD/ARD prefixes because those files contain reused finite lemmas alongside their original declarations. File prefixes are therefore not a project-ownership rule. The [layout manifest](lean/layout.json) records each module's owner and repository-relative file; `source` in a source record remains provenance, while `file` identifies the current bundled location.
+
+The [aggregate manifest](lean/sources.json) still covers all 322 modules, and `lean/src` retains only the four joint audit entries. Relocating 306 source files did not change any of the 310 bundled Lean files' bytes or module names. The 161 upstream Y modules are now under `lean/Y/src`; the external BMS sources remain unbundled. Normalized source hashes and original upstream records are preserved. Dependency pins, verification status and the final theorem index are in [lean/README.md](lean/README.md).
 
 ## License boundary
 

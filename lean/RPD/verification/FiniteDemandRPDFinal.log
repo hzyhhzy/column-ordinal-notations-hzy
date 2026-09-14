@@ -1,0 +1,9 @@
+'OrdinalFormal.RPDFiniteDemand.valid_accessible_in_ambient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.RPDFiniteDemand.valid_accessible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.RPDFiniteDemand.standard_strictWellOrder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.RPDFiniteDemand.standard_with_top_strictWellOrder' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OrdinalFormal.RPDFiniteDemand.paper_standard_with_top_strictWellOrder' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

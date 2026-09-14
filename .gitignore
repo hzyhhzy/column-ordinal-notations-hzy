@@ -7,5 +7,6 @@ tmp/
 tools/.pdf-cache/
 *.log
 !lean/verification/*.log
+!lean/*/verification/*.log
 .DS_Store
 Thumbs.db

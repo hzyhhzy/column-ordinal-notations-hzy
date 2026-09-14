@@ -1,0 +1,7 @@
+'OrdinalFormal.Omega3Final.erase_expand' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.Omega3Final.accessible_of_rows' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.Omega3Final.standard_accessible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.Omega3Final.seed_accessible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.Omega3Final.standard_isWellOrder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.Omega3Final.with_top_isWellOrder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.Omega3Final.standard_step_wellFounded' depends on axioms: [propext, Classical.choice, Quot.sound]

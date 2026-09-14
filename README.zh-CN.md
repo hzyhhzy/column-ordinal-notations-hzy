@@ -41,7 +41,10 @@ $$
 - **ARD2 纸面证明：**[英文 Markdown](proofs/paper/ard2-well-ordering.md) · [英文 PDF](proofs/paper/ard2-well-ordering.pdf) · [中文 Markdown](proofs/paper/ard2-well-ordering.zh-CN.md) · [中文 PDF](proofs/paper/ard2-well-ordering.zh-CN.pdf)。
 - **IPD 定义对应审计：**[英文](proofs/paper/ipd-fidelity.md) · [中文](proofs/paper/ipd-fidelity.zh-CN.md)。
 - **Lean：**[英文构建说明与定理索引](lean/README.md) · [中文说明](lean/README.zh-CN.md)。
-- **Lean 联合入口：**[SevenNotationFinalAudit.lean](lean/src/SevenNotationFinalAudit.lean)。
+- **独立 Lean 项目：**[Y](lean/Y/README.zh-CN.md) · [RPD](lean/RPD/README.zh-CN.md) · [LRD](lean/LRD/README.zh-CN.md) · [Ω-LRD3](lean/Omega-LRD3/README.zh-CN.md) · [ARD](lean/ARD/README.zh-CN.md) · [IPD](lean/IPD/README.zh-CN.md) · [ARD2](lean/ARD2/README.zh-CN.md)。
+- **可选联合入口：**[SevenNotationFinalAudit.lean](lean/src/SevenNotationFinalAudit.lean)。
+
+每个记号各有独立构建配置、输出和验证收据，只依赖自己与[共享基础](lean/shared/README.zh-CN.md)；只有 Y 另需 BMS。新增记号不修改旧项目，也不强制重建旧证明。
 
 Lean 工程形式化通常数学意义的良序定理，**不是在 Lean 中编码上述弱对象理论的推导**。论文的公理账本与 Lean 内核检查是两项不同成果。
 
@@ -56,6 +59,7 @@ python tests/test_python.py
 python tests/test_ard.py
 python tests/test_ipd.py
 python tests/test_ard2.py
+python -B tests/test_lean_verifier.py
 node --max-old-space-size=256 tests/ard2_ner.cjs
 node --max-old-space-size=256 tests/ard2_display.cjs
 node --max-old-space-size=256 tests/ipd_display.cjs
@@ -90,7 +94,7 @@ notations/
   ARD2/                          双语定义、PDF、五视图 JS、Python
 proofs/paper/                    合写、ARD、IPD、ARD2 证明及双语定义对应审计
 lean/                           源码依赖集合、固定版本与有界构建工具
-tests/                          有界展开器回归测试
+tests/                          有界展开器与构建验证器回归测试
 tools/                          可复现 PDF 生成及 QA
 ```
 

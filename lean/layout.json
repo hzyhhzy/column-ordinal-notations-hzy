@@ -1,0 +1,2695 @@
+{
+  "schema_version": 1,
+  "file_base": "repository",
+  "modules": {
+    "OrdinalFormal.ReflectionTransport": {
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/ReflectionTransport.lean"
+    },
+    "FiniteDemandCore": {
+      "owner": "shared",
+      "file": "lean/shared/src/FiniteDemandCore.lean"
+    },
+    "FiniteDemandRecursion": {
+      "owner": "shared",
+      "file": "lean/shared/src/FiniteDemandRecursion.lean"
+    },
+    "FiniteDemandReflection": {
+      "owner": "shared",
+      "file": "lean/shared/src/FiniteDemandReflection.lean"
+    },
+    "FiniteDemandWitnesses": {
+      "owner": "shared",
+      "file": "lean/shared/src/FiniteDemandWitnesses.lean"
+    },
+    "FiniteDemandEndpointAgreement": {
+      "owner": "shared",
+      "file": "lean/shared/src/FiniteDemandEndpointAgreement.lean"
+    },
+    "FiniteDemandFinitaryClosure": {
+      "owner": "shared",
+      "file": "lean/shared/src/FiniteDemandFinitaryClosure.lean"
+    },
+    "FiniteDemandOrdinalHeight": {
+      "owner": "shared",
+      "file": "lean/shared/src/FiniteDemandOrdinalHeight.lean"
+    },
+    "FiniteDemandClosedSupply": {
+      "owner": "shared",
+      "file": "lean/shared/src/FiniteDemandClosedSupply.lean"
+    },
+    "OrdinalFormal.Columns": {
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/Columns.lean"
+    },
+    "OrdinalFormal.ColumnRepresentation": {
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/ColumnRepresentation.lean"
+    },
+    "FiniteDemandInitialRepresentation": {
+      "owner": "shared",
+      "file": "lean/shared/src/FiniteDemandInitialRepresentation.lean"
+    },
+    "FiniteDemandHostAmbient": {
+      "owner": "shared",
+      "file": "lean/shared/src/FiniteDemandHostAmbient.lean"
+    },
+    "OneY.RootIndexed.Representation": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/RootIndexed/Representation.lean"
+    },
+    "NatSemanticTransport": {
+      "owner": "Y",
+      "file": "lean/Y/src/NatSemanticTransport.lean"
+    },
+    "OneY.Forest": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/Forest.lean"
+    },
+    "ZeroY.Syntax": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Syntax.lean"
+    },
+    "YesMetaZFC.BMS.Reference": {
+      "owner": "Y",
+      "external": true
+    },
+    "ZeroY.Mountain": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Mountain.lean"
+    },
+    "YesMetaZFC.BMS.Array": {
+      "owner": "Y",
+      "external": true
+    },
+    "YesMetaZFC.BMS.Parent": {
+      "owner": "Y",
+      "external": true
+    },
+    "ZeroY.Mountain.Termination": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Mountain/Termination.lean"
+    },
+    "YesMetaZFC.BMS.Ancestor": {
+      "owner": "Y",
+      "external": true
+    },
+    "ZeroY.Forest.Stack": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Forest/Stack.lean"
+    },
+    "OneY.ForestBridge": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/ForestBridge.lean"
+    },
+    "ZeroY.Forest.Blocker": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Forest/Blocker.lean"
+    },
+    "ZeroY.Forest.Comparison": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Forest/Comparison.lean"
+    },
+    "ZeroY.Decode": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Decode.lean"
+    },
+    "ZeroY.Mountain.SumInverse": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Mountain/SumInverse.lean"
+    },
+    "ZeroY.Mountain.Roots": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Mountain/Roots.lean"
+    },
+    "ZeroY.MatrixOrder": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/MatrixOrder.lean"
+    },
+    "ZeroY.PaddedOrder": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/PaddedOrder.lean"
+    },
+    "YesMetaZFC.BMS.Expansion": {
+      "owner": "Y",
+      "external": true
+    },
+    "YesMetaZFC.BMS.Generation": {
+      "owner": "Y",
+      "external": true
+    },
+    "YesMetaZFC.BMS.Decomposition": {
+      "owner": "Y",
+      "external": true
+    },
+    "YesMetaZFC.BMS.Lemma25": {
+      "owner": "Y",
+      "external": true
+    },
+    "YesMetaZFC.BMS.Stability": {
+      "owner": "Y",
+      "external": true
+    },
+    "YesMetaZFC.BMS.FiniteReflection": {
+      "owner": "Y",
+      "external": true
+    },
+    "YesMetaZFC.BMS.ExpansionOrder": {
+      "owner": "Y",
+      "external": true
+    },
+    "YesMetaZFC.BMS.WellFoundedness": {
+      "owner": "Y",
+      "external": true
+    },
+    "ZeroY.BMS.AnyArray": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/BMS/AnyArray.lean"
+    },
+    "ZeroY.Transport": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Transport.lean"
+    },
+    "ZeroY.BMS.PaddedDescent": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/BMS/PaddedDescent.lean"
+    },
+    "ZeroY.Forest.MatrixParents": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Forest/MatrixParents.lean"
+    },
+    "OneY.ForestFrame": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/ForestFrame.lean"
+    },
+    "ZeroY.Encode": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Encode.lean"
+    },
+    "ZeroY.Mountain.Encoding": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Mountain/Encoding.lean"
+    },
+    "ZeroY.RoundTrip": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/RoundTrip.lean"
+    },
+    "ZeroY.Image": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Image.lean"
+    },
+    "ZeroY.SequenceOrder": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/SequenceOrder.lean"
+    },
+    "ZeroY.OrderEmbedding": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/OrderEmbedding.lean"
+    },
+    "ZeroY.Reversible": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Reversible.lean"
+    },
+    "ZeroY.Structural.Prefix": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Structural/Prefix.lean"
+    },
+    "ZeroY.Mountain.CommonChain": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Mountain/CommonChain.lean"
+    },
+    "ZeroY.Structural.DecodeTower": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Structural/DecodeTower.lean"
+    },
+    "ZeroY.PaddedExt": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/PaddedExt.lean"
+    },
+    "ZeroY.Structural.Recognition": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Structural/Recognition.lean"
+    },
+    "ZeroY.Structural.RawRecognition": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Structural/RawRecognition.lean"
+    },
+    "OneY.ForestFrameMatrix": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/ForestFrameMatrix.lean"
+    },
+    "OneY.DepthMatrix": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/DepthMatrix.lean"
+    },
+    "OneY.Numeric": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/Numeric.lean"
+    },
+    "OneY.SparseComparison": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/SparseComparison.lean"
+    },
+    "OneY.SparseBlocker": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/SparseBlocker.lean"
+    },
+    "OneY.Geometry": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/Geometry.lean"
+    },
+    "OneY.RootGeometry": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/RootGeometry.lean"
+    },
+    "OneY.NumericGeometry": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/NumericGeometry.lean"
+    },
+    "OneY.NumericRoots": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/NumericRoots.lean"
+    },
+    "OneY.SparseDepth": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/SparseDepth.lean"
+    },
+    "OneY.TopComparison": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TopComparison.lean"
+    },
+    "OneY.NumericFrame": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/NumericFrame.lean"
+    },
+    "ZeroY.Structural.ExpansionParents": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Structural/ExpansionParents.lean"
+    },
+    "ZeroY.Structural.ExpansionCoordinates": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Structural/ExpansionCoordinates.lean"
+    },
+    "ZeroY.Structural.DepthExpansion": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Structural/DepthExpansion.lean"
+    },
+    "ZeroY.Structural.BlockerExpansion": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Structural/BlockerExpansion.lean"
+    },
+    "ZeroY.Forest.AncestorMonotone": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Forest/AncestorMonotone.lean"
+    },
+    "ZeroY.Structural.CopyOrder": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Structural/CopyOrder.lean"
+    },
+    "ZeroY.Structural.Expansion": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Structural/Expansion.lean"
+    },
+    "ZeroY.Expansion": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Expansion.lean"
+    },
+    "ZeroY.Structural.ExpansionParentAlignment": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Structural/ExpansionParentAlignment.lean"
+    },
+    "OneY.RelativeBlocker": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/RelativeBlocker.lean"
+    },
+    "OneY.NumericFrameBlocker": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/NumericFrameBlocker.lean"
+    },
+    "OneY.Pseudo": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/Pseudo.lean"
+    },
+    "OneY.ExtractionGeometry": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/ExtractionGeometry.lean"
+    },
+    "OneY.Extraction": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/Extraction.lean"
+    },
+    "OneY.BadRoot": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/BadRoot.lean"
+    },
+    "OneY.CopyCoordinates": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/CopyCoordinates.lean"
+    },
+    "OneY.TerminalCopy": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopy.lean"
+    },
+    "OneY.TerminalCopyNesting": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopyNesting.lean"
+    },
+    "OneY.TerminalCopyNumeric": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopyNumeric.lean"
+    },
+    "ZeroY.Expansion.Context": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Expansion/Context.lean"
+    },
+    "OneY.TerminalFrame": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalFrame.lean"
+    },
+    "OneY.OrdinaryCopy": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/OrdinaryCopy.lean"
+    },
+    "OneY.OrdinaryCopyRoots": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/OrdinaryCopyRoots.lean"
+    },
+    "OneY.Reconstruction": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/Reconstruction.lean"
+    },
+    "OneY.ReconstructionNumeric": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/ReconstructionNumeric.lean"
+    },
+    "OneY.OrdinaryCopyReconstruction": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/OrdinaryCopyReconstruction.lean"
+    },
+    "OneY.TerminalCopyReconstruction": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopyReconstruction.lean"
+    },
+    "OneY.TerminalFrameParents": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalFrameParents.lean"
+    },
+    "OneY.TerminalFrameDepths": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalFrameDepths.lean"
+    },
+    "OneY.DecoratedColumn": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/DecoratedColumn.lean"
+    },
+    "OneY.LowerCopy": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopy.lean"
+    },
+    "OneY.LowerCopyNesting": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyNesting.lean"
+    },
+    "OneY.LowerCopyDominance": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyDominance.lean"
+    },
+    "OneY.LowerCopyDepths": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyDepths.lean"
+    },
+    "OneY.LowerCopyComparison": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyComparison.lean"
+    },
+    "OneY.TerminalCopyComparison": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopyComparison.lean"
+    },
+    "OneY.ReconstructionComparison": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/ReconstructionComparison.lean"
+    },
+    "OneY.DecoratedBlocker": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/DecoratedBlocker.lean"
+    },
+    "OneY.DecoratedBlockerExpansion": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/DecoratedBlockerExpansion.lean"
+    },
+    "OneY.NumericDecoratedFrame": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/NumericDecoratedFrame.lean"
+    },
+    "OneY.OrdinaryCopySelection": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/OrdinaryCopySelection.lean"
+    },
+    "OneY.OrdinaryCopyForest": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/OrdinaryCopyForest.lean"
+    },
+    "OneY.OrdinaryCopyNumeric": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/OrdinaryCopyNumeric.lean"
+    },
+    "OneY.OrdinaryCopyPseudo": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/OrdinaryCopyPseudo.lean"
+    },
+    "OneY.OrdinaryCopyExtraction": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/OrdinaryCopyExtraction.lean"
+    },
+    "OneY.TerminalCopyCanonical": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopyCanonical.lean"
+    },
+    "OneY.TerminalDecoratedRecovery": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalDecoratedRecovery.lean"
+    },
+    "OneY.ReconstructionTop": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/ReconstructionTop.lean"
+    },
+    "OneY.TerminalCopyTopBound": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopyTopBound.lean"
+    },
+    "OneY.TerminalCopyComplete": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopyComplete.lean"
+    },
+    "OneY.TerminalCopyRoots": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopyRoots.lean"
+    },
+    "OneY.PseudoCollapse": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/PseudoCollapse.lean"
+    },
+    "OneY.PseudoSelection": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/PseudoSelection.lean"
+    },
+    "OneY.TerminalCopyExtraction": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopyExtraction.lean"
+    },
+    "OneY.TerminalCopyRebuild": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopyRebuild.lean"
+    },
+    "OneY.TopForestGeometry": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TopForestGeometry.lean"
+    },
+    "OneY.ActiveGeometry": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/ActiveGeometry.lean"
+    },
+    "OneY.LowerCopyRoots": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyRoots.lean"
+    },
+    "OneY.LowerCopyBlocker": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyBlocker.lean"
+    },
+    "OneY.TerminalCopyTransport": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopyTransport.lean"
+    },
+    "OneY.FrameCopy": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/FrameCopy.lean"
+    },
+    "OneY.TerminalCopyBottom": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopyBottom.lean"
+    },
+    "OneY.TerminalCopyBottomRecovery": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopyBottomRecovery.lean"
+    },
+    "OneY.TerminalCopySeamComparison": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopySeamComparison.lean"
+    },
+    "OneY.TerminalCopyExternalSeam": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopyExternalSeam.lean"
+    },
+    "OneY.TerminalCopyExternal": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopyExternal.lean"
+    },
+    "OneY.TerminalCopyDepths": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopyDepths.lean"
+    },
+    "OneY.TerminalCopyUpperOrder": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopyUpperOrder.lean"
+    },
+    "OneY.TerminalCopyLinear": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalCopyLinear.lean"
+    },
+    "OneY.Build": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/Build.lean"
+    },
+    "OneY.RootSearch": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/RootSearch.lean"
+    },
+    "OneY.TowerReconstruction": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TowerReconstruction.lean"
+    },
+    "OneY.Expansion": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/Expansion.lean"
+    },
+    "OneY.ExpansionProperties": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/ExpansionProperties.lean"
+    },
+    "OneY.TowerCopyAssembly": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TowerCopyAssembly.lean"
+    },
+    "OneY.Prefix": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/Prefix.lean"
+    },
+    "OneY.TerminalTowerRebuild": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/TerminalTowerRebuild.lean"
+    },
+    "OneY.RootIndexed.Diagram": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/RootIndexed/Diagram.lean"
+    },
+    "OneY.RootIndexed.Prefix": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/RootIndexed/Prefix.lean"
+    },
+    "OneY.RootIndexed.CopyCoordinates": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/RootIndexed/CopyCoordinates.lean"
+    },
+    "OneY.RootIndexed.TerminalRoots": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/RootIndexed/TerminalRoots.lean"
+    },
+    "OneY.RootIndexed.CopyDiagram": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/RootIndexed/CopyDiagram.lean"
+    },
+    "OneY.ExpansionRebuildPrefix": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/ExpansionRebuildPrefix.lean"
+    },
+    "OneY.ReconstructionComparisonPrefix": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/ReconstructionComparisonPrefix.lean"
+    },
+    "OneY.LowerCopyBadBlocker": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyBadBlocker.lean"
+    },
+    "OneY.LowerCopyCanonical": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyCanonical.lean"
+    },
+    "OneY.LowerCopyBottom": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyBottom.lean"
+    },
+    "OneY.LowerCopyBottomRecovery": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyBottomRecovery.lean"
+    },
+    "OneY.LowerCopyTransport": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyTransport.lean"
+    },
+    "OneY.LowerCopyTopForest": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyTopForest.lean"
+    },
+    "OneY.LowerCopyRebuild": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyRebuild.lean"
+    },
+    "OneY.LowerCopyLayerTransport": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyLayerTransport.lean"
+    },
+    "OneY.LowerCopyPseudoSeam": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyPseudoSeam.lean"
+    },
+    "OneY.LowerCopyPseudoHigh": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyPseudoHigh.lean"
+    },
+    "OneY.LowerCopyPseudoOutside": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyPseudoOutside.lean"
+    },
+    "OneY.FirstMatch": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/FirstMatch.lean"
+    },
+    "OneY.LowerCopyPseudoLow": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyPseudoLow.lean"
+    },
+    "OneY.SingleContraction": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/SingleContraction.lean"
+    },
+    "OneY.LowerCopyPseudo": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyPseudo.lean"
+    },
+    "OneY.LowerCopyTopBound": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyTopBound.lean"
+    },
+    "OneY.LowerCopyLayerTopBound": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerCopyLayerTopBound.lean"
+    },
+    "OneY.LowerTowerInputs": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerTowerInputs.lean"
+    },
+    "OneY.LowerTowerRebuild": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/LowerTowerRebuild.lean"
+    },
+    "OneY.ExpansionCanonical": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/ExpansionCanonical.lean"
+    },
+    "OneY.ExpansionOrder": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/ExpansionOrder.lean"
+    },
+    "OneY.RootIndexed.LowerAtoms": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/RootIndexed/LowerAtoms.lean"
+    },
+    "OneY.RootIndexed.VirtualNeeds": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/RootIndexed/VirtualNeeds.lean"
+    },
+    "OneY.RootIndexed.OrdinaryAtoms": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/RootIndexed/OrdinaryAtoms.lean"
+    },
+    "OneY.RootIndexed.SpliceGeometry": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/RootIndexed/SpliceGeometry.lean"
+    },
+    "OneY.RootIndexed.ActualScheme": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/RootIndexed/ActualScheme.lean"
+    },
+    "OneY.RootIndexed.ExpansionWellFounded": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/RootIndexed/ExpansionWellFounded.lean"
+    },
+    "ZeroY.Dynamics.Definitions": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Dynamics/Definitions.lean"
+    },
+    "ZeroY.Expansion.CopyRows": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Expansion/CopyRows.lean"
+    },
+    "ZeroY.Expansion.Prefix": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Expansion/Prefix.lean"
+    },
+    "ZeroY.Expansion.Conjugacy": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Expansion/Conjugacy.lean"
+    },
+    "ZeroY.Dynamics.Prefix": {
+      "owner": "Y",
+      "file": "lean/Y/src/ZeroY/Dynamics/Prefix.lean"
+    },
+    "OneY.Dynamics": {
+      "owner": "Y",
+      "file": "lean/Y/src/OneY/Dynamics.lean"
+    },
+    "OrdinalFormal.Reachability": {
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/Reachability.lean"
+    },
+    "FiniteDemandYFinal": {
+      "owner": "Y",
+      "file": "lean/Y/src/FiniteDemandYFinal.lean"
+    },
+    "OrdinalFormal.ExpansionValidity": {
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/ExpansionValidity.lean"
+    },
+    "OrdinalFormal.ActualBlockGeometry": {
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/ActualBlockGeometry.lean"
+    },
+    "OrdinalFormal.SpliceConstruction": {
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/SpliceConstruction.lean"
+    },
+    "OrdinalFormal.GeneratedStagedReflection": {
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/GeneratedStagedReflection.lean"
+    },
+    "OrdinalFormal.GeneratedSemanticWellFounded": {
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/GeneratedSemanticWellFounded.lean"
+    },
+    "FiniteDemandColumnWellFounded": {
+      "owner": "shared",
+      "file": "lean/shared/src/FiniteDemandColumnWellFounded.lean"
+    },
+    "OrdinalFormal.RPD": {
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/RPD.lean"
+    },
+    "OrdinalFormal.Comparison": {
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/Comparison.lean"
+    },
+    "OrdinalFormal.RPDDecrease": {
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/RPDDecrease.lean"
+    },
+    "OrdinalFormal.LRD": {
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/LRD.lean"
+    },
+    "OrdinalFormal.Domains": {
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/Domains.lean"
+    },
+    "OrdinalFormal.RPDGeometry": {
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/RPDGeometry.lean"
+    },
+    "OrdinalFormal.StandardValidity": {
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/StandardValidity.lean"
+    },
+    "OrdinalFormal.RPDSortedColumns": {
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/RPDSortedColumns.lean"
+    },
+    "OrdinalFormal.ColumnReachability": {
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/ColumnReachability.lean"
+    },
+    "OrdinalFormal.RPDWellOrderingReduction": {
+      "owner": "RPD",
+      "file": "lean/RPD/src/OrdinalFormal/RPDWellOrderingReduction.lean"
+    },
+    "OrdinalFormal.RPDTermOrder": {
+      "owner": "RPD",
+      "file": "lean/RPD/src/OrdinalFormal/RPDTermOrder.lean"
+    },
+    "OrdinalFormal.GenericSortedColumns": {
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/GenericSortedColumns.lean"
+    },
+    "OrdinalFormal.BlockFiniteUnion": {
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/BlockFiniteUnion.lean"
+    },
+    "OrdinalFormal.RPDFiniteUnion": {
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/RPDFiniteUnion.lean"
+    },
+    "OrdinalFormal.RPDDefinitionFidelity": {
+      "owner": "RPD",
+      "file": "lean/RPD/src/OrdinalFormal/RPDDefinitionFidelity.lean"
+    },
+    "FiniteDemandRPDFinal": {
+      "owner": "RPD",
+      "file": "lean/RPD/src/FiniteDemandRPDFinal.lean"
+    },
+    "OrdinalRowLanguage": {
+      "owner": "LRD",
+      "file": "lean/LRD/src/OrdinalRowLanguage.lean"
+    },
+    "OrdinalFormal.GeneratedColumnDecrease": {
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/GeneratedColumnDecrease.lean"
+    },
+    "OrdinalFormal.ColumnMap": {
+      "owner": "shared",
+      "file": "lean/shared/src/OrdinalFormal/ColumnMap.lean"
+    },
+    "OrdinalFormal.LRDStructure": {
+      "owner": "LRD",
+      "file": "lean/LRD/src/OrdinalFormal/LRDStructure.lean"
+    },
+    "OrdinalFormal.LRDCanonical": {
+      "owner": "LRD",
+      "file": "lean/LRD/src/OrdinalFormal/LRDCanonical.lean"
+    },
+    "OrdinalFormal.LRDRowDecrease": {
+      "owner": "LRD",
+      "file": "lean/LRD/src/OrdinalFormal/LRDRowDecrease.lean"
+    },
+    "OrdinalFormal.LRDNormalLift": {
+      "owner": "LRD",
+      "file": "lean/LRD/src/OrdinalFormal/LRDNormalLift.lean"
+    },
+    "OrdinalFormal.LRDColumnDecrease": {
+      "owner": "LRD",
+      "file": "lean/LRD/src/OrdinalFormal/LRDColumnDecrease.lean"
+    },
+    "OrdinalFormal.LRDRowWellFounded": {
+      "owner": "LRD",
+      "file": "lean/LRD/src/OrdinalFormal/LRDRowWellFounded.lean"
+    },
+    "LRDOrdinalRows": {
+      "owner": "LRD",
+      "file": "lean/LRD/src/LRDOrdinalRows.lean"
+    },
+    "OrdinalFormal.LRDWellOrderingReduction": {
+      "owner": "LRD",
+      "file": "lean/LRD/src/OrdinalFormal/LRDWellOrderingReduction.lean"
+    },
+    "FiniteDemandLRDFinal": {
+      "owner": "LRD",
+      "file": "lean/LRD/src/FiniteDemandLRDFinal.lean"
+    },
+    "OrdinalFormal.OmegaLRD3": {
+      "owner": "Omega-LRD3",
+      "file": "lean/Omega-LRD3/src/OrdinalFormal/OmegaLRD3.lean"
+    },
+    "OrdinalFormal.Omega3Structure": {
+      "owner": "Omega-LRD3",
+      "file": "lean/Omega-LRD3/src/OrdinalFormal/Omega3Structure.lean"
+    },
+    "OrdinalFormal.Omega3Comparison": {
+      "owner": "Omega-LRD3",
+      "file": "lean/Omega-LRD3/src/OrdinalFormal/Omega3Comparison.lean"
+    },
+    "OrdinalFormal.Omega3Domains": {
+      "owner": "Omega-LRD3",
+      "file": "lean/Omega-LRD3/src/OrdinalFormal/Omega3Domains.lean"
+    },
+    "OrdinalFormal.RowInvariant": {
+      "owner": "Omega-LRD3",
+      "file": "lean/Omega-LRD3/src/OrdinalFormal/RowInvariant.lean"
+    },
+    "OrdinalFormal.Omega3RowDomain": {
+      "owner": "Omega-LRD3",
+      "file": "lean/Omega-LRD3/src/OrdinalFormal/Omega3RowDomain.lean"
+    },
+    "OrdinalFormal.Omega3Validity": {
+      "owner": "Omega-LRD3",
+      "file": "lean/Omega-LRD3/src/OrdinalFormal/Omega3Validity.lean"
+    },
+    "OrdinalFormal.Omega3ColumnDecrease": {
+      "owner": "Omega-LRD3",
+      "file": "lean/Omega-LRD3/src/OrdinalFormal/Omega3ColumnDecrease.lean"
+    },
+    "OrdinalFormal.Omega3WellOrderingReduction": {
+      "owner": "Omega-LRD3",
+      "file": "lean/Omega-LRD3/src/OrdinalFormal/Omega3WellOrderingReduction.lean"
+    },
+    "OrdinalFormal.FiniteUnionWellFounded": {
+      "owner": "Omega-LRD3",
+      "file": "lean/Omega-LRD3/src/OrdinalFormal/FiniteUnionWellFounded.lean"
+    },
+    "OrdinalFormal.Omega3RowPool": {
+      "owner": "Omega-LRD3",
+      "file": "lean/Omega-LRD3/src/OrdinalFormal/Omega3RowPool.lean"
+    },
+    "OrdinalFormal.Omega3Countable": {
+      "owner": "Omega-LRD3",
+      "file": "lean/Omega-LRD3/src/OrdinalFormal/Omega3Countable.lean"
+    },
+    "OmegaLRD3Final": {
+      "owner": "Omega-LRD3",
+      "file": "lean/Omega-LRD3/src/OmegaLRD3Final.lean"
+    },
+    "FourNotationFinalAudit": {
+      "owner": "aggregate",
+      "file": "lean/src/FourNotationFinalAudit.lean"
+    },
+    "ARDClosedSupply": {
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDClosedSupply.lean"
+    },
+    "ARDCompression": {
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDCompression.lean"
+    },
+    "ARDCore": {
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDCore.lean"
+    },
+    "ARDDecrease": {
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDDecrease.lean"
+    },
+    "ARDDefinitionFidelity": {
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDDefinitionFidelity.lean"
+    },
+    "ARDDemandCore": {
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDDemandCore.lean"
+    },
+    "ARDDemandRecursion": {
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDDemandRecursion.lean"
+    },
+    "ARDDemandReflection": {
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDDemandReflection.lean"
+    },
+    "ARDDomain": {
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDDomain.lean"
+    },
+    "ARDEndpointAgreement": {
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDEndpointAgreement.lean"
+    },
+    "ARDFinal": {
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDFinal.lean"
+    },
+    "ARDFiniteUnion": {
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDFiniteUnion.lean"
+    },
+    "FiveNotationFinalAudit": {
+      "owner": "aggregate",
+      "file": "lean/src/FiveNotationFinalAudit.lean"
+    },
+    "ARDInitialRepresentation": {
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDInitialRepresentation.lean"
+    },
+    "ARDOrderReduction": {
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDOrderReduction.lean"
+    },
+    "ARDPrefixOrder": {
+      "owner": "shared",
+      "file": "lean/shared/src/ARDPrefixOrder.lean"
+    },
+    "ARDSemanticWellFounded": {
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDSemanticWellFounded.lean"
+    },
+    "ARDSplice": {
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDSplice.lean"
+    },
+    "ARDStageDemands": {
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDStageDemands.lean"
+    },
+    "ARDStageProof": {
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDStageProof.lean"
+    },
+    "ARDStructure": {
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDStructure.lean"
+    },
+    "ARDWitnesses": {
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDWitnesses.lean"
+    },
+    "IPDClosedSupply": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDClosedSupply.lean"
+    },
+    "IPDColumnOrder": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDColumnOrder.lean"
+    },
+    "IPDDecrease": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDDecrease.lean"
+    },
+    "IPDDemandCore": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDDemandCore.lean"
+    },
+    "IPDDemandRecursion": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDDemandRecursion.lean"
+    },
+    "IPDEndpointAgreement": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDEndpointAgreement.lean"
+    },
+    "IPDFiniteLabels": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDFiniteLabels.lean"
+    },
+    "IPDGraphController": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDGraphController.lean"
+    },
+    "IPDGraphCore": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDGraphCore.lean"
+    },
+    "IPDGraphGeometry": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDGraphGeometry.lean"
+    },
+    "IPDGraphNormalization": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDGraphNormalization.lean"
+    },
+    "IPDGraphValidity": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDGraphValidity.lean"
+    },
+    "IPDInitialRepresentation": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDInitialRepresentation.lean"
+    },
+    "IPDProfileAtoms": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDProfileAtoms.lean"
+    },
+    "IPDProfileCountable": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDProfileCountable.lean"
+    },
+    "IPDProfileIdentity": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDProfileIdentity.lean"
+    },
+    "IPDProfileLower": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDProfileLower.lean"
+    },
+    "IPDProfileOrder": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDProfileOrder.lean"
+    },
+    "IPDProfileRename": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDProfileRename.lean"
+    },
+    "IPDProfileSubstitution": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDProfileSubstitution.lean"
+    },
+    "IPDProfileValidity": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDProfileValidity.lean"
+    },
+    "IPDSeeds": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDSeeds.lean"
+    },
+    "IPDSemanticEdges": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDSemanticEdges.lean"
+    },
+    "IPDSemanticWellFounded": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDSemanticWellFounded.lean"
+    },
+    "IPDSpliceLabels": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDSpliceLabels.lean"
+    },
+    "IPDStageFacts": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDStageFacts.lean"
+    },
+    "IPDStageSplice": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDStageSplice.lean"
+    },
+    "IPDStandardOrder": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDStandardOrder.lean"
+    },
+    "IPDTemplates": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDTemplates.lean"
+    },
+    "IPDTree": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDTree.lean"
+    },
+    "IPDTreeCompare": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDTreeCompare.lean"
+    },
+    "IPDTreeLinearOrder": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDTreeLinearOrder.lean"
+    },
+    "IPDTreeLocalRename": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDTreeLocalRename.lean"
+    },
+    "IPDTreeLower": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDTreeLower.lean"
+    },
+    "IPDTreeLowerClosure": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDTreeLowerClosure.lean"
+    },
+    "IPDTreeOrder": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDTreeOrder.lean"
+    },
+    "IPDTreeRename": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDTreeRename.lean"
+    },
+    "IPDTreeSupport": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDTreeSupport.lean"
+    },
+    "IPDTreeWellFounded": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDTreeWellFounded.lean"
+    },
+    "IPDWitnesses": {
+      "owner": "IPD",
+      "file": "lean/IPD/src/IPDWitnesses.lean"
+    },
+    "SixNotationFinalAudit": {
+      "owner": "aggregate",
+      "file": "lean/src/SixNotationFinalAudit.lean"
+    },
+    "ARD2ClosedSupply": {
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2ClosedSupply.lean"
+    },
+    "ARD2Compression": {
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2Compression.lean"
+    },
+    "ARD2Core": {
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2Core.lean"
+    },
+    "ARD2Decrease": {
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2Decrease.lean"
+    },
+    "ARD2DefinitionFidelity": {
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2DefinitionFidelity.lean"
+    },
+    "ARD2DemandCore": {
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2DemandCore.lean"
+    },
+    "ARD2DemandRecursion": {
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2DemandRecursion.lean"
+    },
+    "ARD2DemandReflection": {
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2DemandReflection.lean"
+    },
+    "ARD2Domain": {
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2Domain.lean"
+    },
+    "ARD2EndpointAgreement": {
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2EndpointAgreement.lean"
+    },
+    "ARD2Final": {
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2Final.lean"
+    },
+    "ARD2FiniteUnion": {
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2FiniteUnion.lean"
+    },
+    "ARD2InitialRepresentation": {
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2InitialRepresentation.lean"
+    },
+    "ARD2OrderReduction": {
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2OrderReduction.lean"
+    },
+    "ARD2SemanticWellFounded": {
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2SemanticWellFounded.lean"
+    },
+    "ARD2Splice": {
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2Splice.lean"
+    },
+    "ARD2StageDemands": {
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2StageDemands.lean"
+    },
+    "ARD2StageProof": {
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2StageProof.lean"
+    },
+    "ARD2Structure": {
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2Structure.lean"
+    },
+    "ARD2Templates": {
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2Templates.lean"
+    },
+    "ARD2Witnesses": {
+      "owner": "ARD2",
+      "file": "lean/ARD2/src/ARD2Witnesses.lean"
+    },
+    "SevenNotationFinalAudit": {
+      "owner": "aggregate",
+      "file": "lean/src/SevenNotationFinalAudit.lean"
+    }
+  },
+  "projects": {
+    "Y": {
+      "directory": "lean/Y",
+      "manifest": "lean/Y/sources.json",
+      "targets": [
+        "FiniteDemandYFinal"
+      ],
+      "owned_modules": [
+        "FiniteDemandYFinal",
+        "NatSemanticTransport",
+        "OneY.ActiveGeometry",
+        "OneY.BadRoot",
+        "OneY.Build",
+        "OneY.CopyCoordinates",
+        "OneY.DecoratedBlocker",
+        "OneY.DecoratedBlockerExpansion",
+        "OneY.DecoratedColumn",
+        "OneY.DepthMatrix",
+        "OneY.Dynamics",
+        "OneY.Expansion",
+        "OneY.ExpansionCanonical",
+        "OneY.ExpansionOrder",
+        "OneY.ExpansionProperties",
+        "OneY.ExpansionRebuildPrefix",
+        "OneY.Extraction",
+        "OneY.ExtractionGeometry",
+        "OneY.FirstMatch",
+        "OneY.Forest",
+        "OneY.ForestBridge",
+        "OneY.ForestFrame",
+        "OneY.ForestFrameMatrix",
+        "OneY.FrameCopy",
+        "OneY.Geometry",
+        "OneY.LowerCopy",
+        "OneY.LowerCopyBadBlocker",
+        "OneY.LowerCopyBlocker",
+        "OneY.LowerCopyBottom",
+        "OneY.LowerCopyBottomRecovery",
+        "OneY.LowerCopyCanonical",
+        "OneY.LowerCopyComparison",
+        "OneY.LowerCopyDepths",
+        "OneY.LowerCopyDominance",
+        "OneY.LowerCopyLayerTopBound",
+        "OneY.LowerCopyLayerTransport",
+        "OneY.LowerCopyNesting",
+        "OneY.LowerCopyPseudo",
+        "OneY.LowerCopyPseudoHigh",
+        "OneY.LowerCopyPseudoLow",
+        "OneY.LowerCopyPseudoOutside",
+        "OneY.LowerCopyPseudoSeam",
+        "OneY.LowerCopyRebuild",
+        "OneY.LowerCopyRoots",
+        "OneY.LowerCopyTopBound",
+        "OneY.LowerCopyTopForest",
+        "OneY.LowerCopyTransport",
+        "OneY.LowerTowerInputs",
+        "OneY.LowerTowerRebuild",
+        "OneY.Numeric",
+        "OneY.NumericDecoratedFrame",
+        "OneY.NumericFrame",
+        "OneY.NumericFrameBlocker",
+        "OneY.NumericGeometry",
+        "OneY.NumericRoots",
+        "OneY.OrdinaryCopy",
+        "OneY.OrdinaryCopyExtraction",
+        "OneY.OrdinaryCopyForest",
+        "OneY.OrdinaryCopyNumeric",
+        "OneY.OrdinaryCopyPseudo",
+        "OneY.OrdinaryCopyReconstruction",
+        "OneY.OrdinaryCopyRoots",
+        "OneY.OrdinaryCopySelection",
+        "OneY.Prefix",
+        "OneY.Pseudo",
+        "OneY.PseudoCollapse",
+        "OneY.PseudoSelection",
+        "OneY.Reconstruction",
+        "OneY.ReconstructionComparison",
+        "OneY.ReconstructionComparisonPrefix",
+        "OneY.ReconstructionNumeric",
+        "OneY.ReconstructionTop",
+        "OneY.RelativeBlocker",
+        "OneY.RootGeometry",
+        "OneY.RootIndexed.ActualScheme",
+        "OneY.RootIndexed.CopyCoordinates",
+        "OneY.RootIndexed.CopyDiagram",
+        "OneY.RootIndexed.Diagram",
+        "OneY.RootIndexed.ExpansionWellFounded",
+        "OneY.RootIndexed.LowerAtoms",
+        "OneY.RootIndexed.OrdinaryAtoms",
+        "OneY.RootIndexed.Prefix",
+        "OneY.RootIndexed.Representation",
+        "OneY.RootIndexed.SpliceGeometry",
+        "OneY.RootIndexed.TerminalRoots",
+        "OneY.RootIndexed.VirtualNeeds",
+        "OneY.RootSearch",
+        "OneY.SingleContraction",
+        "OneY.SparseBlocker",
+        "OneY.SparseComparison",
+        "OneY.SparseDepth",
+        "OneY.TerminalCopy",
+        "OneY.TerminalCopyBottom",
+        "OneY.TerminalCopyBottomRecovery",
+        "OneY.TerminalCopyCanonical",
+        "OneY.TerminalCopyComparison",
+        "OneY.TerminalCopyComplete",
+        "OneY.TerminalCopyDepths",
+        "OneY.TerminalCopyExternal",
+        "OneY.TerminalCopyExternalSeam",
+        "OneY.TerminalCopyExtraction",
+        "OneY.TerminalCopyLinear",
+        "OneY.TerminalCopyNesting",
+        "OneY.TerminalCopyNumeric",
+        "OneY.TerminalCopyRebuild",
+        "OneY.TerminalCopyReconstruction",
+        "OneY.TerminalCopyRoots",
+        "OneY.TerminalCopySeamComparison",
+        "OneY.TerminalCopyTopBound",
+        "OneY.TerminalCopyTransport",
+        "OneY.TerminalCopyUpperOrder",
+        "OneY.TerminalDecoratedRecovery",
+        "OneY.TerminalFrame",
+        "OneY.TerminalFrameDepths",
+        "OneY.TerminalFrameParents",
+        "OneY.TerminalTowerRebuild",
+        "OneY.TopComparison",
+        "OneY.TopForestGeometry",
+        "OneY.TowerCopyAssembly",
+        "OneY.TowerReconstruction",
+        "ZeroY.BMS.AnyArray",
+        "ZeroY.BMS.PaddedDescent",
+        "ZeroY.Decode",
+        "ZeroY.Dynamics.Definitions",
+        "ZeroY.Dynamics.Prefix",
+        "ZeroY.Encode",
+        "ZeroY.Expansion",
+        "ZeroY.Expansion.Conjugacy",
+        "ZeroY.Expansion.Context",
+        "ZeroY.Expansion.CopyRows",
+        "ZeroY.Expansion.Prefix",
+        "ZeroY.Forest.AncestorMonotone",
+        "ZeroY.Forest.Blocker",
+        "ZeroY.Forest.Comparison",
+        "ZeroY.Forest.MatrixParents",
+        "ZeroY.Forest.Stack",
+        "ZeroY.Image",
+        "ZeroY.MatrixOrder",
+        "ZeroY.Mountain",
+        "ZeroY.Mountain.CommonChain",
+        "ZeroY.Mountain.Encoding",
+        "ZeroY.Mountain.Roots",
+        "ZeroY.Mountain.SumInverse",
+        "ZeroY.Mountain.Termination",
+        "ZeroY.OrderEmbedding",
+        "ZeroY.PaddedExt",
+        "ZeroY.PaddedOrder",
+        "ZeroY.Reversible",
+        "ZeroY.RoundTrip",
+        "ZeroY.SequenceOrder",
+        "ZeroY.Structural.BlockerExpansion",
+        "ZeroY.Structural.CopyOrder",
+        "ZeroY.Structural.DecodeTower",
+        "ZeroY.Structural.DepthExpansion",
+        "ZeroY.Structural.Expansion",
+        "ZeroY.Structural.ExpansionCoordinates",
+        "ZeroY.Structural.ExpansionParentAlignment",
+        "ZeroY.Structural.ExpansionParents",
+        "ZeroY.Structural.Prefix",
+        "ZeroY.Structural.RawRecognition",
+        "ZeroY.Structural.Recognition",
+        "ZeroY.Syntax",
+        "ZeroY.Transport"
+      ],
+      "external_modules": [
+        "YesMetaZFC.BMS.Ancestor",
+        "YesMetaZFC.BMS.Array",
+        "YesMetaZFC.BMS.Decomposition",
+        "YesMetaZFC.BMS.Expansion",
+        "YesMetaZFC.BMS.ExpansionOrder",
+        "YesMetaZFC.BMS.FiniteReflection",
+        "YesMetaZFC.BMS.Generation",
+        "YesMetaZFC.BMS.Lemma25",
+        "YesMetaZFC.BMS.Parent",
+        "YesMetaZFC.BMS.Reference",
+        "YesMetaZFC.BMS.Stability",
+        "YesMetaZFC.BMS.WellFoundedness"
+      ],
+      "closure_modules": [
+        "FiniteDemandClosedSupply",
+        "FiniteDemandCore",
+        "FiniteDemandEndpointAgreement",
+        "FiniteDemandFinitaryClosure",
+        "FiniteDemandHostAmbient",
+        "FiniteDemandInitialRepresentation",
+        "FiniteDemandOrdinalHeight",
+        "FiniteDemandRecursion",
+        "FiniteDemandReflection",
+        "FiniteDemandWitnesses",
+        "FiniteDemandYFinal",
+        "NatSemanticTransport",
+        "OneY.ActiveGeometry",
+        "OneY.BadRoot",
+        "OneY.Build",
+        "OneY.CopyCoordinates",
+        "OneY.DecoratedBlocker",
+        "OneY.DecoratedBlockerExpansion",
+        "OneY.DecoratedColumn",
+        "OneY.DepthMatrix",
+        "OneY.Dynamics",
+        "OneY.Expansion",
+        "OneY.ExpansionCanonical",
+        "OneY.ExpansionOrder",
+        "OneY.ExpansionProperties",
+        "OneY.ExpansionRebuildPrefix",
+        "OneY.Extraction",
+        "OneY.ExtractionGeometry",
+        "OneY.FirstMatch",
+        "OneY.Forest",
+        "OneY.ForestBridge",
+        "OneY.ForestFrame",
+        "OneY.ForestFrameMatrix",
+        "OneY.FrameCopy",
+        "OneY.Geometry",
+        "OneY.LowerCopy",
+        "OneY.LowerCopyBadBlocker",
+        "OneY.LowerCopyBlocker",
+        "OneY.LowerCopyBottom",
+        "OneY.LowerCopyBottomRecovery",
+        "OneY.LowerCopyCanonical",
+        "OneY.LowerCopyComparison",
+        "OneY.LowerCopyDepths",
+        "OneY.LowerCopyDominance",
+        "OneY.LowerCopyLayerTopBound",
+        "OneY.LowerCopyLayerTransport",
+        "OneY.LowerCopyNesting",
+        "OneY.LowerCopyPseudo",
+        "OneY.LowerCopyPseudoHigh",
+        "OneY.LowerCopyPseudoLow",
+        "OneY.LowerCopyPseudoOutside",
+        "OneY.LowerCopyPseudoSeam",
+        "OneY.LowerCopyRebuild",
+        "OneY.LowerCopyRoots",
+        "OneY.LowerCopyTopBound",
+        "OneY.LowerCopyTopForest",
+        "OneY.LowerCopyTransport",
+        "OneY.LowerTowerInputs",
+        "OneY.LowerTowerRebuild",
+        "OneY.Numeric",
+        "OneY.NumericDecoratedFrame",
+        "OneY.NumericFrame",
+        "OneY.NumericFrameBlocker",
+        "OneY.NumericGeometry",
+        "OneY.NumericRoots",
+        "OneY.OrdinaryCopy",
+        "OneY.OrdinaryCopyExtraction",
+        "OneY.OrdinaryCopyForest",
+        "OneY.OrdinaryCopyNumeric",
+        "OneY.OrdinaryCopyPseudo",
+        "OneY.OrdinaryCopyReconstruction",
+        "OneY.OrdinaryCopyRoots",
+        "OneY.OrdinaryCopySelection",
+        "OneY.Prefix",
+        "OneY.Pseudo",
+        "OneY.PseudoCollapse",
+        "OneY.PseudoSelection",
+        "OneY.Reconstruction",
+        "OneY.ReconstructionComparison",
+        "OneY.ReconstructionComparisonPrefix",
+        "OneY.ReconstructionNumeric",
+        "OneY.ReconstructionTop",
+        "OneY.RelativeBlocker",
+        "OneY.RootGeometry",
+        "OneY.RootIndexed.ActualScheme",
+        "OneY.RootIndexed.CopyCoordinates",
+        "OneY.RootIndexed.CopyDiagram",
+        "OneY.RootIndexed.Diagram",
+        "OneY.RootIndexed.ExpansionWellFounded",
+        "OneY.RootIndexed.LowerAtoms",
+        "OneY.RootIndexed.OrdinaryAtoms",
+        "OneY.RootIndexed.Prefix",
+        "OneY.RootIndexed.Representation",
+        "OneY.RootIndexed.SpliceGeometry",
+        "OneY.RootIndexed.TerminalRoots",
+        "OneY.RootIndexed.VirtualNeeds",
+        "OneY.RootSearch",
+        "OneY.SingleContraction",
+        "OneY.SparseBlocker",
+        "OneY.SparseComparison",
+        "OneY.SparseDepth",
+        "OneY.TerminalCopy",
+        "OneY.TerminalCopyBottom",
+        "OneY.TerminalCopyBottomRecovery",
+        "OneY.TerminalCopyCanonical",
+        "OneY.TerminalCopyComparison",
+        "OneY.TerminalCopyComplete",
+        "OneY.TerminalCopyDepths",
+        "OneY.TerminalCopyExternal",
+        "OneY.TerminalCopyExternalSeam",
+        "OneY.TerminalCopyExtraction",
+        "OneY.TerminalCopyLinear",
+        "OneY.TerminalCopyNesting",
+        "OneY.TerminalCopyNumeric",
+        "OneY.TerminalCopyRebuild",
+        "OneY.TerminalCopyReconstruction",
+        "OneY.TerminalCopyRoots",
+        "OneY.TerminalCopySeamComparison",
+        "OneY.TerminalCopyTopBound",
+        "OneY.TerminalCopyTransport",
+        "OneY.TerminalCopyUpperOrder",
+        "OneY.TerminalDecoratedRecovery",
+        "OneY.TerminalFrame",
+        "OneY.TerminalFrameDepths",
+        "OneY.TerminalFrameParents",
+        "OneY.TerminalTowerRebuild",
+        "OneY.TopComparison",
+        "OneY.TopForestGeometry",
+        "OneY.TowerCopyAssembly",
+        "OneY.TowerReconstruction",
+        "OrdinalFormal.ColumnRepresentation",
+        "OrdinalFormal.Columns",
+        "OrdinalFormal.Reachability",
+        "OrdinalFormal.ReflectionTransport",
+        "YesMetaZFC.BMS.Ancestor",
+        "YesMetaZFC.BMS.Array",
+        "YesMetaZFC.BMS.Decomposition",
+        "YesMetaZFC.BMS.Expansion",
+        "YesMetaZFC.BMS.ExpansionOrder",
+        "YesMetaZFC.BMS.FiniteReflection",
+        "YesMetaZFC.BMS.Generation",
+        "YesMetaZFC.BMS.Lemma25",
+        "YesMetaZFC.BMS.Parent",
+        "YesMetaZFC.BMS.Reference",
+        "YesMetaZFC.BMS.Stability",
+        "YesMetaZFC.BMS.WellFoundedness",
+        "ZeroY.BMS.AnyArray",
+        "ZeroY.BMS.PaddedDescent",
+        "ZeroY.Decode",
+        "ZeroY.Dynamics.Definitions",
+        "ZeroY.Dynamics.Prefix",
+        "ZeroY.Encode",
+        "ZeroY.Expansion",
+        "ZeroY.Expansion.Conjugacy",
+        "ZeroY.Expansion.Context",
+        "ZeroY.Expansion.CopyRows",
+        "ZeroY.Expansion.Prefix",
+        "ZeroY.Forest.AncestorMonotone",
+        "ZeroY.Forest.Blocker",
+        "ZeroY.Forest.Comparison",
+        "ZeroY.Forest.MatrixParents",
+        "ZeroY.Forest.Stack",
+        "ZeroY.Image",
+        "ZeroY.MatrixOrder",
+        "ZeroY.Mountain",
+        "ZeroY.Mountain.CommonChain",
+        "ZeroY.Mountain.Encoding",
+        "ZeroY.Mountain.Roots",
+        "ZeroY.Mountain.SumInverse",
+        "ZeroY.Mountain.Termination",
+        "ZeroY.OrderEmbedding",
+        "ZeroY.PaddedExt",
+        "ZeroY.PaddedOrder",
+        "ZeroY.Reversible",
+        "ZeroY.RoundTrip",
+        "ZeroY.SequenceOrder",
+        "ZeroY.Structural.BlockerExpansion",
+        "ZeroY.Structural.CopyOrder",
+        "ZeroY.Structural.DecodeTower",
+        "ZeroY.Structural.DepthExpansion",
+        "ZeroY.Structural.Expansion",
+        "ZeroY.Structural.ExpansionCoordinates",
+        "ZeroY.Structural.ExpansionParentAlignment",
+        "ZeroY.Structural.ExpansionParents",
+        "ZeroY.Structural.Prefix",
+        "ZeroY.Structural.RawRecognition",
+        "ZeroY.Structural.Recognition",
+        "ZeroY.Syntax",
+        "ZeroY.Transport"
+      ],
+      "external": [
+        "Lean",
+        "Lean.Elab.Tactic.Omega",
+        "Mathlib.Data.Countable.Basic",
+        "Mathlib.Data.List.Basic",
+        "Mathlib.Data.List.Shortlex",
+        "Mathlib.Data.Set.Countable",
+        "Mathlib.Order.RelClasses",
+        "Mathlib.Order.WellFounded",
+        "Mathlib.SetTheory.Cardinal.Aleph",
+        "Mathlib.SetTheory.Ordinal.Basic",
+        "Mathlib.SetTheory.Ordinal.Family",
+        "Std"
+      ]
+    },
+    "RPD": {
+      "directory": "lean/RPD",
+      "manifest": "lean/RPD/sources.json",
+      "targets": [
+        "FiniteDemandRPDFinal"
+      ],
+      "owned_modules": [
+        "FiniteDemandRPDFinal",
+        "OrdinalFormal.RPDDefinitionFidelity",
+        "OrdinalFormal.RPDTermOrder",
+        "OrdinalFormal.RPDWellOrderingReduction"
+      ],
+      "external_modules": [],
+      "closure_modules": [
+        "FiniteDemandClosedSupply",
+        "FiniteDemandColumnWellFounded",
+        "FiniteDemandCore",
+        "FiniteDemandEndpointAgreement",
+        "FiniteDemandFinitaryClosure",
+        "FiniteDemandHostAmbient",
+        "FiniteDemandInitialRepresentation",
+        "FiniteDemandOrdinalHeight",
+        "FiniteDemandRPDFinal",
+        "FiniteDemandRecursion",
+        "FiniteDemandReflection",
+        "FiniteDemandWitnesses",
+        "OrdinalFormal.ActualBlockGeometry",
+        "OrdinalFormal.BlockFiniteUnion",
+        "OrdinalFormal.ColumnReachability",
+        "OrdinalFormal.ColumnRepresentation",
+        "OrdinalFormal.Columns",
+        "OrdinalFormal.Comparison",
+        "OrdinalFormal.Domains",
+        "OrdinalFormal.ExpansionValidity",
+        "OrdinalFormal.GeneratedSemanticWellFounded",
+        "OrdinalFormal.GeneratedStagedReflection",
+        "OrdinalFormal.GenericSortedColumns",
+        "OrdinalFormal.LRD",
+        "OrdinalFormal.RPD",
+        "OrdinalFormal.RPDDecrease",
+        "OrdinalFormal.RPDDefinitionFidelity",
+        "OrdinalFormal.RPDFiniteUnion",
+        "OrdinalFormal.RPDGeometry",
+        "OrdinalFormal.RPDSortedColumns",
+        "OrdinalFormal.RPDTermOrder",
+        "OrdinalFormal.RPDWellOrderingReduction",
+        "OrdinalFormal.Reachability",
+        "OrdinalFormal.ReflectionTransport",
+        "OrdinalFormal.SpliceConstruction",
+        "OrdinalFormal.StandardValidity"
+      ],
+      "external": [
+        "Mathlib.Data.Countable.Basic",
+        "Mathlib.Data.List.Basic",
+        "Mathlib.Data.List.Shortlex",
+        "Mathlib.Data.Set.Countable",
+        "Mathlib.Order.RelClasses",
+        "Mathlib.Order.WellFounded",
+        "Mathlib.SetTheory.Cardinal.Aleph",
+        "Mathlib.SetTheory.Ordinal.Basic",
+        "Mathlib.SetTheory.Ordinal.Family",
+        "Std"
+      ]
+    },
+    "LRD": {
+      "directory": "lean/LRD",
+      "manifest": "lean/LRD/sources.json",
+      "targets": [
+        "FiniteDemandLRDFinal"
+      ],
+      "owned_modules": [
+        "FiniteDemandLRDFinal",
+        "LRDOrdinalRows",
+        "OrdinalFormal.LRDCanonical",
+        "OrdinalFormal.LRDColumnDecrease",
+        "OrdinalFormal.LRDNormalLift",
+        "OrdinalFormal.LRDRowDecrease",
+        "OrdinalFormal.LRDRowWellFounded",
+        "OrdinalFormal.LRDStructure",
+        "OrdinalFormal.LRDWellOrderingReduction",
+        "OrdinalRowLanguage"
+      ],
+      "external_modules": [],
+      "closure_modules": [
+        "FiniteDemandClosedSupply",
+        "FiniteDemandColumnWellFounded",
+        "FiniteDemandCore",
+        "FiniteDemandEndpointAgreement",
+        "FiniteDemandFinitaryClosure",
+        "FiniteDemandHostAmbient",
+        "FiniteDemandInitialRepresentation",
+        "FiniteDemandLRDFinal",
+        "FiniteDemandOrdinalHeight",
+        "FiniteDemandRecursion",
+        "FiniteDemandReflection",
+        "FiniteDemandWitnesses",
+        "LRDOrdinalRows",
+        "OrdinalFormal.ActualBlockGeometry",
+        "OrdinalFormal.ColumnMap",
+        "OrdinalFormal.ColumnReachability",
+        "OrdinalFormal.ColumnRepresentation",
+        "OrdinalFormal.Columns",
+        "OrdinalFormal.Comparison",
+        "OrdinalFormal.Domains",
+        "OrdinalFormal.ExpansionValidity",
+        "OrdinalFormal.GeneratedColumnDecrease",
+        "OrdinalFormal.GeneratedSemanticWellFounded",
+        "OrdinalFormal.GeneratedStagedReflection",
+        "OrdinalFormal.GenericSortedColumns",
+        "OrdinalFormal.LRD",
+        "OrdinalFormal.LRDCanonical",
+        "OrdinalFormal.LRDColumnDecrease",
+        "OrdinalFormal.LRDNormalLift",
+        "OrdinalFormal.LRDRowDecrease",
+        "OrdinalFormal.LRDRowWellFounded",
+        "OrdinalFormal.LRDStructure",
+        "OrdinalFormal.LRDWellOrderingReduction",
+        "OrdinalFormal.RPD",
+        "OrdinalFormal.RPDDecrease",
+        "OrdinalFormal.RPDGeometry",
+        "OrdinalFormal.Reachability",
+        "OrdinalFormal.ReflectionTransport",
+        "OrdinalFormal.SpliceConstruction",
+        "OrdinalFormal.StandardValidity",
+        "OrdinalRowLanguage"
+      ],
+      "external": [
+        "Mathlib.Data.Countable.Basic",
+        "Mathlib.Data.List.Basic",
+        "Mathlib.Data.List.Shortlex",
+        "Mathlib.Data.Set.Countable",
+        "Mathlib.ModelTheory.Semantics",
+        "Mathlib.Order.RelClasses",
+        "Mathlib.Order.WellFounded",
+        "Mathlib.SetTheory.Cardinal.Aleph",
+        "Mathlib.SetTheory.Ordinal.Basic",
+        "Mathlib.SetTheory.Ordinal.Family",
+        "Std"
+      ]
+    },
+    "Omega-LRD3": {
+      "directory": "lean/Omega-LRD3",
+      "manifest": "lean/Omega-LRD3/sources.json",
+      "targets": [
+        "OmegaLRD3Final"
+      ],
+      "owned_modules": [
+        "OmegaLRD3Final",
+        "OrdinalFormal.FiniteUnionWellFounded",
+        "OrdinalFormal.Omega3ColumnDecrease",
+        "OrdinalFormal.Omega3Comparison",
+        "OrdinalFormal.Omega3Countable",
+        "OrdinalFormal.Omega3Domains",
+        "OrdinalFormal.Omega3RowDomain",
+        "OrdinalFormal.Omega3RowPool",
+        "OrdinalFormal.Omega3Structure",
+        "OrdinalFormal.Omega3Validity",
+        "OrdinalFormal.Omega3WellOrderingReduction",
+        "OrdinalFormal.OmegaLRD3",
+        "OrdinalFormal.RowInvariant"
+      ],
+      "external_modules": [],
+      "closure_modules": [
+        "FiniteDemandClosedSupply",
+        "FiniteDemandColumnWellFounded",
+        "FiniteDemandCore",
+        "FiniteDemandEndpointAgreement",
+        "FiniteDemandFinitaryClosure",
+        "FiniteDemandHostAmbient",
+        "FiniteDemandInitialRepresentation",
+        "FiniteDemandOrdinalHeight",
+        "FiniteDemandRecursion",
+        "FiniteDemandReflection",
+        "FiniteDemandWitnesses",
+        "OmegaLRD3Final",
+        "OrdinalFormal.ActualBlockGeometry",
+        "OrdinalFormal.ColumnMap",
+        "OrdinalFormal.ColumnReachability",
+        "OrdinalFormal.ColumnRepresentation",
+        "OrdinalFormal.Columns",
+        "OrdinalFormal.Comparison",
+        "OrdinalFormal.Domains",
+        "OrdinalFormal.ExpansionValidity",
+        "OrdinalFormal.FiniteUnionWellFounded",
+        "OrdinalFormal.GeneratedColumnDecrease",
+        "OrdinalFormal.GeneratedSemanticWellFounded",
+        "OrdinalFormal.GeneratedStagedReflection",
+        "OrdinalFormal.GenericSortedColumns",
+        "OrdinalFormal.LRD",
+        "OrdinalFormal.Omega3ColumnDecrease",
+        "OrdinalFormal.Omega3Comparison",
+        "OrdinalFormal.Omega3Countable",
+        "OrdinalFormal.Omega3Domains",
+        "OrdinalFormal.Omega3RowDomain",
+        "OrdinalFormal.Omega3RowPool",
+        "OrdinalFormal.Omega3Structure",
+        "OrdinalFormal.Omega3Validity",
+        "OrdinalFormal.Omega3WellOrderingReduction",
+        "OrdinalFormal.OmegaLRD3",
+        "OrdinalFormal.RPD",
+        "OrdinalFormal.RPDDecrease",
+        "OrdinalFormal.RPDGeometry",
+        "OrdinalFormal.Reachability",
+        "OrdinalFormal.ReflectionTransport",
+        "OrdinalFormal.RowInvariant",
+        "OrdinalFormal.SpliceConstruction",
+        "OrdinalFormal.StandardValidity"
+      ],
+      "external": [
+        "Mathlib.Data.Countable.Basic",
+        "Mathlib.Data.List.Basic",
+        "Mathlib.Data.List.Shortlex",
+        "Mathlib.Data.Nat.Pairing",
+        "Mathlib.Data.Set.Countable",
+        "Mathlib.Order.RelClasses",
+        "Mathlib.Order.WellFounded",
+        "Mathlib.SetTheory.Cardinal.Aleph",
+        "Mathlib.SetTheory.Ordinal.Basic",
+        "Mathlib.SetTheory.Ordinal.Family",
+        "Std"
+      ]
+    },
+    "ARD": {
+      "directory": "lean/ARD",
+      "manifest": "lean/ARD/sources.json",
+      "targets": [
+        "ARDFinal",
+        "ARDCompression"
+      ],
+      "owned_modules": [
+        "ARDClosedSupply",
+        "ARDCompression",
+        "ARDCore",
+        "ARDDecrease",
+        "ARDDefinitionFidelity",
+        "ARDDemandCore",
+        "ARDDemandRecursion",
+        "ARDDemandReflection",
+        "ARDDomain",
+        "ARDEndpointAgreement",
+        "ARDFinal",
+        "ARDFiniteUnion",
+        "ARDInitialRepresentation",
+        "ARDOrderReduction",
+        "ARDSemanticWellFounded",
+        "ARDSplice",
+        "ARDStageDemands",
+        "ARDStageProof",
+        "ARDStructure",
+        "ARDWitnesses"
+      ],
+      "external_modules": [],
+      "closure_modules": [
+        "ARDClosedSupply",
+        "ARDCompression",
+        "ARDCore",
+        "ARDDecrease",
+        "ARDDefinitionFidelity",
+        "ARDDemandCore",
+        "ARDDemandRecursion",
+        "ARDDemandReflection",
+        "ARDDomain",
+        "ARDEndpointAgreement",
+        "ARDFinal",
+        "ARDFiniteUnion",
+        "ARDInitialRepresentation",
+        "ARDOrderReduction",
+        "ARDPrefixOrder",
+        "ARDSemanticWellFounded",
+        "ARDSplice",
+        "ARDStageDemands",
+        "ARDStageProof",
+        "ARDStructure",
+        "ARDWitnesses",
+        "FiniteDemandClosedSupply",
+        "FiniteDemandCore",
+        "FiniteDemandEndpointAgreement",
+        "FiniteDemandFinitaryClosure",
+        "FiniteDemandHostAmbient",
+        "FiniteDemandInitialRepresentation",
+        "FiniteDemandOrdinalHeight",
+        "FiniteDemandRecursion",
+        "FiniteDemandReflection",
+        "FiniteDemandWitnesses",
+        "OrdinalFormal.ActualBlockGeometry",
+        "OrdinalFormal.BlockFiniteUnion",
+        "OrdinalFormal.ColumnRepresentation",
+        "OrdinalFormal.Columns",
+        "OrdinalFormal.Comparison",
+        "OrdinalFormal.Domains",
+        "OrdinalFormal.ExpansionValidity",
+        "OrdinalFormal.GeneratedColumnDecrease",
+        "OrdinalFormal.GenericSortedColumns",
+        "OrdinalFormal.LRD",
+        "OrdinalFormal.RPD",
+        "OrdinalFormal.RPDDecrease",
+        "OrdinalFormal.RPDFiniteUnion",
+        "OrdinalFormal.RPDGeometry",
+        "OrdinalFormal.RPDSortedColumns",
+        "OrdinalFormal.Reachability",
+        "OrdinalFormal.ReflectionTransport",
+        "OrdinalFormal.SpliceConstruction",
+        "OrdinalFormal.StandardValidity"
+      ],
+      "external": [
+        "Mathlib.Data.Countable.Basic",
+        "Mathlib.Data.List.Basic",
+        "Mathlib.Data.List.Shortlex",
+        "Mathlib.Data.Set.Countable",
+        "Mathlib.Order.RelClasses",
+        "Mathlib.Order.WellFounded",
+        "Mathlib.SetTheory.Cardinal.Aleph",
+        "Mathlib.SetTheory.Ordinal.Basic",
+        "Mathlib.SetTheory.Ordinal.Family",
+        "Std"
+      ]
+    },
+    "IPD": {
+      "directory": "lean/IPD",
+      "manifest": "lean/IPD/sources.json",
+      "targets": [
+        "IPDStandardOrder",
+        "IPDTreeCompare"
+      ],
+      "owned_modules": [
+        "IPDClosedSupply",
+        "IPDColumnOrder",
+        "IPDDecrease",
+        "IPDDemandCore",
+        "IPDDemandRecursion",
+        "IPDEndpointAgreement",
+        "IPDFiniteLabels",
+        "IPDGraphController",
+        "IPDGraphCore",
+        "IPDGraphGeometry",
+        "IPDGraphNormalization",
+        "IPDGraphValidity",
+        "IPDInitialRepresentation",
+        "IPDProfileAtoms",
+        "IPDProfileCountable",
+        "IPDProfileIdentity",
+        "IPDProfileLower",
+        "IPDProfileOrder",
+        "IPDProfileRename",
+        "IPDProfileSubstitution",
+        "IPDProfileValidity",
+        "IPDSeeds",
+        "IPDSemanticEdges",
+        "IPDSemanticWellFounded",
+        "IPDSpliceLabels",
+        "IPDStageFacts",
+        "IPDStageSplice",
+        "IPDStandardOrder",
+        "IPDTemplates",
+        "IPDTree",
+        "IPDTreeCompare",
+        "IPDTreeLinearOrder",
+        "IPDTreeLocalRename",
+        "IPDTreeLower",
+        "IPDTreeLowerClosure",
+        "IPDTreeOrder",
+        "IPDTreeRename",
+        "IPDTreeSupport",
+        "IPDTreeWellFounded",
+        "IPDWitnesses"
+      ],
+      "external_modules": [],
+      "closure_modules": [
+        "ARDPrefixOrder",
+        "FiniteDemandClosedSupply",
+        "FiniteDemandCore",
+        "FiniteDemandEndpointAgreement",
+        "FiniteDemandFinitaryClosure",
+        "FiniteDemandHostAmbient",
+        "FiniteDemandInitialRepresentation",
+        "FiniteDemandOrdinalHeight",
+        "FiniteDemandRecursion",
+        "FiniteDemandReflection",
+        "FiniteDemandWitnesses",
+        "IPDClosedSupply",
+        "IPDColumnOrder",
+        "IPDDecrease",
+        "IPDDemandCore",
+        "IPDDemandRecursion",
+        "IPDEndpointAgreement",
+        "IPDFiniteLabels",
+        "IPDGraphController",
+        "IPDGraphCore",
+        "IPDGraphGeometry",
+        "IPDGraphNormalization",
+        "IPDGraphValidity",
+        "IPDInitialRepresentation",
+        "IPDProfileAtoms",
+        "IPDProfileCountable",
+        "IPDProfileIdentity",
+        "IPDProfileLower",
+        "IPDProfileOrder",
+        "IPDProfileRename",
+        "IPDProfileSubstitution",
+        "IPDProfileValidity",
+        "IPDSeeds",
+        "IPDSemanticEdges",
+        "IPDSemanticWellFounded",
+        "IPDSpliceLabels",
+        "IPDStageFacts",
+        "IPDStageSplice",
+        "IPDStandardOrder",
+        "IPDTemplates",
+        "IPDTree",
+        "IPDTreeCompare",
+        "IPDTreeLinearOrder",
+        "IPDTreeLocalRename",
+        "IPDTreeLower",
+        "IPDTreeLowerClosure",
+        "IPDTreeOrder",
+        "IPDTreeRename",
+        "IPDTreeSupport",
+        "IPDTreeWellFounded",
+        "IPDWitnesses",
+        "OrdinalFormal.ColumnRepresentation",
+        "OrdinalFormal.Columns",
+        "OrdinalFormal.Reachability",
+        "OrdinalFormal.ReflectionTransport"
+      ],
+      "external": [
+        "Mathlib.Data.Countable.Basic",
+        "Mathlib.Data.List.Basic",
+        "Mathlib.Data.List.Shortlex",
+        "Mathlib.Data.Set.Countable",
+        "Mathlib.Logic.Encodable.Basic",
+        "Mathlib.Logic.Equiv.List",
+        "Mathlib.Order.Compare",
+        "Mathlib.Order.RelClasses",
+        "Mathlib.Order.WellFounded",
+        "Mathlib.Order.WithBot",
+        "Mathlib.SetTheory.Cardinal.Aleph",
+        "Mathlib.SetTheory.Ordinal.Basic",
+        "Mathlib.SetTheory.Ordinal.Family",
+        "Std"
+      ]
+    },
+    "ARD2": {
+      "directory": "lean/ARD2",
+      "manifest": "lean/ARD2/sources.json",
+      "targets": [
+        "ARD2Final",
+        "ARD2Compression"
+      ],
+      "owned_modules": [
+        "ARD2ClosedSupply",
+        "ARD2Compression",
+        "ARD2Core",
+        "ARD2Decrease",
+        "ARD2DefinitionFidelity",
+        "ARD2DemandCore",
+        "ARD2DemandRecursion",
+        "ARD2DemandReflection",
+        "ARD2Domain",
+        "ARD2EndpointAgreement",
+        "ARD2Final",
+        "ARD2FiniteUnion",
+        "ARD2InitialRepresentation",
+        "ARD2OrderReduction",
+        "ARD2SemanticWellFounded",
+        "ARD2Splice",
+        "ARD2StageDemands",
+        "ARD2StageProof",
+        "ARD2Structure",
+        "ARD2Templates",
+        "ARD2Witnesses"
+      ],
+      "external_modules": [],
+      "closure_modules": [
+        "ARD2ClosedSupply",
+        "ARD2Compression",
+        "ARD2Core",
+        "ARD2Decrease",
+        "ARD2DefinitionFidelity",
+        "ARD2DemandCore",
+        "ARD2DemandRecursion",
+        "ARD2DemandReflection",
+        "ARD2Domain",
+        "ARD2EndpointAgreement",
+        "ARD2Final",
+        "ARD2FiniteUnion",
+        "ARD2InitialRepresentation",
+        "ARD2OrderReduction",
+        "ARD2SemanticWellFounded",
+        "ARD2Splice",
+        "ARD2StageDemands",
+        "ARD2StageProof",
+        "ARD2Structure",
+        "ARD2Templates",
+        "ARD2Witnesses",
+        "ARDPrefixOrder",
+        "FiniteDemandClosedSupply",
+        "FiniteDemandCore",
+        "FiniteDemandEndpointAgreement",
+        "FiniteDemandFinitaryClosure",
+        "FiniteDemandHostAmbient",
+        "FiniteDemandInitialRepresentation",
+        "FiniteDemandOrdinalHeight",
+        "FiniteDemandRecursion",
+        "FiniteDemandReflection",
+        "FiniteDemandWitnesses",
+        "OrdinalFormal.ActualBlockGeometry",
+        "OrdinalFormal.BlockFiniteUnion",
+        "OrdinalFormal.ColumnRepresentation",
+        "OrdinalFormal.Columns",
+        "OrdinalFormal.Comparison",
+        "OrdinalFormal.Domains",
+        "OrdinalFormal.ExpansionValidity",
+        "OrdinalFormal.GeneratedColumnDecrease",
+        "OrdinalFormal.GenericSortedColumns",
+        "OrdinalFormal.LRD",
+        "OrdinalFormal.RPD",
+        "OrdinalFormal.RPDDecrease",
+        "OrdinalFormal.RPDFiniteUnion",
+        "OrdinalFormal.RPDGeometry",
+        "OrdinalFormal.RPDSortedColumns",
+        "OrdinalFormal.Reachability",
+        "OrdinalFormal.ReflectionTransport",
+        "OrdinalFormal.SpliceConstruction",
+        "OrdinalFormal.StandardValidity"
+      ],
+      "external": [
+        "Mathlib.Data.Countable.Basic",
+        "Mathlib.Data.List.Basic",
+        "Mathlib.Data.List.Shortlex",
+        "Mathlib.Data.Set.Countable",
+        "Mathlib.Order.RelClasses",
+        "Mathlib.Order.WellFounded",
+        "Mathlib.SetTheory.Cardinal.Aleph",
+        "Mathlib.SetTheory.Ordinal.Basic",
+        "Mathlib.SetTheory.Ordinal.Family",
+        "Std"
+      ]
+    },
+    "shared": {
+      "directory": "lean/shared",
+      "manifest": "lean/shared/sources.json",
+      "targets": [
+        "ARDPrefixOrder",
+        "FiniteDemandColumnWellFounded",
+        "OrdinalFormal.ColumnMap",
+        "OrdinalFormal.ColumnReachability",
+        "OrdinalFormal.GeneratedColumnDecrease",
+        "OrdinalFormal.RPDFiniteUnion"
+      ],
+      "owned_modules": [
+        "ARDPrefixOrder",
+        "FiniteDemandClosedSupply",
+        "FiniteDemandColumnWellFounded",
+        "FiniteDemandCore",
+        "FiniteDemandEndpointAgreement",
+        "FiniteDemandFinitaryClosure",
+        "FiniteDemandHostAmbient",
+        "FiniteDemandInitialRepresentation",
+        "FiniteDemandOrdinalHeight",
+        "FiniteDemandRecursion",
+        "FiniteDemandReflection",
+        "FiniteDemandWitnesses",
+        "OrdinalFormal.ActualBlockGeometry",
+        "OrdinalFormal.BlockFiniteUnion",
+        "OrdinalFormal.ColumnMap",
+        "OrdinalFormal.ColumnReachability",
+        "OrdinalFormal.ColumnRepresentation",
+        "OrdinalFormal.Columns",
+        "OrdinalFormal.Comparison",
+        "OrdinalFormal.Domains",
+        "OrdinalFormal.ExpansionValidity",
+        "OrdinalFormal.GeneratedColumnDecrease",
+        "OrdinalFormal.GeneratedSemanticWellFounded",
+        "OrdinalFormal.GeneratedStagedReflection",
+        "OrdinalFormal.GenericSortedColumns",
+        "OrdinalFormal.LRD",
+        "OrdinalFormal.RPD",
+        "OrdinalFormal.RPDDecrease",
+        "OrdinalFormal.RPDFiniteUnion",
+        "OrdinalFormal.RPDGeometry",
+        "OrdinalFormal.RPDSortedColumns",
+        "OrdinalFormal.Reachability",
+        "OrdinalFormal.ReflectionTransport",
+        "OrdinalFormal.SpliceConstruction",
+        "OrdinalFormal.StandardValidity"
+      ],
+      "external_modules": [],
+      "closure_modules": [
+        "ARDPrefixOrder",
+        "FiniteDemandClosedSupply",
+        "FiniteDemandColumnWellFounded",
+        "FiniteDemandCore",
+        "FiniteDemandEndpointAgreement",
+        "FiniteDemandFinitaryClosure",
+        "FiniteDemandHostAmbient",
+        "FiniteDemandInitialRepresentation",
+        "FiniteDemandOrdinalHeight",
+        "FiniteDemandRecursion",
+        "FiniteDemandReflection",
+        "FiniteDemandWitnesses",
+        "OrdinalFormal.ActualBlockGeometry",
+        "OrdinalFormal.BlockFiniteUnion",
+        "OrdinalFormal.ColumnMap",
+        "OrdinalFormal.ColumnReachability",
+        "OrdinalFormal.ColumnRepresentation",
+        "OrdinalFormal.Columns",
+        "OrdinalFormal.Comparison",
+        "OrdinalFormal.Domains",
+        "OrdinalFormal.ExpansionValidity",
+        "OrdinalFormal.GeneratedColumnDecrease",
+        "OrdinalFormal.GeneratedSemanticWellFounded",
+        "OrdinalFormal.GeneratedStagedReflection",
+        "OrdinalFormal.GenericSortedColumns",
+        "OrdinalFormal.LRD",
+        "OrdinalFormal.RPD",
+        "OrdinalFormal.RPDDecrease",
+        "OrdinalFormal.RPDFiniteUnion",
+        "OrdinalFormal.RPDGeometry",
+        "OrdinalFormal.RPDSortedColumns",
+        "OrdinalFormal.Reachability",
+        "OrdinalFormal.ReflectionTransport",
+        "OrdinalFormal.SpliceConstruction",
+        "OrdinalFormal.StandardValidity"
+      ],
+      "external": [
+        "Mathlib.Data.Countable.Basic",
+        "Mathlib.Data.List.Basic",
+        "Mathlib.Data.List.Shortlex",
+        "Mathlib.Data.Set.Countable",
+        "Mathlib.Order.RelClasses",
+        "Mathlib.Order.WellFounded",
+        "Mathlib.SetTheory.Cardinal.Aleph",
+        "Mathlib.SetTheory.Ordinal.Basic",
+        "Mathlib.SetTheory.Ordinal.Family",
+        "Std"
+      ]
+    },
+    "aggregate": {
+      "directory": "lean",
+      "manifest": "lean/sources.json",
+      "targets": [
+        "SevenNotationFinalAudit"
+      ],
+      "owned_modules": [
+        "FiveNotationFinalAudit",
+        "FourNotationFinalAudit",
+        "SevenNotationFinalAudit",
+        "SixNotationFinalAudit"
+      ],
+      "external_modules": [
+        "YesMetaZFC.BMS.Ancestor",
+        "YesMetaZFC.BMS.Array",
+        "YesMetaZFC.BMS.Decomposition",
+        "YesMetaZFC.BMS.Expansion",
+        "YesMetaZFC.BMS.ExpansionOrder",
+        "YesMetaZFC.BMS.FiniteReflection",
+        "YesMetaZFC.BMS.Generation",
+        "YesMetaZFC.BMS.Lemma25",
+        "YesMetaZFC.BMS.Parent",
+        "YesMetaZFC.BMS.Reference",
+        "YesMetaZFC.BMS.Stability",
+        "YesMetaZFC.BMS.WellFoundedness"
+      ],
+      "closure_modules": [
+        "ARD2ClosedSupply",
+        "ARD2Compression",
+        "ARD2Core",
+        "ARD2Decrease",
+        "ARD2DefinitionFidelity",
+        "ARD2DemandCore",
+        "ARD2DemandRecursion",
+        "ARD2DemandReflection",
+        "ARD2Domain",
+        "ARD2EndpointAgreement",
+        "ARD2Final",
+        "ARD2FiniteUnion",
+        "ARD2InitialRepresentation",
+        "ARD2OrderReduction",
+        "ARD2SemanticWellFounded",
+        "ARD2Splice",
+        "ARD2StageDemands",
+        "ARD2StageProof",
+        "ARD2Structure",
+        "ARD2Templates",
+        "ARD2Witnesses",
+        "ARDClosedSupply",
+        "ARDCompression",
+        "ARDCore",
+        "ARDDecrease",
+        "ARDDefinitionFidelity",
+        "ARDDemandCore",
+        "ARDDemandRecursion",
+        "ARDDemandReflection",
+        "ARDDomain",
+        "ARDEndpointAgreement",
+        "ARDFinal",
+        "ARDFiniteUnion",
+        "ARDInitialRepresentation",
+        "ARDOrderReduction",
+        "ARDPrefixOrder",
+        "ARDSemanticWellFounded",
+        "ARDSplice",
+        "ARDStageDemands",
+        "ARDStageProof",
+        "ARDStructure",
+        "ARDWitnesses",
+        "FiniteDemandClosedSupply",
+        "FiniteDemandColumnWellFounded",
+        "FiniteDemandCore",
+        "FiniteDemandEndpointAgreement",
+        "FiniteDemandFinitaryClosure",
+        "FiniteDemandHostAmbient",
+        "FiniteDemandInitialRepresentation",
+        "FiniteDemandLRDFinal",
+        "FiniteDemandOrdinalHeight",
+        "FiniteDemandRPDFinal",
+        "FiniteDemandRecursion",
+        "FiniteDemandReflection",
+        "FiniteDemandWitnesses",
+        "FiniteDemandYFinal",
+        "FiveNotationFinalAudit",
+        "FourNotationFinalAudit",
+        "IPDClosedSupply",
+        "IPDColumnOrder",
+        "IPDDecrease",
+        "IPDDemandCore",
+        "IPDDemandRecursion",
+        "IPDEndpointAgreement",
+        "IPDFiniteLabels",
+        "IPDGraphController",
+        "IPDGraphCore",
+        "IPDGraphGeometry",
+        "IPDGraphNormalization",
+        "IPDGraphValidity",
+        "IPDInitialRepresentation",
+        "IPDProfileAtoms",
+        "IPDProfileCountable",
+        "IPDProfileIdentity",
+        "IPDProfileLower",
+        "IPDProfileOrder",
+        "IPDProfileRename",
+        "IPDProfileSubstitution",
+        "IPDProfileValidity",
+        "IPDSeeds",
+        "IPDSemanticEdges",
+        "IPDSemanticWellFounded",
+        "IPDSpliceLabels",
+        "IPDStageFacts",
+        "IPDStageSplice",
+        "IPDStandardOrder",
+        "IPDTemplates",
+        "IPDTree",
+        "IPDTreeCompare",
+        "IPDTreeLinearOrder",
+        "IPDTreeLocalRename",
+        "IPDTreeLower",
+        "IPDTreeLowerClosure",
+        "IPDTreeOrder",
+        "IPDTreeRename",
+        "IPDTreeSupport",
+        "IPDTreeWellFounded",
+        "IPDWitnesses",
+        "LRDOrdinalRows",
+        "NatSemanticTransport",
+        "OmegaLRD3Final",
+        "OneY.ActiveGeometry",
+        "OneY.BadRoot",
+        "OneY.Build",
+        "OneY.CopyCoordinates",
+        "OneY.DecoratedBlocker",
+        "OneY.DecoratedBlockerExpansion",
+        "OneY.DecoratedColumn",
+        "OneY.DepthMatrix",
+        "OneY.Dynamics",
+        "OneY.Expansion",
+        "OneY.ExpansionCanonical",
+        "OneY.ExpansionOrder",
+        "OneY.ExpansionProperties",
+        "OneY.ExpansionRebuildPrefix",
+        "OneY.Extraction",
+        "OneY.ExtractionGeometry",
+        "OneY.FirstMatch",
+        "OneY.Forest",
+        "OneY.ForestBridge",
+        "OneY.ForestFrame",
+        "OneY.ForestFrameMatrix",
+        "OneY.FrameCopy",
+        "OneY.Geometry",
+        "OneY.LowerCopy",
+        "OneY.LowerCopyBadBlocker",
+        "OneY.LowerCopyBlocker",
+        "OneY.LowerCopyBottom",
+        "OneY.LowerCopyBottomRecovery",
+        "OneY.LowerCopyCanonical",
+        "OneY.LowerCopyComparison",
+        "OneY.LowerCopyDepths",
+        "OneY.LowerCopyDominance",
+        "OneY.LowerCopyLayerTopBound",
+        "OneY.LowerCopyLayerTransport",
+        "OneY.LowerCopyNesting",
+        "OneY.LowerCopyPseudo",
+        "OneY.LowerCopyPseudoHigh",
+        "OneY.LowerCopyPseudoLow",
+        "OneY.LowerCopyPseudoOutside",
+        "OneY.LowerCopyPseudoSeam",
+        "OneY.LowerCopyRebuild",
+        "OneY.LowerCopyRoots",
+        "OneY.LowerCopyTopBound",
+        "OneY.LowerCopyTopForest",
+        "OneY.LowerCopyTransport",
+        "OneY.LowerTowerInputs",
+        "OneY.LowerTowerRebuild",
+        "OneY.Numeric",
+        "OneY.NumericDecoratedFrame",
+        "OneY.NumericFrame",
+        "OneY.NumericFrameBlocker",
+        "OneY.NumericGeometry",
+        "OneY.NumericRoots",
+        "OneY.OrdinaryCopy",
+        "OneY.OrdinaryCopyExtraction",
+        "OneY.OrdinaryCopyForest",
+        "OneY.OrdinaryCopyNumeric",
+        "OneY.OrdinaryCopyPseudo",
+        "OneY.OrdinaryCopyReconstruction",
+        "OneY.OrdinaryCopyRoots",
+        "OneY.OrdinaryCopySelection",
+        "OneY.Prefix",
+        "OneY.Pseudo",
+        "OneY.PseudoCollapse",
+        "OneY.PseudoSelection",
+        "OneY.Reconstruction",
+        "OneY.ReconstructionComparison",
+        "OneY.ReconstructionComparisonPrefix",
+        "OneY.ReconstructionNumeric",
+        "OneY.ReconstructionTop",
+        "OneY.RelativeBlocker",
+        "OneY.RootGeometry",
+        "OneY.RootIndexed.ActualScheme",
+        "OneY.RootIndexed.CopyCoordinates",
+        "OneY.RootIndexed.CopyDiagram",
+        "OneY.RootIndexed.Diagram",
+        "OneY.RootIndexed.ExpansionWellFounded",
+        "OneY.RootIndexed.LowerAtoms",
+        "OneY.RootIndexed.OrdinaryAtoms",
+        "OneY.RootIndexed.Prefix",
+        "OneY.RootIndexed.Representation",
+        "OneY.RootIndexed.SpliceGeometry",
+        "OneY.RootIndexed.TerminalRoots",
+        "OneY.RootIndexed.VirtualNeeds",
+        "OneY.RootSearch",
+        "OneY.SingleContraction",
+        "OneY.SparseBlocker",
+        "OneY.SparseComparison",
+        "OneY.SparseDepth",
+        "OneY.TerminalCopy",
+        "OneY.TerminalCopyBottom",
+        "OneY.TerminalCopyBottomRecovery",
+        "OneY.TerminalCopyCanonical",
+        "OneY.TerminalCopyComparison",
+        "OneY.TerminalCopyComplete",
+        "OneY.TerminalCopyDepths",
+        "OneY.TerminalCopyExternal",
+        "OneY.TerminalCopyExternalSeam",
+        "OneY.TerminalCopyExtraction",
+        "OneY.TerminalCopyLinear",
+        "OneY.TerminalCopyNesting",
+        "OneY.TerminalCopyNumeric",
+        "OneY.TerminalCopyRebuild",
+        "OneY.TerminalCopyReconstruction",
+        "OneY.TerminalCopyRoots",
+        "OneY.TerminalCopySeamComparison",
+        "OneY.TerminalCopyTopBound",
+        "OneY.TerminalCopyTransport",
+        "OneY.TerminalCopyUpperOrder",
+        "OneY.TerminalDecoratedRecovery",
+        "OneY.TerminalFrame",
+        "OneY.TerminalFrameDepths",
+        "OneY.TerminalFrameParents",
+        "OneY.TerminalTowerRebuild",
+        "OneY.TopComparison",
+        "OneY.TopForestGeometry",
+        "OneY.TowerCopyAssembly",
+        "OneY.TowerReconstruction",
+        "OrdinalFormal.ActualBlockGeometry",
+        "OrdinalFormal.BlockFiniteUnion",
+        "OrdinalFormal.ColumnMap",
+        "OrdinalFormal.ColumnReachability",
+        "OrdinalFormal.ColumnRepresentation",
+        "OrdinalFormal.Columns",
+        "OrdinalFormal.Comparison",
+        "OrdinalFormal.Domains",
+        "OrdinalFormal.ExpansionValidity",
+        "OrdinalFormal.FiniteUnionWellFounded",
+        "OrdinalFormal.GeneratedColumnDecrease",
+        "OrdinalFormal.GeneratedSemanticWellFounded",
+        "OrdinalFormal.GeneratedStagedReflection",
+        "OrdinalFormal.GenericSortedColumns",
+        "OrdinalFormal.LRD",
+        "OrdinalFormal.LRDCanonical",
+        "OrdinalFormal.LRDColumnDecrease",
+        "OrdinalFormal.LRDNormalLift",
+        "OrdinalFormal.LRDRowDecrease",
+        "OrdinalFormal.LRDRowWellFounded",
+        "OrdinalFormal.LRDStructure",
+        "OrdinalFormal.LRDWellOrderingReduction",
+        "OrdinalFormal.Omega3ColumnDecrease",
+        "OrdinalFormal.Omega3Comparison",
+        "OrdinalFormal.Omega3Countable",
+        "OrdinalFormal.Omega3Domains",
+        "OrdinalFormal.Omega3RowDomain",
+        "OrdinalFormal.Omega3RowPool",
+        "OrdinalFormal.Omega3Structure",
+        "OrdinalFormal.Omega3Validity",
+        "OrdinalFormal.Omega3WellOrderingReduction",
+        "OrdinalFormal.OmegaLRD3",
+        "OrdinalFormal.RPD",
+        "OrdinalFormal.RPDDecrease",
+        "OrdinalFormal.RPDDefinitionFidelity",
+        "OrdinalFormal.RPDFiniteUnion",
+        "OrdinalFormal.RPDGeometry",
+        "OrdinalFormal.RPDSortedColumns",
+        "OrdinalFormal.RPDTermOrder",
+        "OrdinalFormal.RPDWellOrderingReduction",
+        "OrdinalFormal.Reachability",
+        "OrdinalFormal.ReflectionTransport",
+        "OrdinalFormal.RowInvariant",
+        "OrdinalFormal.SpliceConstruction",
+        "OrdinalFormal.StandardValidity",
+        "OrdinalRowLanguage",
+        "SevenNotationFinalAudit",
+        "SixNotationFinalAudit",
+        "YesMetaZFC.BMS.Ancestor",
+        "YesMetaZFC.BMS.Array",
+        "YesMetaZFC.BMS.Decomposition",
+        "YesMetaZFC.BMS.Expansion",
+        "YesMetaZFC.BMS.ExpansionOrder",
+        "YesMetaZFC.BMS.FiniteReflection",
+        "YesMetaZFC.BMS.Generation",
+        "YesMetaZFC.BMS.Lemma25",
+        "YesMetaZFC.BMS.Parent",
+        "YesMetaZFC.BMS.Reference",
+        "YesMetaZFC.BMS.Stability",
+        "YesMetaZFC.BMS.WellFoundedness",
+        "ZeroY.BMS.AnyArray",
+        "ZeroY.BMS.PaddedDescent",
+        "ZeroY.Decode",
+        "ZeroY.Dynamics.Definitions",
+        "ZeroY.Dynamics.Prefix",
+        "ZeroY.Encode",
+        "ZeroY.Expansion",
+        "ZeroY.Expansion.Conjugacy",
+        "ZeroY.Expansion.Context",
+        "ZeroY.Expansion.CopyRows",
+        "ZeroY.Expansion.Prefix",
+        "ZeroY.Forest.AncestorMonotone",
+        "ZeroY.Forest.Blocker",
+        "ZeroY.Forest.Comparison",
+        "ZeroY.Forest.MatrixParents",
+        "ZeroY.Forest.Stack",
+        "ZeroY.Image",
+        "ZeroY.MatrixOrder",
+        "ZeroY.Mountain",
+        "ZeroY.Mountain.CommonChain",
+        "ZeroY.Mountain.Encoding",
+        "ZeroY.Mountain.Roots",
+        "ZeroY.Mountain.SumInverse",
+        "ZeroY.Mountain.Termination",
+        "ZeroY.OrderEmbedding",
+        "ZeroY.PaddedExt",
+        "ZeroY.PaddedOrder",
+        "ZeroY.Reversible",
+        "ZeroY.RoundTrip",
+        "ZeroY.SequenceOrder",
+        "ZeroY.Structural.BlockerExpansion",
+        "ZeroY.Structural.CopyOrder",
+        "ZeroY.Structural.DecodeTower",
+        "ZeroY.Structural.DepthExpansion",
+        "ZeroY.Structural.Expansion",
+        "ZeroY.Structural.ExpansionCoordinates",
+        "ZeroY.Structural.ExpansionParentAlignment",
+        "ZeroY.Structural.ExpansionParents",
+        "ZeroY.Structural.Prefix",
+        "ZeroY.Structural.RawRecognition",
+        "ZeroY.Structural.Recognition",
+        "ZeroY.Syntax",
+        "ZeroY.Transport"
+      ],
+      "external": [
+        "Lean",
+        "Lean.Elab.Tactic.Omega",
+        "Mathlib.Data.Countable.Basic",
+        "Mathlib.Data.List.Basic",
+        "Mathlib.Data.List.Shortlex",
+        "Mathlib.Data.Nat.Pairing",
+        "Mathlib.Data.Set.Countable",
+        "Mathlib.Logic.Encodable.Basic",
+        "Mathlib.Logic.Equiv.List",
+        "Mathlib.ModelTheory.Semantics",
+        "Mathlib.Order.Compare",
+        "Mathlib.Order.RelClasses",
+        "Mathlib.Order.WellFounded",
+        "Mathlib.Order.WithBot",
+        "Mathlib.SetTheory.Cardinal.Aleph",
+        "Mathlib.SetTheory.Ordinal.Basic",
+        "Mathlib.SetTheory.Ordinal.Family",
+        "Std"
+      ]
+    }
+  }
+}

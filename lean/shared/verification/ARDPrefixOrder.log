@@ -1,0 +1,2 @@
+'OrdinalFormal.PrefixOrder.covered_total' depends on axioms: [propext]
+'OrdinalFormal.PrefixOrder.covered_wellFounded' depends on axioms: [propext]

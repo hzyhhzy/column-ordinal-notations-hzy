@@ -2,7 +2,7 @@
 
 2026-09-13。ARD = Anchored Row Diagrams（行锚图）。
 
-[PDF](ard-well-ordering.zh-CN.pdf) · [定义](../../notations/ARD/definition.zh-CN.md) · [NER 弧线图展开器](../../notations/ARD/ARD-arcs.ne-rewritten.js) · [Python](../../notations/ARD/ard.py) · [普通 Lean 入口](../../lean/src/ARDFinal.lean)
+[PDF](ard-well-ordering.zh-CN.pdf) · [定义](../../notations/ARD/definition.zh-CN.md) · [NER 弧线图展开器](../../notations/ARD/ARD-arcs.ne-rewritten.js) · [Python](../../notations/ARD/ard.py) · [普通 Lean 入口](../../lean/ARD/src/ARDFinal.lean)
 
 本文证明链接定义及两个展开器采用的有限规则。实现中的时间、内存及绘图保护不是数学规则的一部分。本文给出弱公理体系中的纸面论证；普通 Lean 代码是另一项交付，不是该弱理论形式系统中推导的编码。本文不证明 ARD 比 Y、RPD、LRD 或 Ω-LRD3 强。
 
@@ -556,7 +556,7 @@ $$
 
 动态行锚与其他三个坐标一起变化。第 5.3 节允许 $K\ge\delta$ 的强端点供应，以及第 6 节的四坐标恒等式，是相对于固定行标论证必须补出的内容，不能直接将旧 Lean 定理改名使用。
 
-独立的普通 Lean 入口是 [ARDFinal.lean](../../lean/src/ARDFinal.lean)。其中有限几何采用完整根闭包编码；动态语义关系实际按 $(b,K,\theta)$ 递归构造，不把反射或初始表示当作外加公理。语义后端通过最小坏见证、最小前缀延拓见证及可数有限元闭包，构造端点一致性、强供应和初始表示。闭包运算的代码只有有限形状及自然数；可变序数 $K$ 是运算输入，不假设全部序数构成可数类型。
+独立的普通 Lean 入口是 [ARDFinal.lean](../../lean/ARD/src/ARDFinal.lean)。其中有限几何采用完整根闭包编码；动态语义关系实际按 $(b,K,\theta)$ 递归构造，不把反射或初始表示当作外加公理。语义后端通过最小坏见证、最小前缀延拓见证及可数有限元闭包，构造端点一致性、强供应和初始表示。闭包运算的代码只有有限形状及自然数；可变序数 $K$ 是运算输入，不假设全部序数构成可数类型。
 
 普通 Lean 构造与第 3—8 节的弱体系论证有以下具体区别：
 

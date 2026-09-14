@@ -67,13 +67,39 @@ ARD2 使用自己的标题与 2026-09-14 页脚。两种语言的公式主体及
 
 ## Lean 源码验证
 
-本包内置 310 个 Lean 源码模块，另记录 12 个固定版本的外部 BMS 模块。`python lean/build.py --check-only` 无需下载即可核对完整的 322 模块导入依赖集合、内置源码哈希及精确 Lake globs 清单。编译时提供 BMS 源码目录后，另核对其实际字节哈希。
+证明源码并集仍为 **310 个随附模块＋12 个固定外部 BMS 模块，共 322 个**。拆分时 306 个文件移动到 shared 与七个记号的私有项目，四个联合模块留在原处。逐一核对了全部 310 个文件的原始字节，数学源码与模块名均未改变。
 
-**全部 322 个证明源码模块均已串行全新编译通过，合计 866 项公理报告**。[公开收据](lean/VERIFICATION.json)和[Lean 说明](lean/README.zh-CN.md)记录本次七系统重建。ARD2 新增 21 个证明模块及一个联合入口。原四、五、六系统收据保留为历史记录，不替代 ARD2 源码重建。
+各项目具有独立的源码清单、Lake 配置、工具链、锁文件、构建输出和验证收据。精确闭包分别为 shared 35、Y 189、RPD 36、LRD 41、Ω-LRD3 44、ARD 50、IPD 55、ARD2 51；这些数字包含重复使用的共享依赖，不是互不相交的模块数。只有 Y 依赖外部 BMS。
 
-只重用既有 Lean、固定 Mathlib 及辅助依赖产物；Y、外部 BMS 和本地记号证明均从核对后的源码编译，不使用研究工程的证明缓存。这不是从网络全新初始化环境，也不是重建 Mathlib。真实 Lake 另成功离线载入原样发布配置，核对全部 310 模块唯一的导入／构建归属与默认枚举。此前仅含联合入口、不足以支持导入的 glob 已修正，配置与新增精确枚举检查均交付。这项 Lake 验收不声称已完整执行 `lake build`。
+`python lean/ARD2/build.py --check-only` 只核对 ARD2 的精确闭包、源码哈希与本项目 Lake 枚举，不需要加载其他记号。根目录 `python lean/build.py --check-only` 仅用于可选的全库检查。
 
-报告只接受 `propext`、`Classical.choice`、`Quot.sound` 或其子集。资源限制和选定真实日志见 [lean/README.zh-CN.md](lean/README.zh-CN.md)。生成的构建缓存不属于发布源码。
+拆分前七系统的 **322 模块／866 项公理报告**全新串行重建确已完成，耗时 1638.176 秒；[原样归档收据](lean/verification/SevenNotation-Monolithic-VERIFICATION.json)保留该次记录，不将其冒充新布局构建。
+
+`python -B tests/test_lean_verifier.py` 的九组回归测试通过，覆盖九个项目的精确闭包、五类导入产物的指纹、逐模块清理、外部缓存遮蔽拒绝、公理日志名称与计数、陈旧／不完整收据、项目锁、无关项目元数据不改变指纹，以及当前导入语法和嵌套注释解析。测试仅使用临时数据，不把假产物交给 Lean；真实内核检查由下面的源码编译完成。
+
+新布局的各项目已实际通过，收据分开保存：
+
+| 项目收据 | 闭包模块 | 公理报告 | 本次新编译 | 明确认证后复用 |
+| --- | --- | --- | --- | --- |
+| [shared](lean/shared/VERIFICATION.json) | 35 | 93 | 35 | 0 |
+| [Y](lean/Y/VERIFICATION.json) | 189 | 422 | 175 | 14 |
+| [RPD](lean/RPD/VERIFICATION.json) | 36 | 91 | 4 | 32 |
+| [LRD](lean/LRD/VERIFICATION.json) | 41 | 110 | 10 | 31 |
+| [Ω-LRD3](lean/Omega-LRD3/VERIFICATION.json) | 44 | 119 | 13 | 31 |
+| [ARD](lean/ARD/VERIFICATION.json) | 50 | 156 | 20 | 30 |
+| [IPD](lean/IPD/VERIFICATION.json) | 55 | 166 | 40 | 15 |
+| [ARD2](lean/ARD2/VERIFICATION.json) | 51 | 160 | 21 | 30 |
+| [可选联合验收](lean/VERIFICATION.json) | 322 | 866 | 4 | 318 |
+
+共享基础先全新编译，叶项目只复用本次核验的共享产物，联合工程只复用这些已核验的叶／共享产物并新编译四个联合模块。[汇总核对](lean/verification/IndependentProjects-VERIFICATION.json)逐模块比较指纹、完整导入产物哈希及公理报告，并确认首轮迁移验收中 **322 个不同模块恰好各从源码新编译一次，866 项不同公理报告全部通过**。各行闭包包含重叠，不能直接相加当作不同模块的数量。
+
+真实 Lake 的九套配置共通过 18 项加载、唯一归属、默认枚举及导入查找检查；[配置与迁移记录](lean/verification/ProjectLayout-VERIFICATION.json)明确这不是一次完成的 `lake build`。在临时副本加入故意损坏的新项目和无关 Y 坏源码后，ARD2 的两项检查仍通过；直接加载坏项目则失败，构成负对照。
+
+最后的只读一致性检查重新计算了实际编译器、隐式系统库及全部外部导入产物的哈希，并核对九个项目的公开／本地收据、完整导入产物组和日志，全部通过。这项检查不重新运行 Lean 内核。在额外的 `--resume` 测试中，RPD、ARD2 各遇到一次 Windows 瞬时文件替换拒绝；失败检查点正确标为不完整，原公开成功收据保持不变，两者重跑后均通过。首轮编译统计与这些后续重试分开记录。
+
+源码验证器只接受报告中的 `propext`、`Classical.choice`、`Quot.sound` 或其子集。编译采用既有 Lean 与固定 Mathlib／辅助依赖产物，但本地证明从已核对的源码生成；不声称完成网络全新初始化或 Mathlib 源码重建。有界构建与缓存输入规则见 [Lean 说明](lean/README.zh-CN.md)，生成二进制及本地缓存不进入发布目录。
+
+本次文档链接迁移仅改变相对源码 URL，不改变公式或可见标签；PDF 渲染器对相对链接仅输出标签，因此 20 份 PDF 保持不变。ARD2 JS／Python 内的三处旧 Lean 地址另作说明性修正，展开规则不变；其他五个记号的实现保持原样。
 
 ## 保留的明确边界
 

@@ -11,7 +11,7 @@ The mathematical reference is [ipd.py](../../notations/IPD/ipd.py); its browser 
 | `ipd.py` | `12D3F08FD38FC51AA78B9972BAE2D5E02FC8EFC09DE085A9B1752880948EBAB1` |
 | `IPD.ne-rewritten.js` | `ACC1A1C2AE260DA9BE7D13E14AC17D84A92679F82EFE97AA85CD0E3B072F6011` |
 
-The [Lean project](../../lean/README.md) contains the mathematical definitions and proofs. [IPDStandardOrder.lean](../../lean/src/IPDStandardOrder.lean) concludes:
+The [Lean project](../../lean/README.md) contains the mathematical definitions and proofs. [IPDStandardOrder.lean](../../lean/IPD/src/IPDStandardOrder.lean) concludes:
 
 ```lean
 IPD.standard_wellFounded : WellFounded IPD.StandardLt

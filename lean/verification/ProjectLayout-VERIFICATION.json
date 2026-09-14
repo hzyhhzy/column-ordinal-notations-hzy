@@ -1,0 +1,243 @@
+{
+  "ok": true,
+  "lake_version": "Lake version 5.0.0-src+819816b (Lean version 4.33.1)",
+  "configuration_hashes": {
+    "shared": {
+      "lakefile.lean": "0862bf7d07399ede04dbd3df9812d14e6c02353631bfae46fe2248fae6344f5b",
+      "lake-manifest.json": "23cc0df8a87b0d5940269c60ba49efe968a49ec2909e2de2e18354933337617b",
+      "lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    },
+    "Y": {
+      "lakefile.lean": "267f5e2ffc620ec17cf050f0868a1e1cfdf71968ebf705c71a2d0d40fc1820d7",
+      "lake-manifest.json": "c0e37b0d6be8cf6e9e97d8e7202017c1241303310a8ac898a4d81cfc953a7b67",
+      "lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    },
+    "RPD": {
+      "lakefile.lean": "7af09b645c7471f0a049d10115689a4fe2febb5a429d177049de020011296b74",
+      "lake-manifest.json": "b0363425b11db66aea016a48f495b617a8d907dcd02a994fffc6cf3d75fe6244",
+      "lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    },
+    "LRD": {
+      "lakefile.lean": "2270a25dcb5773837d8f18ef1d073ddb77f56e5d7b3b0f20e55c26572e0e8761",
+      "lake-manifest.json": "20bef99e7bf861d5463173896e204b6a70ecf37ec968b4d5b1c3e0b385d7e22f",
+      "lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    },
+    "Omega-LRD3": {
+      "lakefile.lean": "1d6af5ba99fbddf987637f1401299e1324f4291954d20a760842716119bcca76",
+      "lake-manifest.json": "89960c4eb9422d372aa66b6c55b0c90dfeab1135381768b312ff6f24b5a5051c",
+      "lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    },
+    "ARD": {
+      "lakefile.lean": "4057429da3b3cae414751d4af85cce8e0381306442125cd92fbf3b1be767eacc",
+      "lake-manifest.json": "7605a7cbbbe5227dcbfcf624d5c1ac9289e1a9e65a14574abee2110d5e07b3d9",
+      "lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    },
+    "IPD": {
+      "lakefile.lean": "8ba92a6da998258e736b768265a8593a4c344f3990f3969567f396a0fbb88dfc",
+      "lake-manifest.json": "8c26a4c172ed54892430528f345a15ed99799fde6cf19b62ea13ed8dd28de252",
+      "lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    },
+    "ARD2": {
+      "lakefile.lean": "daed1ed65529cc296ff31d93692a7f8cb421954fee792794580a643283251093",
+      "lake-manifest.json": "91351de426b7b50f6267497039372dccfacfbc4a06d9d9d8d5117b0242e6da73",
+      "lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    },
+    ".": {
+      "lakefile.lean": "b9b98974985ba043429e6c622e3c32c5e457552bf7ae2ccc4a563135b5e4a138",
+      "lake-manifest.json": "3751ff64a17d591c72f276bc09590d1495fb4eb2214fc218c47c69ff7191dff3",
+      "lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    }
+  },
+  "checks": [
+    {
+      "project": "shared",
+      "check": "config",
+      "ok": true,
+      "exit_code": 0,
+      "seconds": 1.514,
+      "sampled_peak_tree_rss_mib": 449.86,
+      "proofs_built": false
+    },
+    {
+      "project": "shared",
+      "check": "ownership",
+      "ok": true,
+      "exit_code": 0,
+      "seconds": 1.707,
+      "sampled_peak_tree_rss_mib": 453.8,
+      "proofs_built": false
+    },
+    {
+      "project": "Y",
+      "check": "config",
+      "ok": true,
+      "exit_code": 0,
+      "seconds": 1.681,
+      "sampled_peak_tree_rss_mib": 450,
+      "proofs_built": false
+    },
+    {
+      "project": "Y",
+      "check": "ownership",
+      "ok": true,
+      "exit_code": 0,
+      "seconds": 1.865,
+      "sampled_peak_tree_rss_mib": 453.39,
+      "proofs_built": false
+    },
+    {
+      "project": "RPD",
+      "check": "config",
+      "ok": true,
+      "exit_code": 0,
+      "seconds": 1.539,
+      "sampled_peak_tree_rss_mib": 443.63,
+      "proofs_built": false
+    },
+    {
+      "project": "RPD",
+      "check": "ownership",
+      "ok": true,
+      "exit_code": 0,
+      "seconds": 1.7,
+      "sampled_peak_tree_rss_mib": 453.75,
+      "proofs_built": false
+    },
+    {
+      "project": "LRD",
+      "check": "config",
+      "ok": true,
+      "exit_code": 0,
+      "seconds": 1.559,
+      "sampled_peak_tree_rss_mib": 449.81,
+      "proofs_built": false
+    },
+    {
+      "project": "LRD",
+      "check": "ownership",
+      "ok": true,
+      "exit_code": 0,
+      "seconds": 1.576,
+      "sampled_peak_tree_rss_mib": 452.83,
+      "proofs_built": false
+    },
+    {
+      "project": "Omega-LRD3",
+      "check": "config",
+      "ok": true,
+      "exit_code": 0,
+      "seconds": 1.415,
+      "sampled_peak_tree_rss_mib": 453.91,
+      "proofs_built": false
+    },
+    {
+      "project": "Omega-LRD3",
+      "check": "ownership",
+      "ok": true,
+      "exit_code": 0,
+      "seconds": 1.589,
+      "sampled_peak_tree_rss_mib": 453.38,
+      "proofs_built": false
+    },
+    {
+      "project": "ARD",
+      "check": "config",
+      "ok": true,
+      "exit_code": 0,
+      "seconds": 1.489,
+      "sampled_peak_tree_rss_mib": 448.94,
+      "proofs_built": false
+    },
+    {
+      "project": "ARD",
+      "check": "ownership",
+      "ok": true,
+      "exit_code": 0,
+      "seconds": 1.646,
+      "sampled_peak_tree_rss_mib": 450.87,
+      "proofs_built": false
+    },
+    {
+      "project": "IPD",
+      "check": "config",
+      "ok": true,
+      "exit_code": 0,
+      "seconds": 1.527,
+      "sampled_peak_tree_rss_mib": 449.83,
+      "proofs_built": false
+    },
+    {
+      "project": "IPD",
+      "check": "ownership",
+      "ok": true,
+      "exit_code": 0,
+      "seconds": 1.647,
+      "sampled_peak_tree_rss_mib": 453.87,
+      "proofs_built": false
+    },
+    {
+      "project": "ARD2",
+      "check": "config",
+      "ok": true,
+      "exit_code": 0,
+      "seconds": 1.409,
+      "sampled_peak_tree_rss_mib": 453.72,
+      "proofs_built": false
+    },
+    {
+      "project": "ARD2",
+      "check": "ownership",
+      "ok": true,
+      "exit_code": 0,
+      "seconds": 1.663,
+      "sampled_peak_tree_rss_mib": 450.93,
+      "proofs_built": false
+    },
+    {
+      "project": "aggregate",
+      "check": "config",
+      "ok": true,
+      "exit_code": 0,
+      "seconds": 1.497,
+      "sampled_peak_tree_rss_mib": 448.85,
+      "proofs_built": false
+    },
+    {
+      "project": "aggregate",
+      "check": "ownership",
+      "ok": true,
+      "exit_code": 0,
+      "seconds": 4.187,
+      "sampled_peak_tree_rss_mib": 513.09,
+      "proofs_built": false
+    }
+  ],
+  "proofs_built": false,
+  "scope": "Exact published configurations plus audit-only appended scripts; 310 source files preserved; local dependency overrides only in output copies",
+  "network": "Disabled Git network protocols and cache downloads; no update/fetch/build command",
+  "limits": {
+    "seconds_per_command": 120,
+    "owned_process_tree_memory_mib": 2048,
+    "lean_threads": 1,
+    "concurrent_lake_commands": 1
+  },
+  "verified_on": "2026-09-14",
+  "source_migration": {
+    "moved": 306,
+    "unchanged_aggregate": 4,
+    "bundled_sources_byte_preserved": 310,
+    "module_names_unchanged": true
+  },
+  "isolation_test": {
+    "project": "ARD2",
+    "setup": "In a scratch copy, add an invalid unrelated FutureNotation project and an unregistered invalid Y source, without changing existing configurations.",
+    "exact_configuration_loaded": true,
+    "module_ownership_passed": true,
+    "owned_modules": 21,
+    "visible_bundled_modules": 56,
+    "local_packages_loaded": 2,
+    "broken_sibling_negative_control_exit_code": 1,
+    "proof_build_test": false,
+    "receipt_cache_test": false
+  }
+}

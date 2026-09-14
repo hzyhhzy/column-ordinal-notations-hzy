@@ -370,7 +370,7 @@ On budget failure NER rejects the evaluation, rather than returning a truncated 
 | Least final labels and standard domain | Bounded separation, ordinal minimization, finite reachability | Assuming all raw graph lexicographic order is well-founded |
 | Removing V=L | Inner-class relativization, absoluteness of an actual rank | Transferring only internal absence of descending chains |
 
-The chain runs from trees to the real standard domain. It gives no optimal axiom bound, PTO theorem or strength comparison. Ordinary Lean checks `IPD.standard_wellFounded`, `IPD.standard_total`, and `IPD.term_wellFounded` in [IPDStandardOrder.lean](../../lean/src/IPDStandardOrder.lean). The broader expansion result `IPD.Semantics.valid_step_wellFounded` concerns all structurally valid auxiliary graphs, not their global column order.
+The chain runs from trees to the real standard domain. It gives no optimal axiom bound, PTO theorem or strength comparison. Ordinary Lean checks `IPD.standard_wellFounded`, `IPD.standard_total`, and `IPD.term_wellFounded` in [IPDStandardOrder.lean](../../lean/IPD/src/IPDStandardOrder.lean). The broader expansion result `IPD.Semantics.valid_step_wellFounded` concerns all structurally valid auxiliary graphs, not their global column order.
 
 The final axiom reports contain only `propext`, `Classical.choice` and `Quot.sound`. They report host-Lean dependencies, **not** an internal certification of the KP upper bound. See the [correspondence audit](ipd-fidelity.md) and [Lean release instructions](../../lean/README.md).
 
@@ -530,6 +530,6 @@ is a set strictly increasing rank. Different-level zero and leaf terms are not i
 
 ### A.8 Scope and references
 
-This lemma supplies profile ranks, not whole-IPD well-ordering by itself. The main paper connects finite demands, closure supply, actual seams and the standard order. The final ordinary-Lean theorem is [IPDStandardOrder.lean](../../lean/src/IPDStandardOrder.lean).
+This lemma supplies profile ranks, not whole-IPD well-ordering by itself. The main paper connects finite demands, closure supply, actual seams and the standard order. The final ordinary-Lean theorem is [IPDStandardOrder.lean](../../lean/IPD/src/IPDStandardOrder.lean).
 
 For KP's $\Sigma_1$-Collection, $\Delta_1$-Separation and bounded-quantifier closure facts see [McKenzie, Lemmas 2.2–2.3](https://arxiv.org/html/1806.08500v4#S2). We use the version with full set induction. The paper rank lemma has been reviewed within the whole argument; the analogous ordinary-Lean tree well-foundedness is complete, but the weak-theory rank construction is not internally formalized. No IPD definition or expander change was made for this proof.

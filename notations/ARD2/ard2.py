@@ -8,7 +8,7 @@ ARD2() is zero; TOP is the external limit; a[n] means a.fs(n).
 The standard domain consists of finite descendants of the seeds, plus TOP.
 The constructor checks structural legality, not membership in that domain.
 Ordinary Lean proves well-founded expansion on all legal graphs and a well-order
-on the standard domain: ../../lean/src/ARD2Final.lean. The weak-theory paper is
+on the standard domain: ../../lean/ARD2/src/ARD2Final.lean. The weak-theory paper is
 ../../proofs/paper/ard2-well-ordering.md; its KP derivation is not encoded inside
 Lean. No order-type comparison or optimal axiom bound is established.
 

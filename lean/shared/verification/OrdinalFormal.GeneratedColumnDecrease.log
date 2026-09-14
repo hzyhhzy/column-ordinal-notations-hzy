@@ -1,0 +1,7 @@
+OrdinalFormal.GeneratedColumnDecrease.expand_lt.{u} {Row : Type u} (cmp : Row → Row → Ordering) (laws : CompareLaws cmp)
+  (package : Package Row)
+  (hPackage : ∀ (high : Row) (b : Nat) (low : Row), low ∈ package high b → cmp low high = Ordering.lt) {g : Graph Row}
+  (hg : Valid g) (hcan : Canonical cmp g) (hn : g ≠ []) (n : Nat) :
+  graphCompare cmp (expand cmp package g n) g = Ordering.lt
+'OrdinalFormal.GeneratedColumnDecrease.firstColumn_entry' depends on axioms: [propext, Quot.sound]
+'OrdinalFormal.GeneratedColumnDecrease.expand_lt' depends on axioms: [propext, Classical.choice, Quot.sound]

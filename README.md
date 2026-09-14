@@ -41,7 +41,10 @@ Here KP includes full set induction. The paper does not add a power-set axiom, f
 - **ARD2 paper:** [English Markdown](proofs/paper/ard2-well-ordering.md) · [English PDF](proofs/paper/ard2-well-ordering.pdf) · [Chinese Markdown](proofs/paper/ard2-well-ordering.zh-CN.md) · [Chinese PDF](proofs/paper/ard2-well-ordering.zh-CN.pdf).
 - **IPD correspondence audit:** [English](proofs/paper/ipd-fidelity.md) · [Chinese](proofs/paper/ipd-fidelity.zh-CN.md).
 - **Lean:** [Build instructions and theorem index](lean/README.md) · [Chinese instructions](lean/README.zh-CN.md).
-- **Joint Lean entry point:** [SevenNotationFinalAudit.lean](lean/src/SevenNotationFinalAudit.lean).
+- **Independent Lean projects:** [Y](lean/Y/README.md) · [RPD](lean/RPD/README.md) · [LRD](lean/LRD/README.md) · [Ω-LRD3](lean/Omega-LRD3/README.md) · [ARD](lean/ARD/README.md) · [IPD](lean/IPD/README.md) · [ARD2](lean/ARD2/README.md).
+- **Optional aggregate entry:** [SevenNotationFinalAudit.lean](lean/src/SevenNotationFinalAudit.lean).
+
+Each notation has independent build configuration, outputs and verification receipts, depending only on itself and the [shared foundation](lean/shared/README.md); only Y additionally needs BMS. Adding a notation does not modify existing projects or force their proofs to rebuild.
 
 The Lean project formalizes the ordinary mathematical well-ordering theorems. **It does not encode a derivation in the weak object theory above.** The paper's axiom ledger and the Lean kernel checks are distinct results.
 
@@ -49,13 +52,14 @@ Y means the fixed upstream inherited-ancestry definition, pinned to commit `1689
 
 ## Checks and PDF regeneration
 
-Run the bounded expander tests from this directory:
+Run the bounded expander and build-verifier tests from this directory:
 
 ```sh
 python tests/test_python.py
 python tests/test_ard.py
 python tests/test_ipd.py
 python tests/test_ard2.py
+python -B tests/test_lean_verifier.py
 node --max-old-space-size=256 tests/ard2_ner.cjs
 node --max-old-space-size=256 tests/ard2_display.cjs
 node --max-old-space-size=256 tests/ipd_display.cjs
@@ -90,7 +94,7 @@ notations/
   ARD2/                          Bilingual definitions, PDFs, five-view JS, Python
 proofs/paper/                    Joint, ARD, IPD and ARD2 proofs; bilingual correspondence audit
 lean/                           Source closure, dependency pins, bounded build
-tests/                          Bounded expander regression tests
+tests/                          Bounded expander and verifier regression tests
 tools/                          Reproducible PDF generation and QA
 ```
 

@@ -1,6 +1,6 @@
 # ARD2：全上下文行锚图的良序证明 · [English](ard2-well-ordering.md)
 
-2026-09-14。[PDF](ard2-well-ordering.zh-CN.pdf) · [定义](../../notations/ARD2/definition.zh-CN.md) · [Python](../../notations/ARD2/ard2.py) · [NER](../../notations/ARD2/ARD2.ne-rewritten.js) · [普通 Lean](../../lean/src/ARD2Final.lean)。
+2026-09-14。[PDF](ard2-well-ordering.zh-CN.pdf) · [定义](../../notations/ARD2/definition.zh-CN.md) · [Python](../../notations/ARD2/ard2.py) · [NER](../../notations/ARD2/ARD2.ne-rewritten.js) · [普通 Lean](../../lean/ARD2/src/ARD2Final.lean)。
 
 ARD2 是 ARD 的全上下文版本：行锚和根都可引用本列，父仍严格向前。本文证明实际有限展开规则，不证明 ARD2 强于 ARD 或不弱于 IPD。软件资源保护不是数学规则。弱体系内的纸面推导与普通 Lean 内核验证是两项不同交付。
 

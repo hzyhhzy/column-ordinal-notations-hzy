@@ -2,7 +2,7 @@
 
 2026-09-13. ARD means Anchored Row Diagrams.
 
-[PDF](ard-well-ordering.pdf) · [definition](../../notations/ARD/definition.md) · [NER arc-diagram expander](../../notations/ARD/ARD-arcs.ne-rewritten.js) · [Python](../../notations/ARD/ard.py) · [ordinary Lean entry point](../../lean/src/ARDFinal.lean)
+[PDF](ard-well-ordering.pdf) · [definition](../../notations/ARD/definition.md) · [NER arc-diagram expander](../../notations/ARD/ARD-arcs.ne-rewritten.js) · [Python](../../notations/ARD/ard.py) · [ordinary Lean entry point](../../lean/ARD/src/ARDFinal.lean)
 
 This paper proves the finite rules in the linked definition and the two expanders. Time, memory and drawing guards in the implementations are not mathematical rules. This is a paper argument in a weak axiom system; the ordinary Lean code is a separate deliverable, not an encoding of a derivation in that weak formal theory. We do not prove ARD stronger than Y, RPD, LRD or Ω-LRD3.
 
@@ -435,7 +435,7 @@ This paper proves well-foundedness of nonzero expansion on all structurally lega
 
 Anchors change together with the other three coordinates. The strong endpoint supply allowing $K\ge\delta$ in Section 5.3 and the four-coordinate identity in Section 6 are necessary additions to the fixed-row argument; one cannot obtain them merely by renaming the old Lean theorems.
 
-The independent ordinary Lean entry point is [ARDFinal.lean](../../lean/src/ARDFinal.lean). Its finite geometry uses explicit root closure. The dynamic semantic relation is actually constructed by recursion on $(b,K,\theta)$; neither reflection nor initial representation is postulated as an extra axiom. The semantic backend constructs endpoint agreement, strong supply and initial representations from least bad witnesses, least prefix-extension witnesses and countable finitary closure. Operator codes consist only of finite shapes and natural numbers. The variable ordinal $K$ is an operator input; no countability of the entire ordinal type is assumed.
+The independent ordinary Lean entry point is [ARDFinal.lean](../../lean/ARD/src/ARDFinal.lean). Its finite geometry uses explicit root closure. The dynamic semantic relation is actually constructed by recursion on $(b,K,\theta)$; neither reflection nor initial representation is postulated as an extra axiom. The semantic backend constructs endpoint agreement, strong supply and initial representations from least bad witnesses, least prefix-extension witnesses and countable finitary closure. Operator codes consist only of finite shapes and natural numbers. The variable ordinal $K$ is an operator input; no countability of the entire ordinal type is assumed.
 
 There are several precise differences between the ordinary Lean construction and the weak-theory account in Sections 3–8:
 

@@ -11,7 +11,7 @@
 | `ipd.py` | `12D3F08FD38FC51AA78B9972BAE2D5E02FC8EFC09DE085A9B1752880948EBAB1` |
 | `IPD.ne-rewritten.js` | `ACC1A1C2AE260DA9BE7D13E14AC17D84A92679F82EFE97AA85CD0E3B072F6011` |
 
-Lean 的数学定义和证明位于 [ipd 目录](../../lean/README.zh-CN.md)。最终定理见 [StandardOrder.lean](../../lean/src/IPDStandardOrder.lean)：
+Lean 的数学定义和证明位于 [ipd 目录](../../lean/README.zh-CN.md)。最终定理见 [StandardOrder.lean](../../lean/IPD/src/IPDStandardOrder.lean)：
 
 ```lean
 IPD.standard_wellFounded : WellFounded IPD.StandardLt

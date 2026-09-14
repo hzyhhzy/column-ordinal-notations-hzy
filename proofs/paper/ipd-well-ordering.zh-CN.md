@@ -357,7 +357,7 @@ Python 使用全部非零子项候选。NER 仅保留末项前最右非零位置
 | 最小末标签和标准域 | 有界分离、序数最小化、有限可达性 | 直接把全体原始图字典序当良序 |
 | 移除 V=L | 内类相对化、实际秩函数的绝对性 | 仅转移内部“无下降链” |
 
-本文给出从树到真实标准域的纸面证明链，不提供最弱公理强度、PTO 定理或强度比较。通常 Lean 中的最终定理现已通过检查：`IPD.standard_wellFounded`、`IPD.standard_total`、`IPD.term_wellFounded`，见 [StandardOrder.lean](../../lean/src/IPDStandardOrder.lean)。展开关系的更广结论见 `IPD.Semantics.valid_step_wellFounded`，适用于全部结构合法辅助图；它不声称这些辅助图的全局列序良序。
+本文给出从树到真实标准域的纸面证明链，不提供最弱公理强度、PTO 定理或强度比较。通常 Lean 中的最终定理现已通过检查：`IPD.standard_wellFounded`、`IPD.standard_total`、`IPD.term_wellFounded`，见 [StandardOrder.lean](../../lean/IPD/src/IPDStandardOrder.lean)。展开关系的更广结论见 `IPD.Semantics.valid_step_wellFounded`，适用于全部结构合法辅助图；它不声称这些辅助图的全局列序良序。
 
 所有最终定理的公理报告仅含 `propext`、`Classical.choice`、`Quot.sound`。这报告的是通常 Lean 的基础依赖，**不是**本文的 KP 上界已经在 Lean 元理论内部形式化。源码重建记录及精确对应边界见 [定义对应审计](ipd-fidelity.zh-CN.md) 与 [Lean 目录](../../lean/README.zh-CN.md)。
 
@@ -541,7 +541,7 @@ $$
 
 ### A.8. 与主目标的边界
 
-本引理只处理轮廓以及后续递归所需的真实秩，单独不等于整个 IPD 良序。有限需求关系、闭包供应、实际接缝拼接和标准域比较现已接在 [完整纸面证明](ipd-well-ordering.zh-CN.md) 中；普通 Lean 最终结论见 [StandardOrder.lean](../../lean/src/IPDStandardOrder.lean)。
+本引理只处理轮廓以及后续递归所需的真实秩，单独不等于整个 IPD 良序。有限需求关系、闭包供应、实际接缝拼接和标准域比较现已接在 [完整纸面证明](ipd-well-ordering.zh-CN.md) 中；普通 Lean 最终结论见 [StandardOrder.lean](../../lean/IPD/src/IPDStandardOrder.lean)。
 
 旧反射后端的 ZFC 序型入口已经由本文件的 rho 取代。完整证明逐项说明有界递归与唯一历史收集，不要求共尾性或与 wY/TPD 的强度模拟。
 
