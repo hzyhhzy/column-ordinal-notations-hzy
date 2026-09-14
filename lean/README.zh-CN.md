@@ -1,12 +1,12 @@
-# 六个记号的 Lean 证明 · [English](README.md)
+# 七个记号的 Lean 证明 · [English](README.md)
 
-本目录整理 **Y、RPD、LRD、Ω-LRD3、ARD、IPD** 在普通经典 Lean 中的良序证明。交付的是源码工程，而不是一批预编译证书。
+本目录整理 **Y、RPD、LRD、Ω-LRD3、ARD、IPD、ARD2** 在普通经典 Lean 中的良序证明。交付的是源码工程，而不是一批预编译证书。
 
-限制公理体系的论证见另附的[四系统纸面证明](../proofs/paper/well-ordering.zh-CN.md)、[ARD 纸面证明](../proofs/paper/ard-well-ordering.zh-CN.md)及 [IPD 纸面证明](../proofs/paper/ipd-well-ordering.zh-CN.md)。这些 Lean 定理**不是**对象理论 `KP_ω + 存在不可数序数` 中的形式推导；打印出来的宿主 Lean 公理依赖本身不证明这个元数学上界。
+限制公理体系的论证见另附的[四系统纸面证明](../proofs/paper/well-ordering.zh-CN.md)、[ARD 纸面证明](../proofs/paper/ard-well-ordering.zh-CN.md)、[IPD 纸面证明](../proofs/paper/ipd-well-ordering.zh-CN.md)及 [ARD2 纸面证明](../proofs/paper/ard2-well-ordering.zh-CN.md)。这些 Lean 定理**不是**对象理论 `KP_ω + 存在不可数序数` 中的形式推导；打印出来的宿主 Lean 公理依赖本身不证明这个元数学上界。
 
 ## 主要定理入口
 
-建议先看 [SixNotationFinalAudit.lean](src/SixNotationFinalAudit.lean)：它导入未修改的[五系统验收](src/FiveNotationFinalAudit.lean)、IPD 最终定理及实际递归比较方程，打印十项公理报告。原四系统和五系统入口保持不变。
+建议先看 [SevenNotationFinalAudit.lean](src/SevenNotationFinalAudit.lean)：它导入未修改的[六系统验收](src/SixNotationFinalAudit.lean)、ARD2 最终定理及压缩／全根桥，打印九项公理报告。原有各联合入口保持不变。
 
 | 记号 | 最终模块 | 主要定理 |
 | --- | --- | --- |
@@ -16,6 +16,7 @@
 | Ω-LRD3 | [OmegaLRD3Final.lean](src/OmegaLRD3Final.lean) | `OrdinalFormal.Omega3Final.with_top_isWellOrder` |
 | ARD | [ARDFinal.lean](src/ARDFinal.lean) | `OrdinalFormal.ARD.paper_standard_with_top_strictWellOrder` |
 | IPD | [IPDStandardOrder.lean](src/IPDStandardOrder.lean) | `IPD.standard_wellFounded`、`IPD.standard_total`、`IPD.term_wellFounded` |
+| ARD2 | [ARD2Final.lean](src/ARD2Final.lean) | `OrdinalFormal.ARD2.paper_standard_with_top_strictWellOrder` |
 
 各最终模块也提供展开关系良基性、有限式域结论或标准域变体。主要良序定理不要求调用者额外提供反射、初始表示、行标良基性或种子可及性假设。
 
@@ -23,17 +24,20 @@ Y 指固定上游的祖先继承定义。本工程**没有**证明它与原始 J
 
 IPD 的标准域是零起始种子的有限可达式，不是事后以可及性定义的子类型。实际父优先列序良基且全序，另加 TOP 仍良序；全部结构合法原始图的严格展开也良基，但不主张它们的全局列序良序。详见[定义对应审计](../proofs/paper/ipd-fidelity.zh-CN.md)。
 
+ARD2 允许行与根同时 SELF，父仍严格向前，生成根包达到接缝自身。[有限规则桥](src/ARD2DefinitionFidelity.lean)和[压缩桥](src/ARD2Compression.lean)连接实际规则及有限可达标准域。语义关系与初始供应均实际构造，并非额外前提。详见[定义](../notations/ARD2/definition.zh-CN.md)。
+
 ## 源码结构
 
 - `src/FiniteDemand*.lean`：有限需求语义构造及具体宿主 Lean 环境实例。
 - `src/OrdinalFormal/`：共享列图、行包、比较、表示下降与原三个新记号的定义。
-- `src/ARD*.lean`：ARD 动态有限需求构造、实际分阶段拼接、标准域良序、独立规格及表示桥；定义见 [ARD 参考文档](../notations/ARD/definition.zh-CN.md)。
+- `src/ARD*.lean`（不含 `ARD2*`）：ARD 动态有限需求构造、实际分阶段拼接、标准域良序、独立规格及表示桥；定义见 [ARD 参考文档](../notations/ARD/definition.zh-CN.md)。
 - `src/IPD*.lean`：40 个模块，包含树 LPO、精确降低、有限模板、真实见证闭包、完整分阶段拼接和标准列序；没有拿 Y/ARD 良序定理替代 IPD。
+- `src/ARD2*.lean`：21 个新增模块，覆盖双 SELF 模板、pointed 端点一致性、真实见证闭包与逐块拼接、有限规格及标准列序良序。
 - `src/OneY/`、`src/ZeroY/`：所需上游 Y 源码的完整依赖闭包，保持原样。
 - `sources.json`：完整导入图、来源、固定版本和源码哈希。哈希先将 CRLF 换为 LF，不受 Git 换行符转换影响。
 - `build.py`：有资源上限的源码验证与公理报告检查器。
 
-本目录包含 **288 个 Lean 源码模块**：161 个未经修改的上游 Y 模块、127 个本地证明模块。另有 **12 个固定版本的 BMS 模块**由 Lake 作为外部依赖获取。证明源码闭包共 **300 个模块**，此外还依赖 Lean、Mathlib 及 Mathlib 的依赖库。发布内容不需要无关的暂停中对象理论研究、构建缓存、旧记号定义或机器私有绝对路径。
+本目录包含 **310 个 Lean 源码模块**：161 个未经修改的上游 Y 模块、149 个本地证明模块。另有 **12 个固定版本的 BMS 模块**由 Lake 作为外部依赖获取。证明源码闭包共 **322 个模块**，此外还依赖 Lean、Mathlib 及 Mathlib 的依赖库。发布内容不需要无关的暂停中对象理论研究、构建缓存、旧记号定义或机器私有绝对路径。
 
 发布副本中的 `OrdinalFormal/Domains.lean` 与 `OrdinalFormal/StandardValidity.lean` 删去了不用的早期记号声明；保留的 RPD/LRD 证明项没有改变。另外两个最终模块只修改了注释，以区分已完成的纸面论证与尚未声称完成的对象语言 Lean 认证。`sources.json` 记录了这些变动及原始源码哈希。
 
@@ -73,15 +77,15 @@ lake env python build.py --resume
 
 ## 验证范围与状态
 
-已于 **2026-09-14** 验证：全部 **300 个证明源码模块**在发布目录自己的输出目录内从源码全新重建，**774 项预期公理报告**全部通过。完整重建耗时 **1657.966 秒**；随后通过 `--resume` 再次核对每个模块的源码／依赖指纹与产物哈希。参见不含机器私有路径的[验收记录](VERIFICATION.json)。
+已于 **2026-09-14** 验证：全部 **322 个证明源码模块**在发布目录自己的输出目录内从源码全新重建，**866 项预期公理报告**全部通过。完整重建耗时 **1638.176 秒**；随后 `--resume` 再次核对每个模块的源码／依赖指纹与产物哈希，没有重新编译。参见不含机器私有路径的[验收记录](VERIFICATION.json)。
 
-新增真实日志包括 [IPD 标准序](verification/IPDStandardOrder.log)（3 项）、[完整图语义下降](verification/IPDSemanticWellFounded.log)（3 项）、[实际递归树比较](verification/IPDTreeCompare.log)（3 项）、[六系统联合验收](verification/SixNotationFinalAudit.log)（10 项）。
+ARD2 新增 21 个证明模块及七系统联合入口。新增真实日志包括 [ARD2 最终定理](verification/ARD2Final.log)（7 项）、[压缩／全根一致性](verification/ARD2Compression.log)（5 项）、[独立纸面规则对应](verification/ARD2DefinitionFidelity.log)（6 项）、[七系统联合验收](verification/SevenNotationFinalAudit.log)（9 项）。连同十三份不变的旧日志，共 **17 份最终／桥日志、104 项报告**，均与本次全新构建核对一致。此前的[四系统](verification/FourNotation-VERIFICATION.json)、[五系统](verification/FiveNotation-VERIFICATION.json)、[六系统](verification/SixNotation-VERIFICATION.json)收据保留为历史记录，不代替 ARD2 源码重建。
 
-此前的[四系统验收记录](verification/FourNotation-VERIFICATION.json)和[五系统验收记录](verification/FiveNotation-VERIFICATION.json)作为历史记录保留。九份旧日志不变：[Y](verification/FiniteDemandYFinal.log)、[RPD](verification/FiniteDemandRPDFinal.log)、[LRD](verification/FiniteDemandLRDFinal.log)、[Ω-LRD3](verification/OmegaLRD3Final.log)、[四系统联合验收](verification/FourNotationFinalAudit.log)、[ARD](verification/ARDFinal.log)、[五系统联合验收](verification/FiveNotationFinalAudit.log)、[独立规则等价桥](verification/ARDDefinitionFidelity.log)、[压缩／完整根表示桥](verification/ARDCompression.log)。十三份发布的最终／桥日志全部与本次六系统重建的对应日志按 LF 字节核对，完全一致，合计包含 **77 项报告**；历史验收记录只描述各自此前的构建。
+本次也修正了 Lake 库的可构建模块 globs：命名空间根用 `.submodules`，实际顶层模块用 `.one`。仅列 roots 不足以让 Lake 正确查找导入。真实 Lake 使用原样发布配置及临时离线依赖覆盖，现已核对全部 310 个随附模块的唯一库归属、导入／构建查找及默认枚举，无重复或不存在的源文件。该配置验收不是一次已完成的 `lake build`；证明源码的全新编译由独立有界验证器完成。`build.py --check-only` 另核对 globs 的精确枚举。
 
-本次使用既有 Lean／Mathlib／依赖库产物，不是从零联网安装或重建 Mathlib；没有使用研究工作区的证明二进制替代发布源码重编译。实际 Lake 使用固定外部包的临时本地覆盖，成功离线载入了发布配置；全部随附模块也通过了库根归属检查。本地构建产物已被 Git 忽略，交付内容只包含源码、验收记录和选定日志。
+本次重用既有 Lean／Mathlib／依赖库产物，不是从零联网安装或重建 Mathlib；没有使用研究工作区证明二进制替代发布源码重编译。本地构建产物已被 Git 忽略，交付内容只包含源码、验收记录和选定日志。
 
-允许的公理集合是 `propext`、`Classical.choice`、`Quot.sound`，或其子集。验证器拒绝 `sorryAx`、被报告为使用 `sorry` 的声明、打印报告中的额外公理、缺少导入、哈希不符及报告数量不完整。这不等于对 Lean 基础的证明论分析，也不宣称找到了记号的最小公理上界。
+允许的公理集合是 `propext`、`Classical.choice`、`Quot.sound`，或其子集。验证器拒绝 `sorryAx`、被报告为使用 `sorry` 的声明、打印报告中的额外公理、缺少导入、哈希不符及报告数量不完整。这不等于对 Lean 基础的证明论分析、弱 KP 对象推导或记号最小公理上界。
 
 ## 上游来源与许可证
 

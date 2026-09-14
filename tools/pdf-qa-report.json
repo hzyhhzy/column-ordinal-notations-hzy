@@ -1,13 +1,11 @@
 {
   "date": "2026-09-14",
   "renderer": "Poppler pdftoppm, 95 dpi",
-  "scope": "All sixteen publication PDFs: twelve unchanged older PDFs plus four IPD publications.",
-  "visual_review": "All 36 new IPD pages inspected in contact sheets; the repaired English request formulas and selected dense Chinese/rank pages inspected at page resolution. The final Chinese appendix cross-reference correction was rerendered and all 11 pages reinspected. The unchanged 66 older pages retain their prior visual review. All 102 pages were rerendered and passed text/image bounds checks.",
+  "scope": "All twenty publication PDFs: sixteen unchanged earlier PDFs and four ARD2 publications.",
+  "visual_review": "All 22 new ARD2 pages inspected in contact sheets. The English recursive-relation and splice/rank pages and the Chinese pointed-endpoint page were additionally inspected at full-page resolution. The unchanged 102 earlier pages retain their earlier visual reviews. All 124 pages were rendered again and passed text/image bounds checks.",
   "corrections": [
-    "Converted the new Chinese manuscript's formula delimiters to portable dollar delimiters without changing the mathematical bodies.",
-    "Separated consecutive English display equations into distinct Markdown paragraphs; the previously clipped request definitions now fit.",
-    "Assigned IPD-specific PDF metadata and 2026-09-14 footers without changing older outputs.",
-    "Qualified Chinese appendix references and lemma numbers with A to avoid collisions with main sections."
+    "ARD2-specific title and 2026-09-14 footer added without rerendering older PDFs.",
+    "Both papers clarify quantified bad-input labels, the domain of the Skolem structure, and the ordinary-Lean/weak-KP boundary."
   ],
   "files": [
     {
@@ -104,6 +102,30 @@
       "pdf": "proofs/paper/ipd-well-ordering.zh-CN.pdf",
       "pages": 11,
       "sha256": "83990ad4b40f79608954531cdbcea5ff3f730957cbde6821ce4cc1a3f6bc8454",
+      "bounds_issues": []
+    },
+    {
+      "pdf": "notations/ARD2/definition.pdf",
+      "pages": 5,
+      "sha256": "60a47c8a19896850304cb42c2c14f40e4702920e38e7298dadfd2af135687ed4",
+      "bounds_issues": []
+    },
+    {
+      "pdf": "notations/ARD2/definition.zh-CN.pdf",
+      "pages": 4,
+      "sha256": "56e49845551fafaed5e7ad62c4fcfcecbded3fbc9eebbb0195e41bbffb2f62bc",
+      "bounds_issues": []
+    },
+    {
+      "pdf": "proofs/paper/ard2-well-ordering.pdf",
+      "pages": 7,
+      "sha256": "ef93e69a4594dabd1ff2a3805b5df45f14c6a2972c90fd15033a76d1a3404db9",
+      "bounds_issues": []
+    },
+    {
+      "pdf": "proofs/paper/ard2-well-ordering.zh-CN.pdf",
+      "pages": 6,
+      "sha256": "f96bd63f73df3ee4c1d4284280690a9d41b84d39c51a15feebf7c58ba5379e19",
       "bounds_issues": []
     }
   ]

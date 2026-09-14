@@ -1,0 +1,11 @@
+'OrdinalFormal.YFiniteDemand.with_top_isWellOrder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.RPDFiniteDemand.standard_with_top_strictWellOrder' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OrdinalFormal.LRDFinal.standard_isWellOrder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.Omega3Final.with_top_isWellOrder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.ARD.paper_standard_with_top_strictWellOrder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IPD.term_wellFounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.ARD2.valid_step_wellFounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.ARD2.standard_strictWellOrder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.ARD2.paper_standard_with_top_strictWellOrder' depends on axioms: [propext, Classical.choice, Quot.sound]

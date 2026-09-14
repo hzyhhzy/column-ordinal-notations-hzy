@@ -1,12 +1,12 @@
-# Lean proofs for six notations · [中文版](README.zh-CN.md)
+# Lean proofs for seven notations · [中文版](README.zh-CN.md)
 
-This directory packages the ordinary, classical Lean proofs for **Y, RPD, LRD, Ω-LRD3, ARD, and IPD**. It is a source project, not a collection of precompiled certificates.
+This directory packages the ordinary, classical Lean proofs for **Y, RPD, LRD, Ω-LRD3, ARD, IPD, and ARD2**. It is a source project, not a collection of precompiled certificates.
 
-The restricted-axiom arguments are in the separate [four-system paper](../proofs/paper/well-ordering.md), [ARD paper](../proofs/paper/ard-well-ordering.md), and [IPD paper](../proofs/paper/ipd-well-ordering.md). These Lean theorems are **not** formalized derivations in the object theory `KP_ω + there exists an uncountable ordinal`. Their printed host-Lean axiom reports do not establish that metatheoretic upper bound.
+The restricted-axiom arguments are in the separate [four-system paper](../proofs/paper/well-ordering.md), [ARD paper](../proofs/paper/ard-well-ordering.md), [IPD paper](../proofs/paper/ipd-well-ordering.md), and [ARD2 paper](../proofs/paper/ard2-well-ordering.md). These Lean theorems are **not** formalized derivations in the object theory `KP_ω + there exists an uncountable ordinal`. Their printed host-Lean axiom reports do not establish that metatheoretic upper bound.
 
 ## Main theorem entry points
 
-Start with [SixNotationFinalAudit.lean](src/SixNotationFinalAudit.lean). It imports the unchanged [five-system audit](src/FiveNotationFinalAudit.lean), IPD's final theorem and the actual recursive comparison equation, and prints ten axiom reports. The original four- and five-system audits remain unchanged.
+Start with [SevenNotationFinalAudit.lean](src/SevenNotationFinalAudit.lean). It imports the unchanged [six-system audit](src/SixNotationFinalAudit.lean), ARD2's final theorem and the compressed/full-root bridge, and prints nine axiom reports. All earlier joint audits remain unchanged.
 
 | System | Final module | Main theorem |
 | --- | --- | --- |
@@ -16,6 +16,7 @@ Start with [SixNotationFinalAudit.lean](src/SixNotationFinalAudit.lean). It impo
 | Ω-LRD3 | [OmegaLRD3Final.lean](src/OmegaLRD3Final.lean) | `OrdinalFormal.Omega3Final.with_top_isWellOrder` |
 | ARD | [ARDFinal.lean](src/ARDFinal.lean) | `OrdinalFormal.ARD.paper_standard_with_top_strictWellOrder` |
 | IPD | [IPDStandardOrder.lean](src/IPDStandardOrder.lean) | `IPD.standard_wellFounded`, `IPD.standard_total`, `IPD.term_wellFounded` |
+| ARD2 | [ARD2Final.lean](src/ARD2Final.lean) | `OrdinalFormal.ARD2.paper_standard_with_top_strictWellOrder` |
 
 The corresponding final modules also expose expansion well-foundedness, finite-domain results, or standard-domain variants. Their main well-ordering theorems do not take reflection, initial representations, row well-foundedness, or seed accessibility as assumptions supplied by the caller.
 
@@ -23,17 +24,20 @@ Y means the fixed upstream inherited-ancestry definition. Equivalence with every
 
 IPD's standard domain is finite reachability from zero-start seeds, not an accessibility subtype. Its actual parent-first column order is well-founded and total; TOP is adjoined. Strict expansion is additionally well-founded on all structurally valid raw graphs, without asserting their global column order well-founded. See the [correspondence audit](../proofs/paper/ipd-fidelity.md).
 
+ARD2 permits both row and root SELF at the child column, keeps parents strict, and generates roots through the seam itself. Its [finite-rule bridge](src/ARD2DefinitionFidelity.lean) and [compression bridge](src/ARD2Compression.lean) cover the actual rule and reachable standard domain. The semantic relation and initial supply are constructed, not assumed. See the [definition](../notations/ARD2/definition.md).
+
 ## Source layout
 
 - `src/FiniteDemand*.lean`: the finite-demand semantic construction and its concrete host-Lean ambient instance.
 - `src/OrdinalFormal/`: shared column diagrams, packages, comparison, representation descent, and the original three new notation definitions.
-- `src/ARD*.lean`: ARD's dynamic finite-demand construction, actual staged splice, standard-domain well-ordering, independent specification, and representation bridge. Its definition is in [the ARD reference](../notations/ARD/definition.md).
+- `src/ARD*.lean` (excluding `ARD2*`): ARD's dynamic finite-demand construction, actual staged splice, standard-domain well-ordering, independent specification, and representation bridge. Its definition is in [the ARD reference](../notations/ARD/definition.md).
 - `src/IPD*.lean`: 40 modules covering tree LPO, exact lowering, finite templates, actual witness closure, full staged splice and the standard column order. No Y/ARD well-ordering theorem is substituted for IPD.
+- `src/ARD2*.lean`: 21 new modules for the two-SELF templates, pointed endpoint agreement, actual witness closure and staged splice, finite specification, and standard column well-order.
 - `src/OneY/`, `src/ZeroY/`: precisely the required upstream Y source closure, unchanged.
 - `sources.json`: the complete import graph, origins, pinned revisions, and source hashes. Hashes normalize CRLF to LF, so Git line-ending conversion does not invalidate them.
 - `build.py`: bounded source verification and axiom-report checking.
 
-There are **288 bundled Lean modules**: 161 unchanged upstream Y modules and 127 local proof modules. Another **12 pinned BMS modules** are fetched as a Lake dependency. The proof-source closure is therefore **300 modules**, in addition to Lean, Mathlib, and Mathlib's dependencies. No unrelated paused object-theory work, build caches, historical notation definitions, or private absolute paths are required in the release.
+There are **310 bundled Lean modules**: 161 unchanged upstream Y modules and 149 local proof modules. Another **12 pinned BMS modules** are fetched as a Lake dependency. The proof-source closure is therefore **322 modules**, in addition to Lean, Mathlib, and Mathlib's dependencies. No unrelated paused object-theory work, build caches, historical notation definitions, or private absolute paths are required in the release.
 
 The release-only copies of `OrdinalFormal/Domains.lean` and `OrdinalFormal/StandardValidity.lean` omit unused declarations for an earlier notation; all retained RPD/LRD proof terms are unchanged. Two final-module comments were updated to distinguish the completed paper argument from an unclaimed object-language Lean certification. `sources.json` records these changes and the original source hashes.
 
@@ -73,15 +77,15 @@ Offline use is supported by `--lean`, `--bms-source`, and repeated `--external-p
 
 ## Verification scope and status
 
-Verified on **2026-09-14**: all **300 proof-source modules** were freshly rebuilt in this release directory's own output tree, and all **774 expected axiom reports** passed. The full rebuild took **1657.966 seconds**. A subsequent `--resume` pass checked every source/dependency fingerprint and every output hash. See the machine-path-free [verification receipt](VERIFICATION.json).
+Verified on **2026-09-14**: all **322 proof-source modules** were freshly rebuilt in this release directory's own output tree, and all **866 expected axiom reports** passed. The full rebuild took **1638.176 seconds**. A subsequent `--resume` pass checked every source/dependency fingerprint and every output hash, with no recompilation. See the machine-path-free [verification receipt](VERIFICATION.json).
 
-New actual logs are retained for [IPD's standard order](verification/IPDStandardOrder.log) (3 reports), [full-graph semantic descent](verification/IPDSemanticWellFounded.log) (3), [actual recursive tree comparison](verification/IPDTreeCompare.log) (3), and the [six-system audit](verification/SixNotationFinalAudit.log) (10).
+ARD2 adds 21 proof modules and the seven-system audit. New actual logs are retained for [ARD2's final theorems](verification/ARD2Final.log) (7 reports), [compressed/full-root agreement](verification/ARD2Compression.log) (5), [independent paper-rule fidelity](verification/ARD2DefinitionFidelity.log) (6), and the [seven-system audit](verification/SevenNotationFinalAudit.log) (9). Together with the thirteen unchanged earlier logs they give **17 final/bridge logs and 104 reports**, all checked against this fresh build. Earlier [four-system](verification/FourNotation-VERIFICATION.json), [five-system](verification/FiveNotation-VERIFICATION.json), and [six-system](verification/SixNotation-VERIFICATION.json) receipts are historical records, not substitutes for rebuilding ARD2.
 
-The earlier [four-system receipt](verification/FourNotation-VERIFICATION.json) and [five-system receipt](verification/FiveNotation-VERIFICATION.json) are retained as historical records. The nine earlier logs remain unchanged: [Y](verification/FiniteDemandYFinal.log), [RPD](verification/FiniteDemandRPDFinal.log), [LRD](verification/FiniteDemandLRDFinal.log), [Ω-LRD3](verification/OmegaLRD3Final.log), [four-system audit](verification/FourNotationFinalAudit.log), [ARD](verification/ARDFinal.log), [five-system audit](verification/FiveNotationFinalAudit.log), [independent-rule bridge](verification/ARDDefinitionFidelity.log), and [compressed/full-root bridge](verification/ARDCompression.log). All thirteen published final/bridge logs were checked against this fresh six-system build after LF normalization and matched exactly; together they contain **77 reports**. Historical receipts describe only their respective earlier runs.
+This integration also corrected the Lake library's buildable-module globs: namespace roots use `.submodules`, while actual top-level modules use `.one`. Listing roots alone was not sufficient for Lake's import lookup. Real Lake, using the exact published configuration with temporary offline dependency overrides, now confirms unique library ownership, import/build lookup and default enumeration of all 310 bundled modules without duplicates or nonexistent source files. This configuration test is not a completed `lake build`; the separate bounded verifier performed the fresh proof-source compilation. `build.py --check-only` additionally checks exact glob enumeration.
 
-The rebuild used existing Lean/Mathlib/dependency artifacts; it was not a fresh network bootstrap or a fresh build of Mathlib. No research-workspace proof binaries were accepted in place of rebuilding the published source closure. Actual Lake loaded the published configuration offline using temporary local overrides for the pinned external packages, and library ownership was checked for every bundled module. Local build outputs are ignored by Git; only source, receipts and selected logs are part of the delivery.
+The rebuild used existing Lean/Mathlib/dependency artifacts; it was not a fresh network bootstrap or a fresh build of Mathlib. No research-workspace proof binaries were accepted in place of rebuilding the published source closure. Local build outputs are ignored by Git; only source, receipts and selected logs are delivered.
 
-The accepted axiom set is `propext`, `Classical.choice`, and `Quot.sound` (or a subset). The verifier rejects `sorryAx`, reported `sorry` declarations, extra axioms in the printed reports, missing imports, hash mismatches, and incomplete report counts. This is not a proof-theoretic analysis of Lean's foundations, nor a claim of a minimal axiom bound for the notations.
+The accepted axiom set is `propext`, `Classical.choice`, and `Quot.sound` (or a subset). The verifier rejects `sorryAx`, reported `sorry` declarations, extra axioms in the printed reports, missing imports, hash mismatches, and incomplete report counts. This is not a proof-theoretic analysis of Lean's foundations, a weak-KP object derivation, or a minimal axiom bound for the notations.
 
 ## Upstream sources and licensing
 

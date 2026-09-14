@@ -1,14 +1,14 @@
 # Column Ordinal Notations - HZY · [中文版](README.zh-CN.md)
 
-At 20:00 on September 11, @Phyrion published a [well-ordering proof for the Y-sequence system](https://github.com/Phyrion1343/1Y-Well-Ordering-Lean). Shortly afterwards, @test_alpha0 reduced the required axiomatic foundation to $KP_\omega+\text{there exists an uncountable ordinal}$. This repository collects RPD, LRD, Ω-LRD3, ARD, and IPD, notation systems devised by GPT6-astra after studying those proofs, together with their well-ordering proofs. RPD is expected to be at least as strong as Y while admitting a much shorter definition; this strength comparison has not been proved. LRD and Ω-LRD3 are further extensions of that construction. ARD makes row labels into references to earlier columns, so the row coordinate itself moves during expansion. IPD uses finite-level iterated tree profiles and relocates references even inside nested heads. All five admit paper well-ordering proofs in the same axiomatic system. Their order-type relationships with omega-Y and other familiar notation systems are currently unknown.
+At 20:00 on September 11, @Phyrion published a [well-ordering proof for the Y-sequence system](https://github.com/Phyrion1343/1Y-Well-Ordering-Lean). Shortly afterwards, @test_alpha0 reduced the required axiomatic foundation to $KP_\omega+\text{there exists an uncountable ordinal}$. This repository collects RPD, LRD, Ω-LRD3, ARD, IPD, and ARD2, notation systems devised by GPT6-astra after studying those proofs, together with their well-ordering proofs. RPD is expected to be at least as strong as Y while admitting a much shorter definition; this strength comparison has not been proved. LRD and Ω-LRD3 are further extensions of that construction. ARD makes row labels into references to earlier columns, so the row coordinate itself moves during expansion. IPD uses finite-level iterated tree profiles and relocates references even inside nested heads. ARD2 returns to three natural-number coordinates, allowing both row and root SELF references and full-context root packages. All six admit paper well-ordering proofs in the same axiomatic system. Their order-type relationships with omega-Y and other familiar notation systems are currently unknown.
 
 Definitions, executable fundamental sequences, and well-ordering proofs for column-diagram ordinal notations. This source snapshot was prepared on **2026-09-14** for [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy). The suffix `hzy` refers to the repository owner's name.
 
-The new notation implementations are **RPD, LRD, Ω-LRD3, ARD and IPD**. The proof collection covers **Y, RPD, LRD, Ω-LRD3, ARD and IPD**. Other Ω-LRD variants and historical experiments are deliberately excluded.
+The new notation implementations are **RPD, LRD, Ω-LRD3, ARD, IPD and ARD2**. The proof collection covers **Y, RPD, LRD, Ω-LRD3, ARD, IPD and ARD2**. Other Ω-LRD variants and historical experiments are deliberately excluded.
 
 ## Definitions and expanders
 
-Each definition is available in English and Chinese, as Markdown and PDF: **20 definition artifacts** in total. English Markdown is the default; the title of every English document links to its Chinese counterpart.
+Each definition is available in English and Chinese, as Markdown and PDF: **24 definition artifacts** in total. English Markdown is the default; the title of every English document links to its Chinese counterpart.
 
 | Notation | English definition | Chinese definition | NER expander | Python expander |
 | --- | --- | --- | --- | --- |
@@ -17,16 +17,17 @@ Each definition is available in English and Chinese, as Markdown and PDF: **20 d
 | Ω-LRD3 | [Markdown](notations/Omega-LRD3/definition.md) · [PDF](notations/Omega-LRD3/definition.pdf) | [Markdown](notations/Omega-LRD3/definition.zh-CN.md) · [PDF](notations/Omega-LRD3/definition.zh-CN.pdf) | [JavaScript](notations/Omega-LRD3/Omega-LRD3.ne-rewritten.js) | [omega_lrd3.py](notations/Omega-LRD3/omega_lrd3.py) |
 | ARD | [Markdown](notations/ARD/definition.md) · [PDF](notations/ARD/definition.pdf) | [Markdown](notations/ARD/definition.zh-CN.md) · [PDF](notations/ARD/definition.zh-CN.pdf) | [JavaScript](notations/ARD/ARD-arcs.ne-rewritten.js) | [ard.py](notations/ARD/ard.py) |
 | IPD | [Markdown](notations/IPD/definition.md) · [PDF](notations/IPD/definition.pdf) | [Markdown](notations/IPD/definition.zh-CN.md) · [PDF](notations/IPD/definition.zh-CN.pdf) | [JavaScript](notations/IPD/IPD.ne-rewritten.js) | [ipd.py](notations/IPD/ipd.py) |
+| ARD2 | [Markdown](notations/ARD2/definition.md) · [PDF](notations/ARD2/definition.pdf) | [Markdown](notations/ARD2/definition.zh-CN.md) · [PDF](notations/ARD2/definition.zh-CN.pdf) | [JavaScript](notations/ARD2/ARD2.ne-rewritten.js) | [ard2.py](notations/ARD2/ard2.py) |
 
 For the browser version, load the complete JavaScript file into the custom-notation facility of [ne-rewritten](https://smilelee-lyx.github.io/ne-rewritten/). Each file is an independent registration script; no build step is needed. Existing display modes and resource guards are preserved. The scripts also retain their original Chinese help text, including historical proof-status notes; the papers and validation record in this package state the current proof scope.
 
-RPD and ARD also offer `邻接表（文字）` (text adjacency) and `邻接表（图）` (graphical adjacency) in the equivalent-display menu. The text uses one `[]` per column, semicolons for layers and commas for parent positions, retaining internal blanks. In HTML or the native diagram popup, each active layer is a compact upper-triangular table: shaded whole diagonal cells carry both row and column indices, off-diagonal entries carry maximum roots, and the exact count sequence appears once above all tables. Resource limits are reported explicitly, without approximate counts or partial tables.
+RPD, ARD and ARD2 also offer `邻接表（文字）` (text adjacency) and `邻接表（图）` (graphical adjacency) in the equivalent-display menu. The text uses one `[]` per column, semicolons for layers and commas for parent positions, retaining internal blanks. In HTML or the native diagram popup, each active layer is a compact upper-triangular table: shaded whole diagonal cells carry both row and column indices, off-diagonal entries carry maximum roots, and the exact count sequence appears once above all tables. Resource limits are reported explicitly, without approximate counts or partial tables.
 
 The Python files use only the Python standard library. They implement the mathematical expansion core, not NER's interface or display caches. Read the command-line examples in the corresponding definition. Large expansions can still be expensive: a valid mathematical definition is not a promise of cheap evaluation.
 
-## Well-ordering proofs: six systems
+## Well-ordering proofs: seven systems
 
-The original joint paper covers Y, RPD, LRD and Ω-LRD3. A separate complete ARD paper gives the dynamic-row extension. The IPD paper adds iterated tree profiles, including the direct KP tree-rank construction as Appendix A. All three papers work in:
+The original joint paper covers Y, RPD, LRD and Ω-LRD3. A separate complete ARD paper gives the dynamic-row extension. The IPD paper adds iterated tree profiles, including the direct KP tree-rank construction as Appendix A. The ARD2 paper gives the two-SELF extension and its actual seam transport. All four papers work in:
 
 $$
 KP_\omega+\text{there exists an uncountable ordinal}.
@@ -37,13 +38,14 @@ Here KP includes full set induction. The paper does not add a power-set axiom, f
 - **Paper:** [English Markdown](proofs/paper/well-ordering.md) · [English PDF](proofs/paper/well-ordering.pdf) · [Chinese Markdown](proofs/paper/well-ordering.zh-CN.md) · [Chinese PDF](proofs/paper/well-ordering.zh-CN.pdf).
 - **ARD paper:** [English Markdown](proofs/paper/ard-well-ordering.md) · [English PDF](proofs/paper/ard-well-ordering.pdf) · [Chinese Markdown](proofs/paper/ard-well-ordering.zh-CN.md) · [Chinese PDF](proofs/paper/ard-well-ordering.zh-CN.pdf).
 - **IPD paper:** [English Markdown](proofs/paper/ipd-well-ordering.md) · [English PDF](proofs/paper/ipd-well-ordering.pdf) · [Chinese Markdown](proofs/paper/ipd-well-ordering.zh-CN.md) · [Chinese PDF](proofs/paper/ipd-well-ordering.zh-CN.pdf).
+- **ARD2 paper:** [English Markdown](proofs/paper/ard2-well-ordering.md) · [English PDF](proofs/paper/ard2-well-ordering.pdf) · [Chinese Markdown](proofs/paper/ard2-well-ordering.zh-CN.md) · [Chinese PDF](proofs/paper/ard2-well-ordering.zh-CN.pdf).
 - **IPD correspondence audit:** [English](proofs/paper/ipd-fidelity.md) · [Chinese](proofs/paper/ipd-fidelity.zh-CN.md).
 - **Lean:** [Build instructions and theorem index](lean/README.md) · [Chinese instructions](lean/README.zh-CN.md).
-- **Joint Lean entry point:** [SixNotationFinalAudit.lean](lean/src/SixNotationFinalAudit.lean).
+- **Joint Lean entry point:** [SevenNotationFinalAudit.lean](lean/src/SevenNotationFinalAudit.lean).
 
 The Lean project formalizes the ordinary mathematical well-ordering theorems. **It does not encode a derivation in the weak object theory above.** The paper's axiom ledger and the Lean kernel checks are distinct results.
 
-Y means the fixed upstream inherited-ancestry definition, pinned to commit `1689b21131b488ec2ba2515bd630360371a2389d`. A full equivalence proof between that definition and the original Naruyoko JavaScript on every legal input is not claimed here. No comparison of the six order types, optimal axiom-strength claim, or proof-theoretic ordinal comparison is included.
+Y means the fixed upstream inherited-ancestry definition, pinned to commit `1689b21131b488ec2ba2515bd630360371a2389d`. A full equivalence proof between that definition and the original Naruyoko JavaScript on every legal input is not claimed here. No comparison of the seven order types, optimal axiom-strength claim, or proof-theoretic ordinal comparison is included.
 
 ## Checks and PDF regeneration
 
@@ -53,13 +55,16 @@ Run the bounded expander tests from this directory:
 python tests/test_python.py
 python tests/test_ard.py
 python tests/test_ipd.py
+python tests/test_ard2.py
+node --max-old-space-size=256 tests/ard2_ner.cjs
+node --max-old-space-size=256 tests/ard2_display.cjs
 node --max-old-space-size=256 tests/ipd_display.cjs
 node --max-old-space-size=256 tests/adjacency_views.cjs
 ```
 
 Follow [the Lean instructions](lean/README.md) for pinned dependencies and the sequential, resource-bounded build. Neither PDF generation nor Node.js is needed for Lean compilation.
 
-To regenerate the sixteen publication PDFs, install Pandoc, Node.js, the document-tool dependencies, and suitable local fonts:
+To regenerate the twenty publication PDFs, install Pandoc, Node.js, the document-tool dependencies, and suitable local fonts:
 
 ```sh
 python -m pip install -r tools/requirements.txt
@@ -82,7 +87,8 @@ notations/
   Omega-LRD3/                     Bilingual definitions, PDFs, JS, Python
   ARD/                           Bilingual definitions, PDFs, arc-view JS, Python
   IPD/                           Bilingual definitions, PDFs, tree-view JS, Python
-proofs/paper/                    Joint, ARD and IPD proofs; bilingual correspondence audit
+  ARD2/                          Bilingual definitions, PDFs, five-view JS, Python
+proofs/paper/                    Joint, ARD, IPD and ARD2 proofs; bilingual correspondence audit
 lean/                           Source closure, dependency pins, bounded build
 tests/                          Bounded expander regression tests
 tools/                          Reproducible PDF generation and QA

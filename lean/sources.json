@@ -1,5 +1,5 @@
 {
-  "target": "SixNotationFinalAudit",
+  "target": "SevenNotationFinalAudit",
   "modules": {
     "OrdinalFormal.ReflectionTransport": {
       "source": "ordinal-formalization/OrdinalFormal/ReflectionTransport.lean",
@@ -3133,6 +3133,250 @@
       ],
       "sha256": "030fc5e765004850741651c0557324100f00a8f22d52527fea8ee25d82ed1fb5",
       "origin": "local",
+      "distribution": "release-only joint final audit; no new mathematical assumptions"
+    },
+    "ARD2ClosedSupply": {
+      "source": "lean/src/ARD2ClosedSupply.lean",
+      "imports": [
+        "ARD2EndpointAgreement",
+        "FiniteDemandFinitaryClosure",
+        "FiniteDemandOrdinalHeight"
+      ],
+      "sha256": "eeae82d550f007434f15ed97c6bf20cbec4efe7a3c8688ca24795862eb1fb0cd",
+      "origin": "local",
+      "original_sha256_lf": "eeae82d550f007434f15ed97c6bf20cbec4efe7a3c8688ca24795862eb1fb0cd",
+      "distribution": "bundled local proof source"
+    },
+    "ARD2Compression": {
+      "source": "lean/src/ARD2Compression.lean",
+      "imports": [
+        "ARD2Structure",
+        "OrdinalFormal.RPDFiniteUnion"
+      ],
+      "sha256": "8946e2ea23091e679fd0cb843e223d982ee4a06e2085ab8ba5f3ef9c3ccb3c80",
+      "origin": "local",
+      "original_sha256_lf": "8946e2ea23091e679fd0cb843e223d982ee4a06e2085ab8ba5f3ef9c3ccb3c80",
+      "distribution": "bundled local proof source"
+    },
+    "ARD2Core": {
+      "source": "lean/src/ARD2Core.lean",
+      "imports": [
+        "OrdinalFormal.GenericSortedColumns",
+        "OrdinalFormal.SpliceConstruction"
+      ],
+      "sha256": "961f9dc5551e5113e9b22ec3d6539385c02b8844e7eafd3570a2120f36749601",
+      "origin": "local",
+      "original_sha256_lf": "961f9dc5551e5113e9b22ec3d6539385c02b8844e7eafd3570a2120f36749601",
+      "distribution": "bundled local proof source"
+    },
+    "ARD2Decrease": {
+      "source": "lean/src/ARD2Decrease.lean",
+      "imports": [
+        "ARD2Structure",
+        "OrdinalFormal.GeneratedColumnDecrease"
+      ],
+      "sha256": "9dd8e762821f9d5dbe53b2802866a119f2ea9dc500526601e65ddaab0091b3b6",
+      "origin": "local",
+      "original_sha256_lf": "9dd8e762821f9d5dbe53b2802866a119f2ea9dc500526601e65ddaab0091b3b6",
+      "distribution": "bundled local proof source"
+    },
+    "ARD2DefinitionFidelity": {
+      "source": "lean/src/ARD2DefinitionFidelity.lean",
+      "imports": [
+        "ARD2FiniteUnion",
+        "ARD2OrderReduction",
+        "OrdinalFormal.RPDFiniteUnion"
+      ],
+      "sha256": "588db250de2bb82cc63967a63230eaab445002a882e76311870d83e0b80288ce",
+      "origin": "local",
+      "original_sha256_lf": "588db250de2bb82cc63967a63230eaab445002a882e76311870d83e0b80288ce",
+      "distribution": "bundled local proof source"
+    },
+    "ARD2DemandCore": {
+      "source": "lean/src/ARD2DemandCore.lean",
+      "imports": [
+        "ARD2Core",
+        "Mathlib.SetTheory.Ordinal.Basic",
+        "Mathlib.Order.RelClasses"
+      ],
+      "sha256": "301f4c8d5b2f91a3b0512475c25c533e9a8ba5efe017b08242cf1b811baeb225",
+      "origin": "local",
+      "original_sha256_lf": "301f4c8d5b2f91a3b0512475c25c533e9a8ba5efe017b08242cf1b811baeb225",
+      "distribution": "bundled local proof source"
+    },
+    "ARD2DemandRecursion": {
+      "source": "lean/src/ARD2DemandRecursion.lean",
+      "imports": [
+        "ARD2DemandCore"
+      ],
+      "sha256": "6e1cc7241ba3065aa34da11d3224b68da5c38d03d3b0e730c3d062b060943c83",
+      "origin": "local",
+      "original_sha256_lf": "6e1cc7241ba3065aa34da11d3224b68da5c38d03d3b0e730c3d062b060943c83",
+      "distribution": "bundled local proof source"
+    },
+    "ARD2DemandReflection": {
+      "source": "lean/src/ARD2DemandReflection.lean",
+      "imports": [
+        "ARD2DemandRecursion"
+      ],
+      "sha256": "924bd065502a9e41aa31339a3821a504523490d1a23b9b98429dd957c2864f21",
+      "origin": "local",
+      "original_sha256_lf": "924bd065502a9e41aa31339a3821a504523490d1a23b9b98429dd957c2864f21",
+      "distribution": "bundled local proof source"
+    },
+    "ARD2Domain": {
+      "source": "lean/src/ARD2Domain.lean",
+      "imports": [
+        "ARD2Core",
+        "ARDPrefixOrder",
+        "OrdinalFormal.Comparison"
+      ],
+      "sha256": "50dfcd2e33daffd6719a8b2b3ca240a61971cad4b34e3f5df09c444a1871567f",
+      "origin": "local",
+      "original_sha256_lf": "50dfcd2e33daffd6719a8b2b3ca240a61971cad4b34e3f5df09c444a1871567f",
+      "distribution": "bundled local proof source"
+    },
+    "ARD2EndpointAgreement": {
+      "source": "lean/src/ARD2EndpointAgreement.lean",
+      "imports": [
+        "ARD2Witnesses"
+      ],
+      "sha256": "3cdfef927af281c4cbd9be8c49ef64b92db7688b2556a09e309d87b3e129a60d",
+      "origin": "local",
+      "original_sha256_lf": "3cdfef927af281c4cbd9be8c49ef64b92db7688b2556a09e309d87b3e129a60d",
+      "distribution": "bundled local proof source"
+    },
+    "ARD2Final": {
+      "source": "lean/src/ARD2Final.lean",
+      "imports": [
+        "ARD2InitialRepresentation",
+        "ARD2StageProof",
+        "ARD2SemanticWellFounded",
+        "ARD2OrderReduction",
+        "ARD2DefinitionFidelity"
+      ],
+      "sha256": "8469237c097ad061057c39c70b8bd7cea2cf11f8d40bb1b26bbafc44f405430e",
+      "origin": "local",
+      "original_sha256_lf": "8469237c097ad061057c39c70b8bd7cea2cf11f8d40bb1b26bbafc44f405430e",
+      "distribution": "bundled local proof source"
+    },
+    "ARD2FiniteUnion": {
+      "source": "lean/src/ARD2FiniteUnion.lean",
+      "imports": [
+        "ARD2Structure",
+        "OrdinalFormal.BlockFiniteUnion"
+      ],
+      "sha256": "74fb82d0b61d11417cf939e5c238c244e8d806dbdfca1d98b1df182748277cd7",
+      "origin": "local",
+      "original_sha256_lf": "74fb82d0b61d11417cf939e5c238c244e8d806dbdfca1d98b1df182748277cd7",
+      "distribution": "bundled local proof source"
+    },
+    "ARD2InitialRepresentation": {
+      "source": "lean/src/ARD2InitialRepresentation.lean",
+      "imports": [
+        "ARD2ClosedSupply",
+        "FiniteDemandHostAmbient"
+      ],
+      "sha256": "22660ae9bedcb71fbdd1870b8e9e7ae0c194b0c71bf6cb751489396b14e956e1",
+      "origin": "local",
+      "original_sha256_lf": "22660ae9bedcb71fbdd1870b8e9e7ae0c194b0c71bf6cb751489396b14e956e1",
+      "distribution": "bundled local proof source"
+    },
+    "ARD2OrderReduction": {
+      "source": "lean/src/ARD2OrderReduction.lean",
+      "imports": [
+        "ARD2Domain",
+        "ARD2Decrease"
+      ],
+      "sha256": "34fbf6e25f3c3e80a1c9c7a5243798d0026a6b15503e169c93c217407b680319",
+      "origin": "local",
+      "original_sha256_lf": "34fbf6e25f3c3e80a1c9c7a5243798d0026a6b15503e169c93c217407b680319",
+      "distribution": "bundled local proof source"
+    },
+    "ARD2SemanticWellFounded": {
+      "source": "lean/src/ARD2SemanticWellFounded.lean",
+      "imports": [
+        "ARD2Domain"
+      ],
+      "sha256": "6d717679dd23299b9ff2d508f5e29ed7ce44d94ad2701b2b1ed56ad39d39a06c",
+      "origin": "local",
+      "original_sha256_lf": "6d717679dd23299b9ff2d508f5e29ed7ce44d94ad2701b2b1ed56ad39d39a06c",
+      "distribution": "bundled local proof source"
+    },
+    "ARD2Splice": {
+      "source": "lean/src/ARD2Splice.lean",
+      "imports": [
+        "ARD2Core"
+      ],
+      "sha256": "64274bf8d2c2fbee0cd8166d185c6c9d2754be088c2214ecc675a3a495ce6f47",
+      "origin": "local",
+      "original_sha256_lf": "64274bf8d2c2fbee0cd8166d185c6c9d2754be088c2214ecc675a3a495ce6f47",
+      "distribution": "bundled local proof source"
+    },
+    "ARD2StageDemands": {
+      "source": "lean/src/ARD2StageDemands.lean",
+      "imports": [
+        "ARD2Structure",
+        "ARD2Splice"
+      ],
+      "sha256": "353f2a83a845f9de42f64ee88899609e11f71f999f2435a094ab39ad55f39020",
+      "origin": "local",
+      "original_sha256_lf": "353f2a83a845f9de42f64ee88899609e11f71f999f2435a094ab39ad55f39020",
+      "distribution": "bundled local proof source"
+    },
+    "ARD2StageProof": {
+      "source": "lean/src/ARD2StageProof.lean",
+      "imports": [
+        "ARD2StageDemands"
+      ],
+      "sha256": "c74a36dea43fa6a4f73354a179458c27b9104543727c9900c67265b4984f5ca9",
+      "origin": "local",
+      "original_sha256_lf": "c74a36dea43fa6a4f73354a179458c27b9104543727c9900c67265b4984f5ca9",
+      "distribution": "bundled local proof source"
+    },
+    "ARD2Structure": {
+      "source": "lean/src/ARD2Structure.lean",
+      "imports": [
+        "ARD2Core",
+        "OrdinalFormal.ExpansionValidity"
+      ],
+      "sha256": "951ddfe5a55b684da48e5e8722b0535b68260f7fdbe666e324cede9016101daa",
+      "origin": "local",
+      "original_sha256_lf": "951ddfe5a55b684da48e5e8722b0535b68260f7fdbe666e324cede9016101daa",
+      "distribution": "bundled local proof source"
+    },
+    "ARD2Templates": {
+      "source": "lean/src/ARD2Templates.lean",
+      "imports": [
+        "ARD2DemandReflection",
+        "Mathlib.Data.Countable.Basic"
+      ],
+      "sha256": "891fcf15c6d2fa646ac4c9c9f365d9830a3366fa4ea1484792ecc159e2cb4bc8",
+      "origin": "local",
+      "original_sha256_lf": "891fcf15c6d2fa646ac4c9c9f365d9830a3366fa4ea1484792ecc159e2cb4bc8",
+      "distribution": "bundled local proof source"
+    },
+    "ARD2Witnesses": {
+      "source": "lean/src/ARD2Witnesses.lean",
+      "imports": [
+        "ARD2Templates",
+        "Mathlib.Data.List.Shortlex"
+      ],
+      "sha256": "2f5ad6a10f589661c1f2887b0076da857ba94412a5d36f6dec58173bf5f78825",
+      "origin": "local",
+      "original_sha256_lf": "2f5ad6a10f589661c1f2887b0076da857ba94412a5d36f6dec58173bf5f78825",
+      "distribution": "bundled local proof source"
+    },
+    "SevenNotationFinalAudit": {
+      "source": "lean/src/SevenNotationFinalAudit.lean",
+      "imports": [
+        "SixNotationFinalAudit",
+        "ARD2Final",
+        "ARD2Compression"
+      ],
+      "sha256": "3b59cd17dd6ef83d2f2053f663c2e5c9b8da7de6b6f2912b09223005f7ddc4d7",
+      "origin": "local",
+      "original_sha256_lf": "3b59cd17dd6ef83d2f2053f663c2e5c9b8da7de6b6f2912b09223005f7ddc4d7",
       "distribution": "release-only joint final audit; no new mathematical assumptions"
     }
   },

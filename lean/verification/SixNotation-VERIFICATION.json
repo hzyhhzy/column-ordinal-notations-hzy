@@ -1,1229 +1,1230 @@
 {
   "compiler": "Lean (version 4.33.1, x86_64-w64-windows-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "compiler_version_output": "Lean (version 4.33.1, x86_64-w64-windows-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)\n",
   "modules": {
     "OrdinalFormal.ReflectionTransport": {
       "fingerprint": "3e96359c9ca589f572a38c2804f3d281aa8ecc6773d28bcc2bfb80fdffad2843",
       "olean_sha256": "ba8046511bb0bdc39cf87521a6dbf22b41487ed0a153e146574b84eb30ab15f3",
       "axiom_reports": 10,
-      "seconds": 3.628
+      "seconds": 3.798
     },
     "FiniteDemandCore": {
       "fingerprint": "329df1ce3ea87f0992ed9444c1c8bac023e97c8525bac903dafe71bd9b49e1d7",
       "olean_sha256": "b9f54da9b8d79a761757f980b39af97f733b42a54172916a3c13bdbcad9b0f5b",
       "axiom_reports": 3,
-      "seconds": 8.398
+      "seconds": 9.373
     },
     "FiniteDemandRecursion": {
       "fingerprint": "93f4625fec20e0f4e8aabeab5c32b419d341d08164737947785f891c01197bde",
       "olean_sha256": "89165e3eafbd58d070ffd744eea8bf68af0cab4c8664aa50f9a86e66885df97f",
       "axiom_reports": 2,
-      "seconds": 8.178
+      "seconds": 8.481
     },
     "FiniteDemandReflection": {
       "fingerprint": "f7bf418f256440ee6114f68bc2dcce4f86847dd611cac0902b867dc4da002e40",
       "olean_sha256": "d39c25e8691f15c3402bb421c8372d57347ab5845517b14e2434537f90c5b8a0",
       "axiom_reports": 4,
-      "seconds": 8.27
+      "seconds": 8.649
     },
     "FiniteDemandWitnesses": {
       "fingerprint": "1932125ba49bd44dc8ece1a40ceed976fb38d1037e55bf6677d1b2bc69f12489",
       "olean_sha256": "bf80b19a8feda92b755355285c4d782ddecd39617c0d45a2447211b53556fd36",
       "axiom_reports": 5,
-      "seconds": 8.94
+      "seconds": 9.487
     },
     "FiniteDemandEndpointAgreement": {
       "fingerprint": "39252c1bb2852d9f28c3fa8f58ef4901fe5fb1704589240dcf574addf51e5bc1",
       "olean_sha256": "f894896683964b1017124c510620cb939c6d3ad41b9348d9e34c18e869280b1f",
       "axiom_reports": 3,
-      "seconds": 8.634
+      "seconds": 9.028
     },
     "FiniteDemandFinitaryClosure": {
       "fingerprint": "296e97ab149f1e21c8b211e157227669a386a19bebd24164c98d6e3395e0ab2e",
       "olean_sha256": "6ed1892fd1d939628989cfc828228244dbfcabae77a782a656937fb212e868e1",
       "axiom_reports": 3,
-      "seconds": 7.328
+      "seconds": 7.807
     },
     "FiniteDemandOrdinalHeight": {
       "fingerprint": "04e04c9a6115e94284b62ca6fba5c482a82ee21a7644f6aa000535d99369d9d3",
       "olean_sha256": "250fd388497ce57be6a01772c9ce5ea512ec6e4dd979c6242a19cfefa7c8b33d",
       "axiom_reports": 2,
-      "seconds": 7.853
+      "seconds": 8.257
     },
     "FiniteDemandClosedSupply": {
       "fingerprint": "e9b0505316b35b920c3c474ed788f43a66af3a6fc24adb5e66da8c53473b9bd8",
       "olean_sha256": "443dad464d4c49f21b48f5e39c36a422afd7b444b4b2bc165918a32d12811932",
       "axiom_reports": 4,
-      "seconds": 8.85
+      "seconds": 9.359
     },
     "OrdinalFormal.Columns": {
       "fingerprint": "51d36452e4a65141cf1c9cd8239b5551744e34233e4b31307d8f7bddff4855b8",
       "olean_sha256": "56fa959e79054fe81bacc145220e11c0101d646f1e9d9ce901bc2b88b485e7ac",
       "axiom_reports": 0,
-      "seconds": 2.648
+      "seconds": 2.536
     },
     "OrdinalFormal.ColumnRepresentation": {
       "fingerprint": "7a0172692da4522083c13e0a42d9f4108854e8dbe25e69ce0d8d2d60caf84977",
       "olean_sha256": "7361e6d0e8a4801bd3f8169c7ccdf004b5ef2c7f89f2d360544f5cd59e8a9ef3",
       "axiom_reports": 5,
-      "seconds": 2.789
+      "seconds": 2.666
     },
     "FiniteDemandInitialRepresentation": {
       "fingerprint": "f5c6e52390e362468b1af583281dba3da018b6e198bec2e4d260f176f1f560fe",
       "olean_sha256": "b4438d4abcb9eecc2e2c281a55cf3e4347cf91f3321f0438c45adb73d06f9996",
       "axiom_reports": 3,
-      "seconds": 8.681
+      "seconds": 8.868
     },
     "FiniteDemandHostAmbient": {
       "fingerprint": "586d08221a594a4e5c4f2104423661fe77e3f523e903e44b73ea3e5bf499a394",
       "olean_sha256": "2a80b4844f12a58dfd3727d0b6d219f31090676fd816dc7e46fedac227762852",
       "axiom_reports": 3,
-      "seconds": 8.873
+      "seconds": 9.593
     },
     "OneY.RootIndexed.Representation": {
       "fingerprint": "ecba9ef1df2d1e36c8b999afc8e97e6e562eaa427ce3990c0e8b177856dfd071",
       "olean_sha256": "6bcb294f9f7ab6cbe62362083d3222a083d00b06c9fabbb3d78cdffc0a63e84f",
       "axiom_reports": 5,
-      "seconds": 3.039
+      "seconds": 3.238
     },
     "NatSemanticTransport": {
       "fingerprint": "e0618f1d6c7f8a9968c2db507a187f170722bc574c4a9e1d648a1738232d2e08",
       "olean_sha256": "74448c858d4a35279959697edf1219058fd74c30a09cda5914b276c56b628cc8",
       "axiom_reports": 5,
-      "seconds": 2.58
+      "seconds": 2.533
     },
     "OneY.Forest": {
       "fingerprint": "7c50a73e8eb261227204d945234df2c0da484c53053d85d7458c9141cd9108ff",
       "olean_sha256": "6b9cc6c73949755f6b6a8b7b6cd52207cbbdd8880dde8356624ccb453f796639",
       "axiom_reports": 5,
-      "seconds": 2.541
+      "seconds": 2.417
     },
     "ZeroY.Syntax": {
       "fingerprint": "d0cc6387bcfe4ddb6b6415f79eac494427fc659b5ec62d052beac8cd4c98fee0",
       "olean_sha256": "ab137bf3de83392bcf514add31dbfc67e2483319826e30928b0cf2bb6c58a04f",
       "axiom_reports": 0,
-      "seconds": 4.998
+      "seconds": 17.801
     },
     "YesMetaZFC.BMS.Reference": {
       "fingerprint": "645e86b3a51814984a8543960838b5529df87106eaad9682b6d71bcaf2b9b6ea",
       "olean_sha256": "94ccce28a7bb6e0d0ce923b3e58c5cd760c9d9bfa9d108453e506863b4b6baa4",
       "axiom_reports": 0,
-      "seconds": 2.652
+      "seconds": 2.543
     },
     "ZeroY.Mountain": {
       "fingerprint": "740ac64776d272997d1243bd54425427a25cb424f13cd7c5ec357268f0389b94",
       "olean_sha256": "3101c126f27d0f825346cf26cfa8ee75a7d1a4311e9b94dcc89d6b0440c68362",
       "axiom_reports": 0,
-      "seconds": 4.798
+      "seconds": 4.914
     },
     "YesMetaZFC.BMS.Array": {
       "fingerprint": "c63305b98d34fdc27d30922fb0ba9ea0f6e0f015ffa286e6a8f2c80b7a5688cf",
       "olean_sha256": "eab2a9bbf66e95cdaca0776a095b8fdf0fce853aedf2cf8dab8d833cdfb31112",
       "axiom_reports": 0,
-      "seconds": 2.318
+      "seconds": 2.369
     },
     "YesMetaZFC.BMS.Parent": {
       "fingerprint": "c444b953d6b9f9d5dd1fb1719e2e6c68b91009f1f97816d51c735c060230ccc2",
       "olean_sha256": "cb5ce097d8df46f9c8d508f1f4da4a3e4e5ece14ce69bbabbe904a147c67edc1",
       "axiom_reports": 0,
-      "seconds": 2.605
+      "seconds": 2.611
     },
     "ZeroY.Mountain.Termination": {
       "fingerprint": "bfe7f798845c74d9d3aaba8512030ed65b80a7a164b1f893f64d664d55b5e5b4",
       "olean_sha256": "e575a946b45c37edca3192b5d0a1d1fa9629585e09302b98d7ae16f26c4cef9f",
       "axiom_reports": 0,
-      "seconds": 4.761
+      "seconds": 4.929
     },
     "YesMetaZFC.BMS.Ancestor": {
       "fingerprint": "8b372e4cc20a040c60f703e3ca5e555ad71df4cf1c72b6e2e19b2c0bed50b4a5",
       "olean_sha256": "b153f4d83ddf050f8f050a0ee2a26c3f0de92fb9adcac81da2d6327c5510bf52",
       "axiom_reports": 0,
-      "seconds": 2.66
+      "seconds": 2.675
     },
     "ZeroY.Forest.Stack": {
       "fingerprint": "c2607880c1cabc0735c4720dc226bbbe7f2a67d211cb7795691e28c54a616a46",
       "olean_sha256": "63cbe05467201bc0aa924598b322a82484bcfac65cdfd0b42636a3bd2d631329",
       "axiom_reports": 0,
-      "seconds": 4.824
+      "seconds": 4.909
     },
     "OneY.ForestBridge": {
       "fingerprint": "3d93545e812ac2dc4acbc883a65dbce591ac5924d66d94f5945674c8f30f7ff7",
       "olean_sha256": "8e9153c472b7c3b3990328cb660c66342d89d296ff4762489d5113a7547c71be",
       "axiom_reports": 3,
-      "seconds": 4.682
+      "seconds": 4.545
     },
     "ZeroY.Forest.Blocker": {
       "fingerprint": "329ddac2b515c5abf3fdf2022dd7a4057e28218b393ac542e483db86c3f969b2",
       "olean_sha256": "99a6e218856628fb7bda867a6b0962bd120e10109328651bf7c989bc0b5139da",
       "axiom_reports": 0,
-      "seconds": 4.714
+      "seconds": 4.621
     },
     "ZeroY.Forest.Comparison": {
       "fingerprint": "bb3ecd35225298743f1a95b904162c179404c04de0e6efed03860edd65d73ce3",
       "olean_sha256": "829fbae473393e75bf93537ce637608bda0a622accae22541b3a8666d5ff1950",
       "axiom_reports": 0,
-      "seconds": 4.856
+      "seconds": 4.646
     },
     "ZeroY.Decode": {
       "fingerprint": "625effab8164f65eed7aed36383d0b444b49d1f0f187130bdae41141b752f344",
       "olean_sha256": "f42b87eca5fec118863928240b5b16f54d80d9f5d1c6e5ae7407d8d925c1922c",
       "axiom_reports": 0,
-      "seconds": 4.979
+      "seconds": 4.626
     },
     "ZeroY.Mountain.SumInverse": {
       "fingerprint": "f363737b13effe82c084adf5b5b6bfebcdb6c5329feb5a14a6093edccb06ea52",
       "olean_sha256": "221aa8869ad548c4f306ffd3b393725b03ee37129378692d4e056e4afe9a100a",
       "axiom_reports": 0,
-      "seconds": 4.689
+      "seconds": 4.641
     },
     "ZeroY.Mountain.Roots": {
       "fingerprint": "94a5644731092db1636b8fb1eb8d40f740043f720c4d462ee48d6f65ea7dc44d",
       "olean_sha256": "3345eadd2309ff55138dd8186122675239f03d6fa8f35ba81ba173b8f1716155",
       "axiom_reports": 0,
-      "seconds": 4.689
+      "seconds": 4.554
     },
     "ZeroY.MatrixOrder": {
       "fingerprint": "09bd0c67dfe98ecb8d02b1ad83e1bcfa8aad85ef17726d5a76da2046ed9ad2d3",
       "olean_sha256": "fb38620752f8422ccc68c7b42e0c7cbf8298bc7d436d844580bad406b277abe0",
       "axiom_reports": 0,
-      "seconds": 4.547
+      "seconds": 4.489
     },
     "ZeroY.PaddedOrder": {
       "fingerprint": "8fb593919d248a318249d1a43b249699d9f3c4e9034ad87797ae4a6f82dc6341",
       "olean_sha256": "eb65c02dff4e134bd2a6b5f179664bd98f1784f41bf037f8cad872d70429069a",
       "axiom_reports": 0,
-      "seconds": 4.53
+      "seconds": 4.442
     },
     "YesMetaZFC.BMS.Expansion": {
       "fingerprint": "dd47e46ec235e3b677ed4d6b1c579801003ab24b6af5d0df7004b5d4ebc519c1",
       "olean_sha256": "7e5c4d5876c1ed402b62b0e3830bbf9876a9871cafe360dde07d04c834a13964",
       "axiom_reports": 0,
-      "seconds": 2.667
+      "seconds": 2.5
     },
     "YesMetaZFC.BMS.Generation": {
       "fingerprint": "2893097fd1be336b53a6ee1168376525b872fcd9747411067968d8652f977acc",
       "olean_sha256": "d4a346b442fe092563f6d90174fb5413bbcd9564b8f6d37b2ef1f9ef5e757b82",
       "axiom_reports": 0,
-      "seconds": 2.373
+      "seconds": 2.133
     },
     "YesMetaZFC.BMS.Decomposition": {
       "fingerprint": "117c76a8b8881f7ffd2a9062a9dd12748a0b225b5140610f4d1c47610e04101e",
       "olean_sha256": "70061e21ee0762283cb6ec24c04f5ddac83c43ad99c74afa4d14c8f6f2c7ded3",
       "axiom_reports": 0,
-      "seconds": 4.334
+      "seconds": 4.224
     },
     "YesMetaZFC.BMS.Lemma25": {
       "fingerprint": "3cacd76aac2355bc6972cba37cd8672b63ec80977f7873cffc7c0a993701fdc4",
       "olean_sha256": "a0877d994f546a72f308bdc29b3d01d76c49a89d9316fda36ecac5b334b8c999",
       "axiom_reports": 0,
-      "seconds": 4.623
+      "seconds": 4.479
     },
     "YesMetaZFC.BMS.Stability": {
       "fingerprint": "d94d46a1d85aee9bd8fe3e721baa16b68ca51c17b4631f678c96976fa06c8c5c",
       "olean_sha256": "c908cecfde2ec567584a9f1360f18ba7684f8f1710f3c407dd591cbccef3d493",
       "axiom_reports": 0,
-      "seconds": 2.331
+      "seconds": 2.258
     },
     "YesMetaZFC.BMS.FiniteReflection": {
       "fingerprint": "fff0f0bcfa586100b71f32146b97c198b09f25f6c384a3d71bc5608d0d24b3b0",
       "olean_sha256": "27e7aaf394864f73dee734b2993501448e9fff8ed5aec2f8d254ae3467d32752",
       "axiom_reports": 0,
-      "seconds": 2.34
+      "seconds": 2.291
     },
     "YesMetaZFC.BMS.ExpansionOrder": {
       "fingerprint": "0cf1ea313aac4522752d255a7326e778bb7a2f52b39c12eaf42a2111f20619e6",
       "olean_sha256": "223e2576ab09a56f8e92826ca42214cccb69a3ce00ea370bfe51367d43959b25",
       "axiom_reports": 0,
-      "seconds": 3.329
+      "seconds": 3.202
     },
     "YesMetaZFC.BMS.WellFoundedness": {
       "fingerprint": "bc27b6553e5f779d845f23399eba2ce13a84fce489581ec69979c389bd00b2c6",
       "olean_sha256": "f5defc2ff574679c04e6d73b2d20b23e47e6b3d0ff1c18fca8527cf08a854d5d",
       "axiom_reports": 0,
-      "seconds": 2.304
+      "seconds": 2.183
     },
     "ZeroY.BMS.AnyArray": {
       "fingerprint": "ea3204d634aa379f5766ad878eaec6bdd050342b43687623580e50d7ab486608",
       "olean_sha256": "ab3a2014b6b612dc5a3dadd5d78018dad622a504269aacc2a87428b31c63cb98",
       "axiom_reports": 0,
-      "seconds": 2.195
+      "seconds": 2.238
     },
     "ZeroY.Transport": {
       "fingerprint": "3f71c3d3a0d23be14dca71295e80124f8bb6d98897cd44f1b401fa9c3918c13f",
       "olean_sha256": "b408ec3e0ef260045422b4a3ca91f442506d149ec0573108d23980ab270c8092",
       "axiom_reports": 0,
-      "seconds": 4.528
+      "seconds": 4.542
     },
     "ZeroY.BMS.PaddedDescent": {
       "fingerprint": "f5b25be0e316e8d881e0da5cab0a7cadc5c5613c624b2a884372f0a5902dea4d",
       "olean_sha256": "52f6926051fa234c73bc16f6064fa8c912874a0b81835245e59e73889e33717c",
       "axiom_reports": 0,
-      "seconds": 4.931
+      "seconds": 4.725
     },
     "ZeroY.Forest.MatrixParents": {
       "fingerprint": "402cc8170a9a5a311cdd8ab33727b2f5983097c0cc45916c55a1ae02beb43a1b",
       "olean_sha256": "e914ae4150f301d41593d653a6d8668ae486c92255c14496dcd52dd9eb698111",
       "axiom_reports": 0,
-      "seconds": 4.572
+      "seconds": 4.586
     },
     "OneY.ForestFrame": {
       "fingerprint": "524d744a89cd99103b626a3859a076f76c58e074d3927bf9bac8566123f10e25",
       "olean_sha256": "481e62cf78a172b6cdddac69db6da15866f9e4560be0e7026c0efa7834a17f59",
       "axiom_reports": 2,
-      "seconds": 4.954
+      "seconds": 4.699
     },
     "ZeroY.Encode": {
       "fingerprint": "535e0261d9028f278a879076c90575ed05545178e7bb7d0854559cadd7be5e74",
       "olean_sha256": "ae101b7a77b8a8e1a311563929ab85818a458cdf9bc2e2e525ff9d3c7c0960d4",
       "axiom_reports": 0,
-      "seconds": 4.465
+      "seconds": 4.477
     },
     "ZeroY.Mountain.Encoding": {
       "fingerprint": "c701b64f008cc5d47622e9209a0b015890a0599a8f99a383e2b6b020120f3aad",
       "olean_sha256": "79e3c0be60a888ca1dea50e4ebf2aef60c373194b4a5ee7fcafd4640fd01a062",
       "axiom_reports": 0,
-      "seconds": 4.618
+      "seconds": 4.602
     },
     "ZeroY.RoundTrip": {
       "fingerprint": "19993c6b1e875c83a34a3bd33dcd599bf68ada971f0c9f3721f4ae38663c8de7",
       "olean_sha256": "f0704a76aee26a0cae24884b6c82080a940ee1f053c588f5c06ad7ed418a48fc",
       "axiom_reports": 0,
-      "seconds": 4.78
+      "seconds": 4.777
     },
     "ZeroY.Image": {
       "fingerprint": "f0c38978a7e4deb376d336a1c30ddbba14cba8e80f431ed53dcfc24ecee7198b",
       "olean_sha256": "c04401cdd3fe2751b8fcd70811b4fa5bbfcd404df988fb300e39eebf5a291cc4",
       "axiom_reports": 0,
-      "seconds": 4.707
+      "seconds": 4.609
     },
     "ZeroY.SequenceOrder": {
       "fingerprint": "253ed259b49aa74969237708ea19b401a45c0900bccf29a3a580eb2b29b6936f",
       "olean_sha256": "84b40dff92259b3ed79fe97c6266827d6b0a6c8b80c0b7f34dc07107d52b98a2",
       "axiom_reports": 0,
-      "seconds": 4.691
+      "seconds": 4.857
     },
     "ZeroY.OrderEmbedding": {
       "fingerprint": "0631230a42a4aa013dc44f16788d47138d94bc73d7d99d1194a89f1b46fa6d82",
       "olean_sha256": "a3513c5fa51e2ab66fb6ce67b694f6f33159a31e69cf32364cc88dfd603e4cb3",
       "axiom_reports": 0,
-      "seconds": 5.024
+      "seconds": 4.908
     },
     "ZeroY.Reversible": {
       "fingerprint": "e3799b823c87adee3bbcc885ce7450a42440fe0d6b42307f1b53602aa0350e20",
       "olean_sha256": "12ee50cc5171cb202f29f6d086aac5c1a80affbd39c420906c74577ba4959456",
       "axiom_reports": 0,
-      "seconds": 5.046
+      "seconds": 4.563
     },
     "ZeroY.Structural.Prefix": {
       "fingerprint": "966c2fe41c2f25d56dcb34d0daffd15680d901856e66547841dafc12005e86f3",
       "olean_sha256": "bf7a121e2e611c171073ad607e5becafa8ab2d2f486de25316d7b945277c188d",
       "axiom_reports": 0,
-      "seconds": 5.343
+      "seconds": 4.777
     },
     "ZeroY.Mountain.CommonChain": {
       "fingerprint": "4f4615570a8b8eca2958c8bc8d08507531a8d0bb6c6e940ea38ef358db1dfbac",
       "olean_sha256": "e12113ea0f0ee7954149a844f9cfe2387fecea0c2af7d859dfb5d4dc0536ddad",
       "axiom_reports": 0,
-      "seconds": 5.692
+      "seconds": 4.668
     },
     "ZeroY.Structural.DecodeTower": {
       "fingerprint": "b46cd8228fbe2e54519cfdb37edf5c0b7352f841313a9494e5b7e47fc4cf4d01",
       "olean_sha256": "e78ee396c781e383cb54b9ac9eaf2a756900c12786d5f51f1540aea7a65d9f98",
       "axiom_reports": 0,
-      "seconds": 6.176
+      "seconds": 4.778
     },
     "ZeroY.PaddedExt": {
       "fingerprint": "2d503b867069b0dd230f0acfa18e3fc78495a793f0ae39f07ed507f9b14fb7fb",
       "olean_sha256": "26ef025648bba1bf90ecd8942d3f7d8e149716512a2e22cc6405317f1b8fe012",
       "axiom_reports": 0,
-      "seconds": 5.245
+      "seconds": 4.64
     },
     "ZeroY.Structural.Recognition": {
       "fingerprint": "f014352fc0a37e7df73909ec3a5f0902d8d8577065498d8500ad906c5e9344e1",
       "olean_sha256": "8c58797ec012b5da8c70b8680056a2a3623faecd7af8be0a3c43228c9ee51d47",
       "axiom_reports": 0,
-      "seconds": 5.891
+      "seconds": 4.933
     },
     "ZeroY.Structural.RawRecognition": {
       "fingerprint": "634eef153a7ad10aea41ffcfe6bdfc001cf8c0f674c7b247cf3d482c3901a746",
       "olean_sha256": "9b7582ce17e06da29768f28698c8c3fd609f76e7c6e7ba3c89ccab799082ff29",
       "axiom_reports": 0,
-      "seconds": 5.106
+      "seconds": 4.46
     },
     "OneY.ForestFrameMatrix": {
       "fingerprint": "6fff8178f6d2682b10c09bb16428a2e7b8f13687bfe8b77fe4408f809ddc191d",
       "olean_sha256": "26eb81bd15d55f0b5daefe15defc41f96ff41b47d132641c5f2ed524de658b46",
       "axiom_reports": 3,
-      "seconds": 5.348
+      "seconds": 4.858
     },
     "OneY.DepthMatrix": {
       "fingerprint": "50b5749d73684aedd85fe74689c1126eb4b9f8571767929d825f95f82acacc42",
       "olean_sha256": "599b74e5d358a0d990efadbccfd4b6fd90675e60f77f7814a213acccdd210126",
       "axiom_reports": 2,
-      "seconds": 5.015
+      "seconds": 4.797
     },
     "OneY.Numeric": {
       "fingerprint": "dfb933674df5c497b427f8d95fb7708870d6d0cde1e79c44b5e86a012448788e",
       "olean_sha256": "92f764f8015f9b791b676bfc68302ef5eef9c5554431df32fdb825be667e3698",
       "axiom_reports": 4,
-      "seconds": 5.469
+      "seconds": 4.81
     },
     "OneY.SparseComparison": {
       "fingerprint": "f816a4872c012788ac3b8891a6aa834c200d8749b9eb05867ae93706bfacc07e",
       "olean_sha256": "4039a3ee611713bdbe0bf2c79ca3a440cdda660552a5d0c0ae04b36fa2749d14",
       "axiom_reports": 4,
-      "seconds": 5.61
+      "seconds": 4.72
     },
     "OneY.SparseBlocker": {
       "fingerprint": "f62ee012b0c96255f28cda99283b712ff018c181a9dcd03941c5083e3d506a9b",
       "olean_sha256": "47c8ac8cdb956b94fca4e4cf895bb22648f9ea656fc162a3ccec8df8c52f077c",
       "axiom_reports": 2,
-      "seconds": 5.588
+      "seconds": 4.899
     },
     "OneY.Geometry": {
       "fingerprint": "d7a6a705fce5654e1a52761b4607e8f51907829ffa39a8ca2322789c29080afa",
       "olean_sha256": "8ced4f5722bc8945c0ae0d8a8cbdd106d383246ae9fb76c59ad1cb4e4c5cd3d3",
       "axiom_reports": 3,
-      "seconds": 2.691
+      "seconds": 2.57
     },
     "OneY.RootGeometry": {
       "fingerprint": "f82981aed859c3bc2660765aab063774ffcc54f670ac47068fd7d607701efa48",
       "olean_sha256": "97b5621e326b14b2991761f8954fd6e9a87c8f93978e0a01487ee2ce41f6b9b0",
       "axiom_reports": 6,
-      "seconds": 2.584
+      "seconds": 2.485
     },
     "OneY.NumericGeometry": {
       "fingerprint": "d7f87fafb00abc51f3a20ed107e02ee5850f6f5514040a230d0d389d8a2644c6",
       "olean_sha256": "6f168d0f950c73f91b80e1ae4ef696774e3495493a64149f9e04422171ad8a09",
       "axiom_reports": 3,
-      "seconds": 5.248
+      "seconds": 4.787
     },
     "OneY.NumericRoots": {
       "fingerprint": "b51d88cae1721a33f3ca08132c937110e4a43a43f1d5f83c7d3d43576ac2e5c9",
       "olean_sha256": "8c610c5d253d9ec655e41f40805bd477a1c2d8beaf3b0380ac68d598b504b1cf",
       "axiom_reports": 2,
-      "seconds": 5.224
+      "seconds": 4.697
     },
     "OneY.SparseDepth": {
       "fingerprint": "e6b14ce2ad816567011250d3806e020c1bb17b60478407ea83ed7aa87f442949",
       "olean_sha256": "2e40ecd1e8b79cf007eb1d169f20f60a6733abf93bd5140b36be5704d11f123e",
       "axiom_reports": 2,
-      "seconds": 5.155
+      "seconds": 4.607
     },
     "OneY.TopComparison": {
       "fingerprint": "298b79409b0554cd144243fef3963e01ca53a4ad890e55a3af9383100fea32f2",
       "olean_sha256": "a55d31de9984401271b337f961668c5bf4ef525cb8d5116df879dc2c2816aa08",
       "axiom_reports": 8,
-      "seconds": 5.752
+      "seconds": 4.898
     },
     "OneY.NumericFrame": {
       "fingerprint": "347d1ac63066e9f5a9d3993f40cb82ed524e5cf70b400d6cae1c8cfc5e0919b1",
       "olean_sha256": "6c7c42d69a7222bf55a70a276be5b179641011ac85f3f0c01bd157f630adf8bf",
       "axiom_reports": 3,
-      "seconds": 5.453
+      "seconds": 4.858
     },
     "ZeroY.Structural.ExpansionParents": {
       "fingerprint": "71eb8d272ba0fe7fa707f7318679ff9f2f8fa67b853a38abd22751bc812b284f",
       "olean_sha256": "5f00f017d47a5a376d6863c104a169c1cb23b0a94a284bb7d787b22cb3933f1a",
       "axiom_reports": 0,
-      "seconds": 6.859
+      "seconds": 5.356
     },
     "ZeroY.Structural.ExpansionCoordinates": {
       "fingerprint": "bd588ecc551475a97701cb403599e684b8a6b09426ddb331e87b9d6a9ab4d6bb",
       "olean_sha256": "aad78999f8e48670cf22f5d9a39e97da4c2c0ae7f643436157b3ec20e3b2e6e3",
       "axiom_reports": 0,
-      "seconds": 5.313
+      "seconds": 4.881
     },
     "ZeroY.Structural.DepthExpansion": {
       "fingerprint": "44053bcd11055d9080504ff54bc39af4495c4ae96ac63b6efe9ef60f6d05fefb",
       "olean_sha256": "512be4dd90f9b06e1a720feef7c6894bd48eb079837f09344e70b99e70e2f150",
       "axiom_reports": 0,
-      "seconds": 5.639
+      "seconds": 4.996
     },
     "ZeroY.Structural.BlockerExpansion": {
       "fingerprint": "609e6382f09eb98c7b5477d2cfd6a03442df71b5e30fa6edc170633e04833a69",
       "olean_sha256": "a547077cfa7066dde6ce9e9025c5547aae12b7ffb297756a2557daeaaa460e99",
       "axiom_reports": 0,
-      "seconds": 6.079
+      "seconds": 5.062
     },
     "ZeroY.Forest.AncestorMonotone": {
       "fingerprint": "bdee2f2bfa32c81247c033acd2aa5a67cafe96184ea574ca2ec4ea45580e72a2",
       "olean_sha256": "6ca204a56295c9dc852ce28508242587cccee734d2759e9677942352087f3b34",
       "axiom_reports": 0,
-      "seconds": 5.757
+      "seconds": 4.924
     },
     "ZeroY.Structural.CopyOrder": {
       "fingerprint": "53f0f2d65af7055a18b2c2910d128da69543f0ddb4249928552d8ed627e55dff",
       "olean_sha256": "9c3409d6099a3ae7e5656d11bfbd9f968ffe9b654a15748fe4a78848d677674a",
       "axiom_reports": 0,
-      "seconds": 5.813
+      "seconds": 4.983
     },
     "ZeroY.Structural.Expansion": {
       "fingerprint": "260d29bf75e0578ce1bc4b3903352d1ea7be926bf11d33ea1196e0c9c12a94b3",
       "olean_sha256": "d82c6a8af03e6cb743ceb32a0ef6c12437f06ceab6071eecced1baa38111293d",
       "axiom_reports": 0,
-      "seconds": 6.022
+      "seconds": 5.347
     },
     "ZeroY.Expansion": {
       "fingerprint": "71154af13329801d6dc240ddb93cd955f23d1a139082e8c1d556ad61ef65fe17",
       "olean_sha256": "a6032281c7e74cec435b4bb2fbf50911a6d371fe940b3d15b67a43152353bcc3",
       "axiom_reports": 0,
-      "seconds": 5.583
+      "seconds": 4.811
     },
     "ZeroY.Structural.ExpansionParentAlignment": {
       "fingerprint": "f8ca10fe1ca4424354d00b86a09445002cab42b1f8113985bfa3feeeb02f173a",
       "olean_sha256": "43f8475decf8ecb9cfff019eb4213946829ad0f21dd0ca6ba2e61402ae822d61",
       "axiom_reports": 0,
-      "seconds": 5.202
+      "seconds": 4.792
     },
     "OneY.RelativeBlocker": {
       "fingerprint": "089dc43d6bb5576599f9b24894227e410d7937e8719b97e17680676d60de6cfe",
       "olean_sha256": "48d2a42152d927a6f73fd047d040696b98f5439aa68a5bf40b12f0b4db518599",
       "axiom_reports": 6,
-      "seconds": 6.334
+      "seconds": 5.669
     },
     "OneY.NumericFrameBlocker": {
       "fingerprint": "18747fe5faadb309ccfb346ed2d2ce51ec1eec043cfc13db8a8afddfc5dfcaf7",
       "olean_sha256": "f9ec3db35eea6917397cc5c149a6f02d2067a4ad95102fced631d700c42304a8",
       "axiom_reports": 2,
-      "seconds": 5.336
+      "seconds": 4.864
     },
     "OneY.Pseudo": {
       "fingerprint": "d4253fec88f906b5a19c0f361e1bdf809be08f1ff6ed82f93f956ec72c7d1e71",
       "olean_sha256": "5edfa17265fed9adc2a88aedad0cc72f0450abac6683cea879f2b27f21ecf337",
       "axiom_reports": 4,
-      "seconds": 4.919
+      "seconds": 5.119
     },
     "OneY.ExtractionGeometry": {
       "fingerprint": "e37198b3787d0cac9cab9bbd051fd9f33650ba7254959157a1d158695c21312e",
       "olean_sha256": "421095db4ad7f5f5acdb945be8b94f31a1e9f534aff99aaf8ee7ffaae5da81b5",
       "axiom_reports": 3,
-      "seconds": 4.824
+      "seconds": 4.64
     },
     "OneY.Extraction": {
       "fingerprint": "bae359c788696ea8783544706723f6c57098e2c3a2747c72906222860e4e0660",
       "olean_sha256": "85b44ce295f6b8f283a8b5b6024b3b7b8bd07af8bb09dbe3187b1709d980655b",
       "axiom_reports": 3,
-      "seconds": 4.811
+      "seconds": 4.702
     },
     "OneY.BadRoot": {
       "fingerprint": "001bd47ecb830bb34ddc30df4f49a1713c90ae176c6538c2c9c8587ea4bb7ace",
       "olean_sha256": "a81e8bd38e48dd394a00bac01beaab6e74c27091a0c4d1334157574d1b42ebab",
       "axiom_reports": 2,
-      "seconds": 5.221
+      "seconds": 4.714
     },
     "OneY.CopyCoordinates": {
       "fingerprint": "591935a877d26239257c01d2f0f8d23ee6ab2dcbcc1cd3a9e9095fac8c3e9cec",
       "olean_sha256": "9c44aad7708891ae3a85fa8d5cabc1296d68a1ed8426e41636a0b3ea5c43b01c",
       "axiom_reports": 3,
-      "seconds": 2.719
+      "seconds": 2.605
     },
     "OneY.TerminalCopy": {
       "fingerprint": "edd8165522d1b309f20b47998699519d9d4a7fec098474395c72c367f810265a",
       "olean_sha256": "24885c9fb0fe760806966207ccf0f59b61ff10eb3183b6c46e97e30edcc44d2d",
       "axiom_reports": 5,
-      "seconds": 2.844
+      "seconds": 2.6
     },
     "OneY.TerminalCopyNesting": {
       "fingerprint": "6ff3fd495a0b6353b729abc165b8d1cc844b0893944df277171cf16f9df5f28f",
       "olean_sha256": "92de054f5658fabe376246ba83870a575fc35d022e95a35fa15c1d9258f47af4",
       "axiom_reports": 3,
-      "seconds": 2.739
+      "seconds": 2.588
     },
     "OneY.TerminalCopyNumeric": {
       "fingerprint": "545b7278ffa9f086f9ea98a6c8fd8b2533d997ef7f7f2e839b1d5db70b15ecd0",
       "olean_sha256": "2a0e97243b411936da677aa315ea047ba8ab28a8cf4df2d00f040ee5f8ec4cf4",
       "axiom_reports": 3,
-      "seconds": 4.668
+      "seconds": 5.044
     },
     "ZeroY.Expansion.Context": {
       "fingerprint": "b7716fa04f4fb3712249e911249b0c7d3ffc421bbfbda837626f2eda25a36dec",
       "olean_sha256": "421187769e0f2fde48a325d2d51eea1783f1ef1be74ecf24dbb3373dd7a07786",
       "axiom_reports": 0,
-      "seconds": 4.859
+      "seconds": 4.786
     },
     "OneY.TerminalFrame": {
       "fingerprint": "65b91b90f058130bff344fd00d93f7b8639916552875f759694ae9e6f6c7c108",
       "olean_sha256": "298db9bec00c2a7124d1fa16588296c2eb593d110ad463ff690c8875f999c24b",
       "axiom_reports": 3,
-      "seconds": 4.956
+      "seconds": 4.778
     },
     "OneY.OrdinaryCopy": {
       "fingerprint": "c142b6bcc67365e875b49c5ee3c3ed803b60465d9a903b8994ddbdaf1ecec75a",
       "olean_sha256": "b4f8decb7b52bc06929bdf23872ae6ea054c782d097bfea9e61bfd0770625cda",
       "axiom_reports": 5,
-      "seconds": 2.7
+      "seconds": 2.729
     },
     "OneY.OrdinaryCopyRoots": {
       "fingerprint": "005fa372d9569b34bf7aeb942145cec5af54f3a59b9e296fb6b83b36c2a0e374",
       "olean_sha256": "e222f2812caa316126b16efb38b57f22e2ad97a27acb6c3cc6485890f0ab9324",
       "axiom_reports": 2,
-      "seconds": 2.412
+      "seconds": 2.265
     },
     "OneY.Reconstruction": {
       "fingerprint": "32dbf7b4bea26b7f382a37834aa1fe580bcec02463746816af302d9bfba32b04",
       "olean_sha256": "56507732b7f9a88d032f4d688696db0eef0b0d8a9a8b125a7d48edd64f1b407c",
       "axiom_reports": 5,
-      "seconds": 2.606
+      "seconds": 2.501
     },
     "OneY.ReconstructionNumeric": {
       "fingerprint": "8e4918e87bffc4c6416748993804508746347574e21c0823bc7fca232dc2bc86",
       "olean_sha256": "2f591d173191b39877accec4088791a2e1d088c567e03aae357a8cd1bcabd7ff",
       "axiom_reports": 4,
-      "seconds": 5.009
+      "seconds": 4.678
     },
     "OneY.OrdinaryCopyReconstruction": {
       "fingerprint": "6b001192f67cf2e57bafce45fb6d377a95a976b91c928f490195e34992f1a5cd",
       "olean_sha256": "1ca67ad8109e1d82e8ae2d18dcd9f071b0f2c3b31e8c30faf5a90b5eba54859f",
       "axiom_reports": 3,
-      "seconds": 5.229
+      "seconds": 4.451
     },
     "OneY.TerminalCopyReconstruction": {
       "fingerprint": "57770580a762f04aa486892b2abbc8b2b2e7a229b796a565fd1cdf04543c52a1",
       "olean_sha256": "b4ceda51aac3c0b8857d61c529e02ca372cbfec5e95d402432a510dfd5ae9c0a",
       "axiom_reports": 5,
-      "seconds": 4.798
+      "seconds": 4.702
     },
     "OneY.TerminalFrameParents": {
       "fingerprint": "2c16fac01b27abd1a9bf2c0b94593217813a5d5f7f5bfeff17759bd68a5a5da8",
       "olean_sha256": "ce04d9d480aefaf8153b5382ec0dc53e5557c619528ce76c623548d149e66bbd",
       "axiom_reports": 2,
-      "seconds": 5.431
+      "seconds": 4.821
     },
     "OneY.TerminalFrameDepths": {
       "fingerprint": "39980c058dcbc4405a784c6ab204c54d0ba13ccfd71514042b290c556066c38d",
       "olean_sha256": "ccc6305886fb499a9d478dedf6c728447009cb4e831e89ec9084e4a7aefa783e",
       "axiom_reports": 2,
-      "seconds": 4.535
+      "seconds": 4.569
     },
     "OneY.DecoratedColumn": {
       "fingerprint": "b7abe0aa814742cb82e03a46c6fd20513a98e4ffdec7cf2ef6659e01e677e327",
       "olean_sha256": "e990dbf31b02d05831fc65644ca4151ed13464625fd7622dd078679307175d6b",
       "axiom_reports": 1,
-      "seconds": 4.627
+      "seconds": 4.728
     },
     "OneY.LowerCopy": {
       "fingerprint": "ea7872327206c1a5379b92e3f4c04b3a6b60f9b654cee2b47bbff405b2876f44",
       "olean_sha256": "b6b168057b017531bd737a770af3ffed903218cb65dc5782e007db12eaf69b06",
       "axiom_reports": 5,
-      "seconds": 2.949
+      "seconds": 2.901
     },
     "OneY.LowerCopyNesting": {
       "fingerprint": "7a97da358f8803f4da258f19bc61e517488341dbb285bf629466b47deefa09ce",
       "olean_sha256": "dc1e81f152e4b9a9f43ec82d01873459910ecfa480ab428a86df372ada5e345b",
       "axiom_reports": 6,
-      "seconds": 3.055
+      "seconds": 2.981
     },
     "OneY.LowerCopyDominance": {
       "fingerprint": "863bb083868a736bd275105252018af75d5d1d4639db962177b067db55011cab",
       "olean_sha256": "a5bb5d14b22538d767d730d4290b1253d5b342fd87ed9b88dc6fb1cb198caf78",
       "axiom_reports": 11,
-      "seconds": 5.594
+      "seconds": 5.609
     },
     "OneY.LowerCopyDepths": {
       "fingerprint": "78192b83580f0c347b372479d97867e9fbba7e1e2274b589d5c4525f9b395748",
       "olean_sha256": "8fd52ccbb55620bf729074787b5c0114843b26c9592ae7cffd737fe58adbdd7f",
       "axiom_reports": 6,
-      "seconds": 5.312
+      "seconds": 5.755
     },
     "OneY.LowerCopyComparison": {
       "fingerprint": "0364c57defcd13f6fa95ba4c5621d13beed9ed88215e097547e02f2910f845ef",
       "olean_sha256": "c340cd235ee59434b5d4b1ba2ec44195079f32209c0e50bb70da3af05e7480e4",
       "axiom_reports": 11,
-      "seconds": 6.184
+      "seconds": 6.259
     },
     "OneY.TerminalCopyComparison": {
       "fingerprint": "ccec3350d1ed96bfb29f02adc306ed87d7e0f6e32144c9c1ef9ac99b39fc3b5d",
       "olean_sha256": "86be3ce4b85891ef3082864e70675b886a0c3373d491215408f8f9aef634311e",
       "axiom_reports": 2,
-      "seconds": 5.005
+      "seconds": 4.849
     },
     "OneY.ReconstructionComparison": {
       "fingerprint": "90ad1aab9b1ffe56302a7a8531c42c19f4c3e7128745f294d0dd5fd1593a47b6",
       "olean_sha256": "f26f25bed5b851a0c68f08075bdfe77e876699d3dea877c41bb2da3f4ffec2de",
       "axiom_reports": 3,
-      "seconds": 4.813
+      "seconds": 4.786
     },
     "OneY.DecoratedBlocker": {
       "fingerprint": "be42b9935ca43562b39b4bea7a097d41ddddd2621294bfad23787be3834b1dcc",
       "olean_sha256": "0ea963777cbc9625f3ecc9aae64d8a5f0f3bdb92bbfbea496abafdde6e199785",
       "axiom_reports": 3,
-      "seconds": 5.008
+      "seconds": 5.074
     },
     "OneY.DecoratedBlockerExpansion": {
       "fingerprint": "507ab0b0ef9fdb7155010650bd50cb3d8b2077d0090092cf0c2f149516cfa785",
       "olean_sha256": "171d4593044a94b68f29214feec494d68bc223b08571b214cb5f44b89390b5da",
       "axiom_reports": 2,
-      "seconds": 4.989
+      "seconds": 4.867
     },
     "OneY.NumericDecoratedFrame": {
       "fingerprint": "4640348d0cb9a6a79a9ab272bf1d8f8a72483a22c22cad03c8f2790887147e2b",
       "olean_sha256": "02a01cda61735abd24f4c12a64675e47ae499a080de42d9aa97778c1e45185a9",
       "axiom_reports": 2,
-      "seconds": 5.024
+      "seconds": 4.73
     },
     "OneY.OrdinaryCopySelection": {
       "fingerprint": "09da698b464acae8a06183482b0620b640f3cd22709c4d175d0670f3280a575a",
       "olean_sha256": "39e48de753c2d1339cecdae83d98d33d70ca407e26959eb97c8ab74c090e085b",
       "axiom_reports": 3,
-      "seconds": 4.659
+      "seconds": 4.805
     },
     "OneY.OrdinaryCopyForest": {
       "fingerprint": "f624ad0f5b1aa461646ed5dced606399c2bdf555486659cc284a979aad762f19",
       "olean_sha256": "d8cfe2d8a4906d911f940adf97942c616468926bd439fc3377d58432e1a947b2",
       "axiom_reports": 2,
-      "seconds": 4.626
+      "seconds": 4.753
     },
     "OneY.OrdinaryCopyNumeric": {
       "fingerprint": "b6664235a0e4e7bf91d29ca40412a7c7b099368e89c8c8b451bd3500782c4425",
       "olean_sha256": "250608f000ed0a189aefaaefebdb25e9ed31a1f0336fbd246febcd597f8c0f09",
       "axiom_reports": 3,
-      "seconds": 4.753
+      "seconds": 4.582
     },
     "OneY.OrdinaryCopyPseudo": {
       "fingerprint": "9ed6680fa7266102f5f9eddb76455a09fd9017693702f5421bf9d8c3642ee992",
       "olean_sha256": "003580d193aad2ad607bca502302ead613ab64b2f4a99b89115fa21e424d3905",
       "axiom_reports": 2,
-      "seconds": 4.58
+      "seconds": 4.607
     },
     "OneY.OrdinaryCopyExtraction": {
       "fingerprint": "02a2cdcf809fa790f0d095c1fa03566531686b9c598c64d24cb4d9edd2b3b1e1",
       "olean_sha256": "7a7ec2bf54cc6b3b389acb518ded00a3bc06a819690bb2c259605df47e99ae6c",
       "axiom_reports": 3,
-      "seconds": 4.659
+      "seconds": 4.756
     },
     "OneY.TerminalCopyCanonical": {
       "fingerprint": "8879c0718bb1aafb0f5edd6144715a656a8ffd8ae575897cfe9472aaabf9a40e",
       "olean_sha256": "aca676f6c7b93ce472061cd41fa571466775d62bdcf6954780797b63f5c25ac9",
       "axiom_reports": 3,
-      "seconds": 4.593
+      "seconds": 4.668
     },
     "OneY.TerminalDecoratedRecovery": {
       "fingerprint": "9e9a9c01dae27844f814058c59f9bd69eec41c51a9783aca56e7762d5385d4a6",
       "olean_sha256": "c874740d31baad815c6917483eea8638e4e83a284013ef8f5c0c75c5fd7ff8c9",
       "axiom_reports": 2,
-      "seconds": 4.816
+      "seconds": 4.886
     },
     "OneY.ReconstructionTop": {
       "fingerprint": "4d5bd389ecf4824f8226b4bac0256962a4099184dd338e72a35f9a51dc8b6f90",
       "olean_sha256": "dda290c60f6c0ed8cf3bc814dbac1dc68567e7eb9b86869c31e1dba21175290a",
       "axiom_reports": 3,
-      "seconds": 4.848
+      "seconds": 4.689
     },
     "OneY.TerminalCopyTopBound": {
       "fingerprint": "653541bac0a8fa8f64fe8b0e3a1752f3a1c051fcafe806f17ef51049771b6c22",
       "olean_sha256": "84e4f24d0933c73383b2567b608a1ee50addb307dc1208d86939ef6706ca95fa",
       "axiom_reports": 3,
-      "seconds": 5.132
+      "seconds": 4.856
     },
     "OneY.TerminalCopyComplete": {
       "fingerprint": "9f3ada10da68dc2cabf4753b261c4186613a967d7b4b8e31096e07191f7c6ae9",
       "olean_sha256": "91a4c764de9f22604af20b4345f71c8d28ae54c3bd301677af60fc90ac7abb3c",
       "axiom_reports": 1,
-      "seconds": 4.945
+      "seconds": 4.588
     },
     "OneY.TerminalCopyRoots": {
       "fingerprint": "bf09eb5988f10e61b51e17b2d1167ee50d3cd56d54d9cd724b7263028acf8f72",
       "olean_sha256": "c6c88c1c6e492d1a467b891689740ee791b6853101af13723be65fe4a261a916",
       "axiom_reports": 2,
-      "seconds": 4.646
+      "seconds": 4.636
     },
     "OneY.PseudoCollapse": {
       "fingerprint": "ea552a80f10afa4bc152cb93cc8091343faf2617daac939245856fc15e07f628",
       "olean_sha256": "c260f0d0e598cfca6d7661baddbdbf7d14fd1c8b9ca2da390d139390ff6ba2a1",
       "axiom_reports": 2,
-      "seconds": 4.901
+      "seconds": 4.62
     },
     "OneY.PseudoSelection": {
       "fingerprint": "b6d2b3fa3fdabdb8045820c21e6a24a7503b1a0521d929cf31d0ef2bb8c48771",
       "olean_sha256": "04b38b5d39c2cc0e9616cd9b4d7dce4b0670c5fe1d8fcec347b4134d301d5e28",
       "axiom_reports": 5,
-      "seconds": 4.898
+      "seconds": 4.661
     },
     "OneY.TerminalCopyExtraction": {
       "fingerprint": "eede261cf0ff30fb30045c7d53178a53329aca0315df8c2830d2a18df0b1d496",
       "olean_sha256": "f8945c7c133986c729f83d34178979b82d23fcc2626d29c3045b039725d3251b",
       "axiom_reports": 2,
-      "seconds": 4.68
+      "seconds": 4.619
     },
     "OneY.TerminalCopyRebuild": {
       "fingerprint": "0c60ce9bb5bee4640b44a79b43a22933266559d9af3ab3b856a19af5bf03fe09",
       "olean_sha256": "2687f64bdec735b2dbf466a507fc94c4e45ce4a5c496ba3268d769d33956be8e",
       "axiom_reports": 2,
-      "seconds": 4.769
+      "seconds": 4.841
     },
     "OneY.TopForestGeometry": {
       "fingerprint": "1382a693427674a11b8ef5fd3a79915dd4b01c35447f875159265ab0c154a863",
       "olean_sha256": "be620a337b3f4d534130268db85416a3991985e11770fe32162a761ac28bb14e",
       "axiom_reports": 4,
-      "seconds": 4.55
+      "seconds": 4.657
     },
     "OneY.ActiveGeometry": {
       "fingerprint": "4e0185d7bacb3bd3be20b5200cf43f2d92dac7b0d7d422716abd319224487b98",
       "olean_sha256": "07ade815cc407ede0c386e64d4fbe2c506cd8a2d3fc33ecd77ce4cde50b6bbc8",
       "axiom_reports": 4,
-      "seconds": 4.572
+      "seconds": 4.619
     },
     "OneY.LowerCopyRoots": {
       "fingerprint": "f49a04c439107ed638109748c24b1bb04a003d8c1a17f7ecfb7043666384c7e5",
       "olean_sha256": "5f3856e00b09358ea0d6621a9ab01472721d94debd0ebf39bcf4bf8097d99508",
       "axiom_reports": 5,
-      "seconds": 2.853
+      "seconds": 2.817
     },
     "OneY.LowerCopyBlocker": {
       "fingerprint": "47e3e8cda0c3081be5c79c89aecfdc53621b59a4c8bff2088d4cd30a0d9afb57",
       "olean_sha256": "e190c45b8bd8feec31cd86b389762fafbbb5d845e4a72eafce24c2041b69bca1",
       "axiom_reports": 7,
-      "seconds": 5.318
+      "seconds": 5.234
     },
     "OneY.TerminalCopyTransport": {
       "fingerprint": "cd4366b7f48214125c6db06fdc3d9eea3f1afea5864e49a8beec7dc72a2b863a",
       "olean_sha256": "bfb59e3b0b16227a3c81280f8b36981decfe47f41553536d6b1e0dfc879a12f7",
       "axiom_reports": 2,
-      "seconds": 4.679
+      "seconds": 4.892
     },
     "OneY.FrameCopy": {
       "fingerprint": "ea3b16423ad1c28c474b96d4b074633651436c714bc5238638b906bc4abbde96",
       "olean_sha256": "86bfb464ec1cbe09c50521c8232597e178a95a337e70d56b8718e5220cf0d61b",
       "axiom_reports": 2,
-      "seconds": 4.8
+      "seconds": 4.828
     },
     "OneY.TerminalCopyBottom": {
       "fingerprint": "41aa7059a3c7b23a410547ecffde23a876d1a082054245d462129cd6b92d851a",
       "olean_sha256": "3370bed564fdbd77e18bc87c472d2b598bdfea0db4eb89fd6fabd4ba8c3da9e9",
       "axiom_reports": 2,
-      "seconds": 4.763
+      "seconds": 4.893
     },
     "OneY.TerminalCopyBottomRecovery": {
       "fingerprint": "8d94208afd518ae3dfc03ed8202575692672fd766dcceb59c2a8692cc19e4ac5",
       "olean_sha256": "ae3022bfc93a8c9dc70201554931c317bd64075572d960dc3709df581cf75dee",
       "axiom_reports": 3,
-      "seconds": 5.05
+      "seconds": 5.202
     },
     "OneY.TerminalCopySeamComparison": {
       "fingerprint": "db474c6da1c7359795c6a80a9957561a506ed86c2d81e7c5be1ca1c39b29b2ac",
       "olean_sha256": "d0985a6d628b0a320b95bcd0da6b7633b39d8ec06c0ddf92c9e8578312cbec36",
       "axiom_reports": 1,
-      "seconds": 4.843
+      "seconds": 4.97
     },
     "OneY.TerminalCopyExternalSeam": {
       "fingerprint": "99b359a0397b54432ee8c837a86ce385a71aa6419e97756cb40ae187e8ed7aa4",
       "olean_sha256": "7b791ed5d10d75ab03633c705518f4e406b51bc3b388e26b96a0dfabad601412",
       "axiom_reports": 2,
-      "seconds": 4.846
+      "seconds": 4.99
     },
     "OneY.TerminalCopyExternal": {
       "fingerprint": "b484550b38fa60b7ae4dec06a45665e58b28c3e67874b96c015abcdcff810fd9",
       "olean_sha256": "aec528a9e42ffa0310f6d3b83d74dbfdaf402c8dc6e3b310d98cab154ad1520d",
       "axiom_reports": 2,
-      "seconds": 4.693
+      "seconds": 5.115
     },
     "OneY.TerminalCopyDepths": {
       "fingerprint": "80e87caf135a9e3d297a5095addd1fc3025891fd57f69982c80357089fb9a7da",
       "olean_sha256": "c473e48baea24f231d5c3487b26511833f727e808432c6cfad1337eef083f999",
       "axiom_reports": 2,
-      "seconds": 4.818
+      "seconds": 5.535
     },
     "OneY.TerminalCopyUpperOrder": {
       "fingerprint": "5d6a52050c1d274bc22a58a5c5d6532f0246c9cf6c1aa78ed1c78c3bf3a4f1ca",
       "olean_sha256": "86413ad89257e01aca4ced9cdbe3d3802bbe2874dff222f15e874d8dee6dfe7c",
       "axiom_reports": 3,
-      "seconds": 4.839
+      "seconds": 5.525
     },
     "OneY.TerminalCopyLinear": {
       "fingerprint": "a93bc133d13830eefea91787e3faa29ffa50bcfa7fd44fa5487ca92cc2f2fc6e",
       "olean_sha256": "cfc043314caa2dde215931863597e728de489818b704bdc3cc0f5df3930114dc",
       "axiom_reports": 2,
-      "seconds": 4.574
+      "seconds": 5.313
     },
     "OneY.Build": {
       "fingerprint": "308ce49ffcf22af4949e59d2d0c4d470136bef5224dd209457dff401d509453d",
       "olean_sha256": "a4e9ae58c1953326e3890529e63d369f061ebe91229cb44537caa0e9404b92af",
       "axiom_reports": 3,
-      "seconds": 4.703
+      "seconds": 4.962
     },
     "OneY.RootSearch": {
       "fingerprint": "8ec9f5c20d76720e6e0bfd2300ccc08b70ec722e5e5d935ef9298cddfed5c890",
       "olean_sha256": "0ae72a3f0dfe1d23d41d1a976058255f9e5254e71081ee0808e14714f9160374",
       "axiom_reports": 2,
-      "seconds": 4.728
+      "seconds": 5.434
     },
     "OneY.TowerReconstruction": {
       "fingerprint": "2aa50451c7cede35c3bb31ac94b20233aa354e7d89c961b5c20186687a722cf6",
       "olean_sha256": "f7fcedb0be9d95412a01758e306a35410a296ea0f97153f7811a9e8b77572121",
       "axiom_reports": 3,
-      "seconds": 4.724
+      "seconds": 5.377
     },
     "OneY.Expansion": {
       "fingerprint": "62a1bd073328fb227b899dfdc488cce47119cd28695e6903a4868899f687b201",
       "olean_sha256": "03173697ef23eb91dd6a226498d88eb5f6ae2b2702b1fea765df44081f2c7e1a",
       "axiom_reports": 2,
-      "seconds": 4.512
+      "seconds": 5.088
     },
     "OneY.ExpansionProperties": {
       "fingerprint": "e3c1cdb14e851be57f995218408473e36c92ecd755a15a2ee3a87e9f8693ee62",
       "olean_sha256": "be91145830420b211f601eacd5b7cafabd11e57674d0d12dc9057f5b239cca79",
       "axiom_reports": 2,
-      "seconds": 4.688
+      "seconds": 5.827
     },
     "OneY.TowerCopyAssembly": {
       "fingerprint": "9d175b7e368779e4f1dbab63f0397a243fc96dfea7c6f2dde0299a534142ee11",
       "olean_sha256": "58ed23598f9cd26e310f94caf9ad7b7fc77ec4f24662670b74b55e54687d16ba",
       "axiom_reports": 3,
-      "seconds": 4.644
+      "seconds": 5.596
     },
     "OneY.Prefix": {
       "fingerprint": "83de10a776c27b9de0508e5361f9e7ca63328771e8a87f8a879a07877f6c3c25",
       "olean_sha256": "8a791a10964a4df23badb3de6892ba25cea6e7b2967742d5f8fa65df623812bb",
       "axiom_reports": 3,
-      "seconds": 4.609
+      "seconds": 5.708
     },
     "OneY.TerminalTowerRebuild": {
       "fingerprint": "fb3739e1db9a06066b8f4003fc224457eb42ea02c9a190d28afc3eb87e61631d",
       "olean_sha256": "ecbb6b9c2dacd3f43d1686f6b8ace57df459c0f7c85c8f61d1d2ae4a97ce0dc3",
       "axiom_reports": 3,
-      "seconds": 4.675
+      "seconds": 5.525
     },
     "OneY.RootIndexed.Diagram": {
       "fingerprint": "ba3ecc8aeb590bad73ede06ea700a26b0574593d34180d5588c242bc63f000f5",
       "olean_sha256": "287ce70907e5a615769daadcbe0e9a305178629668d4dc792c51a7e5f6bbabc3",
       "axiom_reports": 2,
-      "seconds": 2.349
+      "seconds": 2.604
     },
     "OneY.RootIndexed.Prefix": {
       "fingerprint": "b4d76fb043bcec5e68e3348ce1fac92c5e61ff9e23a13d214553ab7974b56001",
       "olean_sha256": "004321c637d1c6f21e65e167d389bbd4351ea4c675c592b0fce27833460facfd",
       "axiom_reports": 2,
-      "seconds": 4.785
+      "seconds": 5.345
     },
     "OneY.RootIndexed.CopyCoordinates": {
       "fingerprint": "facc0f932da185e3cb5f6a72a2b89b3efbcfb86349d24bd475013a3f7dffafb3",
       "olean_sha256": "2c96e591b062086d61e2d664c82e56b15363aa7b9ade41c5e8202fdd31ade9e6",
       "axiom_reports": 1,
-      "seconds": 2.488
+      "seconds": 3.228
     },
     "OneY.RootIndexed.TerminalRoots": {
       "fingerprint": "4ed435b72ee38df18dde2295fbd789b6bfb530462b98c676e432243e92d49d8d",
       "olean_sha256": "cf072df7288703ca9c9379d6b4cf90fb4004965348f428ecbf0aa0c302c4c14e",
       "axiom_reports": 1,
-      "seconds": 4.592
+      "seconds": 5.769
     },
     "OneY.RootIndexed.CopyDiagram": {
       "fingerprint": "82bba307986bddf2c04fcc8da03b25442cbc4d359f975e6ae59c49a416f79896",
       "olean_sha256": "d19b8bba906df9fd6fa7f3d6aaafedd1cdbcd4e47a451992dacce41708705697",
       "axiom_reports": 3,
-      "seconds": 4.757
+      "seconds": 5.344
     },
     "OneY.ExpansionRebuildPrefix": {
       "fingerprint": "7c59f1332bba807b1e8efa6ef82963097640b9246f53afafc40d2c4acefd81ef",
       "olean_sha256": "b48f52957832186c1dadcd30e505e927e8ca0eb8e24507325fa314f549d4feac",
       "axiom_reports": 3,
-      "seconds": 4.681
+      "seconds": 5.257
     },
     "OneY.ReconstructionComparisonPrefix": {
       "fingerprint": "59158fdb4196163a0efe23d3a8607d263601486bfd95e1eea804ebf934fcfc33",
       "olean_sha256": "334d381dda5407f127773ee162a64b4a65eb000feac6b716635f05ff5ba4d586",
       "axiom_reports": 2,
-      "seconds": 4.949
+      "seconds": 5.892
     },
     "OneY.LowerCopyBadBlocker": {
       "fingerprint": "513077194e0dcee50c1185deb2c5ef0ae091a849ae674bf2f3d778b3eeab6509",
       "olean_sha256": "4597c111b84cccfd02fab786eb831f60deb170e05de4328609b22d5e9e3bbb34",
       "axiom_reports": 5,
-      "seconds": 5.265
+      "seconds": 6.35
     },
     "OneY.LowerCopyCanonical": {
       "fingerprint": "79b15710e25d4e1275fc6ec330c96c9e933786c539529f5e9127146434fefc9b",
       "olean_sha256": "6f5917caab25ba7242fd576de6bc4e91c6684803aa5d8a4bfe8c0c85e17d8399",
       "axiom_reports": 5,
-      "seconds": 5.16
+      "seconds": 6.291
     },
     "OneY.LowerCopyBottom": {
       "fingerprint": "8ccdacc9e2de17f543d14f4d9b778946d1486ab1568995c05ee6e7846c72f971",
       "olean_sha256": "087fcdbcdf5c5427e8fbf27bfd58c30a539295c81cde97fdcfc4397fac3481bb",
       "axiom_reports": 3,
-      "seconds": 4.892
+      "seconds": 5.783
     },
     "OneY.LowerCopyBottomRecovery": {
       "fingerprint": "4b68a31715225428460a24ca2e587314d53af4db67cf7fcbf621c43ff1cf0c97",
       "olean_sha256": "f32336b00e46757e4f103c046fc8580b231e250ed8b324c31d686425c0c9b440",
       "axiom_reports": 6,
-      "seconds": 5.231
+      "seconds": 6.663
     },
     "OneY.LowerCopyTransport": {
       "fingerprint": "a98fc0b1460b5de706a2febd1b9e9a3636de62d29e94263d7ebb85b17122ca49",
       "olean_sha256": "214ecd861ae52b9f4f4d7e4ceedba5a684a4b34c7d03f33fb84edd595e87aadc",
       "axiom_reports": 3,
-      "seconds": 4.843
+      "seconds": 5.735
     },
     "OneY.LowerCopyTopForest": {
       "fingerprint": "82e1f69c344c25a529e5cb4f341597ff01a99b3326d27ac77e1ab51fc755879f",
       "olean_sha256": "82c3ca1afa9cd457254400dd6e80b8d8647817c0094bd2a92a9e48ee6c8d575d",
       "axiom_reports": 2,
-      "seconds": 4.771
+      "seconds": 5.461
     },
     "OneY.LowerCopyRebuild": {
       "fingerprint": "cc4ab7dfdc1d0ced16c9b00de9d3679504fe2e13b7122a768dbad010668d55f3",
       "olean_sha256": "3a145cf1a80159fe1bd6e549eb3e7090671428c6c80f755435deb298e345cfb3",
       "axiom_reports": 3,
-      "seconds": 4.751
+      "seconds": 5.271
     },
     "OneY.LowerCopyLayerTransport": {
       "fingerprint": "dd11929cb06256cadbe4c7d9b11a0bfccdcbabe876da90f1eed4476a9089dab8",
       "olean_sha256": "0e4fc28565ec07d3d5fa7543aa2042c6fba61bc57f3eb081d92967bb16103e21",
       "axiom_reports": 2,
-      "seconds": 5.007
+      "seconds": 4.979
     },
     "OneY.LowerCopyPseudoSeam": {
       "fingerprint": "c4792147bee296e09e9557dad8e869778c8a294ef2f59f43375749fa5bdbe877",
       "olean_sha256": "f2c7e976c570a9c51c402b78dfd344e7b093744f60e74211ca3b9fd33131534d",
       "axiom_reports": 2,
-      "seconds": 4.674
+      "seconds": 5.147
     },
     "OneY.LowerCopyPseudoHigh": {
       "fingerprint": "a939214d75c6c0950dc9f038b1b698c9d43546817902865cffeeb84bc3f6e8fd",
       "olean_sha256": "14466cc7f53262ebd11cfa0198444fa7d6428e62648fa087b38e5aef3816f1a5",
       "axiom_reports": 2,
-      "seconds": 5.138
+      "seconds": 5.347
     },
     "OneY.LowerCopyPseudoOutside": {
       "fingerprint": "9d0e1cfb9edeb7352cfb184d5e4e9dac761fdeb452812fa7f4486142574af0df",
       "olean_sha256": "e36885f535c1024b40036a6860fbcd1ef4e87d336363b9fa49589ae388978987",
       "axiom_reports": 2,
-      "seconds": 4.985
+      "seconds": 5.499
     },
     "OneY.FirstMatch": {
       "fingerprint": "a68a1b026d67138c76c8f22ae3c1a4ec18fc004d9531d3b28c208d9eb5498858",
       "olean_sha256": "e7639aee9c8b94da43b1d925f4bef834ed09a5409e049eb7742dd7f4c67f3a75",
       "axiom_reports": 2,
-      "seconds": 4.697
+      "seconds": 5.362
     },
     "OneY.LowerCopyPseudoLow": {
       "fingerprint": "56d5ea9e16a4c4212410087b493cb5a54efa119b5938fa77d1c902f242c0907e",
       "olean_sha256": "544493fe56bcc93151c79ad5421482e6de016bea00e43229cee8749e3a6f7c73",
       "axiom_reports": 2,
-      "seconds": 4.846
+      "seconds": 5.514
     },
     "OneY.SingleContraction": {
       "fingerprint": "169e9bedb8a48ad94fa561642c18dcc90dea594bb6e83a1b9b2761ec61c84b3b",
       "olean_sha256": "908153c721f373f53ffc12ca97c31746bead6e4a01a057d1d976617043dcf5ac",
       "axiom_reports": 1,
-      "seconds": 4.668
+      "seconds": 4.885
     },
     "OneY.LowerCopyPseudo": {
       "fingerprint": "0b0bf77317bbe10f270b0ad2b0b4b9a444a1a32997b8f8fac5ea4f374327621a",
       "olean_sha256": "b9bfb235f30d321dbd64870aec9b5d023ea1bfe7ab9ac764b0b29452359ef01e",
       "axiom_reports": 2,
-      "seconds": 4.712
+      "seconds": 4.912
     },
     "OneY.LowerCopyTopBound": {
       "fingerprint": "0572d6923e24ae22ab66b85bb47689e386a97caebe55e93180a838682f4812fd",
       "olean_sha256": "366ccd2b3c66b5192bec25ecd5f9a75931015f19d89e0bb071bc493118c0289f",
       "axiom_reports": 3,
-      "seconds": 4.608
+      "seconds": 4.648
     },
     "OneY.LowerCopyLayerTopBound": {
       "fingerprint": "841aa198a8b819d9410979565efadce708778ec7b69570c609425f0efdcf0356",
       "olean_sha256": "e4577b949dad5fbe9fcbd06b935aa71f5a3477012f3ffd86063a27140394e49c",
       "axiom_reports": 2,
-      "seconds": 4.788
+      "seconds": 4.837
     },
     "OneY.LowerTowerInputs": {
       "fingerprint": "ae749cbfcc8da6238646bd0ca0738bd6aefa849148647dcc7d9bb959bf253efd",
       "olean_sha256": "b69e090499ff654960b587703d0b92bca39ef44a5fa91bb48cf630c693832342",
       "axiom_reports": 2,
-      "seconds": 4.906
+      "seconds": 4.947
     },
     "OneY.LowerTowerRebuild": {
       "fingerprint": "ffc6659eb7710abb00508e4d520617bbc4ae0a29d20e59778db2cfad1a6d1caf",
       "olean_sha256": "93bb71bba7881edc1ac300411f09f888252a0a457ef16c203e72eba8b6492a76",
       "axiom_reports": 4,
-      "seconds": 4.904
+      "seconds": 5.133
     },
     "OneY.ExpansionCanonical": {
       "fingerprint": "1c4ab261a5451d1f6d5582c3763b8caf9cca399aa4a2267809eebb6547238447",
       "olean_sha256": "87650ebf2de3f26117af0974fce60448e8b3cd1d346237d018f5c9dfc9857716",
       "axiom_reports": 5,
-      "seconds": 4.962
+      "seconds": 5.415
     },
     "OneY.ExpansionOrder": {
       "fingerprint": "9e9ff3af9d9b422560ed22be786ab454f7c61bb432f3dcf4488c0f85c66ae5e3",
       "olean_sha256": "177b9fdb232c173f475cdf2a9059dbf8845a4fc8b2771564bafa3ff48f385c35",
       "axiom_reports": 4,
-      "seconds": 5.087
+      "seconds": 6.638
     },
     "OneY.RootIndexed.LowerAtoms": {
       "fingerprint": "3b0e55ef0170404a9737dce4eeb8421a0652a0e5da423006c91c05a06b52a233",
       "olean_sha256": "6952a7e5e3fbd32ea411910b167faab49bfd353132282963ae49b6820081f9bf",
       "axiom_reports": 2,
-      "seconds": 4.743
+      "seconds": 5.897
     },
     "OneY.RootIndexed.VirtualNeeds": {
       "fingerprint": "b4e7286510e3cc077812980279817b1313252fbee12f37c32a3402651233f568",
       "olean_sha256": "d0a572bc1b7da5a8c599f162329ea758a5488c18bbef1f83f38089816c1a9c28",
       "axiom_reports": 1,
-      "seconds": 4.778
+      "seconds": 5.903
     },
     "OneY.RootIndexed.OrdinaryAtoms": {
       "fingerprint": "5ea08e3e2153890a4dfd263cb9255e2f6475de84b22029cd9ce972ce4f48774b",
       "olean_sha256": "c63b8bb6aa2c3e77ceb5f1f4e4808f233ed3d9b3d623322223df8c7a08f5723d",
       "axiom_reports": 2,
-      "seconds": 4.534
+      "seconds": 5.721
     },
     "OneY.RootIndexed.SpliceGeometry": {
       "fingerprint": "f5137a10e3ebadd230fc754bf14715caf4ab826a26f4524719bb62faa151f26e",
       "olean_sha256": "89614373c63ae580d0e40abada0ed49b350b708ecba218cea3cf5cb129878b61",
       "axiom_reports": 1,
-      "seconds": 4.746
+      "seconds": 5.357
     },
     "OneY.RootIndexed.ActualScheme": {
       "fingerprint": "8eb831d417491453cad4d146726b05240e975a54949fc286f4ea49cc72ed0a4f",
       "olean_sha256": "f5e3d5f10d4a5a7c2e2dab31ac00c267e3725e7e8972bffd520a9a6286280452",
       "axiom_reports": 2,
-      "seconds": 4.55
+      "seconds": 5.584
     },
     "OneY.RootIndexed.ExpansionWellFounded": {
       "fingerprint": "01d9794df3cab8830e56c5987011d40bbe7fa74751956005f7859a2cfa14e9f7",
       "olean_sha256": "08800326b2ca87cf6e048c2ad11387c15ecfdbd92379fcc978543862fe27ad7d",
       "axiom_reports": 2,
-      "seconds": 5.017
+      "seconds": 5.488
     },
     "ZeroY.Dynamics.Definitions": {
       "fingerprint": "8bd61eec7f939406a3ffca753833933fb13c901db83346597522b11190601c91",
       "olean_sha256": "45d19942fec5d6d07404305d9b0d6dc2d2db4d0ea6d52fdaab32c3da6f05f0eb",
       "axiom_reports": 0,
-      "seconds": 4.476
+      "seconds": 5.27
     },
     "ZeroY.Expansion.CopyRows": {
       "fingerprint": "0b62902ed454b527d5bbeb9a9705af5073ffd13c97864d3a58a6b2e9ae675b9b",
       "olean_sha256": "bcf4f9b14fb88a021da83cde0b83e8f261c960dd8a1bbfc7f050414ade66d634",
       "axiom_reports": 0,
-      "seconds": 5.233
+      "seconds": 6.308
     },
     "ZeroY.Expansion.Prefix": {
       "fingerprint": "efb84b9766ef5e84b7fed609c91b571272273afce3d906dae02f5ea888595d07",
       "olean_sha256": "c7e67a0f4c46c8dac36527c0efe297f5ea3982049976fddccfa7c1bfdfc5011b",
       "axiom_reports": 0,
-      "seconds": 4.663
+      "seconds": 5.101
     },
     "ZeroY.Expansion.Conjugacy": {
       "fingerprint": "de64408856aa7896fe436b8816df3eb0f00f1796b9cd9cac634043f319887985",
       "olean_sha256": "1c9086617c311e38e009bfbeadd71d62563a7f78cdc86c8df800592d9f38355d",
       "axiom_reports": 0,
-      "seconds": 4.761
+      "seconds": 4.902
     },
     "ZeroY.Dynamics.Prefix": {
       "fingerprint": "539461286aa05cf14b09f043d67ab45da9d5ef5ad608e996a93a28e5b9970909",
       "olean_sha256": "96f86f4d6545ddf575d37c22452d4da649746d4ef23d0158d4713acdb8522421",
       "axiom_reports": 0,
-      "seconds": 4.717
+      "seconds": 5.131
     },
     "OneY.Dynamics": {
       "fingerprint": "b4f18a37e9dfa69d49739b3b3342b08d8ce7e782c5885d6e6cb8f85598a5f09e",
       "olean_sha256": "03039ebd3682eb342d7caadb3564531520ba7af0ea5c0bd06a0aa98ba0112af5",
       "axiom_reports": 6,
-      "seconds": 5.621
+      "seconds": 6.005
     },
     "OrdinalFormal.Reachability": {
       "fingerprint": "33e9b5b529de40174cbbbbe98d9366fb60270a2626497550dcac61a7fff16cad",
       "olean_sha256": "6147ba0524db8117967cfc17eac45d24158153549201c8308656913090ac360d",
       "axiom_reports": 0,
-      "seconds": 2.431
+      "seconds": 3.295
     },
     "FiniteDemandYFinal": {
       "fingerprint": "26a3750af3e0f62e05861fe2c268b93d829308056a63b82bccab677a683a6bef",
       "olean_sha256": "9556335de74136b66bed755ddb4798eb6eb4ed05dfa7230f51e081a045c967c6",
       "axiom_reports": 4,
-      "seconds": 9.766
+      "seconds": 11.457
     },
     "OrdinalFormal.ExpansionValidity": {
       "fingerprint": "2663ee83574ee868aa7adb5d0605a8036ed140d0ed201a8cd1d3f6caa6a734a0",
       "olean_sha256": "b1d979e15baf7e2cb7a9e3948d60b2c42d314346fa5cef697145ea2330e4f1f2",
       "axiom_reports": 0,
-      "seconds": 2.883
+      "seconds": 3.689
     },
     "OrdinalFormal.ActualBlockGeometry": {
       "fingerprint": "ee1d5ecaf8fb4be752d049ed9b6fa3e1838e48765775d75d825b22173e76cc96",
       "olean_sha256": "3dd149d196c7d9e75503d58aadddc8606c5a6e474302f881585a48743c4d8850",
       "axiom_reports": 0,
-      "seconds": 2.355
+      "seconds": 2.977
     },
     "OrdinalFormal.SpliceConstruction": {
       "fingerprint": "ea77c4269e00904f214ed71990a5655f32c01524415b35c79d13bb4b9a82a94d",
       "olean_sha256": "b448d21f7dbe7604c312469fcd938db257f77b5a9c70b4e61b855c2703e170aa",
       "axiom_reports": 0,
-      "seconds": 2.465
+      "seconds": 2.92
     },
     "OrdinalFormal.GeneratedStagedReflection": {
       "fingerprint": "1b4b8e4fcbfbc036d2fd0530447714b71d9269f3ff77ea4f79183133b9bd2b9c",
       "olean_sha256": "c24298e4afd8dae373a026ffe55d89f9ca5095980ea33b83d26dd352382fc054",
       "axiom_reports": 5,
-      "seconds": 3.218
+      "seconds": 3.708
     },
     "OrdinalFormal.GeneratedSemanticWellFounded": {
       "fingerprint": "a2266f95943c8b1429b9888ada7a4b44107f492d4ff71330288bcf337beff7b5",
       "olean_sha256": "b0664685f2445b642d247a8f6b5294933d437c611ad6e92153a59f2f77251e56",
       "axiom_reports": 3,
-      "seconds": 2.369
+      "seconds": 2.763
     },
     "FiniteDemandColumnWellFounded": {
       "fingerprint": "8ce26b88a51e4cc21e90c6a894928fa9c083ee956850a843776ea396a0f76397",
       "olean_sha256": "d603073e79e4c5c11e5f26aaccc4752dc9e48d8f0e4491d4fa6ea2af797fc1a9",
       "axiom_reports": 2,
-      "seconds": 8.412
+      "seconds": 9.135
     },
     "OrdinalFormal.RPD": {
       "fingerprint": "7b732c4c86a2bfc5462510a54b076e29e4c2a30dc24a7ac65d367f5b14f9788c",
       "olean_sha256": "0426e4289ddee6da53307cdfd242efe87ddc92217270d302749ecd347b207e56",
       "axiom_reports": 0,
-      "seconds": 2.339
+      "seconds": 2.368
     },
     "OrdinalFormal.Comparison": {
       "fingerprint": "2a4f9cd36277496b12b8169c0f3f7cb81c71852a88c2f18cda4cab2bb519616a",
       "olean_sha256": "7f8aef0e9371ddd7eede96e7ba99e48cde3c960ee62790bb255c6b2d648b1ee1",
       "axiom_reports": 4,
-      "seconds": 2.407
+      "seconds": 2.436
     },
     "OrdinalFormal.RPDDecrease": {
       "fingerprint": "c65aec7fa0b4961e589104056e926c3465a9b5da0d73dcc8c22b9c33da60b10f",
       "olean_sha256": "fcbd4e58739739e9a44d54865162707eecda655e73d88c71db721b1955599b45",
       "axiom_reports": 5,
-      "seconds": 2.85
+      "seconds": 3.044
     },
     "OrdinalFormal.LRD": {
       "fingerprint": "0a40b3f767a9b68551b8366597abfa564d95342d832b2750ea27d4ee31377903",
       "olean_sha256": "195b1e21d94dd4a1ccc8f3f3bab483ecc0cc52fcd14c4337b773d7f82d5acf73",
       "axiom_reports": 0,
-      "seconds": 2.319
+      "seconds": 2.437
     },
     "OrdinalFormal.Domains": {
       "fingerprint": "bb725af8c564a3ffe1a7a2b564b9657b29ed4e7a7fefbf81779e04baba74a91f",
       "olean_sha256": "c29d1c7eb0891307f7de099aed5251baa2fcaf8c29f8e5b6b04854fa1bf4304a",
       "axiom_reports": 0,
-      "seconds": 2.246
+      "seconds": 2.332
     },
     "OrdinalFormal.RPDGeometry": {
       "fingerprint": "ad4e6c039798a79d4ea8fb117d6b8e6b605c1eaf583f71f398f5db970432f031",
       "olean_sha256": "2661c50e5d62991a2d96070ca15e8b3c30a6e22ef9d98cb8641e0f0e2bbd898c",
       "axiom_reports": 2,
-      "seconds": 2.567
+      "seconds": 2.506
     },
     "OrdinalFormal.StandardValidity": {
       "fingerprint": "22c88cd4a38ff2d8fb126b4714488ff0ede46e79812bcca1f9dfba51cdac9d34",
       "olean_sha256": "f9af33b59edc06367b22e96c4f94be6bdd13a04fabb1dd6b0b082ee6f91b6bcc",
       "axiom_reports": 0,
-      "seconds": 2.301
+      "seconds": 2.393
     },
     "OrdinalFormal.RPDSortedColumns": {
       "fingerprint": "f05e773d00e64dca3ca8b386a44ea28528faf1134ed752476e19e76e00ff5dcb",
       "olean_sha256": "4920d92953b6a86f53adf5b3d8431e392d1fcadf78682a91dc65514c7903b792",
       "axiom_reports": 0,
-      "seconds": 2.564
+      "seconds": 2.569
     },
     "OrdinalFormal.ColumnReachability": {
       "fingerprint": "473a6249c2f5de7f8f8d8221cd00106c912ec3aa9aaf2e718f6e4a0d00dc8eec",
       "olean_sha256": "9f1982feab277ccda8cf03ff312a6477fe173c649d3ee1fa160f6a7b1d8f8a7b",
       "axiom_reports": 0,
-      "seconds": 2.327
+      "seconds": 2.401
     },
     "OrdinalFormal.RPDWellOrderingReduction": {
       "fingerprint": "731bc464fd8b6e8061cdc7af061c9fca46b6f5b5b5719fe70fad1a624e222410",
@@ -1235,703 +1236,571 @@
       "fingerprint": "7cc1e695545f0a6ddab7cec07258ea7bc347a23b91a414a7faa40c3ee20c121a",
       "olean_sha256": "b785e8458f3db8837c2eebca891578eb65cc17c071c402e3c4ac39d2eebc2eb6",
       "axiom_reports": 0,
-      "seconds": 2.297
+      "seconds": 2.324
     },
     "OrdinalFormal.GenericSortedColumns": {
       "fingerprint": "b2ad2fb7b82458eb7ae9fdb3d153990b298651cc23f617137b2f82878874b04a",
       "olean_sha256": "0f754ce10748f759b6777882dfa0a65f4a3dfaae45f9ef796861a45514d19020",
       "axiom_reports": 2,
-      "seconds": 2.528
+      "seconds": 2.58
     },
     "OrdinalFormal.BlockFiniteUnion": {
       "fingerprint": "cab316474faa45489ca2839c4f24e06ecd573b2347ad01b3b0894fbf550de4f7",
       "olean_sha256": "77968f5121b3e313dd4e8b5c230eaedc55a117f5983f921e757362e0cb20f8c0",
       "axiom_reports": 5,
-      "seconds": 3.13
+      "seconds": 3.182
     },
     "OrdinalFormal.RPDFiniteUnion": {
       "fingerprint": "cb7b101a19a94b8cdea0c2c9cf890c78d9187bc9143148bab11866f753c9e410",
       "olean_sha256": "dd0d4ac1ca51a7e864dccc9265e3dbb843f12f83f81a7cd049c449cba333846d",
       "axiom_reports": 8,
-      "seconds": 2.533
+      "seconds": 2.468
     },
     "OrdinalFormal.RPDDefinitionFidelity": {
       "fingerprint": "9af475c67cb1a7c11170ec0096d3ace24b926533fed0f48a166bf03b05b8cf94",
       "olean_sha256": "8172df2f102b23cb7d4607be30badd76affb675da2e33617eeb2361db7dbbd65",
       "axiom_reports": 3,
-      "seconds": 2.319
+      "seconds": 2.315
     },
     "FiniteDemandRPDFinal": {
       "fingerprint": "fb56c66666d966ca7b78f4db2d7402a67a190688ded4127c4121f5e62e9affb3",
       "olean_sha256": "e81fe742e5c5456c5a07f3125b1aa5e792603e8452225501ef0bf8cd5cc9775a",
       "axiom_reports": 5,
-      "seconds": 8.456
+      "seconds": 8.952
     },
     "OrdinalRowLanguage": {
       "fingerprint": "b9ef87f8ebb8940eafe9a673a32cc7d76c4297e6208235d619d62edcfd3b9014",
       "olean_sha256": "ee81759bdee919ae8ac3d737bf1aa64c8201759a6c0700f64ade6e3ff6d51fac",
       "axiom_reports": 0,
-      "seconds": 9.829
+      "seconds": 10.528
     },
     "OrdinalFormal.GeneratedColumnDecrease": {
       "fingerprint": "d7d7558d78669916c3ecfb1b9823e6c1b7889b6dd0494476eddf86199d0a374e",
       "olean_sha256": "cacf8b83f1316713b1e4193c7ecf967b9299493f43cd1178bc7668e097cab0dc",
       "axiom_reports": 2,
-      "seconds": 2.638
+      "seconds": 2.661
     },
     "OrdinalFormal.ColumnMap": {
       "fingerprint": "bafbf80622a978cae4f7400a055046d287eb57a70249d90902392633d8506acf",
       "olean_sha256": "fee54dc99fa2aeafd1890dc5fc03bc65fea40537047d32e72161ab56fab0ec9e",
       "axiom_reports": 6,
-      "seconds": 2.725
+      "seconds": 2.753
     },
     "OrdinalFormal.LRDStructure": {
       "fingerprint": "ca3d2e3877cb761bf9712f384b2b888ef6ba421c4b81adc48f369ccd74d42d3c",
       "olean_sha256": "dd8c92e3e1f370e7a4ab7bd7fdd6605497ecf9fcbd293f6ef947ae9d348bf943",
       "axiom_reports": 5,
-      "seconds": 2.393
+      "seconds": 2.414
     },
     "OrdinalFormal.LRDCanonical": {
       "fingerprint": "f61910abfd4037d238d4807f598d48ab13499dfbdfd771f79899bae595b82de8",
       "olean_sha256": "741a37566c5d9446c0bf6689530bc9a0cce023b894850b22788c19d7a366471b",
       "axiom_reports": 3,
-      "seconds": 2.439
+      "seconds": 2.375
     },
     "OrdinalFormal.LRDRowDecrease": {
       "fingerprint": "45c209e553adaed2f47a93fa846616470cac3f54a6640c155dff84372c25d588",
       "olean_sha256": "25f043c9ad5660ac7da7761ac966fc696b76dd62a19e41e6a36394421a342df2",
       "axiom_reports": 2,
-      "seconds": 2.494
+      "seconds": 2.445
     },
     "OrdinalFormal.LRDNormalLift": {
       "fingerprint": "b5e43c0306ec400a7ab2984399b0385b5d8f25d2600c53589398b5ae3d489c4a",
       "olean_sha256": "b5167754666b6351733f3ef4df6c19c1a4ea1134a5f564f2a632eeccd35cbee8",
       "axiom_reports": 5,
-      "seconds": 2.343
+      "seconds": 2.361
     },
     "OrdinalFormal.LRDColumnDecrease": {
       "fingerprint": "8c877d5b67a6caf658d818117b6c2cf952f66818c49d63d714fa52cd1c516b1a",
       "olean_sha256": "a1f7e96d45c31dc4be537a70f095f432d1765facc1380525554f3c8ef63f3ac1",
       "axiom_reports": 3,
-      "seconds": 2.435
+      "seconds": 2.381
     },
     "OrdinalFormal.LRDRowWellFounded": {
       "fingerprint": "0d87ae141f2be7755d82cb2eae772325e772d7c29a327e1dfc6e5ffa8b11ef94",
       "olean_sha256": "1642cb69d2247b6e7ea8bd9305173f2ba9b7735025c1522f9f5fb7ae634c9e7e",
       "axiom_reports": 2,
-      "seconds": 2.296
+      "seconds": 2.282
     },
     "LRDOrdinalRows": {
       "fingerprint": "13746b337a63bd9c5c5ddc16f5301ef1a5e894aad1b6cab233e973724f62ad47",
       "olean_sha256": "50009b328f7f892b314ab251dbd0de9403d49f33b78e64b6c27357676e5a32f8",
       "axiom_reports": 5,
-      "seconds": 8.324
+      "seconds": 8.895
     },
     "OrdinalFormal.LRDWellOrderingReduction": {
       "fingerprint": "e1c3dd175b9e7cec91a4773382b9f166413d577d09686ff5fa97673a606bc981",
       "olean_sha256": "912fd6041d72c80a52233941e70ba554e27eacfe416f0562d907df54aee8fe9f",
       "axiom_reports": 2,
-      "seconds": 2.262
+      "seconds": 2.321
     },
     "FiniteDemandLRDFinal": {
       "fingerprint": "7598e0843cf02813391504b89e397c05b4d6cea7d7fef211a89fd6dd2c105e52",
       "olean_sha256": "e826441027d79cf109092230637a584b3d8c3cd94c445e88bc6064bf4bb938e7",
       "axiom_reports": 5,
-      "seconds": 8.504
+      "seconds": 9.018
     },
     "OrdinalFormal.OmegaLRD3": {
       "fingerprint": "5b37553cf72f9d075a9e6ad004e1d4b092eccf1145fcd7bd8b63b981b5cd2f66",
       "olean_sha256": "06b8dffe2b9e9588ff0d131c7e7875862facf6082259b34ba38af35d349824f4",
       "axiom_reports": 0,
-      "seconds": 2.836
+      "seconds": 2.934
     },
     "OrdinalFormal.Omega3Structure": {
       "fingerprint": "9361999de132d4404218845e760fcb9e2b5dffacc5f4b58caf2e942833590ca2",
       "olean_sha256": "b12180b6e921ed20cceaf84e52e23c3dbc27876e53a83a8c1633343b1f8d2f6c",
       "axiom_reports": 0,
-      "seconds": 2.85
+      "seconds": 2.844
     },
     "OrdinalFormal.Omega3Comparison": {
       "fingerprint": "cf420040ebcb7546fcb4f24b319b6d57f3af8c5785cd3a421dfde72325317785",
       "olean_sha256": "1482587104cd1e52560732a4e59e9b337cf991f5cd966851624b62ca798a248c",
       "axiom_reports": 4,
-      "seconds": 2.65
+      "seconds": 2.621
     },
     "OrdinalFormal.Omega3Domains": {
       "fingerprint": "a3c0c26cda10af5c446fae6894c5eadd98db26252699b8458d1d7b1c50b757db",
       "olean_sha256": "53a70685fd6050324c34298efaf23f1095e491b19ca5a3de722188dc8ff96c4d",
       "axiom_reports": 2,
-      "seconds": 2.248
+      "seconds": 2.272
     },
     "OrdinalFormal.RowInvariant": {
       "fingerprint": "caf8b3d97bf780bbbd8cace05d3f0e4ffcc8be56a2e88d0345ba0816ef2d2f61",
       "olean_sha256": "64ad4f21759721bbffd0fbb627c833f597a7536d21e441ad6e7eda3bfd6c9d5a",
       "axiom_reports": 2,
-      "seconds": 2.3
+      "seconds": 2.389
     },
     "OrdinalFormal.Omega3RowDomain": {
       "fingerprint": "e637d43d9d4b4d02095d6a58cf21d167dd7bda5825de654ef9bbeb6fb2c2fbcc",
       "olean_sha256": "480c070ccaf55c27cb70d629fc3f89a742a225466fcfd18605add12822f3738c",
       "axiom_reports": 6,
-      "seconds": 2.67
+      "seconds": 2.631
     },
     "OrdinalFormal.Omega3Validity": {
       "fingerprint": "0b9ceabf83164361956eb9df9b5ebee92e768dc4ad4864e33192f7a81a411d62",
       "olean_sha256": "25828240fca3f86880be88940e530ffa5ea889588c1ed36f1ae4494591ceedc7",
       "axiom_reports": 3,
-      "seconds": 2.277
+      "seconds": 2.281
     },
     "OrdinalFormal.Omega3ColumnDecrease": {
       "fingerprint": "ce907a274815ce6366e7003bd43a387c184a2787271b759f415481acf8345121",
       "olean_sha256": "57cc663149d18a653bb91817d7e7fabb93ed035410db36d8ec4d770316e8c4ab",
       "axiom_reports": 3,
-      "seconds": 2.334
+      "seconds": 2.407
     },
     "OrdinalFormal.Omega3WellOrderingReduction": {
       "fingerprint": "c35d2d7c25021625c11deddff4f0540d8e99dc3147329befdbc6042d00830fa7",
       "olean_sha256": "54f22bcd0343a4a98fa4b3d4b9e6a4ebf5fbf2d6c3262ab18d091eba2d382aa1",
       "axiom_reports": 3,
-      "seconds": 2.324
+      "seconds": 2.374
     },
     "OrdinalFormal.FiniteUnionWellFounded": {
       "fingerprint": "734c13025bcfc00796c0d7370bb8a8f7e4791b2187228261f18328704e0a0f8d",
       "olean_sha256": "2a22ec97987fb03b14392baf2dc6faa4e2f4413c572a9edca7fec464da18c77a",
       "axiom_reports": 5,
-      "seconds": 2.305
+      "seconds": 2.422
     },
     "OrdinalFormal.Omega3RowPool": {
       "fingerprint": "fa39f18a330110d974e06cbae2f96be7860ea372f4e5a72bd9bef175685ce6bb",
       "olean_sha256": "dc855cd54a507890d1787678a95249ae90aaa76a220d2ab6088961e6be5c5864",
       "axiom_reports": 4,
-      "seconds": 2.416
+      "seconds": 2.337
     },
     "OrdinalFormal.Omega3Countable": {
       "fingerprint": "643e6e8f6518f4bfd1b7a7f66fb8f9fdb5247dbf7368e7b91381e4bf98ab6891",
       "olean_sha256": "7338dd507e67ffb98a93c99a075f93f5dd3aa1e82df258cff659fce535ed6312",
       "axiom_reports": 2,
-      "seconds": 8.882
+      "seconds": 9.252
     },
     "OmegaLRD3Final": {
       "fingerprint": "e166dac16ac3c1715f1ca2516ebfac4e7c7ff3f2d680eea33282f198a4597208",
       "olean_sha256": "b654d7950b272e44fa64249c27b0de1de475604f08b771f7702cd76f070b61ef",
       "axiom_reports": 7,
-      "seconds": 8.793
+      "seconds": 9.09
     },
     "FourNotationFinalAudit": {
       "fingerprint": "64111c2e0ccebdbed338ea73d8491e513a96f7c94db192d400a7ac8765ca3e66",
       "olean_sha256": "009fd940495639e46e4a87cf1c8bae9f5db9c3834db1f7c75fa5e33498edd39e",
       "axiom_reports": 7,
-      "seconds": 9.695
+      "seconds": 10.045
     },
     "ARDCore": {
       "fingerprint": "8dd48bc40e6574aeff9e72b0370e3ca5bffb5a24ee4c34c2312a44a27df6025c",
       "olean_sha256": "bd1ebc9f6852541a25046052dc991f3f99f80ff8747588a1bee9106ad642405d",
       "axiom_reports": 0,
-      "seconds": 2.371
+      "seconds": 2.426
     },
     "ARDDemandCore": {
       "fingerprint": "bcd3a1cb4b5ad4da219b2617ee5951249acbfea1009467cf4b45a9f1946c4e3c",
       "olean_sha256": "a1f848b080069212617c59b8ec638aaabd7fab3b6fdce4e43622654e4ca3fd4d",
       "axiom_reports": 1,
-      "seconds": 8.458
+      "seconds": 8.577
     },
     "ARDDemandRecursion": {
       "fingerprint": "bc2e3365ffe5ec4de9c03d1610c5e21e46f35b755b64fa9a7b1c4bbf19536b82",
       "olean_sha256": "a988baa8d829029187ff8dd61b43bc81361c28feb61d72c840883655ebee4282",
       "axiom_reports": 1,
-      "seconds": 8.39
+      "seconds": 8.766
     },
     "ARDDemandReflection": {
       "fingerprint": "16d306265fa57c512fe98cf5a47f0e9e75c985dec792ffc985caadddcf7e0674",
       "olean_sha256": "ca34fa575e752d6b5dca4ba0ea64be6e66c20388f22620e9b642d6a42d3c969d",
       "axiom_reports": 4,
-      "seconds": 8.461
+      "seconds": 8.873
     },
     "ARDWitnesses": {
       "fingerprint": "23feda2d20e90f10661a445c944a98a1faebad36f8bb9da69e2897187af62769",
       "olean_sha256": "a770b1dae744f7d0748074890c00e9d2cace492e1a2d9e4d08713704b26ba8f2",
       "axiom_reports": 5,
-      "seconds": 8.788
+      "seconds": 9.396
     },
     "ARDEndpointAgreement": {
       "fingerprint": "151575cb74bc8ae1150947e96619c83642f4ea66d3b60dd01b0b7fafa3d2bde5",
       "olean_sha256": "1b265df22d845ab665f5739e57f9867c972c784e36b433c2a855d9205ffd7019",
       "axiom_reports": 3,
-      "seconds": 8.427
+      "seconds": 9.098
     },
     "ARDClosedSupply": {
       "fingerprint": "c4e4269cc212c71b972fcaae1dd8ca0d15d05c0509e3aef22de38a70d594d158",
       "olean_sha256": "0deaaf529f9bf86cc76d23325e7eca6b1c23e3130cbef6b303bb5e6067106508",
       "axiom_reports": 4,
-      "seconds": 8.71
+      "seconds": 9.188
     },
     "ARDInitialRepresentation": {
       "fingerprint": "44c6d436abd6b0fd975e9ab9ce151b0f96f2c227c1996116a7392f90b90e67de",
       "olean_sha256": "92b15621d6b8ca17ddc2537c37952aa14a99627f4bbe7d7905ab7904606f28a2",
       "axiom_reports": 2,
-      "seconds": 8.489
+      "seconds": 9.276
     },
     "ARDStructure": {
       "fingerprint": "fedf7081c99918d162ae4948ad69532c39285f8dd68eab0107d4f815e7df9ebf",
       "olean_sha256": "b3437dc0ce99f1c9ba03d73dac93f7a2d1e1340d9115ad1eaafc3dbb27e716fb",
       "axiom_reports": 6,
-      "seconds": 3.122
+      "seconds": 3.149
     },
     "ARDSplice": {
       "fingerprint": "01918300a444954fbb3f6012c1101a27ce4eab49c12eea878a1d2b33b0e5a340",
       "olean_sha256": "8bfc8a3f98893ded4d02460077bf2107b4e5d77f9bc10cbd4a379f51eddc6496",
       "axiom_reports": 4,
-      "seconds": 2.295
+      "seconds": 2.412
     },
     "ARDStageDemands": {
       "fingerprint": "8ae631fc0eab55de7bf851c42131945f90042dc45e095765081e4e074c41d97b",
       "olean_sha256": "8b0571c2131c8e4c45d18e68cedc7c81431aadcd03911d5620c8d0edfd365d3a",
       "axiom_reports": 3,
-      "seconds": 2.442
+      "seconds": 2.487
     },
     "ARDStageProof": {
       "fingerprint": "2832430488ac340c75175a9d3bc9badb3c774177c1a4f50a5487a6b3a5c4e162",
       "olean_sha256": "a2f49c8a8c76434df69066290fbdbebb10d589815958f1c49e0b0424cdccbf0c",
       "axiom_reports": 3,
-      "seconds": 2.769
+      "seconds": 2.81
     },
     "ARDPrefixOrder": {
       "fingerprint": "f749049e731dbbd6e345317d601ff0330d16cc5848a1bf8e614059654b1ed78b",
       "olean_sha256": "70ea4b0a64e37b36a3f2f7960429a1b130d4baeafddef32f7a1e8348380af977",
       "axiom_reports": 2,
-      "seconds": 2.296
+      "seconds": 2.386
     },
     "ARDDomain": {
       "fingerprint": "5c5dc9ad7b877ba7d5b021477a72dffd7bd28d0ae298eb9041efbcb1bc843de5",
       "olean_sha256": "be3d4a33f094614503b44edbe18719528afdc5abac1aa5b8a203d0fbed9a48ec",
       "axiom_reports": 4,
-      "seconds": 2.456
+      "seconds": 2.527
     },
     "ARDSemanticWellFounded": {
       "fingerprint": "2a08ed4d9869c063b7c3789ef31f2097a48d4c37f23a1252a955c03b9a4762b2",
       "olean_sha256": "cc75881e9588de9ea0223233f2e83af0d7788af5912f582970a48da1ece5a80d",
       "axiom_reports": 3,
-      "seconds": 2.348
+      "seconds": 2.458
     },
     "ARDDecrease": {
       "fingerprint": "3252b7f604d97078a2a9c0c5b639e428d2f96e740d473adc7d32cd4f713ca739",
       "olean_sha256": "572a5bf6169475b2b3f2dc575393c37344e51fa2008f989931ac29f11bd1e5f6",
       "axiom_reports": 4,
-      "seconds": 2.534
+      "seconds": 2.627
     },
     "ARDOrderReduction": {
       "fingerprint": "712ef05c7308d910d35882c2740813607405b957e03b504934230e975a1bf850",
       "olean_sha256": "f80f1b3d49cd31b91af90d5be63b15ccc45b601ecec5cb9e15b9af8bddba60cd",
       "axiom_reports": 6,
-      "seconds": 2.28
+      "seconds": 2.364
     },
     "ARDFiniteUnion": {
       "fingerprint": "09bedda5084439d54ac84423dd9e5c336e16322445a6542018d406f446f84402",
       "olean_sha256": "a61e59a42d06cbd14e337d906c64c680f25e637668e00603427c19dfff2c70e4",
       "axiom_reports": 8,
-      "seconds": 3.255
+      "seconds": 3.376
     },
     "ARDDefinitionFidelity": {
       "fingerprint": "e07cfed809e3d3c9367be849d1b613143c95e949bab05a10e614baf40d6f3fdb",
       "olean_sha256": "f017f7a91dd53f7c4fdc133af4d6fe8f77ab02bf2ebff77bd316a4a82ee8386a",
       "axiom_reports": 6,
-      "seconds": 2.327
+      "seconds": 2.418
     },
     "ARDFinal": {
       "fingerprint": "9d94ee03f4f6d78bf4969870df9565bba442afc7fa2b5be31ce120a425434949",
       "olean_sha256": "78de30417306860e2e65cd69902b29130d0f0e218caca09067ebf452cdd7c558",
       "axiom_reports": 7,
-      "seconds": 8.666
+      "seconds": 9.08
     },
     "ARDCompression": {
       "fingerprint": "f6192c6f3c6a108aec120761f84fd379d59919b4201b4b82f145406e64614e53",
       "olean_sha256": "41551bdc8bebacd0f1aec718b775224f304ac397e1cfdae5ca18aadf48216375",
       "axiom_reports": 5,
-      "seconds": 2.613
+      "seconds": 28.293
     },
     "FiveNotationFinalAudit": {
       "fingerprint": "760eb602e7a292e3cd58ebeaab550e8bdea458883680f5d12260185cafa6c741",
       "olean_sha256": "ae0204f7a0cb5fa667779272e0976b82007f1b5bde1b8762f445579a244141b0",
       "axiom_reports": 12,
-      "seconds": 9.655
+      "seconds": 62.773
     },
     "IPDTree": {
       "fingerprint": "6a0d21b65b69cbce1b6e1f640061adc8967e6a7a7efac452e7361ef9421407b6",
       "olean_sha256": "b33c9ef59310c2f480d9879aa09ed39efd4fa091a04c13fad772dfcb6f7c3c3a",
       "axiom_reports": 1,
-      "seconds": 7.645
+      "seconds": 8.268
     },
     "IPDTreeWellFounded": {
       "fingerprint": "97a5bb9cb96076e8909634d7b238a024d07c260b2f42633e85db2c859cb60fc2",
       "olean_sha256": "f1f220439e21ea323079a93cc21e238fd52f0b7123a2eb80f82e18239b426faf",
       "axiom_reports": 3,
-      "seconds": 7.706
+      "seconds": 8.382
     },
     "IPDTreeOrder": {
       "fingerprint": "714a94d790969c129c96fe582f8b1a82a5ab5a2974c9d32f826d740de2e06997",
       "olean_sha256": "e1a4a26fa72b7ac557bf5607afe7572950835608306f4f4340a71b4ec443a8b6",
       "axiom_reports": 3,
-      "seconds": 7.715
+      "seconds": 8.128
     },
     "IPDTreeLinearOrder": {
       "fingerprint": "0a67fa4ce5b7c0baa5e33c322083f64d954ac4317bfdeda861bfb983ac0b24ab",
       "olean_sha256": "eaca1f1907faac59802b98f23816e8b28e8b03b42fbf0e72ad75ec9ab15604a8",
       "axiom_reports": 3,
-      "seconds": 7.669
+      "seconds": 7.809
     },
     "IPDTreeRename": {
       "fingerprint": "6ffba37333dba3e3f92ca5835c7883e111c0c776697c6044e23c6a909c3e41e9",
       "olean_sha256": "6922662048b16cc284c17ba64fc5084e743e6a5d9b122989e1ca637901fd9f59",
       "axiom_reports": 4,
-      "seconds": 7.737
+      "seconds": 8.264
     },
     "IPDProfileOrder": {
       "fingerprint": "c78d82b49a71b05076f164bdf1592f3e4cee6d0654019ab2cc36743f723a3702",
       "olean_sha256": "b488afff7fa3d91f4620c23793dec2283b4997012c71f950f912677391ce3e9c",
       "axiom_reports": 3,
-      "seconds": 7.696
+      "seconds": 8.109
     },
     "IPDProfileRename": {
       "fingerprint": "c850ae2108864cfe91a8f7e14a94b55eae7dcdd74296cf93955652d747c579f2",
       "olean_sha256": "5d59a6dbb76d93aaf39f54e70d0009a7928ddb11b49f6366410111d14de5472d",
       "axiom_reports": 3,
-      "seconds": 7.586
+      "seconds": 7.963
     },
     "IPDTreeLocalRename": {
       "fingerprint": "870f072b3de3eb652f6c8f47ec416e8b67428372a30fadcc9e66e26eed0fa918",
       "olean_sha256": "4ddb38d5f1f01d47199502849665c98372e434394b288997a27beb20e0235cbb",
       "axiom_reports": 2,
-      "seconds": 7.744
+      "seconds": 8.113
     },
     "IPDProfileAtoms": {
       "fingerprint": "5a991ae0efbd4d5c7da04e8e95feff90ee3ca5e395343b1c5b3a40b64c7f4228",
       "olean_sha256": "8c95c31ca29e236a84489c84de49c5a57f3cde83359f75902eccb7a695335af1",
       "axiom_reports": 2,
-      "seconds": 7.828
+      "seconds": 8.212
     },
     "IPDTreeLowerClosure": {
       "fingerprint": "e86463847a5145ad59bcbd9bb3a647ce84dd5ab9a3dde93033b258964238d171",
       "olean_sha256": "87ba4a99667760c707a8ac1805360832278c56547e2356263aa11dc9c8c820e7",
       "axiom_reports": 3,
-      "seconds": 7.9
+      "seconds": 8.413
     },
     "IPDTreeLower": {
       "fingerprint": "7665222fc919c1c33086f30409ac84baf5ba706309fef03da9b993d2d7bd01b4",
       "olean_sha256": "f486c385b250364f417a4cbeb2de5b877e31738432df2360cc8c4530f59208aa",
       "axiom_reports": 2,
-      "seconds": 7.728
+      "seconds": 8.139
     },
     "IPDProfileLower": {
       "fingerprint": "2d1f4d2329bd84bb7bb358d57eb692a19e515e05208bda43a5063c70c2cc3bb6",
       "olean_sha256": "34ff150e28a2252f6396f974dac83cfe314662c329913874692ff6bd7771f90e",
       "axiom_reports": 2,
-      "seconds": 8.032
+      "seconds": 8.001
     },
     "IPDGraphCore": {
       "fingerprint": "625bb778956a3ecaff6b43dfe8b37dfbd88b6fb93e79722fb0e49f30d97425cf",
       "olean_sha256": "fd2750e8cafa81e6a12925345a23fb6a4fa043c765be7ab2f40130a0cf92e749",
       "axiom_reports": 4,
-      "seconds": 7.817
+      "seconds": 8.11
     },
     "IPDProfileCountable": {
       "fingerprint": "545a20e06405115f0e404bfea3f604e25867c3b2295da309accb4a08e899a125",
       "olean_sha256": "be782df046367026de72edfb854bee4c564daf2cc7758ce53ef57ffc19bb7d89",
       "axiom_reports": 2,
-      "seconds": 7.855
+      "seconds": 8.21
     },
     "IPDDemandCore": {
       "fingerprint": "55fa2a8c022b017ac12374833bec6a4da86bc011e51fa64583c811a05c500b60",
       "olean_sha256": "827efee4b645100d7cf2e11a00eebf26a4a727bbd9b1cd97682c43c106e7b555",
       "axiom_reports": 3,
-      "seconds": 8.041
+      "seconds": 8.507
     },
     "IPDDemandRecursion": {
       "fingerprint": "7b49ed258b84a8c2332d159b6920a9b285da14250ee1f4860008c44059442a76",
       "olean_sha256": "cb73d18ed8e78342907192dca37e9de1b57ac4adf008befa0d6e9bd6bcb5ea4e",
       "axiom_reports": 3,
-      "seconds": 7.931
+      "seconds": 8.401
     },
     "IPDTreeSupport": {
       "fingerprint": "864a12a66d2baf1b39852f44beb2696140d4edd73f161d9f8beddfb91894e168",
       "olean_sha256": "be498622749691c10a3de1441beefd8dc8462a19834e88645fe24d437b72d0f9",
       "axiom_reports": 3,
-      "seconds": 7.732
+      "seconds": 8.222
     },
     "IPDProfileValidity": {
       "fingerprint": "aa94dd7e803f3256badc29281dddf3dd99e4ec3f4e27650a7240680ed3fa9e99",
       "olean_sha256": "df0486ce59808af78a267f0244dc485ac2c5c0953f002d465a6d7221bb5075cb",
       "axiom_reports": 3,
-      "seconds": 7.7
+      "seconds": 8.455
     },
     "IPDProfileSubstitution": {
       "fingerprint": "a69f865f9b473a7d0db8142949293d5bb0ae393dee96f1ad806864bf8abbbf35",
       "olean_sha256": "df567b784890512516f4fd42c8b532dde62dd7e0107be25c8b49e397c62f067a",
       "axiom_reports": 3,
-      "seconds": 7.538
+      "seconds": 8.277
     },
     "IPDTemplates": {
       "fingerprint": "87e6429f458a206e297235c0a6765e12177210ebc39ff680c6c97e965d3deda6",
       "olean_sha256": "956a6951da55a36e2698df095d0879f953bd3a9fb1ad2ddb2d0609e4cb008b99",
       "axiom_reports": 4,
-      "seconds": 8.015
+      "seconds": 8.747
     },
     "IPDWitnesses": {
       "fingerprint": "282b50264725c1c437b1d3fbec4f64316805857972f925c97d705a458fbe93f8",
       "olean_sha256": "25f301af32615ce7724b0953c0d51baeed483505c14158ca984078decbf8901a",
       "axiom_reports": 5,
-      "seconds": 8.255
+      "seconds": 8.891
     },
     "IPDEndpointAgreement": {
       "fingerprint": "1cea2735cba87926c8c04af42b33702c202112f1231bd5d1103d97661c8c7bf9",
       "olean_sha256": "0a16f09baf686300cce91967ba5f7d3a1e7ffd11bc34527e522874f10f88d542",
       "axiom_reports": 4,
-      "seconds": 8.102
+      "seconds": 8.586
     },
     "IPDClosedSupply": {
       "fingerprint": "0c543cd27dc83b6796901d27f07a26f42dcdbc9491cd0e78a17d3b9d8df1b1b7",
       "olean_sha256": "7337d8ab5ce03e6b3c0d004b67d76c070690d12a47d3170174e3db71cae445ae",
       "axiom_reports": 4,
-      "seconds": 8.101
+      "seconds": 8.584
     },
     "IPDFiniteLabels": {
       "fingerprint": "779294c77054de8a30464693622c88a5a880c9dd9f1a9d1083f5611848a652f4",
       "olean_sha256": "51456baa8f5eed8b791c9e7ff299d8c6f251d8e9e33ce993596ce294d3af4c60",
       "axiom_reports": 3,
-      "seconds": 8.05
+      "seconds": 8.528
     },
     "IPDInitialRepresentation": {
       "fingerprint": "ebe3967a5c9ee44b3df61bf7ee3c834f8e88ec3b2df3b9de3089b768abf52c87",
       "olean_sha256": "25fd3f713bdbb6b1d91b72c6890d65ea2278744fdada9622791f37a44ca70532",
       "axiom_reports": 2,
-      "seconds": 8.595
+      "seconds": 8.999
     },
     "IPDGraphNormalization": {
       "fingerprint": "33343c9d2349a5c1529fb50888d097f9a3edbf2b16ac1f06ac205b6732d89e2b",
       "olean_sha256": "2a11885f5a96618d1ea23a346493190f0612357f46b3d980eb67f11ea70993f6",
       "axiom_reports": 4,
-      "seconds": 7.726
+      "seconds": 8.047
     },
     "IPDGraphValidity": {
       "fingerprint": "5bb9fa273a9b4e46cf1c657a8a0c10ddf686ebca2f3ea1ab32f6de2f5bee05a9",
       "olean_sha256": "0187280bc65e22ef0651b0f033c1c38b60e0019183585860f6e7e2c6c6c590f2",
       "axiom_reports": 4,
-      "seconds": 7.801
+      "seconds": 8.159
     },
     "IPDGraphController": {
       "fingerprint": "80a17dd1dec5adfee43eede00ea601e989e0957d15662f83bb8f7de505b46e74",
       "olean_sha256": "d45a32d6d6649dacc1cc10333ca6ce4625ea53a337524617a649283bafcb9726",
       "axiom_reports": 3,
-      "seconds": 7.745
+      "seconds": 8.219
     },
     "IPDSemanticEdges": {
       "fingerprint": "cb1e7405e79712c534661a1b0a1f88ef9ceeeca1b079640df0ddad67fa625c19",
       "olean_sha256": "09b0e1ae1620bd6113417fe15ce547b82c947704893b07ab2b00b53b95b829f0",
       "axiom_reports": 3,
-      "seconds": 8.082
+      "seconds": 8.851
     },
     "IPDGraphGeometry": {
       "fingerprint": "041869d7c31fdfdd8f609f846695b8a39082e5fc742b05b44d1c97a34a8127b8",
       "olean_sha256": "075720827a28275d41220057924861eb1105f6235be8338a0c8e1f9aa09f6133",
       "axiom_reports": 2,
-      "seconds": 8.274
+      "seconds": 8.682
     },
     "IPDSpliceLabels": {
       "fingerprint": "961abcafad099e6cda0867168cfaf177cafa8d5722dcfdbbe9938b2a1be4b688",
       "olean_sha256": "13a61858504b48ebbedf826e79b4d757503d2a2aab4038dd99358304e1ebdf04",
       "axiom_reports": 3,
-      "seconds": 8.367
+      "seconds": 8.9
     },
     "IPDStageFacts": {
       "fingerprint": "3b640261a5ac4cf8adece44c00e0e94577110a3237434fb1514cf00446014e5b",
       "olean_sha256": "de7516e54be2f74210b216f19ec971867b3b1b57137de1adfb577f181d361e64",
       "axiom_reports": 3,
-      "seconds": 8.733
+      "seconds": 8.959
     },
     "IPDStageSplice": {
       "fingerprint": "d63bf91d2ea2c9e0271b3fd359a181de24a4d9e9bfd7fed235b95c8533cc5426",
       "olean_sha256": "70d35836b7997f511c53bc3bf42df3a5255967f4fe726bce61c411a3f5f2acb3",
       "axiom_reports": 3,
-      "seconds": 8.741
+      "seconds": 9.073
     },
     "IPDSemanticWellFounded": {
       "fingerprint": "a6f04279af35f6c55c4a8af1ca03662f4b17034eddf97b8b3616b682f5f40c63",
       "olean_sha256": "43729b2365f054396991a2a49fceb784870b6e759fa8679bb9b76b2efacacf82",
       "axiom_reports": 3,
-      "seconds": 8.908
+      "seconds": 9.528
     },
     "IPDColumnOrder": {
       "fingerprint": "ff95cbd2a98b81c1979b0731ed5f5004457affdcade3692a5198e8bfa89c02b0",
       "olean_sha256": "6d3e17724c8b629b096737f2123f5e85ef5ff88b75c5ff83e0bce5819eba61a2",
       "axiom_reports": 3,
-      "seconds": 7.791
+      "seconds": 7.891
     },
     "IPDProfileIdentity": {
       "fingerprint": "743e2ec040f16639467466b29c0f4ca4d274aadc6a69a1ad2e52c728440cecc9",
       "olean_sha256": "3ba7e272d7546f133bbf8639db9537ae360713cb4a0575a595db191288640fa0",
       "axiom_reports": 2,
-      "seconds": 8.714
+      "seconds": 8.405
     },
     "IPDDecrease": {
       "fingerprint": "fc4172cc270ca2b75873fe95e1dc252bc89ec95bf98e9d0564c851703b26120a",
       "olean_sha256": "83d5ff3a47bbe5460d7d4dfddf1319ff59a2f0e22ad19bd7bdd96cb229213f4e",
       "axiom_reports": 2,
-      "seconds": 8.479
+      "seconds": 8.554
     },
     "IPDSeeds": {
       "fingerprint": "248c3bb594dcd87965c50ec08a76da231ef99af9c31167c11e0bbab3c7c7d078",
       "olean_sha256": "8e33251a6af4295c5d84741abf6ddfa99f067c85aa0ec82a0e5abe0f83bc56dc",
       "axiom_reports": 2,
-      "seconds": 8.205
+      "seconds": 8.475
     },
     "IPDStandardOrder": {
       "fingerprint": "9c699e322265b84e6898ee7b790929d6e0583ad9c3d8581ebe12f6aedbda5889",
       "olean_sha256": "0e5de51c811af50458248d75da168410272cee78ce112852d28231c04af21cda",
       "axiom_reports": 3,
-      "seconds": 8.56
+      "seconds": 9.155
     },
     "IPDTreeCompare": {
       "fingerprint": "4461c87c6911e9d2036e102af3e155b77361c861b0469177013a18253489a38d",
       "olean_sha256": "4598876b2e7a33abfd988a671fa67d06db51509799b2e52137517d8e58604603",
       "axiom_reports": 3,
-      "seconds": 8.265
+      "seconds": 8.817
     },
     "SixNotationFinalAudit": {
       "fingerprint": "9717eec89c0bdcb137cd306c84988a052df98b6e06eae49c29ad8f516e3198f4",
       "olean_sha256": "d76f156fd503f3a395360ecf54a53e86a17ad29c9e8d2430d775b1251b4c7fe6",
       "axiom_reports": 10,
-      "seconds": 9.571
-    },
-    "ARD2Core": {
-      "fingerprint": "c1b745ede54707a577f32411d01eda2e10fe28c892f0dceee554bb391a165188",
-      "olean_sha256": "af71e3b297a3e4e67ee9133334c5670c70841d0da4b7d7bf85163c4f82cf36c1",
-      "axiom_reports": 0,
-      "seconds": 2.378
-    },
-    "ARD2DemandCore": {
-      "fingerprint": "3c9e749d79e33bbde58299e06cdd0f1771a89ff8b1e71490a6b899fc266186f8",
-      "olean_sha256": "cebf1e9c7d2a144663f210b51f0f7b65c009221be227c9c3c519553c5f9a39a2",
-      "axiom_reports": 1,
-      "seconds": 8.303
-    },
-    "ARD2DemandRecursion": {
-      "fingerprint": "d1877ce15d8f493845e3cad24c6518f71a927e7c3b8c268f74ad75d1298d32d9",
-      "olean_sha256": "7d9bda77bdfa8fc84999130c79e73c074edf3048fb1868764675d19e18d22871",
-      "axiom_reports": 1,
-      "seconds": 8.062
-    },
-    "ARD2DemandReflection": {
-      "fingerprint": "ff529060742c6d3a95c6be3cf316a411229c903e3e343380ad52061615d5f966",
-      "olean_sha256": "14785073d3091fa595b40b170a87e8166fbbd89918a879be9004e281e6ebea6f",
-      "axiom_reports": 4,
-      "seconds": 8.584
-    },
-    "ARD2Templates": {
-      "fingerprint": "d71ed66791e2e4da558711a1bba9086b4afeeabce55d260a1f5ef37c278c07f6",
-      "olean_sha256": "fa0448134014b6bdcd1646c6fd85268a9175e10cfd928b799b39106e5d42b9ff",
-      "axiom_reports": 2,
-      "seconds": 8.535
-    },
-    "ARD2Witnesses": {
-      "fingerprint": "f409d52f046d7b879e8c2c5ec636c415afad879d531315e648fbf7112c93b632",
-      "olean_sha256": "4e53619ea1b8dc8bab58255aef9f6cb1a2fe09035d3e3c5e7f65d1ecce1ae681",
-      "axiom_reports": 5,
-      "seconds": 8.637
-    },
-    "ARD2EndpointAgreement": {
-      "fingerprint": "bb3e0c80d4ddd179d80e209878ef3c5a979d320356da63165e89f0158f328c25",
-      "olean_sha256": "e21a5e7a7338c76b39fbf9e7894effda77f30613b87625aef282f94bd7323b09",
-      "axiom_reports": 4,
-      "seconds": 8.72
-    },
-    "ARD2ClosedSupply": {
-      "fingerprint": "ae67943f3b9228bfb5a6aa57d5b6dc80f762738d2298a15e79067972d88c0406",
-      "olean_sha256": "d19e850d21e118c615b55d3a9042bb81537878a61e19dcb66bea55065e20f83f",
-      "axiom_reports": 4,
-      "seconds": 8.879
-    },
-    "ARD2InitialRepresentation": {
-      "fingerprint": "89e801170310f2452c959af125c8fc133b4de5db338206218342eb108ce42834",
-      "olean_sha256": "738b1400bcae935a07d34bfe484fb86132357a59be3dddcd101002eabe59b00d",
-      "axiom_reports": 2,
-      "seconds": 8.754
-    },
-    "ARD2Structure": {
-      "fingerprint": "4a3cbf255766a88feb2dc029a2aaa658c088db6fd4f9f69764c094046ed7aaba",
-      "olean_sha256": "29f52f98403e50645da7de11d8cd7525d8e4fa99673f644823fd5691a0fafaec",
-      "axiom_reports": 6,
-      "seconds": 3.003
-    },
-    "ARD2Splice": {
-      "fingerprint": "8aaae03d1a9dce7606538ccb0ebb034616aaa31f7cac8442d5c6765f6fef2e93",
-      "olean_sha256": "618b0205cef2b92c592a1f3317a246f5315efccbdb1a19a7285eae9297f001eb",
-      "axiom_reports": 5,
-      "seconds": 2.369
-    },
-    "ARD2StageDemands": {
-      "fingerprint": "73279845156760403afa12807046aca9d363da32ec54da6d9e89b7ab92889ef6",
-      "olean_sha256": "ea6e2fb7409a82b491018f7a734f2aa85713e2912bf6b100cd865e7e30589554",
-      "axiom_reports": 3,
-      "seconds": 2.516
-    },
-    "ARD2StageProof": {
-      "fingerprint": "d3b3fc978773551b3f31286e9e2d50dc7663ab68e24e1141b0dad00720f3dfcd",
-      "olean_sha256": "8c45bf5304e6831efaabce1a322e068fa1f738d9e1bed076e1305814443083dd",
-      "axiom_reports": 3,
-      "seconds": 2.721
-    },
-    "ARD2Domain": {
-      "fingerprint": "5ed2455803e431d1e4059da0aa961effbcd851dd56be28c19bb040b50d912079",
-      "olean_sha256": "405eaead8c53395331651dac31edefbc8a47099b7deb53d3583331122b2698c8",
-      "axiom_reports": 4,
-      "seconds": 2.388
-    },
-    "ARD2SemanticWellFounded": {
-      "fingerprint": "53dc3024b20527d808e9fb2fdb0befdecd120a029a8ad7715601b972d73d0be7",
-      "olean_sha256": "b6f78ad81616f0bd0d2326c6be62fd38a33980037cc0cb9cad36ca3d73b6e00b",
-      "axiom_reports": 3,
-      "seconds": 2.373
-    },
-    "ARD2Decrease": {
-      "fingerprint": "20e52ddd1cbfe6de6912a4ebd40ca3ff3c6909d949c51ccd7cac8b2814c9b85c",
-      "olean_sha256": "3783e5a9f5b1775085fac6832287148fe70462b472a91c73e574a959ecd694b8",
-      "axiom_reports": 4,
-      "seconds": 2.578
-    },
-    "ARD2OrderReduction": {
-      "fingerprint": "86cf8c4378545db554b6cff675f37d6ef34b6215bff417d67e57565707399ebb",
-      "olean_sha256": "f70b0a5b68a3ddf48c5bf7314274e5fae70e469286dc47feb947f00fc7c71034",
-      "axiom_reports": 6,
-      "seconds": 2.339
-    },
-    "ARD2FiniteUnion": {
-      "fingerprint": "c05b7b07dddb5d6acc705bb95a2728a2c4dfd1957b6fae29d6d59436afa3690f",
-      "olean_sha256": "5891c82eb12e558e61615ed12e3dca9ed06c22d551fe0361a9e0300887e963cc",
-      "axiom_reports": 8,
-      "seconds": 3.33
-    },
-    "ARD2DefinitionFidelity": {
-      "fingerprint": "0208bd9c30a18af47e513f19525ffaf32f6406379df454f68b30fd9b1492517d",
-      "olean_sha256": "8f32e63875b2d2f4fbb081f933af6b901c1757e4b10c0029d06d0dcc8de5cdb1",
-      "axiom_reports": 6,
-      "seconds": 2.406
-    },
-    "ARD2Final": {
-      "fingerprint": "54e37ea46f717b527ff5c4f07a97c81a7a7b1e6e3d22db951d0e30bed3dc8abd",
-      "olean_sha256": "00c6b820b6e5ed15139fa3aece67a7072343e85418784e5ea6e8bc7b66b141e5",
-      "axiom_reports": 7,
-      "seconds": 8.64
-    },
-    "ARD2Compression": {
-      "fingerprint": "a6a295f7af0d805a688b799e8a111a55c2c93d763848d68bc01adce3ae7c0f61",
-      "olean_sha256": "dd443059f7550508db569020ca65b49c48c059223123b86053fb0d1302ce2db4",
-      "axiom_reports": 5,
-      "seconds": 2.764
-    },
-    "SevenNotationFinalAudit": {
-      "fingerprint": "4dd0b55bd09a219b9cc853d3d3f6d789720dde7ea4f819c5bebfe9e1be1a1bcc",
-      "olean_sha256": "e60dc5a6c366a1da74643611bdf26c77be8025ab99754fbf516f4b82bf9a5a2e",
-      "axiom_reports": 9,
-      "seconds": 9.857
+      "seconds": 10.201
     }
   },
   "complete": true,
@@ -1942,32 +1811,31 @@
     "seconds_per_module": 120
   },
   "external_artifacts": "Lean and Mathlib/dependency artifacts supplied by the dependency environment",
-  "axiom_reports": 866,
-  "wall_seconds": 0.216,
-  "compiler_version_output": "Lean (version 4.33.1, x86_64-w64-windows-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)\n",
+  "axiom_reports": 774,
+  "wall_seconds": 0.195,
   "verified_on": "2026-09-14",
   "verification_kind": "Fresh full proof-source rebuild; final source-fingerprint consistency pass completed",
-  "bundled_modules": 310,
+  "bundled_modules": 288,
   "external_bms_modules": 12,
-  "total_proof_modules": 322,
+  "total_proof_modules": 300,
   "proof_modules_rebuilt_from_source": true,
   "mathlib_rebuilt_from_source": false,
   "network_bootstrap_tested": false,
   "lake_configuration_checked": true,
-  "lake_configuration_check": "Actual Lake loaded the exact published configuration offline with local overrides for pinned external packages; Workspace.findModules and default enumeration checked all 310 modules uniquely. This was not lake build.",
+  "lake_configuration_check": "Actual Lake loaded this configuration offline with local overrides for pinned external packages",
   "lake_module_ownership_checked": true,
-  "lake_default_module_enumeration_checked": true,
-  "lake_version": "Lake version 5.0.0-src+819816b (Lean version 4.33.1)",
-  "lake_roots": 107,
-  "lake_default_modules": 310,
-  "full_rebuild_wall_seconds": 1638.176,
-  "final_consistency_pass_wall_seconds": 0.216,
+  "full_rebuild_wall_seconds": 1657.966,
+  "final_consistency_pass_wall_seconds": 0.195,
   "axioms_used": [
     "Classical.choice",
     "Quot.sound",
     "propext"
   ],
   "source_hash_convention": "SHA-256 after CRLF to LF normalization",
+  "sources_manifest_sha256_lf": "5dca803e3cc4a78763d577b8cd29c99a18f82e92bbd5fab07b904ad2cf151c0e",
+  "build_script_sha256_lf": "483bdcc1d244bc4f24651e47c9f2687f259c66231df87f4c16d7bcfc1b950179",
+  "lakefile_sha256_lf": "d2c32655f891b4006af2c1ca78e4818754915f4ad58a1d451939aff40bed5ecb",
+  "lake_manifest_sha256_lf": "98d305580a705417e33b4afeaa12210d0486b979eeebececd4254176dd5f2153",
   "final_logs": {
     "FiniteDemandYFinal": {
       "path": "verification/FiniteDemandYFinal.log",
@@ -2033,39 +1901,13 @@
       "path": "verification/FourNotationFinalAudit.log",
       "sha256_lf": "adf914a1e6c064b5e3ead37c21fbf1f70f7a18927fece5aa88e8e8a2bbdca935",
       "axiom_reports": 7
-    },
-    "ARD2Final": {
-      "path": "verification/ARD2Final.log",
-      "sha256_lf": "07b626ad9c9b1c9873d3d83607c43ce1d95880679c01b9f355d954663d8abb44",
-      "axiom_reports": 7
-    },
-    "ARD2Compression": {
-      "path": "verification/ARD2Compression.log",
-      "sha256_lf": "cf1bd78f74f760ec1ea813e633e97e3d5270f6e342a6d96c036bc0fc1fdb89ef",
-      "axiom_reports": 5
-    },
-    "ARD2DefinitionFidelity": {
-      "path": "verification/ARD2DefinitionFidelity.log",
-      "sha256_lf": "b895fc61dc383f2d641c9d34e29380bca0b7ed00075d0773157b7a4d29ab0c63",
-      "axiom_reports": 6
-    },
-    "SevenNotationFinalAudit": {
-      "path": "verification/SevenNotationFinalAudit.log",
-      "sha256_lf": "2cbf74cb184e37186e369464f1e86de1b121727252f73aaca3385482f977f6e8",
-      "axiom_reports": 9
     }
   },
   "limits_explanation": "One compiler process at a time, one Lean thread, 2048 MiB compiler cap, 120 seconds per module",
-  "scope": "Ordinary classical Lean proofs for Y, RPD, LRD, Omega-LRD3, ARD, IPD and ARD2, not object-language KP derivations. Y uses the pinned upstream definition, not a global JavaScript equivalence theorem. ARD and ARD2 include independent finite-rule and compressed/full-root bridges. ARD2 constructs both SELF endpoint cases and its actual full-context staged splice. IPD includes the actual recursive tree comparison and full staged-splice descent, with a separate paper audit for JavaScript pruning. No compiler-level Python or JavaScript verification or relative order-type comparison is claimed.",
-  "target": "SevenNotationFinalAudit",
-  "sources_manifest_sha256_lf": "ae48de6ba8dc513320495956f65301e3ee67c6bf47fb0a1b72ccbd70af2f1463",
-  "build_script_sha256_lf": "d1ccdb2cb49be90b6c1040c067741a8bfa06ff7b245a9c23944a2995cce29942",
-  "lakefile_sha256_lf": "ad0cdc3c73808b854404ff6d15c67dc35a29932e5307604636f9312f8600560f",
-  "lake_manifest_sha256_lf": "98d305580a705417e33b4afeaa12210d0486b979eeebececd4254176dd5f2153",
+  "scope": "Ordinary classical Lean proofs for Y, RPD, LRD, Omega-LRD3, ARD and IPD, not object-language KP derivations; Y is the pinned upstream definition, not a global JavaScript equivalence theorem; ARD includes independent finite-rule and compressed/full-root bridges. IPD includes the actual recursive tree comparison and full staged-splice descent, with a separate paper audit for JavaScript pruning correspondence; no compiler-level Python or JavaScript verification is claimed.",
+  "target": "SixNotationFinalAudit",
   "historical_four_system_receipt": "verification/FourNotation-VERIFICATION.json",
   "historical_four_system_receipt_sha256_lf": "cb8bde7c763f6ab4d8118bfe85684d1d37088ceb1c606f48434794cf7632f900",
   "historical_five_system_receipt": "verification/FiveNotation-VERIFICATION.json",
-  "historical_five_system_receipt_sha256_lf": "f685548c3c20e994e7fec67406c3d0c93a37730bf07a3d1d282a91c1bab55e08",
-  "historical_six_system_receipt": "verification/SixNotation-VERIFICATION.json",
-  "historical_six_system_receipt_sha256_lf": "8e215e13bf550a7a14d10ffaf5d032403b7e283453a6079d9b1b65b848bc2e78"
+  "historical_five_system_receipt_sha256_lf": "f685548c3c20e994e7fec67406c3d0c93a37730bf07a3d1d282a91c1bab55e08"
 }

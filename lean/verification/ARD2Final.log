@@ -1,0 +1,7 @@
+'OrdinalFormal.ARD2.valid_accessible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.ARD2.valid_step_wellFounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.ARD2.standard_wellFounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.ARD2.standard_total' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.ARD2.standard_strictWellOrder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.ARD2.standard_with_top_strictWellOrder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.ARD2.paper_standard_with_top_strictWellOrder' depends on axioms: [propext, Classical.choice, Quot.sound]

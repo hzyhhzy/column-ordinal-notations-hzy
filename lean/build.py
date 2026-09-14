@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Bounded, source-closed verification of the six ordinary Lean proofs."""
+"""Bounded, source-closed verification of the seven ordinary Lean proofs."""
 from __future__ import annotations
 
 import argparse
@@ -101,6 +101,25 @@ def inventory(bms_root: Path, allow_missing_external: bool = False) -> tuple[lis
     if any(not any(module == root or module.startswith(root + ".") for root in lake_roots)
            for module in bundled):
         raise ValueError("A bundled source is not owned by the declared Lake library")
+    # Lake's buildable-module lookup depends on globs, not roots alone. A glob
+    # containing only the joint audit leaves its imported local modules unknown.
+    # This release uses explicit .one/.submodules entries, checked exactly here.
+    glob_match = re.search(r"globs\s*:=\s*#\[([^\]]+)\]", config)
+    if not glob_match:
+        raise ValueError("Lake library globs not found")
+    glob_text = glob_match.group(1)
+    entries = re.findall(r"\.(one|submodules|andSubmodules)\s+`([\w.]+)", glob_text)
+    residue = re.sub(r"\.(one|submodules|andSubmodules)\s+`([\w.]+)", "", glob_text)
+    if residue.replace(",", "").strip():
+        raise ValueError("Unsupported Lake glob expression; update this exact-inventory check")
+    selected = []
+    for kind, name in entries:
+        if kind != "submodules":
+            selected.append(name)
+        if kind != "one":
+            selected.extend(m for m in bundled if m.startswith(name + "."))
+    if set(selected) != bundled or len(selected) != len(bundled):
+        raise ValueError("Lake globs must enumerate every bundled source exactly once, without missing sources")
     return ordered, records, external, found
 
 
