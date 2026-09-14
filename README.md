@@ -66,6 +66,10 @@ The separate [research directory](research/README.md) contains derivations and c
 
 Supporting manuscripts and candidate data are included. Experimental code and private source manuscripts are not bundled. Historical test reports and the current status of the formal proofs must be read separately.
 
+## Documents for AI readers
+
+The [AI reading collection](ai-docs/README.md) contains bilingual onboarding, design, and handoff documents. Its first guide is **Designing Beautiful Fundamental-Sequence Ordinal Notations** ([English](ai-docs/fundamental-sequence-aesthetics.md) · [中文](ai-docs/fundamental-sequence-aesthetics.zh-CN.md)): column-based syntax, prefix-preserving expansion, exact count-sequence comparison, concise internal structure, and substantive strength improvements. These guides provide requirements and explanations, not additional Lean certificates or unqualified order-type comparisons.
+
 ## Checks and PDF regeneration
 
 Run the bounded expander and build-verifier tests from this directory:
@@ -114,6 +118,7 @@ notations/
   SPD/                           Bilingual definitions, PDFs, list/count JS, Python, count decoder
 proofs/paper/                    Joint, ARD, IPD, ARD2 proofs and SPD manuscript; correspondence audit
 research/                       Comparison drafts, candidates and historical research notes
+ai-docs/                        Bilingual guides and handoff documents for AI readers
 lean/                           Source closure, dependency pins, bounded build
 tests/                          Bounded expander and verifier regression tests
 tools/                          Reproducible PDF generation and QA

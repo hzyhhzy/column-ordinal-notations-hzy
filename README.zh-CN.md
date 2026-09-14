@@ -66,6 +66,10 @@ Y 指固定上游提交 `1689b21131b488ec2ba2515bd630360371a2389d` 的继承祖�
 
 关键原稿与候选数据一并保存，实验代码及私人来源稿不随文档归档。历史测试记录与正式仓库当前证明进度应分别阅读。
 
+## 给 AI 阅读的文档
+
+[AI 阅读文档目录](ai-docs/README.zh-CN.md) 收集双语入门指南、设计要求与交接文档。首篇为**设计基本列型序数记号的美观性**（[中文](ai-docs/fundamental-sequence-aesthetics.zh-CN.md) · [English](ai-docs/fundamental-sequence-aesthetics.md)），介绍列式语法、前缀保持的展开、精确计数序列比较、简洁的内部结构及实质强度提升。这些指南提供要求和解释，不构成新增的 Lean 证书或无条件的序型比较结论。
+
 ## 验证与重新生成 PDF
 
 在本目录运行有界展开器测试：
@@ -114,6 +118,7 @@ notations/
   SPD/                           双语定义、PDF、列表／计数 JS、Python、计数解码器
 proofs/paper/                    合写、ARD、IPD、ARD2 证明及 SPD 论证稿、定义对应审计
 research/                       比较推导、未证候选及历史研究文稿
+ai-docs/                        给 AI 阅读的双语指南与交接文档
 lean/                           源码依赖集合、固定版本与有界构建工具
 tests/                          有界展开器与构建验证器回归测试
 tools/                          可复现 PDF 生成及 QA
