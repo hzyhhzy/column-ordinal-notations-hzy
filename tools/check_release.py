@@ -17,6 +17,7 @@ NER_HASHES = {
     'notations/LRD/LRD.ne-rewritten.js': '394fe4763e82708a99d66c2d88d3926c86c4be92ec35174b9205a292550740b1',
     'notations/Omega-LRD3/Omega-LRD3.ne-rewritten.js': 'fe33b1a35891e9efb9eb5932ab94456053769b6b58df41ea9f36eb57a262f3ab',
     'notations/ARD/ARD-arcs.ne-rewritten.js': 'ab4f05ef1fb65b6308e710cbbc98c173310f9c3073ce3a57082863af708841d6',
+    'notations/IPD/IPD.ne-rewritten.js': 'acc1a1c2ae260da9be7d13e14ac17d84a92679f82efe97aa85cd0e3b072f6011',
 }
 
 
@@ -81,7 +82,7 @@ def check_lean_receipt(problems):
             problems.append(f'Stale Lean verification input hash: {relative}')
     logs = receipt.get('final_logs', {})
     required = {'FiniteDemandYFinal', 'FiniteDemandRPDFinal', 'FiniteDemandLRDFinal',
-                'OmegaLRD3Final', 'ARDFinal', manifest['target']}
+                'OmegaLRD3Final', 'ARDFinal', 'IPDStandardOrder', 'IPDTreeCompare', manifest['target']}
     if not required <= set(logs):
         problems.append('Lean verification receipt is missing current final theorem logs')
     allowed_axioms = {'propext', 'Classical.choice', 'Quot.sound'}
@@ -134,16 +135,16 @@ def main():
                 problems.append(f'Broken link: {path.relative_to(ROOT)} -> {target}')
     expected_pdfs = {
         f'notations/{notation}/definition{lang}.pdf'
-        for notation in ('RPD','LRD','Omega-LRD3','ARD') for lang in ('','.zh-CN')
+        for notation in ('RPD','LRD','Omega-LRD3','ARD','IPD') for lang in ('','.zh-CN')
     } | {f'proofs/paper/{paper}{lang}.pdf'
-         for paper in ('well-ordering','ard-well-ordering') for lang in ('','.zh-CN')}
+         for paper in ('well-ordering','ard-well-ordering','ipd-well-ordering') for lang in ('','.zh-CN')}
     actual_pdfs = {p.relative_to(ROOT).as_posix() for p in pdfs}
     if actual_pdfs != expected_pdfs:
         problems.append(f'PDF inventory mismatch: {actual_pdfs ^ expected_pdfs}')
     for path in pdfs:
         if not path.with_suffix('.md').is_file() or path.stat().st_size < 1000:
             problems.append(f'Invalid PDF/source pair: {path.relative_to(ROOT)}')
-    if {p.name for p in (ROOT/'notations').iterdir() if p.is_dir()} != {'RPD','LRD','Omega-LRD3','ARD'}:
+    if {p.name for p in (ROOT/'notations').iterdir() if p.is_dir()} != {'RPD','LRD','Omega-LRD3','ARD','IPD'}:
         problems.append('Unexpected notation directory')
     for relative, expected in NER_HASHES.items():
         actual = hashlib.sha256((ROOT/relative).read_bytes()).hexdigest()

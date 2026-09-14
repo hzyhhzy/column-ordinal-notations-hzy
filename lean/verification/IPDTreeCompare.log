@@ -1,0 +1,3 @@
+'IPD.Tree.cmp_node_rule' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IPD.Tree.cmp_zero_node' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IPD.Tree.cmp_node_zero' depends on axioms: [propext, Classical.choice, Quot.sound]

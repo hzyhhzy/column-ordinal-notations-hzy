@@ -1,4 +1,4 @@
-"""Render the twelve bilingual definition/proof PDFs; no network is used.
+"""Render the sixteen bilingual definition/proof PDFs; no network is used.
 
 Requires Pandoc, Node with mathjax-full/sharp, reportlab, pypdf, and local fonts.
 The output files sit beside their Markdown sources. Formula PNGs are temporary.
@@ -342,7 +342,9 @@ class Renderer:
         destination = self.source.with_suffix('.pdf')
         label = self.source.parent.name
         if label == 'paper':
-            label = 'ARD' if self.source.name.startswith('ard-') else 'Y · RPD · LRD · Ω-LRD3'
+            label = ('IPD' if self.source.name.startswith('ipd-') else
+                     'ARD' if self.source.name.startswith('ard-') else 'Y · RPD · LRD · Ω-LRD3')
+        publication_date = '2026-09-14' if label == 'IPD' else '2026-09-13'
         doc = SimpleDocTemplate(str(destination), pagesize=A4,
                                 leftMargin=50, rightMargin=50, topMargin=48, bottomMargin=48,
                                 title=label + (' - 中文' if self.zh else ' - English'),
@@ -354,7 +356,7 @@ class Renderer:
             canvas.line(50, 35, PAGE_W-50, 35)
             canvas.setFillColor(colors.HexColor('#607284'))
             canvas.setFont('CJK', 7.4)
-            canvas.drawString(50, 23, label + '  |  2026-09-13')
+            canvas.drawString(50, 23, label + '  |  ' + publication_date)
             canvas.drawRightString(PAGE_W-50, 23, str(document.page))
 
         doc.build(self.blocks(ast['blocks']), onFirstPage=footer, onLaterPages=footer)
@@ -380,9 +382,9 @@ def main():
     args = parser.parse_args()
     sources = [ROOT / p for p in args.sources] if args.sources else [
         ROOT / f'notations/{notation}/definition{lang}.md'
-        for notation in ('RPD', 'LRD', 'Omega-LRD3', 'ARD') for lang in ('', '.zh-CN')
+        for notation in ('RPD', 'LRD', 'Omega-LRD3', 'ARD', 'IPD') for lang in ('', '.zh-CN')
     ] + [ROOT / f'proofs/paper/{paper}{lang}.md'
-         for paper in ('well-ordering', 'ard-well-ordering') for lang in ('', '.zh-CN')]
+         for paper in ('well-ordering', 'ard-well-ordering', 'ipd-well-ordering') for lang in ('', '.zh-CN')]
     for source in sources:
         if not source.is_file():
             raise FileNotFoundError(source)

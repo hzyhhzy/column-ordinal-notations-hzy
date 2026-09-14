@@ -1,5 +1,5 @@
 {
-  "target": "FiveNotationFinalAudit",
+  "target": "SixNotationFinalAudit",
   "modules": {
     "OrdinalFormal.ReflectionTransport": {
       "source": "ordinal-formalization/OrdinalFormal/ReflectionTransport.lean",
@@ -2691,6 +2691,449 @@
       "original_sha256_lf": "2a8e914dbb7ea3bf7697e5da48afba649a18541f6ed03d1bcda13ba6f0e33e3e",
       "distribution": "bundled local proof source",
       "release_change": "One redundant trailing blank line removed; proof source otherwise unchanged."
+    },
+    "IPDClosedSupply": {
+      "source": "ordinal-formalization/ipd/ClosedSupply.lean",
+      "imports": [
+        "IPDEndpointAgreement",
+        "FiniteDemandFinitaryClosure",
+        "FiniteDemandOrdinalHeight"
+      ],
+      "sha256": "87b75ed7716ac12d9d5e0446309cdb35097ec03249ad9dc60746992b2f0e798b",
+      "origin": "local",
+      "original_sha256_lf": "87b75ed7716ac12d9d5e0446309cdb35097ec03249ad9dc60746992b2f0e798b",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDColumnOrder": {
+      "source": "ordinal-formalization/ipd/ColumnOrder.lean",
+      "imports": [
+        "IPDGraphController"
+      ],
+      "sha256": "777f2503ee7ce2eb1612aec6ea2d5cd469d9737c08cd402a6e4dbd97b564bce8",
+      "origin": "local",
+      "original_sha256_lf": "777f2503ee7ce2eb1612aec6ea2d5cd469d9737c08cd402a6e4dbd97b564bce8",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDDecrease": {
+      "source": "ordinal-formalization/ipd/Decrease.lean",
+      "imports": [
+        "IPDColumnOrder",
+        "IPDProfileIdentity"
+      ],
+      "sha256": "f5274037c0897f76eddd0181fe67bb5ce014c9c3b7874f74b4ee7d6c2d15d576",
+      "origin": "local",
+      "original_sha256_lf": "f5274037c0897f76eddd0181fe67bb5ce014c9c3b7874f74b4ee7d6c2d15d576",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDDemandCore": {
+      "source": "ordinal-formalization/ipd/DemandCore.lean",
+      "imports": [
+        "IPDGraphCore",
+        "IPDProfileCountable",
+        "Mathlib.SetTheory.Ordinal.Basic"
+      ],
+      "sha256": "d72160757f920923287b1fb6441b42a5d84f6e1e5c900b2e667f873d215051a2",
+      "origin": "local",
+      "original_sha256_lf": "d72160757f920923287b1fb6441b42a5d84f6e1e5c900b2e667f873d215051a2",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDDemandRecursion": {
+      "source": "ordinal-formalization/ipd/DemandRecursion.lean",
+      "imports": [
+        "IPDDemandCore"
+      ],
+      "sha256": "2ee79da927b4c5edf53972bceb40e894323f503a90cfd131177c39e2f33c419d",
+      "origin": "local",
+      "original_sha256_lf": "2ee79da927b4c5edf53972bceb40e894323f503a90cfd131177c39e2f33c419d",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDEndpointAgreement": {
+      "source": "ordinal-formalization/ipd/EndpointAgreement.lean",
+      "imports": [
+        "IPDWitnesses"
+      ],
+      "sha256": "bf85784026031532d22f643c3c859ebdd48ce27fe6d3dc4d6ab4dfd43a61c21d",
+      "origin": "local",
+      "original_sha256_lf": "bf85784026031532d22f643c3c859ebdd48ce27fe6d3dc4d6ab4dfd43a61c21d",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDFiniteLabels": {
+      "source": "ordinal-formalization/ipd/FiniteLabels.lean",
+      "imports": [
+        "IPDTemplates"
+      ],
+      "sha256": "2e92215983046a2072861a3cfeaaaf242ed4de946cc0eb796391b170e3fe3e98",
+      "origin": "local",
+      "original_sha256_lf": "2e92215983046a2072861a3cfeaaaf242ed4de946cc0eb796391b170e3fe3e98",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDGraphController": {
+      "source": "ordinal-formalization/ipd/GraphController.lean",
+      "imports": [
+        "IPDGraphValidity"
+      ],
+      "sha256": "57f6b5894be77642dc3797cdd315692b40188552d994e32a6a9485a6ff76dabe",
+      "origin": "local",
+      "original_sha256_lf": "57f6b5894be77642dc3797cdd315692b40188552d994e32a6a9485a6ff76dabe",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDGraphCore": {
+      "source": "ordinal-formalization/ipd/GraphCore.lean",
+      "imports": [
+        "IPDProfileAtoms",
+        "IPDProfileLower"
+      ],
+      "sha256": "7d4b0582bb7b21640bf3c9fea1f0bda37748ee26179bee872b6159b855dd0ae0",
+      "origin": "local",
+      "original_sha256_lf": "7d4b0582bb7b21640bf3c9fea1f0bda37748ee26179bee872b6159b855dd0ae0",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDGraphGeometry": {
+      "source": "ordinal-formalization/ipd/GraphGeometry.lean",
+      "imports": [
+        "IPDGraphValidity",
+        "OrdinalFormal.ReflectionTransport"
+      ],
+      "sha256": "1c26618aab6a18a036e909b5fee30c439475c22dc8baabb543870eb57134e0e3",
+      "origin": "local",
+      "original_sha256_lf": "1c26618aab6a18a036e909b5fee30c439475c22dc8baabb543870eb57134e0e3",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDGraphNormalization": {
+      "source": "ordinal-formalization/ipd/GraphNormalization.lean",
+      "imports": [
+        "IPDGraphCore"
+      ],
+      "sha256": "155639b0caca5ee0d3d38e27e0b95f10756923a2df3be680598311aef5174d4c",
+      "origin": "local",
+      "original_sha256_lf": "155639b0caca5ee0d3d38e27e0b95f10756923a2df3be680598311aef5174d4c",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDGraphValidity": {
+      "source": "ordinal-formalization/ipd/GraphValidity.lean",
+      "imports": [
+        "IPDGraphNormalization",
+        "IPDProfileValidity"
+      ],
+      "sha256": "647a17c7fc2f3d10c8524afc54d833d7108ba7537d60fa727e1fc8a80bd8c416",
+      "origin": "local",
+      "original_sha256_lf": "647a17c7fc2f3d10c8524afc54d833d7108ba7537d60fa727e1fc8a80bd8c416",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDInitialRepresentation": {
+      "source": "ordinal-formalization/ipd/InitialRepresentation.lean",
+      "imports": [
+        "IPDClosedSupply",
+        "IPDFiniteLabels",
+        "FiniteDemandHostAmbient"
+      ],
+      "sha256": "e56d0b593d2c92cac85e3896484e69394f5595562844078510c41ad64e0ffe7e",
+      "origin": "local",
+      "original_sha256_lf": "e56d0b593d2c92cac85e3896484e69394f5595562844078510c41ad64e0ffe7e",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDProfileAtoms": {
+      "source": "ordinal-formalization/ipd/ProfileAtoms.lean",
+      "imports": [
+        "IPDProfileRename",
+        "IPDTreeLocalRename"
+      ],
+      "sha256": "2a5336185bc3740ed7b64bd3285108345dc300e9ab73b70e61697864dfa6ef56",
+      "origin": "local",
+      "original_sha256_lf": "2a5336185bc3740ed7b64bd3285108345dc300e9ab73b70e61697864dfa6ef56",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDProfileCountable": {
+      "source": "ordinal-formalization/ipd/ProfileCountable.lean",
+      "imports": [
+        "IPDProfileOrder",
+        "Mathlib.Logic.Encodable.Basic",
+        "Mathlib.Data.Countable.Basic",
+        "Mathlib.Logic.Equiv.List"
+      ],
+      "sha256": "cbbc9d8a5cae0f67199c8c779cbe5dc68fce27860793a1170e1bd8b935cad62b",
+      "origin": "local",
+      "original_sha256_lf": "cbbc9d8a5cae0f67199c8c779cbe5dc68fce27860793a1170e1bd8b935cad62b",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDProfileIdentity": {
+      "source": "ordinal-formalization/ipd/ProfileIdentity.lean",
+      "imports": [
+        "IPDProfileSubstitution",
+        "IPDGraphGeometry"
+      ],
+      "sha256": "cafc6fe1f015c148994eff7ae388c96f239f152dcba7bc6ff09c9532667131de",
+      "origin": "local",
+      "original_sha256_lf": "cafc6fe1f015c148994eff7ae388c96f239f152dcba7bc6ff09c9532667131de",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDProfileLower": {
+      "source": "ordinal-formalization/ipd/ProfileLower.lean",
+      "imports": [
+        "IPDProfileOrder",
+        "IPDTreeLower"
+      ],
+      "sha256": "4dc318bda62e890d1fafe11bbe23b607e4e6a8deef051513015b5b5adbc9cbb9",
+      "origin": "local",
+      "original_sha256_lf": "4dc318bda62e890d1fafe11bbe23b607e4e6a8deef051513015b5b5adbc9cbb9",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDProfileOrder": {
+      "source": "ordinal-formalization/ipd/ProfileOrder.lean",
+      "imports": [
+        "IPDTreeLinearOrder",
+        "IPDTreeRename"
+      ],
+      "sha256": "8ae3097cc388192efa6d85f69b8ea0b5c87f21af8fc35b07b0af8690da2ad92f",
+      "origin": "local",
+      "original_sha256_lf": "8ae3097cc388192efa6d85f69b8ea0b5c87f21af8fc35b07b0af8690da2ad92f",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDProfileRename": {
+      "source": "ordinal-formalization/ipd/ProfileRename.lean",
+      "imports": [
+        "IPDProfileOrder"
+      ],
+      "sha256": "27a85a9305e50836833407016630c19d71cee65c0503510b98af66e0a946d912",
+      "origin": "local",
+      "original_sha256_lf": "27a85a9305e50836833407016630c19d71cee65c0503510b98af66e0a946d912",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDProfileSubstitution": {
+      "source": "ordinal-formalization/ipd/ProfileSubstitution.lean",
+      "imports": [
+        "IPDProfileValidity"
+      ],
+      "sha256": "0e73e2f0a2c88ef56b43bb5da7cebff9444e3277a3d271f46463f87df8d81112",
+      "origin": "local",
+      "original_sha256_lf": "0e73e2f0a2c88ef56b43bb5da7cebff9444e3277a3d271f46463f87df8d81112",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDProfileValidity": {
+      "source": "ordinal-formalization/ipd/ProfileValidity.lean",
+      "imports": [
+        "IPDProfileAtoms",
+        "IPDProfileLower",
+        "IPDTreeSupport"
+      ],
+      "sha256": "ab3a245fa19d506610221fd078be134740afcf1dd5ff007427c4dcd850c467b8",
+      "origin": "local",
+      "original_sha256_lf": "ab3a245fa19d506610221fd078be134740afcf1dd5ff007427c4dcd850c467b8",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDSeeds": {
+      "source": "ordinal-formalization/ipd/Seeds.lean",
+      "imports": [
+        "IPDProfileIdentity"
+      ],
+      "sha256": "433144d13d5f61b7c66413a78b6631bcd6807bcad0359044f4a61a3641c78177",
+      "origin": "local",
+      "original_sha256_lf": "433144d13d5f61b7c66413a78b6631bcd6807bcad0359044f4a61a3641c78177",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDSemanticEdges": {
+      "source": "ordinal-formalization/ipd/SemanticEdges.lean",
+      "imports": [
+        "IPDGraphController",
+        "IPDFiniteLabels"
+      ],
+      "sha256": "f9f23b9c122e8b21c1cffded80c444925bea98840cebdc3438ba90c97f6f2a87",
+      "origin": "local",
+      "original_sha256_lf": "f9f23b9c122e8b21c1cffded80c444925bea98840cebdc3438ba90c97f6f2a87",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDSemanticWellFounded": {
+      "source": "ordinal-formalization/ipd/SemanticWellFounded.lean",
+      "imports": [
+        "IPDInitialRepresentation",
+        "IPDStageSplice",
+        "OrdinalFormal.Reachability"
+      ],
+      "sha256": "c591279909400d6777a234cb945e10a48e1dcfad45205d547679ac51fafbd1c2",
+      "origin": "local",
+      "original_sha256_lf": "c591279909400d6777a234cb945e10a48e1dcfad45205d547679ac51fafbd1c2",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDSpliceLabels": {
+      "source": "ordinal-formalization/ipd/SpliceLabels.lean",
+      "imports": [
+        "IPDGraphGeometry",
+        "IPDFiniteLabels"
+      ],
+      "sha256": "958e5219ea1c8a9787519dcb1c6464612d0eb1887758f2411d7b719c56c5570b",
+      "origin": "local",
+      "original_sha256_lf": "958e5219ea1c8a9787519dcb1c6464612d0eb1887758f2411d7b719c56c5570b",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDStageFacts": {
+      "source": "ordinal-formalization/ipd/StageFacts.lean",
+      "imports": [
+        "IPDSemanticEdges",
+        "IPDSpliceLabels"
+      ],
+      "sha256": "90ce9ef191c70ac27d3f171ca4edb26834a5571e8c8255ea7263e80e8f5144f9",
+      "origin": "local",
+      "original_sha256_lf": "90ce9ef191c70ac27d3f171ca4edb26834a5571e8c8255ea7263e80e8f5144f9",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDStageSplice": {
+      "source": "ordinal-formalization/ipd/StageSplice.lean",
+      "imports": [
+        "IPDStageFacts"
+      ],
+      "sha256": "457280c5f1c96d0be044a96066d10a28a8433d6984be14b31a8631b2b6c0ff1a",
+      "origin": "local",
+      "original_sha256_lf": "457280c5f1c96d0be044a96066d10a28a8433d6984be14b31a8631b2b6c0ff1a",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDStandardOrder": {
+      "source": "ordinal-formalization/ipd/StandardOrder.lean",
+      "imports": [
+        "IPDSemanticWellFounded",
+        "IPDDecrease",
+        "IPDSeeds",
+        "ARDPrefixOrder"
+      ],
+      "sha256": "bc660f88bac50512d40698f53b22f9c191b1248a2e89ff130c3a763883782edc",
+      "origin": "local",
+      "original_sha256_lf": "bc660f88bac50512d40698f53b22f9c191b1248a2e89ff130c3a763883782edc",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDTemplates": {
+      "source": "ordinal-formalization/ipd/Templates.lean",
+      "imports": [
+        "IPDDemandRecursion",
+        "IPDProfileSubstitution"
+      ],
+      "sha256": "c456f111a9b5031c7b48c956fbc1698ca351e6a47451ce6326d990eb275e2e04",
+      "origin": "local",
+      "original_sha256_lf": "c456f111a9b5031c7b48c956fbc1698ca351e6a47451ce6326d990eb275e2e04",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDTree": {
+      "source": "ordinal-formalization/ipd/Tree.lean",
+      "imports": [
+        "Mathlib.Data.List.Shortlex"
+      ],
+      "sha256": "84631c449366013bad5a45eae2888e32a82d4ca495f696cc6bbbf9349bca65e3",
+      "origin": "local",
+      "original_sha256_lf": "84631c449366013bad5a45eae2888e32a82d4ca495f696cc6bbbf9349bca65e3",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDTreeCompare": {
+      "source": "ordinal-formalization/ipd/TreeCompare.lean",
+      "imports": [
+        "IPDTreeLinearOrder",
+        "Mathlib.Order.Compare"
+      ],
+      "sha256": "b0ae66b5070812e39d34a2878ab13a7aa4c8d2a94d224116f0d6509a5fa31e29",
+      "origin": "local",
+      "original_sha256_lf": "b0ae66b5070812e39d34a2878ab13a7aa4c8d2a94d224116f0d6509a5fa31e29",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDTreeLinearOrder": {
+      "source": "ordinal-formalization/ipd/TreeLinearOrder.lean",
+      "imports": [
+        "IPDTreeOrder",
+        "Mathlib.Order.WithBot"
+      ],
+      "sha256": "0ce025c8191c18cca149ba66b09e45f4b213ba5e603719695ad4ff9e7efc89fb",
+      "origin": "local",
+      "original_sha256_lf": "0ce025c8191c18cca149ba66b09e45f4b213ba5e603719695ad4ff9e7efc89fb",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDTreeLocalRename": {
+      "source": "ordinal-formalization/ipd/TreeLocalRename.lean",
+      "imports": [
+        "IPDTreeRename"
+      ],
+      "sha256": "71ecfc9b3a18a1310143613ceb565a3c02e95d102b7b3a63caf9fbb868f47630",
+      "origin": "local",
+      "original_sha256_lf": "71ecfc9b3a18a1310143613ceb565a3c02e95d102b7b3a63caf9fbb868f47630",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDTreeLower": {
+      "source": "ordinal-formalization/ipd/TreeLower.lean",
+      "imports": [
+        "IPDTreeLowerClosure"
+      ],
+      "sha256": "0d3e0cb50d14114d944d393256bc166ca991b68b37e7140db2982d0044b99cd3",
+      "origin": "local",
+      "original_sha256_lf": "0d3e0cb50d14114d944d393256bc166ca991b68b37e7140db2982d0044b99cd3",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDTreeLowerClosure": {
+      "source": "ordinal-formalization/ipd/TreeLowerClosure.lean",
+      "imports": [
+        "IPDTreeLinearOrder"
+      ],
+      "sha256": "78c7b3cce604291b339bfd957467f318e3d07399ed7bb7d8e5767b84d011a27f",
+      "origin": "local",
+      "original_sha256_lf": "78c7b3cce604291b339bfd957467f318e3d07399ed7bb7d8e5767b84d011a27f",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDTreeOrder": {
+      "source": "ordinal-formalization/ipd/TreeOrder.lean",
+      "imports": [
+        "IPDTreeWellFounded"
+      ],
+      "sha256": "c2643b4c9fc45b3202b581b10ae0c5cf67d8a2879de2111cedd3384bf86defa5",
+      "origin": "local",
+      "original_sha256_lf": "c2643b4c9fc45b3202b581b10ae0c5cf67d8a2879de2111cedd3384bf86defa5",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDTreeRename": {
+      "source": "ordinal-formalization/ipd/TreeRename.lean",
+      "imports": [
+        "IPDTreeOrder"
+      ],
+      "sha256": "a8c58d4b9ad6e18036e8f65dba0cc3d7b18dc2aa4c947b0327dfba9a2dce0e23",
+      "origin": "local",
+      "original_sha256_lf": "a8c58d4b9ad6e18036e8f65dba0cc3d7b18dc2aa4c947b0327dfba9a2dce0e23",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDTreeSupport": {
+      "source": "ordinal-formalization/ipd/TreeSupport.lean",
+      "imports": [
+        "IPDTreeLocalRename",
+        "IPDTreeLower"
+      ],
+      "sha256": "e9d74010a322eb7dec0b12e14c98b205c72bdb9e9653e38bd20c1f1703077b55",
+      "origin": "local",
+      "original_sha256_lf": "e9d74010a322eb7dec0b12e14c98b205c72bdb9e9653e38bd20c1f1703077b55",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDTreeWellFounded": {
+      "source": "ordinal-formalization/ipd/TreeWellFounded.lean",
+      "imports": [
+        "IPDTree"
+      ],
+      "sha256": "c5d0dd0e89349443fb015e0ddbfe3a4372d15e9021784af27763272f02b2fb7d",
+      "origin": "local",
+      "original_sha256_lf": "c5d0dd0e89349443fb015e0ddbfe3a4372d15e9021784af27763272f02b2fb7d",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "IPDWitnesses": {
+      "source": "ordinal-formalization/ipd/Witnesses.lean",
+      "imports": [
+        "IPDTemplates",
+        "Mathlib.Data.List.Shortlex"
+      ],
+      "sha256": "2449f1a71e20f362cbec4fc4c1f96174e4334ad95f64a84d03816dc9dc60db45",
+      "origin": "local",
+      "original_sha256_lf": "2449f1a71e20f362cbec4fc4c1f96174e4334ad95f64a84d03816dc9dc60db45",
+      "distribution": "bundled IPD proof source; filename prefixed to match its existing module name"
+    },
+    "SixNotationFinalAudit": {
+      "source": "release/SixNotationFinalAudit.lean",
+      "imports": [
+        "FiveNotationFinalAudit",
+        "IPDStandardOrder",
+        "IPDTreeCompare"
+      ],
+      "sha256": "030fc5e765004850741651c0557324100f00a8f22d52527fea8ee25d82ed1fb5",
+      "origin": "local",
+      "distribution": "release-only joint final audit; no new mathematical assumptions"
     }
   },
   "external": [
@@ -2701,9 +3144,13 @@
     "Mathlib.Data.List.Shortlex",
     "Mathlib.Data.Nat.Pairing",
     "Mathlib.Data.Set.Countable",
+    "Mathlib.Logic.Encodable.Basic",
+    "Mathlib.Logic.Equiv.List",
     "Mathlib.ModelTheory.Semantics",
+    "Mathlib.Order.Compare",
     "Mathlib.Order.RelClasses",
     "Mathlib.Order.WellFounded",
+    "Mathlib.Order.WithBot",
     "Mathlib.SetTheory.Cardinal.Aleph",
     "Mathlib.SetTheory.Ordinal.Basic",
     "Mathlib.SetTheory.Ordinal.Family",

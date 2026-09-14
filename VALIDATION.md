@@ -1,15 +1,18 @@
 # Snapshot validation · [中文版](VALIDATION.zh-CN.md)
 
-Prepared 2026-09-13. This record separates implementation tests, document checks, paper reasoning, and Lean kernel verification. None of these is silently substituted for another.
+Updated 2026-09-14. This record separates implementation tests, document checks, paper reasoning, and Lean kernel verification. None of these is silently substituted for another.
 
 ## Delivered documents
 
-- RPD, LRD, Ω-LRD3, ARD: four definitions, each in English and Chinese Markdown and PDF, totaling **16 definition artifacts**.
-- Y, RPD, LRD, Ω-LRD3: the original joint proof; ARD: a separate complete proof. Both papers have English and Chinese Markdown and PDF versions, totaling **8 proof-paper artifacts**.
+- RPD, LRD, Ω-LRD3, ARD, IPD: five definitions, each in English and Chinese Markdown and PDF, totaling **20 definition artifacts**.
+- Y, RPD, LRD, Ω-LRD3: the original joint proof; ARD and IPD: separate complete proofs. The three papers have English and Chinese Markdown and PDF versions, totaling **12 proof-paper artifacts**. IPD's direct KP tree-rank lemma is included as Appendix A, not left as an external research-file dependency.
+- IPD additionally has a bilingual definition-correspondence audit.
 - The main README, Lean instructions, source notes, and this record are also paired English/Chinese Markdown. Every English title links to its Chinese counterpart.
 - Other Ω-LRD implementations, historical proof attempts, original private PDFs, installed dependencies, and precompiled proof caches are excluded from the release inventory.
 
 The original joint paper's two languages contain the same 25 display equations and 15 numbered equation tags, in the same order. The new ARD paper has 34 English and 33 Chinese display equations: the sole difference is that the countable-boundedness formula is displayed in English but inline in Chinese. Its 15 numbered formulas agree, as do the six displays in each ARD definition. Mathematical bodies and hypotheses were cross-checked independently. The definition papers were cross-reviewed against the proofs for tuple order, control priority, package bound, seeds, standard domain, and top-element convention. The executable examples in both ARD definitions passed using the published Python module.
+
+IPD's two proof versions each have 31 display equations and the same 12 equation tags, including Appendix A. Its English definition has ten display equations and the Chinese nine: the original-head replacement candidate is displayed in English and written as an inline code tuple in Chinese. Remaining differences concern inline typesetting, not definitions or hypotheses. The packaged Python example was executed successfully.
 
 ## Expander checks
 
@@ -18,6 +21,8 @@ Command, from the package root:
 ```sh
 python -B tests/test_python.py
 python -B tests/test_ard.py
+python -B tests/test_ipd.py
+node --max-old-space-size=256 tests/ipd_display.cjs
 node --max-old-space-size=256 tests/adjacency_views.cjs
 ```
 
@@ -41,21 +46,23 @@ The original three Python command-line examples also passed. LRD and Ω-LRD3's N
 
 The portable adjacency suite passed 168 graphs and text round trips, 672 unchanged expansions, 160 comparisons, 498 text-prefix checks, 168 complete diagrams containing 942 relation entries, 420 old-display comparisons and 20 input/resource guards. It pins the embedded old cores by normalized source hashes and checks that both new display helpers agree. Diagram checks cover whole shaded diagonal index cells, the stepped upper-triangular boundary, removal of external axis labels, exact original counts above the tables, and preservation of complete relation tables when counts report a resource limit. It ran in approximately 1.3 seconds with a 256 MiB old-generation heap limit and about 87 MiB reported RSS. Light, dark, empty and multi-digit full previews were rendered offline and visually inspected; this is not a live-browser end-to-end test. The mathematical and proof sources were not changed by this display update.
 
+The new IPD test passed 247 graphs (117 marked standard), 988 Python/JS expansions, 741 full-prefix checks, 500 order comparisons, 231 exact local-count sequences, 453 count-decrement checks, 1,292 larger closed-form count terms, 247 complete tree displays and 22 guards, plus 16 Python seed checks. The bounded oracle explicitly skipped 8 expensive expansion cases and 16 count cases; skipped cases are not successes. This run took 5.56 seconds; Node reported 130 MiB RSS with a 512 MiB old-generation heap limit. The wrapper gives Python 30 seconds and Node 55 seconds, with process-tree cleanup. A separate display regression passed 12 samples, 76 node occurrences, 9 nested-head frames, 51 child links and 2 guards. It requires no NER checkout and makes no live-browser claim. The older Python, ARD, adjacency and arc suites were rerun successfully without modifying their definitions.
+
 These are finite tests. They do not establish equivalence on every input, certify standardness of arbitrary parsed graphs, or replace a well-ordering proof. A full live-browser integration test was not repeated during packaging.
 
 ## PDF checks
 
-The release contains **12 PDFs / 66 pages**, generated with ReportLab and MathJax formulas with embedded fonts. The original eight PDFs / 41 pages remain unchanged. The four new ARD files contain 3 pages per definition, 11 pages for the English proof and 8 for the Chinese proof. All 25 new pages were visually inspected in contact sheets, with selected dense formulas and final pages also inspected at page resolution. The unchanged original pages retain their earlier visual review. All 66 pages were rendered again using Poppler and passed programmatic text/image boundary checks with zero overflow issues.
+The release contains **16 PDFs / 102 pages**, generated with ReportLab, MathJax formulas and embedded fonts. The original twelve PDFs / 66 pages are unchanged. IPD adds 6 English-definition pages, 5 Chinese-definition pages, 14 English-proof pages and 11 Chinese-proof pages. All 36 new pages were visually inspected in contact sheets; repaired English request formulas and selected dense Chinese/rank pages were also inspected at page resolution. All 102 pages were rerendered with Poppler and passed text/image bounds checks with zero overflow.
 
-The existing renderer preserves numbered equations and CJK wrapping around inline formulas. During the ARD review, a one-line orphan final page in the English definition was removed by a small leading adjustment, and four points were reserved for CJK hanging punctuation in the Chinese proof. Both changed outputs were rendered and visually checked again. No blank placeholder is used in place of a formula.
+The new Chinese formula delimiters were normalized for Markdown/PDF compatibility. Consecutive English displays were separated to repair a clipped line of request formulas. IPD received its own title and 2026-09-14 footer; appendix cross-references were qualified to avoid collisions with the main paper. The final Chinese amendment was rerendered and all its pages reinspected. No formula is replaced by a blank or silently dropped.
 
-[tools/pdf-build-report.json](tools/pdf-build-report.json) records each output's page count and SHA-256; [the QA receipt](tools/pdf-qa-report.json) records the precise final 66-page review scope. The regeneration and QA commands are documented in the [main README](README.md). Intermediate PNGs and formula caches are excluded from the release inventory and can be regenerated.
+[tools/pdf-build-report.json](tools/pdf-build-report.json) records page counts and hashes; [the QA receipt](tools/pdf-qa-report.json) gives the current 102-page scope. Commands are in the [main README](README.md). Intermediate images and formula caches are excluded from release source.
 
 ## Lean source verification
 
-The package contains 247 Lean source modules and describes 12 additional pinned external BMS modules. `python lean/build.py --check-only` verifies the complete 259-module import closure and the bundled source hashes without downloading anything. The external BMS bytes are additionally hash-checked when their source checkout is supplied for compilation.
+The package contains 288 Lean source modules and describes 12 additional pinned external BMS modules. `python lean/build.py --check-only` verifies the complete 300-module import closure and the bundled source hashes without downloading anything. The external BMS bytes are additionally hash-checked when their source checkout is supplied for compilation.
 
-A fresh sequential rebuild of **all 259 proof-source modules passed**, with **647 axiom reports**. The [public verification receipt](lean/VERIFICATION.json) records the result; the [Lean instructions](lean/README.md) link the final theorem and fidelity logs. ARD contributes 21 new proof modules, and the new five-system audit joins the enlarged closure. The previous four-system receipt and audit are retained separately and are not used as evidence for ARD.
+A fresh sequential rebuild of **all 300 proof-source modules passed**, with **774 axiom reports**. The [public receipt](lean/VERIFICATION.json) and [Lean instructions](lean/README.md) identify this six-system rebuild. IPD contributes 40 proof modules and one new joint audit. The earlier four- and five-system receipts and audits are retained as historical records, not used instead of rebuilding IPD.
 
 Only existing Lean and pinned Mathlib/auxiliary-package artifacts are reused. The publication build recompiles Y, external BMS, and local notation proof modules from their checked sources; it does not load the old research project's proof caches. This is not a fresh network bootstrap or a rebuild of all Mathlib dependencies. The Lake configuration is separately checked in offline mode with local dependency overrides. Generated build artifacts are excluded from the release inventory.
 
@@ -63,8 +70,10 @@ The accepted reported axioms are only `propext`, `Classical.choice`, and `Quot.s
 
 ## Scope that remains explicit
 
-Both papers argue in `KP_ω + there exists an uncountable ordinal`, with full set induction; the ordinary Lean proofs are not object-language derivations in that system. The finite geometric interfaces used in the papers are linked to their concrete verified source implementations. For ARD, Lean additionally proves equality with an independently defined finite-union expansion rule and standard domain, plus exact agreement of the compressed and full-root comparisons and controllers. This is not a formal verification of every line of the Python or JavaScript runtime.
+All three papers argue in `KP_ω + there exists an uncountable ordinal`, with full set induction; the ordinary Lean proofs are not object-language derivations in that system. The finite geometric interfaces used in the papers are linked to their concrete verified source implementations. For ARD, Lean additionally proves equality with an independently defined finite-union expansion rule and standard domain, plus exact agreement of the compressed and full-root comparisons and controllers. This is not a formal verification of every line of the Python or JavaScript runtime.
 
-The well-ordering conclusions concern the stated standard domains, with the documented top-element conventions, not the column order on arbitrary parsed graphs. The Y theorem is for the fixed upstream inherited-ancestry definition. Full legal-domain equivalence with Naruyoko's original JavaScript remains outside this package's claims. No optimal axiom strength, proof-theoretic ordinal comparison, or relative order-type inequality between the five systems is established by this packaging task.
+For IPD, Lean proves the actual all-position mathematical rule; the source-language correspondence and exact two-position JS pruning are established in the [paper audit](proofs/paper/ipd-fidelity.md), not a JS-VM formalization. IPD's standard subtype does not assume accessibility or representability. Neither comparison with wY/TPD nor cofinality is added as a claim.
 
-Run `python tools/check_release.py` to check language pairing, relative entry links, the twelve PDF/source pairs and build hashes, NER snapshot hashes, private-path exclusions, the Lean source closure, and consistency of the public verification receipt with the current manifest, per-module dependency fingerprints, build inputs and final theorem logs. This consistency check does not rerun the Lean kernel.
+The well-ordering conclusions concern the stated standard domains, with the documented top-element conventions, not the column order on arbitrary parsed graphs. The Y theorem is for the fixed upstream inherited-ancestry definition. Full legal-domain equivalence with Naruyoko's original JavaScript remains outside this package's claims. No optimal axiom strength, proof-theoretic ordinal comparison, or relative order-type inequality between the six systems is established by this packaging task.
+
+Run `python tools/check_release.py` to check language pairing, relative entry links, the sixteen PDF/source pairs and build hashes, NER snapshot hashes, private-path exclusions, the Lean source closure, and consistency of the public verification receipt with the current manifest, per-module dependency fingerprints, build inputs and final theorem logs. This consistency check does not rerun the Lean kernel.

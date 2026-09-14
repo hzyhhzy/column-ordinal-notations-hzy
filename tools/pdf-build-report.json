@@ -94,5 +94,37 @@
     "bytes": 2112609,
     "sha256": "f4c3a4da0495c510336d3f948bc7579c17f80c82d98c2cafe4986bf61915dda4",
     "warnings": []
+  },
+  {
+    "source": "notations/IPD/definition.md",
+    "pdf": "notations/IPD/definition.pdf",
+    "pages": 6,
+    "bytes": 474863,
+    "sha256": "9014cb84b3be0d09483d6a50b866017e3a5032212b7578e9697e579ad0127a69",
+    "warnings": []
+  },
+  {
+    "source": "notations/IPD/definition.zh-CN.md",
+    "pdf": "notations/IPD/definition.zh-CN.pdf",
+    "pages": 5,
+    "bytes": 567501,
+    "sha256": "065671054e17c1ece795d3fa028d938e7f7356701180bdf68036989e502e4ffd",
+    "warnings": []
+  },
+  {
+    "source": "proofs/paper/ipd-well-ordering.md",
+    "pdf": "proofs/paper/ipd-well-ordering.pdf",
+    "pages": 14,
+    "bytes": 1603153,
+    "sha256": "0b623df49fd1d005ff3589b76171b6a4a61618c40ee7bb597499a973eb12cf66",
+    "warnings": []
+  },
+  {
+    "source": "proofs/paper/ipd-well-ordering.zh-CN.md",
+    "pdf": "proofs/paper/ipd-well-ordering.zh-CN.pdf",
+    "pages": 11,
+    "bytes": 1124601,
+    "sha256": "83990ad4b40f79608954531cdbcea5ff3f730957cbde6821ce4cc1a3f6bc8454",
+    "warnings": []
   }
 ]
