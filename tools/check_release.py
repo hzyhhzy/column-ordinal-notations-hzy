@@ -12,6 +12,33 @@ from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 IGNORED = {'.build', '.lake', 'tmp', '__pycache__', 'node_modules', '.git'}
+# Exact pre-existing historical drafts, verified tracked and unchanged at the
+# SPD integration baseline. Only counterpart/H1-language-link checks are
+# waived; headings, formula delimiters, links and all other checks still run.
+# Do not replace this inventory with directory-level or suffix-based rules.
+MONOLINGUAL_ARCHIVES = frozenset({
+    'notations/RPD/y-lower-bound/algorithm.zh-CN.md',
+    'notations/RPD/y-lower-bound/BMS-SEED-LOWER-BOUND.zh-CN.md',
+    'notations/RPD/y-lower-bound/DILATED-GEOMETRIC-Y.zh-CN.md',
+    'notations/RPD/y-lower-bound/DILATION-AND-STAR-BOUNDS.zh-CN.md',
+    'notations/RPD/y-lower-bound/GENERAL-PROTECTED-Y-COMPILER.zh-CN.md',
+    'notations/RPD/y-lower-bound/PROTECTED-SUBSTITUTION.zh-CN.md',
+    'notations/RPD/y-lower-bound/SOURCES.md',
+    'research/ordinal-comparisons-20260914/01-bounds-and-y-rpd.zh-CN.md',
+    'research/ordinal-comparisons-20260914/02-ard2-vs-ipd.zh-CN.md',
+    'research/ordinal-comparisons-20260914/archive/ard2-ipd-bound/full-context-strength.md',
+    'research/ordinal-comparisons-20260914/archive/ard2-ipd-bound/HOUR-REPORT.zh-CN.md',
+    'research/ordinal-comparisons-20260914/archive/ard2-ipd-bound/REPORT.zh-CN.md',
+    'research/ordinal-comparisons-20260914/archive/ipd-upper-bounds/ARD-TPD-tightening.zh-CN.md',
+    'research/ordinal-comparisons-20260914/archive/ipd-upper-bounds/IPD-upper-bounds.zh-CN.md',
+    'research/ordinal-comparisons-20260914/archive/ipd-upper-bounds/RPD-Y-wY-tightening.zh-CN.md',
+    'research/ordinal-comparisons-20260914/archive/ipd-upper-bounds/STATUS.md',
+    'research/ordinal-comparisons-20260914/archive/ipd-upper-bounds/TEST-REPORT.md',
+    'research/ordinal-comparisons-20260914/archive/ipd-upper-bounds/Y-le-RPD-proof.zh-CN.md',
+    'research/ordinal-comparisons-20260914/archive/README.zh-CN.md',
+    'research/ordinal-comparisons-20260914/README.zh-CN.md',
+    'research/README.md',
+})
 NER_HASHES = {
     'notations/RPD/RPD-mountain.ne-rewritten.js': '447eaed4e88604a29ba4ccef329b05c57ef30d935b0a31166ff519805e352026',
     'notations/LRD/LRD.ne-rewritten.js': '394fe4763e82708a99d66c2d88d3926c86c4be92ec35174b9205a292550740b1',
@@ -19,8 +46,11 @@ NER_HASHES = {
     'notations/ARD/ARD-arcs.ne-rewritten.js': 'ab4f05ef1fb65b6308e710cbbc98c173310f9c3073ce3a57082863af708841d6',
     'notations/IPD/IPD.ne-rewritten.js': 'acc1a1c2ae260da9be7d13e14ac17d84a92679f82efe97aa85cd0e3b072f6011',
     'notations/ARD2/ARD2.ne-rewritten.js': 'e0d4eb14056ee54a6d4a8d2475241469ba33f07d38c406cfa9b20c648407380d',
+    'notations/SPD/SPD.ne-rewritten.js': 'd693c23564a766ecbbe3072cd200632c49b490d47d18428e1310ea438e85f266',
 }
 LEAN_ROOTS = {
+    # SPD has a paper manuscript, but no Lean certificate. Its addition must
+    # neither relabel the existing seven proofs nor weaken their receipt checks.
     'Y': ['FiniteDemandYFinal'],
     'RPD': ['FiniteDemandRPDFinal'],
     'LRD': ['FiniteDemandLRDFinal'],
@@ -145,14 +175,21 @@ def main():
     problems, links = [], 0
     markdown = [p for p in files if p.suffix.lower() == '.md']
     pdfs = [p for p in files if p.suffix.lower() == '.pdf']
+    for relative in sorted(MONOLINGUAL_ARCHIVES):
+        if not (ROOT / relative).is_file():
+            problems.append(f'Missing monolingual archive: {relative}')
+    archive_count = sum(p.relative_to(ROOT).as_posix() in MONOLINGUAL_ARCHIVES for p in markdown)
     for path in markdown:
+        archive = path.relative_to(ROOT).as_posix() in MONOLINGUAL_ARCHIVES
         zh = path.name.endswith('.zh-CN.md')
         partner = path.with_name(path.name.replace('.zh-CN.md', '.md') if zh else path.stem+'.zh-CN.md')
-        if not partner.is_file():
+        if not archive and not partner.is_file():
             problems.append(f'Missing language counterpart: {path.relative_to(ROOT)}')
         content = path.read_text(encoding='utf-8-sig')
-        first = content.splitlines()[0]
-        if not first.startswith('# ') or f']({partner.name})' not in first:
+        first = content.splitlines()[0] if content else ''
+        if not first.startswith('# '):
+            problems.append(f"H1 must start with '# ': {path.relative_to(ROOT)}")
+        if not archive and f']({partner.name})' not in first:
             problems.append(f'H1 missing language link: {path.relative_to(ROOT)}')
         if re.search(r'^\s*\$\s*$', content, re.M):
             problems.append(f'Broken single-dollar display delimiter: {path.relative_to(ROOT)}')
@@ -171,16 +208,16 @@ def main():
                 problems.append(f'Broken link: {path.relative_to(ROOT)} -> {target}')
     expected_pdfs = {
         f'notations/{notation}/definition{lang}.pdf'
-        for notation in ('RPD','LRD','Omega-LRD3','ARD','IPD','ARD2') for lang in ('','.zh-CN')
+        for notation in ('RPD','LRD','Omega-LRD3','ARD','IPD','ARD2','SPD') for lang in ('','.zh-CN')
     } | {f'proofs/paper/{paper}{lang}.pdf'
-         for paper in ('well-ordering','ard-well-ordering','ipd-well-ordering','ard2-well-ordering') for lang in ('','.zh-CN')}
+         for paper in ('well-ordering','ard-well-ordering','ipd-well-ordering','ard2-well-ordering','spd-well-ordering') for lang in ('','.zh-CN')}
     actual_pdfs = {p.relative_to(ROOT).as_posix() for p in pdfs}
     if actual_pdfs != expected_pdfs:
         problems.append(f'PDF inventory mismatch: {actual_pdfs ^ expected_pdfs}')
     for path in pdfs:
         if not path.with_suffix('.md').is_file() or path.stat().st_size < 1000:
             problems.append(f'Invalid PDF/source pair: {path.relative_to(ROOT)}')
-    if {p.name for p in (ROOT/'notations').iterdir() if p.is_dir()} != {'RPD','LRD','Omega-LRD3','ARD','IPD','ARD2'}:
+    if {p.name for p in (ROOT/'notations').iterdir() if p.is_dir()} != {'RPD','LRD','Omega-LRD3','ARD','IPD','ARD2','SPD'}:
         problems.append('Unexpected notation directory')
     for relative, expected in NER_HASHES.items():
         actual = hashlib.sha256((ROOT/relative).read_bytes()).hexdigest()
@@ -214,7 +251,9 @@ def main():
     if problems:
         print('\n'.join(problems))
         raise SystemExit(1)
-    print(f'PASS: {len(markdown)} bilingual Markdown files, {len(pdfs)} PDFs, {links} local links, '
+    print(f'PASS: {len(markdown)} Markdown files total '
+          f'({len(markdown)-archive_count} bilingual, {archive_count} monolingual archives), '
+          f'{len(pdfs)} PDFs, {links} local links, '
           f'{len(NER_HASHES)} pinned NER snapshots; {len(files)} release files, {sum(p.stat().st_size for p in files):,} bytes.')
 
 

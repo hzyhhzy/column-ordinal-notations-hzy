@@ -1,11 +1,12 @@
 {
   "date": "2026-09-14",
   "renderer": "Poppler pdftoppm, 95 dpi",
-  "scope": "All twenty publication PDFs: sixteen unchanged earlier PDFs and four ARD2 publications.",
-  "visual_review": "All 22 new ARD2 pages inspected in contact sheets. The English recursive-relation and splice/rank pages and the Chinese pointed-endpoint page were additionally inspected at full-page resolution. The unchanged 102 earlier pages retain their earlier visual reviews. All 124 pages were rendered again and passed text/image bounds checks.",
+  "scope": "Twenty-four publication PDFs: twenty unchanged earlier PDFs and four SPD publications.",
+  "visual_review": "All 34 new SPD pages inspected in contact sheets. English definition page 4, English proof pages 8 and 9, and Chinese proof page 7 were also inspected at full-page resolution. All 34 new pages were rendered with Poppler and passed text/image bounds checks. The unchanged 124 earlier pages retain their previous visual reviews and bounds checks; they were not rerendered for this addition.",
   "corrections": [
     "ARD2-specific title and 2026-09-14 footer added without rerendering older PDFs.",
-    "Both papers clarify quantified bad-input labels, the domain of the Skolem structure, and the ordinary-Lean/weak-KP boundary."
+    "Both papers clarify quantified bad-input labels, the domain of the Skolem structure, and the ordinary-Lean/weak-KP boundary.",
+    "SPD-specific title and 2026-09-14 footer added; Chinese definition spacing adjusted to remove a short seventh page. Earlier PDFs were not regenerated."
   ],
   "files": [
     {
@@ -126,6 +127,30 @@
       "pdf": "proofs/paper/ard2-well-ordering.zh-CN.pdf",
       "pages": 6,
       "sha256": "f96bd63f73df3ee4c1d4284280690a9d41b84d39c51a15feebf7c58ba5379e19",
+      "bounds_issues": []
+    },
+    {
+      "pdf": "notations/SPD/definition.pdf",
+      "pages": 8,
+      "sha256": "768aa3e0c94c19c90dd2708e220960ebee6c7b271106390bae5c5574c9bd7941",
+      "bounds_issues": []
+    },
+    {
+      "pdf": "notations/SPD/definition.zh-CN.pdf",
+      "pages": 6,
+      "sha256": "5ef9cadf170b6bf09e9e39488c0f6ef65beadb14ecdd217f12991b2c327f801b",
+      "bounds_issues": []
+    },
+    {
+      "pdf": "proofs/paper/spd-well-ordering.pdf",
+      "pages": 11,
+      "sha256": "abcf87b494659a5f2ec7aa7bb91d3e88cb091a901b6abb3a47298cd6ada6ec57",
+      "bounds_issues": []
+    },
+    {
+      "pdf": "proofs/paper/spd-well-ordering.zh-CN.pdf",
+      "pages": 9,
+      "sha256": "5aaabe39baafdbe4135b4d6a3cac6aee72d848ad39841c294243bb14f6601a60",
       "bounds_issues": []
     }
   ]

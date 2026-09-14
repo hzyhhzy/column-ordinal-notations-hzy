@@ -16,12 +16,20 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('sources', nargs='*', help='Only these PDF paths, relative to the release root')
     parser.add_argument('--pdftoppm', default='pdftoppm')
     args = parser.parse_args()
+    sources = [ROOT / p for p in args.sources] if args.sources else (
+        sorted(ROOT.glob('notations/*/*.pdf')) + sorted(ROOT.glob('proofs/paper/*.pdf')))
+    for pdf in sources:
+        if not pdf.resolve().is_relative_to(ROOT.resolve()) or pdf.suffix.lower() != '.pdf':
+            raise ValueError(f'Expected a PDF inside the release: {pdf}')
+        if not pdf.is_file():
+            raise FileNotFoundError(pdf)
     output = ROOT / 'tmp/pdf-qa'
     output.mkdir(parents=True, exist_ok=True)
     reports = []
-    for pdf in sorted(ROOT.glob('notations/*/*.pdf')) + sorted(ROOT.glob('proofs/paper/*.pdf')):
+    for pdf in sources:
         key = pdf.parent.name + '-' + pdf.stem
         folder = output / key
         folder.mkdir(exist_ok=True)

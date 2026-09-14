@@ -1,4 +1,4 @@
-"""Render the twenty bilingual definition/proof PDFs; no network is used.
+"""Render the twenty-four bilingual definition/proof PDFs; no network is used.
 
 Requires Pandoc, Node with mathjax-full/sharp, reportlab, pypdf, and local fonts.
 The output files sit beside their Markdown sources. Formula PNGs are temporary.
@@ -144,6 +144,10 @@ class Renderer:
         }
         if self.zh and source.parent.name == 'paper':
             # A slightly tighter scholarly leading avoids a two-line final page.
+            self.styles['body'].leading = 15.1
+            self.styles['body'].spaceAfter = 5.0
+        if self.zh and source.parent.name == 'SPD':
+            # Keep the short software epilogue on the sixth definition page.
             self.styles['body'].leading = 15.1
             self.styles['body'].spaceAfter = 5.0
         if source.parent.name == 'ARD' and not self.zh:
@@ -342,10 +346,11 @@ class Renderer:
         destination = self.source.with_suffix('.pdf')
         label = self.source.parent.name
         if label == 'paper':
-            label = ('ARD2' if self.source.name.startswith('ard2-') else
+            label = ('SPD' if self.source.name.startswith('spd-') else
+                     'ARD2' if self.source.name.startswith('ard2-') else
                      'IPD' if self.source.name.startswith('ipd-') else
                      'ARD' if self.source.name.startswith('ard-') else 'Y · RPD · LRD · Ω-LRD3')
-        publication_date = '2026-09-14' if label in ('IPD', 'ARD2') else '2026-09-13'
+        publication_date = '2026-09-14' if label in ('IPD', 'ARD2', 'SPD') else '2026-09-13'
         doc = SimpleDocTemplate(str(destination), pagesize=A4,
                                 leftMargin=50, rightMargin=50, topMargin=48, bottomMargin=48,
                                 title=label + (' - 中文' if self.zh else ' - English'),
@@ -383,9 +388,9 @@ def main():
     args = parser.parse_args()
     sources = [ROOT / p for p in args.sources] if args.sources else [
         ROOT / f'notations/{notation}/definition{lang}.md'
-        for notation in ('RPD', 'LRD', 'Omega-LRD3', 'ARD', 'IPD', 'ARD2') for lang in ('', '.zh-CN')
+        for notation in ('RPD', 'LRD', 'Omega-LRD3', 'ARD', 'IPD', 'ARD2', 'SPD') for lang in ('', '.zh-CN')
     ] + [ROOT / f'proofs/paper/{paper}{lang}.md'
-         for paper in ('well-ordering', 'ard-well-ordering', 'ipd-well-ordering', 'ard2-well-ordering') for lang in ('', '.zh-CN')]
+         for paper in ('well-ordering', 'ard-well-ordering', 'ipd-well-ordering', 'ard2-well-ordering', 'spd-well-ordering') for lang in ('', '.zh-CN')]
     for source in sources:
         if not source.is_file():
             raise FileNotFoundError(source)

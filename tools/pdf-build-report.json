@@ -158,5 +158,37 @@
     "bytes": 1535091,
     "sha256": "f96bd63f73df3ee4c1d4284280690a9d41b84d39c51a15feebf7c58ba5379e19",
     "warnings": []
+  },
+  {
+    "source": "notations/SPD/definition.md",
+    "pdf": "notations/SPD/definition.pdf",
+    "pages": 8,
+    "bytes": 1204153,
+    "sha256": "768aa3e0c94c19c90dd2708e220960ebee6c7b271106390bae5c5574c9bd7941",
+    "warnings": []
+  },
+  {
+    "source": "notations/SPD/definition.zh-CN.md",
+    "pdf": "notations/SPD/definition.zh-CN.pdf",
+    "pages": 6,
+    "bytes": 1406514,
+    "sha256": "5ef9cadf170b6bf09e9e39488c0f6ef65beadb14ecdd217f12991b2c327f801b",
+    "warnings": []
+  },
+  {
+    "source": "proofs/paper/spd-well-ordering.md",
+    "pdf": "proofs/paper/spd-well-ordering.pdf",
+    "pages": 11,
+    "bytes": 1914696,
+    "sha256": "abcf87b494659a5f2ec7aa7bb91d3e88cb091a901b6abb3a47298cd6ada6ec57",
+    "warnings": []
+  },
+  {
+    "source": "proofs/paper/spd-well-ordering.zh-CN.md",
+    "pdf": "proofs/paper/spd-well-ordering.zh-CN.pdf",
+    "pages": 9,
+    "bytes": 2072033,
+    "sha256": "5aaabe39baafdbe4135b4d6a3cac6aee72d848ad39841c294243bb14f6601a60",
+    "warnings": []
   }
 ]

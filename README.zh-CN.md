@@ -4,11 +4,13 @@
 
 本仓库收录列图序数记号的定义、可执行基本列展开器和良序证明。源码快照整理于 **2026-09-14**，仓库地址为 [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy)。名称中的 `hzy` 来自仓库所有者的名字。
 
-新记号实现收录 **RPD、LRD、Ω-LRD3、ARD、IPD、ARD2**；证明覆盖 **Y、RPD、LRD、Ω-LRD3、ARD、IPD、ARD2**。其他 Ω-LRD 版本及历史实验实现均不收录。
+新记号实现收录 **RPD、LRD、Ω-LRD3、ARD、IPD、ARD2、SPD**；Lean 证明覆盖 **Y、RPD、LRD、Ω-LRD3、ARD、IPD、ARD2**。其他 Ω-LRD 版本及历史实验实现均不收录。
+
+新增 **SPD（Slot Profile Diagrams，潜边轮廓图）**：每条关系只有四个整数，头与参数从此前列递归读出，输入中没有独立树字段。随附双语定义、纸面良序论证稿、Python／NER 实现及有界回归测试。**SPD 尚无 Lean 证明。** 它与 ARD、ARD2、wY、整个 IPD 的序型大小关系仍未知；局部轮廓的构造能力不等于这些跨记号比较已经成立。
 
 ## 定义与展开器
 
-每套定义都有中英文 Markdown 和 PDF，共 **24 份定义文件**。Markdown 默认英文；每份英文文档的标题均链接到中文版。
+每套定义都有中英文 Markdown 和 PDF，共 **28 份定义文件**。Markdown 默认英文；每份英文定义的标题均链接到中文版。
 
 | 记号 | 英文定义 | 中文定义 | NER 展开器 | Python 展开器 |
 | --- | --- | --- | --- | --- |
@@ -18,6 +20,7 @@
 | ARD | [Markdown](notations/ARD/definition.md) · [PDF](notations/ARD/definition.pdf) | [Markdown](notations/ARD/definition.zh-CN.md) · [PDF](notations/ARD/definition.zh-CN.pdf) | [JavaScript](notations/ARD/ARD-arcs.ne-rewritten.js) | [ard.py](notations/ARD/ard.py) |
 | IPD | [Markdown](notations/IPD/definition.md) · [PDF](notations/IPD/definition.pdf) | [Markdown](notations/IPD/definition.zh-CN.md) · [PDF](notations/IPD/definition.zh-CN.pdf) | [JavaScript](notations/IPD/IPD.ne-rewritten.js) | [ipd.py](notations/IPD/ipd.py) |
 | ARD2 | [Markdown](notations/ARD2/definition.md) · [PDF](notations/ARD2/definition.pdf) | [Markdown](notations/ARD2/definition.zh-CN.md) · [PDF](notations/ARD2/definition.zh-CN.pdf) | [JavaScript](notations/ARD2/ARD2.ne-rewritten.js) | [ard2.py](notations/ARD2/ard2.py) |
+| SPD | [Markdown](notations/SPD/definition.md) · [PDF](notations/SPD/definition.pdf) | [Markdown](notations/SPD/definition.zh-CN.md) · [PDF](notations/SPD/definition.zh-CN.pdf) | [JavaScript](notations/SPD/SPD.ne-rewritten.js) | [spd.py](notations/SPD/spd.py) |
 
 网页版：把所选 JavaScript 文件的完整内容载入 [ne-rewritten](https://smilelee-lyx.github.io/ne-rewritten/) 的自定义记号功能。每份文件均独立注册，无需构建；保留已有显示方式及资源保护。脚本也保留原来的中文帮助文字，其中可能有历史证明进度说明；当前证明范围以本包论文及验收记录为准。
 
@@ -27,7 +30,9 @@ RPD、ARD、ARD2 在“等价表示”菜单另有“邻接表（文字）”和
 
 Python 文件只依赖标准库，实现数学展开核心，不包含 NER 界面和显示缓存。命令行示例见相应定义文档。大展开仍可能很昂贵；数学上有定义不意味着计算便宜。
 
-## 七个记号的良序证明
+SPD 提供列表与精确计数序列两种显示。NER 支持输入 `S2`、`Top[2][1]`、完整关系列表，以及 `C(1,3,16)` 等标准计数词。独立的 [Python 计数解码器](notations/SPD/spd_count_decode.py) 恢复唯一标准式，并区分非法输入与资源耗尽。结构合法的手写列表不会自动被认定为标准式。
+
+## 良序证明与证明状态
 
 原合写论文覆盖 Y、RPD、LRD、Ω-LRD3，独立的 ARD 全文证明给出动态行引用的延拓。IPD 独立论文给出迭代树轮廓的证明，并把直接 KP 树秩引理收入附录 A。ARD2 论文给出双 SELF 延拓及其实际接缝搬运。四篇均在以下弱集合论内论证：
 
@@ -41,12 +46,15 @@ $$
 - **ARD 纸面证明：**[英文 Markdown](proofs/paper/ard-well-ordering.md) · [英文 PDF](proofs/paper/ard-well-ordering.pdf) · [中文 Markdown](proofs/paper/ard-well-ordering.zh-CN.md) · [中文 PDF](proofs/paper/ard-well-ordering.zh-CN.pdf)。
 - **IPD 纸面证明：**[英文 Markdown](proofs/paper/ipd-well-ordering.md) · [英文 PDF](proofs/paper/ipd-well-ordering.pdf) · [中文 Markdown](proofs/paper/ipd-well-ordering.zh-CN.md) · [中文 PDF](proofs/paper/ipd-well-ordering.zh-CN.pdf)。
 - **ARD2 纸面证明：**[英文 Markdown](proofs/paper/ard2-well-ordering.md) · [英文 PDF](proofs/paper/ard2-well-ordering.pdf) · [中文 Markdown](proofs/paper/ard2-well-ordering.zh-CN.md) · [中文 PDF](proofs/paper/ard2-well-ordering.zh-CN.pdf)。
+- **SPD 纸面论证稿（尚未 Lean 形式化）：**[英文 Markdown](proofs/paper/spd-well-ordering.md) · [英文 PDF](proofs/paper/spd-well-ordering.pdf) · [中文 Markdown](proofs/paper/spd-well-ordering.zh-CN.md) · [中文 PDF](proofs/paper/spd-well-ordering.zh-CN.pdf)。
 - **IPD 定义对应审计：**[英文](proofs/paper/ipd-fidelity.md) · [中文](proofs/paper/ipd-fidelity.zh-CN.md)。
 - **Lean：**[英文构建说明与定理索引](lean/README.md) · [中文说明](lean/README.zh-CN.md)。
 - **独立 Lean 项目：**[Y](lean/Y/README.zh-CN.md) · [RPD](lean/RPD/README.zh-CN.md) · [LRD](lean/LRD/README.zh-CN.md) · [Ω-LRD3](lean/Omega-LRD3/README.zh-CN.md) · [ARD](lean/ARD/README.zh-CN.md) · [IPD](lean/IPD/README.zh-CN.md) · [ARD2](lean/ARD2/README.zh-CN.md)。
 - **可选联合入口：**[SevenNotationFinalAudit.lean](lean/src/SevenNotationFinalAudit.lean)。
 
 每个记号各有独立构建配置、输出和验证收据，只依赖自己与[共享基础](lean/shared/README.zh-CN.md)；只有 Y 另需 BMS。新增记号不修改旧项目，也不强制重建旧证明。
+
+这里“每个记号”指 Lean 索引中的原七个系统。SPD 此次只增加实现和纸面文稿，没有 `lean/SPD` 项目、验证收据，也没有扩充七系统联合定理。其文稿在同一弱集合论内展开有限需求／新父子句路线，并区分合法 raw 图的展开关系良基与指定标准域的列序良序。
 
 Lean 工程形式化通常数学意义的良序定理，**不是在 Lean 中编码上述弱对象理论的推导**。论文的公理账本与 Lean 内核检查是两项不同成果。
 
@@ -67,6 +75,7 @@ python tests/test_python.py
 python tests/test_ard.py
 python tests/test_ipd.py
 python tests/test_ard2.py
+python -B tests/test_spd.py
 python -B tests/test_lean_verifier.py
 node --max-old-space-size=256 tests/ard2_ner.cjs
 node --max-old-space-size=256 tests/ard2_display.cjs
@@ -76,7 +85,7 @@ node --max-old-space-size=256 tests/adjacency_views.cjs
 
 固定依赖和串行、有资源上限的 Lean 构建方法见 [Lean 说明](lean/README.zh-CN.md)。Lean 编译不需要生成 PDF，也不需要 Node.js。
 
-如需重建二十份发布用 PDF，安装 Pandoc、Node.js、文档工具依赖及适当的本机字体：
+如需重建二十四份发布用 PDF，安装 Pandoc、Node.js、文档工具依赖及适当的本机字体：
 
 ```sh
 python -m pip install -r tools/requirements.txt
@@ -89,6 +98,8 @@ python tools/qa_pdfs.py
 
 本次检查结果见 [验收记录](VALIDATION.zh-CN.md)，发布前请阅读 [来源与许可证说明](SOURCES.zh-CN.md)。
 
+`python tools/check_release.py` 检查发布清单、本地链接及已有 Lean 收据。双语要求针对发布文档；21 份明确列名的既有单语研究归档保留原文语言，但仍检查标题、公式、链接及私人路径。新文档不会自动获得归档豁免。
+
 ## 目录结构
 
 ```text
@@ -100,7 +111,8 @@ notations/
   ARD/                           双语定义、PDF、弧线图 JS、Python
   IPD/                           双语定义、PDF、树形图 JS、Python
   ARD2/                          双语定义、PDF、五视图 JS、Python
-proofs/paper/                    合写、ARD、IPD、ARD2 证明及双语定义对应审计
+  SPD/                           双语定义、PDF、列表／计数 JS、Python、计数解码器
+proofs/paper/                    合写、ARD、IPD、ARD2 证明及 SPD 论证稿、定义对应审计
 research/                       比较推导、未证候选及历史研究文稿
 lean/                           源码依赖集合、固定版本与有界构建工具
 tests/                          有界展开器与构建验证器回归测试
