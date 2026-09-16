@@ -1,5 +1,35 @@
 # Snapshot validation · [中文版](VALIDATION.zh-CN.md)
 
+## 2026-09-16: ARD skyline migration
+
+Default ARD is now the small skyline rule. The old NER, Python, bilingual definitions/PDFs, bilingual paper/PDFs and all 20 legacy Lean sources remain in ARD-legacy. The new implementation actually computes with skylines and a single predecessor; it does not hide a redundant graph behind its display. Other notation implementations, private Lean sources and receipts are unchanged.
+
+- New [Python test](tests/test_ard.py): 250 graphs (150 standard), 1,000 projected legacy steps and 600 standard-order pairs; the NER cross-check also passed 1,000 expansions and 600 comparisons, in about 0.65 seconds.
+- New [NER regression](tests/ard_skyline.cjs): 4,997 steps on 1,000 standard states and 2,472 steps on 500 strongly guarded raw graphs; 1,500 old/new counts, 500 literal local counts, 993 decrements, 3,000 order pairs, 1,000 adjacency round trips and 25 complete diagrams. All passed in 4.89 seconds, reported peak RSS 183 MiB, with a 512 MiB Node heap, a 90-second deadline and explicit width/iteration bounds.
+- [Comparison probe](tests/rpd_ard_comparison.py): 275 states, 953 simulations, 15,866 local preparations, at most 966 per preparation, seven same-priority detours and 291 nonunique greatest source priorities. Coverage, V/F invariants and actual paths passed in 8.91 seconds. Caps: 25 seconds, 2,000 preparations/call, source width 10, target width 32, 80 states/seed.
+- The [legacy test](tests/test_ard_legacy.py), generic Python tests and preserved arc/adjacency tests were rerun successfully. Old-core hash assertions remain, redirected to the legacy file; new diagrams have their own regression suite.
+- The unchanged IPD and ARD2 Python suites also passed: respectively 247 graphs / 988 expansions and 37,044 graphs / 111,301 atomic expansions. Their implementation and proof sources were not edited.
+- All nine verifier regressions passed, including rejection of extra axioms, stale receipts and shadowed dependencies, and independence from unrelated project metadata.
+
+Current Lean 4.33.1 receipts:
+
+| Project | Exact closure | Axiom reports | Freshly compiled | Explicitly reused |
+| --- | --- | --- | --- | --- |
+| [ARD-legacy](lean/ARD-legacy/VERIFICATION.json) | 50 | 156 | 20 | 30 |
+| [ARD](lean/ARD/VERIFICATION.json) | 56 | 178 | 7 | 49 |
+| [Optional aggregate](lean/VERIFICATION.json) | 330 | 897 | 5 | 325 |
+
+Overlapping closures cannot be added as distinct modules. The new final theorem proves the actual small-rule expansion well-founded, the generated column order well-ordered, and the adjoined top well-ordered. No reflection/accessibility premise remains. Reports contain only subsets of `propext`, `Classical.choice`, `Quot.sound`. Compilers run sequentially with one thread, a 2048 MiB cap and a 120-second per-module deadline. This is not a KP object-theory derivation, a Mathlib source rebuild or a fresh network Lake bootstrap.
+
+The [RPD bound](proofs/paper/rpd-le-ard-a2.md) and [legacy standard isomorphism](proofs/paper/ard-well-ordering.md) are paper proofs. Neither the finite tests nor the Lean axiom reports are formal comparison certificates. The comparison paper states the pinned 1Y convention.
+
+Current publications comprise 32 definition artifacts across eight version directories (including legacy), 28 artifacts for seven bilingual papers, and 30 PDFs total. The ten affected PDFs were regenerated using ReportLab/MathJax, then rendered page by page with Poppler for bounds checks and visual inspection. Other PDFs are unchanged. `tools/check_release.py` checks the complete inventory and hashes: ten Lean scopes, 330 distinct modules and eight NER snapshots. No commit or push was made.
+
+## Historical 2026-09-14 verification below
+
+The old ARD name, old module counts and original display-only changes below refer to what is now ARD-legacy. These paragraphs are not the new source receipt; current status is given above and by each project's actual receipt.
+
+
 Updated 2026-09-14. This record separates implementation tests, document checks, paper reasoning, and Lean kernel verification. None of these is silently substituted for another.
 
 ## Delivered documents
@@ -23,7 +53,7 @@ Command, from the package root:
 
 ```sh
 python -B tests/test_python.py
-python -B tests/test_ard.py
+python -B tests/test_ard_legacy.py
 python -B tests/test_ipd.py
 python -B tests/test_ard2.py
 python -B tests/test_spd.py
@@ -96,7 +126,7 @@ The independent projects genuinely passed, with separate receipts:
 | [RPD](lean/RPD/VERIFICATION.json) | 36 | 91 | 4 | 32 |
 | [LRD](lean/LRD/VERIFICATION.json) | 41 | 110 | 10 | 31 |
 | [Ω-LRD3](lean/Omega-LRD3/VERIFICATION.json) | 44 | 119 | 13 | 31 |
-| [ARD](lean/ARD/VERIFICATION.json) | 50 | 156 | 20 | 30 |
+| [ARD](lean/ARD-legacy/VERIFICATION.json) | 50 | 156 | 20 | 30 |
 | [IPD](lean/IPD/VERIFICATION.json) | 55 | 166 | 40 | 15 |
 | [ARD2](lean/ARD2/VERIFICATION.json) | 51 | 160 | 21 | 30 |
 | [Optional aggregate](lean/VERIFICATION.json) | 322 | 866 | 4 | 318 |

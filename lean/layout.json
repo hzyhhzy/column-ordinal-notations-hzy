@@ -951,92 +951,92 @@
       "file": "lean/src/FourNotationFinalAudit.lean"
     },
     "ARDClosedSupply": {
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDClosedSupply.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDClosedSupply.lean"
     },
     "ARDCompression": {
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDCompression.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDCompression.lean"
     },
     "ARDCore": {
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDCore.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDCore.lean"
     },
     "ARDDecrease": {
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDDecrease.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDDecrease.lean"
     },
     "ARDDefinitionFidelity": {
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDDefinitionFidelity.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDDefinitionFidelity.lean"
     },
     "ARDDemandCore": {
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDDemandCore.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDDemandCore.lean"
     },
     "ARDDemandRecursion": {
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDDemandRecursion.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDDemandRecursion.lean"
     },
     "ARDDemandReflection": {
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDDemandReflection.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDDemandReflection.lean"
     },
     "ARDDomain": {
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDDomain.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDDomain.lean"
     },
     "ARDEndpointAgreement": {
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDEndpointAgreement.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDEndpointAgreement.lean"
     },
     "ARDFinal": {
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDFinal.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDFinal.lean"
     },
     "ARDFiniteUnion": {
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDFiniteUnion.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDFiniteUnion.lean"
     },
     "FiveNotationFinalAudit": {
       "owner": "aggregate",
       "file": "lean/src/FiveNotationFinalAudit.lean"
     },
     "ARDInitialRepresentation": {
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDInitialRepresentation.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDInitialRepresentation.lean"
     },
     "ARDOrderReduction": {
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDOrderReduction.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDOrderReduction.lean"
     },
     "ARDPrefixOrder": {
       "owner": "shared",
       "file": "lean/shared/src/ARDPrefixOrder.lean"
     },
     "ARDSemanticWellFounded": {
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDSemanticWellFounded.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDSemanticWellFounded.lean"
     },
     "ARDSplice": {
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDSplice.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDSplice.lean"
     },
     "ARDStageDemands": {
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDStageDemands.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDStageDemands.lean"
     },
     "ARDStageProof": {
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDStageProof.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDStageProof.lean"
     },
     "ARDStructure": {
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDStructure.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDStructure.lean"
     },
     "ARDWitnesses": {
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDWitnesses.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDWitnesses.lean"
     },
     "IPDClosedSupply": {
       "owner": "IPD",
@@ -1289,6 +1289,38 @@
     "SevenNotationFinalAudit": {
       "owner": "aggregate",
       "file": "lean/src/SevenNotationFinalAudit.lean"
+    },
+    "ARDSkylineBridge": {
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDSkylineBridge.lean"
+    },
+    "ARDSkylineCore": {
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDSkylineCore.lean"
+    },
+    "ARDSkylineDomain": {
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDSkylineDomain.lean"
+    },
+    "ARDSkylineFinal": {
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDSkylineFinal.lean"
+    },
+    "ARDSkylineOrderReduction": {
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDSkylineOrderReduction.lean"
+    },
+    "ARDSkylineSemanticWellFounded": {
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDSkylineSemanticWellFounded.lean"
+    },
+    "ARDSkylineStructure": {
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDSkylineStructure.lean"
+    },
+    "ARDRevisionFinalAudit": {
+      "owner": "aggregate",
+      "file": "lean/src/ARDRevisionFinalAudit.lean"
     }
   },
   "projects": {
@@ -1909,35 +1941,20 @@
       "directory": "lean/ARD",
       "manifest": "lean/ARD/sources.json",
       "targets": [
-        "ARDFinal",
-        "ARDCompression"
+        "ARDSkylineFinal"
       ],
       "owned_modules": [
-        "ARDClosedSupply",
-        "ARDCompression",
-        "ARDCore",
-        "ARDDecrease",
-        "ARDDefinitionFidelity",
-        "ARDDemandCore",
-        "ARDDemandRecursion",
-        "ARDDemandReflection",
-        "ARDDomain",
-        "ARDEndpointAgreement",
-        "ARDFinal",
-        "ARDFiniteUnion",
-        "ARDInitialRepresentation",
-        "ARDOrderReduction",
-        "ARDSemanticWellFounded",
-        "ARDSplice",
-        "ARDStageDemands",
-        "ARDStageProof",
-        "ARDStructure",
-        "ARDWitnesses"
+        "ARDSkylineBridge",
+        "ARDSkylineCore",
+        "ARDSkylineDomain",
+        "ARDSkylineFinal",
+        "ARDSkylineOrderReduction",
+        "ARDSkylineSemanticWellFounded",
+        "ARDSkylineStructure"
       ],
       "external_modules": [],
       "closure_modules": [
         "ARDClosedSupply",
-        "ARDCompression",
         "ARDCore",
         "ARDDecrease",
         "ARDDefinitionFidelity",
@@ -1952,6 +1969,13 @@
         "ARDOrderReduction",
         "ARDPrefixOrder",
         "ARDSemanticWellFounded",
+        "ARDSkylineBridge",
+        "ARDSkylineCore",
+        "ARDSkylineDomain",
+        "ARDSkylineFinal",
+        "ARDSkylineOrderReduction",
+        "ARDSkylineSemanticWellFounded",
+        "ARDSkylineStructure",
         "ARDSplice",
         "ARDStageDemands",
         "ARDStageProof",
@@ -2324,9 +2348,10 @@
       "directory": "lean",
       "manifest": "lean/sources.json",
       "targets": [
-        "SevenNotationFinalAudit"
+        "ARDRevisionFinalAudit"
       ],
       "owned_modules": [
+        "ARDRevisionFinalAudit",
         "FiveNotationFinalAudit",
         "FourNotationFinalAudit",
         "SevenNotationFinalAudit",
@@ -2383,7 +2408,15 @@
         "ARDInitialRepresentation",
         "ARDOrderReduction",
         "ARDPrefixOrder",
+        "ARDRevisionFinalAudit",
         "ARDSemanticWellFounded",
+        "ARDSkylineBridge",
+        "ARDSkylineCore",
+        "ARDSkylineDomain",
+        "ARDSkylineFinal",
+        "ARDSkylineOrderReduction",
+        "ARDSkylineSemanticWellFounded",
+        "ARDSkylineStructure",
         "ARDSplice",
         "ARDStageDemands",
         "ARDStageProof",
@@ -2685,6 +2718,101 @@
         "Mathlib.Order.RelClasses",
         "Mathlib.Order.WellFounded",
         "Mathlib.Order.WithBot",
+        "Mathlib.SetTheory.Cardinal.Aleph",
+        "Mathlib.SetTheory.Ordinal.Basic",
+        "Mathlib.SetTheory.Ordinal.Family",
+        "Std"
+      ]
+    },
+    "ARD-legacy": {
+      "directory": "lean/ARD-legacy",
+      "manifest": "lean/ARD-legacy/sources.json",
+      "targets": [
+        "ARDFinal",
+        "ARDCompression"
+      ],
+      "owned_modules": [
+        "ARDClosedSupply",
+        "ARDCompression",
+        "ARDCore",
+        "ARDDecrease",
+        "ARDDefinitionFidelity",
+        "ARDDemandCore",
+        "ARDDemandRecursion",
+        "ARDDemandReflection",
+        "ARDDomain",
+        "ARDEndpointAgreement",
+        "ARDFinal",
+        "ARDFiniteUnion",
+        "ARDInitialRepresentation",
+        "ARDOrderReduction",
+        "ARDSemanticWellFounded",
+        "ARDSplice",
+        "ARDStageDemands",
+        "ARDStageProof",
+        "ARDStructure",
+        "ARDWitnesses"
+      ],
+      "external_modules": [],
+      "closure_modules": [
+        "ARDClosedSupply",
+        "ARDCompression",
+        "ARDCore",
+        "ARDDecrease",
+        "ARDDefinitionFidelity",
+        "ARDDemandCore",
+        "ARDDemandRecursion",
+        "ARDDemandReflection",
+        "ARDDomain",
+        "ARDEndpointAgreement",
+        "ARDFinal",
+        "ARDFiniteUnion",
+        "ARDInitialRepresentation",
+        "ARDOrderReduction",
+        "ARDPrefixOrder",
+        "ARDSemanticWellFounded",
+        "ARDSplice",
+        "ARDStageDemands",
+        "ARDStageProof",
+        "ARDStructure",
+        "ARDWitnesses",
+        "FiniteDemandClosedSupply",
+        "FiniteDemandCore",
+        "FiniteDemandEndpointAgreement",
+        "FiniteDemandFinitaryClosure",
+        "FiniteDemandHostAmbient",
+        "FiniteDemandInitialRepresentation",
+        "FiniteDemandOrdinalHeight",
+        "FiniteDemandRecursion",
+        "FiniteDemandReflection",
+        "FiniteDemandWitnesses",
+        "OrdinalFormal.ActualBlockGeometry",
+        "OrdinalFormal.BlockFiniteUnion",
+        "OrdinalFormal.ColumnRepresentation",
+        "OrdinalFormal.Columns",
+        "OrdinalFormal.Comparison",
+        "OrdinalFormal.Domains",
+        "OrdinalFormal.ExpansionValidity",
+        "OrdinalFormal.GeneratedColumnDecrease",
+        "OrdinalFormal.GenericSortedColumns",
+        "OrdinalFormal.LRD",
+        "OrdinalFormal.RPD",
+        "OrdinalFormal.RPDDecrease",
+        "OrdinalFormal.RPDFiniteUnion",
+        "OrdinalFormal.RPDGeometry",
+        "OrdinalFormal.RPDSortedColumns",
+        "OrdinalFormal.Reachability",
+        "OrdinalFormal.ReflectionTransport",
+        "OrdinalFormal.SpliceConstruction",
+        "OrdinalFormal.StandardValidity"
+      ],
+      "external": [
+        "Mathlib.Data.Countable.Basic",
+        "Mathlib.Data.List.Basic",
+        "Mathlib.Data.List.Shortlex",
+        "Mathlib.Data.Set.Countable",
+        "Mathlib.Order.RelClasses",
+        "Mathlib.Order.WellFounded",
         "Mathlib.SetTheory.Cardinal.Aleph",
         "Mathlib.SetTheory.Ordinal.Basic",
         "Mathlib.SetTheory.Ordinal.Family",

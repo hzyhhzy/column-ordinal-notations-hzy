@@ -1,0 +1,3 @@
+'OrdinalFormal.ARDSkyline.accessible_of_bounded' depends on axioms: [propext, Quot.sound]
+'OrdinalFormal.ARDSkyline.valid_accessible_of_bounded' depends on axioms: [propext, Quot.sound]
+'OrdinalFormal.ARDSkyline.valid_step_wellFounded_of_accessible' depends on axioms: [propext]

@@ -1,5 +1,5 @@
 {
-  "target": "ARDFinal",
+  "target": "ARDSkylineFinal",
   "modules": {
     "OrdinalFormal.ReflectionTransport": {
       "source": "ordinal-formalization/OrdinalFormal/ReflectionTransport.lean",
@@ -391,21 +391,8 @@
       "origin": "local",
       "original_sha256_lf": "3f2a0aa1b3d765cd3e514ec66838c44fe3ad91827361a6049b0c089a8e3f7f96",
       "distribution": "bundled local proof source",
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDClosedSupply.lean"
-    },
-    "ARDCompression": {
-      "source": "ordinal-formalization/ard/Compression.lean",
-      "imports": [
-        "ARDStructure",
-        "OrdinalFormal.RPDFiniteUnion"
-      ],
-      "sha256": "e0f154289dd6fe77bf8810e2acbec6ef6180499ce740c91e99d0bcb4b670166d",
-      "origin": "local",
-      "original_sha256_lf": "e0f154289dd6fe77bf8810e2acbec6ef6180499ce740c91e99d0bcb4b670166d",
-      "distribution": "bundled local proof source",
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDCompression.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDClosedSupply.lean"
     },
     "ARDCore": {
       "source": "ordinal-formalization/ard/Core.lean",
@@ -417,8 +404,8 @@
       "origin": "local",
       "original_sha256_lf": "3f9ae03ce71d3e96a6eedcda306baff5fc1ce56cd8afc7e4f5e13458440cfb03",
       "distribution": "bundled local proof source",
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDCore.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDCore.lean"
     },
     "ARDDecrease": {
       "source": "ordinal-formalization/ard/Decrease.lean",
@@ -430,8 +417,8 @@
       "origin": "local",
       "original_sha256_lf": "1866ea23f9d56536b972ee5b123a09bc611adc48d7c2ab98dbcd7098d32c6f45",
       "distribution": "bundled local proof source",
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDDecrease.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDDecrease.lean"
     },
     "ARDDefinitionFidelity": {
       "source": "ordinal-formalization/ard/DefinitionFidelity.lean",
@@ -444,8 +431,8 @@
       "origin": "local",
       "original_sha256_lf": "fcf1ffe7a6562d392a41d52344798bd7b97e67d79de363a2cd8d9365419c436c",
       "distribution": "bundled local proof source",
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDDefinitionFidelity.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDDefinitionFidelity.lean"
     },
     "ARDDemandCore": {
       "source": "ordinal-formalization/ard/DemandCore.lean",
@@ -458,8 +445,8 @@
       "origin": "local",
       "original_sha256_lf": "10b3eec9cbd566906d4c4712d04dd9729a97dd0592e803350e11cce210861992",
       "distribution": "bundled local proof source",
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDDemandCore.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDDemandCore.lean"
     },
     "ARDDemandRecursion": {
       "source": "ordinal-formalization/ard/DemandRecursion.lean",
@@ -470,8 +457,8 @@
       "origin": "local",
       "original_sha256_lf": "3200b14bf551b60a0021f798cf6a2f94b70c8655ccc7c28c5dbb9382be591cc9",
       "distribution": "bundled local proof source",
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDDemandRecursion.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDDemandRecursion.lean"
     },
     "ARDDemandReflection": {
       "source": "ordinal-formalization/ard/DemandReflection.lean",
@@ -482,8 +469,8 @@
       "origin": "local",
       "original_sha256_lf": "3ffaf679c712fc8abc29399b7319c4302e81571f1a97b7a2a96dd25957708061",
       "distribution": "bundled local proof source",
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDDemandReflection.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDDemandReflection.lean"
     },
     "ARDDomain": {
       "source": "ordinal-formalization/ard/Domain.lean",
@@ -496,8 +483,8 @@
       "origin": "local",
       "original_sha256_lf": "4ed2df0c0f87ee79f0149893e53228f540d05a0eb73d533078b463f5c992c4c6",
       "distribution": "bundled local proof source",
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDDomain.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDDomain.lean"
     },
     "ARDEndpointAgreement": {
       "source": "ordinal-formalization/ard/EndpointAgreement.lean",
@@ -508,8 +495,8 @@
       "origin": "local",
       "original_sha256_lf": "a9033a9440b22fb81eeaa51782ef4f8c7d4b4065724be3568252e6a627859349",
       "distribution": "bundled local proof source",
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDEndpointAgreement.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDEndpointAgreement.lean"
     },
     "ARDFinal": {
       "source": "ordinal-formalization/ard/Final.lean",
@@ -524,8 +511,8 @@
       "origin": "local",
       "original_sha256_lf": "fd1d9760859c015d014dd58ef8cf65128a54be27586cfe1073d62f9554db8dee",
       "distribution": "bundled local proof source",
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDFinal.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDFinal.lean"
     },
     "ARDFiniteUnion": {
       "source": "ordinal-formalization/ard/FiniteUnion.lean",
@@ -537,8 +524,8 @@
       "origin": "local",
       "original_sha256_lf": "1188d5306e5a0fb56a9fd32c84a7d2ab34d236e874cbc318139206213ae0b841",
       "distribution": "bundled local proof source",
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDFiniteUnion.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDFiniteUnion.lean"
     },
     "ARDInitialRepresentation": {
       "source": "ordinal-formalization/ard/InitialRepresentation.lean",
@@ -550,8 +537,8 @@
       "origin": "local",
       "original_sha256_lf": "33ed1e727e7b7b0a349c5b15d90096a80d245517f5834d105909108fb5fe77ca",
       "distribution": "bundled local proof source",
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDInitialRepresentation.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDInitialRepresentation.lean"
     },
     "ARDOrderReduction": {
       "source": "ordinal-formalization/ard/OrderReduction.lean",
@@ -563,8 +550,8 @@
       "origin": "local",
       "original_sha256_lf": "2b239108687049d2c8f9ce235bd2a32f7bfc790f99844a18670f31a1768f6148",
       "distribution": "bundled local proof source",
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDOrderReduction.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDOrderReduction.lean"
     },
     "ARDPrefixOrder": {
       "source": "ordinal-formalization/ard/PrefixOrder.lean",
@@ -587,8 +574,8 @@
       "origin": "local",
       "original_sha256_lf": "46e9984569ca08016f38d812fcf1a1b0712e68679f05de7d96eb55c6d4e765a0",
       "distribution": "bundled local proof source",
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDSemanticWellFounded.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDSemanticWellFounded.lean"
     },
     "ARDSplice": {
       "source": "ordinal-formalization/ard/Splice.lean",
@@ -599,8 +586,8 @@
       "origin": "local",
       "original_sha256_lf": "86b168b99cd4ec23e93fe9840a3a3f63a202d5393bd4ddadf505d9f5fb1e9695",
       "distribution": "bundled local proof source",
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDSplice.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDSplice.lean"
     },
     "ARDStageDemands": {
       "source": "ordinal-formalization/ard/StageDemands.lean",
@@ -612,8 +599,8 @@
       "origin": "local",
       "original_sha256_lf": "0455c69028cf6145be4b93cedd3998f4161a1f9e344e184a5092e60e8b17c410",
       "distribution": "bundled local proof source",
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDStageDemands.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDStageDemands.lean"
     },
     "ARDStageProof": {
       "source": "ordinal-formalization/ard/StageProof.lean",
@@ -624,8 +611,8 @@
       "origin": "local",
       "original_sha256_lf": "1860c9c5db048413ec15d590f5baecb75c6cad76a98523f6ecfad900178a630a",
       "distribution": "bundled local proof source",
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDStageProof.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDStageProof.lean"
     },
     "ARDStructure": {
       "source": "ordinal-formalization/ard/Structure.lean",
@@ -637,8 +624,8 @@
       "origin": "local",
       "original_sha256_lf": "981bb69289f505c85a60a20174d415db3d49aad0cb717009c05f57a9eec60d7c",
       "distribution": "bundled local proof source",
-      "owner": "ARD",
-      "file": "lean/ARD/src/ARDStructure.lean"
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDStructure.lean"
     },
     "ARDWitnesses": {
       "source": "ordinal-formalization/ard/Witnesses.lean",
@@ -653,8 +640,98 @@
       "original_sha256_lf": "2a8e914dbb7ea3bf7697e5da48afba649a18541f6ed03d1bcda13ba6f0e33e3e",
       "distribution": "bundled local proof source",
       "release_change": "One redundant trailing blank line removed; proof source otherwise unchanged.",
+      "owner": "ARD-legacy",
+      "file": "lean/ARD-legacy/src/ARDWitnesses.lean"
+    },
+    "ARDSkylineBridge": {
+      "source": "lean/ARD/src/ARDSkylineBridge.lean",
+      "imports": [
+        "ARDSkylineCore"
+      ],
+      "sha256": "a64110696ebf4794aa64bd8da82e46ff79a6aa01a53819d3b73b477d6baf3649",
+      "origin": "local",
+      "original_sha256_lf": "a64110696ebf4794aa64bd8da82e46ff79a6aa01a53819d3b73b477d6baf3649",
+      "distribution": "bundled local proof source",
       "owner": "ARD",
-      "file": "lean/ARD/src/ARDWitnesses.lean"
+      "file": "lean/ARD/src/ARDSkylineBridge.lean"
+    },
+    "ARDSkylineCore": {
+      "source": "lean/ARD/src/ARDSkylineCore.lean",
+      "imports": [
+        "ARDStructure"
+      ],
+      "sha256": "82e291ba49bdca07c8235ab04199b28e7108a739140276c5eeb56d407350fd7e",
+      "origin": "local",
+      "original_sha256_lf": "82e291ba49bdca07c8235ab04199b28e7108a739140276c5eeb56d407350fd7e",
+      "distribution": "bundled local proof source",
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDSkylineCore.lean"
+    },
+    "ARDSkylineDomain": {
+      "source": "lean/ARD/src/ARDSkylineDomain.lean",
+      "imports": [
+        "ARDSkylineCore",
+        "ARDPrefixOrder",
+        "OrdinalFormal.Comparison"
+      ],
+      "sha256": "ec4d869ec4b40c3550579989b1e1528b779c7d90cbc60a84740352f9d3c332cc",
+      "origin": "local",
+      "original_sha256_lf": "ec4d869ec4b40c3550579989b1e1528b779c7d90cbc60a84740352f9d3c332cc",
+      "distribution": "bundled local proof source",
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDSkylineDomain.lean"
+    },
+    "ARDSkylineFinal": {
+      "source": "lean/ARD/src/ARDSkylineFinal.lean",
+      "imports": [
+        "ARDFinal",
+        "ARDSkylineSemanticWellFounded",
+        "ARDSkylineOrderReduction"
+      ],
+      "sha256": "ae162dc41c73918a02cd977531a3678f563661808a92e3012c98f7a2de476277",
+      "origin": "local",
+      "original_sha256_lf": "ae162dc41c73918a02cd977531a3678f563661808a92e3012c98f7a2de476277",
+      "distribution": "bundled local proof source",
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDSkylineFinal.lean"
+    },
+    "ARDSkylineOrderReduction": {
+      "source": "lean/ARD/src/ARDSkylineOrderReduction.lean",
+      "imports": [
+        "ARDSkylineDomain",
+        "ARDSkylineStructure"
+      ],
+      "sha256": "2a7fbf6d0ce3e5fb4966e62affebaecd699cca8fc66254a405475488536905b1",
+      "origin": "local",
+      "original_sha256_lf": "2a7fbf6d0ce3e5fb4966e62affebaecd699cca8fc66254a405475488536905b1",
+      "distribution": "bundled local proof source",
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDSkylineOrderReduction.lean"
+    },
+    "ARDSkylineSemanticWellFounded": {
+      "source": "lean/ARD/src/ARDSkylineSemanticWellFounded.lean",
+      "imports": [
+        "ARDSkylineDomain"
+      ],
+      "sha256": "e29f96f03e41f6976411cbfe17d9187975fc0d764c4a41a0a7643c84bb46890a",
+      "origin": "local",
+      "original_sha256_lf": "e29f96f03e41f6976411cbfe17d9187975fc0d764c4a41a0a7643c84bb46890a",
+      "distribution": "bundled local proof source",
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDSkylineSemanticWellFounded.lean"
+    },
+    "ARDSkylineStructure": {
+      "source": "lean/ARD/src/ARDSkylineStructure.lean",
+      "imports": [
+        "ARDSkylineBridge",
+        "ARDDecrease"
+      ],
+      "sha256": "5d021043990422d22f53fa5422ecd560999e938b4e6888606d008628689c8b25",
+      "origin": "local",
+      "original_sha256_lf": "5d021043990422d22f53fa5422ecd560999e938b4e6888606d008628689c8b25",
+      "distribution": "bundled local proof source",
+      "owner": "ARD",
+      "file": "lean/ARD/src/ARDSkylineStructure.lean"
     }
   },
   "external": [
@@ -681,7 +758,6 @@
   "project": "ARD",
   "repository_root": "../..",
   "targets": [
-    "ARDFinal",
-    "ARDCompression"
+    "ARDSkylineFinal"
   ]
 }

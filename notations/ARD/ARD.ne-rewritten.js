@@ -1,13 +1,15 @@
-// Standalone ARD adjacency-view trial; published mathematical core is embedded unchanged.
+// ARD, skyline edition: exact simplified presentation of standard ARD-legacy.
+// See definition.md and ../../proofs/paper/ard-well-ordering.md.
 (function (register) {
 'use strict';
 let definition;
 (function (register_notation) {
-/* ARD arcs v0.1 — Anchored Row Diagrams (formerly Anchored-Rows).
-   Standalone ne-rewritten custom notation; no imports, network or storage.
-   Triples are (row anchor, parent, maximum root), all zero-based.
-   Ordinary Lean well-ordering is proved; weak-theory derivability has a paper proof only.
-   No strict strength comparison is claimed. See the documentation accompanying this release. */
+/* ARD — Anchored Row Diagrams, simplified skyline rules.
+   Each column has decreasing parents and strictly increasing (anchor, root).
+   All triples obey 0 <= anchor, root <= parent < child.
+   One rectangular predecessor replaces the original lower-row package.
+   New-rule well-ordering is Lean-proved; exact legacy equivalence is paper-only.
+   No strength comparison with wY is claimed. No imports, network or storage. */
 (function () {
 'use strict';
 const TOP = 'Limit of ARD';
@@ -45,22 +47,36 @@ const edgeCmp = (a,b) => icmp(a.p,b.p) || icmp(a.k,b.k) || icmp(a.q,b.q);
 function push(col,e,b) {
   b.tick(); if (++b.records > CAP.records) limit('关系构造预算'); col.push(e);
 }
+// Normalize a column without generating dominated rows or individual roots.
+const priorityCmp = (a,c) => icmp(a.k,c.k) || icmp(a.q,c.q);
+function skyline(col,b) {
+  const byParent = new Map();
+  for (const e of col) {
+    b.tick(); const previous = byParent.get(e.p);
+    if (!previous || priorityCmp(e,previous)>0) byParent.set(e.p,e);
+  }
+  const ordered = [...byParent.values()].sort((a,c)=>{b.tick();return c.p-a.p;});
+  const result = []; let best = null;
+  for (const e of ordered) {
+    b.tick();
+    if (!best || priorityCmp(e,best)>0) { result.push(e); best=e; }
+  }
+  return result;
+}
 function make(columns,b) {
   b.tick(); if (columns.length > CAP.width) limit('列数');
   let groups = 0, textSize = 0;
   const cols = columns.map((col,j) => {
-    b.tick(); const merged = new Map();
+    b.tick();
     for (const e of col) {
       b.tick();
-      if (![e.k,e.p,e.q].every(Number.isSafeInteger) || e.k < 0 || e.k >= j ||
-          e.q < 0 || e.q > e.p || e.p >= j)
-        throw Error('第 '+j+' 列必须满足 0≤行锚<子列、0≤最大根≤父列<子列。');
-      const id = e.k*CAP.width+e.p, old = merged.get(id);
-      if (!old || old.q < e.q) merged.set(id,e);
+      if (![e.k,e.p,e.q].every(Number.isSafeInteger) || e.k < 0 || e.q < 0 ||
+          e.k > e.p || e.q > e.p || e.p >= j)
+        throw Error('第 '+j+' 列必须满足 0≤行锚、最大根≤父列<子列；简化规则不接受行锚大于父列的输入。');
     }
-    groups += merged.size; if (groups > CAP.groups) limit('关系组数');
-    return Object.freeze([...merged.values()].sort((a,c) => {b.tick(); return -edgeCmp(a,c);})
-      .map(e => Object.freeze({k:e.k,p:e.p,q:e.q})));
+    const normalized = skyline(col,b);
+    groups += normalized.length; if (groups > CAP.groups) limit('关系组数');
+    return Object.freeze(normalized.map(e=>Object.freeze({k:e.k,p:e.p,q:e.q})));
   });
   const parts = cols.map(col => {
     b.tick(); const part = '['+col.map(e => '('+e.k+','+e.p+','+e.q+')').join(',')+']';
@@ -77,12 +93,11 @@ function compareGraphs(a,c,b) {
   }
   return icmp(a.cols.length,c.cols.length);
 }
-function control(col,b) {
-  let best=null;
-  for (const e of col) { b.tick();
-    if (!best || (icmp(e.k,best.k)||icmp(e.q,best.q)||icmp(e.p,best.p))>0) best=e;
-  }
-  return best;
+// The last skyline record is the control. Its pair has a rectangular predecessor.
+function predecessor(e) {
+  if (e.q>0) return {k:e.k,p:e.p,q:e.q-1};
+  if (e.k>0) return {k:e.k-1,p:e.p,q:e.p};
+  return null;
 }
 function finite(n,b) {
   if (n>BigInt(CAP.width)) limit('有限数的列数');
@@ -97,23 +112,24 @@ function step(g,index,b) {
   const x=g.cols.length-1;
   if(x<0)return g;
   if(n===0n || !g.cols[x].length)return make(g.cols.slice(0,x),b);
-  const e=control(g.cols[x],b),c=e.p,L=x-c;
+  const last=g.cols[x],e=last[last.length-1],c=e.p,L=x-c;
   const size=BigInt(x)+n*BigInt(L);
   if(size>BigInt(CAP.width))limit('展开后列数');
-  const cols=Array.from({length:Number(size)},()=>[]),N=Number(n);
-  // Frozen prefix need only be copied once. All its references are < c.
-  for(let j=0;j<c;j++) for(const a of g.cols[j])push(cols[j],a,b);
-  for(let v=0;v<=N;v++) {
-    b.tick(); const phi=i=>i<c?i:i+v*L;
-    for(let j=c;j<x;j++)for(const a of g.cols[j])
-      push(cols[phi(j)],{k:phi(a.k),p:phi(a.p),q:phi(a.q)},b);
-    if(v===N)break;
-    const seam=cols[x+v*L];
-    for(const a of g.cols[x]) {
-      b.tick(); const q=a.k<e.k?phi(a.q):a.k===e.k?Math.min(phi(a.q),phi(e.q)-1):-1;
-      if(q>=0)push(seam,{k:phi(a.k),p:phi(a.p),q},b);
+  const cols=g.cols.slice(0,x),N=Number(n);
+  for(let v=0;v<N;v++) {
+    b.tick(); const phi=i=>i<c?i:i+v*L,next=i=>i<c?i:i+(v+1)*L;
+    const moved=a=>({k:phi(a.k),p:phi(a.p),q:phi(a.q)});
+    const seam=[];
+    for(let i=0;i<last.length-1;i++)push(seam,moved(last[i]),b);
+    // Move FIRST, then take the predecessor: these operations do not commute.
+    const lower=predecessor(moved(e));
+    if(lower)push(seam,lower,b);
+    // Append one relocated source block. Its first column shares the seam.
+    for(let j=c;j<x;j++) {
+      const col=j===c?seam:[];
+      for(const a of g.cols[j])push(col,{k:next(a.k),p:next(a.p),q:next(a.q)},b);
+      cols.push(col);
     }
-    for(let h=0;h<phi(e.k);h++)push(seam,{k:h,p:phi(c),q:phi(c)},b);
   }
   const result=make(cols,b);
   if(compareGraphs(result,g,b)>=0)throw Error('ARD：内部一步下降断言失败。');
@@ -168,63 +184,41 @@ const htmlText=s=>'<span style="font-family:inherit;white-space:nowrap">'+esc(s)
 const latexText=s=>s==='∅'?'\\varnothing':'\\text{'+s.replace(/[{}\\]/g,c=>'\\'+c)+'}';
 const fs=(raw,n)=>{n=nat(n);const b=budget(),g=parse(raw,b);return (g===null?seed(n,b):step(g,n,b)).key;};
 
-// Exact local counts; no unfolding of copied blocks and no ordinal assumptions.
-// For each (k,q) only the greatest parent can control. Earlier columns supply
-// threshold traces. Each trace's greatest (k,q) strictly decreases.
+// Exact local counts using skyline traces of earlier columns.
+// A step merges C_p with a shell whose parents are >=p and priorities are <u.
+// While the source's control is >=u, that shell cannot affect it. Jump to the
+// first recorded source state below u, then merge; no low-row packages are built.
 function counts(g,b,options={}) {
   if(g===null)return null;
   if(options.maxWork===undefined && b.counts.has(g.key))return b.counts.get(g.key);
   const maxWork=options.maxWork===undefined?CAP.work:options.maxWork;
   if(!Number.isSafeInteger(maxWork)||maxWork<0)throw Error('计数工作量必须是非负安全整数。');
-  let work=0,profileCells=0,traceCells=0,traceStates=0;
+  let work=0,traceCells=0,traceStates=0;
   const tick=()=>{b.tick();if(++work>maxWork)limit('计数工作量');};
-  const W=Math.max(1,g.cols.length),pair=(k,q)=>k*W+q;
-  const profiles=g.cols.map(col=> {
-    const map=new Map();
-    for(const e of col)for(let q=0;q<=e.q;q++) {
-      tick();const id=pair(e.k,q);if(!map.has(id)||map.get(id)<e.p)map.set(id,e.p);
-      if(map.size+profileCells>CAP.countCells)limit('计数输入关系');
-    }
-    profileCells+=map.size;return map;
-  });
+  const local={tick},W=Math.max(1,g.cols.length),pair=e=>e.k*W+e.q;
   const traces=[],values=[];
   function query(c,cut) {
     tick();const ts=traces[c];let lo=0,hi=ts.length-1;
     while(lo<hi){tick();const mid=(lo+hi)>>1;if(ts[mid].top>=cut)lo=mid+1;else hi=mid;}
     return ts[lo];
   }
-  for(let c=0;c<profiles.length;c++) {
-    tick();const map=new Map(profiles[c]),heap=[],trace=[];let steps=0n;
-    function heapPush(id) {
-      let i=heap.length;heap.push(id);
-      while(i){tick();const p=(i-1)>>1;if(heap[p]>=id)break;heap[i]=heap[p];i=p;}heap[i]=id;
-    }
-    function heapPop() {
-      const first=heap[0],last=heap.pop();if(heap.length){let i=0;
-        while(i*2+1<heap.length){tick();let j=i*2+1;if(j+1<heap.length&&heap[j+1]>heap[j])j++;
-          if(last>=heap[j])break;heap[i]=heap[j];i=j;}heap[i]=last;}
-      return first;
-    }
-    function put(id,p) {
-      tick();if(!map.has(id)){map.set(id,p);heapPush(id);}
-      else if(map.get(id)<p)map.set(id,p);
-      if(map.size>CAP.countCells)limit('计数活动关系');
-    }
-    for(const id of map.keys())heapPush(id);
+  for(let c=0;c<g.cols.length;c++) {
+    tick();let col=g.cols[c],steps=0n;const trace=[];
     for(;;) {
-      tick();const top=heap.length?heap[0]:-1;
-      // The final column needs a value but no future source trace.
-      if(c+1<profiles.length){traceCells+=map.size;
+      tick();const e=col[col.length-1],top=e?pair(e):-1;
+      if(c+1<g.cols.length) {
+        traceCells+=col.length;
         if(traceCells>CAP.traceCells||++traceStates>CAP.traceStates)limit('计数轨迹缓存');
         if(trace.length&&trace[trace.length-1].top<=top)throw Error('计数轨迹下降断言失败。');
-        trace.push({top,steps,rest:new Map(map)});
+        trace.push({top,steps,rest:col});
       }
-      if(top<0)break;
-      heapPop();const p=map.get(top);map.delete(top);
-      const sub=query(p,top);steps+=1n+sub.steps;
-      for(const [id,parent] of sub.rest)put(id,parent);
-      const k=Math.floor(top/W);
-      for(let h=0;h<k;h++)for(let q=0;q<=p;q++)put(pair(h,q),p);
+      if(!e)break;
+      const source=query(e.p,top),lower=predecessor(e),shell=col.slice(0,-1);
+      if(lower)shell.push(lower);
+      steps+=1n+source.steps;
+      if(shell.length+source.rest.length>CAP.countCells)limit('计数活动关系');
+      col=skyline(shell.concat(source.rest),local);
+      if(col.length&&pair(col[col.length-1])>=top)throw Error('计数跳跃下降断言失败。');
     }
     traces[c]=trace;values.push(steps+1n);
   }
@@ -416,18 +410,18 @@ function svg(raw) {
 }
 const list={name:'列表',plain,html:raw=>htmlText(plain(raw)),latex:raw=>latexText(plain(raw)),from_display:plain};
 register_notation({
-  id:'ard-arcs-v01',name:'ARD（弧线图）',simple_name:'ARD',
+  id:'ard-skyline-v01',name:'ARD',simple_name:'ARD',
   description:[
-    'ARD（Anchored Row Diagrams，行锚图）：行锚随列一起移动。普通 Lean 良序证明已完成；弱体系内推导仅有纸面证明；未证明强于 RPD 或 Ω-LRD3。',
-    '每列 [...]；(k,p,q) 是行锚、父列、最大根。列号从 0 开始，k<子列且 0≤q≤p<子列。k 是列引用，不是固定层号。',
-    '控制按 (k,q,p) 最大；切点为控制父列。复制同时搬移行锚、父、根、子；第 b 块生成所有 h<φ_b(k) 的低行锚。',
-    '有限式 [0] 删末列；A[n] 是 A[n+1] 的完整列前缀。先找最早不同列，再按 (p,k,q) 递减列列表比较。',
-    'A0=0，A1=[]，A(n+1) 在 An 后追加 [(n−1,n−1,n−1)]；Limit of ARD 的 [n]=An。旧顶端名称仍可输入。',
-    '输入 A3、A3[2][1]、Limit[3]、自然数或完整列表。自然数表示相应数量的空列。手写输入只检查结构，不保证标准可达。',
-    '列表为默认显示，等价表示提供计数序列和完整弧线图；图上方为每列精确计数，无图下注释。字体继承页面。计数不参与比较。',
-    '计数使用 BigInt，有限局部化简可证明终止；正指标展开在原末列位置的计数减 1。超限不显示近似值。',
-    '同一事件任务共享约 1 秒检查点预算。列数、关系数、文本、计数轨迹和画布另有限制；超限不是数学不终止的证据。',
-    '三个 FS 选项采用同一规则，不加指标偏移。无需其他记号文件，不访问网络、不保存持久缓存。'
+    'ARD 简化规则：与原 ARD 的标准展开系统精确对应，不是一个增强或削弱后的新记号。对应论证见随附文档，尚未另行形式化该压缩引理。',
+    '每列 [...]；(k,p,q) 是行锚、父列、最大根。坐标须满足 0≤k,q≤p<子列。全部原 ARD 标准式满足这一加强条件。',
+    '同父只留最大的 (k,q)，再按父递减扫描，只留 (k,q) 严格超过之前最大值的记录。旧列表输入会自动压缩，空列保留。',
+    '末列最后一条记录为控制 (K,c,R)。复制时搬移全部坐标，再对控制取矩形前驱：(K,R−1)，或根为 0 时 (K−1,c)；(0,0) 删除。合并来源列后重新压缩。',
+    '有限式 [0] 删末列；A[n] 是 A[n+1] 的完整列前缀。先找最早不同列，再按 (p,k,q) 比较记录；真前缀较小。',
+    '种子和原版相同；Limit of ARD 的 [n]=An。输入 A3、A3[2][1]、Limit[3]、自然数或完整列列表。解析器不判定标准可达。',
+    '保留列表、计数序列、完整弧线图及两种邻接表。图表画的是简化轮廓，省去的原关系不再作为本版数据保存。',
+    '计数用 BigInt 和较早列的轮廓轨迹跳跃计算，不展开复制块，不枚举全部低行；与原标准式的每列计数相同。计数不参与比较。',
+    '同一事件任务共享约 1 秒检查点预算，另有限列、记录、文字和绘图保护；超限明确提示，不输出近似值或局部图。',
+    'FS、FS_alter、FS_short 使用同一规则。无需其他记号文件，不访问网络，不保存持久缓存。'
   ],
   display:list,
   display_equiv:{
@@ -452,7 +446,7 @@ register_notation({
 })();
 })(value => { if (definition) throw Error('Duplicate notation registration'); definition = value; });
 
-// Shared presentation-only source. The two delivered scripts inline this file.
+// Presentation helpers inherited from the published ARD expander.
 // It never changes an expression, expansion rule, comparison, or existing view.
 function addAdjacencyDisplays(notation, config) {
   'use strict';
@@ -545,7 +539,7 @@ function addAdjacencyDisplays(notation, config) {
           if (cells[p].length > limits.label) fail('根数值文字');
           const q = BigInt(cells[p]);
           if (q > BigInt(p)) throw TypeError('最大根不能超过父列。');
-          if (config.anchored && k >= j) throw TypeError('ARD 行锚必须在子列之前。');
+          if (config.anchored && k > p) throw TypeError('简化 ARD 的行锚不能超过父列。');
           triples.push('(' + k + ',' + p + ',' + q + ')');
         }
       }
@@ -684,10 +678,10 @@ function addAdjacencyDisplays(notation, config) {
   notation.name = config.displayName || config.label + '（邻接表试用版）';
   if (config.displayName) notation.simple_name = config.displayName;
   notation.description = [...notation.description,
-    '本试用版新增邻接表（文字）和邻接表（图），原有显示、展开及比较不变。',
+    '邻接表（文字）和邻接表（图）展示简化后保存的全部轮廓记录。',
     '文字：每列一对 []；分号从层 0 起分层，逗号从父列 0 起定位，格内填最大根 q。内部空位保留，尾部空位省略；0 不是空位。',
     '图：最上方是计数序列，其下每层一张上三角表；只裁去必空的下三角，不删任何关系。完整对角格用淡色背景填列号，同时标识该行和该列。层号在左侧，不加 k=，不画外侧行列号。',
-    '两种新视图均可由纯文本导回列表。计数复用原精确算法；超限明确提示，不代填近似数字。表格完整显示全部关系。'
+    '两种邻接视图均可由纯文本导回简化列表。计数使用精确轮廓轨迹算法；超限明确提示，不代填近似数字。表格不截取局部。'
   ];
   notation.display_equiv = { ...notation.display_equiv,
     [TEXT]: { name: TEXT, plain, html: textHTML, latex, from_display: fromDisplay },
@@ -701,6 +695,8 @@ function addAdjacencyDisplays(notation, config) {
   notation.debug = { ...notation.debug, adjacency_text: plain, adjacency_from_text: fromDisplay,
     adjacency_diagram: diagram, adjacency_svg: svg, adjacency_limits: limits };
 }
-addAdjacencyDisplays(definition, {label:'ARD',top:'Limit of ARD',id:'ard-adjacency-v01',width:8192,ms:1000,anchored:true,countText:raw=>definition.display_equiv['计数序列'].plain(raw),read:raw=>{const g=definition.debug.parse(raw);return g===null?null:g.cols.map(col=>col.map(e=>[e.k,e.p,e.q]));}});
+addAdjacencyDisplays(definition, {label:'ARD',top:'Limit of ARD',id:'ard-skyline-v01',displayName:'ARD',width:8192,ms:1000,anchored:true,countText:raw=>definition.display_equiv['计数序列'].plain(raw),read:raw=>{const g=definition.debug.parse(raw);return g===null?null:g.cols.map(col=>col.map(e=>[e.k,e.p,e.q]));}});
+definition.name = 'ARD'; definition.simple_name = 'ARD';
 register(definition);
 })(register_notation);
+

@@ -43,7 +43,8 @@ NER_HASHES = {
     'notations/RPD/RPD-mountain.ne-rewritten.js': '447eaed4e88604a29ba4ccef329b05c57ef30d935b0a31166ff519805e352026',
     'notations/LRD/LRD.ne-rewritten.js': '394fe4763e82708a99d66c2d88d3926c86c4be92ec35174b9205a292550740b1',
     'notations/Omega-LRD3/Omega-LRD3.ne-rewritten.js': 'fe33b1a35891e9efb9eb5932ab94456053769b6b58df41ea9f36eb57a262f3ab',
-    'notations/ARD/ARD-arcs.ne-rewritten.js': 'ab4f05ef1fb65b6308e710cbbc98c173310f9c3073ce3a57082863af708841d6',
+    'notations/ARD/ARD.ne-rewritten.js': '7cf745079c90e0f127b06c50c8082f81c16600aa9a76fb712f50cfa8d2b955b0',
+    'notations/ARD-legacy/ARD-arcs.ne-rewritten.js': '1b80215f80c7797c1891e0c197c4ca8470cd43e9ed86d68cfb7b2b760e8d7930',
     'notations/IPD/IPD.ne-rewritten.js': 'acc1a1c2ae260da9be7d13e14ac17d84a92679f82efe97aa85cd0e3b072f6011',
     'notations/ARD2/ARD2.ne-rewritten.js': 'e0d4eb14056ee54a6d4a8d2475241469ba33f07d38c406cfa9b20c648407380d',
     'notations/SPD/SPD.ne-rewritten.js': 'd693c23564a766ecbbe3072cd200632c49b490d47d18428e1310ea438e85f266',
@@ -55,13 +56,14 @@ LEAN_ROOTS = {
     'RPD': ['FiniteDemandRPDFinal'],
     'LRD': ['FiniteDemandLRDFinal'],
     'Omega-LRD3': ['OmegaLRD3Final'],
-    'ARD': ['ARDFinal', 'ARDCompression'],
+    'ARD': ['ARDSkylineFinal'],
+    'ARD-legacy': ['ARDFinal', 'ARDCompression'],
     'IPD': ['IPDStandardOrder', 'IPDTreeCompare'],
     'ARD2': ['ARD2Final', 'ARD2Compression'],
     'shared': ['ARDPrefixOrder', 'FiniteDemandColumnWellFounded',
                'OrdinalFormal.ColumnMap', 'OrdinalFormal.ColumnReachability',
                'OrdinalFormal.GeneratedColumnDecrease', 'OrdinalFormal.RPDFiniteUnion'],
-    'aggregate': ['SevenNotationFinalAudit'],
+    'aggregate': ['ARDRevisionFinalAudit'],
 }
 
 
@@ -79,7 +81,7 @@ def sha256_lf(path):
 
 
 def load_release_lean_plans(repository):
-    """Check the exact nine-scope catalog without requiring completed receipts."""
+    """Check the exact ten-scope catalog without requiring completed receipts."""
     sys.dont_write_bytecode = True
     sys.path.insert(0, str(repository / 'lean'))
     from verification_core import load_plan
@@ -88,7 +90,7 @@ def load_release_lean_plans(repository):
         raise ValueError('Unsupported source-ownership layout')
     projects = layout['projects']
     if set(projects) != set(LEAN_ROOTS):
-        raise ValueError('Layout must contain exactly seven notations, shared, and aggregate')
+        raise ValueError('Layout must contain exactly seven notations, ARD-legacy, shared, and aggregate')
     plans = {}
     for name, roots in LEAN_ROOTS.items():
         item = projects[name]
@@ -134,7 +136,7 @@ def load_release_lean_plans(repository):
                               if name not in ('shared', 'aggregate')))
     joint = {module for module, record in canonical.items() if record['owner'] == 'aggregate'}
     if leaf_union | joint != set(canonical) or leaf_union & joint:
-        raise ValueError('Aggregate must be precisely the seven leaf closures plus joint audit entries')
+        raise ValueError('Aggregate must be precisely the declared leaf closures plus joint audit entries')
     return plans
 
 
@@ -208,16 +210,16 @@ def main():
                 problems.append(f'Broken link: {path.relative_to(ROOT)} -> {target}')
     expected_pdfs = {
         f'notations/{notation}/definition{lang}.pdf'
-        for notation in ('RPD','LRD','Omega-LRD3','ARD','IPD','ARD2','SPD') for lang in ('','.zh-CN')
+        for notation in ('RPD','LRD','Omega-LRD3','ARD','ARD-legacy','IPD','ARD2','SPD') for lang in ('','.zh-CN')
     } | {f'proofs/paper/{paper}{lang}.pdf'
-         for paper in ('well-ordering','ard-well-ordering','ipd-well-ordering','ard2-well-ordering','spd-well-ordering') for lang in ('','.zh-CN')}
+         for paper in ('well-ordering','ard-well-ordering', 'ard-legacy-well-ordering', 'rpd-le-ard-a2','ipd-well-ordering','ard2-well-ordering','spd-well-ordering') for lang in ('','.zh-CN')}
     actual_pdfs = {p.relative_to(ROOT).as_posix() for p in pdfs}
     if actual_pdfs != expected_pdfs:
         problems.append(f'PDF inventory mismatch: {actual_pdfs ^ expected_pdfs}')
     for path in pdfs:
         if not path.with_suffix('.md').is_file() or path.stat().st_size < 1000:
             problems.append(f'Invalid PDF/source pair: {path.relative_to(ROOT)}')
-    if {p.name for p in (ROOT/'notations').iterdir() if p.is_dir()} != {'RPD','LRD','Omega-LRD3','ARD','IPD','ARD2','SPD'}:
+    if {p.name for p in (ROOT/'notations').iterdir() if p.is_dir()} != {'RPD','LRD','Omega-LRD3','ARD','ARD-legacy','IPD','ARD2','SPD'}:
         problems.append('Unexpected notation directory')
     for relative, expected in NER_HASHES.items():
         actual = hashlib.sha256((ROOT/relative).read_bytes()).hexdigest()
@@ -237,6 +239,9 @@ def main():
             problems.append('PDF build report does not cover the current PDF inventory')
         for record in records:
             path = ROOT/record['pdf'].replace('\\','/')
+            if not path.is_file():
+                problems.append(f'Missing reported PDF: {record["pdf"]}')
+                continue
             if hashlib.sha256(path.read_bytes()).hexdigest() != record['sha256']:
                 problems.append(f'Stale PDF report hash: {record["pdf"]}')
     else:

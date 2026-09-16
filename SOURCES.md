@@ -1,5 +1,8 @@
 # Sources, versions and licenses · [中文版](SOURCES.zh-CN.md)
 
+2026-09-16 update: default ARD is the skyline simplification; the old kernel remains in ARD-legacy. The new Python and seven private Lean modules are newly authored; its well-ordering closure has 56 modules. Earlier unchanged-core ARD notes below refer to ARD-legacy. Current rules and proof scope are in [ARD](notations/ARD/definition.md).
+
+
 This package is the 2026-09-14 source snapshot for [column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy). Source and proof boundaries are part of the package, not claims removed for presentation.
 
 ## Notation implementations
@@ -11,7 +14,8 @@ LRD and Ω-LRD3 remain byte-identical to their selected working versions. RPD an
 | `notations/RPD/RPD-mountain.ne-rewritten.js` | `447eaed4e88604a29ba4ccef329b05c57ef30d935b0a31166ff519805e352026` |
 | `notations/LRD/LRD.ne-rewritten.js` | `394fe4763e82708a99d66c2d88d3926c86c4be92ec35174b9205a292550740b1` |
 | `notations/Omega-LRD3/Omega-LRD3.ne-rewritten.js` | `fe33b1a35891e9efb9eb5932ab94456053769b6b58df41ea9f36eb57a262f3ab` |
-| `notations/ARD/ARD-arcs.ne-rewritten.js` | `ab4f05ef1fb65b6308e710cbbc98c173310f9c3073ce3a57082863af708841d6` |
+| `notations/ARD-legacy/ARD-arcs.ne-rewritten.js` | `1b80215f80c7797c1891e0c197c4ca8470cd43e9ed86d68cfb7b2b760e8d7930` |
+| `notations/ARD/ARD.ne-rewritten.js` | `7cf745079c90e0f127b06c50c8082f81c16600aa9a76fb712f50cfa8d2b955b0` |
 | `notations/IPD/IPD.ne-rewritten.js` | `acc1a1c2ae260da9be7d13e14ac17d84a92679f82efe97aa85cd0e3b072f6011` |
 | `notations/ARD2/ARD2.ne-rewritten.js` | `e0d4eb14056ee54a6d4a8d2475241469ba33f07d38c406cfa9b20c648407380d` |
 | `notations/SPD/SPD.ne-rewritten.js` | `d693c23564a766ecbbe3072cd200632c49b490d47d18428e1310ea438e85f266` |

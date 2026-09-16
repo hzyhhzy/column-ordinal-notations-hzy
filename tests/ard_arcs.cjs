@@ -21,7 +21,7 @@ assert(Number.isInteger(oldSpaceMiB) && oldSpaceMiB > 0 && oldSpaceMiB < 256,
 
 const started = Date.now(), DEADLINE_MS = 19000;
 function deadline() { assert(Date.now() - started < DEADLINE_MS, '19-second total test budget'); }
-const newPath = path.join(__dirname, '..', 'notations', 'ARD', 'ARD-arcs.ne-rewritten.js');
+const newPath = path.join(__dirname, '..', 'notations', 'ARD-legacy', 'ARD-arcs.ne-rewritten.js');
 const arcSource = fs.readFileSync(newPath, 'utf8');
 const digest = source => crypto.createHash('sha256').update(source).digest('hex');
 const releaseDigest = digest(arcSource);
@@ -286,7 +286,7 @@ async function render(raw, invert = false) {
 
 async function main() {
   assert.equal(await invoke('arcs.id'), 'ard-adjacency-v01');
-  assert.equal(await invoke('arcs.name'), 'ARD（邻接表试用版）');
+  assert.equal(await invoke('arcs.name'), 'ARD-legacy');
   assert.equal(await invoke('arcs.display.name'), '列表');
   assert.deepEqual(native(await invoke('Object.keys(arcs.display_equiv)')),
     ['计数序列', '弧线图', '邻接表（文字）', '邻接表（图）']);

@@ -1,126 +1,75 @@
-# ARD: anchored row diagrams · [中文版](definition.zh-CN.md)
+# ARD: skyline edition — definition · [中文版](definition.zh-CN.md)
 
-Release definition, 2026-09-13. [PDF](definition.pdf) · [NER arc-diagram expander](ARD-arcs.ne-rewritten.js) · [Python](ard.py) · [well-ordering proof](../../proofs/paper/ard-well-ordering.md) · [ordinary Lean entry point](../../lean/ARD/src/ARDFinal.lean).
+This is the repository's default ARD, an **exact alternative presentation of standard ARD**, not a stronger or weaker notation. The syntax remains `[column][column]…`, with triples `(anchor,parent,maximum root)`. Expressions usually become shorter because dominated records are removed. Column counts, local counting sequences, fundamental-sequence indices and the standard order type are preserved. The implementation operates directly on skylines; it does not reconstruct the original redundant graph.
 
-ARD means **Anchored Row Diagrams**. An expression is a finite diagram, not a path of operations. Its row labels are addresses of earlier columns. When a source block is copied, the row anchor moves along with the root, parent and child. Resource guards in the software are not mathematical rules.
+The original [definition](../ARD-legacy/definition.md) and [well-ordering paper](../../proofs/paper/ard-legacy-well-ordering.md) provide the reference system. The new exact-compression lemma has a [paper argument](../../proofs/paper/ard-well-ordering.md), not a separate Lean formalization.
 
-## 1. Finite syntax and root closure
+## Syntax, normalization and order
 
-A finite diagram is a string of columns $G=(C_0,\ldots,C_{m-1})$. A compressed entry in column $j$ is
+A finite term is a string of columns $G=(C_0,\ldots,C_{m-1})$. A record in column $j$ is $(k,p,q)$ with $0\le k,q\le p<j$. All three coordinates are addresses relocated during copying. Interpret $q$ as the maximum of the downward-closed roots $0,\ldots,q$, without explicitly enumerating them.
 
-$$
-(k,p,q),\qquad 0\le k<j,\qquad 0\le q\le p<j.
-$$
+To normalize a column, first keep only the lexicographically greatest $(k,q)$ for each parent $p$. Scan parents in decreasing order and keep a record only when its pair is strictly greater than all previous pairs. Write $S$ for this operation. Thus parents strictly decrease and pairs strictly increase. Empty columns are retained. A column may have several incomparable records; retaining only its single greatest pair would be incorrect.
 
-The coordinates are the **row anchor**, **parent column**, and **maximum root**, respectively. The child is the column containing the entry. There is no condition $k\le p$: an anchor may lie after its parent, but always before its child.
+The zero term `∅` has no columns. Natural $m$ has $m$ empty columns. Compare columns lexicographically by record keys $(p,k,q)$, and compare terms lexicographically by columns. A proper prefix is smaller at either level. Adjoin a largest external term `Limit of ARD`.
 
-The entry abbreviates every atomic relation $(k,t,p,j)$ with $0\le t\le q$. This is downward closure in the root, not downward closure in the anchor. Merge entries with the same $(k,p)$ by keeping only the largest $q$. Ignore duplicate relations but retain empty columns. The zero diagram has no columns and is written `∅`; `[]` is one empty column and represents the natural number one. The natural number $m$ consists of $m$ empty columns.
+The restriction $k\le p$ is stronger than the original raw parser's restriction, but every original standard term satisfies it. This simplification does not purport to cover original nonstandard inputs with $k>p$.
 
-In the lossless list view, each pair of brackets encloses one column; for example
+## Fundamental sequences
 
-```text
-[][(0,0,0)][(1,1,1)]
-```
+Set $0[n]=0$. For a nonzero term let $x=m-1$ and let $\partial G$ delete its last column. If $n=0$ or the last column is empty, return $\partial G$.
 
-is the three-column seed $A_3$. Python and NER store maximum roots. The Lean finite geometry uses explicit root closure; these are encodings of the same finite relations.
+Otherwise the last record of $C_x$ is the control $e=(K,c,R)$. Put $L=x-c$ and let $\phi_b$ fix addresses below $c$ and add $bL$ to all other addresses. Apply it to all three coordinates of each record. Let $C_x^-$ delete the control record.
 
-## 2. Comparison
-
-Within a column, sort the compressed entries in decreasing order of the key $(p,k,q)$. Compare the resulting lists lexicographically by that key. Compare diagrams from their leftmost column, again lexicographically. A proper prefix is smaller at either level. Thus one only needs the earliest different column and its earliest different entry. No expansion, reachability search, path comparison or global support key is used.
-
-Explicitly listing every root and sorting by $(p,k,t)$ gives the same order: for fixed $(p,k)$, the largest differing root decides the comparison before any smaller group is reached.
-
-Adjoin an external greatest symbol $\mathsf{Top}$, displayed as `Limit of ARD`. It is not a finite column or a row anchor.
-
-## 3. Fundamental sequences
-
-The index $n$ is a nonnegative integer. Define $0[n]=0$; this identity is not a strict descent step. For nonempty $G$, put $x=m-1$ and let $\partial G$ delete its last column. Set
+For a record $(k,p,q)$, its predecessor $\delta$ is the singleton $(k,p,q-1)$ if $q>0$, the singleton $(k-1,p,p)$ if $q=0<k$, and the empty set if $k=q=0$. Start with $\partial G$. For $b=0,\ldots,n-1$, append the block
 
 $$
-G[0]=\partial G,\qquad
-G[n]=\partial G\quad\text{for all }n\text{ if }C_x=\varnothing.
+\left(
+S\bigl(\phi_b(C_x^-)\cup\delta(\phi_b(e))\cup C_c\bigr),
+\phi_{b+1}(C_{c+1}),\ldots,\phi_{b+1}(C_{x-1})
+\right).
 $$
 
-For the remaining case, select the greatest last-column entry by **anchor, root, parent**, the key $(k,q,p)$, and write it $(k,c,r)$. This differs from the **parent, anchor, root** comparison key. Put
+Each block has $L$ columns. Its first column combines the seam with the beginning of the copied source block; these are not separate column positions. All references in $C_c$ lie below $c$, so it needs no relocation. Always relocate the control **before** taking its predecessor. These operations do not commute, including when $c=R=0$.
+
+Use the original seeds: $A_0=0$, the first column of $A_n$ is empty, and its column $j>0$ is the singleton $(j-1,j-1,j-1)$. Set $\mathsf{Top}[n]=A_n$. The finite standard domain is the set of finite descendants of these seeds under the simplified rule. Structural legality alone does not imply standard reachability.
+
+The old prefix preceding the last column is unchanged. Each $G[n]$ is a complete-column prefix of $G[n+1]$, strictly so for a nonempty last column. Every nonzero step strictly decreases column order. The rule uses finite loops only and does not recursively expand newly created terms.
+
+## Exact equivalence and proof scope
+
+Apply $S$ columnwise to obtain $Q$. On all original graphs satisfying $k,q\le p<j$,
 
 $$
-\ell=x-c>0,\qquad
-\phi_b(i)=\begin{cases}i,&i<c,\\i+b\ell,&i\ge c.\end{cases}
+Q(G[n]_{\rm old})=Q(G)[n]_{\rm simplified}.
 $$
 
-The cut is the control parent $c$, not $\max(k,c)$. The output has $x+n\ell$ columns. Form the following union of entries, then close downward in the root and normalize.
+The original lower-row package and lower-priority entries under the control parent reduce to their greatest surviving record, exactly $\delta$. Taking skylines commutes with union and strictly increasing relocation. These facts establish the displayed equation without assuming that the input is already a skyline.
 
-1. For $b=0,\ldots,n$, copy the old prefix $G\restriction x$. An entry $(h,p,q)$ in column $j$ is sent to $(\phi_b(h),\phi_b(p),\phi_b(q))$ in column $\phi_b(j)$. All four coordinates move, including the anchor.
-2. For each $b=0,\ldots,n-1$, form a seam in column $x+b\ell$. For every old last-column entry $(h,p,q)$:
-   - if $h<k$, insert $(\phi_b(h),\phi_b(p),\phi_b(q))$;
-   - if $h=k$, insert $(\phi_b(h),\phi_b(p),\min(\phi_b(q),\phi_b(r)-1))$, but only if its last coordinate is nonnegative;
-   - if $h>k$, insert nothing.
-3. In the same seam, insert every entry $(h,\phi_b(c),\phi_b(c))$ with $0\le h<\phi_b(k)$.
+The simplified standard domain is consequently the image of the original one. The original paper's reachability-comparison theorem says that two distinct standard terms are connected by a nonempty expansion path, oriented from larger to smaller. The displayed equation sends that path to a strictly descending simplified path, so its endpoints cannot merge. Hence $Q$ is an order isomorphism on the standard domains, preserving the entire indexed fundamental-sequence system and the order type.
 
-The unchanged prefix before $c$ is shared by all copies; repeated insertion there does not multiply relations. There are $n+1$ copies of the source block $[c,x)$, with $n$ seams. The first column of a new copy and the preceding seam occupy the same column, so their entries are merged.
+The original ARD well-ordering result, including its paper upper bound $KP_\omega+$ “there exists an uncountable ordinal”, therefore transfers through this finite combinatorial correspondence. The new rule also has a direct ordinary Lean well-ordering proof; the full correspondence itself remains a paper result. There is no claim that arbitrary legal inputs are mapped injectively, that the compressed images are literally original-standard graphs, or that the whole raw column order is well-founded. No comparison with wY is established here.
 
-Moving a maximum root across a gap and then taking root closure also fills roots in that gap. One must not replace this rule by transporting only the old individual roots and omitting the newly intervening ones.
+## Counts, software and verification
 
-Every call consists of finite loops and finite coordinate operations. It does not recursively expand a newly produced graph. Finite definition does not imply a small output or a practical running time.
+Fixing the earlier columns, the local operation on a nonempty column is $T(C)=S(C^-\cup\delta(e)\cup C_p)$, where $e=(k,p,q)$ is its control. Its count is the number of local steps to the empty column plus the final deletion. Empty columns count as one. This operation commutes with $Q$, so counts match the original system. Seed counts remain the prefixes of `1,2,6,23,104,537,…`.
 
-## 4. Seeds, standard domain and structural properties
+The exact `BigInt` counter jumps along previously computed skyline traces of earlier columns. It does not enumerate low-row packages, individual roots or globally expanded copied blocks. Resource-limit errors are explicit and never replaced by approximate counts.
 
-Define
+Import [ARD.ne-rewritten.js](ARD.ne-rewritten.js) into the custom-notation facility of [ne-rewritten](https://smilelee-lyx.github.io/ne-rewritten/). Select **ARD**, ID `ard-skyline-v01`; ARD-legacy can coexist under its different ID. Inputs include `A3`, `A3[2][1]`, `Limit[3]`, natural numbers and complete triple lists. Lists are validated and normalized. All three FS interfaces implement the same rule.
 
-$$
-A_0=0,\qquad A_1=[\varnothing],\qquad
-A_{n+1}=A_n\mathbin{\frown}[(n-1,n-1,n-1)]\quad(n\ge1),
-\qquad \mathsf{Top}[n]=A_n.
-$$
+The five preserved displays are the column list, counting sequence, full arc diagram, textual adjacency table and graphical adjacency table. Graphs show all retained skyline records, not the omitted original edges. Compact triangular tables retain shaded diagonal indices and a count sequence above them. The script retains the approximate one-second shared checkpoint budget and the original finite drawing/text/size protections.
 
-Let $D(H)$ contain $H$ and all graphs obtainable from it by a finite expansion path, ignoring the $0\to0$ self-loop. The finite standard domain is
+## Python and Lean
 
-$$
-U=\bigcup_{n<\omega}D(A_n).
-$$
-
-The complete notation is $U\cup\{\mathsf{Top}\}$. A constructor or parser only checks structural legality; it does not certify membership in $U$.
-
-Expansion preserves structural legality. For every finite $G$, $G[n]$ is a complete-column prefix of $G[n+1]$; it is proper if the old last column is nonempty. All columns before the old last column are unchanged. Every nonzero expansion strictly decreases the specified column order. Repeated index-zero steps obtain every finite prefix.
-
-The linked paper proves, in $S=KP_\omega+\text{“there exists an uncountable ordinal”}$, that all structurally legal finite graphs admit an ordinal-valued rank decreasing at every nonzero expansion, and that column order is a well-order on $U$, with or without the external greatest element. Here KP includes **full Set Induction**, but not Power Set or Choice. The ordinary Lean entry point is separate from an encoding of a derivation in $S$; see the paper's verification discussion.
-
-The standard-domain restriction on the column-order theorem is essential. The full legal graph space contains the descending chain
-
-$$
-[\varnothing]^{m+1}[(0,0,0)]>
-[\varnothing]^{m+2}[(0,0,0)]>\cdots.
-$$
-
-This is not an expansion chain. No comparison of ARD's order type with Y, RPD, LRD or Ω-LRD3, and no optimal axiomatic strength, is asserted here.
-
-## 5. Counts and displays
-
-The NER file provides a lossless list view, a count-sequence view and a full arc-diagram view. The count sequence is only a display: it is not an injective encoding, an inverse input syntax or the comparison key.
-
-For one column, keep its left prefix fixed, treat it as last, perform a positive-index expansion and discard the newly appended columns. Repeat this local operation until the retained column has no entries, then delete it. Its count is the number of local operations, including that final deletion. An empty column has count one. At the retained position only the zeroth seam and the source cut column matter, so the local operation is independent of which positive index was used. Whenever a positive-index expansion rewrites a nonempty last column, the count at that position decreases by exactly one.
-
-The local finite count computation terminates; it is not a simulation of the entire repeated $[1]$ trajectory. The count sequences of $A_1,\ldots,A_6$ are the successive prefixes of `1,2,6,23,104,537`. Counts do not establish global well-ordering on their own.
-
-The arc view shows the complete graph rather than a cropped piece. Exact counts are calculated with BigInt. If count or drawing limits are reached, the interface reports the limit and points back to the list; it does not silently substitute an approximate count or a partial graph.
-
-## 6. Software use
-
-Import [ARD-arcs.ne-rewritten.js](ARD-arcs.ne-rewritten.js) through NER's custom-notation control and select `ARD（弧线图）`. Its registration ID is `ard-arcs-v01`; the ordinary list is the default, with `计数序列` and `弧线图` in the equivalent-display menu. The script's resource safeguards do not change the finite mathematical rule.
-
-The independent Python definition requires Python 3.10+ and only the standard library:
+The readable [Python core](ard.py) uses only the standard library. From this directory:
 
 ```python
 from ard import AnchoredRows, TOP
-
 a = AnchoredRows.seed(3)
-assert str(a) == "[][(0,0,0)][(1,1,1)]"
-assert TOP[3] == a
-assert a[0] == AnchoredRows(a.columns[:-1])
-assert a[1] < a
-assert a[1].columns == a[2].columns[:len(a[1].columns)]
+print(a[1])
+assert a[0] == AnchoredRows.seed(2)
 ```
 
-`AnchoredRows()` is zero, `AnchoredRows.finite(n)` has $n$ empty columns, and `TOP` is `AnchoredRows(None)`. The constructor normalizes the entries and validates their coordinates. `kind` is `zero`, `successor` or `limit`; a finite nonzero term is a successor exactly when its last column is empty. `fs(n)` and `[n]` are identical. Natural-number inputs reject negative integers and booleans.
+The [new Lean project](../../lean/ARD/README.md) proves well-founded expansion, well-ordering of the generated column order and the adjoined top. Its equivalent finite formulation selects the maximum `(k,q,p)`, filters strictly smaller `(k,q)` pairs, adds the moved controller's single predecessor, and normalizes each appended column. On skyline inputs the control is the last record, the filter deletes just that record, and normalization fixes relocated interior columns.
 
-The Python definition omits parsing, counts, drawing, caches and resource guards. Its integers have arbitrary precision, but a large expansion can still exhaust time or memory. It should not be used for unbounded brute-force descent searches.
+Lean checks these mathematical rules, not the JS/Python compilers. The complete legacy order isomorphism and cross-notation comparisons remain paper results. [NER tests](../../tests/ard_skyline.cjs) and [Python tests](../../tests/test_ard.py) check independent implementations, counts, comparison and full diagrams. See the [validation record](../../VALIDATION.md) for current results. Finite tests are not universal proofs or a fresh interactive browser acceptance test.

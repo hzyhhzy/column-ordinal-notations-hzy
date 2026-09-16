@@ -115,7 +115,7 @@ let randomState = 634771;
 const random = n => { randomState = (Math.imul(randomState, 1664525) + 1013904223) >>> 0; return randomState % n; };
 async function main() {
   for (const name of names) {
-    const file = path.resolve(__dirname, '../notations', name,
+    const file = path.resolve(__dirname, '../notations', name === 'ARD' ? 'ARD-legacy' : name,
       name === 'RPD' ? 'RPD-mountain.ne-rewritten.js' : 'ARD-arcs.ne-rewritten.js');
     const source = fs.readFileSync(file, 'utf8').replace(/\r\n/g, '\n');
     const startMark = '(function (register_notation) {\n';

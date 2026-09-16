@@ -1,23 +1,36 @@
 # 列图序数记号 - HZY · [English](README.md)
 
-9 月 11 日 20:00，@Phyrion 公布了 [Y 序列的良序证明](https://github.com/Phyrion1343/1Y-Well-Ordering-Lean)。不久后，@test_alpha0 进一步将所需的公理体系降低到 $KP_\omega+\text{存在不可数序数}$。本仓库收录 GPT6-astra 在阅读上述证明后设计的 RPD、LRD、Ω-LRD3、ARD、IPD、ARD2，以及它们的良序证明。其中，RPD 预计强度不小于 Y 序列，但定义所需篇幅短得多；有关相对强度的探索性论证另存研究目录，尚未作为正式比较定理收录。LRD 和 Ω-LRD3 则是在此基础上进一步扩展得到的记号。ARD 则把行标改为此前列的地址，使行坐标本身也随展开移动。IPD 则使用有限层迭代树轮廓，连嵌套头内的引用也随列搬运。ARD2 回到每组仅三个自然数坐标的形式，允许行与根同时引用本列，并生成覆盖全上下文的根包。六者均有同一公理体系下的纸面良序证明。它们与 omega-Y 等其他常见记号的序型大小关系暂时未知。
+9 月 11 日 20:00，@Phyrion 公布了 [Y 序列的良序证明](https://github.com/Phyrion1343/1Y-Well-Ordering-Lean)。不久后，@test_alpha0 进一步将所需的公理体系降低到 $KP_\omega+\text{存在不可数序数}$。本仓库收录 GPT6-astra 在阅读上述证明后设计的 RPD、LRD、Ω-LRD3、ARD、IPD、ARD2，以及它们的良序证明。其中，RPD 的定义所需篇幅短得多；下面的纸面比较链证明其序型不小于固定版本 1Y。LRD 和 Ω-LRD3 则是在此基础上进一步扩展得到的记号。ARD 则把行标改为此前列的地址，使行坐标本身也随展开移动。IPD 则使用有限层迭代树轮廓，连嵌套头内的引用也随列搬运。ARD2 回到每组仅三个自然数坐标的形式，允许行与根同时引用本列，并生成覆盖全上下文的根包。六者均有同一公理体系下的纸面良序证明。它们与 omega-Y 等其他常见记号的序型大小关系暂时未知。
 
-本仓库收录列图序数记号的定义、可执行基本列展开器和良序证明。源码快照整理于 **2026-09-14**，仓库地址为 [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy)。名称中的 `hzy` 来自仓库所有者的名字。
+本仓库收录列图序数记号的定义、可执行基本列展开器和良序证明。源码快照整理于 **2026-09-16**，仓库地址为 [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy)。名称中的 `hzy` 来自仓库所有者的名字。
 
-新记号实现收录 **RPD、LRD、Ω-LRD3、ARD、IPD、ARD2、SPD**；Lean 证明覆盖 **Y、RPD、LRD、Ω-LRD3、ARD、IPD、ARD2**。其他 Ω-LRD 版本及历史实验实现均不收录。
+新记号实现收录 **RPD、LRD、Ω-LRD3、ARD、IPD、ARD2、SPD**；Lean 证明覆盖 **Y、RPD、LRD、Ω-LRD3、ARD、IPD、ARD2**。另保留明确标记的旧版 ARD-legacy；其他 Ω-LRD 版本及历史实验实现不收录。
 
 新增 **SPD（Slot Profile Diagrams，潜边轮廓图）**：每条关系只有四个整数，头与参数从此前列递归读出，输入中没有独立树字段。随附双语定义、纸面良序论证稿、Python／NER 实现及有界回归测试。**SPD 尚无 Lean 证明。** 它与 ARD、ARD2、wY、整个 IPD 的序型大小关系仍未知；局部轮廓的构造能力不等于这些跨记号比较已经成立。
 
+## ARD 新版（2026-09-16）
+
+默认 **ARD 已换成简化轮廓规则**：仍用三元组列列表，但删除被支配的记录，以单个前驱替代整包低行生成。标准序型、基本列指标和计数序列与旧版相同；[旧版 ARD-legacy](notations/ARD-legacy/definition.zh-CN.md) 的 NER、Python、定义、纸面证明和 Lean 均保留。
+
+已有纸面比较结论
+
+$$
+\boxed{\mathrm{ARD}(1,2)\ge\mathrm{RPD}\ge 1Y.}
+$$
+
+其中 `ARD(1,2)` 是两列式 `[][(0,0,0)]`，不是整个 ARD 极限。[固定两列式下的嵌入证明](proofs/paper/rpd-le-ard-a2.zh-CN.md) 给出完整 RPD 有限标准域到其严格下方的序嵌入，故还得到整个 ARD 严格大于 RPD。**这些比较及新旧标准域同构目前是纸面证明；新版 ARD 自身良序已有独立 Lean 定理。** 1Y 指本仓库固定上游定义，不新增对任意原始 JS 输入的等价性声明。
+
 ## 定义与展开器
 
-每套定义都有中英文 Markdown 和 PDF，共 **28 份定义文件**。Markdown 默认英文；每份英文定义的标题均链接到中文版。
+每套定义都有中英文 Markdown 和 PDF，共 **32 份定义文件（含保留的旧版）**。Markdown 默认英文；每份英文定义的标题均链接到中文版。
 
 | 记号 | 英文定义 | 中文定义 | NER 展开器 | Python 展开器 |
 | --- | --- | --- | --- | --- |
 | RPD | [Markdown](notations/RPD/definition.md) · [PDF](notations/RPD/definition.pdf) | [Markdown](notations/RPD/definition.zh-CN.md) · [PDF](notations/RPD/definition.zh-CN.pdf) | [JavaScript](notations/RPD/RPD-mountain.ne-rewritten.js) | [rpd.py](notations/RPD/rpd.py) |
 | LRD | [Markdown](notations/LRD/definition.md) · [PDF](notations/LRD/definition.pdf) | [Markdown](notations/LRD/definition.zh-CN.md) · [PDF](notations/LRD/definition.zh-CN.pdf) | [JavaScript](notations/LRD/LRD.ne-rewritten.js) | [lrd.py](notations/LRD/lrd.py) |
 | Ω-LRD3 | [Markdown](notations/Omega-LRD3/definition.md) · [PDF](notations/Omega-LRD3/definition.pdf) | [Markdown](notations/Omega-LRD3/definition.zh-CN.md) · [PDF](notations/Omega-LRD3/definition.zh-CN.pdf) | [JavaScript](notations/Omega-LRD3/Omega-LRD3.ne-rewritten.js) | [omega_lrd3.py](notations/Omega-LRD3/omega_lrd3.py) |
-| ARD | [Markdown](notations/ARD/definition.md) · [PDF](notations/ARD/definition.pdf) | [Markdown](notations/ARD/definition.zh-CN.md) · [PDF](notations/ARD/definition.zh-CN.pdf) | [JavaScript](notations/ARD/ARD-arcs.ne-rewritten.js) | [ard.py](notations/ARD/ard.py) |
+| ARD | [Markdown](notations/ARD/definition.md) · [PDF](notations/ARD/definition.pdf) | [Markdown](notations/ARD/definition.zh-CN.md) · [PDF](notations/ARD/definition.zh-CN.pdf) | [JavaScript](notations/ARD/ARD.ne-rewritten.js) | [ard.py](notations/ARD/ard.py) |
+| ARD-legacy | [Markdown](notations/ARD-legacy/definition.md) · [PDF](notations/ARD-legacy/definition.pdf) | [Markdown](notations/ARD-legacy/definition.zh-CN.md) · [PDF](notations/ARD-legacy/definition.zh-CN.pdf) | [JavaScript](notations/ARD-legacy/ARD-arcs.ne-rewritten.js) | [ard.py](notations/ARD-legacy/ard.py) |
 | IPD | [Markdown](notations/IPD/definition.md) · [PDF](notations/IPD/definition.pdf) | [Markdown](notations/IPD/definition.zh-CN.md) · [PDF](notations/IPD/definition.zh-CN.pdf) | [JavaScript](notations/IPD/IPD.ne-rewritten.js) | [ipd.py](notations/IPD/ipd.py) |
 | ARD2 | [Markdown](notations/ARD2/definition.md) · [PDF](notations/ARD2/definition.pdf) | [Markdown](notations/ARD2/definition.zh-CN.md) · [PDF](notations/ARD2/definition.zh-CN.pdf) | [JavaScript](notations/ARD2/ARD2.ne-rewritten.js) | [ard2.py](notations/ARD2/ard2.py) |
 | SPD | [Markdown](notations/SPD/definition.md) · [PDF](notations/SPD/definition.pdf) | [Markdown](notations/SPD/definition.zh-CN.md) · [PDF](notations/SPD/definition.zh-CN.pdf) | [JavaScript](notations/SPD/SPD.ne-rewritten.js) | [spd.py](notations/SPD/spd.py) |
@@ -34,7 +47,7 @@ SPD 提供列表与精确计数序列两种显示。NER 支持输入 `S2`、`Top
 
 ## 良序证明与证明状态
 
-原合写论文覆盖 Y、RPD、LRD、Ω-LRD3，独立的 ARD 全文证明给出动态行引用的延拓。IPD 独立论文给出迭代树轮廓的证明，并把直接 KP 树秩引理收入附录 A。ARD2 论文给出双 SELF 延拓及其实际接缝搬运。四篇均在以下弱集合论内论证：
+原合写论文覆盖 Y、RPD、LRD、Ω-LRD3，旧版 ARD-legacy 全文证明给出动态行引用的延拓，新版 ARD 论文证明轮廓简化及直接语义下降。IPD 独立论文给出迭代树轮廓的证明，并把直接 KP 树秩引理收入附录 A。ARD2 论文给出双 SELF 延拓及其实际接缝搬运。这些良序证明均在以下弱集合论内论证：
 
 $$
 KP_\omega+\text{存在不可数序数}.
@@ -44,21 +57,23 @@ $$
 
 - **纸面证明：**[英文 Markdown](proofs/paper/well-ordering.md) · [英文 PDF](proofs/paper/well-ordering.pdf) · [中文 Markdown](proofs/paper/well-ordering.zh-CN.md) · [中文 PDF](proofs/paper/well-ordering.zh-CN.pdf)。
 - **ARD 纸面证明：**[英文 Markdown](proofs/paper/ard-well-ordering.md) · [英文 PDF](proofs/paper/ard-well-ordering.pdf) · [中文 Markdown](proofs/paper/ard-well-ordering.zh-CN.md) · [中文 PDF](proofs/paper/ard-well-ordering.zh-CN.pdf)。
+- **ARD-legacy 旧版证明：**[中](proofs/paper/ard-legacy-well-ordering.zh-CN.md) · [英](proofs/paper/ard-legacy-well-ordering.md)。
+- **ARD(1,2)≥RPD 比较：**[中文](proofs/paper/rpd-le-ard-a2.zh-CN.md) · [英文](proofs/paper/rpd-le-ard-a2.md)。
 - **IPD 纸面证明：**[英文 Markdown](proofs/paper/ipd-well-ordering.md) · [英文 PDF](proofs/paper/ipd-well-ordering.pdf) · [中文 Markdown](proofs/paper/ipd-well-ordering.zh-CN.md) · [中文 PDF](proofs/paper/ipd-well-ordering.zh-CN.pdf)。
 - **ARD2 纸面证明：**[英文 Markdown](proofs/paper/ard2-well-ordering.md) · [英文 PDF](proofs/paper/ard2-well-ordering.pdf) · [中文 Markdown](proofs/paper/ard2-well-ordering.zh-CN.md) · [中文 PDF](proofs/paper/ard2-well-ordering.zh-CN.pdf)。
 - **SPD 纸面论证稿（尚未 Lean 形式化）：**[英文 Markdown](proofs/paper/spd-well-ordering.md) · [英文 PDF](proofs/paper/spd-well-ordering.pdf) · [中文 Markdown](proofs/paper/spd-well-ordering.zh-CN.md) · [中文 PDF](proofs/paper/spd-well-ordering.zh-CN.pdf)。
 - **IPD 定义对应审计：**[英文](proofs/paper/ipd-fidelity.md) · [中文](proofs/paper/ipd-fidelity.zh-CN.md)。
 - **Lean：**[英文构建说明与定理索引](lean/README.md) · [中文说明](lean/README.zh-CN.md)。
 - **独立 Lean 项目：**[Y](lean/Y/README.zh-CN.md) · [RPD](lean/RPD/README.zh-CN.md) · [LRD](lean/LRD/README.zh-CN.md) · [Ω-LRD3](lean/Omega-LRD3/README.zh-CN.md) · [ARD](lean/ARD/README.zh-CN.md) · [IPD](lean/IPD/README.zh-CN.md) · [ARD2](lean/ARD2/README.zh-CN.md)。
-- **可选联合入口：**[SevenNotationFinalAudit.lean](lean/src/SevenNotationFinalAudit.lean)。
+- **可选联合入口：**[ARDRevisionFinalAudit.lean](lean/src/ARDRevisionFinalAudit.lean)。
 
-每个记号各有独立构建配置、输出和验证收据，只依赖自己与[共享基础](lean/shared/README.zh-CN.md)；只有 Y 另需 BMS。新增记号不修改旧项目，也不强制重建旧证明。
+每个记号各有独立构建配置、输出和验证收据，只编译声明的依赖与[共享基础](lean/shared/README.zh-CN.md)；新版 ARD 明确复用 ARD-legacy 语义后端，只有 Y 另需 BMS。新增记号不修改旧项目，也不强制重建旧证明。
 
 这里“每个记号”指 Lean 索引中的原七个系统。SPD 此次只增加实现和纸面文稿，没有 `lean/SPD` 项目、验证收据，也没有扩充七系统联合定理。其文稿在同一弱集合论内展开有限需求／新父子句路线，并区分合法 raw 图的展开关系良基与指定标准域的列序良序。
 
 Lean 工程形式化通常数学意义的良序定理，**不是在 Lean 中编码上述弱对象理论的推导**。论文的公理账本与 Lean 内核检查是两项不同成果。
 
-Y 指固定上游提交 `1689b21131b488ec2ba2515bd630360371a2389d` 的继承祖先定义。这里不声称已完成该定义与原 Naruyoko JavaScript 在全部合法输入上的等价证明，正式证明部分也不收录七者序型比较、最优公理强度或证明论序数比较；另设研究目录保存未纳入正式定理的比较论证与候选。
+Y 指固定上游提交 `1689b21131b488ec2ba2515bd630360371a2389d` 的继承祖先定义。这里不声称已完成该定义与原 Naruyoko JavaScript 在全部合法输入上的等价证明，Lean 认证部分不包含跨记号序型比较、最优公理强度或证明论序数比较；上面的比较链由纸面证明给出；另设研究目录保存未纳入正式定理的比较论证与候选。
 
 ## 序型比较研究（非正式定理）
 
@@ -77,6 +92,9 @@ Y 指固定上游提交 `1689b21131b488ec2ba2515bd630360371a2389d` 的继承祖�
 ```sh
 python tests/test_python.py
 python tests/test_ard.py
+python tests/test_ard_legacy.py
+node --max-old-space-size=512 tests/ard_skyline.cjs
+python -B tests/rpd_ard_comparison.py
 python tests/test_ipd.py
 python tests/test_ard2.py
 python -B tests/test_spd.py

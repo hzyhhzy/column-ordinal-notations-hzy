@@ -160,6 +160,6 @@ C_T(j)=f(f(g(s),B_S),Z)=\texttt{0(0(0(*),1(1)),.)}.
 - 独立完整树 Python 找到两个标准轨道阈值；实际 NER 回放核对完整图、控制父与精确计数，结果一致。
 - 测试有步数、时间、节点与槽数上限；实际 NER 本次 RSS 约 210 MB，无长期后台搜索。资源细节见 [测试记录](TEST-REPORT.md)。
 
-对应脚本：新编码探测（原工作区：`output/ipd-upper-bounds-20260914/ard_tpd_anchor_probe.py`；未归档）、有界分支探索（原工作区：`output/ipd-upper-bounds-20260914/ard_tpd_threshold_search.py`；未归档）、完整树阈值见证（原工作区：`output/ipd-upper-bounds-20260914/ard_tpd_profile_witness.py`；未归档）、实际 NER 回放（原工作区：`output/ipd-upper-bounds-20260914/anchor_ner_witness.cjs`；未归档）（加 `--ard-tpd`）。源定义是 [ARD](../../../../notations/ARD/ard.py)、TPD（原工作区：`output/wpd/tpd.py`；未归档） 和 IPD（原工作区：`output/new-notation-20260914/ipd.py`；未归档），均未修改。
+对应脚本：新编码探测（原工作区：`output/ipd-upper-bounds-20260914/ard_tpd_anchor_probe.py`；未归档）、有界分支探索（原工作区：`output/ipd-upper-bounds-20260914/ard_tpd_threshold_search.py`；未归档）、完整树阈值见证（原工作区：`output/ipd-upper-bounds-20260914/ard_tpd_profile_witness.py`；未归档）、实际 NER 回放（原工作区：`output/ipd-upper-bounds-20260914/anchor_ner_witness.cjs`；未归档）（加 `--ard-tpd`）。源定义是 [ARD](../../../../notations/ARD-legacy/ard.py)、TPD（原工作区：`output/wpd/tpd.py`；未归档） 和 IPD（原工作区：`output/new-notation-20260914/ipd.py`；未归档），均未修改。
 
 目前可以说：**ARD、TPD 都已找到显著更小、具有明确编码与可达性依据的 IPD 候选上界。** 所支持的目标不等式是 \(\alpha_{ARD}\le|A^\star|\)、\(\alpha_{TPD}\le|T^\star|\)，但尚不标为完整证明。没有开展全局最优性、精确等式、IPD 良序后端或一般覆盖秩归纳的新证明。

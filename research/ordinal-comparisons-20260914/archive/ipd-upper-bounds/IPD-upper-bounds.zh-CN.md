@@ -388,7 +388,7 @@ HT 的控制边正好是 `(父3,第1层,L₃)`，所以同一个有限 HT 包络
 [^bmsbridge]: 原 RPD–BMS 候选转换稿（原工作区：`.audit-y-root-notation/RPD_BMS_BRIDGE.md`；未归档）。其中候选等号及未完成义务在本报告中仍然保留，不作为已知定理引用。
 [^bmcode]: SmileLee-lyx，ne-rewritten [BMS 定义](https://github.com/SmileLee-lyx/ne-rewritten/blob/c539d8f68c5553da2d681c1251ea443b6b735e62/src/notations/BM-like/BM.ts) 与 [三角转换](https://github.com/SmileLee-lyx/ne-rewritten/blob/c539d8f68c5553da2d681c1251ea443b6b735e62/src/notations/BM-like/BM_converter.ts)。本次实际读取本地快照；BMS 核心 SHA-256 见 [测试记录](TEST-REPORT.md)。BO 与 BMS/Y `1,3` 的身份按给定参照采用。
 [^rpd]: [RPD 当前发布定义](../../../../notations/RPD/definition.zh-CN.md)；[独立程序](../../../../notations/RPD/rpd.py)。
-[^ard]: [ARD 当前发布定义](../../../../notations/ARD/definition.zh-CN.md)；[独立程序](../../../../notations/ARD/ard.py)。
+[^ard]: [ARD 当前发布定义](../../../../notations/ARD-legacy/definition.zh-CN.md)；[独立程序](../../../../notations/ARD-legacy/ard.py)。
 [^tpd]: TPD 定义（原工作区：`output/wpd/README.zh-CN.md`；未归档）；独立程序（原工作区：`output/wpd/tpd.py`；未归档）。本报告不采用 TPD 的旧名字 WPD 代指它。
 [^yprep]: Y→RPD 预降模拟稿（原工作区：`.audit-y-root-notation/RPD_Y_PREPARATION_PROOF.md`；未归档）；真实根恢复与复制接口（原工作区：`.audit-y-root-notation/Y_GENUINE_RECOVERY_AND_COPY.md`；未归档）；Y 与 RPD 比较边界（原工作区：`RPD-与Y极限的严格性研究.md`；未归档）。这些稿件明确区分规范图接口、数值实现等价和整体序型比较。
 [^wy]: *Well-foundedness of the Weak-Magma ω-Y System in KP*，`omega-Y-Weak-Magma-KP.pdf`，2026-09-13，第 5—6 节的有限维度与复制/接缝接口；来源稿由用户提供，未随本仓库分发。数值对照直接读取 `.research-ne-rewritten/src/notations/Y/Omega_Y.ts` 的 weak magma 核心；仅测试 JS 安全整数内的样例，默认 FS 为完整展开后删末项，不混入 FS_alter。

@@ -1,0 +1,7 @@
+'OrdinalFormal.ARDSkyline.expand_bounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.ARDSkyline.valid_accessible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.ARDSkyline.valid_step_wellFounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.ARDSkyline.standard_wellFounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.ARDSkyline.standard_total' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.ARDSkyline.standard_strictWellOrder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalFormal.ARDSkyline.standard_with_top_strictWellOrder' depends on axioms: [propext, Classical.choice, Quot.sound]

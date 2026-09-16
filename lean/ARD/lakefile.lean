@@ -4,32 +4,19 @@ open Lake DSL
 package ordinalnotations_ard
 
 require ordinalnotations_shared from "../shared"
+require ordinalnotations_ard_legacy from "../ARD-legacy"
 
-/-- Exact module ownership lets sibling projects share Lean namespaces without overlap. -/
 @[default_target]
-lean_lib OrdinalNotationsARD where
+lean_lib OrdinalNotationsARDSkyline where
   srcDir := "src"
   roots := #[]
   globs := #[
-    .one `ARDClosedSupply,
-    .one `ARDCompression,
-    .one `ARDCore,
-    .one `ARDDecrease,
-    .one `ARDDefinitionFidelity,
-    .one `ARDDemandCore,
-    .one `ARDDemandRecursion,
-    .one `ARDDemandReflection,
-    .one `ARDDomain,
-    .one `ARDEndpointAgreement,
-    .one `ARDFinal,
-    .one `ARDFiniteUnion,
-    .one `ARDInitialRepresentation,
-    .one `ARDOrderReduction,
-    .one `ARDSemanticWellFounded,
-    .one `ARDSplice,
-    .one `ARDStageDemands,
-    .one `ARDStageProof,
-    .one `ARDStructure,
-    .one `ARDWitnesses
+    .one `ARDSkylineBridge,
+    .one `ARDSkylineCore,
+    .one `ARDSkylineDomain,
+    .one `ARDSkylineFinal,
+    .one `ARDSkylineOrderReduction,
+    .one `ARDSkylineSemanticWellFounded,
+    .one `ARDSkylineStructure
   ]
   moreLeanArgs := #["-M", "2048", "-j", "1"]

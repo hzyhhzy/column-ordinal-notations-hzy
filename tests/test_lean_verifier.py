@@ -40,12 +40,12 @@ class VerificationTests(unittest.TestCase):
 
     def test_all_exact_source_closures(self):
         expected = {"shared": 35, "Y": 189, "RPD": 36, "LRD": 41,
-                    "Omega-LRD3": 44, "ARD": 50, "IPD": 55, "ARD2": 51}
+                    "Omega-LRD3": 44, "ARD": 56, "ARD-legacy": 50, "IPD": 55, "ARD2": 51}
         for scope, count in expected.items():
             with self.subTest(scope=scope):
                 plan = verifier.load_plan(ROOT / "lean" / scope)
                 self.assertEqual(len(plan["ordered"]), count)
-        self.assertEqual(len(verifier.load_plan(ROOT / "lean")["ordered"]), 322)
+        self.assertEqual(len(verifier.load_plan(ROOT / "lean")["ordered"]), 330)
 
     def test_all_import_sidecars_affect_environment(self):
         with fixture_directory("lean-artifact-test-") as name:

@@ -1,5 +1,35 @@
 # 快照验收记录 · [English](VALIDATION.md)
 
+## 2026-09-16：ARD 轮廓版迁移
+
+默认 ARD 换为简化规则，旧版 NER、Python、双语定义/PDF、双语纸面证明/PDF及20个旧 Lean 源码完整保留在 ARD-legacy。新版不把旧图藏在显示层后面：它直接按轮廓和单个前驱运算。其他记号实现、私有 Lean 源码及收据未改动。
+
+- 新版 [Python 测试](tests/test_ard.py)：250 个图（150 个标准状态）、1,000 次旧版投影交换、600 对标准比较；NER 同时核对 1,000 次展开和 600 对比较，约 0.65 秒。
+- 新版 [NER 回归](tests/ard_skyline.cjs)：1,000 个标准状态上 4,997 步、500 个加强合法原始图上 2,472 步；1,500 组旧新版计数、500 组朴素局部计数、993 次计数减一、3,000 对比较、1,000 次邻接往返和25个完整图表，全部通过。约 4.89 秒，峰值报告 RSS 183 MiB，Node 堆上限512 MiB；有90秒总时限和逐步/列数上限。
+- [比较探针](tests/rpd_ard_comparison.py)：275 个状态、953 次模拟，15,866 次局部预降，单次最多966步，7次同优先级绕行、291次源最高优先级不唯一；覆盖、V/F及实际路径检查全部通过，8.91秒。上限25秒、每次2,000预降、源10列/目标32列、每种子80个状态。
+- [旧版独立测试](tests/test_ard_legacy.py)、通用Python测试、旧版弧线/邻接测试全部重跑通过。后者保持原内核哈希检查，仅改向明确的旧版文件。新版图表由新版回归独立覆盖。
+- 未改动的 IPD、ARD2 Python 套件也通过：分别为247个图/988次展开，以及37,044个图/111,301次原子展开。两者实现和证明源码未修改。
+- 验证器9项回归通过，包括拒绝伪公理、旧收据、越界依赖，以及无关项目不影响缓存。
+
+Lean 4.33.1 的当前公开收据：
+
+| 项目 | 精确闭包 | 公理报告 | 本次新编译 | 明确复用 |
+| --- | --- | --- | --- | --- |
+| [ARD-legacy](lean/ARD-legacy/VERIFICATION.json) | 50 | 156 | 20 | 30 |
+| [ARD](lean/ARD/VERIFICATION.json) | 56 | 178 | 7 | 49 |
+| [可选联合](lean/VERIFICATION.json) | 330 | 897 | 5 | 325 |
+
+重叠闭包不能相加为不同模块数。新版最终定理证明真实小规则展开良基、标准列序及带顶端良序；不存在剩余反射/可及性前提，报告公理只有 `propext`、`Classical.choice`、`Quot.sound` 的子集。每次只编译一个进程/线程，每模块上限2048 MiB、120秒。不是 KP 对象理论内形式推导，不是从源码重建 Mathlib，也不是全新联网 Lake 引导。
+
+[RPD 下界论文](proofs/paper/rpd-le-ard-a2.zh-CN.md)与[新旧标准同构](proofs/paper/ard-well-ordering.zh-CN.md)是纸面证明，不能把有限回归或上述 Lean 公理报告当成两项比较的形式化证书。1Y 的范围约定见比较论文。
+
+当前交付为八个版本目录（含旧版）的32份定义文件、七篇双语纸面文稿的28份文件，共30个PDF。按既有 ReportLab/MathJax 流程重新生成本次涉及的10个PDF，再以Poppler逐页渲染作边界检查与人工图像检查。其余PDF保留原样。当前完整清单与哈希由 `tools/check_release.py` 核查：10个Lean范围、330个不同模块、8个NER快照。未提交或推送。
+
+## 以下为 2026-09-14 历史验收记录
+
+下方旧称 ARD、旧模块数及原始显示增量均指 ARD-legacy 当时的版本；本节不作为新版源码收据。当前状态以上节及各项目实际收据为准。
+
+
 更新日期为 2026-09-14。本文分开记录实现测试、文档检查、纸面论证与 Lean 内核验证，不把其中一项冒充另一项。
 
 ## 交付文档
@@ -23,7 +53,7 @@ ARD2 两份证明各有 25 个展示公式，相同的 20 个编号公式；除�
 
 ```sh
 python -B tests/test_python.py
-python -B tests/test_ard.py
+python -B tests/test_ard_legacy.py
 python -B tests/test_ipd.py
 python -B tests/test_ard2.py
 python -B tests/test_spd.py
@@ -96,7 +126,7 @@ SPD 使用自己的标题及 2026-09-14 页脚。双语定义各有 18 个展示
 | [RPD](lean/RPD/VERIFICATION.json) | 36 | 91 | 4 | 32 |
 | [LRD](lean/LRD/VERIFICATION.json) | 41 | 110 | 10 | 31 |
 | [Ω-LRD3](lean/Omega-LRD3/VERIFICATION.json) | 44 | 119 | 13 | 31 |
-| [ARD](lean/ARD/VERIFICATION.json) | 50 | 156 | 20 | 30 |
+| [ARD](lean/ARD-legacy/VERIFICATION.json) | 50 | 156 | 20 | 30 |
 | [IPD](lean/IPD/VERIFICATION.json) | 55 | 166 | 40 | 15 |
 | [ARD2](lean/ARD2/VERIFICATION.json) | 51 | 160 | 21 | 30 |
 | [可选联合验收](lean/VERIFICATION.json) | 322 | 866 | 4 | 318 |

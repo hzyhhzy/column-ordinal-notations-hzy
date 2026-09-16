@@ -1,12 +1,15 @@
 # 七个记号的 Lean 证明 · [English](README.md)
 
+2026-09-16：默认 ARD 已切换到轮廓版，旧版完整保留为 ARD-legacy。新版实际规则良序已核查：56 模块、178 份报告，7 个新版模块新编译。旧版新位置也重新核查 50 模块、156 份报告。当前联合收据为 330 模块、897 份报告（5 个联合模块新编译，325 个已验证模块复用）；后文 2026-09-14 的拆分及网络说明保留为历史记录。完整新旧标准域同构和跨记号比较仍是纸面证明，不能由这些公理报告代替。
+
+
 本目录整理 **Y、RPD、LRD、Ω-LRD3、ARD、IPD、ARD2** 在普通经典 Lean 中的良序证明。交付的是源码工程，而不是一批预编译证书。
 
 限制公理体系的论证见另附的[四系统纸面证明](../proofs/paper/well-ordering.zh-CN.md)、[ARD 纸面证明](../proofs/paper/ard-well-ordering.zh-CN.md)、[IPD 纸面证明](../proofs/paper/ipd-well-ordering.zh-CN.md)及 [ARD2 纸面证明](../proofs/paper/ard2-well-ordering.zh-CN.md)。这些 Lean 定理**不是**对象理论 `KP_ω + 存在不可数序数` 中的形式推导；打印出来的宿主 Lean 公理依赖本身不证明这个元数学上界。
 
 ## 主要定理入口
 
-优先进入所需记号自己的子项目。根目录的 [SevenNotationFinalAudit.lean](src/SevenNotationFinalAudit.lean) 仅是可选的联合验收入口，不是每次新增记号的必经构建。四个历史联合模块保持原样。
+优先进入所需记号自己的子项目。根目录的 [ARDRevisionFinalAudit.lean](src/ARDRevisionFinalAudit.lean) 仅是可选的联合验收入口，不是每次新增记号的必经构建。四个历史联合模块保持原样。
 
 | 记号 | 最终模块 | 主要定理 |
 | --- | --- | --- |
@@ -14,13 +17,14 @@
 | RPD | [FiniteDemandRPDFinal.lean](RPD/src/FiniteDemandRPDFinal.lean) | `OrdinalFormal.RPDFiniteDemand.standard_with_top_strictWellOrder` |
 | LRD | [FiniteDemandLRDFinal.lean](LRD/src/FiniteDemandLRDFinal.lean) | `OrdinalFormal.LRDFinal.standard_isWellOrder` |
 | Ω-LRD3 | [OmegaLRD3Final.lean](Omega-LRD3/src/OmegaLRD3Final.lean) | `OrdinalFormal.Omega3Final.with_top_isWellOrder` |
-| ARD | [ARDFinal.lean](ARD/src/ARDFinal.lean) | `OrdinalFormal.ARD.paper_standard_with_top_strictWellOrder` |
+| ARD-legacy | [ARDFinal.lean](ARD-legacy/src/ARDFinal.lean) | `OrdinalFormal.ARD.paper_standard_with_top_strictWellOrder` |
+| ARD | [ARDSkylineFinal.lean](ARD/src/ARDSkylineFinal.lean) | `OrdinalFormal.ARDSkyline.standard_with_top_strictWellOrder` |
 | IPD | [IPDStandardOrder.lean](IPD/src/IPDStandardOrder.lean) | `IPD.standard_wellFounded`、`IPD.standard_total`、`IPD.term_wellFounded` |
 | ARD2 | [ARD2Final.lean](ARD2/src/ARD2Final.lean) | `OrdinalFormal.ARD2.paper_standard_with_top_strictWellOrder` |
 
 各最终模块也提供展开关系良基性、有限式域结论或标准域变体。主要良序定理不要求调用者额外提供反射、初始表示、行标良基性或种子可及性假设。
 
-Y 指固定上游的祖先继承定义。本工程**没有**证明它与原始 JavaScript 在所有合法执行上的完全等价。RPD 使用当前列图／完整根展开定义，并包含独立纸面标准域的等价桥。Ω-LRD3 使用每次增加一列的种子及含端点的行包 `0 ≤ t ≤ b`；不附带其他 Ω-LRD 版本。ARD 移动包括行锚在内的全部四个坐标，并生成严格低于移动后控制行的所有自然数行标。[独立有限规则桥](ARD/src/ARDDefinitionFidelity.lean)证明纸面标准域与可执行标准域相同；[ARDCompression.lean](ARD/src/ARDCompression.lean)证明规范最大根压缩列表与完整根列表的比较结果、控制项完全相同。这是与独立数学规则的等价证明，不是 Python 或 JavaScript 执行环境的编译器级验证。
+Y 指固定上游的祖先继承定义。本工程**没有**证明它与原始 JavaScript 在所有合法执行上的完全等价。RPD 使用当前列图／完整根展开定义，并包含独立纸面标准域的等价桥。Ω-LRD3 使用每次增加一列的种子及含端点的行包 `0 ≤ t ≤ b`；不附带其他 Ω-LRD 版本。ARD-legacy 移动包括行锚在内的全部四个坐标，并生成严格低于移动后控制行的所有自然数行标。[独立有限规则桥](ARD-legacy/src/ARDDefinitionFidelity.lean)证明纸面标准域与可执行标准域相同；[ARDCompression.lean](ARD-legacy/src/ARDCompression.lean)证明规范最大根压缩列表与完整根列表的比较结果、控制项完全相同。这是与独立数学规则的等价证明，不是 Python 或 JavaScript 执行环境的编译器级验证。
 
 IPD 的标准域是零起始种子的有限可达式，不是事后以可及性定义的子类型。实际父优先列序良基且全序，另加 TOP 仍良序；全部结构合法原始图的严格展开也良基，但不主张它们的全局列序良序。详见[定义对应审计](../proofs/paper/ipd-fidelity.zh-CN.md)。
 
@@ -34,15 +38,16 @@ ARD2 允许行与根同时 SELF，父仍严格向前，生成根包达到接缝�
 | [RPD](RPD/README.zh-CN.md) | `RPD/src/` | 4 | 36 |
 | [LRD](LRD/README.zh-CN.md) | `LRD/src/` | 10 | 41 |
 | [Ω-LRD3](Omega-LRD3/README.zh-CN.md) | `Omega-LRD3/src/` | 13 | 44 |
-| [ARD](ARD/README.zh-CN.md) | `ARD/src/` | 20 | 50 |
+| [ARD](ARD/README.zh-CN.md) | `ARD/src/` | 7 | 56 |
+| [ARD-legacy](ARD-legacy/README.zh-CN.md) | `ARD-legacy/src/` | 20 | 50 |
 | [IPD](IPD/README.zh-CN.md) | `IPD/src/` | 40 | 55 |
 | [ARD2](ARD2/README.zh-CN.md) | `ARD2/src/` | 21 | 51 |
 | [共享基础](shared/README.zh-CN.md) | `shared/src/` | 35 | 35 |
-| 可选联合验收 | `src/` | 4 | 322 |
+| 可选联合验收 | `src/` | 5 | 330 |
 
-每个记号有自己的 `lakefile.lean`、工具链、锁文件、`sources.json`、`build.py`、构建输出和验证收据。七个记号之间不互相依赖；都可以单独引用共享基础。只有 Y 还依赖外部 BMS。闭包数字包含实际使用的共享模块，不能直接相加当作不同模块总数。
+每个记号有自己的 `lakefile.lean`、工具链、锁文件、`sources.json`、`build.py`、构建输出和验证收据。原记号项目只依赖共享基础，只有 Y 还依赖外部 BMS。新版 ARD 另有明确的 ARD-legacy 语义后端依赖；无关记号项目仍相互独立。闭包数字包含实际使用的共享模块，不能直接相加当作不同模块总数。
 
-共有 **310 个本地模块**（161 个原样上游 Y 源码、149 个本地证明），加 **12 个固定版本外部 BMS 模块**，全库证明源码并集仍为 **322**。本次只迁移 306 个源文件，模块名与全部 310 个本地文件字节不变；四个联合模块留在原处。
+现在共有 **318 个本地模块**（161 个原样上游 Y 模块、157 个本地模块），加 **12 个外部 BMS 模块**，证明源码并集为 **330**。轮廓版新增七个私有模块和一个联合入口。20 个旧版证明源码只迁移目录，不改数学源码字节；四个历史联合源码原样保留。
 
 [layout.json](layout.json) 是全库目录索引，不参与单个子项目的缓存指纹。各项目的 `sources.json` 才是其精确源码依赖清单，包含来源、版本、SHA-256 和真实路径。哈希将 CRLF 规范为 LF。共享基础保留部分历史上名带 RPD／LRD／ARD 的完整模块，因为其中的定义、引理已被多个项目使用；不因此依赖那些记号的私有项目。
 

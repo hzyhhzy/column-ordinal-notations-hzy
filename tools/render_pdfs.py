@@ -150,14 +150,23 @@ class Renderer:
             # Keep the short software epilogue on the sixth definition page.
             self.styles['body'].leading = 15.1
             self.styles['body'].spaceAfter = 5.0
-        if source.parent.name == 'ARD' and not self.zh:
+        if source.parent.name in ('ARD', 'ARD-legacy') and not self.zh:
             # Keep the final definition paragraph together on the third page.
             self.styles['body'].leading = 15.5
             self.styles['body'].spaceAfter = 5.5
-        if self.zh and source.name.startswith('ard-well-ordering'):
+        if source.parent.name == 'ARD' and self.zh:
+            # Avoid a final page containing only the regression-test epilogue.
+            self.styles['body'].leading = 15.5
+            self.styles['body'].spaceAfter = 5.0
+        if self.zh and source.name.startswith((
+                'ard-well-ordering', 'ard-legacy-well-ordering', 'rpd-le-ard-a2')):
             # Reserve room for CJK hanging punctuation at a list's right edge.
             self.styles['body'].rightIndent = 4
             self.styles['small'].rightIndent = 4
+        if self.zh and source.name.startswith('rpd-le-ard-a2'):
+            # Keep the short concluding scope note on the sixth proof page.
+            self.styles['body'].leading = 14.0
+            self.styles['body'].spaceAfter = 4.0
         for level, size in [(1, 22), (2, 15), (3, 12), (4, 10.8), (5, 10.2)]:
             self.styles[f'h{level}'] = ParagraphStyle(
                 f'h{level}', fontName='CJKBold' if self.zh else 'BodyBold',
@@ -290,7 +299,10 @@ class Renderer:
                                           ('RIGHTPADDING',(0,0),(-1,-1),8),
                                           ('TOPPADDING',(0,0),(-1,-1),2),
                                           ('BOTTOMPADDING',(0,0),(-1,-1),2)]))
-                result.extend([table, Spacer(1, 8)])
+                if len(rows) <= 12:
+                    result.append(KeepTogether([table, Spacer(1, 8)]))
+                else:
+                    result.extend([table, Spacer(1, 8)])
             elif tag == 'HorizontalRule':
                 result.append(HRFlowable(width='100%', thickness=0.4, color=colors.HexColor('#ced8df'),
                                          spaceBefore=7, spaceAfter=7))
@@ -346,11 +358,12 @@ class Renderer:
         destination = self.source.with_suffix('.pdf')
         label = self.source.parent.name
         if label == 'paper':
-            label = ('SPD' if self.source.name.startswith('spd-') else
+            label = ('ARD-legacy' if self.source.name.startswith('ard-legacy-') else
+                     'RPD ≤ ARD(1,2)' if self.source.name.startswith('rpd-le-ard-') else 'SPD' if self.source.name.startswith('spd-') else
                      'ARD2' if self.source.name.startswith('ard2-') else
                      'IPD' if self.source.name.startswith('ipd-') else
                      'ARD' if self.source.name.startswith('ard-') else 'Y · RPD · LRD · Ω-LRD3')
-        publication_date = '2026-09-14' if label in ('IPD', 'ARD2', 'SPD') else '2026-09-13'
+        publication_date = '2026-09-16' if label in ('ARD', 'ARD-legacy', 'RPD ≤ ARD(1,2)') else '2026-09-14' if label in ('IPD', 'ARD2', 'SPD') else '2026-09-13'
         doc = SimpleDocTemplate(str(destination), pagesize=A4,
                                 leftMargin=50, rightMargin=50, topMargin=48, bottomMargin=48,
                                 title=label + (' - 中文' if self.zh else ' - English'),
@@ -388,9 +401,9 @@ def main():
     args = parser.parse_args()
     sources = [ROOT / p for p in args.sources] if args.sources else [
         ROOT / f'notations/{notation}/definition{lang}.md'
-        for notation in ('RPD', 'LRD', 'Omega-LRD3', 'ARD', 'IPD', 'ARD2', 'SPD') for lang in ('', '.zh-CN')
+        for notation in ('RPD', 'LRD', 'Omega-LRD3', 'ARD', 'ARD-legacy', 'IPD', 'ARD2', 'SPD') for lang in ('', '.zh-CN')
     ] + [ROOT / f'proofs/paper/{paper}{lang}.md'
-         for paper in ('well-ordering', 'ard-well-ordering', 'ipd-well-ordering', 'ard2-well-ordering', 'spd-well-ordering') for lang in ('', '.zh-CN')]
+         for paper in ('well-ordering', 'ard-well-ordering', 'ard-legacy-well-ordering', 'rpd-le-ard-a2', 'ipd-well-ordering', 'ard2-well-ordering', 'spd-well-ordering') for lang in ('', '.zh-CN')]
     for source in sources:
         if not source.is_file():
             raise FileNotFoundError(source)

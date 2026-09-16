@@ -8,6 +8,7 @@ require ordinalnotations_rpd from "RPD"
 require ordinalnotations_lrd from "LRD"
 require ordinalnotations_omega3 from "Omega-LRD3"
 require ordinalnotations_ard from "ARD"
+require ordinalnotations_ard_legacy from "ARD-legacy"
 require ordinalnotations_ipd from "IPD"
 require ordinalnotations_ard2 from "ARD2"
 
@@ -17,6 +18,7 @@ lean_lib OrdinalNotations where
   srcDir := "src"
   roots := #[]
   globs := #[
+    .one `ARDRevisionFinalAudit,
     .one `FiveNotationFinalAudit,
     .one `FourNotationFinalAudit,
     .one `SevenNotationFinalAudit,

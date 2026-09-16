@@ -86,7 +86,7 @@ def sample_graphs(name):
             column = []
             for _ in range(2):
                 p = rng.randrange(j)
-                row = rng.randrange(j) if name == "ard" else rng.choice(rows)
+                row = rng.randrange(p + 1) if name == "ard" else rng.choice(rows)
                 column.append((row, p, rng.randrange(p + 1)))
             columns.append(column)
         result.append(cls(columns))

@@ -1,12 +1,18 @@
 # Lean proofs for seven notations · [中文版](README.zh-CN.md)
 
+2026-09-16: default ARD is now the skyline edition, with ARD-legacy preserved. The new rule's well-ordering passed 56 modules / 178 reports, including seven newly compiled modules. The relocated legacy project passed 50 modules / 156 reports. The current aggregate receipt contains 330 modules / 897 reports: five aggregate entries freshly compiled and 325 verified modules reused. The dated 2026-09-14 split-verification accounts below are historical. The full legacy isomorphism and cross-notation comparisons remain paper results, not consequences of printed axiom lists.
+
+
+2026-09-16: default ARD is now the skyline edition, with ARD-legacy preserved. The new rule's well-ordering passed 56 modules / 178 reports, including seven newly compiled modules. The relocated legacy project passed 50 modules / 156 reports. The current aggregate receipt contains 330 modules / 897 reports: five aggregate entries freshly compiled and 325 verified modules reused. The dated 2026-09-14 split-verification accounts below are historical. The full legacy isomorphism and cross-notation comparisons remain paper results, not consequences of printed axiom lists.
+
+
 This directory packages the ordinary, classical Lean proofs for **Y, RPD, LRD, Ω-LRD3, ARD, IPD, and ARD2**. It is a source project, not a collection of precompiled certificates.
 
 The restricted-axiom arguments are in the separate [four-system paper](../proofs/paper/well-ordering.md), [ARD paper](../proofs/paper/ard-well-ordering.md), [IPD paper](../proofs/paper/ipd-well-ordering.md), and [ARD2 paper](../proofs/paper/ard2-well-ordering.md). These Lean theorems are **not** formalized derivations in the object theory `KP_ω + there exists an uncountable ordinal`. Their printed host-Lean axiom reports do not establish that metatheoretic upper bound.
 
 ## Main theorem entry points
 
-Start with the notation's own project. The root [SevenNotationFinalAudit.lean](src/SevenNotationFinalAudit.lean) is an optional aggregate audit, not a required build step whenever a notation is added. All four historical aggregate modules remain unchanged.
+Start with the notation's own project. The root [ARDRevisionFinalAudit.lean](src/ARDRevisionFinalAudit.lean) is an optional aggregate audit, not a required build step whenever a notation is added. All four historical aggregate modules remain unchanged.
 
 | System | Final module | Main theorem |
 | --- | --- | --- |
@@ -14,13 +20,15 @@ Start with the notation's own project. The root [SevenNotationFinalAudit.lean](s
 | RPD | [FiniteDemandRPDFinal.lean](RPD/src/FiniteDemandRPDFinal.lean) | `OrdinalFormal.RPDFiniteDemand.standard_with_top_strictWellOrder` |
 | LRD | [FiniteDemandLRDFinal.lean](LRD/src/FiniteDemandLRDFinal.lean) | `OrdinalFormal.LRDFinal.standard_isWellOrder` |
 | Ω-LRD3 | [OmegaLRD3Final.lean](Omega-LRD3/src/OmegaLRD3Final.lean) | `OrdinalFormal.Omega3Final.with_top_isWellOrder` |
-| ARD | [ARDFinal.lean](ARD/src/ARDFinal.lean) | `OrdinalFormal.ARD.paper_standard_with_top_strictWellOrder` |
+| ARD-legacy | [ARDFinal.lean](ARD-legacy/src/ARDFinal.lean) | `OrdinalFormal.ARD.paper_standard_with_top_strictWellOrder` |
+| ARD-legacy | [ARDSkylineFinal.lean](ARD/src/ARDSkylineFinal.lean) | `OrdinalFormal.ARDSkyline.standard_with_top_strictWellOrder` |
+| ARD | [ARDSkylineFinal.lean](ARD/src/ARDSkylineFinal.lean) | `OrdinalFormal.ARDSkyline.standard_with_top_strictWellOrder` |
 | IPD | [IPDStandardOrder.lean](IPD/src/IPDStandardOrder.lean) | `IPD.standard_wellFounded`, `IPD.standard_total`, `IPD.term_wellFounded` |
 | ARD2 | [ARD2Final.lean](ARD2/src/ARD2Final.lean) | `OrdinalFormal.ARD2.paper_standard_with_top_strictWellOrder` |
 
 The corresponding final modules also expose expansion well-foundedness, finite-domain results, or standard-domain variants. Their main well-ordering theorems do not take reflection, initial representations, row well-foundedness, or seed accessibility as assumptions supplied by the caller.
 
-Y means the fixed upstream inherited-ancestry definition. Equivalence with every legal execution of an original JavaScript implementation is **not** a theorem in this package. RPD uses the current column/full-root formulation and includes its separate paper-standard-domain bridge. Ω-LRD3 uses single-column seeds and the inclusive row package `0 ≤ t ≤ b`; no other Ω-LRD version is shipped. ARD moves all four coordinates (including the row anchor) and includes all natural rows below the moved control row. Its [independent finite-rule bridge](ARD/src/ARDDefinitionFidelity.lean) identifies the paper and executable standard domains; [ARDCompression.lean](ARD/src/ARDCompression.lean) proves exact comparison and controller agreement for canonical compressed maximum-root lists versus complete-root lists. The mathematics is linked to an independently specified finite rule, not a compiler-level verification of Python or JavaScript execution.
+Y means the fixed upstream inherited-ancestry definition. Equivalence with every legal execution of an original JavaScript implementation is **not** a theorem in this package. RPD uses the current column/full-root formulation and includes its separate paper-standard-domain bridge. Ω-LRD3 uses single-column seeds and the inclusive row package `0 ≤ t ≤ b`; no other Ω-LRD version is shipped. ARD-legacy moves all four coordinates (including the row anchor) and includes all natural rows below the moved control row. Its [independent finite-rule bridge](ARD-legacy/src/ARDDefinitionFidelity.lean) identifies the paper and executable standard domains; [ARDCompression.lean](ARD-legacy/src/ARDCompression.lean) proves exact comparison and controller agreement for canonical compressed maximum-root lists versus complete-root lists. The mathematics is linked to an independently specified finite rule, not a compiler-level verification of Python or JavaScript execution.
 
 IPD's standard domain is finite reachability from zero-start seeds, not an accessibility subtype. Its actual parent-first column order is well-founded and total; TOP is adjoined. Strict expansion is additionally well-founded on all structurally valid raw graphs, without asserting their global column order well-founded. See the [correspondence audit](../proofs/paper/ipd-fidelity.md).
 
@@ -34,15 +42,17 @@ ARD2 permits both row and root SELF at the child column, keeps parents strict, a
 | [RPD](RPD/README.md) | `RPD/src/` | 4 | 36 |
 | [LRD](LRD/README.md) | `LRD/src/` | 10 | 41 |
 | [Ω-LRD3](Omega-LRD3/README.md) | `Omega-LRD3/src/` | 13 | 44 |
-| [ARD](ARD/README.md) | `ARD/src/` | 20 | 50 |
+| [ARD](ARD/README.md) | `ARD/src/` | 7 | 56 |
+| [ARD-legacy](ARD-legacy/README.md) | `ARD-legacy/src/` | 7 | 56 |
+| [ARD-legacy](ARD-legacy/README.md) | `ARD-legacy/src/` | 20 | 50 |
 | [IPD](IPD/README.md) | `IPD/src/` | 40 | 55 |
 | [ARD2](ARD2/README.md) | `ARD2/src/` | 21 | 51 |
 | [Shared foundation](shared/README.md) | `shared/src/` | 35 | 35 |
-| Optional aggregate audit | `src/` | 4 | 322 |
+| Optional aggregate audit | `src/` | 5 | 330 |
 
-Each notation has its own `lakefile.lean`, toolchain, lockfile, `sources.json`, `build.py`, output directory and verification receipt. The seven notation projects do not depend on each other. They depend on the shared foundation; only Y additionally needs external BMS. Closure counts include the shared modules actually imported and cannot be added as counts of distinct sources.
+Each notation has its own `lakefile.lean`, toolchain, lockfile, `sources.json`, `build.py`, output directory and verification receipt. The original notation projects depend on shared modules only; only Y additionally needs external BMS. New ARD explicitly depends on ARD-legacy's semantic backend as well as shared. Unrelated notation projects remain independent. Closure counts include the shared modules actually imported and cannot be added as counts of distinct sources.
 
-There are still **310 bundled modules** (161 unchanged upstream Y modules and 149 local proofs), plus **12 pinned external BMS modules**, for a union of **322 proof-source modules**. The split relocates 306 files while preserving all module names and the exact bytes of all 310 bundled sources; four aggregate modules stay in place.
+There are **318 bundled modules** (161 unchanged upstream Y modules and 157 local modules), plus **12 pinned external BMS modules**, for **330 distinct proof-source modules**. The skyline revision adds seven private modules and one aggregate entry. The 20 legacy proof-source files were moved without mathematical source-byte changes; the four historical aggregate sources remain unchanged.
 
 [layout.json](layout.json) is a repository index, not an input to individual project cache fingerprints. Each project's `sources.json` records its exact source closure, origins, revisions, SHA-256 hashes and real paths. Hashes normalize CRLF to LF. Shared foundation files retain some historical RPD/LRD/ARD names because their definitions and lemmas already had multiple consumers; this does not create dependencies on those notation leaf projects.
 

@@ -14,7 +14,8 @@ const files = {
   rpd: 'notations/RPD/RPD-mountain.ne-rewritten.js',
   lrd: 'notations/LRD/LRD.ne-rewritten.js',
   omega3: 'notations/Omega-LRD3/Omega-LRD3.ne-rewritten.js',
-  ard: 'notations/ARD/ARD-arcs.ne-rewritten.js'
+  ard: 'notations/ARD/ARD.ne-rewritten.js',
+  ard_legacy: 'notations/ARD-legacy/ARD-arcs.ne-rewritten.js'
 };
 const contexts = {};
 for (const [name, file] of Object.entries(files)) {
