@@ -30,6 +30,13 @@ $$
 
 其中 `ARD(1,2)` 是两列式 `[][(0,0,0)]`，不是整个 ARD 极限。[固定两列式下的嵌入证明](proofs/paper/rpd-le-ard-a2.zh-CN.md) 给出完整 RPD 有限标准域到其严格下方的序嵌入，故还得到整个 ARD 严格大于 RPD。**这些比较及新旧标准域同构目前是纸面证明；新版 ARD 自身良序已有独立 Lean 定理。** 1Y 指本仓库固定上游定义，不新增对任意原始 JS 输入的等价性声明。
 
+另有[ARD 嵌入 ARD2 固定式 (1,3) 以下的证明](proofs/paper/ard-le-ard2-13.zh-CN.md)（[PDF](proofs/paper/ard-le-ard2-13.zh-CN.pdf)）。这里 `ARD2(1,3)` 是 `[][(0,0,1)]=A₂[1][1]`。对有限标准域，得到
+
+$$\alpha_{1Y}\le\alpha_{\mathrm{RPD}}<\alpha_{\mathrm{ARD}}
+\le|\mathrm{ARD2}(1,3)|<\alpha_{\mathrm{ARD2}}.$$
+
+这项也是**尚未 Lean 形式化的纸面比较**，不声称像为初始段、计数保持、与基本列逐指标交换，或等于该固定式。wY／CWY2 的整体比较仍未解决。
+
 ## 定义与展开器
 
 每套定义都有中英文 Markdown 和 PDF，共 **44 份定义文件（含保留的旧版及 CWY 系列）**。Markdown 默认英文；每份英文定义的标题均链接到中文版。
@@ -72,6 +79,7 @@ $$
 - **ARD 纸面证明：**[英文 Markdown](proofs/paper/ard-well-ordering.md) · [英文 PDF](proofs/paper/ard-well-ordering.pdf) · [中文 Markdown](proofs/paper/ard-well-ordering.zh-CN.md) · [中文 PDF](proofs/paper/ard-well-ordering.zh-CN.pdf)。
 - **ARD-legacy 旧版证明：**[中](proofs/paper/ard-legacy-well-ordering.zh-CN.md) · [英](proofs/paper/ard-legacy-well-ordering.md)。
 - **ARD(1,2)≥RPD 比较：**[中文](proofs/paper/rpd-le-ard-a2.zh-CN.md) · [英文](proofs/paper/rpd-le-ard-a2.md)。
+- **ARD2(1,3)≥ARD 比较：**[中文 Markdown](proofs/paper/ard-le-ard2-13.zh-CN.md) · [中文 PDF](proofs/paper/ard-le-ard2-13.zh-CN.pdf) · [英文 Markdown](proofs/paper/ard-le-ard2-13.md) · [英文 PDF](proofs/paper/ard-le-ard2-13.pdf)。
 - **IPD 纸面证明：**[英文 Markdown](proofs/paper/ipd-well-ordering.md) · [英文 PDF](proofs/paper/ipd-well-ordering.pdf) · [中文 Markdown](proofs/paper/ipd-well-ordering.zh-CN.md) · [中文 PDF](proofs/paper/ipd-well-ordering.zh-CN.pdf)。
 - **ARD2 纸面证明：**[英文 Markdown](proofs/paper/ard2-well-ordering.md) · [英文 PDF](proofs/paper/ard2-well-ordering.pdf) · [中文 Markdown](proofs/paper/ard2-well-ordering.zh-CN.md) · [中文 PDF](proofs/paper/ard2-well-ordering.zh-CN.pdf)。
 - **SPD 纸面论证稿（尚未 Lean 形式化）：**[英文 Markdown](proofs/paper/spd-well-ordering.md) · [英文 PDF](proofs/paper/spd-well-ordering.pdf) · [中文 Markdown](proofs/paper/spd-well-ordering.zh-CN.md) · [中文 PDF](proofs/paper/spd-well-ordering.zh-CN.pdf)。
@@ -109,6 +117,8 @@ python tests/test_ard.py
 python tests/test_ard_legacy.py
 node --max-old-space-size=512 tests/ard_skyline.cjs
 python -B tests/rpd_ard_comparison.py
+python -B tests/ard_ard2_comparison.py
+python -B tests/ard_ard2_forest.py
 python tests/test_ipd.py
 python tests/test_ard2.py
 python -B tests/test_spd.py
@@ -125,7 +135,7 @@ node --max-old-space-size=256 tests/cwy_family.mjs
 
 如果受限宿主不允许 Node 启动 Python，可用两个受限进程执行同一交叉测试：`python -B tests/test_cwy.py --fixtures | node --max-old-space-size=256 tests/cwy_family.mjs --fixtures-stdin`。这不会跳过 Python 对照。
 
-如需重建全部 38 份发布用 PDF，安装 Pandoc、Node.js、文档工具依赖及适当的本机字体：
+如需重建全部 40 份发布用 PDF，安装 Pandoc、Node.js、文档工具依赖及适当的本机字体：
 
 ```sh
 python -m pip install -r tools/requirements.txt

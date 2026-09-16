@@ -240,6 +240,22 @@
     "warnings": []
   },
   {
+    "source": "proofs/paper/ard-le-ard2-13.md",
+    "pdf": "proofs/paper/ard-le-ard2-13.pdf",
+    "pages": 6,
+    "bytes": 781483,
+    "sha256": "aa5dac860066ad0b5d55ef3cfef22a5c200e858c32ea9e713e8a98d979a2d112",
+    "warnings": []
+  },
+  {
+    "source": "proofs/paper/ard-le-ard2-13.zh-CN.md",
+    "pdf": "proofs/paper/ard-le-ard2-13.zh-CN.pdf",
+    "pages": 5,
+    "bytes": 988100,
+    "sha256": "ccf265d15ce43f70750a12f3fc7c4b8b655cec8930dfa5994930bf696756d582",
+    "warnings": []
+  },
+  {
     "source": "notations/CWY/definition.zh-CN.md",
     "pdf": "notations/CWY/definition.zh-CN.pdf",
     "pages": 6,

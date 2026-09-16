@@ -368,12 +368,13 @@ class Renderer:
         label = self.source.parent.name
         if label == 'paper':
             label = ('CWY2 = wY' if self.source.name.startswith('cwy2-equivalence') else
+                     'ARD ≤ ARD2(1,3)' if self.source.name.startswith('ard-le-ard2-') else
                      'ARD-legacy' if self.source.name.startswith('ard-legacy-') else
                      'RPD ≤ ARD(1,2)' if self.source.name.startswith('rpd-le-ard-') else 'SPD' if self.source.name.startswith('spd-') else
                      'ARD2' if self.source.name.startswith('ard2-') else
                      'IPD' if self.source.name.startswith('ipd-') else
                      'ARD' if self.source.name.startswith('ard-') else 'Y · RPD · LRD · Ω-LRD3')
-        publication_date = '2026-09-17' if label in ('CWY', 'CWY2', 'Omega-CWY', 'CWY2 = wY') else '2026-09-16' if label in ('ARD', 'ARD-legacy', 'RPD ≤ ARD(1,2)') else '2026-09-14' if label in ('IPD', 'ARD2', 'SPD') else '2026-09-13'
+        publication_date = '2026-09-17' if label in ('CWY', 'CWY2', 'Omega-CWY', 'CWY2 = wY') else '2026-09-16' if label in ('ARD', 'ARD-legacy', 'RPD ≤ ARD(1,2)', 'ARD ≤ ARD2(1,3)') else '2026-09-14' if label in ('IPD', 'ARD2', 'SPD') else '2026-09-13'
         doc = SimpleDocTemplate(str(destination), pagesize=A4,
                                 leftMargin=50, rightMargin=50, topMargin=48, bottomMargin=48,
                                 title=label + (' - 中文' if self.zh else ' - English'),
@@ -413,7 +414,7 @@ def main():
         ROOT / f'notations/{notation}/definition{lang}.md'
         for notation in ('RPD', 'LRD', 'Omega-LRD3', 'ARD', 'ARD-legacy', 'IPD', 'ARD2', 'SPD', 'CWY', 'CWY2', 'Omega-CWY') for lang in ('', '.zh-CN')
     ] + [ROOT / f'proofs/paper/{paper}{lang}.md'
-         for paper in ('well-ordering', 'ard-well-ordering', 'ard-legacy-well-ordering', 'rpd-le-ard-a2', 'ipd-well-ordering', 'ard2-well-ordering', 'spd-well-ordering', 'cwy2-equivalence') for lang in ('', '.zh-CN')]
+         for paper in ('well-ordering', 'ard-well-ordering', 'ard-legacy-well-ordering', 'rpd-le-ard-a2', 'ard-le-ard2-13', 'ipd-well-ordering', 'ard2-well-ordering', 'spd-well-ordering', 'cwy2-equivalence') for lang in ('', '.zh-CN')]
     for source in sources:
         if not source.is_file():
             raise FileNotFoundError(source)

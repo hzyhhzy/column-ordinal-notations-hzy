@@ -215,7 +215,7 @@ def main():
         f'notations/{notation}/definition{lang}.pdf'
         for notation in ('RPD','LRD','Omega-LRD3','ARD','ARD-legacy','IPD','ARD2','SPD','CWY','CWY2','Omega-CWY') for lang in ('','.zh-CN')
     } | {f'proofs/paper/{paper}{lang}.pdf'
-         for paper in ('well-ordering','ard-well-ordering', 'ard-legacy-well-ordering', 'rpd-le-ard-a2','ipd-well-ordering','ard2-well-ordering','spd-well-ordering','cwy2-equivalence') for lang in ('','.zh-CN')}
+         for paper in ('well-ordering','ard-well-ordering', 'ard-legacy-well-ordering', 'rpd-le-ard-a2','ard-le-ard2-13','ipd-well-ordering','ard2-well-ordering','spd-well-ordering','cwy2-equivalence') for lang in ('','.zh-CN')}
     actual_pdfs = {p.relative_to(ROOT).as_posix() for p in pdfs}
     if actual_pdfs != expected_pdfs:
         problems.append(f'PDF inventory mismatch: {actual_pdfs ^ expected_pdfs}')

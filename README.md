@@ -30,6 +30,13 @@ $$
 
 Here `ARD(1,2)` denotes `[][(0,0,0)]`, not the whole ARD limit. The [fixed-bound embedding proof](proofs/paper/rpd-le-ard-a2.md) embeds every finite standard RPD term strictly below it, so the whole ARD order type is strictly greater than RPD. **The comparisons and full legacy isomorphism are paper results; the new ARD's own well-ordering has a separate Lean theorem.** 1Y denotes the pinned upstream definition here, not a new equivalence claim for arbitrary raw JS inputs.
 
+The new [embedding below the fixed ARD2 term (1,3)](proofs/paper/ard-le-ard2-13.md) ([PDF](proofs/paper/ard-le-ard2-13.pdf)) uses `ARD2(1,3)=[][(0,0,1)]=A₂[1][1]`. For finite standard domains it gives
+
+$$\alpha_{1Y}\le\alpha_{\mathrm{RPD}}<\alpha_{\mathrm{ARD}}
+\le|\mathrm{ARD2}(1,3)|<\alpha_{\mathrm{ARD2}}.$$
+
+This too is a **paper comparison, not yet Lean-formalized**. It claims neither an initial image, count preservation, indexed FS commutation, nor equality with that fixed term. Whole-domain comparisons with wY/CWY2 remain unresolved.
+
 ## Definitions and expanders
 
 Each definition is available in English and Chinese, as Markdown and PDF: **44 definition artifacts (including the preserved legacy edition and CWY family)** in total. English Markdown is the default; the title of every English definition links to its Chinese counterpart.
@@ -72,6 +79,7 @@ Here KP includes full set induction. The paper does not add a power-set axiom, f
 - **ARD paper:** [English Markdown](proofs/paper/ard-well-ordering.md) · [English PDF](proofs/paper/ard-well-ordering.pdf) · [Chinese Markdown](proofs/paper/ard-well-ordering.zh-CN.md) · [Chinese PDF](proofs/paper/ard-well-ordering.zh-CN.pdf).
 - **ARD-legacy paper:** [English](proofs/paper/ard-legacy-well-ordering.md) · [Chinese](proofs/paper/ard-legacy-well-ordering.zh-CN.md).
 - **ARD(1,2)≥RPD comparison:** [English](proofs/paper/rpd-le-ard-a2.md) · [Chinese](proofs/paper/rpd-le-ard-a2.zh-CN.md).
+- **ARD2(1,3)≥ARD comparison:** [English Markdown](proofs/paper/ard-le-ard2-13.md) · [English PDF](proofs/paper/ard-le-ard2-13.pdf) · [Chinese Markdown](proofs/paper/ard-le-ard2-13.zh-CN.md) · [Chinese PDF](proofs/paper/ard-le-ard2-13.zh-CN.pdf).
 - **IPD paper:** [English Markdown](proofs/paper/ipd-well-ordering.md) · [English PDF](proofs/paper/ipd-well-ordering.pdf) · [Chinese Markdown](proofs/paper/ipd-well-ordering.zh-CN.md) · [Chinese PDF](proofs/paper/ipd-well-ordering.zh-CN.pdf).
 - **ARD2 paper:** [English Markdown](proofs/paper/ard2-well-ordering.md) · [English PDF](proofs/paper/ard2-well-ordering.pdf) · [Chinese Markdown](proofs/paper/ard2-well-ordering.zh-CN.md) · [Chinese PDF](proofs/paper/ard2-well-ordering.zh-CN.pdf).
 - **SPD paper manuscript (not Lean-formalized):** [English Markdown](proofs/paper/spd-well-ordering.md) · [English PDF](proofs/paper/spd-well-ordering.pdf) · [Chinese Markdown](proofs/paper/spd-well-ordering.zh-CN.md) · [Chinese PDF](proofs/paper/spd-well-ordering.zh-CN.pdf).
@@ -109,6 +117,8 @@ python tests/test_ard.py
 python tests/test_ard_legacy.py
 node --max-old-space-size=512 tests/ard_skyline.cjs
 python -B tests/rpd_ard_comparison.py
+python -B tests/ard_ard2_comparison.py
+python -B tests/ard_ard2_forest.py
 python tests/test_ipd.py
 python tests/test_ard2.py
 python -B tests/test_spd.py
@@ -125,7 +135,7 @@ Follow [the Lean instructions](lean/README.md) for pinned dependencies and the s
 
 If a restricted host disallows Node spawning Python, run the same cross-language CWY test as two bounded processes: `python -B tests/test_cwy.py --fixtures | node --max-old-space-size=256 tests/cwy_family.mjs --fixtures-stdin`. This does not skip the Python oracle.
 
-To regenerate all 38 publication PDFs, install Pandoc, Node.js, the document-tool dependencies, and suitable local fonts:
+To regenerate all 40 publication PDFs, install Pandoc, Node.js, the document-tool dependencies, and suitable local fonts:
 
 ```sh
 python -m pip install -r tools/requirements.txt

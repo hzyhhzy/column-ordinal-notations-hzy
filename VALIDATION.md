@@ -1,5 +1,11 @@
 # Snapshot validation · [中文版](VALIDATION.zh-CN.md)
 
+## 2026-09-17: publication of the existing ARD/ARD2 comparison
+
+This follow-up includes the 13 ARD comparison files/updates that were deliberately excluded from the preceding CWY-only commit: the bilingual paper and PDFs, two bounded tests, and their README, validation and publication-tool entries. The older local-only status below is historical. The combined release inventory is **95 Markdown files (74 bilingual, 21 historical monolingual archives), 40 PDFs and 11 pinned NER scripts**.
+
+The two tests were rerun successfully: 1,500 source/target pairs and 5,516 simulations in 2.847 seconds; 1,200 raw graphs (694 satisfying the invariant, 2,776 expansions) plus 3,500 standard graphs and 10,280 expansions in 22.897 seconds. Their exclusions and queued states remain unknown, with the same counts recorded below. Release links, PDF hashes and the existing 10 Lean scopes / 330 distinct modules also passed their checks. No notation rule, PDF, Lean source or verification receipt was changed, and the Lean kernel was not rerun. The comparison remains a paper result, not a Lean-certified theorem.
+
 ## 2026-09-17: CWY, CWY2 and Ω-CWY integration
 
 Added three unchanged standalone NER snapshots, six bilingual rule PDFs and the existing CWY2/wY equivalence paper in two languages/PDFs. CWY's definition also preserves its earlier representation, root-stretch and finite-bound paper arguments. Its NER file remains a wY display adapter, whereas its two included Python modules implement the independent mathematical version. The difference in pure-seed indices is documented. CWY2's paper status supersedes frozen historical “pending” comments, not the absence of Lean certification. Ω-CWY has no whole-domain well-ordering/cofinality/comparison proof; none was newly attempted.
@@ -12,6 +18,17 @@ Added three unchanged standalone NER snapshots, six bilingual rule PDFs and the 
 - ReportLab/MathJax generated **8 new PDFs / 42 pages**: CWY 6+6, CWY2 4+4, Ω-CWY 5+4, equivalence 7+6 (English+Chinese). Poppler rendered all current pages; text/image bounds checks passed. Every page was visually reviewed in contact sheets, with the direct-decrement, intermediate-level and exact-copy formulas also checked at full-page resolution. Single-line final pages were eliminated without changing the rules. See the [current PDF QA record](tools/cwy-pdf-qa-report.json). All pre-existing PDFs were left unchanged, including the 30 in the preceding published snapshot.
 
 The CWY-only publication inventory is **93 Markdown files (72 bilingual, 21 historical monolingual archives), 38 PDFs and 11 pinned NER scripts**. The exact release/link/hash checks and existing **10 Lean scopes / 330 distinct modules** remain valid; the Lean kernel was not rerun. Separately uncommitted ARD comparison documents/tests were preserved locally and excluded from this publication. No new Lean project or theorem was added. See [SOURCES](SOURCES.md) for the upstream-derived code's unresolved redistribution-license boundary.
+
+## 2026-09-16: ARD comparison below a fixed ARD2 term
+
+Added the [bilingual paper ARD≤ARD2(1,3)](proofs/paper/ard-le-ard2-13.md) and two PDFs. The entire finite standard ARD domain embeds strictly below `[][(0,0,1)]` in ARD2, hence ARD is strictly smaller than ARD2. Initiality, count preservation and equality with the bound are not claimed. **No Lean comparison theorem was added.** All notation implementations, existing Lean sources and verification receipts remain unchanged.
+
+- [Actual-step simulation](tests/ard_ard2_comparison.py): 1,500 state pairs, 5,516 simulations and 360 preparation steps, at most 4 per preparation; actual `[1]` plus deletion paths, coverage and threshold chains passed. Runtime 2.78 seconds; 480 excluded branches and 2,517 queued states are unknown.
+- [Threshold-chain regression](tests/ard_ard2_forest.py): of 1,200 arbitrary small legal graphs, 694 satisfy the invariant, preserved by all 2,776 tested expansions; also 3,500 standard graphs and 10,280 steps. Runtime 18.57 seconds; 3,720 size exclusions and 4,102 queued states are unknown. The test has a 25-second deadline, bounded widths and a 14,000-state storage cap.
+- Both tests call the published Python rules and exit unsuccessfully on failed checks. Finite testing is not the paper proof.
+- ReportLab/MathJax produced a six-page English PDF and five-page Chinese PDF. Poppler rendered all 11 pages; automatic bounds checks passed, and all pages and key formulas were visually reviewed. The previous 30 PDFs were not rebuilt.
+
+The inventory now has 87 Markdown files (66 bilingual, 21 historical monolingual archives) and 32 PDFs. Both main READMEs, the default PDF build and exact release inventory were updated. The existing 10 Lean scopes, 330 distinct modules and 8 NER snapshots are unchanged. This addition is local only: no new commit or push was made.
 
 ## 2026-09-16: ARD skyline migration
 
