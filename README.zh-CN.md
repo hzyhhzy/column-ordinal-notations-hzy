@@ -2,11 +2,21 @@
 
 9 月 11 日 20:00，@Phyrion 公布了 [Y 序列的良序证明](https://github.com/Phyrion1343/1Y-Well-Ordering-Lean)。不久后，@test_alpha0 进一步将所需的公理体系降低到 $KP_\omega+\text{存在不可数序数}$。本仓库收录 GPT6-astra 在阅读上述证明后设计的 RPD、LRD、Ω-LRD3、ARD、IPD、ARD2，以及它们的良序证明。其中，RPD 的定义所需篇幅短得多；下面的纸面比较链证明其序型不小于固定版本 1Y。LRD 和 Ω-LRD3 则是在此基础上进一步扩展得到的记号。ARD 则把行标改为此前列的地址，使行坐标本身也随展开移动。IPD 则使用有限层迭代树轮廓，连嵌套头内的引用也随列搬运。ARD2 回到每组仅三个自然数坐标的形式，允许行与根同时引用本列，并生成覆盖全上下文的根包。六者均有同一公理体系下的纸面良序证明。它们与 omega-Y 等其他常见记号的序型大小关系暂时未知。
 
-本仓库收录列图序数记号的定义、可执行基本列展开器和良序证明。源码快照整理于 **2026-09-16**，仓库地址为 [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy)。名称中的 `hzy` 来自仓库所有者的名字。
+本仓库收录列图序数记号的定义、可执行基本列展开器和良序证明。源码快照整理于 **2026-09-17**，仓库地址为 [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy)。名称中的 `hzy` 来自仓库所有者的名字。
 
-新记号实现收录 **RPD、LRD、Ω-LRD3、ARD、IPD、ARD2、SPD**；Lean 证明覆盖 **Y、RPD、LRD、Ω-LRD3、ARD、IPD、ARD2**。另保留明确标记的旧版 ARD-legacy；其他 Ω-LRD 版本及历史实验实现不收录。
+记号实现收录 **RPD、LRD、Ω-LRD3、ARD、IPD、ARD2、SPD、CWY、CWY2、Ω-CWY**，CWY 的适配器／候选状态见下文；Lean 证明覆盖 **Y、RPD、LRD、Ω-LRD3、ARD、IPD、ARD2**。另保留明确标记的旧版 ARD-legacy；其他 Ω-LRD 版本及历史实验实现不收录。
 
 新增 **SPD（Slot Profile Diagrams，潜边轮廓图）**：每条关系只有四个整数，头与参数从此前列递归读出，输入中没有独立树字段。随附双语定义、纸面良序论证稿、Python／NER 实现及有界回归测试。**SPD 尚无 Lean 证明。** 它与 ARD、ARD2、wY、整个 IPD 的序型大小关系仍未知；局部轮廓的构造能力不等于这些跨记号比较已经成立。
+
+## CWY 系列（2026-09-17）
+
+新增 **CWY、CWY2、Ω-CWY**，各有独立 NER 文件和中英文 Markdown／PDF 规则。
+
+- **CWY：**NER 文件是原 wY 加根部拉长的紧凑列表视图，不是独立 CWY 展开内核。随附 Python 核心与带界封装实现数学上的根部拉长版；已有纸面论证给出内部界 B，其下是与 wY 同构的初始段。纯种子的编号与 NER 适配器不同，定义文档已明确区分。
+- **CWY2：**当前无特殊列的直接列内核。[完整等价论文](proofs/paper/cwy2-equivalence.zh-CN.md)（[PDF](proofs/paper/cwy2-equivalence.zh-CN.pdf)）在引用所给 wY 稿有限引理的前提下，给出基本列逐项交换及对应标准域的序同构；良序性由该稿在弱 KP 框架内转移。这是纸面结果，**没有 Lean 证书**。
+- **Ω-CWY：**极限列标采用 D[b+1]、顶端按嵌套层数展开的自索引候选，保留原式／计数序列／山脉图三视图。整体良序、共尾性及与 wY 的大小关系仍**未证明**；本次只收录已有有限结构论证与康托片段说明。
+
+三者均未新增 Lean 项目，不扩充原七系统联合定理。私人 wY 来源稿不转载。前两个 CWY 系列 JS 包含源自上游 NER 的代码；公开再分发前请阅读[来源与许可提醒](SOURCES.zh-CN.md)。
 
 ## ARD 新版（2026-09-16）
 
@@ -22,7 +32,7 @@ $$
 
 ## 定义与展开器
 
-每套定义都有中英文 Markdown 和 PDF，共 **32 份定义文件（含保留的旧版）**。Markdown 默认英文；每份英文定义的标题均链接到中文版。
+每套定义都有中英文 Markdown 和 PDF，共 **44 份定义文件（含保留的旧版及 CWY 系列）**。Markdown 默认英文；每份英文定义的标题均链接到中文版。
 
 | 记号 | 英文定义 | 中文定义 | NER 展开器 | Python 展开器 |
 | --- | --- | --- | --- | --- |
@@ -34,6 +44,9 @@ $$
 | IPD | [Markdown](notations/IPD/definition.md) · [PDF](notations/IPD/definition.pdf) | [Markdown](notations/IPD/definition.zh-CN.md) · [PDF](notations/IPD/definition.zh-CN.pdf) | [JavaScript](notations/IPD/IPD.ne-rewritten.js) | [ipd.py](notations/IPD/ipd.py) |
 | ARD2 | [Markdown](notations/ARD2/definition.md) · [PDF](notations/ARD2/definition.pdf) | [Markdown](notations/ARD2/definition.zh-CN.md) · [PDF](notations/ARD2/definition.zh-CN.pdf) | [JavaScript](notations/ARD2/ARD2.ne-rewritten.js) | [ard2.py](notations/ARD2/ard2.py) |
 | SPD | [Markdown](notations/SPD/definition.md) · [PDF](notations/SPD/definition.pdf) | [Markdown](notations/SPD/definition.zh-CN.md) · [PDF](notations/SPD/definition.zh-CN.pdf) | [JavaScript](notations/SPD/SPD.ne-rewritten.js) | [spd.py](notations/SPD/spd.py) |
+| CWY | [Markdown](notations/CWY/definition.md) · [PDF](notations/CWY/definition.pdf) | [Markdown](notations/CWY/definition.zh-CN.md) · [PDF](notations/CWY/definition.zh-CN.pdf) | [wY 适配器及 CWY 视图](notations/CWY/wY-CWY.ne-rewritten.js) | [核心](notations/CWY/compact_wy.py) · [带界版](notations/CWY/compact_wy_bound.py) |
+| CWY2 | [Markdown](notations/CWY2/definition.md) · [PDF](notations/CWY2/definition.pdf) | [Markdown](notations/CWY2/definition.zh-CN.md) · [PDF](notations/CWY2/definition.zh-CN.pdf) | [JavaScript](notations/CWY2/CWY2.ne-rewritten.js) | 无 Python；[可读 JS 核心](notations/CWY2/cwy_direct.mjs) |
+| Ω-CWY | [Markdown](notations/Omega-CWY/definition.md) · [PDF](notations/Omega-CWY/definition.pdf) | [Markdown](notations/Omega-CWY/definition.zh-CN.md) · [PDF](notations/Omega-CWY/definition.zh-CN.pdf) | [JavaScript](notations/Omega-CWY/Omega-CWY.ne-rewritten.js) | 无 Python；[可读 JS 核心](notations/Omega-CWY/core.mjs) |
 
 网页版：把所选 JavaScript 文件的完整内容载入 [ne-rewritten](https://smilelee-lyx.github.io/ne-rewritten/) 的自定义记号功能。每份文件均独立注册，无需构建；保留已有显示方式及资源保护。脚本也保留原来的中文帮助文字，其中可能有历史证明进度说明；当前证明范围以本包论文及验收记录为准。
 
@@ -62,6 +75,7 @@ $$
 - **IPD 纸面证明：**[英文 Markdown](proofs/paper/ipd-well-ordering.md) · [英文 PDF](proofs/paper/ipd-well-ordering.pdf) · [中文 Markdown](proofs/paper/ipd-well-ordering.zh-CN.md) · [中文 PDF](proofs/paper/ipd-well-ordering.zh-CN.pdf)。
 - **ARD2 纸面证明：**[英文 Markdown](proofs/paper/ard2-well-ordering.md) · [英文 PDF](proofs/paper/ard2-well-ordering.pdf) · [中文 Markdown](proofs/paper/ard2-well-ordering.zh-CN.md) · [中文 PDF](proofs/paper/ard2-well-ordering.zh-CN.pdf)。
 - **SPD 纸面论证稿（尚未 Lean 形式化）：**[英文 Markdown](proofs/paper/spd-well-ordering.md) · [英文 PDF](proofs/paper/spd-well-ordering.pdf) · [中文 Markdown](proofs/paper/spd-well-ordering.zh-CN.md) · [中文 PDF](proofs/paper/spd-well-ordering.zh-CN.pdf)。
+- **CWY2／wY 等价（纸面）：**[英文 Markdown](proofs/paper/cwy2-equivalence.md) · [英文 PDF](proofs/paper/cwy2-equivalence.pdf) · [中文 Markdown](proofs/paper/cwy2-equivalence.zh-CN.md) · [中文 PDF](proofs/paper/cwy2-equivalence.zh-CN.pdf)。CWY 的表示及带界良序论证收入其定义；Ω-CWY 暂无整体良序证明。
 - **IPD 定义对应审计：**[英文](proofs/paper/ipd-fidelity.md) · [中文](proofs/paper/ipd-fidelity.zh-CN.md)。
 - **Lean：**[英文构建说明与定理索引](lean/README.md) · [中文说明](lean/README.zh-CN.md)。
 - **独立 Lean 项目：**[Y](lean/Y/README.zh-CN.md) · [RPD](lean/RPD/README.zh-CN.md) · [LRD](lean/LRD/README.zh-CN.md) · [Ω-LRD3](lean/Omega-LRD3/README.zh-CN.md) · [ARD](lean/ARD/README.zh-CN.md) · [IPD](lean/IPD/README.zh-CN.md) · [ARD2](lean/ARD2/README.zh-CN.md)。
@@ -103,11 +117,15 @@ node --max-old-space-size=256 tests/ard2_ner.cjs
 node --max-old-space-size=256 tests/ard2_display.cjs
 node --max-old-space-size=256 tests/ipd_display.cjs
 node --max-old-space-size=256 tests/adjacency_views.cjs
+python -B tests/test_cwy.py
+node --max-old-space-size=256 tests/cwy_family.mjs
 ```
 
 固定依赖和串行、有资源上限的 Lean 构建方法见 [Lean 说明](lean/README.zh-CN.md)。Lean 编译不需要生成 PDF，也不需要 Node.js。
 
-如需重建二十四份发布用 PDF，安装 Pandoc、Node.js、文档工具依赖及适当的本机字体：
+如果受限宿主不允许 Node 启动 Python，可用两个受限进程执行同一交叉测试：`python -B tests/test_cwy.py --fixtures | node --max-old-space-size=256 tests/cwy_family.mjs --fixtures-stdin`。这不会跳过 Python 对照。
+
+如需重建全部 38 份发布用 PDF，安装 Pandoc、Node.js、文档工具依赖及适当的本机字体：
 
 ```sh
 python -m pip install -r tools/requirements.txt
@@ -134,7 +152,10 @@ notations/
   IPD/                           双语定义、PDF、树形图 JS、Python
   ARD2/                          双语定义、PDF、五视图 JS、Python
   SPD/                           双语定义、PDF、列表／计数 JS、Python、计数解码器
-proofs/paper/                    合写、ARD、IPD、ARD2 证明及 SPD 论证稿、定义对应审计
+  CWY/                           双语规则及已有论证、PDF、wY 视图 JS、Python 核心和带界版
+  CWY2/                          双语规则、PDF、独立 JS 和可读直接核心
+  Omega-CWY/                     双语候选规则、PDF、三视图 JS 和可读源码
+proofs/paper/                     原有证明、SPD 文稿、CWY2 等价与对应审计
 research/                       比较推导、未证候选及历史研究文稿
 ai-docs/                        给 AI 阅读的双语指南与交接文档
 lean/                           源码依赖集合、固定版本与有界构建工具

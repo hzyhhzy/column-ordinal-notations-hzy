@@ -238,5 +238,69 @@
     "bytes": 1329572,
     "sha256": "5757b7d4a40dcb71eed9fff737a876fde2b424e6856bb8bd67b2e18c95c96c18",
     "warnings": []
+  },
+  {
+    "source": "notations/CWY/definition.zh-CN.md",
+    "pdf": "notations/CWY/definition.zh-CN.pdf",
+    "pages": 6,
+    "bytes": 587384,
+    "sha256": "5817570d6cd92e9cb3b5a57b7723e7b97a9c806898f98b276cf2d463ba494e73",
+    "warnings": []
+  },
+  {
+    "source": "notations/Omega-CWY/definition.md",
+    "pdf": "notations/Omega-CWY/definition.pdf",
+    "pages": 5,
+    "bytes": 442291,
+    "sha256": "2bba3b5230d852c7909abbf7746ddc35993e83af75418d8cae286d2809e04751",
+    "warnings": []
+  },
+  {
+    "source": "notations/Omega-CWY/definition.zh-CN.md",
+    "pdf": "notations/Omega-CWY/definition.zh-CN.pdf",
+    "pages": 4,
+    "bytes": 317400,
+    "sha256": "303114fc6c9cfbf6fea0247dd6bc5414535fe303a0013355622bff1f3d1e68e3",
+    "warnings": []
+  },
+  {
+    "source": "notations/CWY/definition.md",
+    "pdf": "notations/CWY/definition.pdf",
+    "pages": 6,
+    "bytes": 648398,
+    "sha256": "a53355bd9a0a9bc5767698351971daace372d130a326c00148bfa79d66ea5fd2",
+    "warnings": []
+  },
+  {
+    "source": "notations/CWY2/definition.zh-CN.md",
+    "pdf": "notations/CWY2/definition.zh-CN.pdf",
+    "pages": 4,
+    "bytes": 587555,
+    "sha256": "7ae2dca0138adcfaa02b2180ce94e7344d3969538c4499d8b5fee47230a25aef",
+    "warnings": []
+  },
+  {
+    "source": "proofs/paper/cwy2-equivalence.md",
+    "pdf": "proofs/paper/cwy2-equivalence.pdf",
+    "pages": 7,
+    "bytes": 998230,
+    "sha256": "59a4fadcf8f49754388131e80801499e74996623ea06c07987c01c389955d7c3",
+    "warnings": []
+  },
+  {
+    "source": "notations/CWY2/definition.md",
+    "pdf": "notations/CWY2/definition.pdf",
+    "pages": 4,
+    "bytes": 609465,
+    "sha256": "9990e27e0fd14ae5695385659b2a5f6fbebcb63f47e33ac159ff672f68f9df6c",
+    "warnings": []
+  },
+  {
+    "source": "proofs/paper/cwy2-equivalence.zh-CN.md",
+    "pdf": "proofs/paper/cwy2-equivalence.zh-CN.pdf",
+    "pages": 6,
+    "bytes": 725972,
+    "sha256": "d6eaa976cb76567f7d12b706611737f1371af12401784c55c473b40f75780449",
+    "warnings": []
   }
 ]

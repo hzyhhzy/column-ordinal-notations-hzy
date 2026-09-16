@@ -2,11 +2,21 @@
 
 At 20:00 on September 11, @Phyrion published a [well-ordering proof for the Y-sequence system](https://github.com/Phyrion1343/1Y-Well-Ordering-Lean). Shortly afterwards, @test_alpha0 reduced the required axiomatic foundation to $KP_\omega+\text{there exists an uncountable ordinal}$. This repository collects RPD, LRD, Ω-LRD3, ARD, IPD, and ARD2, notation systems devised by GPT6-astra after studying those proofs, together with their well-ordering proofs. RPD admits a much shorter definition than Y; the paper comparison chain below proves it is at least as strong as the fixed 1Y definition. LRD and Ω-LRD3 are further extensions of that construction. ARD makes row labels into references to earlier columns, so the row coordinate itself moves during expansion. IPD uses finite-level iterated tree profiles and relocates references even inside nested heads. ARD2 returns to three natural-number coordinates, allowing both row and root SELF references and full-context root packages. All six admit paper well-ordering proofs in the same axiomatic system. Their order-type relationships with omega-Y and other familiar notation systems are currently unknown.
 
-Definitions, executable fundamental sequences, and well-ordering proofs for column-diagram ordinal notations. This source snapshot was prepared on **2026-09-16** for [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy). The suffix `hzy` refers to the repository owner's name.
+Definitions, executable fundamental sequences, and well-ordering proofs for column-diagram ordinal notations. This source snapshot was prepared on **2026-09-17** for [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy). The suffix `hzy` refers to the repository owner's name.
 
-The new notation implementations are **RPD, LRD, Ω-LRD3, ARD, IPD, ARD2 and SPD**. The Lean proof collection covers **Y, RPD, LRD, Ω-LRD3, ARD, IPD and ARD2**. ARD-legacy is retained as an explicit previous edition; other Ω-LRD variants and historical experimental implementations are excluded.
+The notation implementations are **RPD, LRD, Ω-LRD3, ARD, IPD, ARD2, SPD, CWY, CWY2 and Ω-CWY**, with the CWY adapter/candidate distinctions below. The Lean proof collection covers **Y, RPD, LRD, Ω-LRD3, ARD, IPD and ARD2**. ARD-legacy is retained as an explicit previous edition; other Ω-LRD variants and historical experimental implementations are excluded.
 
 **SPD (Slot Profile Diagrams)** adds four-integer relations whose heads and arguments are read recursively from earlier columns; the input contains no separate tree field. It includes bilingual definitions, a paper well-ordering manuscript, Python and NER implementations, and bounded regression tests. **SPD has no Lean proof yet.** Its order-type relationships with ARD, ARD2, wY and the whole IPD system remain unknown; its local-profile constructions are not a proof of those comparisons.
+
+## CWY family (2026-09-17)
+
+Added **CWY, CWY2 and Ω-CWY**, each with a standalone NER file and bilingual Markdown/PDF rules.
+
+- **CWY:** the NER artifact is original wY plus the stretched compact-list view, not the independent CWY expansion kernel. The included Python core and bound wrapper implement the mathematical root-stretched version, whose existing paper argument gives an internal bound B above an isomorphic wY copy. The pure-seed indices differ from the NER adapter; the definition explains this explicitly.
+- **CWY2:** the current marker-free direct-column kernel. The [full equivalence paper](proofs/paper/cwy2-equivalence.md) ([PDF](proofs/paper/cwy2-equivalence.pdf)) gives indexed expansion commutation and an order isomorphism with wY on corresponding standard domains, relative to the cited finite lemmas of the supplied wY manuscript. Well-ordering transfers from that manuscript in its weak-KP framework. This is a paper result, **not Lean-certified**.
+- **Ω-CWY:** the self-indexed candidate with D[b+1] for limit labels, nesting-depth top, and original/count/mountain views. Its whole-domain well-ordering, cofinality and wY comparison remain **unproved**. The definition includes existing finite structural and Cantor-fragment arguments only.
+
+None of these three adds a Lean project or enlarges the existing seven-system theorem. The private wY source manuscript is not redistributed. The two older CWY-family JS artifacts include upstream NER-derived code; see [source and licensing cautions](SOURCES.md) before public redistribution.
 
 ## ARD skyline revision (2026-09-16)
 
@@ -22,7 +32,7 @@ Here `ARD(1,2)` denotes `[][(0,0,0)]`, not the whole ARD limit. The [fixed-bound
 
 ## Definitions and expanders
 
-Each definition is available in English and Chinese, as Markdown and PDF: **32 definition artifacts (including the preserved legacy edition)** in total. English Markdown is the default; the title of every English definition links to its Chinese counterpart.
+Each definition is available in English and Chinese, as Markdown and PDF: **44 definition artifacts (including the preserved legacy edition and CWY family)** in total. English Markdown is the default; the title of every English definition links to its Chinese counterpart.
 
 | Notation | English definition | Chinese definition | NER expander | Python expander |
 | --- | --- | --- | --- | --- |
@@ -34,6 +44,9 @@ Each definition is available in English and Chinese, as Markdown and PDF: **32 d
 | IPD | [Markdown](notations/IPD/definition.md) · [PDF](notations/IPD/definition.pdf) | [Markdown](notations/IPD/definition.zh-CN.md) · [PDF](notations/IPD/definition.zh-CN.pdf) | [JavaScript](notations/IPD/IPD.ne-rewritten.js) | [ipd.py](notations/IPD/ipd.py) |
 | ARD2 | [Markdown](notations/ARD2/definition.md) · [PDF](notations/ARD2/definition.pdf) | [Markdown](notations/ARD2/definition.zh-CN.md) · [PDF](notations/ARD2/definition.zh-CN.pdf) | [JavaScript](notations/ARD2/ARD2.ne-rewritten.js) | [ard2.py](notations/ARD2/ard2.py) |
 | SPD | [Markdown](notations/SPD/definition.md) · [PDF](notations/SPD/definition.pdf) | [Markdown](notations/SPD/definition.zh-CN.md) · [PDF](notations/SPD/definition.zh-CN.pdf) | [JavaScript](notations/SPD/SPD.ne-rewritten.js) | [spd.py](notations/SPD/spd.py) |
+| CWY | [Markdown](notations/CWY/definition.md) · [PDF](notations/CWY/definition.pdf) | [Markdown](notations/CWY/definition.zh-CN.md) · [PDF](notations/CWY/definition.zh-CN.pdf) | [wY adapter + CWY view](notations/CWY/wY-CWY.ne-rewritten.js) | [core](notations/CWY/compact_wy.py) · [bound wrapper](notations/CWY/compact_wy_bound.py) |
+| CWY2 | [Markdown](notations/CWY2/definition.md) · [PDF](notations/CWY2/definition.pdf) | [Markdown](notations/CWY2/definition.zh-CN.md) · [PDF](notations/CWY2/definition.zh-CN.pdf) | [JavaScript](notations/CWY2/CWY2.ne-rewritten.js) | No Python; [readable JS core](notations/CWY2/cwy_direct.mjs) |
+| Ω-CWY | [Markdown](notations/Omega-CWY/definition.md) · [PDF](notations/Omega-CWY/definition.pdf) | [Markdown](notations/Omega-CWY/definition.zh-CN.md) · [PDF](notations/Omega-CWY/definition.zh-CN.pdf) | [JavaScript](notations/Omega-CWY/Omega-CWY.ne-rewritten.js) | No Python; [readable JS core](notations/Omega-CWY/core.mjs) |
 
 For the browser version, load the complete JavaScript file into the custom-notation facility of [ne-rewritten](https://smilelee-lyx.github.io/ne-rewritten/). Each file is an independent registration script; no build step is needed. Existing display modes and resource guards are preserved. The scripts also retain their original Chinese help text, including historical proof-status notes; the papers and validation record in this package state the current proof scope.
 
@@ -62,6 +75,7 @@ Here KP includes full set induction. The paper does not add a power-set axiom, f
 - **IPD paper:** [English Markdown](proofs/paper/ipd-well-ordering.md) · [English PDF](proofs/paper/ipd-well-ordering.pdf) · [Chinese Markdown](proofs/paper/ipd-well-ordering.zh-CN.md) · [Chinese PDF](proofs/paper/ipd-well-ordering.zh-CN.pdf).
 - **ARD2 paper:** [English Markdown](proofs/paper/ard2-well-ordering.md) · [English PDF](proofs/paper/ard2-well-ordering.pdf) · [Chinese Markdown](proofs/paper/ard2-well-ordering.zh-CN.md) · [Chinese PDF](proofs/paper/ard2-well-ordering.zh-CN.pdf).
 - **SPD paper manuscript (not Lean-formalized):** [English Markdown](proofs/paper/spd-well-ordering.md) · [English PDF](proofs/paper/spd-well-ordering.pdf) · [Chinese Markdown](proofs/paper/spd-well-ordering.zh-CN.md) · [Chinese PDF](proofs/paper/spd-well-ordering.zh-CN.pdf).
+- **CWY2/wY equivalence (paper):** [English Markdown](proofs/paper/cwy2-equivalence.md) · [English PDF](proofs/paper/cwy2-equivalence.pdf) · [Chinese Markdown](proofs/paper/cwy2-equivalence.zh-CN.md) · [Chinese PDF](proofs/paper/cwy2-equivalence.zh-CN.pdf). CWY representation/bound arguments are in its definition; Ω-CWY has no global well-ordering proof.
 - **IPD correspondence audit:** [English](proofs/paper/ipd-fidelity.md) · [Chinese](proofs/paper/ipd-fidelity.zh-CN.md).
 - **Lean:** [Build instructions and theorem index](lean/README.md) · [Chinese instructions](lean/README.zh-CN.md).
 - **Independent Lean projects:** [Y](lean/Y/README.md) · [RPD](lean/RPD/README.md) · [LRD](lean/LRD/README.md) · [Ω-LRD3](lean/Omega-LRD3/README.md) · [ARD](lean/ARD/README.md) · [IPD](lean/IPD/README.md) · [ARD2](lean/ARD2/README.md).
@@ -103,11 +117,15 @@ node --max-old-space-size=256 tests/ard2_ner.cjs
 node --max-old-space-size=256 tests/ard2_display.cjs
 node --max-old-space-size=256 tests/ipd_display.cjs
 node --max-old-space-size=256 tests/adjacency_views.cjs
+python -B tests/test_cwy.py
+node --max-old-space-size=256 tests/cwy_family.mjs
 ```
 
 Follow [the Lean instructions](lean/README.md) for pinned dependencies and the sequential, resource-bounded build. Neither PDF generation nor Node.js is needed for Lean compilation.
 
-To regenerate the thirty publication PDFs, install Pandoc, Node.js, the document-tool dependencies, and suitable local fonts:
+If a restricted host disallows Node spawning Python, run the same cross-language CWY test as two bounded processes: `python -B tests/test_cwy.py --fixtures | node --max-old-space-size=256 tests/cwy_family.mjs --fixtures-stdin`. This does not skip the Python oracle.
+
+To regenerate all 38 publication PDFs, install Pandoc, Node.js, the document-tool dependencies, and suitable local fonts:
 
 ```sh
 python -m pip install -r tools/requirements.txt
@@ -135,7 +153,10 @@ notations/
   IPD/                           Bilingual definitions, PDFs, tree-view JS, Python
   ARD2/                          Bilingual definitions, PDFs, five-view JS, Python
   SPD/                           Bilingual definitions, PDFs, list/count JS, Python, count decoder
-proofs/paper/                    Joint, ARD, IPD, ARD2 proofs and SPD manuscript; correspondence audit
+  CWY/                           Bilingual rules/proof, PDFs, wY-view JS, Python core/bound
+  CWY2/                          Bilingual rules, PDFs, standalone JS and direct core
+  Omega-CWY/                     Bilingual candidate rules, PDFs, three-view JS and sources
+proofs/paper/                    Existing proofs, SPD manuscript, CWY2 equivalence and audits
 research/                       Comparison drafts, candidates and historical research notes
 ai-docs/                        Bilingual guides and handoff documents for AI readers
 lean/                           Source closure, dependency pins, bounded build

@@ -1,0 +1,57 @@
+{
+  "date": "2026-09-17",
+  "renderer": "ReportLab / MathJax; Poppler pdftoppm at 95 dpi",
+  "scope": "Eight CWY-family publications only; all pre-existing PDFs are unchanged.",
+  "pages": 42,
+  "visual_review": "All current pages inspected in contact sheets. CWY2 English definition page 2, equivalence Chinese page 2 and English page 5 also inspected at full-page resolution. Formula delimiters and stacked decrement formulas render correctly. Short final pages removed by document-specific spacing. No clipping, missing glyphs or overlapping formulas observed.",
+  "files": [
+    {
+      "pdf": "notations/CWY/definition.pdf",
+      "pages": 6,
+      "sha256": "a53355bd9a0a9bc5767698351971daace372d130a326c00148bfa79d66ea5fd2",
+      "bounds_issues": []
+    },
+    {
+      "pdf": "notations/CWY/definition.zh-CN.pdf",
+      "pages": 6,
+      "sha256": "5817570d6cd92e9cb3b5a57b7723e7b97a9c806898f98b276cf2d463ba494e73",
+      "bounds_issues": []
+    },
+    {
+      "pdf": "notations/CWY2/definition.pdf",
+      "pages": 4,
+      "sha256": "9990e27e0fd14ae5695385659b2a5f6fbebcb63f47e33ac159ff672f68f9df6c",
+      "bounds_issues": []
+    },
+    {
+      "pdf": "notations/CWY2/definition.zh-CN.pdf",
+      "pages": 4,
+      "sha256": "7ae2dca0138adcfaa02b2180ce94e7344d3969538c4499d8b5fee47230a25aef",
+      "bounds_issues": []
+    },
+    {
+      "pdf": "notations/Omega-CWY/definition.pdf",
+      "pages": 5,
+      "sha256": "2bba3b5230d852c7909abbf7746ddc35993e83af75418d8cae286d2809e04751",
+      "bounds_issues": []
+    },
+    {
+      "pdf": "notations/Omega-CWY/definition.zh-CN.pdf",
+      "pages": 4,
+      "sha256": "303114fc6c9cfbf6fea0247dd6bc5414535fe303a0013355622bff1f3d1e68e3",
+      "bounds_issues": []
+    },
+    {
+      "pdf": "proofs/paper/cwy2-equivalence.pdf",
+      "pages": 7,
+      "sha256": "59a4fadcf8f49754388131e80801499e74996623ea06c07987c01c389955d7c3",
+      "bounds_issues": []
+    },
+    {
+      "pdf": "proofs/paper/cwy2-equivalence.zh-CN.pdf",
+      "pages": 6,
+      "sha256": "d6eaa976cb76567f7d12b706611737f1371af12401784c55c473b40f75780449",
+      "bounds_issues": []
+    }
+  ]
+}

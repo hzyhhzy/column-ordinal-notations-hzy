@@ -40,6 +40,9 @@ MONOLINGUAL_ARCHIVES = frozenset({
     'research/README.md',
 })
 NER_HASHES = {
+    'notations/CWY/wY-CWY.ne-rewritten.js': 'c2c1c3c9f83d7b69588e95b53503e6d42c86c092aac170c2db6ffce2d5ca61f5',
+    'notations/CWY2/CWY2.ne-rewritten.js': '02b4f334f4c84d5c088a740d0f0a33fee1e1821105bb1dc8baf9228ca0a1a3ee',
+    'notations/Omega-CWY/Omega-CWY.ne-rewritten.js': '4750912d8fb926c05f49476ba5408bb7a51e444849509411bf4e377423429414',
     'notations/RPD/RPD-mountain.ne-rewritten.js': '447eaed4e88604a29ba4ccef329b05c57ef30d935b0a31166ff519805e352026',
     'notations/LRD/LRD.ne-rewritten.js': '394fe4763e82708a99d66c2d88d3926c86c4be92ec35174b9205a292550740b1',
     'notations/Omega-LRD3/Omega-LRD3.ne-rewritten.js': 'fe33b1a35891e9efb9eb5932ab94456053769b6b58df41ea9f36eb57a262f3ab',
@@ -210,16 +213,16 @@ def main():
                 problems.append(f'Broken link: {path.relative_to(ROOT)} -> {target}')
     expected_pdfs = {
         f'notations/{notation}/definition{lang}.pdf'
-        for notation in ('RPD','LRD','Omega-LRD3','ARD','ARD-legacy','IPD','ARD2','SPD') for lang in ('','.zh-CN')
+        for notation in ('RPD','LRD','Omega-LRD3','ARD','ARD-legacy','IPD','ARD2','SPD','CWY','CWY2','Omega-CWY') for lang in ('','.zh-CN')
     } | {f'proofs/paper/{paper}{lang}.pdf'
-         for paper in ('well-ordering','ard-well-ordering', 'ard-legacy-well-ordering', 'rpd-le-ard-a2','ipd-well-ordering','ard2-well-ordering','spd-well-ordering') for lang in ('','.zh-CN')}
+         for paper in ('well-ordering','ard-well-ordering', 'ard-legacy-well-ordering', 'rpd-le-ard-a2','ipd-well-ordering','ard2-well-ordering','spd-well-ordering','cwy2-equivalence') for lang in ('','.zh-CN')}
     actual_pdfs = {p.relative_to(ROOT).as_posix() for p in pdfs}
     if actual_pdfs != expected_pdfs:
         problems.append(f'PDF inventory mismatch: {actual_pdfs ^ expected_pdfs}')
     for path in pdfs:
         if not path.with_suffix('.md').is_file() or path.stat().st_size < 1000:
             problems.append(f'Invalid PDF/source pair: {path.relative_to(ROOT)}')
-    if {p.name for p in (ROOT/'notations').iterdir() if p.is_dir()} != {'RPD','LRD','Omega-LRD3','ARD','ARD-legacy','IPD','ARD2','SPD'}:
+    if {p.name for p in (ROOT/'notations').iterdir() if p.is_dir()} != {'RPD','LRD','Omega-LRD3','ARD','ARD-legacy','IPD','ARD2','SPD','CWY','CWY2','Omega-CWY'}:
         problems.append('Unexpected notation directory')
     for relative, expected in NER_HASHES.items():
         actual = hashlib.sha256((ROOT/relative).read_bytes()).hexdigest()
@@ -228,7 +231,7 @@ def main():
     for path in files:
         if path.suffix in ('.olean', '.ilean', '.o', '.exe', '.dll', '.pyc'):
             problems.append(f'Generated binary in release inventory: {path.relative_to(ROOT)}')
-        if path.suffix in ('.md','.py','.js','.cjs','.json','.lean') and path != Path(__file__).resolve():
+        if path.suffix in ('.md','.py','.js','.cjs','.mjs','.json','.lean') and path != Path(__file__).resolve():
             content = path.read_text(encoding='utf-8-sig')
             if re.search(r'(?:[A-Z]:[\\/]+Users[\\/]|/Users/|/home/[^/]+/|Tencent Files)', content):
                 problems.append(f'Private absolute path: {path.relative_to(ROOT)}')

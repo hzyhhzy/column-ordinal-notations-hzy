@@ -1,5 +1,37 @@
 # 来源、版本与许可证 · [English](SOURCES.md)
 
+## CWY 系列新增（2026-09-17）
+
+以下三份 NER 文件与选定本地版本逐字节相同：
+
+| 脚本 | SHA-256 |
+| --- | --- |
+| `notations/CWY/wY-CWY.ne-rewritten.js` | `c2c1c3c9f83d7b69588e95b53503e6d42c86c092aac170c2db6ffce2d5ca61f5` |
+| `notations/CWY2/CWY2.ne-rewritten.js` | `02b4f334f4c84d5c088a740d0f0a33fee1e1821105bb1dc8baf9228ca0a1a3ee` |
+| `notations/Omega-CWY/Omega-CWY.ne-rewritten.js` | `4750912d8fb926c05f49476ba5408bb7a51e444849509411bf4e377423429414` |
+
+CWY 的 JS 保留原 wY 展开并添加根部拉长视图，不实现数学 CWY 的种子移位和有限内部界；
+随附两个仅依赖标准库的 Python 模块实现后者。CWY2 的直接核心与可选几何显示分离，
+展开不恢复山脉；冻结代码中的“等价待证”早于已收录的[等价文稿](proofs/paper/cwy2-equivalence.zh-CN.md)。
+Ω-CWY 保留已选 D[b+1]、三视图、计数超限保留精确前缀及完整图，可读源码与仅写本目录的构建脚本
+能复现 bundle。其整体良序性未证明。
+
+CWY 和 CWY2 包含来自 [ne-rewritten](https://github.com/smilelee-lyx/ne-rewritten/tree/c539d8f68c5553da2d681c1251ea443b6b735e62)
+的适配源码，本地基础提交为 `c539d8f68c5553da2d681c1251ea443b6b735e62`，
+主要涉及 `src/notations/Y/Omega_Y.ts`、绘图工具及通用工具。
+工作副本已有适配修改，故以 bundle 哈希固定实际交付，不能声称其等于未修改的上游提交。
+保留 NER 所记 Yukito/Naruyoko 的 wY 出处。代码注释中的旧构建路径只是历史来源，
+不是本仓库可执行的构建命令。未收录整个宿主应用、用户数据、浏览器状态、依赖或私人研究副本。
+
+**再分发提醒：**所检查上游树没有 LICENSE、COPYING、NOTICE 文件，包清单也未声明许可。
+保留署名不等于获得许可。这次按请求放入本地仓库的文件含上游衍生代码；
+公开再分发前应确认许可或获得相应授权。本次不替项目选许可证，也不执行 push。
+
+CWY 定义收入已有最高轮廓、根部拉长和内部界的纸面论证；CWY2 文稿收入已有逐项等价证明，
+明确依赖所给 *Well-foundedness of the Weak-Magma omega-Y System in KP with an Uncountable Ordinal*
+（`omega-Y-Weak-Magma-KP.pdf`）的有限引理。私人原稿不转载，本次未重新独立审计其整篇证明，
+也不将其当作 Lean 证书。Ω-CWY 只收录已有规则和局部片段论证。原七系统 Lean 范围不变。
+
 2026-09-16 更新：默认 ARD 为轮廓简化版，旧内核完整保留在 ARD-legacy。新版 Python 与 7 个私有 Lean 模块为本次新增；新良序证明核查 56 个模块。以下早期“ARD 原样内核”说明均指 ARD-legacy；新的完整规则、等价与比较范围见 [ARD](notations/ARD/definition.zh-CN.md).
 
 
@@ -34,7 +66,7 @@ SPD Python 核心及独立标准计数解码器与该固定版本逐字节相同
 
 Python 文件提供只依赖标准库的独立数学核心。RPD、LRD 由已有简易核心整理；Ω-LRD3 按规则实现，并与 `tests/omega3_tuple_reference.py` 内的旧有限元组参考独立对照。这三个实现不设数学截断规则，也不判断标准域成员资格。有界测试是实现一致性的证据，不是全输入解释器等价定理，也不能替代良序证明。
 
-宿主为 [ne-rewritten](https://smilelee-lyx.github.io/ne-rewritten/)。本包不复制宿主源码、用户数据或浏览器状态。测试中的注册接口桩不等于新做了一次完整浏览器集成测试。
+宿主为 [ne-rewritten](https://smilelee-lyx.github.io/ne-rewritten/)。本包不复制宿主源码、用户数据或浏览器状态。测试中的注册接口桩不等于新做了一次完整浏览器集成测试。 2026-09-17 新增 CWY／CWY2 的上游衍生代码是上文明确记录的例外。
 
 ## 证明来源
 

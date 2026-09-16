@@ -1,0 +1,38 @@
+{
+  "date": "2026-09-17",
+  "scope": "CWY, CWY2 and Omega-CWY release-only bounded regression",
+  "command": "python -B tests/test_cwy.py --fixtures | node --max-old-space-size=256 tests/cwy_family.mjs --fixtures-stdin",
+  "limitations": [
+    "No fresh browser UI integration test or Lean compilation.",
+    "Finite checks are not universal equivalence, cofinality or well-ordering proofs.",
+    "Numeric reference comparisons are restricted to safe integer outputs.",
+    "Excluded samples and unexplored queued states remain unknown."
+  ],
+  "tests": {
+    "states": 80,
+    "numericFS": 960,
+    "compactFS": 320,
+    "omegaFiniteFS": 320,
+    "omegaSelfFS": 200,
+    "prefixes": 520,
+    "orderPairs": 400,
+    "views": 320,
+    "diagrams": 26,
+    "invalid": 7,
+    "resourceExclusions": 15,
+    "pythonOracle": {
+      "states": 80,
+      "core_fs": 320,
+      "bound_fs": 330,
+      "prefixes": 490,
+      "roundtrips": 560,
+      "comparisons": 310,
+      "guards": 2,
+      "exclusions": 0,
+      "queued_unexplored": 126,
+      "elapsed_seconds": 0.16
+    },
+    "elapsedMs": 1995,
+    "rssMiB": 81.8
+  }
+}

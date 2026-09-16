@@ -1,5 +1,23 @@
 # Sources, versions and licenses · [中文版](SOURCES.zh-CN.md)
 
+## CWY-family addition (2026-09-17)
+
+The three NER files are byte-identical copies of the selected local releases:
+
+| Script | SHA-256 |
+| --- | --- |
+| `notations/CWY/wY-CWY.ne-rewritten.js` | `c2c1c3c9f83d7b69588e95b53503e6d42c86c092aac170c2db6ffce2d5ca61f5` |
+| `notations/CWY2/CWY2.ne-rewritten.js` | `02b4f334f4c84d5c088a740d0f0a33fee1e1821105bb1dc8baf9228ca0a1a3ee` |
+| `notations/Omega-CWY/Omega-CWY.ne-rewritten.js` | `4750912d8fb926c05f49476ba5408bb7a51e444849509411bf4e377423429414` |
+
+CWY's file retains original wY expansion and adds the root-stretched CWY view; it is not an implementation of the shifted-seed, finite-bound CWY rule. The two included standard-library Python modules implement that mathematical version. CWY2's direct core and optional geometry views are distinct: expansion does not reconstruct a mountain. Its frozen “equivalence pending” comments predate the included [equivalence manuscript](proofs/paper/cwy2-equivalence.md). Ω-CWY retains the approved D[b+1] rule, three views, partial exact count prefixes and complete diagrams; its readable modules and local-only builder reproduce the bundle exactly. It has no whole-domain well-ordering theorem.
+
+CWY and CWY2 contain source adapted from [ne-rewritten](https://github.com/smilelee-lyx/ne-rewritten/tree/c539d8f68c5553da2d681c1251ea443b6b735e62), local base revision `c539d8f68c5553da2d681c1251ea443b6b735e62`, particularly `src/notations/Y/Omega_Y.ts`, `src/notations/draw_mountain_util.ts`, and utilities. The working source had local adapter changes; the bundle hashes, not a claim of an untouched upstream checkout, pin these artifacts. Original wY credit remains Yukito/Naruyoko as recorded by NER. The old build-path comments identify historical provenance, not public build instructions. No full host application, user data, browser state, dependencies or private research checkout is included.
+
+**Redistribution caution:** the inspected upstream tree has no LICENSE, COPYING or NOTICE file, and its package manifest declares no license. Retaining attribution is not a license grant. These requested local artifacts include upstream-derived code; verify permission or an applicable license before public redistribution. This integration does not select a license or push anything.
+
+The CWY definition packages the existing highest-profile, root-stretch and internal-bound paper arguments. The CWY2 paper packages the existing termwise equivalence proof and its explicit finite-lemma dependencies on the user-supplied *Well-foundedness of the Weak-Magma omega-Y System in KP with an Uncountable Ordinal* (`omega-Y-Weak-Magma-KP.pdf`). That private manuscript is not redistributed, newly independently audited in full, or relabeled as a Lean certificate. Ω-CWY includes only its existing rule and local-fragment arguments. None adds to the seven Lean-certified systems.
+
 2026-09-16 update: default ARD is the skyline simplification; the old kernel remains in ARD-legacy. The new Python and seven private Lean modules are newly authored; its well-ordering closure has 56 modules. Earlier unchanged-core ARD notes below refer to ARD-legacy. Current rules and proof scope are in [ARD](notations/ARD/definition.md).
 
 
@@ -34,7 +52,7 @@ The SPD Python core and separate standard-count decoder are byte-identical to th
 
 The Python files expose independent standard-library mathematical cores. RPD and LRD were adapted from existing simple cores; Ω-LRD3 was packaged from its rules and independently checked against the earlier finite-tuple reference in `tests/omega3_tuple_reference.py`. Those three implementations do not contain truncation rules or decide standard-domain membership. Bounded tests are evidence about implementation agreement, not a universal interpreter-equivalence theorem or a substitute for well-ordering proofs.
 
-The host application is [ne-rewritten](https://smilelee-lyx.github.io/ne-rewritten/). Its source, user data, and browser state are not copied into this package. Test registration stubs do not constitute a new full browser-integration test.
+The host application is [ne-rewritten](https://smilelee-lyx.github.io/ne-rewritten/). Apart from the specifically disclosed CWY/CWY2 derived snippets above, its application source, user data, and browser state are not copied into this package. Test registration stubs do not constitute a new full browser-integration test.
 
 ## Proof sources
 
