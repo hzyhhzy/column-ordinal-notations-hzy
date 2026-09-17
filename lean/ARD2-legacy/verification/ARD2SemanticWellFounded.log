@@ -1,0 +1,3 @@
+'OrdinalFormal.ARD2.accessible_of_bounded' depends on axioms: [propext, Quot.sound]
+'OrdinalFormal.ARD2.valid_accessible_of_bounded' depends on axioms: [propext, Quot.sound]
+'OrdinalFormal.ARD2.valid_step_wellFounded_of_accessible' depends on axioms: [propext]

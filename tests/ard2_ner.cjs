@@ -16,8 +16,10 @@ const native=x=>JSON.parse(JSON.stringify(x));
 const key=e=>[e[1],e[0],e[2]];
 function cmp(a,b){for(let i=0;i<3;i++)if(a[i]!==b[i])return a[i]-b[i];return 0;}
 function norm(cols){return cols.map(col=>{
-  const m=new Map();for(const [k,p,q] of col){const id=k+','+p,old=m.get(id);if(!old||q>old[2])m.set(id,[k,p,q]);}
-  return [...m.values()].sort((a,b)=>-cmp(key(a),key(b)));
+  // Independent dominance definition, not the production record-high scan.
+  const unique=[...new Map(col.map(e=>[e.join(','),e])).values()];
+  return unique.filter(([k,p,q],i)=>!unique.some(([K,P,Q],j)=>j!==i&&P>=p&&(K>k||K===k&&Q>=q)))
+    .sort((a,b)=>-cmp(key(a),key(b)));
 });}
 const text=cols=>cols.length?norm(cols).map(c=>'['+c.map(e=>'('+e.join(',')+')').join(',')+']').join(''):'∅';
 function atomic(cols,n){
@@ -41,7 +43,20 @@ function atomic(cols,n){
 let state=0x37a114a9;
 function random(n){state^=state<<13;state^=state>>>17;state^=state<<5;return (state>>>0)%n;}
 async function main(){
-  assert.equal(scope.ne.id,'ard2-v01');assert.equal(scope.ne.name,'ARD2');
+  assert.equal(scope.ne.id,'ard2-skyline-v02');assert.equal(scope.ne.name,'ARD2');
+  // Both versions can coexist; legacy names/paths changed, not its rule.
+  const legacyScope=vm.createContext({queueMicrotask});
+  legacyScope.register_notation=n=>{assert(!legacyScope.ne);legacyScope.ne=n;};
+  vm.runInContext(fs.readFileSync(path.join(__dirname,'../notations/ARD2-legacy/ARD2-legacy.ne-rewritten.js'),'utf8'),legacyScope,{timeout:1200});
+  assert.equal(legacyScope.ne.id,'ard2-legacy-v01');
+  assert.equal(legacyScope.ne.name,'ARD2-legacy');
+  assert.equal(vm.runInContext('ne.FS("A2",1)',legacyScope,{timeout:1500}),'[][(1,0,0),(0,0,1)]');
+  assert.equal(vm.runInContext('ne.display.plain("Limit of ARD2-legacy")',legacyScope,{timeout:1500}),'Limit of ARD2-legacy');
+  for(let j=0;j<=5;j++)for(let n=0;n<=3;n++){
+    legacyScope.args={j,n};
+    const old=vm.runInContext('ne.FS("A"+args.j,args.n)',legacyScope,{timeout:1500});
+    assert.equal(await call('ne.display.plain(args)',old),await call('ne.FS("A"+args.j,args.n)',{j,n}));
+  }
   let graphs=0,steps=0,pythonSteps=0,comparisons=0,countCases=0;
   const samples=[];
   for(let n=0;n<9;n++)samples.push(Array.from({length:n},(_,j)=>j?[[j,j-1,j]]:[]));
@@ -59,7 +74,7 @@ async function main(){
     for(let n=1;n<4;n++)assert(outs[n].startsWith(outs[n-1]==='∅'?'':outs[n-1]));
     graphs++;
   }
-  assert.equal(await call('ne.FS("A2",1)'),'[][(1,0,0),(0,0,1)]');
+  assert.equal(await call('ne.FS("A2",1)'),'[][(1,0,0)]');
   const values=await call('ne.debug.counts("A5").map(String)');
   assert.deepEqual(Array.from(values),['1','5','55','969','23751']);countCases++;
   assert(await call('ne.debug.counts("A3").every(x=>typeof x==="bigint")'));
@@ -67,9 +82,9 @@ async function main(){
     await assert.rejects(call('ne.display.plain(args)',raw));
   await assert.rejects(call('ne.debug.counts("A3",{maxWork:1})'),/超限/);
   assert.deepEqual(native(await call('(()=>{try{ne.debug.counts("A3",{maxWork:1});}catch(e){}return [ne.FS("A2",1),ne.compare("A1","A2")];})()')),
-    ['[][(1,0,0),(0,0,1)]',-1]);
+    ['[][(1,0,0)]',-1]);
   if(process.argv[2]){
-    const payload=fs.readFileSync(process.argv[2],'utf8');assert(payload.length<4000000);
+    const payload=fs.readFileSync(process.argv[2]==='--stdin'?0:process.argv[2],'utf8');assert(payload.length<4000000);
     const data=JSON.parse(payload);assert(data.cases.length<=250&&data.comparisons.length<=1000&&data.counts.length<=30);
     for(const item of data.cases)for(let n=0;n<item.outputs.length;n++){
       assert.equal(await call('ne.FS(args.raw,args.n)',{raw:item.raw,n}),item.outputs[n]);pythonSteps++;

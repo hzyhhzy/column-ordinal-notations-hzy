@@ -4,9 +4,15 @@ At 20:00 on September 11, @Phyrion published a [well-ordering proof for the Y-se
 
 Definitions, executable fundamental sequences, and well-ordering proofs for column-diagram ordinal notations. This source snapshot was prepared on **2026-09-17** for [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy). The suffix `hzy` refers to the repository owner's name.
 
-The notation implementations are **RPD, LRD, Ω-LRD3, ARD, IPD, ARD2, SPD, CWY, CWY2 and Ω-CWY**, with the CWY adapter/candidate distinctions below. The Lean proof collection covers **Y, RPD, LRD, Ω-LRD3, ARD, IPD and ARD2**. ARD-legacy is retained as an explicit previous edition; other Ω-LRD variants and historical experimental implementations are excluded.
+The notation implementations are **RPD, LRD, Ω-LRD3, ARD, IPD, ARD2, SPD, CWY, CWY2 and Ω-CWY**, with the CWY adapter/candidate distinctions below. The Lean proof collection covers **Y, RPD, LRD, Ω-LRD3, ARD, IPD and ARD2**. ARD-legacy and ARD2-legacy are retained as explicit previous editions; other Ω-LRD variants and historical experimental implementations are excluded.
 
 **SPD (Slot Profile Diagrams)** adds four-integer relations whose heads and arguments are read recursively from earlier columns; the input contains no separate tree field. It includes bilingual definitions, a paper well-ordering manuscript, Python and NER implementations, and bounded regression tests. **SPD has no Lean proof yet.** Its order-type relationships with ARD, ARD2, wY and the whole IPD system remain unknown; its local-profile constructions are not a proof of those comparisons.
+
+## ARD2 skyline revision (2026-09-17)
+
+Default **ARD2 now uses skyline compression**: retain the greatest `(row, root)` at each parent, remove dominated entries, and replace a whole lower-row package with one predecessor. Both SELF coordinates and the seam-child borrow ceiling remain. The standard order type, indexed fundamental sequences and counts are unchanged. The [exact isomorphism](proofs/paper/ard2-well-ordering.md) is a paper result; the new rule has its own [Lean well-ordering project](lean/ARD2/README.md).
+
+The previous NER, Python, bilingual definitions, paper and Lean sources are preserved as [ARD2-legacy](notations/ARD2-legacy/definition.md). Distinct NER IDs allow simultaneous import; the default is still named **ARD2**, retaining five displays and the existing budgets. `ARD ≤ ARD2(1,3)` transfers through the target isomorphism. No new whole-system wY/CWY2 comparison is asserted.
 
 ## CWY family (2026-09-17)
 
@@ -39,7 +45,7 @@ This too is a **paper comparison, not yet Lean-formalized**. It claims neither a
 
 ## Definitions and expanders
 
-Each definition is available in English and Chinese, as Markdown and PDF: **44 definition artifacts (including the preserved legacy edition and CWY family)** in total. English Markdown is the default; the title of every English definition links to its Chinese counterpart.
+Each definition is available in English and Chinese, as Markdown and PDF: **48 definition artifacts (including the preserved legacy edition and CWY family)** in total. English Markdown is the default; the title of every English definition links to its Chinese counterpart.
 
 | Notation | English definition | Chinese definition | NER expander | Python expander |
 | --- | --- | --- | --- | --- |
@@ -50,6 +56,7 @@ Each definition is available in English and Chinese, as Markdown and PDF: **44 d
 | ARD-legacy | [Markdown](notations/ARD-legacy/definition.md) · [PDF](notations/ARD-legacy/definition.pdf) | [Markdown](notations/ARD-legacy/definition.zh-CN.md) · [PDF](notations/ARD-legacy/definition.zh-CN.pdf) | [JavaScript](notations/ARD-legacy/ARD-arcs.ne-rewritten.js) | [ard.py](notations/ARD-legacy/ard.py) |
 | IPD | [Markdown](notations/IPD/definition.md) · [PDF](notations/IPD/definition.pdf) | [Markdown](notations/IPD/definition.zh-CN.md) · [PDF](notations/IPD/definition.zh-CN.pdf) | [JavaScript](notations/IPD/IPD.ne-rewritten.js) | [ipd.py](notations/IPD/ipd.py) |
 | ARD2 | [Markdown](notations/ARD2/definition.md) · [PDF](notations/ARD2/definition.pdf) | [Markdown](notations/ARD2/definition.zh-CN.md) · [PDF](notations/ARD2/definition.zh-CN.pdf) | [JavaScript](notations/ARD2/ARD2.ne-rewritten.js) | [ard2.py](notations/ARD2/ard2.py) |
+| ARD2-legacy | [Markdown](notations/ARD2-legacy/definition.md) · [PDF](notations/ARD2-legacy/definition.pdf) | [Markdown](notations/ARD2-legacy/definition.zh-CN.md) · [PDF](notations/ARD2-legacy/definition.zh-CN.pdf) | [JavaScript](notations/ARD2-legacy/ARD2-legacy.ne-rewritten.js) | [ard2.py](notations/ARD2-legacy/ard2.py) |
 | SPD | [Markdown](notations/SPD/definition.md) · [PDF](notations/SPD/definition.pdf) | [Markdown](notations/SPD/definition.zh-CN.md) · [PDF](notations/SPD/definition.zh-CN.pdf) | [JavaScript](notations/SPD/SPD.ne-rewritten.js) | [spd.py](notations/SPD/spd.py) |
 | CWY | [Markdown](notations/CWY/definition.md) · [PDF](notations/CWY/definition.pdf) | [Markdown](notations/CWY/definition.zh-CN.md) · [PDF](notations/CWY/definition.zh-CN.pdf) | [wY adapter + CWY view](notations/CWY/wY-CWY.ne-rewritten.js) | [core](notations/CWY/compact_wy.py) · [bound wrapper](notations/CWY/compact_wy_bound.py) |
 | CWY2 | [Markdown](notations/CWY2/definition.md) · [PDF](notations/CWY2/definition.pdf) | [Markdown](notations/CWY2/definition.zh-CN.md) · [PDF](notations/CWY2/definition.zh-CN.pdf) | [JavaScript](notations/CWY2/CWY2.ne-rewritten.js) | No Python; [readable JS core](notations/CWY2/cwy_direct.mjs) |
@@ -67,7 +74,7 @@ SPD provides list and exact count-sequence displays. Its NER input also accepts 
 
 ## Well-ordering proofs and proof status
 
-The original joint paper covers Y, RPD, LRD and Ω-LRD3. The ARD-legacy paper gives the dynamic-row extension; the new ARD paper proves its skyline simplification and direct semantic descent. The IPD paper adds iterated tree profiles, including the direct KP tree-rank construction as Appendix A. The ARD2 paper gives the two-SELF extension and its actual seam transport. These well-ordering papers work in:
+The original joint paper covers Y, RPD, LRD and Ω-LRD3. The ARD-legacy paper gives the dynamic-row extension; the new ARD paper proves its skyline simplification and direct semantic descent. The IPD paper adds iterated tree profiles, including the direct KP tree-rank construction as Appendix A. The ARD2-legacy paper gives the two-SELF extension and actual seam transport; the new ARD2 paper proves its exact skyline isomorphism and direct semantic descent. These well-ordering papers work in:
 
 $$
 KP_\omega+\text{there exists an uncountable ordinal}.
@@ -82,14 +89,15 @@ Here KP includes full set induction. The paper does not add a power-set axiom, f
 - **ARD2(1,3)≥ARD comparison:** [English Markdown](proofs/paper/ard-le-ard2-13.md) · [English PDF](proofs/paper/ard-le-ard2-13.pdf) · [Chinese Markdown](proofs/paper/ard-le-ard2-13.zh-CN.md) · [Chinese PDF](proofs/paper/ard-le-ard2-13.zh-CN.pdf).
 - **IPD paper:** [English Markdown](proofs/paper/ipd-well-ordering.md) · [English PDF](proofs/paper/ipd-well-ordering.pdf) · [Chinese Markdown](proofs/paper/ipd-well-ordering.zh-CN.md) · [Chinese PDF](proofs/paper/ipd-well-ordering.zh-CN.pdf).
 - **ARD2 paper:** [English Markdown](proofs/paper/ard2-well-ordering.md) · [English PDF](proofs/paper/ard2-well-ordering.pdf) · [Chinese Markdown](proofs/paper/ard2-well-ordering.zh-CN.md) · [Chinese PDF](proofs/paper/ard2-well-ordering.zh-CN.pdf).
+- **ARD2-legacy paper:** [English Markdown](proofs/paper/ard2-legacy-well-ordering.md) · [English PDF](proofs/paper/ard2-legacy-well-ordering.pdf) · [Chinese Markdown](proofs/paper/ard2-legacy-well-ordering.zh-CN.md) · [Chinese PDF](proofs/paper/ard2-legacy-well-ordering.zh-CN.pdf).
 - **SPD paper manuscript (not Lean-formalized):** [English Markdown](proofs/paper/spd-well-ordering.md) · [English PDF](proofs/paper/spd-well-ordering.pdf) · [Chinese Markdown](proofs/paper/spd-well-ordering.zh-CN.md) · [Chinese PDF](proofs/paper/spd-well-ordering.zh-CN.pdf).
 - **CWY2/wY equivalence (paper):** [English Markdown](proofs/paper/cwy2-equivalence.md) · [English PDF](proofs/paper/cwy2-equivalence.pdf) · [Chinese Markdown](proofs/paper/cwy2-equivalence.zh-CN.md) · [Chinese PDF](proofs/paper/cwy2-equivalence.zh-CN.pdf). CWY representation/bound arguments are in its definition; Ω-CWY has no global well-ordering proof.
 - **IPD correspondence audit:** [English](proofs/paper/ipd-fidelity.md) · [Chinese](proofs/paper/ipd-fidelity.zh-CN.md).
 - **Lean:** [Build instructions and theorem index](lean/README.md) · [Chinese instructions](lean/README.zh-CN.md).
 - **Independent Lean projects:** [Y](lean/Y/README.md) · [RPD](lean/RPD/README.md) · [LRD](lean/LRD/README.md) · [Ω-LRD3](lean/Omega-LRD3/README.md) · [ARD](lean/ARD/README.md) · [IPD](lean/IPD/README.md) · [ARD2](lean/ARD2/README.md).
-- **Optional aggregate entry:** [ARDRevisionFinalAudit.lean](lean/src/ARDRevisionFinalAudit.lean).
+- **Optional aggregate entry:** [ARD2RevisionFinalAudit.lean](lean/src/ARD2RevisionFinalAudit.lean).
 
-Each notation has independent build configuration, outputs and verification receipts, depending on its declared sources and the [shared foundation](lean/shared/README.md); new ARD explicitly reuses the preserved ARD-legacy semantic backend, and only Y additionally needs BMS. Adding a notation does not modify existing projects or force their proofs to rebuild.
+Each notation has independent build configuration, outputs and verification receipts, depending on its declared sources and the [shared foundation](lean/shared/README.md); new ARD and ARD2 explicitly reuse their respective preserved legacy semantic backends, and only Y additionally needs BMS. Adding a notation does not modify existing projects or force their proofs to rebuild.
 
 Here “each notation” refers to the seven systems listed in the Lean index. SPD is an implementation-and-paper addition only: there is no `lean/SPD` project, verification receipt, or extension of the seven-system aggregate theorem. Its manuscript develops the finite-demand/new-parent route in the same weak set theory; it distinguishes well-founded expansion on legal raw diagrams from well-ordering of the designated standard column order.
 
@@ -121,6 +129,7 @@ python -B tests/ard_ard2_comparison.py
 python -B tests/ard_ard2_forest.py
 python tests/test_ipd.py
 python tests/test_ard2.py
+python -B tests/test_ard2_legacy.py
 python -B tests/test_spd.py
 python -B tests/test_lean_verifier.py
 node --max-old-space-size=256 tests/ard2_ner.cjs
@@ -135,7 +144,7 @@ Follow [the Lean instructions](lean/README.md) for pinned dependencies and the s
 
 If a restricted host disallows Node spawning Python, run the same cross-language CWY test as two bounded processes: `python -B tests/test_cwy.py --fixtures | node --max-old-space-size=256 tests/cwy_family.mjs --fixtures-stdin`. This does not skip the Python oracle.
 
-To regenerate all 40 publication PDFs, install Pandoc, Node.js, the document-tool dependencies, and suitable local fonts:
+To regenerate all 44 publication PDFs, install Pandoc, Node.js, the document-tool dependencies, and suitable local fonts:
 
 ```sh
 python -m pip install -r tools/requirements.txt
@@ -162,6 +171,7 @@ notations/
   ARD-legacy/                    Preserved previous edition
   IPD/                           Bilingual definitions, PDFs, tree-view JS, Python
   ARD2/                          Bilingual definitions, PDFs, five-view JS, Python
+  ARD2-legacy/                   preserved old definition, programs and papers
   SPD/                           Bilingual definitions, PDFs, list/count JS, Python, count decoder
   CWY/                           Bilingual rules/proof, PDFs, wY-view JS, Python core/bound
   CWY2/                          Bilingual rules, PDFs, standalone JS and direct core

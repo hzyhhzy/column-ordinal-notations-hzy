@@ -118,6 +118,15 @@
       "inherited": false,
       "configFile": "lakefile.lean",
       "manifestFile": "lake-manifest.json"
+    },
+    {
+      "type": "path",
+      "dir": "../ARD2-legacy",
+      "name": "ordinalnotations_ard2_legacy",
+      "scope": "",
+      "inherited": false,
+      "configFile": "lakefile.lean",
+      "manifestFile": "lake-manifest.json"
     }
   ],
   "name": "ordinalnotations_ard2",

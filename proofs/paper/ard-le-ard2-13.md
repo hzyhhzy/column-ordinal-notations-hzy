@@ -19,7 +19,7 @@ Thus the entire **ARD order type is strictly smaller than ARD2**. A reverse embe
 
 We first work with [ARD-legacy](../../notations/ARD-legacy/definition.md), whose complete-root relation permits inclusion arguments. The [skyline equivalence theorem](ard-well-ordering.md) transfers the result to current ARD; their standard order types agree.
 
-The target uses the [current ARD2 rule](../../notations/ARD2/definition.md). In particular, a new lower-row package has maximum root equal to the **new seam itself**, not the parent-bound package of legacy ARD.
+The complete-relation inclusion argument below uses the preserved [ARD2-legacy rule](../../notations/ARD2-legacy/definition.md). In particular, a new lower-row package has maximum root equal to the **new seam itself**, not the parent-bound package of legacy ARD. After the 2026-09-17 skyline revision, compose this embedding with the [target skyline isomorphism](ard2-well-ordering.md). The fixed bound $B$ is already a skyline with $Q(B)=B$, so the stated conclusion transfers unchanged to current ARD2. Do not substitute a pruned-relation inclusion test for the complete-package calculations below.
 
 We use the previously proved standard well-orders and the characterization: one standard term is strictly smaller than another exactly when it is a nonempty finite expansion descendant. Finite tests are not substitutes for these facts. No weak object theory has been encoded in Lean for this comparison.
 

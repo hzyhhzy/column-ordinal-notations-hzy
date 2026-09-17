@@ -19,7 +19,7 @@ $$\boxed{\Phi:U_A\hookrightarrow (U_2)_{<B},\qquad
 
 为使用完整根包含，先对仓库的 [ARD-legacy](../../notations/ARD-legacy/definition.zh-CN.md) 证明。仓库的[轮廓等价定理](ard-well-ordering.zh-CN.md) 将结论转移到当前新版 ARD。两者的标准序型相同。
 
-目标是[现行 ARD2 规则](../../notations/ARD2/definition.zh-CN.md)，特别是低行新包的最大根为**新接缝列自身**。不能替换成 ARD-legacy 的父列根包。
+下文的完整关系包含论证使用保留的 [ARD2-legacy 规则](../../notations/ARD2-legacy/definition.zh-CN.md)，特别是低行新包的最大根为**新接缝列自身**。不能替换成 ARD-legacy 的父列根包。2026-09-17 默认 ARD2 换成轮廓版后，再将本文嵌入与[目标轮廓同构](ard2-well-ordering.zh-CN.md)复合；固定界 $B$ 已经是轮廓且 $Q(B)=B$，因此本节结论对当前 ARD2 原样成立。下文的完整包计算不应直接替换为删除冗余关系后的包含测试。
 
 下文使用两者已经证明的标准域良序，以及“两个标准式严格较小，当且仅当它是另一个的非空有限展开后代”。不以有限测试代替这些事实；也不声称已经在 Lean 中编码所需弱对象理论。
 

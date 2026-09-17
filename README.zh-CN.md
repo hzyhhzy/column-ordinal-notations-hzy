@@ -4,9 +4,15 @@
 
 本仓库收录列图序数记号的定义、可执行基本列展开器和良序证明。源码快照整理于 **2026-09-17**，仓库地址为 [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy)。名称中的 `hzy` 来自仓库所有者的名字。
 
-记号实现收录 **RPD、LRD、Ω-LRD3、ARD、IPD、ARD2、SPD、CWY、CWY2、Ω-CWY**，CWY 的适配器／候选状态见下文；Lean 证明覆盖 **Y、RPD、LRD、Ω-LRD3、ARD、IPD、ARD2**。另保留明确标记的旧版 ARD-legacy；其他 Ω-LRD 版本及历史实验实现不收录。
+记号实现收录 **RPD、LRD、Ω-LRD3、ARD、IPD、ARD2、SPD、CWY、CWY2、Ω-CWY**，CWY 的适配器／候选状态见下文；Lean 证明覆盖 **Y、RPD、LRD、Ω-LRD3、ARD、IPD、ARD2**。另保留明确标记的旧版 ARD-legacy、ARD2-legacy；其他 Ω-LRD 版本及历史实验实现不收录。
 
 新增 **SPD（Slot Profile Diagrams，潜边轮廓图）**：每条关系只有四个整数，头与参数从此前列递归读出，输入中没有独立树字段。随附双语定义、纸面良序论证稿、Python／NER 实现及有界回归测试。**SPD 尚无 Lean 证明。** 它与 ARD、ARD2、wY、整个 IPD 的序型大小关系仍未知；局部轮廓的构造能力不等于这些跨记号比较已经成立。
+
+## ARD2 新版（2026-09-17）
+
+默认 **ARD2 已换成简化轮廓版**：每个父列只留最大 `(行锚, 根)`，再删除被支配项；整包低行生成由单个前驱替代。两种 SELF 仍保留，根借位上界仍为接缝自身。标准序型、逐指标基本列和计数均与旧版相同；[完整等价证明](proofs/paper/ard2-well-ordering.zh-CN.md)为纸面结果，新规则自身良序有[独立 Lean 项目](lean/ARD2/README.zh-CN.md)。
+
+原版 NER、Python、双语定义、证明及 Lean 均保存为 [ARD2-legacy](notations/ARD2-legacy/definition.zh-CN.md)。NER 两版 ID 不同，可同时导入，默认版仍名 **ARD2**，保留五种显示和原预算。`ARD ≤ ARD2(1,3)` 通过目标同构保持；与 wY/CWY2 的整体比较没有新结论。
 
 ## CWY 系列（2026-09-17）
 
@@ -39,7 +45,7 @@ $$\alpha_{1Y}\le\alpha_{\mathrm{RPD}}<\alpha_{\mathrm{ARD}}
 
 ## 定义与展开器
 
-每套定义都有中英文 Markdown 和 PDF，共 **44 份定义文件（含保留的旧版及 CWY 系列）**。Markdown 默认英文；每份英文定义的标题均链接到中文版。
+每套定义都有中英文 Markdown 和 PDF，共 **48 份定义文件（含保留的旧版及 CWY 系列）**。Markdown 默认英文；每份英文定义的标题均链接到中文版。
 
 | 记号 | 英文定义 | 中文定义 | NER 展开器 | Python 展开器 |
 | --- | --- | --- | --- | --- |
@@ -50,6 +56,7 @@ $$\alpha_{1Y}\le\alpha_{\mathrm{RPD}}<\alpha_{\mathrm{ARD}}
 | ARD-legacy | [Markdown](notations/ARD-legacy/definition.md) · [PDF](notations/ARD-legacy/definition.pdf) | [Markdown](notations/ARD-legacy/definition.zh-CN.md) · [PDF](notations/ARD-legacy/definition.zh-CN.pdf) | [JavaScript](notations/ARD-legacy/ARD-arcs.ne-rewritten.js) | [ard.py](notations/ARD-legacy/ard.py) |
 | IPD | [Markdown](notations/IPD/definition.md) · [PDF](notations/IPD/definition.pdf) | [Markdown](notations/IPD/definition.zh-CN.md) · [PDF](notations/IPD/definition.zh-CN.pdf) | [JavaScript](notations/IPD/IPD.ne-rewritten.js) | [ipd.py](notations/IPD/ipd.py) |
 | ARD2 | [Markdown](notations/ARD2/definition.md) · [PDF](notations/ARD2/definition.pdf) | [Markdown](notations/ARD2/definition.zh-CN.md) · [PDF](notations/ARD2/definition.zh-CN.pdf) | [JavaScript](notations/ARD2/ARD2.ne-rewritten.js) | [ard2.py](notations/ARD2/ard2.py) |
+| ARD2-legacy | [Markdown](notations/ARD2-legacy/definition.md) · [PDF](notations/ARD2-legacy/definition.pdf) | [Markdown](notations/ARD2-legacy/definition.zh-CN.md) · [PDF](notations/ARD2-legacy/definition.zh-CN.pdf) | [JavaScript](notations/ARD2-legacy/ARD2-legacy.ne-rewritten.js) | [ard2.py](notations/ARD2-legacy/ard2.py) |
 | SPD | [Markdown](notations/SPD/definition.md) · [PDF](notations/SPD/definition.pdf) | [Markdown](notations/SPD/definition.zh-CN.md) · [PDF](notations/SPD/definition.zh-CN.pdf) | [JavaScript](notations/SPD/SPD.ne-rewritten.js) | [spd.py](notations/SPD/spd.py) |
 | CWY | [Markdown](notations/CWY/definition.md) · [PDF](notations/CWY/definition.pdf) | [Markdown](notations/CWY/definition.zh-CN.md) · [PDF](notations/CWY/definition.zh-CN.pdf) | [wY 适配器及 CWY 视图](notations/CWY/wY-CWY.ne-rewritten.js) | [核心](notations/CWY/compact_wy.py) · [带界版](notations/CWY/compact_wy_bound.py) |
 | CWY2 | [Markdown](notations/CWY2/definition.md) · [PDF](notations/CWY2/definition.pdf) | [Markdown](notations/CWY2/definition.zh-CN.md) · [PDF](notations/CWY2/definition.zh-CN.pdf) | [JavaScript](notations/CWY2/CWY2.ne-rewritten.js) | 无 Python；[可读 JS 核心](notations/CWY2/cwy_direct.mjs) |
@@ -67,7 +74,7 @@ SPD 提供列表与精确计数序列两种显示。NER 支持输入 `S2`、`Top
 
 ## 良序证明与证明状态
 
-原合写论文覆盖 Y、RPD、LRD、Ω-LRD3，旧版 ARD-legacy 全文证明给出动态行引用的延拓，新版 ARD 论文证明轮廓简化及直接语义下降。IPD 独立论文给出迭代树轮廓的证明，并把直接 KP 树秩引理收入附录 A。ARD2 论文给出双 SELF 延拓及其实际接缝搬运。这些良序证明均在以下弱集合论内论证：
+原合写论文覆盖 Y、RPD、LRD、Ω-LRD3，旧版 ARD-legacy 全文证明给出动态行引用的延拓，新版 ARD 论文证明轮廓简化及直接语义下降。IPD 独立论文给出迭代树轮廓的证明，并把直接 KP 树秩引理收入附录 A。ARD2-legacy 论文给出双 SELF 延拓及其实际接缝搬运；新版 ARD2 论文证明精确轮廓同构和直接语义下降。这些良序证明均在以下弱集合论内论证：
 
 $$
 KP_\omega+\text{存在不可数序数}.
@@ -82,14 +89,15 @@ $$
 - **ARD2(1,3)≥ARD 比较：**[中文 Markdown](proofs/paper/ard-le-ard2-13.zh-CN.md) · [中文 PDF](proofs/paper/ard-le-ard2-13.zh-CN.pdf) · [英文 Markdown](proofs/paper/ard-le-ard2-13.md) · [英文 PDF](proofs/paper/ard-le-ard2-13.pdf)。
 - **IPD 纸面证明：**[英文 Markdown](proofs/paper/ipd-well-ordering.md) · [英文 PDF](proofs/paper/ipd-well-ordering.pdf) · [中文 Markdown](proofs/paper/ipd-well-ordering.zh-CN.md) · [中文 PDF](proofs/paper/ipd-well-ordering.zh-CN.pdf)。
 - **ARD2 纸面证明：**[英文 Markdown](proofs/paper/ard2-well-ordering.md) · [英文 PDF](proofs/paper/ard2-well-ordering.pdf) · [中文 Markdown](proofs/paper/ard2-well-ordering.zh-CN.md) · [中文 PDF](proofs/paper/ard2-well-ordering.zh-CN.pdf)。
+- **ARD2-legacy 纸面证明：**[英文 Markdown](proofs/paper/ard2-legacy-well-ordering.md) · [英文 PDF](proofs/paper/ard2-legacy-well-ordering.pdf) · [中文 Markdown](proofs/paper/ard2-legacy-well-ordering.zh-CN.md) · [中文 PDF](proofs/paper/ard2-legacy-well-ordering.zh-CN.pdf)。
 - **SPD 纸面论证稿（尚未 Lean 形式化）：**[英文 Markdown](proofs/paper/spd-well-ordering.md) · [英文 PDF](proofs/paper/spd-well-ordering.pdf) · [中文 Markdown](proofs/paper/spd-well-ordering.zh-CN.md) · [中文 PDF](proofs/paper/spd-well-ordering.zh-CN.pdf)。
 - **CWY2／wY 等价（纸面）：**[英文 Markdown](proofs/paper/cwy2-equivalence.md) · [英文 PDF](proofs/paper/cwy2-equivalence.pdf) · [中文 Markdown](proofs/paper/cwy2-equivalence.zh-CN.md) · [中文 PDF](proofs/paper/cwy2-equivalence.zh-CN.pdf)。CWY 的表示及带界良序论证收入其定义；Ω-CWY 暂无整体良序证明。
 - **IPD 定义对应审计：**[英文](proofs/paper/ipd-fidelity.md) · [中文](proofs/paper/ipd-fidelity.zh-CN.md)。
 - **Lean：**[英文构建说明与定理索引](lean/README.md) · [中文说明](lean/README.zh-CN.md)。
 - **独立 Lean 项目：**[Y](lean/Y/README.zh-CN.md) · [RPD](lean/RPD/README.zh-CN.md) · [LRD](lean/LRD/README.zh-CN.md) · [Ω-LRD3](lean/Omega-LRD3/README.zh-CN.md) · [ARD](lean/ARD/README.zh-CN.md) · [IPD](lean/IPD/README.zh-CN.md) · [ARD2](lean/ARD2/README.zh-CN.md)。
-- **可选联合入口：**[ARDRevisionFinalAudit.lean](lean/src/ARDRevisionFinalAudit.lean)。
+- **可选联合入口：**[ARD2RevisionFinalAudit.lean](lean/src/ARD2RevisionFinalAudit.lean)。
 
-每个记号各有独立构建配置、输出和验证收据，只编译声明的依赖与[共享基础](lean/shared/README.zh-CN.md)；新版 ARD 明确复用 ARD-legacy 语义后端，只有 Y 另需 BMS。新增记号不修改旧项目，也不强制重建旧证明。
+每个记号各有独立构建配置、输出和验证收据，只编译声明的依赖与[共享基础](lean/shared/README.zh-CN.md)；新版 ARD 和 ARD2 分别显式复用各自 legacy 语义后端，只有 Y 另需 BMS。新增记号不修改旧项目，也不强制重建旧证明。
 
 这里“每个记号”指 Lean 索引中的原七个系统。SPD 此次只增加实现和纸面文稿，没有 `lean/SPD` 项目、验证收据，也没有扩充七系统联合定理。其文稿在同一弱集合论内展开有限需求／新父子句路线，并区分合法 raw 图的展开关系良基与指定标准域的列序良序。
 
@@ -121,6 +129,7 @@ python -B tests/ard_ard2_comparison.py
 python -B tests/ard_ard2_forest.py
 python tests/test_ipd.py
 python tests/test_ard2.py
+python -B tests/test_ard2_legacy.py
 python -B tests/test_spd.py
 python -B tests/test_lean_verifier.py
 node --max-old-space-size=256 tests/ard2_ner.cjs
@@ -135,7 +144,7 @@ node --max-old-space-size=256 tests/cwy_family.mjs
 
 如果受限宿主不允许 Node 启动 Python，可用两个受限进程执行同一交叉测试：`python -B tests/test_cwy.py --fixtures | node --max-old-space-size=256 tests/cwy_family.mjs --fixtures-stdin`。这不会跳过 Python 对照。
 
-如需重建全部 40 份发布用 PDF，安装 Pandoc、Node.js、文档工具依赖及适当的本机字体：
+如需重建全部 44 份发布用 PDF，安装 Pandoc、Node.js、文档工具依赖及适当的本机字体：
 
 ```sh
 python -m pip install -r tools/requirements.txt
@@ -161,6 +170,7 @@ notations/
   ARD/                           双语定义、PDF、弧线图 JS、Python
   IPD/                           双语定义、PDF、树形图 JS、Python
   ARD2/                          双语定义、PDF、五视图 JS、Python
+  ARD2-legacy/                   完整保留的旧版定义、程序和文稿
   SPD/                           双语定义、PDF、列表／计数 JS、Python、计数解码器
   CWY/                           双语规则及已有论证、PDF、wY 视图 JS、Python 核心和带界版
   CWY2/                          双语规则、PDF、独立 JS 和可读直接核心

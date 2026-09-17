@@ -92,7 +92,7 @@ function table(d,cols){
   counters.tableEntries+=entries.length;
 }
 async function main(){
-  assert.equal(scope.ne.id,'ard2-v01');assert.equal(scope.ne.name,'ARD2');
+  assert.equal(scope.ne.id,'ard2-skyline-v02');assert.equal(scope.ne.name,'ARD2');
   assert.deepEqual(native(await call('Object.keys(ne.display_equiv)')),
     ['计数序列','弧线图','邻接表（文字）','邻接表（图）']);
   assert.equal(scope.ne.display.name,'列表');assert(!scope.ne.display_equiv['列表']);
@@ -143,17 +143,19 @@ async function main(){
     Array.from({length:j*(j+1)},(_,i)=>[Math.floor(i/j),i%j,j]));
   const crossing=denseColumns.map(col=>'['+col.map(e=>'('+e.join(',')+')').join(',')+']').join('');
   const crossingDiagram=native(await call('ne.debug.diagram(args,{count_max_work:1})',crossing));
-  arc(crossingDiagram,denseColumns);counters.samples++;
+  arc(crossingDiagram,parse(await call('ne.display.plain(args)',crossing)));counters.samples++;
   // Exercise a real budget refusal, not only the injected maxWork=1 branch.
   const costly=native(await call('ne.debug.diagram("A8")'));
   assert(costly._anchored.complete&&!costly._anchored.countComplete);
   arc(costly,Array.from({length:8},(_,j)=>j?[[j,j-1,j]]:[]));counters.guards++;
-  const dense='[]'.repeat(46)+'['+Array.from({length:47*46},(_,i)=>
-    '('+Math.floor(i/46)+','+(i%46)+',0)').join(',')+']';
+  // 130 distinct retained row anchors, not redundant raw records: skyline
+  // compression intentionally makes the old dense same-parent fixture tiny.
+  const dense='[]'+Array.from({length:130},(_,i)=>'[('+(i+1)+','+i+','+(i+1)+')]')
+    .join('');
   const large=native(await call('ne.draw_diagram.draw_diagram(args,{})',dense));
   assert.equal(large._anchored.complete,false);assert.equal(large.elements.length,0);
   assert(large.extra_text.some(t=>/未绘制局部图/.test(t.text)));counters.guards++;
-  assert.equal(await call('ne.FS("A2",1)'),'[][(1,0,0),(0,0,1)]');
+  assert.equal(await call('ne.FS("A2",1)'),'[][(1,0,0)]');
   await assert.rejects(call('ne.FS("A2",10n**80n)'),/超限/);counters.guards++;
   console.log(JSON.stringify({ok:true,...counters,milliseconds:Date.now()-started,
     rssMiB:Math.ceil(process.memoryUsage().rss/1048576),processes:1,

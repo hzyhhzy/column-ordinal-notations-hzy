@@ -1,5 +1,28 @@
 # Snapshot validation · [中文版](VALIDATION.zh-CN.md)
 
+## 2026-09-17: ARD2 skyline migration
+
+Default ARD2 now computes with a skyline and one moved-controller predecessor. The original full-package NER/Python rules, bilingual definitions and paper, and independent Lean project are preserved as **ARD2-legacy**. The 21 legacy mathematical source files have the same Git blob hashes as the preceding ARD2 sources. NER registration IDs are distinct, so the two editions can be imported together. Other notations' implementations and private Lean projects were not modified.
+
+The [new paper](proofs/paper/ard2-well-ordering.md) proves exact commutation with column compression for all structurally legal legacy inputs, then standard-domain order isomorphism, preservation of the same fundamental-sequence index, and equality of local counts. The predecessor borrows against the new child position, not the parent; both source SELF coordinates move to the next block. The existing [ARD bound](proofs/paper/ard-le-ard2-13.md) transfers through this isomorphism. These exact-equivalence and comparison results are **paper proofs, not Lean-certified comparisons**.
+
+- [New Python regression](tests/test_ard2.py): 809 raw and 1,200 standard graphs, 7,916 commuting expansion steps, 276 independent atomic checks, 2,009 local-step checks, 5,907 prefixes and 1,199 standard-order pairs. Literal local counting agrees on seed counts `1,5,55,969,23751`. Runtime 5.359 seconds, reported peak RSS 70.67 MiB; 2,002 queued states remain unexplored. Limits: 35 seconds, width 48, 3,500 stored states and 512 MiB RSS.
+- [NER regression](tests/ard2_ner.cjs): 249 graphs / 996 independent atomic steps, 720 Python-vector expansions, 150 comparisons and two count checks; also distinct old/new registrations and 24 legacy-seed projection checks. Runtime 5.599 seconds including waiting for Python vectors, final RSS 82 MiB with a 256 MiB Node heap. Python was piped to Node; no persistent process was started.
+- [Display audit](tests/ard2_display.cjs): eight samples, 39 arc groups, 26 table entries, seven round trips and five guard checks, in 1.137 seconds / 49 MiB RSS. This is an audit of native NER primitives and SVG structure, not a new live-browser screenshot test.
+- The preserved [legacy Python suite](tests/test_ard2_legacy.py) passed 37,044 graphs / 111,301 full-root atomic expansions. The ARD comparison and threshold-forest suites passed with their explicit bounds and unknown exclusions retained; their complete-package oracle now explicitly imports ARD2-legacy. All nine independent-Lean-verifier regressions passed.
+
+Current Lean 4.33.1 receipts:
+
+| Project | Exact closure | Axiom reports | Freshly compiled | Explicitly reused |
+| --- | --- | --- | --- | --- |
+| [ARD2-legacy](lean/ARD2-legacy/VERIFICATION.json) | 51 | 160 | 21 | 30 |
+| [ARD2](lean/ARD2/VERIFICATION.json) | 57 | 182 | 7 | 50 |
+| [Optional aggregate](lean/VERIFICATION.json) | 338 | 928 | 6 | 332 |
+
+The seven new modules define the actual skyline rule and construct a subdiagram bridge to the preserved semantic backend. They prove nonzero expansion well-founded and the reachable column order well-ordered, including the adjoined top, without unproved accessibility or reflection premises. Reported axioms are subsets of `propext`, `Classical.choice`, `Quot.sound`; no `sorryAx` or new axiom is accepted. Compilation uses one process/thread at a time, 2,048 MiB per compiler and a 120-second per-module deadline. This is ordinary Lean certification, not an internal KP derivation, a rebuild of Mathlib, or a fresh network bootstrap. Overlapping dependency closures must not be added as distinct modules.
+
+The publication inventory is **101 Markdown files (80 bilingual, 21 historical monolingual archives), 44 PDFs, 12 pinned NER scripts, and 11 Lean scopes / 338 distinct proof modules**. Ten affected PDFs were regenerated: new definitions 3+3 pages, legacy definitions 5+4, new proof 3+3, legacy proof 7+6, and the comparison 6+5 (English+Chinese), **45 pages total**. All were rendered with Poppler; bounds checks and page-by-page visual inspection passed, with key formulas also inspected at full-page size. The other PDFs are unchanged. These checks preceded publication; Git records the commit and remote state. Dated records below describe preceding snapshots.
+
 ## 2026-09-17: publication of the existing ARD/ARD2 comparison
 
 This follow-up includes the 13 ARD comparison files/updates that were deliberately excluded from the preceding CWY-only commit: the bilingual paper and PDFs, two bounded tests, and their README, validation and publication-tool entries. The older local-only status below is historical. The combined release inventory is **95 Markdown files (74 bilingual, 21 historical monolingual archives), 40 PDFs and 11 pinned NER scripts**.

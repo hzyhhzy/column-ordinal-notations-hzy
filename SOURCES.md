@@ -1,5 +1,7 @@
 # Sources, versions and licenses · [中文版](SOURCES.zh-CN.md)
 
+2026-09-17: default ARD2 is now the skyline edition. The 21 original mathematical modules moved to `lean/ARD2-legacy/src/` without source-hash changes; seven new modules explicitly reuse that semantic backend. Legacy/new exact closures are 51/57; the aggregate contains 338 modules. Old manuscripts, programs and five displays are retained, with unchanged provenance boundaries. See the [new project](lean/ARD2/README.md); exact isomorphism remains a paper result.
+
 ## CWY-family addition (2026-09-17)
 
 The three NER files are byte-identical copies of the selected local releases:

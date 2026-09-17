@@ -1,16 +1,18 @@
-"""ARD2: full-context anchored row diagrams; Python 3.10+, standard library only.
+"""ARD2: skyline full-context anchored row diagrams; Python 3.10+, stdlib.
 
 A column consists of (row, parent, maximum_root) triples. At child j,
 0 <= row, maximum_root <= j and 0 <= parent < j. Maximum root q denotes
 all roots 0,...,q. Row and root SELF references move with their child.
+Parents decrease and (row, root) pairs strictly increase within each skyline.
 
 ARD2() is zero; TOP is the external limit; a[n] means a.fs(n).
 The standard domain consists of finite descendants of the seeds, plus TOP.
 The constructor checks structural legality, not membership in that domain.
 Ordinary Lean proves well-founded expansion on all legal graphs and a well-order
-on the standard domain: ../../lean/ARD2/src/ARD2Final.lean. The weak-theory paper is
+on the standard domain: ../../lean/ARD2/src/ARD2SkylineFinal.lean. The weak-theory paper is
 ../../proofs/paper/ard2-well-ordering.md; its KP derivation is not encoded inside
-Lean. No order-type comparison or optimal axiom bound is established.
+Lean. The paper proves exact skyline equivalence with ARD2-legacy; this
+equivalence is not yet formalized in Lean. No optimal axiom bound is claimed.
 
 No parser, graphics, caching or resource guards are part of this definition.
 Python integers are exact. Large expansion indices can allocate huge graphs;
@@ -35,6 +37,30 @@ def _edge_key(edge: Edge) -> tuple[int, int, int]:
     return parent, row, root
 
 
+def skyline(column) -> Column:
+    """One maximum pair per parent, followed by the strict record highs."""
+    by_parent = {}
+    for row, parent, root in column:
+        by_parent[parent] = max((row, root), by_parent.get(parent, (-1, -1)))
+    result, highest = [], (-1, -1)
+    for parent in sorted(by_parent, reverse=True):
+        pair = by_parent[parent]
+        if pair > highest:
+            result.append((pair[0], parent, pair[1]))
+            highest = pair
+    return tuple(result)
+
+
+def predecessor(edge: Edge, child: int) -> Column:
+    """Lower a MOVED controller; borrow the seam child, never its parent."""
+    row, parent, root = edge
+    if root:
+        return ((row, parent, root - 1),)
+    if row:
+        return ((row - 1, parent, child),)
+    return ()
+
+
 @total_ordering
 @dataclass(frozen=True)
 class ARD2:
@@ -45,15 +71,14 @@ class ARD2:
             return
         columns = []
         for child, column in enumerate(self.columns):
-            groups = {}
+            edges = []
             for row, parent, root in column:
                 for value in (row, parent, root):
                     _natural(value)
                 if not (row <= child and root <= child and parent < child):
                     raise ValueError("Require row, root <= child and parent < child")
-                groups[row, parent] = max(root, groups.get((row, parent), -1))
-            edges = ((k, p, q) for (k, p), q in groups.items())
-            columns.append(tuple(sorted(edges, key=_edge_key, reverse=True)))
+                edges.append((row, parent, root))
+            columns.append(skyline(edges))
         object.__setattr__(self, "columns", tuple(columns))
 
     @classmethod
@@ -97,32 +122,26 @@ class ARD2:
             return ARD2(self.columns[:-1])
 
         last = len(self.columns) - 1
-        # Control order differs from column order: row, root, then parent.
-        row, cut, root = max(self.columns[-1], key=lambda e: (e[0], e[2], e[1]))
+        column = self.columns[-1]
+        control = column[-1]
+        cut = control[1]
         width = last - cut
-        result = [[] for _ in range(last + n * width)]
-        for j in range(cut):
-            result[j].extend(self.columns[j])
+        result = list(self.columns[:-1])
 
-        for block in range(n + 1):
-            def move(i: int) -> int:
-                return i if i < cut else i + block * width
+        def move(edge: Edge, block: int) -> Edge:
+            return tuple(i if i < cut else i + block * width for i in edge)
 
-            # Move every coordinate, including row SELF and root SELF.
-            for j in range(cut, last):
-                result[move(j)].extend((move(k), move(p), move(q))
-                                       for k, p, q in self.columns[j])
-            if block == n:
-                break
+        for block in range(n):
             child = last + block * width
-            seam = result[child]
-            for k, p, q in self.columns[-1]:
-                lowered = move(q) if k < row else min(move(q), move(root) - 1)
-                if k <= row and lowered >= 0:
-                    seam.append((move(k), move(p), lowered))
-            # The whole root context includes the new seam, not just its parent.
-            seam.extend((k, move(cut), child) for k in range(move(row)))
-        return ARD2(tuple(tuple(c) for c in result))
+            seam = tuple(move(e, block) for e in column[:-1])
+            seam += predecessor(move(control, block), child)
+            # The next block's first column shares this seam. Moving by block+1
+            # rebinds BOTH SELF coordinates in C_cut to the new child.
+            seam += tuple(move(e, block + 1) for e in self.columns[cut])
+            result.append(skyline(seam))
+            result.extend(tuple(move(e, block + 1) for e in source)
+                          for source in self.columns[cut + 1:last])
+        return ARD2(tuple(result))
 
     __getitem__ = fs
 
@@ -138,15 +157,13 @@ class ARD2:
         if not self.columns or not self.columns[-1]:
             return ARD2(self.columns[:-1])
         last = len(self.columns) - 1
-        row, cut, root = max(self.columns[-1], key=lambda e: (e[0], e[2], e[1]))
+        control = self.columns[-1][-1]
+        cut = control[1]
         # Source C_cut shares the seam: both kinds of SELF must be rebound.
         column = [(last if k == cut else k, p, last if q == cut else q)
                   for k, p, q in self.columns[cut]]
-        for k, p, q in self.columns[-1]:
-            lowered = q if k < row else min(q, root - 1)
-            if k <= row and lowered >= 0:
-                column.append((k, p, lowered))
-        column.extend((k, cut, last) for k in range(row))
+        column.extend(self.columns[-1][:-1])
+        column.extend(predecessor(control, last))
         return ARD2((*self.columns[:-1], tuple(column)))
 
     def __str__(self) -> str:

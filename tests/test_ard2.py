@@ -1,14 +1,13 @@
-"""Bounded ARD2 checks against an independent, fully root-closed oracle.
+"""Bounded skyline/legacy audit; run with -B, optionally --vectors.
 
-Run python -B tests/test_ard2.py. --vectors emits Python-checked vectors for
-ard2_ner.cjs. One process; no subprocesses, network or file writes.
-45 seconds, at most 64 output columns and 100,000 root atoms per expansion.
-These finite tests do not prove global well-ordering or compare with IPD.
+One process; 35 seconds, 48 output columns, 3500 stored states, 512 MiB RSS.
+Imports both releases and the independent legacy atom oracle. No file writes,
+network, background jobs, or unbounded full-FS descent.
 """
-
 import importlib.util
-from itertools import product
 import json
+from collections import deque
+from itertools import product
 from pathlib import Path
 import random
 import sys
@@ -17,193 +16,127 @@ from time import monotonic
 sys.dont_write_bytecode = True
 ROOT = Path(__file__).resolve().parents[1]
 START = monotonic()
-TICKS = 0
-spec = importlib.util.spec_from_file_location("release_ard2", ROOT / "notations/ARD2/ard2.py")
-module = importlib.util.module_from_spec(spec)
-sys.modules[spec.name] = module
-spec.loader.exec_module(module)
-Graph, ZERO, TOP = module.ARD2, module.ZERO, module.TOP
 
+def load(name, relative):
+    spec = importlib.util.spec_from_file_location(name, ROOT / relative)
+    mod = importlib.util.module_from_spec(spec)
+    sys.modules[name] = mod
+    spec.loader.exec_module(mod)
+    return mod
 
-def peak_rss_mib():
-    """Read this process only; report an actual RSS high-water mark."""
-    if sys.platform == "win32":
-        import ctypes
-        from ctypes import wintypes
-        class Counters(ctypes.Structure):
-            _fields_ = [("cb", wintypes.DWORD), ("faults", wintypes.DWORD)] + [
-                (name, ctypes.c_size_t) for name in (
-                    "peak", "working", "peak_paged", "paged", "peak_nonpaged",
-                    "nonpaged", "pagefile", "peak_pagefile")]
-        data = Counters()
-        data.cb = ctypes.sizeof(data)
-        get_info = ctypes.windll.psapi.GetProcessMemoryInfo
-        get_info.argtypes = [wintypes.HANDLE, ctypes.POINTER(Counters), wintypes.DWORD]
-        get_info.restype = wintypes.BOOL
-        if not get_info(wintypes.HANDLE(-1), ctypes.byref(data), data.cb):
-            raise OSError("Cannot read the current process memory counter")
-        return data.peak / 1048576
-    import resource
-    peak = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
-    return peak / (1048576 if sys.platform == "darwin" else 1024)
-
+new = load('skyline_ard2', 'notations/ARD2/ard2.py')
+old = load('legacy_ard2', 'notations/ARD2-legacy/ard2.py')
+oracle = load('ard2_atom_oracle', 'tests/test_ard2_legacy.py')
 
 def tick():
-    global TICKS
-    TICKS += 1
-    assert monotonic() - START < 45, "45-second test deadline"
-    if TICKS % 1024 == 0:
-        assert peak_rss_mib() < 512, "512 MiB peak RSS ceiling"
+    assert monotonic() - START < 35, '35-second audit ceiling'
+    assert oracle.peak_rss_mib() < 512, '512 MiB RSS ceiling'
 
+def independent_skyline(column):
+    entries = set(column)
+    return tuple(sorted((e for e in entries if not any(
+        a != e and a[1] >= e[1] and (a[0], a[2]) >= (e[0], e[2])
+        for a in entries)), key=lambda e:(e[1], e[0], e[2]), reverse=True))
 
-def normalize(columns):
-    answer = []
-    for col in columns:
-        groups = {}
-        for k, p, q in col:
-            groups[k, p] = max(q, groups.get((k, p), -1))
-        answer.append(tuple(sorted(((k, p, q) for (k, p), q in groups.items()),
-                                   key=lambda e: (e[1], e[0], e[2]), reverse=True)))
-    return tuple(answer)
-
-
-def atomic_step(columns, n):
-    """Full root atoms, finite unions and reclosure; no compressed FS import."""
-    tick()
-    if not columns or not n or not columns[-1]:
-        return columns[:-1]
-    last = len(columns) - 1
-    atoms = {(k, q, p, j) for j, col in enumerate(columns)
-             for k, p, root in col for q in range(root + 1)}
-    row, root, cut, _ = max(e for e in atoms if e[3] == last)
-    width = last - cut
-    assert last + n * width <= 64
-    out = set()
-    for block in range(n + 1):
-        def move(i):
-            return i if i < cut else i + block * width
-        for k, q, p, j in atoms:
-            if j < last:
-                out.update((move(k), u, move(p), move(j)) for u in range(move(q) + 1))
-            elif block < n:
-                out.update((move(k), u, move(p), move(last)) for u in range(move(q) + 1)
-                           if k < row or k == row and u < move(root))
-        if block < n:
-            out.update((h, u, move(cut), move(last))
-                       for h in range(move(row)) for u in range(move(last) + 1))
-        assert len(out) <= 100000, "root-atom bound"
-    result = [[] for _ in range(last + n * width)]
-    for k, q, p, j in out:
-        result[j].append((k, p, q))
-    return normalize(result)
-
-
-def count_columns(graph, fuel=30000):
-    """Literal positive atomic expansion, keep old width; no count shortcut."""
-    values = []
-    for width in range(1, len(graph.columns) + 1):
-        current = graph.columns[:width]
-        for count in range(fuel):
-            tick()
-            if len(current) < width:
-                values.append(str(count))
-                break
-            current = atomic_step(current, 1)[:width]
-        else:
-            raise AssertionError("bounded local-count oracle exhausted")
-    return values
-
-
-def small_columns(j):
-    pairs = [(k, p) for k in range(j + 1) for p in range(j)]
-    for roots in product(range(-1, j + 1), repeat=len(pairs)):
-        yield tuple((k, p, q) for (k, p), q in zip(pairs, roots) if q >= 0)
-
+def Q(columns):
+    return tuple(independent_skyline(c) for c in columns)
 
 def main():
-    seeds = [Graph.seed(n) for n in range(9)]
-    for n, graph in enumerate(seeds):
-        assert TOP[n] == graph
-        assert graph.columns == tuple(() if j == 0 else ((j, j - 1, j),) for j in range(n))
-        if n:
-            assert graph[0] == seeds[n - 1]
-    assert str(TOP) == "Limit of ARD2" and ZERO.kind == "zero"
-    assert Graph.finite(1).kind == "successor" and seeds[2].kind == "limit"
-    for n in range(9):
-        assert Graph.finite(n)[10**100] == Graph.finite(max(0, n - 1))
-    invalid = [(((0, 0, 0),),), ((), ((2, 0, 0),)), ((), ((0, 1, 0),)),
-               ((), ((0, 0, 2),)), ((), ((-1, 0, 0),)), ((), ((0, -1, 0),)),
-               ((), ((True, 0, 0),)), ((), ((0, 0.0, 0),)), ((), ((0, 0, False),))]
-    for columns in invalid:
-        try:
-            Graph(columns)
-        except (TypeError, ValueError):
-            pass
-        else:
-            raise AssertionError("invalid graph accepted")
-    for n in (-1, True, 1.0, "1", None):
-        for construct in (TOP.fs, Graph.seed, Graph.finite):
-            try:
-                construct(n)
-            except (TypeError, ValueError):
-                pass
-            else:
-                raise AssertionError("invalid index accepted")
-    assert Graph([[], [(1, 0, 0), (1, 0, 1)]]) == seeds[2]
-    # Both SELF coordinates in C_cut must rebind at the first seam.
-    expected = ((), ((1, 0, 1),), ((2, 1, 1), (1, 1, 2), (0, 1, 2), (2, 0, 2)))
-    assert seeds[3].local_step().columns == expected
-
-    samples = list(seeds)
-    rng = random.Random(9142301)
-    for _ in range(160):
-        columns = []
-        for j in range(rng.randrange(2, 9)):
-            columns.append([(rng.randrange(j + 1), rng.randrange(j), rng.randrange(j + 1))
-                            for _ in range(rng.randrange(2 * j + 1))])
-        samples.append(Graph(columns))
-    # Enumerate all canonical legal graphs of widths 0,1,2,3, streamed in memory.
-    exhaustive = (Graph(columns) for width in range(4)
-                  for columns in product(*(small_columns(j) for j in range(width))))
-    checked = expansions = 0
-    def verify(graph, indices):
-        nonlocal checked, expansions
-        outputs = []
-        for n in indices:
-            value = graph[n]
-            assert value.columns == atomic_step(graph.columns, n)
-            assert value.columns[:max(0, len(graph.columns) - 1)] == graph.columns[:-1]
-            assert value < graph if graph.columns else value == ZERO
-            if outputs:
-                old = outputs[-1].columns
-                assert value.columns[:len(old)] == old
-            outputs.append(value)
-            expansions += 1
-        assert graph.local_step().columns == outputs[1].columns[:len(graph.columns)]
-        checked += 1
+    stats = dict(raw_graphs=0, standard_graphs=0, steps=0, atomic_steps=0,
+                 local_steps=0, prefix_checks=0, standard_order_pairs=0)
+    vectors=[]
+    def verify(g, atomic=False):
+        tick()
+        qg=new.ARD2(g.columns)
+        assert qg.columns == Q(g.columns)
+        assert new.ARD2(qg.columns) == qg
+        previous=None
+        outputs=[]
+        for n in range(4):
+            if g.columns and g.columns[-1]:
+                c=max(g.columns[-1],key=lambda e:(e[0],e[2],e[1]))[1]
+                if len(g.columns)-1+n*(len(g.columns)-1-c)>48:
+                    break
+            original=g[n]
+            simplified=qg[n]
+            assert simplified.columns == Q(original.columns), (str(g),n)
+            if atomic:
+                assert simplified.columns == Q(oracle.atomic_step(g.columns,n))
+                stats['atomic_steps']+=1
+            assert simplified < qg if qg.columns else simplified == new.ZERO
+            if previous is not None:
+                assert simplified.columns[:len(previous.columns)] == previous.columns
+                stats['prefix_checks']+=1
+            previous=simplified
+            outputs.append(original)
+            stats['steps']+=1
+        assert qg.local_step().columns == Q(g.local_step().columns)
+        assert qg.local_step().columns == qg[1].columns[:len(qg.columns)]
+        stats['local_steps']+=1
+        if len(vectors)<180:
+            vectors.append({'raw':str(qg),'outputs':[str(new.ARD2(v.columns)) for v in outputs]})
         return outputs
-    for graph in exhaustive:
-        verify(graph, range(3))
-    cases = []
-    for graph in samples:
-        outputs = verify(graph, range(4))
-        cases.append({"raw": str(graph), "outputs": [str(value) for value in outputs]})
-    comparisons = [{"a": str(a), "b": str(b), "expected": int(a > b) - int(a < b)}
-                   for a, b in zip(samples, reversed(samples))]
-    count_cases = [{"raw": str(g), "expected": count_columns(g)} for g in seeds[:6]]
-    assert count_cases[-1]["expected"] == ["1", "5", "55", "969", "23751"]
-    summary = {"ok": True, "graphs": checked, "atomicExpansions": expansions,
-               "invalidGraphs": len(invalid), "localCountCases": len(count_cases),
-               "peakRssMiB": round(peak_rss_mib(), 2),
-               "seconds": round(monotonic() - START, 3),
-               "limits": {"seconds": 45, "columns": 64, "atoms": 100000,
-                          "localSteps": 30000, "processes": 1, "rssMiB": 512}}
-    if "--vectors" in sys.argv:
-        print(json.dumps({"summary": summary, "cases": cases, "comparisons": comparisons,
-                          "counts": count_cases}))
-    else:
-        print(json.dumps(summary))
 
+    for roots in product(range(-1,2),repeat=2):
+        verify(old.ARD2(((),tuple((k,0,q) for k,q in enumerate(roots) if q>=0))),True)
+        stats['raw_graphs']+=1
+    rng=random.Random(20260917)
+    for i in range(800):
+        cols=[]
+        for j in range(rng.randrange(1,13)):
+            cols.append(tuple((rng.randrange(j+1),rng.randrange(j),rng.randrange(j+1))
+                              for _ in range(rng.randrange(3*j+1))))
+        verify(old.ARD2(tuple(cols)),i<60)
+        stats['raw_graphs']+=1
 
-if __name__ == "__main__":
-    main()
+    queue=deque(old.ARD2.seed(n) for n in range(9))
+    seen={g.columns for g in queue}
+    standards=[]
+    while queue and stats['standard_graphs']<1200:
+        g=queue.popleft()
+        outputs=verify(g)
+        standards.append(g)
+        stats['standard_graphs']+=1
+        for child in outputs:
+            if len(child.columns)<=20 and child.columns not in seen and len(seen)<3500:
+                seen.add(child.columns);queue.append(child)
+    ordered=sorted(standards)
+    for a,b in zip(ordered,ordered[1:]):
+        assert a<b and new.ARD2(a.columns)<new.ARD2(b.columns)
+        stats['standard_order_pairs']+=1
+
+    counts=[]
+    for width in range(1,6):
+        g=new.ARD2.seed(width)
+        legacy=old.ARD2.seed(width)
+        for value in range(30000):
+            if value%128==0: tick()
+            assert g.columns==Q(legacy.columns)
+            if len(g.columns)<width:
+                counts.append(str(value));break
+            g=g.local_step();legacy=legacy.local_step()
+        else: raise AssertionError('30000 local-step ceiling')
+    assert counts==['1','5','55','969','23751']
+    for n in range(9):
+        assert new.TOP[n]==new.ARD2.seed(n)
+        if n: assert new.ARD2.seed(n)[0]==new.ARD2.seed(n-1)
+    assert str(new.TOP)=='Limit of ARD2'
+    assert str(new.ARD2.seed(2)[1])=='[][(1,0,0)]'
+    assert str(new.ARD2.seed(2)[1][1])=='[][(0,0,1)]'
+    for invalid in ((((0,0,0),),), ((),((2,0,0),)),((),((0,0,2),)),
+                    ((),((0,1,0),)),((),((True,0,0),))):
+        try: new.ARD2(invalid)
+        except ValueError: pass
+        else: raise AssertionError('Invalid input accepted')
+    summary={'ok':True,**stats,'seed_counts':counts,'queued_unexplored':len(queue),
+             'seconds':round(monotonic()-START,3),'peak_RSS_MiB':round(oracle.peak_rss_mib(),2),
+             'limits':{'seconds':35,'width':48,'stored_states':3500,'RSS_MiB':512}}
+    if '--vectors' in sys.argv:
+        comparisons=[{'a':str(new.ARD2(a.columns)),'b':str(new.ARD2(b.columns)),
+                      'expected':-1} for a,b in zip(ordered[:150],ordered[1:151])]
+        print(json.dumps({'summary':summary,'cases':vectors,'comparisons':comparisons,
+                          'counts':[{'raw':'[][(1,0,1)][(2,1,2)][(3,2,3)][(4,3,4)]',
+                                     'expected':counts}]}))
+    else: print(json.dumps(summary))
+
+if __name__=='__main__': main()

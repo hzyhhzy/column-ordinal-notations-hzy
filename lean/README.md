@@ -1,7 +1,6 @@
 # Lean proofs for seven notations · [中文版](README.zh-CN.md)
 
-2026-09-16: default ARD is now the skyline edition, with ARD-legacy preserved. The new rule's well-ordering passed 56 modules / 178 reports, including seven newly compiled modules. The relocated legacy project passed 50 modules / 156 reports. The current aggregate receipt contains 330 modules / 897 reports: five aggregate entries freshly compiled and 325 verified modules reused. The dated 2026-09-14 split-verification accounts below are historical. The full legacy isomorphism and cross-notation comparisons remain paper results, not consequences of printed axiom lists.
-
+2026-09-17: default ARD2 is the skyline edition; [ARD2-legacy](ARD2-legacy/README.md) retains all 21 unchanged old mathematical modules. The new project owns seven modules with a 57-module closure; legacy has 51. The current [ARD2RevisionFinalAudit](src/ARD2RevisionFinalAudit.lean) covers 338 modules. September 14/16 counts below are historical; project receipts state current certification. Exact isomorphism remains a paper result.
 
 2026-09-16: default ARD is now the skyline edition, with ARD-legacy preserved. The new rule's well-ordering passed 56 modules / 178 reports, including seven newly compiled modules. The relocated legacy project passed 50 modules / 156 reports. The current aggregate receipt contains 330 modules / 897 reports: five aggregate entries freshly compiled and 325 verified modules reused. The dated 2026-09-14 split-verification accounts below are historical. The full legacy isomorphism and cross-notation comparisons remain paper results, not consequences of printed axiom lists.
 
@@ -12,7 +11,7 @@ The restricted-axiom arguments are in the separate [four-system paper](../proofs
 
 ## Main theorem entry points
 
-Start with the notation's own project. The root [ARDRevisionFinalAudit.lean](src/ARDRevisionFinalAudit.lean) is an optional aggregate audit, not a required build step whenever a notation is added. All four historical aggregate modules remain unchanged.
+Start with the notation's own project. The root [ARD2RevisionFinalAudit.lean](src/ARD2RevisionFinalAudit.lean) is an optional aggregate audit, not a required build step whenever a notation is added. All four historical aggregate modules remain unchanged.
 
 | System | Final module | Main theorem |
 | --- | --- | --- |
@@ -21,10 +20,10 @@ Start with the notation's own project. The root [ARDRevisionFinalAudit.lean](src
 | LRD | [FiniteDemandLRDFinal.lean](LRD/src/FiniteDemandLRDFinal.lean) | `OrdinalFormal.LRDFinal.standard_isWellOrder` |
 | Ω-LRD3 | [OmegaLRD3Final.lean](Omega-LRD3/src/OmegaLRD3Final.lean) | `OrdinalFormal.Omega3Final.with_top_isWellOrder` |
 | ARD-legacy | [ARDFinal.lean](ARD-legacy/src/ARDFinal.lean) | `OrdinalFormal.ARD.paper_standard_with_top_strictWellOrder` |
-| ARD-legacy | [ARDSkylineFinal.lean](ARD/src/ARDSkylineFinal.lean) | `OrdinalFormal.ARDSkyline.standard_with_top_strictWellOrder` |
 | ARD | [ARDSkylineFinal.lean](ARD/src/ARDSkylineFinal.lean) | `OrdinalFormal.ARDSkyline.standard_with_top_strictWellOrder` |
 | IPD | [IPDStandardOrder.lean](IPD/src/IPDStandardOrder.lean) | `IPD.standard_wellFounded`, `IPD.standard_total`, `IPD.term_wellFounded` |
-| ARD2 | [ARD2Final.lean](ARD2/src/ARD2Final.lean) | `OrdinalFormal.ARD2.paper_standard_with_top_strictWellOrder` |
+| ARD2-legacy | [ARD2Final.lean](ARD2-legacy/src/ARD2Final.lean) | `OrdinalFormal.ARD2.paper_standard_with_top_strictWellOrder` |
+| ARD2 | [ARD2SkylineFinal.lean](ARD2/src/ARD2SkylineFinal.lean) | `OrdinalFormal.ARD2Skyline.standard_with_top_strictWellOrder` |
 
 The corresponding final modules also expose expansion well-foundedness, finite-domain results, or standard-domain variants. Their main well-ordering theorems do not take reflection, initial representations, row well-foundedness, or seed accessibility as assumptions supplied by the caller.
 
@@ -32,7 +31,7 @@ Y means the fixed upstream inherited-ancestry definition. Equivalence with every
 
 IPD's standard domain is finite reachability from zero-start seeds, not an accessibility subtype. Its actual parent-first column order is well-founded and total; TOP is adjoined. Strict expansion is additionally well-founded on all structurally valid raw graphs, without asserting their global column order well-founded. See the [correspondence audit](../proofs/paper/ipd-fidelity.md).
 
-ARD2 permits both row and root SELF at the child column, keeps parents strict, and generates roots through the seam itself. Its [finite-rule bridge](ARD2/src/ARD2DefinitionFidelity.lean) and [compression bridge](ARD2/src/ARD2Compression.lean) cover the actual rule and reachable standard domain. The semantic relation and initial supply are constructed, not assumed. See the [definition](../notations/ARD2/definition.md).
+ARD2 permits both row and root SELF at the child column and keeps parents strict. Its new [subdiagram bridge](ARD2/src/ARD2SkylineBridge.lean) proves actual skyline-rule output inclusion in the preserved full-package backend. The backend's [finite-rule](ARD2-legacy/src/ARD2DefinitionFidelity.lean) and [maximum-root compression](ARD2-legacy/src/ARD2Compression.lean) bridges concern ARD2-legacy, not the new skyline isomorphism. The semantic relation and initial supply are constructed, not assumed. See the [definition](../notations/ARD2/definition.md).
 
 ## Independent project layout
 
@@ -43,16 +42,16 @@ ARD2 permits both row and root SELF at the child column, keeps parents strict, a
 | [LRD](LRD/README.md) | `LRD/src/` | 10 | 41 |
 | [Ω-LRD3](Omega-LRD3/README.md) | `Omega-LRD3/src/` | 13 | 44 |
 | [ARD](ARD/README.md) | `ARD/src/` | 7 | 56 |
-| [ARD-legacy](ARD-legacy/README.md) | `ARD-legacy/src/` | 7 | 56 |
 | [ARD-legacy](ARD-legacy/README.md) | `ARD-legacy/src/` | 20 | 50 |
 | [IPD](IPD/README.md) | `IPD/src/` | 40 | 55 |
-| [ARD2](ARD2/README.md) | `ARD2/src/` | 21 | 51 |
+| [ARD2-legacy](ARD2-legacy/README.md) | `ARD2-legacy/src/` | 21 | 51 |
+| [ARD2](ARD2/README.md) | `ARD2/src/` | 7 | 57 |
 | [Shared foundation](shared/README.md) | `shared/src/` | 35 | 35 |
-| Optional aggregate audit | `src/` | 5 | 330 |
+| Optional aggregate audit | `src/` | 6 | 338 |
 
-Each notation has its own `lakefile.lean`, toolchain, lockfile, `sources.json`, `build.py`, output directory and verification receipt. The original notation projects depend on shared modules only; only Y additionally needs external BMS. New ARD explicitly depends on ARD-legacy's semantic backend as well as shared. Unrelated notation projects remain independent. Closure counts include the shared modules actually imported and cannot be added as counts of distinct sources.
+Each notation has its own `lakefile.lean`, toolchain, lockfile, `sources.json`, `build.py`, output directory and verification receipt. The original notation projects depend on shared modules only; only Y additionally needs external BMS. New ARD and ARD2 explicitly depend on their respective legacy semantic backends as well as shared. Unrelated notation projects remain independent. Closure counts include the shared modules actually imported and cannot be added as counts of distinct sources.
 
-There are **318 bundled modules** (161 unchanged upstream Y modules and 157 local modules), plus **12 pinned external BMS modules**, for **330 distinct proof-source modules**. The skyline revision adds seven private modules and one aggregate entry. The 20 legacy proof-source files were moved without mathematical source-byte changes; the four historical aggregate sources remain unchanged.
+There are **326 bundled modules** (161 unchanged upstream Y modules and 165 local modules), plus **12 pinned external BMS modules**, for **338 distinct proof-source modules**. Each skyline revision added seven private modules and one aggregate entry. The 20 ARD-legacy and 21 ARD2-legacy mathematical source files were relocated unchanged; all preceding aggregate source files remain unchanged.
 
 [layout.json](layout.json) is a repository index, not an input to individual project cache fingerprints. Each project's `sources.json` records its exact source closure, origins, revisions, SHA-256 hashes and real paths. Hashes normalize CRLF to LF. Shared foundation files retain some historical RPD/LRD/ARD names because their definitions and lemmas already had multiple consumers; this does not create dependencies on those notation leaf projects.
 

@@ -3,8 +3,7 @@
   "policy": "independent-lean-v2.1",
   "project": "ARD2",
   "targets": [
-    "ARD2Final",
-    "ARD2Compression"
+    "ARD2SkylineFinal"
   ],
   "compiler": "Lean (version 4.33.1, x86_64-w64-windows-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
   "environment": {
@@ -145,26 +144,31 @@
     ]
   },
   "inputs": {
-    "lean/ARD2/lakefile.lean": "daed1ed65529cc296ff31d93692a7f8cb421954fee792794580a643283251093",
-    "lean/ARD2/lake-manifest.json": "91351de426b7b50f6267497039372dccfacfbc4a06d9d9d8d5117b0242e6da73",
+    "lean/ARD2/lakefile.lean": "6a8fc665001596dd912a6ae4a41d8a104b5d4f851a2d7e7459ccece3e1e68058",
+    "lean/ARD2/lake-manifest.json": "fb62a7bd38e8a5ad58143dd66c2257eea43210d3843b42c86cc95c305fe8969a",
     "lean/ARD2/lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71",
-    "lean/ARD2/sources.json": "8bd735cdc86c2c7988c6a3af256fe6161eb99c936e41963702c07aee745fa7d4",
+    "lean/ARD2/sources.json": "a9aa03956441f66b61e0f8008bc823b665874cff4bb9ebeb24c3bc4d6bde8e62",
     "lean/ARD2/build.py": "b094699d71583fd2701ebcfa86cd65f425eac23ca6f8e1151d7ef4c461592e6b",
     "lean/verification_core.py": "7f9880d9bbf7aac16820c6e1aa6e0f1a41a000e06b363c0550f84acdde23ce69"
   },
   "owner_inputs": {
+    "ARD2-legacy": {
+      "lean/ARD2-legacy/lakefile.lean": "da07c45e0448ff23a169e06b7dc1b93a2748016ec55bacc6d3c38f04bc7efccc",
+      "lean/ARD2-legacy/lake-manifest.json": "9faaa6e507955097d1a1177bbe5f98a7b97252abe2546b44c1ca070e9d7a895a",
+      "lean/ARD2-legacy/lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    },
+    "ARD2": {
+      "lean/ARD2/lakefile.lean": "6a8fc665001596dd912a6ae4a41d8a104b5d4f851a2d7e7459ccece3e1e68058",
+      "lean/ARD2/lake-manifest.json": "fb62a7bd38e8a5ad58143dd66c2257eea43210d3843b42c86cc95c305fe8969a",
+      "lean/ARD2/lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    },
     "shared": {
       "lean/shared/lakefile.lean": "0862bf7d07399ede04dbd3df9812d14e6c02353631bfae46fe2248fae6344f5b",
       "lean/shared/lake-manifest.json": "23cc0df8a87b0d5940269c60ba49efe968a49ec2909e2de2e18354933337617b",
       "lean/shared/lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
-    },
-    "ARD2": {
-      "lean/ARD2/lakefile.lean": "daed1ed65529cc296ff31d93692a7f8cb421954fee792794580a643283251093",
-      "lean/ARD2/lake-manifest.json": "91351de426b7b50f6267497039372dccfacfbc4a06d9d9d8d5117b0242e6da73",
-      "lean/ARD2/lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
     }
   },
-  "closure_sha256": "25b6585f69b9616360173a0135d49e4dee476c9b94ef733a3533f1b1d80bd1ba",
+  "closure_sha256": "b9317750b056e2e0ffe1cf1963881f8d7f7733fa6467d074b64a81f8d8c91d04",
   "complete": true,
   "modules": {
     "OrdinalFormal.Columns": {
@@ -178,7 +182,7 @@
       "axiom_reports": 0,
       "seconds": 2.686,
       "certification": "reused-current-schema-2",
-      "reused_from": "shared"
+      "reused_from": "ARD2-legacy"
     },
     "OrdinalFormal.RPD": {
       "fingerprint": "5251985b2bb70352a01e948cf8cadefe1a867f65a3d8e1c1a71c6c51271ae8dc",
@@ -191,7 +195,7 @@
       "axiom_reports": 0,
       "seconds": 2.333,
       "certification": "reused-current-schema-2",
-      "reused_from": "shared"
+      "reused_from": "ARD2-legacy"
     },
     "OrdinalFormal.Comparison": {
       "fingerprint": "13281229d8c544635c7ee39564d774265747551fafdd0e7672c5d43030365cb3",
@@ -239,7 +243,7 @@
       "axiom_reports": 4,
       "seconds": 2.512,
       "certification": "reused-current-schema-2",
-      "reused_from": "shared"
+      "reused_from": "ARD2-legacy"
     },
     "OrdinalFormal.ReflectionTransport": {
       "fingerprint": "efbc63b453b38322c673f4cc3b30d4ed837b196c0255a4b3c8592f4c0a19700f",
@@ -331,7 +335,7 @@
       "axiom_reports": 10,
       "seconds": 3.516,
       "certification": "reused-current-schema-2",
-      "reused_from": "shared"
+      "reused_from": "ARD2-legacy"
     },
     "OrdinalFormal.ColumnRepresentation": {
       "fingerprint": "9507b217d5b4de663361c1c4d35ffa38247f960c26e3dea0189cf32166834649",
@@ -385,7 +389,7 @@
       "axiom_reports": 5,
       "seconds": 2.805,
       "certification": "reused-current-schema-2",
-      "reused_from": "shared"
+      "reused_from": "ARD2-legacy"
     },
     "OrdinalFormal.GenericSortedColumns": {
       "fingerprint": "d29eed334abe0c65f0372c737504e928308b49736c9465d5a84ced09041da0b2",
@@ -417,7 +421,7 @@
       "axiom_reports": 2,
       "seconds": 2.539,
       "certification": "reused-current-schema-2",
-      "reused_from": "shared"
+      "reused_from": "ARD2-legacy"
     },
     "OrdinalFormal.SpliceConstruction": {
       "fingerprint": "706608db2b943ecb4e695c85a6c6ca58987c9fe982f6bb48c2545ef96ce6533b",
@@ -430,10 +434,10 @@
       "axiom_reports": 0,
       "seconds": 2.442,
       "certification": "reused-current-schema-2",
-      "reused_from": "shared"
+      "reused_from": "ARD2-legacy"
     },
     "ARD2Core": {
-      "fingerprint": "40b70713bcc393657f4b96f4f1bbaa00101d59007bb12ac81bce24b85877aa23",
+      "fingerprint": "ca776e6954cc0dde88cd8e60bf46cf539b83c1e0953975d805795ea4e852367b",
       "olean_sha256": "af71e3b297a3e4e67ee9133334c5670c70841d0da4b7d7bf85163c4f82cf36c1",
       "artifact_bundle": {
         ".olean": "af71e3b297a3e4e67ee9133334c5670c70841d0da4b7d7bf85163c4f82cf36c1"
@@ -441,16 +445,17 @@
       "log_sha256_lf": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "reports": [],
       "axiom_reports": 0,
-      "seconds": 2.386,
-      "certification": "fresh-source-compilation"
+      "seconds": 2.372,
+      "certification": "reused-current-schema-2",
+      "reused_from": "ARD2-legacy"
     },
     "ARD2DemandCore": {
-      "fingerprint": "885464c080b7a7a85d0024b336a1fc5d18acde05716478646e5c68cc2a5ea159",
-      "olean_sha256": "4fbc37a8bf486c9d8ee89dfb6da6faade9472177c019834de2421e03a40de378",
+      "fingerprint": "18a26f5abaa790ddd27bb22635038c5a4b9e969414135b1b77995abde1d40f55",
+      "olean_sha256": "54558082fa583ba22a777fc13bf0c2ac019436198e181fdf4c27bbe31447b38b",
       "artifact_bundle": {
-        ".olean": "4fbc37a8bf486c9d8ee89dfb6da6faade9472177c019834de2421e03a40de378"
+        ".olean": "54558082fa583ba22a777fc13bf0c2ac019436198e181fdf4c27bbe31447b38b"
       },
-      "log_sha256_lf": "ea05cfea8970b7cdb3cffcc8e4deea09c6c6a587f9aed8616bbb442c053a20de",
+      "log_sha256_lf": "e67d80f0e8d9ce1b7c18e673bc4fd8be29bc7ae1484126be75dbd78b95440b1a",
       "reports": [
         {
           "requested": "ARD2Demand.rule_congr",
@@ -463,11 +468,12 @@
         }
       ],
       "axiom_reports": 1,
-      "seconds": 8.356,
-      "certification": "fresh-source-compilation"
+      "seconds": 8.066,
+      "certification": "reused-current-schema-2",
+      "reused_from": "ARD2-legacy"
     },
     "ARD2DemandRecursion": {
-      "fingerprint": "657cded1e38ea64d9a23dd8ad6160e3321477f16a60867f053a273f3e5e66e22",
+      "fingerprint": "016d7fcb130db68f22e86f0270ad4f44a61a576445b0bf2d21548fdb1d1c877f",
       "olean_sha256": "7d9bda77bdfa8fc84999130c79e73c074edf3048fb1868764675d19e18d22871",
       "artifact_bundle": {
         ".olean": "7d9bda77bdfa8fc84999130c79e73c074edf3048fb1868764675d19e18d22871"
@@ -485,16 +491,17 @@
         }
       ],
       "axiom_reports": 1,
-      "seconds": 8.092,
-      "certification": "fresh-source-compilation"
+      "seconds": 7.827,
+      "certification": "reused-current-schema-2",
+      "reused_from": "ARD2-legacy"
     },
     "ARD2DemandReflection": {
-      "fingerprint": "410a5b2a28286951248d2698305ea96971ffdc226caef30cc4c4d067e2c1edb9",
-      "olean_sha256": "11948fdecdf3c09412e8588b84cbeb4dc4bd8005d6802912d5d3c9bb2c65cee7",
+      "fingerprint": "464de8b096c060b449d8d6b7615f8235c3f72a537122bd5cbf5de61527e7cffc",
+      "olean_sha256": "902f84a670994ed65ca3c5be3e5b3a220ee28ddecee0be1dba291579d08cb513",
       "artifact_bundle": {
-        ".olean": "11948fdecdf3c09412e8588b84cbeb4dc4bd8005d6802912d5d3c9bb2c65cee7"
+        ".olean": "902f84a670994ed65ca3c5be3e5b3a220ee28ddecee0be1dba291579d08cb513"
       },
-      "log_sha256_lf": "dc31ef4da16842c5300e671d2e5a871babe2954336001043a3f2e90c85c45b11",
+      "log_sha256_lf": "edd08e17e615b615eddead1c5ce4868ff94bde00fdd685ed9a8324ee6b76dca4",
       "reports": [
         {
           "requested": "ARD2Demand.strict",
@@ -534,11 +541,12 @@
         }
       ],
       "axiom_reports": 4,
-      "seconds": 8.355,
-      "certification": "fresh-source-compilation"
+      "seconds": 8.078,
+      "certification": "reused-current-schema-2",
+      "reused_from": "ARD2-legacy"
     },
     "ARD2Templates": {
-      "fingerprint": "98a49f35c731e7d78fc5397adfc25fc9ff2865f2ab445b61fd534dcfdb816652",
+      "fingerprint": "0f92906911e21792dbb64cd0b5daa50184f145fb3d233d33bd31569f4f0dcec3",
       "olean_sha256": "fa0448134014b6bdcd1646c6fd85268a9175e10cfd928b799b39106e5d42b9ff",
       "artifact_bundle": {
         ".olean": "fa0448134014b6bdcd1646c6fd85268a9175e10cfd928b799b39106e5d42b9ff"
@@ -565,16 +573,17 @@
         }
       ],
       "axiom_reports": 2,
-      "seconds": 8.311,
-      "certification": "fresh-source-compilation"
+      "seconds": 8.108,
+      "certification": "reused-current-schema-2",
+      "reused_from": "ARD2-legacy"
     },
     "ARD2Witnesses": {
-      "fingerprint": "6cb67129c1b516951a522b75d18cb076752a1a7816be47cb5cd42bbe94f14aea",
-      "olean_sha256": "bee3f44d0542b8fac3c93562ec2c5d4e14e84998e5944d9090b6dc0a2c782048",
+      "fingerprint": "b4649f09d2f3a1dd0b4063e69652b5b92c912e7c0b5d39dcff56af4c98877534",
+      "olean_sha256": "f1b20f5a103618c84c9ce29061533b2caad1e437005cd8ec4c9a51eab9ad4d51",
       "artifact_bundle": {
-        ".olean": "bee3f44d0542b8fac3c93562ec2c5d4e14e84998e5944d9090b6dc0a2c782048"
+        ".olean": "f1b20f5a103618c84c9ce29061533b2caad1e437005cd8ec4c9a51eab9ad4d51"
       },
-      "log_sha256_lf": "9a1cb96f6259e05979a162e0a056236223ee7e19ccd6964f63825aaa2dcb0861",
+      "log_sha256_lf": "9cf9c1894c902729e77627a69c270becb8b882f17755716ca05df72face45ae0",
       "reports": [
         {
           "requested": "ARD2Demand.exists_bad",
@@ -623,11 +632,12 @@
         }
       ],
       "axiom_reports": 5,
-      "seconds": 8.749,
-      "certification": "fresh-source-compilation"
+      "seconds": 8.737,
+      "certification": "reused-current-schema-2",
+      "reused_from": "ARD2-legacy"
     },
     "ARD2EndpointAgreement": {
-      "fingerprint": "73bd781d4ab8ac4b329700aa3a15fb335ce76a366f5edaf7e37d523395caf0c4",
+      "fingerprint": "8ccfea123353e39de6728fbf97a970f549c2b111106ff2f06633023958dcb9e2",
       "olean_sha256": "e21a5e7a7338c76b39fbf9e7894effda77f30613b87625aef282f94bd7323b09",
       "artifact_bundle": {
         ".olean": "e21a5e7a7338c76b39fbf9e7894effda77f30613b87625aef282f94bd7323b09"
@@ -672,8 +682,9 @@
         }
       ],
       "axiom_reports": 4,
-      "seconds": 8.541,
-      "certification": "fresh-source-compilation"
+      "seconds": 8.531,
+      "certification": "reused-current-schema-2",
+      "reused_from": "ARD2-legacy"
     },
     "FiniteDemandFinitaryClosure": {
       "fingerprint": "e887161670498b406306c185b8a4278471c40d04ca63ee9935fb0cab417b664b",
@@ -713,7 +724,7 @@
       "axiom_reports": 3,
       "seconds": 7.585,
       "certification": "reused-current-schema-2",
-      "reused_from": "shared"
+      "reused_from": "ARD2-legacy"
     },
     "FiniteDemandOrdinalHeight": {
       "fingerprint": "c271e75cf468665ec51eab1c906584986c191ca3db328c93b74bf404e944d7b3",
@@ -745,15 +756,15 @@
       "axiom_reports": 2,
       "seconds": 7.837,
       "certification": "reused-current-schema-2",
-      "reused_from": "shared"
+      "reused_from": "ARD2-legacy"
     },
     "ARD2ClosedSupply": {
-      "fingerprint": "8e562cbdab8426012ce8fa14726a133bdd376d6451f60960c546321c6e4dd69d",
-      "olean_sha256": "f9b3ff806f614271d09f0961f2e2e0937ce62651a9690d9ebed63916d0bb6723",
+      "fingerprint": "1394568c8e0a3ae40e3840f3303b2120bf1797e1279317ca0e9bc42c99001cf6",
+      "olean_sha256": "e1b7f6999c46d42aa39fc98d145b15b6927f948b024ef4f53b4281e5fa7fc21c",
       "artifact_bundle": {
-        ".olean": "f9b3ff806f614271d09f0961f2e2e0937ce62651a9690d9ebed63916d0bb6723"
+        ".olean": "e1b7f6999c46d42aa39fc98d145b15b6927f948b024ef4f53b4281e5fa7fc21c"
       },
-      "log_sha256_lf": "4864deabfdb68a06eade062a863524f126d3f8429d38a8fe68d0f6f21bf74e57",
+      "log_sha256_lf": "d0f10ac1fca4265f75346096a3ca01c37f79108c2b8d1652b094b71ab6e8815c",
       "reports": [
         {
           "requested": "ARD2Demand.ClosedSupply.hull_countable",
@@ -793,8 +804,9 @@
         }
       ],
       "axiom_reports": 4,
-      "seconds": 8.563,
-      "certification": "fresh-source-compilation"
+      "seconds": 8.675,
+      "certification": "reused-current-schema-2",
+      "reused_from": "ARD2-legacy"
     },
     "FiniteDemandCore": {
       "fingerprint": "543211a1c1f6d54beb8d55d6d4d358179450eba2ca5ed609f1601e27ff36f49d",
@@ -835,7 +847,7 @@
       "axiom_reports": 3,
       "seconds": 8.358,
       "certification": "reused-current-schema-2",
-      "reused_from": "shared"
+      "reused_from": "ARD2-legacy"
     },
     "FiniteDemandRecursion": {
       "fingerprint": "dbc661c594b0a545a51159cbc9d9133078416cf646dadb482e1d404e88f039ff",
@@ -867,7 +879,7 @@
       "axiom_reports": 2,
       "seconds": 8.173,
       "certification": "reused-current-schema-2",
-      "reused_from": "shared"
+      "reused_from": "ARD2-legacy"
     },
     "FiniteDemandReflection": {
       "fingerprint": "0f8c18aacd5b72f7bcfc120943dd46f65d9135f3774cc0677cd7c1af160acec1",
@@ -917,7 +929,7 @@
       "axiom_reports": 4,
       "seconds": 8.283,
       "certification": "reused-current-schema-2",
-      "reused_from": "shared"
+      "reused_from": "ARD2-legacy"
     },
     "FiniteDemandWitnesses": {
       "fingerprint": "5d6a6727cae3cb68abc009c8f5177daf3b2d3e2f52b37897033978aab2a48dd2",
@@ -976,7 +988,7 @@
       "axiom_reports": 5,
       "seconds": 8.941,
       "certification": "reused-current-schema-2",
-      "reused_from": "shared"
+      "reused_from": "ARD2-legacy"
     },
     "FiniteDemandEndpointAgreement": {
       "fingerprint": "a7de56483c7258578d8843eaf8df72256d098b34a2aaacdd360db33ee300f420",
@@ -1017,7 +1029,7 @@
       "axiom_reports": 3,
       "seconds": 8.604,
       "certification": "reused-current-schema-2",
-      "reused_from": "shared"
+      "reused_from": "ARD2-legacy"
     },
     "FiniteDemandClosedSupply": {
       "fingerprint": "2ab5e2867c9f7c2ebe9d176fe101572a75505695965ad26c428f496c15b1b900",
@@ -1067,7 +1079,7 @@
       "axiom_reports": 4,
       "seconds": 8.904,
       "certification": "reused-current-schema-2",
-      "reused_from": "shared"
+      "reused_from": "ARD2-legacy"
     },
     "FiniteDemandInitialRepresentation": {
       "fingerprint": "b12140ee66d27df7860733eb4f4633bfe2f43b0ee2cf119c56751e0d87a8abe3",
@@ -1108,7 +1120,7 @@
       "axiom_reports": 3,
       "seconds": 8.758,
       "certification": "reused-current-schema-2",
-      "reused_from": "shared"
+      "reused_from": "ARD2-legacy"
     },
     "FiniteDemandHostAmbient": {
       "fingerprint": "57d7ea4e81f9f195b58d6d7a3aed8a70287b2de89658915eb88d2d7f09a226ba",
@@ -1149,10 +1161,10 @@
       "axiom_reports": 3,
       "seconds": 8.613,
       "certification": "reused-current-schema-2",
-      "reused_from": "shared"
+      "reused_from": "ARD2-legacy"
     },
     "ARD2InitialRepresentation": {
-      "fingerprint": "4b4154555e3922cf8ed0234cbcd2be657d0632ec411783787a2aaa257842fb10",
+      "fingerprint": "2776015b53296412414b1929a42faadbb6208e886cc42bbbacb285e4a7490fae",
       "olean_sha256": "738b1400bcae935a07d34bfe484fb86132357a59be3dddcd101002eabe59b00d",
       "artifact_bundle": {
         ".olean": "738b1400bcae935a07d34bfe484fb86132357a59be3dddcd101002eabe59b00d"
@@ -1179,8 +1191,9 @@
         }
       ],
       "axiom_reports": 2,
-      "seconds": 8.625,
-      "certification": "fresh-source-compilation"
+      "seconds": 8.613,
+      "certification": "reused-current-schema-2",
+      "reused_from": "ARD2-legacy"
     },
     "OrdinalFormal.ExpansionValidity": {
       "fingerprint": "9e36b178feab31b819cae1e8ac5bb950bbecfe522e424bf946b18783b981eb79",
@@ -1193,10 +1206,10 @@
       "axiom_reports": 0,
       "seconds": 2.967,
       "certification": "reused-current-schema-2",
-      "reused_from": "shared"
+      "reused_from": "ARD2-legacy"
     },
     "ARD2Structure": {
-      "fingerprint": "c0c52e34883a761e242f2bf636d816e9e00b419579dfc2955b84caa1622f5c67",
+      "fingerprint": "56fbc97f7930ea290bba76bf676f7e80500e9f0e5709003fc9d4842b54a0ebfa",
       "olean_sha256": "29f52f98403e50645da7de11d8cd7525d8e4fa99673f644823fd5691a0fafaec",
       "artifact_bundle": {
         ".olean": "29f52f98403e50645da7de11d8cd7525d8e4fa99673f644823fd5691a0fafaec"
@@ -1254,11 +1267,12 @@
         }
       ],
       "axiom_reports": 6,
-      "seconds": 3.334,
-      "certification": "fresh-source-compilation"
+      "seconds": 3.058,
+      "certification": "reused-current-schema-2",
+      "reused_from": "ARD2-legacy"
     },
     "ARD2Splice": {
-      "fingerprint": "c29c2dfdb38a818a9312d87c36c700cf3ed24db4c1ca8170464f7ec845799f65",
+      "fingerprint": "23a9cb4ac46e4b3449f74fbda8b50f5414034e326b56b3031388835bd2ef7407",
       "olean_sha256": "618b0205cef2b92c592a1f3317a246f5315efccbdb1a19a7285eae9297f001eb",
       "artifact_bundle": {
         ".olean": "618b0205cef2b92c592a1f3317a246f5315efccbdb1a19a7285eae9297f001eb"
@@ -1307,11 +1321,12 @@
         }
       ],
       "axiom_reports": 5,
-      "seconds": 2.339,
-      "certification": "fresh-source-compilation"
+      "seconds": 2.309,
+      "certification": "reused-current-schema-2",
+      "reused_from": "ARD2-legacy"
     },
     "ARD2StageDemands": {
-      "fingerprint": "5a55839abac9beab3c6c4f9c982250fcdcc1a1bdfaca3fb6705f848198521527",
+      "fingerprint": "767a23b2563223a6c17f98023f065919d9cd69a931c3a94202ac015a6de40e8d",
       "olean_sha256": "ea6e2fb7409a82b491018f7a734f2aa85713e2912bf6b100cd865e7e30589554",
       "artifact_bundle": {
         ".olean": "ea6e2fb7409a82b491018f7a734f2aa85713e2912bf6b100cd865e7e30589554"
@@ -1344,11 +1359,12 @@
         }
       ],
       "axiom_reports": 3,
-      "seconds": 2.469,
-      "certification": "fresh-source-compilation"
+      "seconds": 2.597,
+      "certification": "reused-current-schema-2",
+      "reused_from": "ARD2-legacy"
     },
     "ARD2StageProof": {
-      "fingerprint": "27f7c3170b13cf32d7c74ed0b840850434dfb5a737d181c32e7861784e20a8fd",
+      "fingerprint": "5b8fbb9309525afbc63bb8dd1cc411ae03ec4253ceffd66ad657b4f4e627ce47",
       "olean_sha256": "8c45bf5304e6831efaabce1a322e068fa1f738d9e1bed076e1305814443083dd",
       "artifact_bundle": {
         ".olean": "8c45bf5304e6831efaabce1a322e068fa1f738d9e1bed076e1305814443083dd"
@@ -1381,8 +1397,9 @@
         }
       ],
       "axiom_reports": 3,
-      "seconds": 2.749,
-      "certification": "fresh-source-compilation"
+      "seconds": 2.699,
+      "certification": "reused-current-schema-2",
+      "reused_from": "ARD2-legacy"
     },
     "OrdinalFormal.Reachability": {
       "fingerprint": "d8c42e31c7ddb0153c44a6d3b3dbfcde138e7445a62c911e82637fd244ace128",
@@ -1395,7 +1412,7 @@
       "axiom_reports": 0,
       "seconds": 2.615,
       "certification": "reused-current-schema-2",
-      "reused_from": "shared"
+      "reused_from": "ARD2-legacy"
     },
     "ARDPrefixOrder": {
       "fingerprint": "89c44f123ef5bc6e3d737a3f3eeb79c8352e94050bed94ce3f8217f3e3f6e3e4",
@@ -1423,10 +1440,10 @@
       "axiom_reports": 2,
       "seconds": 2.318,
       "certification": "reused-current-schema-2",
-      "reused_from": "shared"
+      "reused_from": "ARD2-legacy"
     },
     "ARD2Domain": {
-      "fingerprint": "39fae865ec099b8d01aeb223ae970d362287126cfe23e1d555f564a10ca1aae1",
+      "fingerprint": "686b6037752b3fdd588a8a187ed51a776ee550e0520cee31c9bb4dab8879d77a",
       "olean_sha256": "405eaead8c53395331651dac31edefbc8a47099b7deb53d3583331122b2698c8",
       "artifact_bundle": {
         ".olean": "405eaead8c53395331651dac31edefbc8a47099b7deb53d3583331122b2698c8"
@@ -1465,11 +1482,12 @@
         }
       ],
       "axiom_reports": 4,
-      "seconds": 2.396,
-      "certification": "fresh-source-compilation"
+      "seconds": 2.384,
+      "certification": "reused-current-schema-2",
+      "reused_from": "ARD2-legacy"
     },
     "ARD2SemanticWellFounded": {
-      "fingerprint": "8ae961952471adc8571e13f8b43d3d963d70a7d4721d1551a7509cb2f759e660",
+      "fingerprint": "884338f54502623efe5a819ae5737b01a325d72bf7ac75e24a4f7529d233d82c",
       "olean_sha256": "b6f78ad81616f0bd0d2326c6be62fd38a33980037cc0cb9cad36ca3d73b6e00b",
       "artifact_bundle": {
         ".olean": "b6f78ad81616f0bd0d2326c6be62fd38a33980037cc0cb9cad36ca3d73b6e00b"
@@ -1501,8 +1519,9 @@
         }
       ],
       "axiom_reports": 3,
-      "seconds": 2.379,
-      "certification": "fresh-source-compilation"
+      "seconds": 2.479,
+      "certification": "reused-current-schema-2",
+      "reused_from": "ARD2-legacy"
     },
     "OrdinalFormal.RPDDecrease": {
       "fingerprint": "064384a9daad148d14a342984e143116dc4399df3e930c81fca6f88456b8c737",
@@ -1560,7 +1579,7 @@
       "axiom_reports": 5,
       "seconds": 2.923,
       "certification": "reused-current-schema-2",
-      "reused_from": "shared"
+      "reused_from": "ARD2-legacy"
     },
     "OrdinalFormal.GeneratedColumnDecrease": {
       "fingerprint": "2493fdc7ac080e6c55325a3d8a07f1555e117257d5207e0b79609ad809c44287",
@@ -1591,10 +1610,10 @@
       "axiom_reports": 2,
       "seconds": 2.618,
       "certification": "reused-current-schema-2",
-      "reused_from": "shared"
+      "reused_from": "ARD2-legacy"
     },
     "ARD2Decrease": {
-      "fingerprint": "9110c3e634524949ff9daf63e173442ed006b9cb6860aaf17c9af914d9c5ad49",
+      "fingerprint": "1712f5d8f4fd8208acc04bddfaf97268ab756ff2f4e1f981ba0a114462332ecb",
       "olean_sha256": "3783e5a9f5b1775085fac6832287148fe70462b472a91c73e574a959ecd694b8",
       "artifact_bundle": {
         ".olean": "3783e5a9f5b1775085fac6832287148fe70462b472a91c73e574a959ecd694b8"
@@ -1636,11 +1655,12 @@
         }
       ],
       "axiom_reports": 4,
-      "seconds": 2.593,
-      "certification": "fresh-source-compilation"
+      "seconds": 2.554,
+      "certification": "reused-current-schema-2",
+      "reused_from": "ARD2-legacy"
     },
     "ARD2OrderReduction": {
-      "fingerprint": "0e7aee8565a4e8efe1486f77194254fc075b7d02239fbfc4ec90473ad74dda68",
+      "fingerprint": "ece6c052aad9cbdf351677618b411e76a47c2333cba68ac107e2349791b7927c",
       "olean_sha256": "f70b0a5b68a3ddf48c5bf7314274e5fae70e469286dc47feb947f00fc7c71034",
       "artifact_bundle": {
         ".olean": "f70b0a5b68a3ddf48c5bf7314274e5fae70e469286dc47feb947f00fc7c71034"
@@ -1701,8 +1721,9 @@
         }
       ],
       "axiom_reports": 6,
-      "seconds": 2.242,
-      "certification": "fresh-source-compilation"
+      "seconds": 2.192,
+      "certification": "reused-current-schema-2",
+      "reused_from": "ARD2-legacy"
     },
     "OrdinalFormal.ActualBlockGeometry": {
       "fingerprint": "d824bcd87c2f7e20377caf8488d9f23bee2193f3cb1f058725181c10bed57f8a",
@@ -1715,7 +1736,7 @@
       "axiom_reports": 0,
       "seconds": 2.556,
       "certification": "reused-current-schema-2",
-      "reused_from": "shared"
+      "reused_from": "ARD2-legacy"
     },
     "OrdinalFormal.BlockFiniteUnion": {
       "fingerprint": "f2ccf80572c1013b60e4443f90093e843b8cf0dd85d22e4fbdf794fc4d3f841e",
@@ -1773,10 +1794,10 @@
       "axiom_reports": 5,
       "seconds": 3.203,
       "certification": "reused-current-schema-2",
-      "reused_from": "shared"
+      "reused_from": "ARD2-legacy"
     },
     "ARD2FiniteUnion": {
-      "fingerprint": "83d8ff179489411adacf5406dc08b21f732cbaec7d4c521a06588cd97abcba45",
+      "fingerprint": "20be476bff02c2f65b8ae181f89a90246f17f95541ae2c7b00ce9700ca6e2a3a",
       "olean_sha256": "5891c82eb12e558e61615ed12e3dca9ed06c22d551fe0361a9e0300887e963cc",
       "artifact_bundle": {
         ".olean": "5891c82eb12e558e61615ed12e3dca9ed06c22d551fe0361a9e0300887e963cc"
@@ -1853,8 +1874,9 @@
         }
       ],
       "axiom_reports": 8,
-      "seconds": 3.232,
-      "certification": "fresh-source-compilation"
+      "seconds": 3.19,
+      "certification": "reused-current-schema-2",
+      "reused_from": "ARD2-legacy"
     },
     "OrdinalFormal.LRD": {
       "fingerprint": "bb40dd9f9f4dd061b4f1f1ae4321cd85fdc718ef4bd7ce68d3d9491157c47e6e",
@@ -1867,7 +1889,7 @@
       "axiom_reports": 0,
       "seconds": 2.354,
       "certification": "reused-current-schema-2",
-      "reused_from": "shared"
+      "reused_from": "ARD2-legacy"
     },
     "OrdinalFormal.Domains": {
       "fingerprint": "7d0287660d2fb7d2dd82eb16af97df236e25b23e6369cd6fd7f4cd7d6c03ada0",
@@ -1880,7 +1902,7 @@
       "axiom_reports": 0,
       "seconds": 2.25,
       "certification": "reused-current-schema-2",
-      "reused_from": "shared"
+      "reused_from": "ARD2-legacy"
     },
     "OrdinalFormal.RPDGeometry": {
       "fingerprint": "be0939186789e575167030e3c63608f808aa895d210b9ffd456ae436330eed71",
@@ -1912,7 +1934,7 @@
       "axiom_reports": 2,
       "seconds": 2.514,
       "certification": "reused-current-schema-2",
-      "reused_from": "shared"
+      "reused_from": "ARD2-legacy"
     },
     "OrdinalFormal.StandardValidity": {
       "fingerprint": "2c86417b9001b10026170dbfc0ae6c6e8c3a605b8d4a405307ceaeb35fb5fb80",
@@ -1925,7 +1947,7 @@
       "axiom_reports": 0,
       "seconds": 2.323,
       "certification": "reused-current-schema-2",
-      "reused_from": "shared"
+      "reused_from": "ARD2-legacy"
     },
     "OrdinalFormal.RPDSortedColumns": {
       "fingerprint": "cac8c276a9e08f20951f79ae69c334f16b7e945944f51453ea0c5b500aeedbc4",
@@ -1938,7 +1960,7 @@
       "axiom_reports": 0,
       "seconds": 2.546,
       "certification": "reused-current-schema-2",
-      "reused_from": "shared"
+      "reused_from": "ARD2-legacy"
     },
     "OrdinalFormal.RPDFiniteUnion": {
       "fingerprint": "b2e1d904801ca767b33d1adc3b1c1bc473141f360e87234b2e596a55df520a53",
@@ -2021,10 +2043,10 @@
       "axiom_reports": 8,
       "seconds": 2.515,
       "certification": "reused-current-schema-2",
-      "reused_from": "shared"
+      "reused_from": "ARD2-legacy"
     },
     "ARD2DefinitionFidelity": {
-      "fingerprint": "90e50f7833cbd18c376f533a5082d8fccf824245a1ee491244574b75985edc87",
+      "fingerprint": "3b3a1238dda0002cf312dded2bdbbc5d5b653258ca6cf3cd17b0f76b7f6ef58c",
       "olean_sha256": "8f32e63875b2d2f4fbb081f933af6b901c1757e4b10c0029d06d0dcc8de5cdb1",
       "artifact_bundle": {
         ".olean": "8f32e63875b2d2f4fbb081f933af6b901c1757e4b10c0029d06d0dcc8de5cdb1"
@@ -2087,11 +2109,12 @@
         }
       ],
       "axiom_reports": 6,
-      "seconds": 2.413,
-      "certification": "fresh-source-compilation"
+      "seconds": 2.341,
+      "certification": "reused-current-schema-2",
+      "reused_from": "ARD2-legacy"
     },
     "ARD2Final": {
-      "fingerprint": "52094529bbae96dbb220e07034242f496fed109a29b8879b4aa7e8b582d33f68",
+      "fingerprint": "dd8b83ef8fc7ae7858fb29d46fe009e142bbdf53e6a8526e383084bb41cd536e",
       "olean_sha256": "00c6b820b6e5ed15139fa3aece67a7072343e85418784e5ea6e8bc7b66b141e5",
       "artifact_bundle": {
         ".olean": "00c6b820b6e5ed15139fa3aece67a7072343e85418784e5ea6e8bc7b66b141e5"
@@ -2163,20 +2186,40 @@
         }
       ],
       "axiom_reports": 7,
-      "seconds": 8.531,
+      "seconds": 8.226,
+      "certification": "reused-current-schema-2",
+      "reused_from": "ARD2-legacy"
+    },
+    "ARD2SkylineCore": {
+      "fingerprint": "82076e3db1dede237599ba1b2982be2cbdbcc98b4eeddc14644ef8a790d83c0a",
+      "olean_sha256": "92e3fcc01973cdcfa4488096c8a059effaae8492ba0a2ecd4c8a94193c41c231",
+      "artifact_bundle": {
+        ".olean": "92e3fcc01973cdcfa4488096c8a059effaae8492ba0a2ecd4c8a94193c41c231"
+      },
+      "log_sha256_lf": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reports": [],
+      "axiom_reports": 0,
+      "seconds": 2.307,
       "certification": "fresh-source-compilation"
     },
-    "ARD2Compression": {
-      "fingerprint": "6a2427a33df064a57e369efad13d6fb2b03e08eb4787dfbe87ecb0504c43a785",
-      "olean_sha256": "dd443059f7550508db569020ca65b49c48c059223123b86053fb0d1302ce2db4",
+    "ARD2SkylineDomain": {
+      "fingerprint": "83d21282e3d708cb2fafd993c1f0532039a49bd6eaf42bdbc2de949cca04c001",
+      "olean_sha256": "c36b898d91b7434636138a7cd1f44a33dfb4f707d7b34be5c83ebec7df527cc3",
       "artifact_bundle": {
-        ".olean": "dd443059f7550508db569020ca65b49c48c059223123b86053fb0d1302ce2db4"
+        ".olean": "c36b898d91b7434636138a7cd1f44a33dfb4f707d7b34be5c83ebec7df527cc3"
       },
-      "log_sha256_lf": "cf1bd78f74f760ec1ea813e633e97e3d5270f6e342a6d96c036bc0fc1fdb89ef",
+      "log_sha256_lf": "dad6e02770500eb3eeae215fb3a66c139a48d3718d93536a8456102ae06aabaa",
       "reports": [
         {
-          "requested": "normalize_eq_fullRoots",
-          "name": "OrdinalFormal.ARD2.Compression.normalize_eq_fullRoots",
+          "requested": "standard_finite_iff",
+          "name": "OrdinalFormal.ARD2Skyline.standard_finite_iff",
+          "axioms": [
+            "propext"
+          ]
+        },
+        {
+          "requested": "compareLt_trans",
+          "name": "OrdinalFormal.ARD2Skyline.compareLt_trans",
           "axioms": [
             "Classical.choice",
             "Quot.sound",
@@ -2184,8 +2227,71 @@
           ]
         },
         {
-          "requested": "compressed_iff_sorted_unique",
-          "name": "OrdinalFormal.ARD2.Compression.compressed_iff_sorted_unique",
+          "requested": "term_wellFounded_of_finite",
+          "name": "OrdinalFormal.ARD2Skyline.term_wellFounded_of_finite",
+          "axioms": [
+            "propext"
+          ]
+        },
+        {
+          "requested": "term_total_of_finite",
+          "name": "OrdinalFormal.ARD2Skyline.term_total_of_finite",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 4,
+      "seconds": 2.314,
+      "certification": "fresh-source-compilation"
+    },
+    "ARD2SkylineSemanticWellFounded": {
+      "fingerprint": "f5cfc133e9384627be9f627ca627e4430e885b6c529191a86bd37f3af998bf7b",
+      "olean_sha256": "9928ecfaf967c4a221e24cf77761458277197effdd134963091b445eb12fb0ba",
+      "artifact_bundle": {
+        ".olean": "9928ecfaf967c4a221e24cf77761458277197effdd134963091b445eb12fb0ba"
+      },
+      "log_sha256_lf": "69df252dfa98f38f886dbc7ef5f2c840cc4345591e5337b60ebea5241b77e251",
+      "reports": [
+        {
+          "requested": "accessible_of_bounded",
+          "name": "OrdinalFormal.ARD2Skyline.accessible_of_bounded",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "valid_accessible_of_bounded",
+          "name": "OrdinalFormal.ARD2Skyline.valid_accessible_of_bounded",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "valid_step_wellFounded_of_accessible",
+          "name": "OrdinalFormal.ARD2Skyline.valid_step_wellFounded_of_accessible",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 3,
+      "seconds": 2.268,
+      "certification": "fresh-source-compilation"
+    },
+    "ARD2SkylineBridge": {
+      "fingerprint": "5a7ec2140ff07526510d49279394c530ef93ff5f953330f06834b52505009d38",
+      "olean_sha256": "2fded278714da84aecdb84d66f13bfe863b5d68d4eb17086135406a897c3fb8c",
+      "artifact_bundle": {
+        ".olean": "2fded278714da84aecdb84d66f13bfe863b5d68d4eb17086135406a897c3fb8c"
+      },
+      "log_sha256_lf": "06a6b3b3cd3756ce34e85a735799cd45e8633fe47029d536a6bf992b5e384fa2",
+      "reports": [
+        {
+          "requested": "expand_aligned",
+          "name": "OrdinalFormal.ARD2Skyline.expand_aligned",
           "axioms": [
             "Classical.choice",
             "Quot.sound",
@@ -2193,8 +2299,8 @@
           ]
         },
         {
-          "requested": "normalize_compare",
-          "name": "OrdinalFormal.ARD2.Compression.normalize_compare",
+          "requested": "expand_valid",
+          "name": "OrdinalFormal.ARD2Skyline.expand_valid",
           "axioms": [
             "Classical.choice",
             "Quot.sound",
@@ -2202,8 +2308,35 @@
           ]
         },
         {
-          "requested": "normalize_graphCompare",
-          "name": "OrdinalFormal.ARD2.Compression.normalize_graphCompare",
+          "requested": "holds_restrict",
+          "name": "OrdinalFormal.ARD2Skyline.holds_restrict",
+          "axioms": [
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 3,
+      "seconds": 2.394,
+      "certification": "fresh-source-compilation"
+    },
+    "ARD2SkylineStructure": {
+      "fingerprint": "6b9499e9155740ace3c822a90b922dce81a27bc191244191982af65322d0b7e3",
+      "olean_sha256": "b31a6d81083197637a4e38017b836e73a34d2656ba44d2f339fa83b4c29497c9",
+      "artifact_bundle": {
+        ".olean": "b31a6d81083197637a4e38017b836e73a34d2656ba44d2f339fa83b4c29497c9"
+      },
+      "log_sha256_lf": "c8be6ecfd1772d200966fa5d5d0e82b65319afe624e5e3d0be638f350711c848",
+      "reports": [
+        {
+          "requested": "expand_prefix",
+          "name": "OrdinalFormal.ARD2Skyline.expand_prefix",
+          "axioms": [
+            "propext"
+          ]
+        },
+        {
+          "requested": "expand_canonical",
+          "name": "OrdinalFormal.ARD2Skyline.expand_canonical",
           "axioms": [
             "Classical.choice",
             "Quot.sound",
@@ -2211,8 +2344,16 @@
           ]
         },
         {
-          "requested": "control_normalize",
-          "name": "OrdinalFormal.ARD2.Compression.control_normalize",
+          "requested": "seed_valid",
+          "name": "OrdinalFormal.ARD2Skyline.seed_valid",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "expand_lt",
+          "name": "OrdinalFormal.ARD2Skyline.expand_lt",
           "axioms": [
             "Classical.choice",
             "Quot.sound",
@@ -2220,14 +2361,156 @@
           ]
         }
       ],
-      "axiom_reports": 5,
-      "seconds": 2.552,
+      "axiom_reports": 4,
+      "seconds": 2.469,
+      "certification": "fresh-source-compilation"
+    },
+    "ARD2SkylineOrderReduction": {
+      "fingerprint": "6b4fa44de4d6a63a7461acbe9ee03719d4fe0fe8cc4e7cf15d54d8969b366047",
+      "olean_sha256": "5aa7ede1b53f86b5780b74f0ddf9bf18f5f1e1dd64debf478f6dff54879d42f3",
+      "artifact_bundle": {
+        ".olean": "5aa7ede1b53f86b5780b74f0ddf9bf18f5f1e1dd64debf478f6dff54879d42f3"
+      },
+      "log_sha256_lf": "86e51549a2f48c626397f86419b698a1d41183440e2c58a0384213d9aad907a6",
+      "reports": [
+        {
+          "requested": "standard_valid",
+          "name": "OrdinalFormal.ARD2Skyline.standard_valid",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "standard_canonical",
+          "name": "OrdinalFormal.ARD2Skyline.standard_canonical",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "childJoin",
+          "name": "OrdinalFormal.ARD2Skyline.childJoin",
+          "axioms": [
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "standard_step_lt",
+          "name": "OrdinalFormal.ARD2Skyline.standard_step_lt",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "standard_total_of_seed_accessible",
+          "name": "OrdinalFormal.ARD2Skyline.standard_total_of_seed_accessible",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "standard_wellFounded_of_seed_accessible",
+          "name": "OrdinalFormal.ARD2Skyline.standard_wellFounded_of_seed_accessible",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 6,
+      "seconds": 2.196,
+      "certification": "fresh-source-compilation"
+    },
+    "ARD2SkylineFinal": {
+      "fingerprint": "b14768da70ed795cc389f9b73794aad63fd763edd202236f3aeb3d68ef689837",
+      "olean_sha256": "5c827c2be635e426268087a44f356d2bc1b4c30bccdaadfff05b3d166442bf47",
+      "artifact_bundle": {
+        ".olean": "5c827c2be635e426268087a44f356d2bc1b4c30bccdaadfff05b3d166442bf47"
+      },
+      "log_sha256_lf": "eaadfee4bf34ec1dfa37a051d5dc4f971eec80eaebd93c2f30ffc8c0b254b35d",
+      "reports": [
+        {
+          "requested": "expand_bounded",
+          "name": "OrdinalFormal.ARD2Skyline.expand_bounded",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "valid_accessible",
+          "name": "OrdinalFormal.ARD2Skyline.valid_accessible",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "valid_step_wellFounded",
+          "name": "OrdinalFormal.ARD2Skyline.valid_step_wellFounded",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "standard_wellFounded",
+          "name": "OrdinalFormal.ARD2Skyline.standard_wellFounded",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "standard_total",
+          "name": "OrdinalFormal.ARD2Skyline.standard_total",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "standard_strictWellOrder",
+          "name": "OrdinalFormal.ARD2Skyline.standard_strictWellOrder",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        },
+        {
+          "requested": "standard_with_top_strictWellOrder",
+          "name": "OrdinalFormal.ARD2Skyline.standard_with_top_strictWellOrder",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      ],
+      "axiom_reports": 7,
+      "seconds": 8.357,
       "certification": "fresh-source-compilation"
     }
   },
-  "verified_on": "2026-09-14",
-  "fresh_modules": 21,
-  "reused_modules": 30,
+  "verified_on": "2026-09-17",
+  "fresh_modules": 7,
+  "reused_modules": 50,
   "limits": {
     "concurrent_compilers": 1,
     "compiler_threads": 1,
@@ -2237,29 +2520,29 @@
   "scope": "Ordinary Lean, not an internal KP derivation; no order-type comparison or VM verification.",
   "mathlib_rebuilt_from_source": false,
   "network_bootstrap_tested": false,
-  "total_proof_modules": 51,
-  "axiom_reports": 160,
-  "wall_seconds": 107.582,
+  "total_proof_modules": 57,
+  "axiom_reports": 182,
+  "wall_seconds": 22.766,
   "verification_kind": "source-checked scope with explicitly certified artifact reuse",
   "final_logs": {
-    "ARD2Compression": {
-      "path": "verification/ARD2Compression.log",
-      "sha256_lf": "cf1bd78f74f760ec1ea813e633e97e3d5270f6e342a6d96c036bc0fc1fdb89ef",
-      "axiom_reports": 5
-    },
     "ARD2DefinitionFidelity": {
       "path": "verification/ARD2DefinitionFidelity.log",
       "sha256_lf": "b895fc61dc383f2d641c9d34e29380bca0b7ed00075d0773157b7a4d29ab0c63",
       "axiom_reports": 6
     },
-    "ARD2Final": {
-      "path": "verification/ARD2Final.log",
-      "sha256_lf": "07b626ad9c9b1c9873d3d83607c43ce1d95880679c01b9f355d954663d8abb44",
-      "axiom_reports": 7
-    },
     "ARD2SemanticWellFounded": {
       "path": "verification/ARD2SemanticWellFounded.log",
       "sha256_lf": "b08025358922301d9c5a45f574afb9a0b7c4c8b38339bcd71bf2d6d1895f04b5",
+      "axiom_reports": 3
+    },
+    "ARD2SkylineFinal": {
+      "path": "verification/ARD2SkylineFinal.log",
+      "sha256_lf": "eaadfee4bf34ec1dfa37a051d5dc4f971eec80eaebd93c2f30ffc8c0b254b35d",
+      "axiom_reports": 7
+    },
+    "ARD2SkylineSemanticWellFounded": {
+      "path": "verification/ARD2SkylineSemanticWellFounded.log",
+      "sha256_lf": "69df252dfa98f38f886dbc7ef5f2c840cc4345591e5337b60ebea5241b77e251",
       "axiom_reports": 3
     }
   }

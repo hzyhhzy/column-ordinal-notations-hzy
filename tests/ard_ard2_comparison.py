@@ -26,7 +26,9 @@ def module(name, path):
 
 
 ARD = module("comparison_legacy", "notations/ARD-legacy/ard.py").AnchoredRows
-ARD2 = module("comparison_ard2", "notations/ARD2/ard2.py").ARD2
+# The inclusion argument uses the preserved complete relation packages;
+# the skyline isomorphism transfers its target to current ARD2.
+ARD2 = module("comparison_ard2", "notations/ARD2-legacy/ard2.py").ARD2
 
 
 def control(graph):

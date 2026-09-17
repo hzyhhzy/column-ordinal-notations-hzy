@@ -40,6 +40,7 @@ MONOLINGUAL_ARCHIVES = frozenset({
     'research/README.md',
 })
 NER_HASHES = {
+    'notations/ARD2-legacy/ARD2-legacy.ne-rewritten.js': 'e977cb008dfcd0d1738dfabd77ad137b662f8da2dbf191a10842d5a10503dfea',
     'notations/CWY/wY-CWY.ne-rewritten.js': 'c2c1c3c9f83d7b69588e95b53503e6d42c86c092aac170c2db6ffce2d5ca61f5',
     'notations/CWY2/CWY2.ne-rewritten.js': '02b4f334f4c84d5c088a740d0f0a33fee1e1821105bb1dc8baf9228ca0a1a3ee',
     'notations/Omega-CWY/Omega-CWY.ne-rewritten.js': '4750912d8fb926c05f49476ba5408bb7a51e444849509411bf4e377423429414',
@@ -49,7 +50,7 @@ NER_HASHES = {
     'notations/ARD/ARD.ne-rewritten.js': '7cf745079c90e0f127b06c50c8082f81c16600aa9a76fb712f50cfa8d2b955b0',
     'notations/ARD-legacy/ARD-arcs.ne-rewritten.js': '1b80215f80c7797c1891e0c197c4ca8470cd43e9ed86d68cfb7b2b760e8d7930',
     'notations/IPD/IPD.ne-rewritten.js': 'acc1a1c2ae260da9be7d13e14ac17d84a92679f82efe97aa85cd0e3b072f6011',
-    'notations/ARD2/ARD2.ne-rewritten.js': 'e0d4eb14056ee54a6d4a8d2475241469ba33f07d38c406cfa9b20c648407380d',
+    'notations/ARD2/ARD2.ne-rewritten.js': '0b50ff720cd33874f2401ea24ef2fc951ba5df21d81935b73d5bfde1aab7a562',
     'notations/SPD/SPD.ne-rewritten.js': 'd693c23564a766ecbbe3072cd200632c49b490d47d18428e1310ea438e85f266',
 }
 LEAN_ROOTS = {
@@ -62,11 +63,12 @@ LEAN_ROOTS = {
     'ARD': ['ARDSkylineFinal'],
     'ARD-legacy': ['ARDFinal', 'ARDCompression'],
     'IPD': ['IPDStandardOrder', 'IPDTreeCompare'],
-    'ARD2': ['ARD2Final', 'ARD2Compression'],
+    'ARD2': ['ARD2SkylineFinal'],
+    'ARD2-legacy': ['ARD2Final', 'ARD2Compression'],
     'shared': ['ARDPrefixOrder', 'FiniteDemandColumnWellFounded',
                'OrdinalFormal.ColumnMap', 'OrdinalFormal.ColumnReachability',
                'OrdinalFormal.GeneratedColumnDecrease', 'OrdinalFormal.RPDFiniteUnion'],
-    'aggregate': ['ARDRevisionFinalAudit'],
+    'aggregate': ['ARD2RevisionFinalAudit'],
 }
 
 
@@ -84,7 +86,7 @@ def sha256_lf(path):
 
 
 def load_release_lean_plans(repository):
-    """Check the exact ten-scope catalog without requiring completed receipts."""
+    """Check the exact eleven-scope catalog without requiring completed receipts."""
     sys.dont_write_bytecode = True
     sys.path.insert(0, str(repository / 'lean'))
     from verification_core import load_plan
@@ -93,7 +95,7 @@ def load_release_lean_plans(repository):
         raise ValueError('Unsupported source-ownership layout')
     projects = layout['projects']
     if set(projects) != set(LEAN_ROOTS):
-        raise ValueError('Layout must contain exactly seven notations, ARD-legacy, shared, and aggregate')
+        raise ValueError('Layout must contain seven notations, both legacy backends, shared, and aggregate')
     plans = {}
     for name, roots in LEAN_ROOTS.items():
         item = projects[name]
@@ -213,16 +215,16 @@ def main():
                 problems.append(f'Broken link: {path.relative_to(ROOT)} -> {target}')
     expected_pdfs = {
         f'notations/{notation}/definition{lang}.pdf'
-        for notation in ('RPD','LRD','Omega-LRD3','ARD','ARD-legacy','IPD','ARD2','SPD','CWY','CWY2','Omega-CWY') for lang in ('','.zh-CN')
+        for notation in ('RPD','LRD','Omega-LRD3','ARD','ARD-legacy','IPD','ARD2','ARD2-legacy','SPD','CWY','CWY2','Omega-CWY') for lang in ('','.zh-CN')
     } | {f'proofs/paper/{paper}{lang}.pdf'
-         for paper in ('well-ordering','ard-well-ordering', 'ard-legacy-well-ordering', 'rpd-le-ard-a2','ard-le-ard2-13','ipd-well-ordering','ard2-well-ordering','spd-well-ordering','cwy2-equivalence') for lang in ('','.zh-CN')}
+         for paper in ('well-ordering','ard-well-ordering', 'ard-legacy-well-ordering', 'rpd-le-ard-a2','ard-le-ard2-13','ipd-well-ordering','ard2-well-ordering','ard2-legacy-well-ordering','spd-well-ordering','cwy2-equivalence') for lang in ('','.zh-CN')}
     actual_pdfs = {p.relative_to(ROOT).as_posix() for p in pdfs}
     if actual_pdfs != expected_pdfs:
         problems.append(f'PDF inventory mismatch: {actual_pdfs ^ expected_pdfs}')
     for path in pdfs:
         if not path.with_suffix('.md').is_file() or path.stat().st_size < 1000:
             problems.append(f'Invalid PDF/source pair: {path.relative_to(ROOT)}')
-    if {p.name for p in (ROOT/'notations').iterdir() if p.is_dir()} != {'RPD','LRD','Omega-LRD3','ARD','ARD-legacy','IPD','ARD2','SPD','CWY','CWY2','Omega-CWY'}:
+    if {p.name for p in (ROOT/'notations').iterdir() if p.is_dir()} != {'RPD','LRD','Omega-LRD3','ARD','ARD-legacy','IPD','ARD2','ARD2-legacy','SPD','CWY','CWY2','Omega-CWY'}:
         problems.append('Unexpected notation directory')
     for relative, expected in NER_HASHES.items():
         actual = hashlib.sha256((ROOT/relative).read_bytes()).hexdigest()

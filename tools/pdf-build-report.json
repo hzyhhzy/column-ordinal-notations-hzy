@@ -96,38 +96,6 @@
     "warnings": []
   },
   {
-    "source": "notations/ARD2/definition.md",
-    "pdf": "notations/ARD2/definition.pdf",
-    "pages": 5,
-    "bytes": 574770,
-    "sha256": "60a47c8a19896850304cb42c2c14f40e4702920e38e7298dadfd2af135687ed4",
-    "warnings": []
-  },
-  {
-    "source": "notations/ARD2/definition.zh-CN.md",
-    "pdf": "notations/ARD2/definition.zh-CN.pdf",
-    "pages": 4,
-    "bytes": 749011,
-    "sha256": "56e49845551fafaed5e7ad62c4fcfcecbded3fbc9eebbb0195e41bbffb2f62bc",
-    "warnings": []
-  },
-  {
-    "source": "proofs/paper/ard2-well-ordering.md",
-    "pdf": "proofs/paper/ard2-well-ordering.pdf",
-    "pages": 7,
-    "bytes": 1369416,
-    "sha256": "ef93e69a4594dabd1ff2a3805b5df45f14c6a2972c90fd15033a76d1a3404db9",
-    "warnings": []
-  },
-  {
-    "source": "proofs/paper/ard2-well-ordering.zh-CN.md",
-    "pdf": "proofs/paper/ard2-well-ordering.zh-CN.pdf",
-    "pages": 6,
-    "bytes": 1535091,
-    "sha256": "f96bd63f73df3ee4c1d4284280690a9d41b84d39c51a15feebf7c58ba5379e19",
-    "warnings": []
-  },
-  {
     "source": "notations/SPD/definition.md",
     "pdf": "notations/SPD/definition.pdf",
     "pages": 8,
@@ -240,22 +208,6 @@
     "warnings": []
   },
   {
-    "source": "proofs/paper/ard-le-ard2-13.md",
-    "pdf": "proofs/paper/ard-le-ard2-13.pdf",
-    "pages": 6,
-    "bytes": 781483,
-    "sha256": "aa5dac860066ad0b5d55ef3cfef22a5c200e858c32ea9e713e8a98d979a2d112",
-    "warnings": []
-  },
-  {
-    "source": "proofs/paper/ard-le-ard2-13.zh-CN.md",
-    "pdf": "proofs/paper/ard-le-ard2-13.zh-CN.pdf",
-    "pages": 5,
-    "bytes": 988100,
-    "sha256": "ccf265d15ce43f70750a12f3fc7c4b8b655cec8930dfa5994930bf696756d582",
-    "warnings": []
-  },
-  {
     "source": "notations/CWY/definition.zh-CN.md",
     "pdf": "notations/CWY/definition.zh-CN.pdf",
     "pages": 6,
@@ -317,6 +269,86 @@
     "pages": 6,
     "bytes": 725972,
     "sha256": "d6eaa976cb76567f7d12b706611737f1371af12401784c55c473b40f75780449",
+    "warnings": []
+  },
+  {
+    "source": "notations/ARD2/definition.zh-CN.md",
+    "pdf": "notations/ARD2/definition.zh-CN.pdf",
+    "pages": 3,
+    "bytes": 599967,
+    "sha256": "5c59f16e07558c41e54d5a441680695f7e940fd102ac5954bd9cb626be3186a3",
+    "warnings": []
+  },
+  {
+    "source": "proofs/paper/ard2-well-ordering.zh-CN.md",
+    "pdf": "proofs/paper/ard2-well-ordering.zh-CN.pdf",
+    "pages": 3,
+    "bytes": 516396,
+    "sha256": "536a54350b6532d12263845785532ad82685912146eb1f91812e35f123ba2ed7",
+    "warnings": []
+  },
+  {
+    "source": "proofs/paper/ard2-legacy-well-ordering.md",
+    "pdf": "proofs/paper/ard2-legacy-well-ordering.pdf",
+    "pages": 7,
+    "bytes": 1369470,
+    "sha256": "5d8702611d965392d4bff0fde2b0b55cba8b5ba9b14f7b8a169d68c75f3747dd",
+    "warnings": []
+  },
+  {
+    "source": "proofs/paper/ard2-legacy-well-ordering.zh-CN.md",
+    "pdf": "proofs/paper/ard2-legacy-well-ordering.zh-CN.pdf",
+    "pages": 6,
+    "bytes": 1535196,
+    "sha256": "6a1bbae35d37578a9fc7536fb2a17f35d492eb0f6e7e0994bef0ab69ad80771c",
+    "warnings": []
+  },
+  {
+    "source": "proofs/paper/ard-le-ard2-13.md",
+    "pdf": "proofs/paper/ard-le-ard2-13.pdf",
+    "pages": 6,
+    "bytes": 788369,
+    "sha256": "6e6eaece9c6171326cb6616b4239eb808d0f39f83b13b72442462c45997371ea",
+    "warnings": []
+  },
+  {
+    "source": "proofs/paper/ard-le-ard2-13.zh-CN.md",
+    "pdf": "proofs/paper/ard-le-ard2-13.zh-CN.pdf",
+    "pages": 5,
+    "bytes": 996150,
+    "sha256": "46617d84b9cc8d0c15a254835e1f0f37e212fe08036ae642d3334465cd481816",
+    "warnings": []
+  },
+  {
+    "source": "notations/ARD2/definition.md",
+    "pdf": "notations/ARD2/definition.pdf",
+    "pages": 3,
+    "bytes": 442134,
+    "sha256": "84c2b944df7186c9be81f98bbe504fee8af16a017bacf3d64e80a1f8d1a560ca",
+    "warnings": []
+  },
+  {
+    "source": "proofs/paper/ard2-well-ordering.md",
+    "pdf": "proofs/paper/ard2-well-ordering.pdf",
+    "pages": 3,
+    "bytes": 374391,
+    "sha256": "f6b62d2c441482b6e6f8ebb12c085eac3fe7d8d848b298877c530c3e0e9f221a",
+    "warnings": []
+  },
+  {
+    "source": "notations/ARD2-legacy/definition.md",
+    "pdf": "notations/ARD2-legacy/definition.pdf",
+    "pages": 5,
+    "bytes": 575074,
+    "sha256": "87bce765650ec1774171def3ec2258476f53e42b56fbe7f09fb2d7e72e786cc4",
+    "warnings": []
+  },
+  {
+    "source": "notations/ARD2-legacy/definition.zh-CN.md",
+    "pdf": "notations/ARD2-legacy/definition.zh-CN.pdf",
+    "pages": 4,
+    "bytes": 754038,
+    "sha256": "4c92f41c77db93c4496a98a190b51139a62c0bfb139d977993d2e21657820171",
     "warnings": []
   }
 ]

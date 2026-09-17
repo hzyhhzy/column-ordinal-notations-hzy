@@ -1,5 +1,7 @@
 # 七个记号的 Lean 证明 · [English](README.md)
 
+2026-09-17：默认 ARD2 现为轮廓版，旧完整包规则归入 [ARD2-legacy](ARD2-legacy/README.zh-CN.md)，21 个旧数学源码文件不变。新版有 7 个私有模块、57 模块精确闭包；旧版为 51 模块。当前联合入口为 [ARD2RevisionFinalAudit](src/ARD2RevisionFinalAudit.lean)，联合范围 338 模块。下方 9 月 14/16 日数字是历史记录；当前认证以各项目收据为准。新旧同构仍为纸面结果。
+
 2026-09-16：默认 ARD 已切换到轮廓版，旧版完整保留为 ARD-legacy。新版实际规则良序已核查：56 模块、178 份报告，7 个新版模块新编译。旧版新位置也重新核查 50 模块、156 份报告。当前联合收据为 330 模块、897 份报告（5 个联合模块新编译，325 个已验证模块复用）；后文 2026-09-14 的拆分及网络说明保留为历史记录。完整新旧标准域同构和跨记号比较仍是纸面证明，不能由这些公理报告代替。
 
 
@@ -9,7 +11,7 @@
 
 ## 主要定理入口
 
-优先进入所需记号自己的子项目。根目录的 [ARDRevisionFinalAudit.lean](src/ARDRevisionFinalAudit.lean) 仅是可选的联合验收入口，不是每次新增记号的必经构建。四个历史联合模块保持原样。
+优先进入所需记号自己的子项目。根目录的 [ARD2RevisionFinalAudit.lean](src/ARD2RevisionFinalAudit.lean) 仅是可选的联合验收入口，不是每次新增记号的必经构建。四个历史联合模块保持原样。
 
 | 记号 | 最终模块 | 主要定理 |
 | --- | --- | --- |
@@ -20,7 +22,8 @@
 | ARD-legacy | [ARDFinal.lean](ARD-legacy/src/ARDFinal.lean) | `OrdinalFormal.ARD.paper_standard_with_top_strictWellOrder` |
 | ARD | [ARDSkylineFinal.lean](ARD/src/ARDSkylineFinal.lean) | `OrdinalFormal.ARDSkyline.standard_with_top_strictWellOrder` |
 | IPD | [IPDStandardOrder.lean](IPD/src/IPDStandardOrder.lean) | `IPD.standard_wellFounded`、`IPD.standard_total`、`IPD.term_wellFounded` |
-| ARD2 | [ARD2Final.lean](ARD2/src/ARD2Final.lean) | `OrdinalFormal.ARD2.paper_standard_with_top_strictWellOrder` |
+| ARD2-legacy | [ARD2Final.lean](ARD2-legacy/src/ARD2Final.lean) | `OrdinalFormal.ARD2.paper_standard_with_top_strictWellOrder` |
+| ARD2 | [ARD2SkylineFinal.lean](ARD2/src/ARD2SkylineFinal.lean) | `OrdinalFormal.ARD2Skyline.standard_with_top_strictWellOrder` |
 
 各最终模块也提供展开关系良基性、有限式域结论或标准域变体。主要良序定理不要求调用者额外提供反射、初始表示、行标良基性或种子可及性假设。
 
@@ -28,7 +31,7 @@ Y 指固定上游的祖先继承定义。本工程**没有**证明它与原始 J
 
 IPD 的标准域是零起始种子的有限可达式，不是事后以可及性定义的子类型。实际父优先列序良基且全序，另加 TOP 仍良序；全部结构合法原始图的严格展开也良基，但不主张它们的全局列序良序。详见[定义对应审计](../proofs/paper/ipd-fidelity.zh-CN.md)。
 
-ARD2 允许行与根同时 SELF，父仍严格向前，生成根包达到接缝自身。[有限规则桥](ARD2/src/ARD2DefinitionFidelity.lean)和[压缩桥](ARD2/src/ARD2Compression.lean)连接实际规则及有限可达标准域。语义关系与初始供应均实际构造，并非额外前提。详见[定义](../notations/ARD2/definition.zh-CN.md)。
+ARD2 允许行与根同时 SELF，父仍严格向前。新版[子图桥](ARD2/src/ARD2SkylineBridge.lean)证明实际轮廓规则输出包含于旧完整包输出。后端的[有限规则桥](ARD2-legacy/src/ARD2DefinitionFidelity.lean)和[最大根压缩桥](ARD2-legacy/src/ARD2Compression.lean)针对 ARD2-legacy，不能误读成新旧轮廓同构的形式化。语义关系与初始供应均实际构造，并非额外前提。详见[定义](../notations/ARD2/definition.zh-CN.md)。
 
 ## 独立项目结构
 
@@ -41,13 +44,14 @@ ARD2 允许行与根同时 SELF，父仍严格向前，生成根包达到接缝�
 | [ARD](ARD/README.zh-CN.md) | `ARD/src/` | 7 | 56 |
 | [ARD-legacy](ARD-legacy/README.zh-CN.md) | `ARD-legacy/src/` | 20 | 50 |
 | [IPD](IPD/README.zh-CN.md) | `IPD/src/` | 40 | 55 |
-| [ARD2](ARD2/README.zh-CN.md) | `ARD2/src/` | 21 | 51 |
+| [ARD2-legacy](ARD2-legacy/README.zh-CN.md) | `ARD2-legacy/src/` | 21 | 51 |
+| [ARD2](ARD2/README.zh-CN.md) | `ARD2/src/` | 7 | 57 |
 | [共享基础](shared/README.zh-CN.md) | `shared/src/` | 35 | 35 |
-| 可选联合验收 | `src/` | 5 | 330 |
+| 可选联合验收 | `src/` | 6 | 338 |
 
-每个记号有自己的 `lakefile.lean`、工具链、锁文件、`sources.json`、`build.py`、构建输出和验证收据。原记号项目只依赖共享基础，只有 Y 还依赖外部 BMS。新版 ARD 另有明确的 ARD-legacy 语义后端依赖；无关记号项目仍相互独立。闭包数字包含实际使用的共享模块，不能直接相加当作不同模块总数。
+每个记号有自己的 `lakefile.lean`、工具链、锁文件、`sources.json`、`build.py`、构建输出和验证收据。原记号项目只依赖共享基础，只有 Y 还依赖外部 BMS。新版 ARD、ARD2 分别显式依赖各自 legacy 语义后端；无关记号项目仍相互独立。闭包数字包含实际使用的共享模块，不能直接相加当作不同模块总数。
 
-现在共有 **318 个本地模块**（161 个原样上游 Y 模块、157 个本地模块），加 **12 个外部 BMS 模块**，证明源码并集为 **330**。轮廓版新增七个私有模块和一个联合入口。20 个旧版证明源码只迁移目录，不改数学源码字节；四个历史联合源码原样保留。
+现在共有 **326 个随库模块**（161 个原样上游 Y 模块、165 个本地模块），加 **12 个外部 BMS 模块**，证明源码并集为 **338**。两次轮廓修订各新增七个私有模块和一个联合入口。20 个 ARD-legacy 和 21 个 ARD2-legacy 数学源码文件只迁移目录、内容不变；此前所有联合源码原样保留。
 
 [layout.json](layout.json) 是全库目录索引，不参与单个子项目的缓存指纹。各项目的 `sources.json` 才是其精确源码依赖清单，包含来源、版本、SHA-256 和真实路径。哈希将 CRLF 规范为 LF。共享基础保留部分历史上名带 RPD／LRD／ARD 的完整模块，因为其中的定义、引理已被多个项目使用；不因此依赖那些记号的私有项目。
 
