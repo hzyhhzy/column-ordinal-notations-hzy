@@ -2,9 +2,19 @@
 
 At 20:00 on September 11, @Phyrion published a [well-ordering proof for the Y-sequence system](https://github.com/Phyrion1343/1Y-Well-Ordering-Lean). Shortly afterwards, @test_alpha0 reduced the required axiomatic foundation to $KP_\omega+\text{there exists an uncountable ordinal}$. This repository collects RPD, LRD, Ω-LRD3, ARD, IPD, and ARD2, notation systems devised by GPT6-astra after studying those proofs, together with their well-ordering proofs. RPD admits a much shorter definition than Y; the paper comparison chain below proves it is at least as strong as the fixed 1Y definition. LRD and Ω-LRD3 are further extensions of that construction. ARD makes row labels into references to earlier columns, so the row coordinate itself moves during expansion. IPD uses finite-level iterated tree profiles and relocates references even inside nested heads. ARD2 returns to three natural-number coordinates, allowing both row and root SELF references and full-context root packages. All six admit paper well-ordering proofs in the same axiomatic system. Their order-type relationships with omega-Y and other familiar notation systems are currently unknown.
 
-Definitions, executable fundamental sequences, and well-ordering proofs for column-diagram ordinal notations. This source snapshot was prepared on **2026-09-17** for [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy). The suffix `hzy` refers to the repository owner's name.
+Definitions, executable fundamental sequences, and well-ordering proofs for column-diagram ordinal notations. This source snapshot was updated on **2026-09-20** for [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy). The suffix `hzy` refers to the repository owner's name.
 
-The notation implementations are **RPD, LRD, Ω-LRD3, ARD, IPD, ARD2, SPD, CWY, CWY2 and Ω-CWY**, with the CWY adapter/candidate distinctions below. The Lean proof collection covers **Y, RPD, LRD, Ω-LRD3, ARD, IPD and ARD2**. ARD-legacy and ARD2-legacy are retained as explicit previous editions; other Ω-LRD variants and historical experimental implementations are excluded.
+The notation implementations are **RPD, LRD, Ω-LRD3, ARD, IPD, ARD2, SPD, CWY, CWY2, Ω-CWY, ACD, CSD and ICP**, with the candidate/failed-version distinctions below. The Lean proof collection still covers only **Y, RPD, LRD, Ω-LRD3, ARD, IPD and ARD2**. ARD-legacy and ARD2-legacy are retained as explicit previous editions; other Ω-LRD variants are excluded. External e0MN implementations are credited separately, not counted as inventions of this project.
+
+## Comparison archive and additional implementations (2026-09-20)
+
+The new [bilingual comparison catalogue](research/order-comparisons/README.md) links the archived proof manuscripts: whole-system RPD/ARD/ARD2/wY bounds in ordinary e0MN, precise low-segment correspondences, the wY→RWD and BMS lower bounds, and the **conditional** BMS→IBLP `initial[0][1]` argument. These are paper comparisons, not new Lean theorems. Target well-ordering and stronger unproved claims are explicitly distinguished.
+
+- **ACD** and **CSD** now have NER, Python and bilingual Markdown definitions. Global well-ordering remains open; no actual standard CSD infinite expansion chain was found in the reviewed records. That is not a proof of its nonexistence.
+- **ICP** is preserved with NER, Python and bilingual rules **as a known non-well-ordered candidate**. Its standard infinite-chain manuscript and bounded check are included; its proved low-segment comparisons remain separate.
+- [**Ordinary e0MN and strong e0MN**](external/README.md) were **invented by @test_alpha0**, not this project. Only the selected fast-counting NER editions are bundled; no new mathematical definition or Python port is supplied. Attribution and unresolved redistribution-license status are documented.
+
+This addition does not change existing expansion rules, add a Lean project, or include PPS4S. The new definitions are Markdown-only; existing publication PDFs are retained.
 
 **SPD (Slot Profile Diagrams)** adds four-integer relations whose heads and arguments are read recursively from earlier columns; the input contains no separate tree field. It includes bilingual definitions, a paper well-ordering manuscript, Python and NER implementations, and bounded regression tests. **SPD has no Lean proof yet.** Its order-type relationships with ARD, ARD2, wY and the whole IPD system remain unknown; its local-profile constructions are not a proof of those comparisons.
 
@@ -45,7 +55,7 @@ This too is a **paper comparison, not yet Lean-formalized**. It claims neither a
 
 ## Definitions and expanders
 
-Each definition is available in English and Chinese, as Markdown and PDF: **48 definition artifacts (including the preserved legacy edition and CWY family)** in total. English Markdown is the default; the title of every English definition links to its Chinese counterpart.
+Definitions are available in English and Chinese. The earlier twelve editions retain their **48 Markdown/PDF definition artifacts**; ACD, CSD and ICP add six Markdown definitions without new PDFs. English Markdown is the default, with a title link to Chinese.
 
 | Notation | English definition | Chinese definition | NER expander | Python expander |
 | --- | --- | --- | --- | --- |
@@ -61,6 +71,9 @@ Each definition is available in English and Chinese, as Markdown and PDF: **48 d
 | CWY | [Markdown](notations/CWY/definition.md) · [PDF](notations/CWY/definition.pdf) | [Markdown](notations/CWY/definition.zh-CN.md) · [PDF](notations/CWY/definition.zh-CN.pdf) | [wY adapter + CWY view](notations/CWY/wY-CWY.ne-rewritten.js) | [core](notations/CWY/compact_wy.py) · [bound wrapper](notations/CWY/compact_wy_bound.py) |
 | CWY2 | [Markdown](notations/CWY2/definition.md) · [PDF](notations/CWY2/definition.pdf) | [Markdown](notations/CWY2/definition.zh-CN.md) · [PDF](notations/CWY2/definition.zh-CN.pdf) | [JavaScript](notations/CWY2/CWY2.ne-rewritten.js) | No Python; [readable JS core](notations/CWY2/cwy_direct.mjs) |
 | Ω-CWY | [Markdown](notations/Omega-CWY/definition.md) · [PDF](notations/Omega-CWY/definition.pdf) | [Markdown](notations/Omega-CWY/definition.zh-CN.md) · [PDF](notations/Omega-CWY/definition.zh-CN.pdf) | [JavaScript](notations/Omega-CWY/Omega-CWY.ne-rewritten.js) | No Python; [readable JS core](notations/Omega-CWY/core.mjs) |
+| ACD — open | [Markdown](notations/ACD/definition.md) | [Markdown](notations/ACD/definition.zh-CN.md) | [JavaScript](notations/ACD/ACD.ne-rewritten.js) | [acd.py](notations/ACD/acd.py) |
+| CSD — open | [Markdown](notations/CSD/definition.md) | [Markdown](notations/CSD/definition.zh-CN.md) | [JavaScript](notations/CSD/CSD.ne-rewritten.js) | [csd.py](notations/CSD/csd.py) · [local clock](notations/CSD/local_clock.py) |
+| ICP — not well-ordered | [Markdown](notations/ICP/definition.md) | [Markdown](notations/ICP/definition.zh-CN.md) | [JavaScript](notations/ICP/ICP.ne-rewritten.js) | [icp.py](notations/ICP/icp.py) |
 
 For the browser version, load the complete JavaScript file into the custom-notation facility of [ne-rewritten](https://smilelee-lyx.github.io/ne-rewritten/). Each file is an independent registration script; no build step is needed. Existing display modes and resource guards are preserved. The scripts also retain their original Chinese help text, including historical proof-status notes; the papers and validation record in this package state the current proof scope.
 
@@ -107,7 +120,7 @@ Y means the fixed upstream inherited-ancestry definition, pinned to commit `1689
 
 ## Exploratory order-type comparisons
 
-The separate [research directory](research/README.md) contains derivations and comparison drafts, not additional certified theorems. The current [IPD comparison overview (Chinese)](research/ordinal-comparisons-20260914/README.zh-CN.md) covers the paper-level Y≤RPD argument, proposed IPD upper bounds for RPD/Y/wY/ARD/TPD, and the subsequent ARD2–IPD investigation. The notes distinguish paper arguments, local lemmas, bounded checks, and unproved candidates; archiving them does not establish an end-to-end Lean comparison.
+The separate [research directory](research/README.md) contains derivations and comparison drafts, not additional certified theorems. Start with the [2026-09-20 bilingual result catalogue](research/order-comparisons/README.md). The earlier [IPD comparison overview (Chinese)](research/ordinal-comparisons-20260914/README.zh-CN.md) covers the paper-level Y≤RPD argument, proposed IPD upper bounds for RPD/Y/wY/ARD/TPD, and the subsequent ARD2–IPD investigation. The notes distinguish paper arguments, local lemmas, bounded checks, and unproved candidates; archiving them does not establish an end-to-end Lean comparison.
 
 Supporting manuscripts and candidate data are included. Experimental code and private source manuscripts are not bundled. Historical test reports and the current status of the formal proofs must be read separately.
 
@@ -138,6 +151,8 @@ node --max-old-space-size=256 tests/ipd_display.cjs
 node --max-old-space-size=256 tests/adjacency_views.cjs
 python -B tests/test_cwy.py
 node --max-old-space-size=256 tests/cwy_family.mjs
+python -B tests/imported_notations.py --fixtures | node --max-old-space-size=256 tests/imported_notations.cjs
+python -B notations/ICP/check_infinite_chain.py
 ```
 
 Follow [the Lean instructions](lean/README.md) for pinned dependencies and the sequential, resource-bounded build. Neither PDF generation nor Node.js is needed for Lean compilation.
@@ -157,7 +172,7 @@ The renderer uses ReportLab with MathJax-rendered formulas. It never silently om
 
 See [validation and provenance](VALIDATION.md) for the checks performed on this snapshot and [source/license notes](SOURCES.md) before publication.
 
-`python tools/check_release.py` checks the publication inventory, local links and existing Lean receipts. The bilingual requirement covers the publication documents; 21 explicitly listed pre-existing monolingual research archives retain their original language. They still receive heading, formula, link and private-path checks. New documents do not receive an automatic archive exemption.
+`python tools/check_release.py` checks the publication inventory, local links and existing Lean receipts. Publication documents are bilingual. The 21 earlier monolingual archives and the explicitly inventoried comparison manuscripts retain their original language as requested; heading, formula, link and private-path checks still apply. New documents do not receive an automatic directory-wide exemption.
 
 ## Directory map
 
@@ -176,8 +191,10 @@ notations/
   CWY/                           Bilingual rules/proof, PDFs, wY-view JS, Python core/bound
   CWY2/                          Bilingual rules, PDFs, standalone JS and direct core
   Omega-CWY/                     Bilingual candidate rules, PDFs, three-view JS and sources
+  ACD/, CSD/, ICP/               Bilingual Markdown, JS/Python; open or failed candidates
+external/                       @test_alpha0's e0MN/strong e0MN, fast-counting NER only
 proofs/paper/                    Existing proofs, SPD manuscript, CWY2 equivalence and audits
-research/                       Comparison drafts, candidates and historical research notes
+research/                       Bilingual comparison catalogue, proof archives and older notes
 ai-docs/                        Bilingual guides and handoff documents for AI readers
 lean/                           Source closure, dependency pins, bounded build
 tests/                          Bounded expander and verifier regression tests

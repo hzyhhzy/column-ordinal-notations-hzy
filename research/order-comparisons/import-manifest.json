@@ -1,0 +1,441 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-20",
+  "notes": [
+    "Source paths are provenance relative to the original workspace, not required files in this clone.",
+    "Archive edits relocate links and redact private paths; missing historical scripts remain explicitly marked.",
+    "Implementation differences are limited to author/proof-status comments and help; mathematical rules are unchanged."
+  ],
+  "files": [
+    {
+      "source": "output/new-notation-20260918/acd.py",
+      "file": "notations/ACD/acd.py",
+      "source_sha256": "01a4e85eb0836fa0661ce8895dbdfdabbe8e4a9dc189ca375fab602e6479421e",
+      "packaged_sha256": "01a4e85eb0836fa0661ce8895dbdfdabbe8e4a9dc189ca375fab602e6479421e",
+      "kind": "implementation"
+    },
+    {
+      "source": "output/new-notation-20260918/ACD.ne-rewritten.js",
+      "file": "notations/ACD/ACD.ne-rewritten.js",
+      "source_sha256": "1ee4a75ddab26088163219bd78d0cdd326cf0312840a5e0adb0006bd54a7609e",
+      "packaged_sha256": "1ee4a75ddab26088163219bd78d0cdd326cf0312840a5e0adb0006bd54a7609e",
+      "kind": "implementation"
+    },
+    {
+      "source": "output/csd-20260917/csd.py",
+      "file": "notations/CSD/csd.py",
+      "source_sha256": "31c09f4a265b484c79fe747f5f9a3bbb821f00f813e3c7547ff73841e899bf11",
+      "packaged_sha256": "31c09f4a265b484c79fe747f5f9a3bbb821f00f813e3c7547ff73841e899bf11",
+      "kind": "implementation"
+    },
+    {
+      "source": "output/csd-20260917/local_clock.py",
+      "file": "notations/CSD/local_clock.py",
+      "source_sha256": "47653e5446608f819dd7e42272be846e938f3ddefdfa988ed696e178edab5360",
+      "packaged_sha256": "f097502be382186528c9883ea22cf8dee748fc846e0fddb0ab0ab57524da3232",
+      "kind": "implementation"
+    },
+    {
+      "source": "output/csd-20260917/CSD.ne-rewritten.js",
+      "file": "notations/CSD/CSD.ne-rewritten.js",
+      "source_sha256": "5384de992dc01caedff7efeac73dbfbf671182b97b691f3dd122d7a7acf1e247",
+      "packaged_sha256": "5384de992dc01caedff7efeac73dbfbf671182b97b691f3dd122d7a7acf1e247",
+      "kind": "implementation"
+    },
+    {
+      "source": "output/icp-candidate-20260919/icp.py",
+      "file": "notations/ICP/icp.py",
+      "source_sha256": "7836b1ec5902c7c31da456cd11f4d8c83dc35dc0215e34c0784e09f6e7a65406",
+      "packaged_sha256": "43015d1dc4e36029c54d6b3ef1a0b90e4fa547857cc3beea8dc33d76cb0847ff",
+      "kind": "implementation"
+    },
+    {
+      "source": "output/icp-candidate-20260919/ICP.ne-rewritten.js",
+      "file": "notations/ICP/ICP.ne-rewritten.js",
+      "source_sha256": "a7931db9c1f26d286065b9d213b1a92efcbd73ca37d9993c60405626f97cfff5",
+      "packaged_sha256": "4c8b52c9af4d54a30783b63aa99bdad495e68833ca01d9b56352166b6809a49e",
+      "kind": "implementation"
+    },
+    {
+      "source": "output/icp-candidate-20260919/check_infinite_chain.py",
+      "file": "notations/ICP/check_infinite_chain.py",
+      "source_sha256": "e93628cbb6db844c5b591ba471e99bb9454ace461fdfc5813bbf27f9c97566b4",
+      "packaged_sha256": "e93628cbb6db844c5b591ba471e99bb9454ace461fdfc5813bbf27f9c97566b4",
+      "kind": "implementation"
+    },
+    {
+      "source": "output/icp-candidate-20260919/ICP-NOT-WELL-FOUNDED.zh-CN.md",
+      "file": "notations/ICP/non-well-founded.zh-CN.md",
+      "source_sha256": "336c1eebf692f0f121309a36bfba37d02474868c9bbca31723cbf9b4e05f64fe",
+      "omitted_references": [
+        "output/icp-candidate-20260919/check_infinite_chain_ner.cjs"
+      ],
+      "packaged_sha256": "37674dfeb6a404d363a56340a20839acc1cb48f01e6071ac15a0be1ca57eb935",
+      "kind": "original-language-manuscript"
+    },
+    {
+      "source": "output/e0mn-counting-20260917/e0MN计数序列优化加速版.ne-rewritten.js",
+      "file": "external/e0MN/e0MN-fast-counting.ne-rewritten.js",
+      "source_sha256": "7438973d153f96b27ee218f926d70c390dadd5e1edac37b53e5ff1ee54e9d33a",
+      "packaged_sha256": "250a84c6a193eb95ade501f9e977f09ba2b599a3e3c873c9a8fc2ddaca53fdec",
+      "kind": "implementation"
+    },
+    {
+      "source": "output/strong-e0mn-counting-20260919/strong-e0MN-计数序列加速版.ne-rewritten.js",
+      "file": "external/strong-e0MN/strong-e0MN-fast-counting.ne-rewritten.js",
+      "source_sha256": "63cb6dd3061c52624257cfbdf86a179a75dcf1d72f8b9534cad5ce6683647447",
+      "packaged_sha256": "45a80dc3219ee3c2d3cc29fceca46f93464ba6ff1aa4f5649f611a97fc2311cf",
+      "kind": "implementation"
+    },
+    {
+      "source": "output/rpd-e0mn-tighter-20260917/RPD-le-e0MN-13132.zh-CN.md",
+      "file": "research/order-comparisons/proofs/rpd-e0mn-tighter-20260917/RPD-le-e0MN-13132.zh-CN.md",
+      "source_sha256": "05762cff9b19e9a9d4a24dc077aed56c539449033b0c91f07767396a7c47b3da",
+      "omitted_references": [
+        "output/rpd-e0mn-tighter-20260917/check-linear-lemmas.cjs",
+        "output/rpd-e0mn-tighter-20260917/check.cjs"
+      ],
+      "packaged_sha256": "6a19a7ec0e30316a1039accd03143aec95b6d2059efa517e65e0cd13d041bb26",
+      "kind": "original-language-manuscript"
+    },
+    {
+      "source": "output/ard-e0mn-cover-20260917/ARD-le-e0MN.zh-CN.md",
+      "file": "research/order-comparisons/proofs/ard-e0mn-cover-20260917/ARD-le-e0MN.zh-CN.md",
+      "source_sha256": "bbfa15eb32d9353e49ffc0aa8ed6df812831b82861eca0eadedfc5ef7159277a",
+      "omitted_references": [
+        "output/ard-e0mn-cover-20260917/check-cover.cjs",
+        "output/ard-e0mn-cover-20260917/check-extra-covers.cjs",
+        "output/ard-e0mn-cover-20260917/check-polynomial-general.cjs",
+        "output/ard-to-e0mn-20260917/README.zh-CN.md"
+      ],
+      "packaged_sha256": "6dbf5deb67dd313caa7817ec5eeb095b5e9ead2bbc1ff51b9b45a6dfb688e9d4",
+      "kind": "original-language-manuscript"
+    },
+    {
+      "source": "output/ard2-e0mn-cover-20260917/ARD2-le-e0MN.zh-CN.md",
+      "file": "research/order-comparisons/proofs/ard2-e0mn-cover-20260917/ARD2-le-e0MN.zh-CN.md",
+      "source_sha256": "09d44e6ed6f4d5192c75a2ca80ecdfc0de162970f145d684b32f2e56403b8421",
+      "omitted_references": [
+        "output/ard2-e0mn-cover-20260917/check-cover.cjs",
+        "output/ard2-e0mn-cover-20260917/check-extra-covers.cjs",
+        "output/ard2-e0mn-cover-20260917/check-native-macros.cjs"
+      ],
+      "packaged_sha256": "53b33c399875988115283ecf561c058287867a8291d07521fa24c3d3a84d5427",
+      "kind": "original-language-manuscript"
+    },
+    {
+      "source": "output/cwy2-e0mn-cover-20260917/CWY2-wY-le-e0MN.zh-CN.md",
+      "file": "research/order-comparisons/proofs/cwy2-e0mn-cover-20260917/CWY2-wY-le-e0MN.zh-CN.md",
+      "source_sha256": "acdf9e6d9e2560bdfe0acefb347a56ab82a3efabc1ff84d174cf1f2dbebf9eec",
+      "omitted_references": [
+        "output/cwy2-e0mn-cover-20260917/check-cover.mjs",
+        "output/cwy2-e0mn-cover-20260917/check-extra-covers.mjs",
+        "output/cwy2-e0mn-cover-20260917/check-word-lemmas.mjs"
+      ],
+      "packaged_sha256": "74f735c4d9e82c0ac12c2309f42798a3bfddb7105d1921be49643a0511b9344c",
+      "kind": "original-language-manuscript"
+    },
+    {
+      "source": "output/ipd-e0mn-20260917/README.zh-CN.md",
+      "file": "research/order-comparisons/proofs/ipd-e0mn-20260917/README.zh-CN.md",
+      "source_sha256": "f0c28047b8af36560c483f7e2a29329b6b1bdc7bbfee7ddb625d14b62e544355",
+      "omitted_references": [
+        "output/ipd-e0mn-20260917/check-profile-obstruction.py",
+        "output/ipd-e0mn-20260917/check-zero-layer.cjs"
+      ],
+      "packaged_sha256": "7a59cb5aefac0ce38d1586d0d39d27718109c857c140fdaf58bf4757aacace53",
+      "kind": "original-language-manuscript"
+    },
+    {
+      "source": "output/e0mn13-rpd12-20260919/README.zh-CN.md",
+      "file": "research/order-comparisons/proofs/e0mn13-rpd12-20260919/README.zh-CN.md",
+      "source_sha256": "e1ad5e42bca338d22471e40a63c307794460c7f656b4fa18f2fa2316461f2431",
+      "omitted_references": [
+        "output/e0mn13-rpd12-20260919/VERIFICATION.json",
+        "output/e0mn13-rpd12-20260919/check-prefix.cjs"
+      ],
+      "packaged_sha256": "0de62c4dc3f8282690b50fc73966c7ffc1d1b36457062a3366965171df42e942",
+      "kind": "original-language-manuscript"
+    },
+    {
+      "source": "output/strong-e0mn-counting-20260919/RPD-12-correspondence.zh-CN.md",
+      "file": "research/order-comparisons/proofs/strong-e0mn-counting-20260919/RPD-12-correspondence.zh-CN.md",
+      "source_sha256": "1030bdbfb4763d3da930b0a36073752bbd2107854743f1530ef97761a38754b1",
+      "omitted_references": [
+        "output/strong-e0mn-counting-20260919/check-rpd-low-segment.cjs",
+        "output/strong-e0mn-counting-20260919/exhaust-rpd-zero.cjs"
+      ],
+      "packaged_sha256": "ee0cd214c1f384282eb2a24b4aab93ad10b2eef90d751b8e4c8ba88ee10afb6b",
+      "kind": "original-language-manuscript"
+    },
+    {
+      "source": "output/e0mn-ard-embedding-20260917/README.zh-CN.md",
+      "file": "research/order-comparisons/proofs/e0mn-ard-embedding-20260917/README.zh-CN.md",
+      "source_sha256": "7158da6f35457ae5a8f52c1e970936f8ee9fd05f4fb3380be3cb98637e00de83",
+      "omitted_references": [
+        "output/e0mn-ard-embedding-20260917/check-finite-cone.cjs"
+      ],
+      "packaged_sha256": "a9fe6fdf4c5e8e198c68d5119d486e7624f5b19dfb98d8c5b757190991142923",
+      "kind": "original-language-manuscript"
+    },
+    {
+      "source": "output/ipd14-e0mn-20260917/e0MN-13-equals-IPD-12.zh-CN.md",
+      "file": "research/order-comparisons/proofs/ipd14-e0mn-20260917/e0MN-13-equals-IPD-12.zh-CN.md",
+      "source_sha256": "34c169e7a1835da6b8315382cb41011cfd664421d750cc8e0d44d5c89430804a",
+      "omitted_references": [
+        "output/ipd14-e0mn-20260917/check-finite-row-quotient.cjs",
+        "output/ipd14-e0mn-20260917/exhaust-finite-row-quotient.cjs"
+      ],
+      "packaged_sha256": "7b67276b8d1372ff20ebf56a79be18c14e70bf0e2330c8743ded37aaa0f95abc",
+      "kind": "original-language-manuscript"
+    },
+    {
+      "source": "output/substantive-wy-20260914/SKYLINE-WORDS.zh-CN.md",
+      "file": "research/order-comparisons/proofs/substantive-wy-20260914/SKYLINE-WORDS.zh-CN.md",
+      "source_sha256": "4a9667410d6a0ee67ecb6fbea67ebed3d782be5ae7422925050dab507c0a7d67",
+      "omitted_references": [
+        "output/substantive-wy-20260914/regenerative_words.py",
+        "output/substantive-wy-20260914/skyline_words.py"
+      ],
+      "packaged_sha256": "d0b209c45a38c6afb637e81277a93fa7ade5e13a4d7bee7d6cdf85a0c57c8644",
+      "kind": "original-language-manuscript"
+    },
+    {
+      "source": "output/substantive-wy-20260914/GLOBAL-COVER-BRIDGE.md",
+      "file": "research/order-comparisons/proofs/substantive-wy-20260914/GLOBAL-COVER-BRIDGE.md",
+      "source_sha256": "6c28610c8e025385f201049c3cc2e09c3e5eefee34de8bbe4cadfb18e134c606",
+      "omitted_references": [],
+      "packaged_sha256": "5279c11ceb37feed63e1441ab84e62dc77e08f2c4d01e4e9534a63045688a1e0",
+      "kind": "original-language-manuscript"
+    },
+    {
+      "source": "output/substantive-wy-20260914/LOWERBOUND-INDEPENDENT-AUDIT.md",
+      "file": "research/order-comparisons/proofs/substantive-wy-20260914/LOWERBOUND-INDEPENDENT-AUDIT.md",
+      "source_sha256": "550eb898a9650b8a50d739a58c596454e57fbb1c6dd8c1e8f02093a66966cad7",
+      "omitted_references": [],
+      "packaged_sha256": "8f049e4cb67ffc759a699a74b691cbf92d8429d8ee4bfb910f27399679f79ab0",
+      "kind": "original-language-manuscript"
+    },
+    {
+      "source": "output/substantive-wy-20260914/SKYLINE-UPPERBOUND-AUDIT.md",
+      "file": "research/order-comparisons/proofs/substantive-wy-20260914/SKYLINE-UPPERBOUND-AUDIT.md",
+      "source_sha256": "6c6173f5fb798793034b5733e2b06f767bb69170416eb17370201dab2c1f2d23",
+      "omitted_references": [],
+      "packaged_sha256": "6e614bbbbbc8b686c06f6fb664baeb7243aa9b9a5ac325de08fa99c233f0764c",
+      "kind": "original-language-manuscript"
+    },
+    {
+      "source": "output/substantive-wy-20260914/SKYLINE-NOSKIP-PROOF.md",
+      "file": "research/order-comparisons/proofs/substantive-wy-20260914/SKYLINE-NOSKIP-PROOF.md",
+      "source_sha256": "cc2cb4e375c896e1b569b68ef5d707f57f87b82e3122838b234459ccc77294e0",
+      "omitted_references": [],
+      "packaged_sha256": "359c42e62604c85fd8d10e1391b7e250f1b935c60304b24e65b9cca21780411f",
+      "kind": "original-language-manuscript"
+    },
+    {
+      "source": "output/substantive-wy-20260914/STANDARD-DOMAIN-AUDIT.md",
+      "file": "research/order-comparisons/proofs/substantive-wy-20260914/STANDARD-DOMAIN-AUDIT.md",
+      "source_sha256": "7f99103b0908d00d2a42af0ea2263e7b1bd1e8c781d320399b49b8be659c4905",
+      "omitted_references": [],
+      "packaged_sha256": "9ec09270a72f2274b0bcd6f02d2c628005a6c96a1a7ce4ddbc55d7c812680abc",
+      "kind": "original-language-manuscript"
+    },
+    {
+      "source": "output/new-notation-20260918/ACD-123595-equals-BMS.zh-CN.md",
+      "file": "research/order-comparisons/proofs/new-notation-20260918/ACD-123595-equals-BMS.zh-CN.md",
+      "source_sha256": "219897b73fcb44aef59a819cb8db02243795fcb144682a559f10c051bb79fcae",
+      "omitted_references": [],
+      "packaged_sha256": "0ea41e52596b03db881e0c1ed622dc8b9cb831f996039c383f4d7d92b7f072da",
+      "kind": "original-language-manuscript"
+    },
+    {
+      "source": "output/new-notation-20260918/ACD-RPD-embedding-progress.zh-CN.md",
+      "file": "research/order-comparisons/proofs/new-notation-20260918/ACD-RPD-embedding-progress.zh-CN.md",
+      "source_sha256": "f8df810a14c73433d6902b3fd05f090a924f1d1e866727f23097f19aecf74061",
+      "omitted_references": [
+        "output/new-notation-20260918/check_rpd_layer_blocks.py",
+        "output/new-notation-20260918/probe_rpd0_acd.py"
+      ],
+      "packaged_sha256": "4440f74a6611e8020b917d5b4465e9a32e72455596b641c1cf41d06df7ab9ee9",
+      "kind": "original-language-manuscript"
+    },
+    {
+      "source": "output/new-notation-20260918/ACD-BMS-lower-bound.zh-CN.md",
+      "file": "research/order-comparisons/proofs/new-notation-20260918/ACD-BMS-lower-bound.zh-CN.md",
+      "source_sha256": "a73d020ae44273216682f1332ee43fd985b652adc38e57971cad5d25ed56a210",
+      "omitted_references": [
+        ".research-ne-rewritten/src/notations/BM-like/BM.ts",
+        "output/new-notation-20260918/probe-acd-bms.cjs"
+      ],
+      "packaged_sha256": "00eff69dbf087c090b401e65d4e1a1e002d86f49e78ae00817357717256af29d",
+      "kind": "original-language-manuscript"
+    },
+    {
+      "source": "output/new-notation-20260918/ACD-finite-BMS-bound.zh-CN.md",
+      "file": "research/order-comparisons/proofs/new-notation-20260918/ACD-finite-BMS-bound.zh-CN.md",
+      "source_sha256": "d53c1f9ccfa8864949642a28a2e41ffabf0a95a1aca9c03c617a04e58c2846e1",
+      "omitted_references": [
+        "output/new-notation-20260918/probe-acd-finite-bms.cjs"
+      ],
+      "packaged_sha256": "824ed8a7042a7155ffdb3c98e9a17e0d12e6c9f52e7d4ecccf55217e5dc21039",
+      "kind": "original-language-manuscript"
+    },
+    {
+      "source": "output/new-notation-20260918/ACD-smaller-BMS-bound.zh-CN.md",
+      "file": "research/order-comparisons/proofs/new-notation-20260918/ACD-smaller-BMS-bound.zh-CN.md",
+      "source_sha256": "5bc6430e4d15b7363327050ed7476bd79487fd20e8dc47499e2d23fe500eef39",
+      "omitted_references": [
+        "output/new-notation-20260918/check_acd_smaller_bms_bound.cjs",
+        "output/new-notation-20260918/check_acd_smaller_bms_bound.py"
+      ],
+      "packaged_sha256": "3baa3113320aff754785f0d87ff23e4340aa96626c6abd2e09a5cc7746d86ae5",
+      "kind": "original-language-manuscript"
+    },
+    {
+      "source": "output/new-notation-20260918/ACD-strict-BMS-bound.zh-CN.md",
+      "file": "research/order-comparisons/proofs/new-notation-20260918/ACD-strict-BMS-bound.zh-CN.md",
+      "source_sha256": "44af71d90c9987db61f7b2ceed035bdcff48b10d0f2c13162d4195331bc305e5",
+      "omitted_references": [
+        "output/new-notation-20260918/check_acd_strict_bms_bound.cjs",
+        "output/new-notation-20260918/check_acd_strict_bms_bound.py"
+      ],
+      "packaged_sha256": "caaf4a88a2fcebe180f0220ecfc55f0ccac07195dce1e9c8c75a7e047d7f325b",
+      "kind": "original-language-manuscript"
+    },
+    {
+      "source": "output/csd-20260917/BMS-small-bound.zh-CN.md",
+      "file": "research/order-comparisons/proofs/csd-20260917/BMS-small-bound.zh-CN.md",
+      "source_sha256": "ce4db61483fa6b34d5f61730abe8843499a42bc9a89b966fc42b30be6caee755",
+      "omitted_references": [
+        "output/csd-20260917/check_bms_below_13.py"
+      ],
+      "packaged_sha256": "fe380726acd8be8fb204d9c9af4adadd5fbb758a4725db824c4005578f43c86e",
+      "kind": "original-language-manuscript"
+    },
+    {
+      "source": "output/csd-20260917/BMS-embedding.zh-CN.md",
+      "file": "research/order-comparisons/proofs/csd-20260917/BMS-embedding.zh-CN.md",
+      "source_sha256": "d9e993dde5184ca0e2825cc8329b30378dff3bca11d4ee95ab83ab713a58db51",
+      "omitted_references": [
+        "output/csd-20260917/bms_reference_vectors.cjs",
+        "output/csd-20260917/check_bms_embedding.py"
+      ],
+      "packaged_sha256": "680fda107ad8f7ce8e02a4f309ee2a237fd8bfc4dbe1ad168e0e6005891b0e81",
+      "kind": "original-language-manuscript"
+    },
+    {
+      "source": "output/icp-candidate-20260919/RPD-zero-row-sector-below-ICP-124.zh-CN.md",
+      "file": "research/order-comparisons/proofs/icp-candidate-20260919/RPD-zero-row-sector-below-ICP-124.zh-CN.md",
+      "source_sha256": "78573946e8fc6fbbc2386e0d9a771ccb0d66cd2cbb88772ee62ebad113564df3",
+      "omitted_references": [
+        "output/icp-candidate-20260919/RPD-into-ICP-progress.zh-CN.md",
+        "output/icp-candidate-20260919/check_icp_flat_reverse_cover.py",
+        "output/icp-candidate-20260919/check_rpd_doubled_cover.py"
+      ],
+      "packaged_sha256": "caff1ef12b940863b231f3375ff82505e084ba8ba2a2979ea1db251f127d193e",
+      "kind": "original-language-manuscript"
+    },
+    {
+      "source": "output/icp-candidate-20260919/RPD-ICP-flat-correspondence.zh-CN.md",
+      "file": "research/order-comparisons/proofs/icp-candidate-20260919/RPD-ICP-flat-correspondence.zh-CN.md",
+      "source_sha256": "6770b9231b758ce5c377016d3c5452cc15bd285a68884d944405c110980b7cfb",
+      "omitted_references": [
+        "output/icp-candidate-20260919/check_flat_lemma.py",
+        "output/icp-candidate-20260919/probe_rpd_full.py"
+      ],
+      "packaged_sha256": "9f094d00bd1bf0911b71c599ab6d621b479a78f875cecee1291587e6a05ccd4d",
+      "kind": "original-language-manuscript"
+    },
+    {
+      "source": "output/icp-candidate-20260919/BMS-below-11242.zh-CN.md",
+      "file": "research/order-comparisons/proofs/icp-candidate-20260919/BMS-below-11242.zh-CN.md",
+      "source_sha256": "cefbeec26b2f95d06b77d42e50da175c2c407647122cf3c86d5e0ea3ee4e3145",
+      "omitted_references": [
+        ".research-ne-rewritten/src/notations/BM-like/BM.ts",
+        "output/icp-candidate-20260919/check_bms_carrier.py",
+        "output/icp-candidate-20260919/check_bms_embedding.cjs"
+      ],
+      "packaged_sha256": "afd7fcce1bb40a2bfec347de5d4095981df32f8ca056d55516ebd3ce667ef5e1",
+      "kind": "original-language-manuscript"
+    },
+    {
+      "source": "output/iblp-bms-20260918/IBLP-01-BMS-lower-bound.zh-CN.md",
+      "file": "research/order-comparisons/proofs/iblp-bms-20260918/IBLP-01-BMS-lower-bound.zh-CN.md",
+      "source_sha256": "75f48ad0519654d7341a653731bfba5e91e6065e9490185b811a9b6613e49147",
+      "omitted_references": [
+        "output/iblp-bms-20260918/IBLP-01-BMS-progress.zh-CN.md",
+        "output/iblp-bms-20260918/check_ribbon_embedding.py",
+        "output/iblp-bms-20260918/check_seed_formula.py"
+      ],
+      "packaged_sha256": "367098e1ff5e71d9d8a49b0799069745e12d81373bb6a693e134c0ec05e7f1ed",
+      "kind": "original-language-manuscript"
+    },
+    {
+      "source": "output/rpd-to-e0mn-20260917/RPD-le-e0MN-14.zh-CN.md",
+      "file": "research/order-comparisons/proofs/rpd-to-e0mn-20260917/RPD-le-e0MN-14.zh-CN.md",
+      "source_sha256": "cb04a3e9ebd81e738159f8232be25e7f9126b2c2119ba70c9a6801ac18f8fa86",
+      "omitted_references": [
+        "output/rpd-to-e0mn-20260917/check-polynomial-lemmas.cjs",
+        "output/rpd-to-e0mn-20260917/probe-cover.cjs"
+      ],
+      "packaged_sha256": "a1ec2e778546dea1d2d6b74c19362397729489e6c9014547f6c69c12084daf41",
+      "kind": "original-language-manuscript"
+    },
+    {
+      "source": "output/new-notation-20260918/BMS-nonstandard-row-bound.zh-CN.md",
+      "file": "research/order-comparisons/proofs/new-notation-20260918/BMS-nonstandard-row-bound.zh-CN.md",
+      "source_sha256": "a882a3e8bb91bab408d7d565f78724c3fe8fb5c564a4142b235dd0578ac82a11",
+      "omitted_references": [],
+      "packaged_sha256": "da8a1c0b32355075fcbb6ed83cc58a774b6950e6ef77aa13b3e690e0be474e3f",
+      "kind": "original-language-manuscript"
+    },
+    {
+      "source": "output/wy-linear-20260914/exact-copy-audit.md",
+      "file": "research/order-comparisons/proofs/wy-linear-20260914/exact-copy-audit.md",
+      "source_sha256": "52814cd33880d10a3d554f44aead027626589f5fed27baf5c68b07f388941f0e",
+      "omitted_references": [],
+      "packaged_sha256": "e7c9e419d5f637db57c198ae2c4bfe7813d304387c89b8dce4c65fe2fcb6e732",
+      "kind": "original-language-manuscript"
+    },
+    {
+      "source": "output/new-notation-20260914/IPD-KP-WELL-ORDERING.zh-CN.md",
+      "file": "research/order-comparisons/proofs/new-notation-20260914/IPD-KP-WELL-ORDERING.zh-CN.md",
+      "source_sha256": "c54a1418bebe1e382b9c614f1deee3361e85794715ad96baf1620b98299cb8e1",
+      "omitted_references": [
+        "ordinal-formalization/ipd/StandardOrder.lean",
+        "output/new-notation-20260914/IPD.ne-rewritten.js",
+        "output/new-notation-20260914/ipd.py"
+      ],
+      "packaged_sha256": "a9e615c04da67cb2806ff05cc115bc260a9dc7f14be85422965b115b3ddac3e5",
+      "kind": "original-language-manuscript"
+    },
+    {
+      "source": "output/new-notation-20260914/KP-LPO-RANK-LEMMA.zh-CN.md",
+      "file": "research/order-comparisons/proofs/new-notation-20260914/KP-LPO-RANK-LEMMA.zh-CN.md",
+      "source_sha256": "5e47b4519eef3dd3555e24fd1dcae44e75517ec903532f8edff4f81278e7cbff",
+      "omitted_references": [
+        "ordinal-formalization/ipd/StandardOrder.lean"
+      ],
+      "packaged_sha256": "8cf5d4008ce6d30d763db30cf95327399087caa5ced97ddab350198aa8bbada8",
+      "kind": "original-language-manuscript"
+    },
+    {
+      "source": "output/csd-20260917/well-ordering-progress.zh-CN.md",
+      "file": "research/order-comparisons/proofs/csd-20260917/well-ordering-progress.zh-CN.md",
+      "source_sha256": "0362cc18eeb757c16dd719e36830e486bd8b0c0fed5be689c40a9c3440fbdde7",
+      "omitted_references": [
+        "output/csd-20260917/check_well_ordering_lemmas.py"
+      ],
+      "packaged_sha256": "c925b85a53d8bd066aabed57152675b6da6fd09ca4c961687ca9f3f101556206",
+      "kind": "original-language-manuscript"
+    },
+    {
+      "source": "output/csd-20260917/definition.zh-CN.md",
+      "file": "research/order-comparisons/proofs/csd-20260917/definition.zh-CN.md",
+      "source_sha256": "9f353a22dbe6f78bc053727b6a96f57ac0b8c3fe8d79e954682c17cd80b9bb7d",
+      "packaged_sha256": "18a66b8b8b5172f4563166aee48549ca7ae2172c7c4934557b0bbf53189e3951",
+      "kind": "original-language-manuscript"
+    }
+  ],
+  "hash_convention": "source_sha256: original bytes; packaged_sha256: UTF-8 text with CRLF normalized to LF. NER byte-exact pins are checked separately."
+}

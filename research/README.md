@@ -6,6 +6,12 @@ This directory keeps exploratory order-type comparisons separate from the well-o
 
 ## 2026-09-14：IPD 与其他记号的比较
 
+For the newer collected results, see the [2026-09-20 bilingual catalogue](order-comparisons/README.md): ordinary e0MN upper bounds, exact low segments, wY→RWD, BMS→ACD/CSD/ICP, and the conditional BMS→IBLP `initial[0][1]` argument. It links the original-language proof manuscripts and states their assumptions and non-Lean status.
+
+较新的已整理结论见 [2026-09-20 双语总览](order-comparisons/README.zh-CN.md)：普通 e0MN 上界、精确低段对应、wY→RWD、BMS→ACD／CSD／ICP，以及有额外假设的 BMS→IBLP `initial[0][1]`。总览引用原语言证明稿，区分前提、全局良序状态与尚未 Lean 化的比较。
+
+The remainder of this index describes the older 2026-09-14 archive. 以下其余说明针对旧的 2026-09-14 档案。
+
 - [总览与结论状态](ordinal-comparisons-20260914/README.zh-CN.md)：所有候选的位置、计数、工作前提和证据等级。
 - [IPD 上界候选与 Y≤RPD](ordinal-comparisons-20260914/01-bounds-and-y-rpd.zh-CN.md)：低段标志点，RPD、Y、wY、ARD、TPD 的编码与候选，以及 Y→RPD 纸面比较链。
 - [ARD2 与 IPD](ordinal-comparisons-20260914/02-ard2-vs-ipd.zh-CN.md)：中间地址障碍、失败编码、候选 `A3[2]`（计数 `1,4,15`）、实际宏步和缺少的全局封闭性。
@@ -19,4 +25,4 @@ The notes are currently in Chinese. They include a paper-level Y≤RPD argument 
 
 本目录只收录研究文档与候选 JSON 数据，不收录私人来源 PDF、实验代码、机器缓存或后台搜索结果目录。指向仓库内已有定义的链接已转换为相对链接；未收录的原工作区文件改为明确标注的路径记录，不伪装成可用下载链接。历史复核命令依赖那些未随文档归档的脚本，不能直接在新克隆的仓库中执行。
 
-Notation definitions, production expanders, and formal proofs are unchanged by this archive. See the [repository overview](../README.md) or [中文主页](../README.zh-CN.md) for those materials.
+The older archive did not change notation definitions or expanders. The 2026-09-20 import adds the explicitly listed implementations without changing the existing formal proofs. See the [repository overview](../README.md) or [中文主页](../README.zh-CN.md).

@@ -1,5 +1,15 @@
 # Sources, versions and licenses · [中文版](SOURCES.zh-CN.md)
 
+## Comparison and expander import (2026-09-20)
+
+The [comparison catalogue](research/order-comparisons/README.md) packages selected pre-existing paper manuscripts in their original language. Their links and private machine paths were normalized; historical evidence and conditional hypotheses remain explicit. [The import manifest](research/order-comparisons/import-manifest.json) records original and packaged hashes. External supplied source PDFs and unrelated PPS4S material are not bundled.
+
+ACD, CSD and ICP are local research designs, supplied here with bilingual Markdown rules and their existing NER/Python kernels. No global well-ordering theorem is added for ACD or CSD. ICP is known non-well-ordered: its packaged Python docstring and NER help were updated to state the existing counterexample, without changing executable mathematical rules. The CSD local-clock module has only a documentation-reference update. The ICP counterexample manuscript's original hashes identify the pre-packaging version, while the manifest records both versions.
+
+**e0MN and strong e0MN were invented by @test_alpha0.** Their [external directory](external/README.md) contains the 2026-09-17 ordinary fast-counting release and the 2026-09-19 new-strong fast-counting release. Original `Made by test_alpha0` credit remains, and a header clarifies authorship. Counts/acceleration are local additions; the original expansion, comparison and geometry functions are unchanged. The new strong input was `strong_e0MN (1).js`, not the older `strong_e0MN.js`; implicit coefficient 1 participates in its transport. No source-folder absolute paths are published.
+
+**License boundary:** these e0MN artifacts were provided for research and are now included at the user's request. This import establishes attribution and version identity, not a redistribution license. No applicable license for the supplied originals was confirmed; permission must be checked before public redistribution. This step does not choose a license, commit, or push. Existing third-party cautions below continue to apply.
+
 2026-09-17: default ARD2 is now the skyline edition. The 21 original mathematical modules moved to `lean/ARD2-legacy/src/` without source-hash changes; seven new modules explicitly reuse that semantic backend. Legacy/new exact closures are 51/57; the aggregate contains 338 modules. Old manuscripts, programs and five displays are retained, with unchanged provenance boundaries. See the [new project](lean/ARD2/README.md); exact isomorphism remains a paper result.
 
 ## CWY-family addition (2026-09-17)

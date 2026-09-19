@@ -16,7 +16,44 @@ IGNORED = {'.build', '.lake', 'tmp', '__pycache__', 'node_modules', '.git'}
 # SPD integration baseline. Only counterpart/H1-language-link checks are
 # waived; headings, formula delimiters, links and all other checks still run.
 # Do not replace this inventory with directory-level or suffix-based rules.
+# The 2026-09-20 manuscripts below are individually included at the user's
+# explicit request to preserve proof drafts without bilingual duplication.
 MONOLINGUAL_ARCHIVES = frozenset({
+    'notations/ICP/non-well-founded.zh-CN.md',
+    'research/order-comparisons/proofs/rpd-e0mn-tighter-20260917/RPD-le-e0MN-13132.zh-CN.md',
+    'research/order-comparisons/proofs/ard-e0mn-cover-20260917/ARD-le-e0MN.zh-CN.md',
+    'research/order-comparisons/proofs/ard2-e0mn-cover-20260917/ARD2-le-e0MN.zh-CN.md',
+    'research/order-comparisons/proofs/cwy2-e0mn-cover-20260917/CWY2-wY-le-e0MN.zh-CN.md',
+    'research/order-comparisons/proofs/ipd-e0mn-20260917/README.zh-CN.md',
+    'research/order-comparisons/proofs/e0mn13-rpd12-20260919/README.zh-CN.md',
+    'research/order-comparisons/proofs/strong-e0mn-counting-20260919/RPD-12-correspondence.zh-CN.md',
+    'research/order-comparisons/proofs/e0mn-ard-embedding-20260917/README.zh-CN.md',
+    'research/order-comparisons/proofs/ipd14-e0mn-20260917/e0MN-13-equals-IPD-12.zh-CN.md',
+    'research/order-comparisons/proofs/substantive-wy-20260914/SKYLINE-WORDS.zh-CN.md',
+    'research/order-comparisons/proofs/substantive-wy-20260914/GLOBAL-COVER-BRIDGE.md',
+    'research/order-comparisons/proofs/substantive-wy-20260914/LOWERBOUND-INDEPENDENT-AUDIT.md',
+    'research/order-comparisons/proofs/substantive-wy-20260914/SKYLINE-UPPERBOUND-AUDIT.md',
+    'research/order-comparisons/proofs/substantive-wy-20260914/SKYLINE-NOSKIP-PROOF.md',
+    'research/order-comparisons/proofs/substantive-wy-20260914/STANDARD-DOMAIN-AUDIT.md',
+    'research/order-comparisons/proofs/new-notation-20260918/ACD-123595-equals-BMS.zh-CN.md',
+    'research/order-comparisons/proofs/new-notation-20260918/ACD-RPD-embedding-progress.zh-CN.md',
+    'research/order-comparisons/proofs/new-notation-20260918/ACD-BMS-lower-bound.zh-CN.md',
+    'research/order-comparisons/proofs/new-notation-20260918/ACD-finite-BMS-bound.zh-CN.md',
+    'research/order-comparisons/proofs/new-notation-20260918/ACD-smaller-BMS-bound.zh-CN.md',
+    'research/order-comparisons/proofs/new-notation-20260918/ACD-strict-BMS-bound.zh-CN.md',
+    'research/order-comparisons/proofs/csd-20260917/BMS-small-bound.zh-CN.md',
+    'research/order-comparisons/proofs/csd-20260917/BMS-embedding.zh-CN.md',
+    'research/order-comparisons/proofs/icp-candidate-20260919/RPD-zero-row-sector-below-ICP-124.zh-CN.md',
+    'research/order-comparisons/proofs/icp-candidate-20260919/RPD-ICP-flat-correspondence.zh-CN.md',
+    'research/order-comparisons/proofs/icp-candidate-20260919/BMS-below-11242.zh-CN.md',
+    'research/order-comparisons/proofs/iblp-bms-20260918/IBLP-01-BMS-lower-bound.zh-CN.md',
+    'research/order-comparisons/proofs/rpd-to-e0mn-20260917/RPD-le-e0MN-14.zh-CN.md',
+    'research/order-comparisons/proofs/new-notation-20260918/BMS-nonstandard-row-bound.zh-CN.md',
+    'research/order-comparisons/proofs/wy-linear-20260914/exact-copy-audit.md',
+    'research/order-comparisons/proofs/new-notation-20260914/IPD-KP-WELL-ORDERING.zh-CN.md',
+    'research/order-comparisons/proofs/new-notation-20260914/KP-LPO-RANK-LEMMA.zh-CN.md',
+    'research/order-comparisons/proofs/csd-20260917/well-ordering-progress.zh-CN.md',
+    'research/order-comparisons/proofs/csd-20260917/definition.zh-CN.md',
     'notations/RPD/y-lower-bound/algorithm.zh-CN.md',
     'notations/RPD/y-lower-bound/BMS-SEED-LOWER-BOUND.zh-CN.md',
     'notations/RPD/y-lower-bound/DILATED-GEOMETRIC-Y.zh-CN.md',
@@ -40,6 +77,11 @@ MONOLINGUAL_ARCHIVES = frozenset({
     'research/README.md',
 })
 NER_HASHES = {
+    'notations/ACD/ACD.ne-rewritten.js': '1ee4a75ddab26088163219bd78d0cdd326cf0312840a5e0adb0006bd54a7609e',
+    'notations/CSD/CSD.ne-rewritten.js': '5384de992dc01caedff7efeac73dbfbf671182b97b691f3dd122d7a7acf1e247',
+    'notations/ICP/ICP.ne-rewritten.js': '4c8b52c9af4d54a30783b63aa99bdad495e68833ca01d9b56352166b6809a49e',
+    'external/e0MN/e0MN-fast-counting.ne-rewritten.js': '250a84c6a193eb95ade501f9e977f09ba2b599a3e3c873c9a8fc2ddaca53fdec',
+    'external/strong-e0MN/strong-e0MN-fast-counting.ne-rewritten.js': '45a80dc3219ee3c2d3cc29fceca46f93464ba6ff1aa4f5649f611a97fc2311cf',
     'notations/ARD2-legacy/ARD2-legacy.ne-rewritten.js': 'e977cb008dfcd0d1738dfabd77ad137b662f8da2dbf191a10842d5a10503dfea',
     'notations/CWY/wY-CWY.ne-rewritten.js': 'c2c1c3c9f83d7b69588e95b53503e6d42c86c092aac170c2db6ffce2d5ca61f5',
     'notations/CWY2/CWY2.ne-rewritten.js': '02b4f334f4c84d5c088a740d0f0a33fee1e1821105bb1dc8baf9228ca0a1a3ee',
@@ -224,12 +266,32 @@ def main():
     for path in pdfs:
         if not path.with_suffix('.md').is_file() or path.stat().st_size < 1000:
             problems.append(f'Invalid PDF/source pair: {path.relative_to(ROOT)}')
-    if {p.name for p in (ROOT/'notations').iterdir() if p.is_dir()} != {'RPD','LRD','Omega-LRD3','ARD','ARD-legacy','IPD','ARD2','ARD2-legacy','SPD','CWY','CWY2','Omega-CWY'}:
+    if {p.name for p in (ROOT/'notations').iterdir() if p.is_dir()} != {'RPD','LRD','Omega-LRD3','ARD','ARD-legacy','IPD','ARD2','ARD2-legacy','SPD','CWY','CWY2','Omega-CWY','ACD','CSD','ICP'}:
         problems.append('Unexpected notation directory')
     for relative, expected in NER_HASHES.items():
         actual = hashlib.sha256((ROOT/relative).read_bytes()).hexdigest()
         if actual != expected:
             problems.append(f'NER snapshot changed: {relative}')
+    # Explicit provenance inventory: do not silently treat all files in the
+    # comparison directory as untranslated historical manuscripts.
+    import_path = ROOT / 'research/order-comparisons/import-manifest.json'
+    try:
+        imports = json.loads(import_path.read_text(encoding='utf-8'))
+        if imports.get('schema_version') != 1:
+            raise ValueError('Unsupported import manifest schema')
+        imported_paths = set()
+        for record in imports['files']:
+            relative = record['file']
+            destination = (ROOT / relative).resolve()
+            if relative in imported_paths or not destination.is_relative_to(ROOT.resolve()):
+                raise ValueError(f'Duplicate or escaping import: {relative}')
+            imported_paths.add(relative)
+            if sha256_lf(destination) != record['packaged_sha256']:
+                raise ValueError(f'Imported snapshot changed: {relative}')
+            if record['kind'] == 'original-language-manuscript' and relative not in MONOLINGUAL_ARCHIVES:
+                raise ValueError(f'Manuscript absent from exact archive inventory: {relative}')
+    except (ValueError, KeyError, OSError) as error:
+        problems.append('Comparison import manifest: ' + str(error))
     for path in files:
         if path.suffix in ('.olean', '.ilean', '.o', '.exe', '.dll', '.pyc'):
             problems.append(f'Generated binary in release inventory: {path.relative_to(ROOT)}')

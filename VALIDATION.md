@@ -1,5 +1,19 @@
 # Snapshot validation · [中文版](VALIDATION.zh-CN.md)
 
+## 2026-09-20: comparison archive and five NER imports
+
+Added the bilingual comparison catalogue, 34 original-language comparison/support manuscripts, the separate ICP counterexample manuscript, ACD/CSD/ICP bilingual Markdown rules and Python/NER implementations, and @test_alpha0's ordinary/new-strong e0MN fast-counting NER editions. No PPS4S, new PDF, Lean theorem, commit or push is part of this integration. The import manifest records source/packaged hashes; only explicitly listed manuscripts receive the requested monolingual exception.
+
+- `python -B tests/imported_notations.py --fixtures | node --max-old-space-size=256 tests/imported_notations.cjs`: **1,425 Python/JS expansion comparisons**, 2,352 exact count-value comparisons, 48 display calls; 120 input states for each of ACD, CSD and ICP. Fifteen oversized ICP outputs were excluded and seven Python count computations were unknown; no skip was counted as a pass.
+- The same suite checked **960 e0MN/new-strong expansion cases**, 120 fast-count results against bounded literal local descent, distinct registration IDs, author credit and preservation of separate default/short FS entry points. Forty naive count computations exceeded their bound and remained unknown. All five exact e0MN target lists in the comparison table had their displayed counts checked.
+- ICP's JS completed 100 steps of the known regenerating standard chain. `python -B notations/ICP/check_infinite_chain.py` separately checked **100 standard-chain steps and 192 arbitrary-prefix instances** of the closed reflection formula. Infinite descent is justified by the archived symbolic induction, not by these finite runs.
+- The JS suite took about 1.6 seconds with a 256 MiB heap ceiling and about 254 MiB final RSS. It enforces a 35-second deadline, 512 MiB RSS ceiling and 2-second VM-call ceiling; Python fixtures use a 25-second deadline and explicit state/width/work bounds. No persistent search process was launched.
+- The release checker passed bilingual/archive inventories, local-link/private-path checks and all **11 existing Lean receipt scopes / 338 distinct modules**. This was a source/receipt check, not a new Lean build; 12 pinned external BMS source entries still await fetch in this checkout.
+- Source comparison confirmed all five imported JS mathematical bodies unchanged after removing only header/help text; all five Python files preserved their executable AST after excluding the module docstring. The eight new bilingual definition/comparison documents passed **307 formula syntax checks** with the locally available KaTeX parser. This is not visual PDF/browser QA.
+- Final release inventory: **146 Markdown files, 44 existing PDFs, 1,492 local links and 17 pinned NER snapshots**. Source hashes retain original bytes; packaged provenance hashes normalize CRLF to LF, consistently with Git text checkout rules. NER byte-exact pins remain separate. `git diff --check` passed.
+
+This is packaging and bounded implementation verification, not a fresh independent audit of all archived mathematical proofs. No graphical browser interaction was used for this import.
+
 ## 2026-09-17: ARD2 skyline migration
 
 Default ARD2 now computes with a skyline and one moved-controller predecessor. The original full-package NER/Python rules, bilingual definitions and paper, and independent Lean project are preserved as **ARD2-legacy**. The 21 legacy mathematical source files have the same Git blob hashes as the preceding ARD2 sources. NER registration IDs are distinct, so the two editions can be imported together. Other notations' implementations and private Lean projects were not modified.

@@ -2,9 +2,19 @@
 
 9 月 11 日 20:00，@Phyrion 公布了 [Y 序列的良序证明](https://github.com/Phyrion1343/1Y-Well-Ordering-Lean)。不久后，@test_alpha0 进一步将所需的公理体系降低到 $KP_\omega+\text{存在不可数序数}$。本仓库收录 GPT6-astra 在阅读上述证明后设计的 RPD、LRD、Ω-LRD3、ARD、IPD、ARD2，以及它们的良序证明。其中，RPD 的定义所需篇幅短得多；下面的纸面比较链证明其序型不小于固定版本 1Y。LRD 和 Ω-LRD3 则是在此基础上进一步扩展得到的记号。ARD 则把行标改为此前列的地址，使行坐标本身也随展开移动。IPD 则使用有限层迭代树轮廓，连嵌套头内的引用也随列搬运。ARD2 回到每组仅三个自然数坐标的形式，允许行与根同时引用本列，并生成覆盖全上下文的根包。六者均有同一公理体系下的纸面良序证明。它们与 omega-Y 等其他常见记号的序型大小关系暂时未知。
 
-本仓库收录列图序数记号的定义、可执行基本列展开器和良序证明。源码快照整理于 **2026-09-17**，仓库地址为 [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy)。名称中的 `hzy` 来自仓库所有者的名字。
+本仓库收录列图序数记号的定义、可执行基本列展开器和良序证明。源码快照更新于 **2026-09-20**，仓库地址为 [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy)。名称中的 `hzy` 来自仓库所有者的名字。
 
-记号实现收录 **RPD、LRD、Ω-LRD3、ARD、IPD、ARD2、SPD、CWY、CWY2、Ω-CWY**，CWY 的适配器／候选状态见下文；Lean 证明覆盖 **Y、RPD、LRD、Ω-LRD3、ARD、IPD、ARD2**。另保留明确标记的旧版 ARD-legacy、ARD2-legacy；其他 Ω-LRD 版本及历史实验实现不收录。
+记号实现收录 **RPD、LRD、Ω-LRD3、ARD、IPD、ARD2、SPD、CWY、CWY2、Ω-CWY、ACD、CSD、ICP**，其中候选和失败版本明确区分；Lean 证明仍只覆盖 **Y、RPD、LRD、Ω-LRD3、ARD、IPD、ARD2**。另保留旧版 ARD-legacy、ARD2-legacy，其他 Ω-LRD 版本不收录。外部 e0MN 实现单独署名，不算本项目发明。
+
+## 比较归档与新增实现（2026-09-20）
+
+新增[双语大小比较总览](research/order-comparisons/README.zh-CN.md)，引用归档证明稿：RPD／ARD／ARD2／wY 在普通 e0MN 中的整体上界、精确低段对应、wY→RWD、BMS 下界，以及**有额外假设的** BMS→IBLP `initial[0][1]`。这些是纸面比较，不新增 Lean 定理；目标良序前提和仍未证明的更强结论均单独标注。
+
+- **ACD、CSD**：加入 NER、Python 和双语 Markdown 定义。整体良序性仍未决；本次检查的 CSD 记录没有找到实际标准无限展开链，但这不证明不存在。
+- **ICP**：作为**已经发现标准无穷降链的非良序候选**保留 NER、Python 和双语规则，附反例稿及有界核对。它已证明的低段对应另行保留。
+- [**普通 e0MN、strong e0MN**](external/README.zh-CN.md)：均由 **@test_alpha0 发明**，不是本项目发明。只收录选定的 NER 计数加速版，不新增文字数学定义或 Python 移植；署名和未确认的再分发许可状态单独说明。
+
+本次不改变既有数学展开规则，不新增 Lean 项目，不收录 PPS4S。新定义只提供 Markdown，既有发布 PDF 保留。
 
 新增 **SPD（Slot Profile Diagrams，潜边轮廓图）**：每条关系只有四个整数，头与参数从此前列递归读出，输入中没有独立树字段。随附双语定义、纸面良序论证稿、Python／NER 实现及有界回归测试。**SPD 尚无 Lean 证明。** 它与 ARD、ARD2、wY、整个 IPD 的序型大小关系仍未知；局部轮廓的构造能力不等于这些跨记号比较已经成立。
 
@@ -45,7 +55,7 @@ $$\alpha_{1Y}\le\alpha_{\mathrm{RPD}}<\alpha_{\mathrm{ARD}}
 
 ## 定义与展开器
 
-每套定义都有中英文 Markdown 和 PDF，共 **48 份定义文件（含保留的旧版及 CWY 系列）**。Markdown 默认英文；每份英文定义的标题均链接到中文版。
+定义提供中英文。原有十二个版本保留 **48 份 Markdown／PDF 定义文件**；ACD、CSD、ICP 另加六份 Markdown 定义，不新增 PDF。Markdown 默认英文，标题链接到中文版。
 
 | 记号 | 英文定义 | 中文定义 | NER 展开器 | Python 展开器 |
 | --- | --- | --- | --- | --- |
@@ -61,6 +71,9 @@ $$\alpha_{1Y}\le\alpha_{\mathrm{RPD}}<\alpha_{\mathrm{ARD}}
 | CWY | [Markdown](notations/CWY/definition.md) · [PDF](notations/CWY/definition.pdf) | [Markdown](notations/CWY/definition.zh-CN.md) · [PDF](notations/CWY/definition.zh-CN.pdf) | [wY 适配器及 CWY 视图](notations/CWY/wY-CWY.ne-rewritten.js) | [核心](notations/CWY/compact_wy.py) · [带界版](notations/CWY/compact_wy_bound.py) |
 | CWY2 | [Markdown](notations/CWY2/definition.md) · [PDF](notations/CWY2/definition.pdf) | [Markdown](notations/CWY2/definition.zh-CN.md) · [PDF](notations/CWY2/definition.zh-CN.pdf) | [JavaScript](notations/CWY2/CWY2.ne-rewritten.js) | 无 Python；[可读 JS 核心](notations/CWY2/cwy_direct.mjs) |
 | Ω-CWY | [Markdown](notations/Omega-CWY/definition.md) · [PDF](notations/Omega-CWY/definition.pdf) | [Markdown](notations/Omega-CWY/definition.zh-CN.md) · [PDF](notations/Omega-CWY/definition.zh-CN.pdf) | [JavaScript](notations/Omega-CWY/Omega-CWY.ne-rewritten.js) | 无 Python；[可读 JS 核心](notations/Omega-CWY/core.mjs) |
+| ACD — 良序未决 | [Markdown](notations/ACD/definition.md) | [Markdown](notations/ACD/definition.zh-CN.md) | [JavaScript](notations/ACD/ACD.ne-rewritten.js) | [acd.py](notations/ACD/acd.py) |
+| CSD — 良序未决 | [Markdown](notations/CSD/definition.md) | [Markdown](notations/CSD/definition.zh-CN.md) | [JavaScript](notations/CSD/CSD.ne-rewritten.js) | [csd.py](notations/CSD/csd.py) · [局部计数](notations/CSD/local_clock.py) |
+| ICP — 已知非良序 | [Markdown](notations/ICP/definition.md) | [Markdown](notations/ICP/definition.zh-CN.md) | [JavaScript](notations/ICP/ICP.ne-rewritten.js) | [icp.py](notations/ICP/icp.py) |
 
 网页版：把所选 JavaScript 文件的完整内容载入 [ne-rewritten](https://smilelee-lyx.github.io/ne-rewritten/) 的自定义记号功能。每份文件均独立注册，无需构建；保留已有显示方式及资源保护。脚本也保留原来的中文帮助文字，其中可能有历史证明进度说明；当前证明范围以本包论文及验收记录为准。
 
@@ -107,7 +120,7 @@ Y 指固定上游提交 `1689b21131b488ec2ba2515bd630360371a2389d` 的继承祖�
 
 ## 序型比较研究（非正式定理）
 
-新增的[研究目录](research/README.md)专门保存推导与比较草稿，与正式证明分开放置。当前收录 [IPD 比较总览](research/ordinal-comparisons-20260914/README.zh-CN.md)、Y≤RPD 的纸面比较思路、RPD/Y/wY/ARD/TPD 的 IPD 上界候选，以及 ARD2 与 IPD 的后续研究。每份总结区分纸面论证、局部引理、有限核验和未证候选；归档不等于完成跨记号的 Lean 认证。
+[研究目录](research/README.md)专门保存推导与比较草稿，与形式化证明分开放置。先读 [2026-09-20 双语比较总览](research/order-comparisons/README.zh-CN.md)。较早的 [IPD 比较总览](research/ordinal-comparisons-20260914/README.zh-CN.md)保存 Y≤RPD 的纸面比较、RPD/Y/wY/ARD/TPD 的 IPD 上界候选，以及 ARD2 与 IPD 的后续研究。总结区分纸面论证、局部引理、有限核验和未证候选；归档不等于完成跨记号的 Lean 认证。
 
 关键原稿与候选数据一并保存，实验代码及私人来源稿不随文档归档。历史测试记录与正式仓库当前证明进度应分别阅读。
 
@@ -138,6 +151,8 @@ node --max-old-space-size=256 tests/ipd_display.cjs
 node --max-old-space-size=256 tests/adjacency_views.cjs
 python -B tests/test_cwy.py
 node --max-old-space-size=256 tests/cwy_family.mjs
+python -B tests/imported_notations.py --fixtures | node --max-old-space-size=256 tests/imported_notations.cjs
+python -B notations/ICP/check_infinite_chain.py
 ```
 
 固定依赖和串行、有资源上限的 Lean 构建方法见 [Lean 说明](lean/README.zh-CN.md)。Lean 编译不需要生成 PDF，也不需要 Node.js。
@@ -157,7 +172,7 @@ python tools/qa_pdfs.py
 
 本次检查结果见 [验收记录](VALIDATION.zh-CN.md)，发布前请阅读 [来源与许可证说明](SOURCES.zh-CN.md)。
 
-`python tools/check_release.py` 检查发布清单、本地链接及已有 Lean 收据。双语要求针对发布文档；21 份明确列名的既有单语研究归档保留原文语言，但仍检查标题、公式、链接及私人路径。新文档不会自动获得归档豁免。
+`python tools/check_release.py` 检查发布清单、本地链接及已有 Lean 收据。发布文档要求双语；原有 21 份单语归档及本次逐文件列名的比较证明稿按要求保留原语言，仍检查标题、公式、链接及私人路径。新文件不会因所在目录而自动豁免。
 
 ## 目录结构
 
@@ -175,8 +190,10 @@ notations/
   CWY/                           双语规则及已有论证、PDF、wY 视图 JS、Python 核心和带界版
   CWY2/                          双语规则、PDF、独立 JS 和可读直接核心
   Omega-CWY/                     双语候选规则、PDF、三视图 JS 和可读源码
+  ACD/, CSD/, ICP/               双语 Markdown、JS／Python；未决或失败候选
+external/                       @test_alpha0 的 e0MN／strong e0MN，仅计数加速 NER
 proofs/paper/                     原有证明、SPD 文稿、CWY2 等价与对应审计
-research/                       比较推导、未证候选及历史研究文稿
+research/                       双语比较总览、证明归档及较早研究文稿
 ai-docs/                        给 AI 阅读的双语指南与交接文档
 lean/                           源码依赖集合、固定版本与有界构建工具
 tests/                          有界展开器与构建验证器回归测试
