@@ -159,6 +159,12 @@ class Renderer:
             # Avoid a final page containing only the source-manuscript citation.
             self.styles['body'].leading = 15.5
             self.styles['body'].spaceAfter = 5.0
+        if not self.zh and (source.parent.name == 'FMP' or
+                            source.name in ('fmp-well-ordering.md', 'bms-le-fmp-12242444.md')):
+            # Keep the short implementation/reference epilogues with the text;
+            # preserve the font size and every other notation's layout.
+            self.styles['body'].leading = 15.0
+            self.styles['body'].spaceAfter = 5.0
         if source.parent.name in ('ARD', 'ARD-legacy') and not self.zh:
             # Keep the final definition paragraph together on the third page.
             self.styles['body'].leading = 15.5
@@ -375,7 +381,9 @@ class Renderer:
         destination = self.source.with_suffix('.pdf')
         label = self.source.parent.name
         if label == 'paper':
-            label = ('CWY2 = wY' if self.source.name.startswith('cwy2-equivalence') else
+            label = ('BMS ≤ FMP(12242444)' if self.source.name.startswith('bms-le-fmp-') else
+                     'FMP' if self.source.name.startswith('fmp-') else
+                     'CWY2 = wY' if self.source.name.startswith('cwy2-equivalence') else
                      'ARD ≤ ARD2(1,3)' if self.source.name.startswith('ard-le-ard2-') else
                      'ARD-legacy' if self.source.name.startswith('ard-legacy-') else
                      'ARD2-legacy' if self.source.name.startswith('ard2-legacy-') else
@@ -383,7 +391,7 @@ class Renderer:
                      'ARD2' if self.source.name.startswith('ard2-') else
                      'IPD' if self.source.name.startswith('ipd-') else
                      'ARD' if self.source.name.startswith('ard-') else 'Y · RPD · LRD · Ω-LRD3')
-        publication_date = '2026-09-17' if label in ('ARD2', 'ARD2-legacy', 'ARD ≤ ARD2(1,3)', 'CWY', 'CWY2', 'Omega-CWY', 'CWY2 = wY') else '2026-09-16' if label in ('ARD', 'ARD-legacy', 'RPD ≤ ARD(1,2)') else '2026-09-14' if label in ('IPD', 'SPD') else '2026-09-13'
+        publication_date = '2026-09-23' if label in ('FMP', 'BMS ≤ FMP(12242444)') else '2026-09-17' if label in ('ARD2', 'ARD2-legacy', 'ARD ≤ ARD2(1,3)', 'CWY', 'CWY2', 'Omega-CWY', 'CWY2 = wY') else '2026-09-16' if label in ('ARD', 'ARD-legacy', 'RPD ≤ ARD(1,2)') else '2026-09-14' if label in ('IPD', 'SPD') else '2026-09-13'
         doc = SimpleDocTemplate(str(destination), pagesize=A4,
                                 leftMargin=50, rightMargin=50, topMargin=48, bottomMargin=48,
                                 title=label + (' - 中文' if self.zh else ' - English'),
@@ -421,9 +429,9 @@ def main():
     args = parser.parse_args()
     sources = [ROOT / p for p in args.sources] if args.sources else [
         ROOT / f'notations/{notation}/definition{lang}.md'
-        for notation in ('RPD', 'LRD', 'Omega-LRD3', 'ARD', 'ARD-legacy', 'IPD', 'ARD2', 'ARD2-legacy', 'SPD', 'CWY', 'CWY2', 'Omega-CWY') for lang in ('', '.zh-CN')
+        for notation in ('RPD', 'LRD', 'Omega-LRD3', 'ARD', 'ARD-legacy', 'IPD', 'ARD2', 'ARD2-legacy', 'SPD', 'CWY', 'CWY2', 'Omega-CWY', 'FMP') for lang in ('', '.zh-CN')
     ] + [ROOT / f'proofs/paper/{paper}{lang}.md'
-         for paper in ('well-ordering', 'ard-well-ordering', 'ard-legacy-well-ordering', 'rpd-le-ard-a2', 'ard-le-ard2-13', 'ipd-well-ordering', 'ard2-well-ordering', 'ard2-legacy-well-ordering', 'spd-well-ordering', 'cwy2-equivalence') for lang in ('', '.zh-CN')]
+         for paper in ('well-ordering', 'ard-well-ordering', 'ard-legacy-well-ordering', 'rpd-le-ard-a2', 'ard-le-ard2-13', 'ipd-well-ordering', 'ard2-well-ordering', 'ard2-legacy-well-ordering', 'spd-well-ordering', 'cwy2-equivalence', 'fmp-well-ordering', 'bms-le-fmp-12242444') for lang in ('', '.zh-CN')]
     for source in sources:
         if not source.is_file():
             raise FileNotFoundError(source)

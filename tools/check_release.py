@@ -77,6 +77,7 @@ MONOLINGUAL_ARCHIVES = frozenset({
     'research/README.md',
 })
 NER_HASHES = {
+    'notations/FMP/FMP.ne-rewritten.js': '199fd418a9ac5a684d8e5232971f98552c8cb6607b1262668f11f80cbdbbda22',
     'notations/ACD/ACD.ne-rewritten.js': '1ee4a75ddab26088163219bd78d0cdd326cf0312840a5e0adb0006bd54a7609e',
     'notations/CSD/CSD.ne-rewritten.js': '5384de992dc01caedff7efeac73dbfbf671182b97b691f3dd122d7a7acf1e247',
     'notations/ICP/ICP.ne-rewritten.js': '4c8b52c9af4d54a30783b63aa99bdad495e68833ca01d9b56352166b6809a49e',
@@ -96,7 +97,7 @@ NER_HASHES = {
     'notations/SPD/SPD.ne-rewritten.js': 'd693c23564a766ecbbe3072cd200632c49b490d47d18428e1310ea438e85f266',
 }
 LEAN_ROOTS = {
-    # SPD has a paper manuscript, but no Lean certificate. Its addition must
+    # SPD and FMP have paper manuscripts, but no Lean certificates. Their addition must
     # neither relabel the existing seven proofs nor weaken their receipt checks.
     'Y': ['FiniteDemandYFinal'],
     'RPD': ['FiniteDemandRPDFinal'],
@@ -257,21 +258,38 @@ def main():
                 problems.append(f'Broken link: {path.relative_to(ROOT)} -> {target}')
     expected_pdfs = {
         f'notations/{notation}/definition{lang}.pdf'
-        for notation in ('RPD','LRD','Omega-LRD3','ARD','ARD-legacy','IPD','ARD2','ARD2-legacy','SPD','CWY','CWY2','Omega-CWY') for lang in ('','.zh-CN')
+        for notation in ('RPD','LRD','Omega-LRD3','ARD','ARD-legacy','IPD','ARD2','ARD2-legacy','SPD','CWY','CWY2','Omega-CWY','FMP') for lang in ('','.zh-CN')
     } | {f'proofs/paper/{paper}{lang}.pdf'
-         for paper in ('well-ordering','ard-well-ordering', 'ard-legacy-well-ordering', 'rpd-le-ard-a2','ard-le-ard2-13','ipd-well-ordering','ard2-well-ordering','ard2-legacy-well-ordering','spd-well-ordering','cwy2-equivalence') for lang in ('','.zh-CN')}
+         for paper in ('well-ordering','ard-well-ordering', 'ard-legacy-well-ordering', 'rpd-le-ard-a2','ard-le-ard2-13','ipd-well-ordering','ard2-well-ordering','ard2-legacy-well-ordering','spd-well-ordering','cwy2-equivalence','fmp-well-ordering','bms-le-fmp-12242444') for lang in ('','.zh-CN')}
     actual_pdfs = {p.relative_to(ROOT).as_posix() for p in pdfs}
     if actual_pdfs != expected_pdfs:
         problems.append(f'PDF inventory mismatch: {actual_pdfs ^ expected_pdfs}')
     for path in pdfs:
         if not path.with_suffix('.md').is_file() or path.stat().st_size < 1000:
             problems.append(f'Invalid PDF/source pair: {path.relative_to(ROOT)}')
-    if {p.name for p in (ROOT/'notations').iterdir() if p.is_dir()} != {'RPD','LRD','Omega-LRD3','ARD','ARD-legacy','IPD','ARD2','ARD2-legacy','SPD','CWY','CWY2','Omega-CWY','ACD','CSD','ICP'}:
+    if {p.name for p in (ROOT/'notations').iterdir() if p.is_dir()} != {'RPD','LRD','Omega-LRD3','ARD','ARD-legacy','IPD','ARD2','ARD2-legacy','SPD','CWY','CWY2','Omega-CWY','ACD','CSD','ICP','FMP'}:
         problems.append('Unexpected notation directory')
     for relative, expected in NER_HASHES.items():
         actual = hashlib.sha256((ROOT/relative).read_bytes()).hexdigest()
         if actual != expected:
             problems.append(f'NER snapshot changed: {relative}')
+    # Keep FMP's imported implementation provenance separate from proof status.
+    try:
+        directory = ROOT / 'notations/FMP'
+        manifest = json.loads((directory / 'provenance.json').read_text(encoding='utf-8'))
+        if manifest.get('schema_version') != 1 or manifest.get('notation') != 'FMP':
+            raise ValueError('Unexpected FMP provenance schema/identity')
+        records = manifest['files']
+        if len(records) != 3 or {r['file'] for r in records} != {
+                'fmp.py', 'fmp_tools.py', 'FMP.ne-rewritten.js'}:
+            raise ValueError('FMP provenance must pin exactly its three implementation files')
+        for record in records:
+            if sha256_lf(directory / record['file']) != record['packaged_sha256']:
+                raise ValueError('FMP provenance hash mismatch: ' + record['file'])
+            if record['file'].endswith('.py') and record['original_sha256'] != record['packaged_sha256']:
+                raise ValueError('FMP Python core is no longer the unchanged imported snapshot')
+    except (ValueError, KeyError, OSError) as error:
+        problems.append('FMP import manifest: ' + str(error))
     # Explicit provenance inventory: do not silently treat all files in the
     # comparison directory as untranslated historical manuscripts.
     import_path = ROOT / 'research/order-comparisons/import-manifest.json'

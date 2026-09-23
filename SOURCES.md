@@ -1,5 +1,15 @@
 # Sources, versions and licenses · [中文版](SOURCES.zh-CN.md)
 
+## FMP addition (2026-09-23)
+
+FMP is a project-authored research notation, not a renamed copy of IBLP or deferred DMP. The [provenance manifest](notations/FMP/provenance.json) pins the selected 2026-09-20 full-completion implementation and the packaged hashes. Both Python modules are byte-identical to that snapshot. NER changes are confined to the display name, proof-status help and two initial examples; its mathematical functions, five views and resource guards are unchanged. Its original registration ID is retained for saved-data compatibility.
+
+The bilingual definitions and [well-ordering paper](proofs/paper/fmp-well-ordering.md) are new publication editions of the existing research arguments, with the later internal-extension and minimum-bad-cap details incorporated. The proof is in ZFC + I3 and is not Lean-certified or independently refereed. It does not enlarge any existing Lean receipt or claim a weak-KP proof. The paper cites the IBLP manuscript, Dougherty and Goldberg with public source links; no third-party PDF or private manuscript is redistributed. Existing project-license boundaries remain unchanged.
+
+## BMS lower-bound source (2026-09-23)
+
+The separate 2026-09-23 [BMS-to-FMP comparison](proofs/paper/bms-le-fmp-12242444.md) republishes the eight-column carrier argument directly for original FMP, with a new five-raw-column/full-completion calculation and closed-band proof. No output-length reindexing or private deferred-completion dependency is imported. Its numerical BMS test reference is newly written from the mathematical rule, not copied from an unlicensed external implementation. The already collected BMS parent lemma remains an explicit mathematical dependency; no new Lean theorem or optimality claim is added.
+
 ## Comparison and expander import (2026-09-20)
 
 The [comparison catalogue](research/order-comparisons/README.md) packages selected pre-existing paper manuscripts in their original language. Their links and private machine paths were normalized; historical evidence and conditional hypotheses remain explicit. [The import manifest](research/order-comparisons/import-manifest.json) records original and packaged hashes. External supplied source PDFs and unrelated PPS4S material are not bundled.

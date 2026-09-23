@@ -2,9 +2,17 @@
 
 9 月 11 日 20:00，@Phyrion 公布了 [Y 序列的良序证明](https://github.com/Phyrion1343/1Y-Well-Ordering-Lean)。不久后，@test_alpha0 进一步将所需的公理体系降低到 $KP_\omega+\text{存在不可数序数}$。本仓库收录 GPT6-astra 在阅读上述证明后设计的 RPD、LRD、Ω-LRD3、ARD、IPD、ARD2，以及它们的良序证明。其中，RPD 的定义所需篇幅短得多；下面的纸面比较链证明其序型不小于固定版本 1Y。LRD 和 Ω-LRD3 则是在此基础上进一步扩展得到的记号。ARD 则把行标改为此前列的地址，使行坐标本身也随展开移动。IPD 则使用有限层迭代树轮廓，连嵌套头内的引用也随列搬运。ARD2 回到每组仅三个自然数坐标的形式，允许行与根同时引用本列，并生成覆盖全上下文的根包。六者均有同一公理体系下的纸面良序证明。它们与 omega-Y 等其他常见记号的序型大小关系暂时未知。
 
-本仓库收录列图序数记号的定义、可执行基本列展开器和良序证明。源码快照更新于 **2026-09-20**，仓库地址为 [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy)。名称中的 `hzy` 来自仓库所有者的名字。
+本仓库收录列图序数记号的定义、可执行基本列展开器和良序证明。源码快照更新于 **2026-09-23**，仓库地址为 [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy)。名称中的 `hzy` 来自仓库所有者的名字。
 
-记号实现收录 **RPD、LRD、Ω-LRD3、ARD、IPD、ARD2、SPD、CWY、CWY2、Ω-CWY、ACD、CSD、ICP**，其中候选和失败版本明确区分；Lean 证明仍只覆盖 **Y、RPD、LRD、Ω-LRD3、ARD、IPD、ARD2**。另保留旧版 ARD-legacy、ARD2-legacy，其他 Ω-LRD 版本不收录。外部 e0MN 实现单独署名，不算本项目发明。
+记号实现收录 **RPD、LRD、Ω-LRD3、ARD、IPD、ARD2、SPD、CWY、CWY2、Ω-CWY、ACD、CSD、ICP、FMP**，其中候选和失败版本明确区分；Lean 证明仍只覆盖 **Y、RPD、LRD、Ω-LRD3、ARD、IPD、ARD2**。另保留旧版 ARD-legacy、ARD2-legacy，其他 Ω-LRD 版本不收录。外部 e0MN 实现单独署名，不算本项目发明。
+
+## FMP：有限映射的完整补点（2026-09-23）
+
+新增 [**FMP（Finite Map Patterns，有限映射图样）**](notations/FMP/definition.zh-CN.md)：原始 Python 核心、独立 [NER 展开器](notations/FMP/FMP.ne-rewritten.js)、双语定义及 PDF、有界测试，以及[双语纸面良序证明](proofs/paper/fmp-well-ordering.zh-CN.md)。指标仍表示**复制 $n$ 遍**，然后整体删除控制自副本、完整补齐新增区；缺像的副本留空但保留命名点。保留五种显示，包括精确计数前缀与上三角邻接表。
+
+证明稿在 **ZFC + I3** 下，通过有界证书、完整补点闭合和最小坏 cap 论证标准域良序。它是作者自审的纸面结果，**尚未第三方终审或 Lean 核验**。FMP 没有 Lean 项目或验证收据，不归入下述弱 KP 集合。本次不声称 FMP 与 DMP 完全等价，也不声称某个有限式恰好等于 BMS 极限；没有拿 DMP 的延迟补点或按新增列数编号的版本替换原 FMP。
+
+配套 [BMS 下界证明](proofs/paper/bms-le-fmp-12242444.zh-CN.md)给出 **$\lim(\mathrm{BMS})\le\mathrm{FMP}(1,2,2,4,2,4,4,4)$**：整个 BMS 标准序保序嵌入该八列式以下。[中文 PDF](proofs/paper/bms-le-fmp-12242444.zh-CN.pdf) · [English Markdown](proofs/paper/bms-le-fmp-12242444.md) · [English PDF](proofs/paper/bms-le-fmp-12242444.pdf)。使用的就是原始按复制次数编号的规则；等号、严格大于及最小性均未证明。这是纸面比较，不是 Lean 证书。
 
 ## 比较归档与新增实现（2026-09-20）
 
@@ -68,6 +76,7 @@ $$\alpha_{1Y}\le\alpha_{\mathrm{RPD}}<\alpha_{\mathrm{ARD}}
 | ARD2 | [Markdown](notations/ARD2/definition.md) · [PDF](notations/ARD2/definition.pdf) | [Markdown](notations/ARD2/definition.zh-CN.md) · [PDF](notations/ARD2/definition.zh-CN.pdf) | [JavaScript](notations/ARD2/ARD2.ne-rewritten.js) | [ard2.py](notations/ARD2/ard2.py) |
 | ARD2-legacy | [Markdown](notations/ARD2-legacy/definition.md) · [PDF](notations/ARD2-legacy/definition.pdf) | [Markdown](notations/ARD2-legacy/definition.zh-CN.md) · [PDF](notations/ARD2-legacy/definition.zh-CN.pdf) | [JavaScript](notations/ARD2-legacy/ARD2-legacy.ne-rewritten.js) | [ard2.py](notations/ARD2-legacy/ard2.py) |
 | SPD | [Markdown](notations/SPD/definition.md) · [PDF](notations/SPD/definition.pdf) | [Markdown](notations/SPD/definition.zh-CN.md) · [PDF](notations/SPD/definition.zh-CN.pdf) | [JavaScript](notations/SPD/SPD.ne-rewritten.js) | [spd.py](notations/SPD/spd.py) |
+| FMP | [Markdown](notations/FMP/definition.md) · [PDF](notations/FMP/definition.pdf) | [Markdown](notations/FMP/definition.zh-CN.md) · [PDF](notations/FMP/definition.zh-CN.pdf) | [JavaScript](notations/FMP/FMP.ne-rewritten.js) | [核心](notations/FMP/fmp.py) · [计数及解析](notations/FMP/fmp_tools.py) |
 | CWY | [Markdown](notations/CWY/definition.md) · [PDF](notations/CWY/definition.pdf) | [Markdown](notations/CWY/definition.zh-CN.md) · [PDF](notations/CWY/definition.zh-CN.pdf) | [wY 适配器及 CWY 视图](notations/CWY/wY-CWY.ne-rewritten.js) | [核心](notations/CWY/compact_wy.py) · [带界版](notations/CWY/compact_wy_bound.py) |
 | CWY2 | [Markdown](notations/CWY2/definition.md) · [PDF](notations/CWY2/definition.pdf) | [Markdown](notations/CWY2/definition.zh-CN.md) · [PDF](notations/CWY2/definition.zh-CN.pdf) | [JavaScript](notations/CWY2/CWY2.ne-rewritten.js) | 无 Python；[可读 JS 核心](notations/CWY2/cwy_direct.mjs) |
 | Ω-CWY | [Markdown](notations/Omega-CWY/definition.md) · [PDF](notations/Omega-CWY/definition.pdf) | [Markdown](notations/Omega-CWY/definition.zh-CN.md) · [PDF](notations/Omega-CWY/definition.zh-CN.pdf) | [JavaScript](notations/Omega-CWY/Omega-CWY.ne-rewritten.js) | 无 Python；[可读 JS 核心](notations/Omega-CWY/core.mjs) |
@@ -106,6 +115,7 @@ $$
 - **SPD 纸面论证稿（尚未 Lean 形式化）：**[英文 Markdown](proofs/paper/spd-well-ordering.md) · [英文 PDF](proofs/paper/spd-well-ordering.pdf) · [中文 Markdown](proofs/paper/spd-well-ordering.zh-CN.md) · [中文 PDF](proofs/paper/spd-well-ordering.zh-CN.pdf)。
 - **CWY2／wY 等价（纸面）：**[英文 Markdown](proofs/paper/cwy2-equivalence.md) · [英文 PDF](proofs/paper/cwy2-equivalence.pdf) · [中文 Markdown](proofs/paper/cwy2-equivalence.zh-CN.md) · [中文 PDF](proofs/paper/cwy2-equivalence.zh-CN.pdf)。CWY 的表示及带界良序论证收入其定义；Ω-CWY 暂无整体良序证明。
 - **IPD 定义对应审计：**[英文](proofs/paper/ipd-fidelity.md) · [中文](proofs/paper/ipd-fidelity.zh-CN.md)。
+- **FMP 纸面证明（ZFC + I3，未 Lean）：**[English Markdown](proofs/paper/fmp-well-ordering.md) · [English PDF](proofs/paper/fmp-well-ordering.pdf) · [中文 Markdown](proofs/paper/fmp-well-ordering.zh-CN.md) · [中文 PDF](proofs/paper/fmp-well-ordering.zh-CN.pdf)。这是另一个更强的充分公理上界，不是上面的弱 KP 上界。
 - **Lean：**[英文构建说明与定理索引](lean/README.md) · [中文说明](lean/README.zh-CN.md)。
 - **独立 Lean 项目：**[Y](lean/Y/README.zh-CN.md) · [RPD](lean/RPD/README.zh-CN.md) · [LRD](lean/LRD/README.zh-CN.md) · [Ω-LRD3](lean/Omega-LRD3/README.zh-CN.md) · [ARD](lean/ARD/README.zh-CN.md) · [IPD](lean/IPD/README.zh-CN.md) · [ARD2](lean/ARD2/README.zh-CN.md)。
 - **可选联合入口：**[ARD2RevisionFinalAudit.lean](lean/src/ARD2RevisionFinalAudit.lean)。
@@ -144,6 +154,10 @@ python tests/test_ipd.py
 python tests/test_ard2.py
 python -B tests/test_ard2_legacy.py
 python -B tests/test_spd.py
+python -B tests/test_fmp.py
+python -B tests/fmp_bms_comparison.py
+node --max-old-space-size=512 tests/fmp_ner.cjs
+python -B tests/fmp_fixtures.py | node --max-old-space-size=512 tests/fmp_cross_language.cjs
 python -B tests/test_lean_verifier.py
 node --max-old-space-size=256 tests/ard2_ner.cjs
 node --max-old-space-size=256 tests/ard2_display.cjs

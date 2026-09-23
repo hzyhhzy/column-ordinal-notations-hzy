@@ -1,5 +1,15 @@
 # 来源、版本与许可证 · [English](SOURCES.md)
 
+## FMP 收录（2026-09-23）
+
+FMP 是本项目设计的研究记号，不是把 IBLP 或延迟补点 DMP 改名。[来源清单](notations/FMP/provenance.json)固定 2026-09-20 的全补实现及收录后哈希。两个 Python 模块与该快照逐字节相同。NER 只改显示名、证明状态帮助，并增加两个初始例子；数学函数、五种显示及保护预算不变。原注册 ID 保留，以兼容已保存数据。
+
+双语定义与[良序证明稿](proofs/paper/fmp-well-ordering.zh-CN.md)是既有研究论证的新发布版，合并了后续补齐的内部延伸和最小坏 cap 细节。证明使用 ZFC + I3，未 Lean 核验或独立终审；不扩充既有 Lean 收据，也不声称弱 KP 证明。文稿通过公开链接引用 IBLP、Dougherty、Goldberg；不转载第三方 PDF 或私人文稿。原有许可证边界保持不变。
+
+## BMS 下界文稿来源（2026-09-23）
+
+单独的 2026-09-23 [BMS 到 FMP 比较](proofs/paper/bms-le-fmp-12242444.zh-CN.md)将八列承载式论证改写为直接针对原始 FMP 的版本，给出原始五列表、完整补点计算和闭合带模拟。不引入按输出列数重编号或私人延迟补点依赖。数字式 BMS 测试参考由数学定义重新编写，没有复制外部未授权实现。已收录的 BMS 父表引理仍是明确的数学依赖；不新增 Lean 定理或最优性声明。
+
 ## 比较与展开器收录（2026-09-20）
 
 [比较总览](research/order-comparisons/README.zh-CN.md)收录选定的既有纸面论证，证明稿保留原语言，仅整理链接及私人机器路径；历史证据与条件假设明确保留。[导入清单](research/order-comparisons/import-manifest.json)记录原始和收录后哈希。不转载私人来源 PDF，不收录无关的 PPS4S。

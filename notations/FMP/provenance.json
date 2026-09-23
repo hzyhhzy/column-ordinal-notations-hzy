@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "notation": "FMP",
+  "source_snapshot": "cap-pattern-design-20260920",
+  "packaged": "2026-09-23",
+  "mathematical_rule": "copy-indexed full completion; unavailable maps become empty; cut the true controller self-copy before completion",
+  "proof_status": "paper manuscript in ZFC + I3; no Lean verification or independent final review",
+  "ner_registration_id": "fmp-candidate-20260920",
+  "files": [
+    {
+      "file": "fmp.py",
+      "original_sha256": "dfc41abfb2d0ea1912ba8ab6a0fad5673c4dbca4c03c14276c5e0397833a42b5",
+      "packaged_sha256": "dfc41abfb2d0ea1912ba8ab6a0fad5673c4dbca4c03c14276c5e0397833a42b5",
+      "changes": "none"
+    },
+    {
+      "file": "fmp_tools.py",
+      "original_sha256": "e884331549f7eaa79a0881acd798a975100f596824da42e34187d46abf96c8de",
+      "packaged_sha256": "e884331549f7eaa79a0881acd798a975100f596824da42e34187d46abf96c8de",
+      "changes": "none"
+    },
+    {
+      "file": "FMP.ne-rewritten.js",
+      "original_sha256": "cb0447e9466dcbf5109433a8cd4794d0732dba5688daf17b89b7566757b5b20a",
+      "packaged_sha256": "199fd418a9ac5a684d8e5232971f98552c8cb6607b1262668f11f80cbdbbda22",
+      "changes": "display name and proof-status help; add the seven- and eight-column initial examples; no rule changes"
+    }
+  ]
+}

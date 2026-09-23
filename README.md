@@ -2,9 +2,17 @@
 
 At 20:00 on September 11, @Phyrion published a [well-ordering proof for the Y-sequence system](https://github.com/Phyrion1343/1Y-Well-Ordering-Lean). Shortly afterwards, @test_alpha0 reduced the required axiomatic foundation to $KP_\omega+\text{there exists an uncountable ordinal}$. This repository collects RPD, LRD, Ω-LRD3, ARD, IPD, and ARD2, notation systems devised by GPT6-astra after studying those proofs, together with their well-ordering proofs. RPD admits a much shorter definition than Y; the paper comparison chain below proves it is at least as strong as the fixed 1Y definition. LRD and Ω-LRD3 are further extensions of that construction. ARD makes row labels into references to earlier columns, so the row coordinate itself moves during expansion. IPD uses finite-level iterated tree profiles and relocates references even inside nested heads. ARD2 returns to three natural-number coordinates, allowing both row and root SELF references and full-context root packages. All six admit paper well-ordering proofs in the same axiomatic system. Their order-type relationships with omega-Y and other familiar notation systems are currently unknown.
 
-Definitions, executable fundamental sequences, and well-ordering proofs for column-diagram ordinal notations. This source snapshot was updated on **2026-09-20** for [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy). The suffix `hzy` refers to the repository owner's name.
+Definitions, executable fundamental sequences, and well-ordering proofs for column-diagram ordinal notations. This source snapshot was updated on **2026-09-23** for [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy). The suffix `hzy` refers to the repository owner's name.
 
-The notation implementations are **RPD, LRD, Ω-LRD3, ARD, IPD, ARD2, SPD, CWY, CWY2, Ω-CWY, ACD, CSD and ICP**, with the candidate/failed-version distinctions below. The Lean proof collection still covers only **Y, RPD, LRD, Ω-LRD3, ARD, IPD and ARD2**. ARD-legacy and ARD2-legacy are retained as explicit previous editions; other Ω-LRD variants are excluded. External e0MN implementations are credited separately, not counted as inventions of this project.
+The notation implementations are **RPD, LRD, Ω-LRD3, ARD, IPD, ARD2, SPD, CWY, CWY2, Ω-CWY, ACD, CSD, ICP and FMP**, with the candidate/failed-version distinctions below. The Lean proof collection still covers only **Y, RPD, LRD, Ω-LRD3, ARD, IPD and ARD2**. ARD-legacy and ARD2-legacy are retained as explicit previous editions; other Ω-LRD variants are excluded. External e0MN implementations are credited separately, not counted as inventions of this project.
+
+## FMP: full finite-map completion (2026-09-23)
+
+[**FMP (Finite Map Patterns)**](notations/FMP/definition.md) is now included with its original Python kernel, standalone [NER script](notations/FMP/FMP.ne-rewritten.js), bilingual definitions and PDFs, bounded tests, and a [bilingual paper well-ordering manuscript](proofs/paper/fmp-well-ordering.md). The index means **copy $n$ times**, then delete the controller self-copy and fully complete the new region. Unavailable copied maps become empty without deleting their points. Five display modes, including exact count prefixes and the triangular adjacency table, are retained.
+
+The manuscript proves standard-domain well-ordering under **ZFC + I3**, using bounded certificates, full-completion closure and the minimum-bad-cap argument. It is author-audited paper work, **not an independently refereed or Lean-certified result**. FMP has no Lean project or verification receipt and is not included in the weak-KP collection below. No exact FMP/DMP equivalence or BMS-limit equality is claimed by this addition. DMP's deferred completion and the output-length reindexing are not substituted for original FMP.
+
+The accompanying [BMS lower-bound paper](proofs/paper/bms-le-fmp-12242444.md) proves **$\lim(\mathrm{BMS})\le\mathrm{FMP}(1,2,2,4,2,4,4,4)$**, via a whole-standard-domain order embedding below the eight-column expression. [English PDF](proofs/paper/bms-le-fmp-12242444.pdf) · [中文文稿](proofs/paper/bms-le-fmp-12242444.zh-CN.md) · [中文 PDF](proofs/paper/bms-le-fmp-12242444.zh-CN.pdf). This uses the original copy-indexed rule; equality, strictness and minimality remain unproved. The comparison is paper-level, not Lean-certified.
 
 ## Comparison archive and additional implementations (2026-09-20)
 
@@ -68,6 +76,7 @@ Definitions are available in English and Chinese. The earlier twelve editions re
 | ARD2 | [Markdown](notations/ARD2/definition.md) · [PDF](notations/ARD2/definition.pdf) | [Markdown](notations/ARD2/definition.zh-CN.md) · [PDF](notations/ARD2/definition.zh-CN.pdf) | [JavaScript](notations/ARD2/ARD2.ne-rewritten.js) | [ard2.py](notations/ARD2/ard2.py) |
 | ARD2-legacy | [Markdown](notations/ARD2-legacy/definition.md) · [PDF](notations/ARD2-legacy/definition.pdf) | [Markdown](notations/ARD2-legacy/definition.zh-CN.md) · [PDF](notations/ARD2-legacy/definition.zh-CN.pdf) | [JavaScript](notations/ARD2-legacy/ARD2-legacy.ne-rewritten.js) | [ard2.py](notations/ARD2-legacy/ard2.py) |
 | SPD | [Markdown](notations/SPD/definition.md) · [PDF](notations/SPD/definition.pdf) | [Markdown](notations/SPD/definition.zh-CN.md) · [PDF](notations/SPD/definition.zh-CN.pdf) | [JavaScript](notations/SPD/SPD.ne-rewritten.js) | [spd.py](notations/SPD/spd.py) |
+| FMP | [Markdown](notations/FMP/definition.md) · [PDF](notations/FMP/definition.pdf) | [Markdown](notations/FMP/definition.zh-CN.md) · [PDF](notations/FMP/definition.zh-CN.pdf) | [JavaScript](notations/FMP/FMP.ne-rewritten.js) | [kernel](notations/FMP/fmp.py) · [counts and parser](notations/FMP/fmp_tools.py) |
 | CWY | [Markdown](notations/CWY/definition.md) · [PDF](notations/CWY/definition.pdf) | [Markdown](notations/CWY/definition.zh-CN.md) · [PDF](notations/CWY/definition.zh-CN.pdf) | [wY adapter + CWY view](notations/CWY/wY-CWY.ne-rewritten.js) | [core](notations/CWY/compact_wy.py) · [bound wrapper](notations/CWY/compact_wy_bound.py) |
 | CWY2 | [Markdown](notations/CWY2/definition.md) · [PDF](notations/CWY2/definition.pdf) | [Markdown](notations/CWY2/definition.zh-CN.md) · [PDF](notations/CWY2/definition.zh-CN.pdf) | [JavaScript](notations/CWY2/CWY2.ne-rewritten.js) | No Python; [readable JS core](notations/CWY2/cwy_direct.mjs) |
 | Ω-CWY | [Markdown](notations/Omega-CWY/definition.md) · [PDF](notations/Omega-CWY/definition.pdf) | [Markdown](notations/Omega-CWY/definition.zh-CN.md) · [PDF](notations/Omega-CWY/definition.zh-CN.pdf) | [JavaScript](notations/Omega-CWY/Omega-CWY.ne-rewritten.js) | No Python; [readable JS core](notations/Omega-CWY/core.mjs) |
@@ -106,6 +115,7 @@ Here KP includes full set induction. The paper does not add a power-set axiom, f
 - **SPD paper manuscript (not Lean-formalized):** [English Markdown](proofs/paper/spd-well-ordering.md) · [English PDF](proofs/paper/spd-well-ordering.pdf) · [Chinese Markdown](proofs/paper/spd-well-ordering.zh-CN.md) · [Chinese PDF](proofs/paper/spd-well-ordering.zh-CN.pdf).
 - **CWY2/wY equivalence (paper):** [English Markdown](proofs/paper/cwy2-equivalence.md) · [English PDF](proofs/paper/cwy2-equivalence.pdf) · [Chinese Markdown](proofs/paper/cwy2-equivalence.zh-CN.md) · [Chinese PDF](proofs/paper/cwy2-equivalence.zh-CN.pdf). CWY representation/bound arguments are in its definition; Ω-CWY has no global well-ordering proof.
 - **IPD correspondence audit:** [English](proofs/paper/ipd-fidelity.md) · [Chinese](proofs/paper/ipd-fidelity.zh-CN.md).
+- **FMP paper (ZFC + I3; not Lean-formalized):** [English Markdown](proofs/paper/fmp-well-ordering.md) · [English PDF](proofs/paper/fmp-well-ordering.pdf) · [Chinese Markdown](proofs/paper/fmp-well-ordering.zh-CN.md) · [Chinese PDF](proofs/paper/fmp-well-ordering.zh-CN.pdf). This is a separate stronger axiom bound, not the weak-KP bound above.
 - **Lean:** [Build instructions and theorem index](lean/README.md) · [Chinese instructions](lean/README.zh-CN.md).
 - **Independent Lean projects:** [Y](lean/Y/README.md) · [RPD](lean/RPD/README.md) · [LRD](lean/LRD/README.md) · [Ω-LRD3](lean/Omega-LRD3/README.md) · [ARD](lean/ARD/README.md) · [IPD](lean/IPD/README.md) · [ARD2](lean/ARD2/README.md).
 - **Optional aggregate entry:** [ARD2RevisionFinalAudit.lean](lean/src/ARD2RevisionFinalAudit.lean).
@@ -144,6 +154,10 @@ python tests/test_ipd.py
 python tests/test_ard2.py
 python -B tests/test_ard2_legacy.py
 python -B tests/test_spd.py
+python -B tests/test_fmp.py
+python -B tests/fmp_bms_comparison.py
+node --max-old-space-size=512 tests/fmp_ner.cjs
+python -B tests/fmp_fixtures.py | node --max-old-space-size=512 tests/fmp_cross_language.cjs
 python -B tests/test_lean_verifier.py
 node --max-old-space-size=256 tests/ard2_ner.cjs
 node --max-old-space-size=256 tests/ard2_display.cjs

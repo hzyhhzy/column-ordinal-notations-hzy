@@ -6,6 +6,8 @@ The original-language manuscripts and their mathematical supporting notes are in
 
 ## 1. Conventions and versions
 
+2026-09-23 addition: the new bilingual [BMS-to-FMP paper](../../proofs/paper/bms-le-fmp-12242444.md) supplies a direct original-FMP proof, with a bundled bounded audit. It is separate from the unchanged historical import manifest.
+
 - “Whole X” means its finite **standard generated domain**, excluding the external top. “Below X(s)” means the standard strict descendant cone specified in the cited manuscript. A counterexample on arbitrary raw inputs is not automatically a standard counterexample.
 - $X\hookrightarrow Y$ denotes a strict order embedding. It does not by itself assert an initial image, surjectivity, equality of counts, or commutation with every indexed fundamental-sequence step.
 - Equalities below identify the relevant initial-segment order types, with finite bottoms and endpoints handled as in the papers. They are not blanket literal equality of data or of `FS_short`.
@@ -49,6 +51,7 @@ The ICP correspondences survive its higher standard infinite chain. Do not assig
 | RPD through `1,2` | ACD through `1,2,4` | [Local embedding](proofs/new-notation-20260918/ACD-RPD-embedding-progress.zh-CN.md), including the stated endpoints. Not the whole RPD. |
 | Whole ordinary BMS | CSD below `1,1,2,5,2` | [Tight bound](proofs/csd-20260917/BMS-small-bound.zh-CN.md), with [full embedding construction](proofs/csd-20260917/BMS-embedding.zh-CN.md). No global CSD well-ordering assumption. |
 | Whole ordinary BMS | ICP below `1,1,2,4,2` | [Embedding](proofs/icp-candidate-20260919/BMS-below-11242.zh-CN.md). Does not claim that the whole ICP is well-ordered. |
+| Whole ordinary BMS | FMP below `1,2,2,4,2,4,4,4` | [Bilingual paper](../../proofs/paper/bms-le-fmp-12242444.md). Original copy-indexed FMP; ordinal interpretation uses the companion ZFC + I3 paper. No equality, minimality or Lean certificate. |
 | Whole ordinary BMS | IBLP `initial[0][1]` | **Conditional paper result; see the hypothesis immediately below.** [Manuscript](proofs/iblp-bms-20260918/IBLP-01-BMS-lower-bound.zh-CN.md). |
 
 **IBLP hypothesis:** when any strict legal descendant of $A=\mathrm{initial}[0][1]$ is expanded further, it triggers neither native completion nor marked completion. Completion in the step from $A$ itself to $A[n]$ is still executed by the original rule. This hypothesis is **assumed, not proved here**. Under it the manuscript gives an order embedding of the whole ordinary BMS standard domain into the actual strict descendants of $A$. It proves neither the reverse bound nor equality nor well-ordering of that entire target cone. `[0][1]` is a path from `initial`, not a decimal or a count word.

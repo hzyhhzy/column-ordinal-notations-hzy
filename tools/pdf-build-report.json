@@ -350,5 +350,53 @@
     "bytes": 754038,
     "sha256": "4c92f41c77db93c4496a98a190b51139a62c0bfb139d977993d2e21657820171",
     "warnings": []
+  },
+  {
+    "source": "proofs/paper/fmp-well-ordering.md",
+    "pdf": "proofs/paper/fmp-well-ordering.pdf",
+    "pages": 10,
+    "bytes": 1501479,
+    "sha256": "5ee99b34a2974394bceed5f3a4a4913fe392d2a9ca24c7236b51888a9eaceda3",
+    "warnings": []
+  },
+  {
+    "source": "proofs/paper/fmp-well-ordering.zh-CN.md",
+    "pdf": "proofs/paper/fmp-well-ordering.zh-CN.pdf",
+    "pages": 8,
+    "bytes": 1315042,
+    "sha256": "0f3d8114e190addf2e94a78d0d84ad49914a708eb1dcd7a0fefc3b62af9cfcf9",
+    "warnings": []
+  },
+  {
+    "source": "proofs/paper/bms-le-fmp-12242444.md",
+    "pdf": "proofs/paper/bms-le-fmp-12242444.pdf",
+    "pages": 6,
+    "bytes": 1039458,
+    "sha256": "898642e71d99efc587ac10640918104f9b57acd46f74cec2c7a2a370728af20c",
+    "warnings": []
+  },
+  {
+    "source": "proofs/paper/bms-le-fmp-12242444.zh-CN.md",
+    "pdf": "proofs/paper/bms-le-fmp-12242444.zh-CN.pdf",
+    "pages": 5,
+    "bytes": 1216958,
+    "sha256": "72447475815bda38940b97901396cedbe8419f33911ca38256ee34dff4397b80",
+    "warnings": []
+  },
+  {
+    "source": "notations/FMP/definition.md",
+    "pdf": "notations/FMP/definition.pdf",
+    "pages": 4,
+    "bytes": 564857,
+    "sha256": "88ea8934bc541fde51048e71289cd84870a42db07a30eeba27261c0fbafb50d4",
+    "warnings": []
+  },
+  {
+    "source": "notations/FMP/definition.zh-CN.md",
+    "pdf": "notations/FMP/definition.zh-CN.pdf",
+    "pages": 4,
+    "bytes": 741189,
+    "sha256": "302f4245fece958f9fd2cbc105d12f8387dd6a38091c10529d5933a058b461b9",
+    "warnings": []
   }
 ]
