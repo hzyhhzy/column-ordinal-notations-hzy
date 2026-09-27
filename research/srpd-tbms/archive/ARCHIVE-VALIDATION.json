@@ -1,0 +1,618 @@
+{
+  "schema_version": 1,
+  "recorded_utc": "2026-09-27T19:20:35.220072+00:00",
+  "suite": "current",
+  "status": "bounded archive replay reproduced",
+  "universal_proof": false,
+  "independent_mathematical_review": false,
+  "integrity": {
+    "schema_version": 1,
+    "status": "hashes and exact imported inventory verified",
+    "manifest_sha256_lf": "41e9b307324156545e05ce64735681aa7014c1da916608f8e4163a78c2329033",
+    "imported_files": 73,
+    "original_language_manuscripts": 25,
+    "kinds": {
+      "historical-evidence": 2,
+      "original-language-manuscript": 25,
+      "research-code": 39,
+      "upstream-source": 4,
+      "upstream-transpilation": 3
+    },
+    "bytes_lf": 961890,
+    "universal_proof": false
+  },
+  "checked_tools": [
+    {
+      "file": "research/srpd-tbms/archive/verify_archive.py",
+      "sha256_lf": "e3dd610c3fd3c8e658fc7843a8d983ab3d476933586efc45e557f6b8a2e979ad"
+    },
+    {
+      "file": "research/srpd-tbms/archive/run_checks.py",
+      "sha256_lf": "c765cf68572f003bad9577a3333bf63b5fb1b573761d3bada267ea2488a2f5cc"
+    }
+  ],
+  "limits": {
+    "node_heap_mib": 512,
+    "outer_timeout_seconds": 30,
+    "max_concurrent_children": 1,
+    "original_simulator_guards_retained": true
+  },
+  "comparison_excludes_only": [
+    "elapsedMs",
+    "rssMiB",
+    "stack"
+  ],
+  "historical_shared_fields_expanded": [
+    "weak.interfacePatches",
+    "weak.seedStages"
+  ],
+  "counts": {
+    "passed": 26,
+    "guarded": 2
+  },
+  "cases": 28,
+  "expected_cases": 28,
+  "max_reported_rss_mib": 380.70703125,
+  "all_children_exited": true,
+  "runs": [
+    {
+      "id": "weak:0",
+      "command": [
+        "node",
+        "--max-old-space-size=512",
+        "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/check-weak-archive-case.cjs",
+        "0"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.439,
+      "timed_out": false,
+      "process_exited": true,
+      "status": "passed",
+      "error_message": null,
+      "historical_semantics_match": true,
+      "semantic_sha256": "1e22d1c80fde1e027f97bcc739c6878723a7648f727b849df36cbd3887d1ced7",
+      "historical_semantic_sha256": "1e22d1c80fde1e027f97bcc739c6878723a7648f727b849df36cbd3887d1ced7",
+      "source_steps": 4,
+      "rss_mib": 119.578125
+    },
+    {
+      "id": "weak:1",
+      "command": [
+        "node",
+        "--max-old-space-size=512",
+        "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/check-weak-archive-case.cjs",
+        "1"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.436,
+      "timed_out": false,
+      "process_exited": true,
+      "status": "passed",
+      "error_message": null,
+      "historical_semantics_match": true,
+      "semantic_sha256": "4e909a66f1dd6c6c7effe1c4c3ed7cdf83bcfc68a4aa556033a8f680f455589d",
+      "historical_semantic_sha256": "4e909a66f1dd6c6c7effe1c4c3ed7cdf83bcfc68a4aa556033a8f680f455589d",
+      "source_steps": 6,
+      "rss_mib": 184.27734375
+    },
+    {
+      "id": "weak:2",
+      "command": [
+        "node",
+        "--max-old-space-size=512",
+        "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/check-weak-archive-case.cjs",
+        "2"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.586,
+      "timed_out": false,
+      "process_exited": true,
+      "status": "passed",
+      "error_message": null,
+      "historical_semantics_match": true,
+      "semantic_sha256": "f859c6e37c7ffd097ea6cc08c9cb70e408195e2028465c48aa3cf97f869a0275",
+      "historical_semantic_sha256": "f859c6e37c7ffd097ea6cc08c9cb70e408195e2028465c48aa3cf97f869a0275",
+      "source_steps": 4,
+      "rss_mib": 192.921875
+    },
+    {
+      "id": "weak:3",
+      "command": [
+        "node",
+        "--max-old-space-size=512",
+        "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/check-weak-archive-case.cjs",
+        "3"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.959,
+      "timed_out": false,
+      "process_exited": true,
+      "status": "passed",
+      "error_message": null,
+      "historical_semantics_match": true,
+      "semantic_sha256": "7465628ec74b97fec25e15989cb5c8b9bd6f818ec5b543d8568981c29e9ec394",
+      "historical_semantic_sha256": "7465628ec74b97fec25e15989cb5c8b9bd6f818ec5b543d8568981c29e9ec394",
+      "source_steps": 6,
+      "rss_mib": 290.94921875
+    },
+    {
+      "id": "weak:4",
+      "command": [
+        "node",
+        "--max-old-space-size=512",
+        "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/check-weak-archive-case.cjs",
+        "4"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.442,
+      "timed_out": false,
+      "process_exited": true,
+      "status": "passed",
+      "error_message": null,
+      "historical_semantics_match": true,
+      "semantic_sha256": "9bc71b43566be91868bca3e0dcbee452308271683f44e290f26c501d451862a4",
+      "historical_semantic_sha256": "9bc71b43566be91868bca3e0dcbee452308271683f44e290f26c501d451862a4",
+      "source_steps": 3,
+      "rss_mib": 276.84765625
+    },
+    {
+      "id": "weak:5",
+      "command": [
+        "node",
+        "--max-old-space-size=512",
+        "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/check-weak-archive-case.cjs",
+        "5"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.282,
+      "timed_out": false,
+      "process_exited": true,
+      "status": "passed",
+      "error_message": null,
+      "historical_semantics_match": true,
+      "semantic_sha256": "3a8a41f459aece2d83510a45aa2676a07d0d2689f5533dd39598bcd03c687e6b",
+      "historical_semantic_sha256": "3a8a41f459aece2d83510a45aa2676a07d0d2689f5533dd39598bcd03c687e6b",
+      "source_steps": 2,
+      "rss_mib": 264.9921875
+    },
+    {
+      "id": "weak:6",
+      "command": [
+        "node",
+        "--max-old-space-size=512",
+        "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/check-weak-archive-case.cjs",
+        "6"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.24,
+      "timed_out": false,
+      "process_exited": true,
+      "status": "passed",
+      "error_message": null,
+      "historical_semantics_match": true,
+      "semantic_sha256": "b9b547ba8371b06bfd508f467d4346a75f9aaefc425d7e497173f272afc4f4ad",
+      "historical_semantic_sha256": "b9b547ba8371b06bfd508f467d4346a75f9aaefc425d7e497173f272afc4f4ad",
+      "source_steps": 2,
+      "rss_mib": 273.75
+    },
+    {
+      "id": "weak:7",
+      "command": [
+        "node",
+        "--max-old-space-size=512",
+        "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/check-weak-archive-case.cjs",
+        "7"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.265,
+      "timed_out": false,
+      "process_exited": true,
+      "status": "passed",
+      "error_message": null,
+      "historical_semantics_match": true,
+      "semantic_sha256": "b65047f88304046433630d364ce077fbb839ca31708dfff5a8e7abe90a68aec7",
+      "historical_semantic_sha256": "b65047f88304046433630d364ce077fbb839ca31708dfff5a8e7abe90a68aec7",
+      "source_steps": 0,
+      "rss_mib": 66.56640625
+    },
+    {
+      "id": "weak:8",
+      "command": [
+        "node",
+        "--max-old-space-size=512",
+        "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/check-weak-archive-case.cjs",
+        "8"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.149,
+      "timed_out": false,
+      "process_exited": true,
+      "status": "passed",
+      "error_message": null,
+      "historical_semantics_match": true,
+      "semantic_sha256": "ac851545bab0f7335873159bf97c0997aad620f28b5b3027a984daee27b0d6a7",
+      "historical_semantic_sha256": "ac851545bab0f7335873159bf97c0997aad620f28b5b3027a984daee27b0d6a7",
+      "source_steps": 0,
+      "rss_mib": 209.72265625
+    },
+    {
+      "id": "weak:9",
+      "command": [
+        "node",
+        "--max-old-space-size=512",
+        "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/check-weak-archive-case.cjs",
+        "9"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.858,
+      "timed_out": false,
+      "process_exited": true,
+      "status": "passed",
+      "error_message": null,
+      "historical_semantics_match": true,
+      "semantic_sha256": "7f1fa14421b94edfb422d29aa468119a48d7a1d86ff54fef1244e783c0464336",
+      "historical_semantic_sha256": "7f1fa14421b94edfb422d29aa468119a48d7a1d86ff54fef1244e783c0464336",
+      "source_steps": 3,
+      "rss_mib": 296.54296875
+    },
+    {
+      "id": "weak:10",
+      "command": [
+        "node",
+        "--max-old-space-size=512",
+        "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/check-weak-archive-case.cjs",
+        "10"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.959,
+      "timed_out": false,
+      "process_exited": true,
+      "status": "passed",
+      "error_message": null,
+      "historical_semantics_match": true,
+      "semantic_sha256": "5498e1a5ee4c97ff59cc0a00d5d77c52bdc894e5d1e8c2489a034ba0881739f6",
+      "historical_semantic_sha256": "5498e1a5ee4c97ff59cc0a00d5d77c52bdc894e5d1e8c2489a034ba0881739f6",
+      "source_steps": 5,
+      "rss_mib": 274.59765625
+    },
+    {
+      "id": "weak:11",
+      "command": [
+        "node",
+        "--max-old-space-size=512",
+        "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/check-weak-archive-case.cjs",
+        "11"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 9.162,
+      "timed_out": false,
+      "process_exited": true,
+      "status": "passed",
+      "error_message": null,
+      "historical_semantics_match": true,
+      "semantic_sha256": "2d37ba3622117d2dbde750552515c2fac7c1a54aa273e17a492947e8a40c0fcb",
+      "historical_semantic_sha256": "2d37ba3622117d2dbde750552515c2fac7c1a54aa273e17a492947e8a40c0fcb",
+      "source_steps": 2,
+      "rss_mib": 326.83984375
+    },
+    {
+      "id": "weak:12",
+      "command": [
+        "node",
+        "--max-old-space-size=512",
+        "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/check-weak-archive-case.cjs",
+        "12"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.173,
+      "timed_out": false,
+      "process_exited": true,
+      "status": "passed",
+      "error_message": null,
+      "historical_semantics_match": true,
+      "semantic_sha256": "e80e0282b080edaf1f52e2d4b317f8cb8c3b176058877c64633850bf14bac966",
+      "historical_semantic_sha256": "e80e0282b080edaf1f52e2d4b317f8cb8c3b176058877c64633850bf14bac966",
+      "source_steps": 2,
+      "rss_mib": 59.24609375
+    },
+    {
+      "id": "weak:13",
+      "command": [
+        "node",
+        "--max-old-space-size=512",
+        "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/check-weak-archive-case.cjs",
+        "13"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.174,
+      "timed_out": false,
+      "process_exited": true,
+      "status": "passed",
+      "error_message": null,
+      "historical_semantics_match": true,
+      "semantic_sha256": "96e52cc4c4a0b42ae97c2ac07a17c05e3c2ab8f488967564f35e42d858f950fb",
+      "historical_semantic_sha256": "96e52cc4c4a0b42ae97c2ac07a17c05e3c2ab8f488967564f35e42d858f950fb",
+      "source_steps": 2,
+      "rss_mib": 58.83203125
+    },
+    {
+      "id": "weak:local",
+      "command": [
+        "node",
+        "--max-old-space-size=512",
+        "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/check-weak-archive-case.cjs",
+        "local"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.693,
+      "timed_out": false,
+      "process_exited": true,
+      "status": "passed",
+      "error_message": null,
+      "historical_semantics_match": true,
+      "semantic_sha256": "42ae714e1bd0d04664a4011deea529eb0d53acd9bf605bbd9cffc6640ebd2274",
+      "historical_semantic_sha256": "42ae714e1bd0d04664a4011deea529eb0d53acd9bf605bbd9cffc6640ebd2274",
+      "source_steps": 0,
+      "rss_mib": 380.70703125
+    },
+    {
+      "id": "weak:common-gate",
+      "command": [
+        "node",
+        "--max-old-space-size=512",
+        "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/check-weak-archive-gate.cjs"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.327,
+      "timed_out": false,
+      "process_exited": true,
+      "status": "passed",
+      "error_message": null,
+      "historical_semantics_match": true,
+      "semantic_sha256": "da64e02c539cf3e71738ca6c81793a6a4d3fac02dd5bf2e5be5e9759065ef4b6",
+      "historical_semantic_sha256": "da64e02c539cf3e71738ca6c81793a6a4d3fac02dd5bf2e5be5e9759065ef4b6",
+      "source_steps": 0,
+      "rss_mib": 69.93359375
+    },
+    {
+      "id": "epsilon:0",
+      "command": [
+        "node",
+        "--max-old-space-size=512",
+        "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/check-epsilon-fixed-bank.cjs",
+        "0"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.173,
+      "timed_out": false,
+      "process_exited": true,
+      "status": "passed",
+      "error_message": null,
+      "historical_semantics_match": true,
+      "semantic_sha256": "a53b0b91dc3e15b12732d69b3f1374a0c8f1c4637ffc22c1dfad72652dcd92b9",
+      "historical_semantic_sha256": "a53b0b91dc3e15b12732d69b3f1374a0c8f1c4637ffc22c1dfad72652dcd92b9",
+      "source_steps": 3,
+      "rss_mib": 56.7578125
+    },
+    {
+      "id": "epsilon:1",
+      "command": [
+        "node",
+        "--max-old-space-size=512",
+        "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/check-epsilon-fixed-bank.cjs",
+        "1"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.186,
+      "timed_out": false,
+      "process_exited": true,
+      "status": "passed",
+      "error_message": null,
+      "historical_semantics_match": true,
+      "semantic_sha256": "c69597cab989d8fbf4574e116f5c677b698c87af6a0b99e57b537c71634f7c1d",
+      "historical_semantic_sha256": "c69597cab989d8fbf4574e116f5c677b698c87af6a0b99e57b537c71634f7c1d",
+      "source_steps": 5,
+      "rss_mib": 59.15625
+    },
+    {
+      "id": "epsilon:2",
+      "command": [
+        "node",
+        "--max-old-space-size=512",
+        "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/check-epsilon-fixed-bank.cjs",
+        "2"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.231,
+      "timed_out": false,
+      "process_exited": true,
+      "status": "passed",
+      "error_message": null,
+      "historical_semantics_match": true,
+      "semantic_sha256": "690e6217df300248a2bad9c61a417da43e2e45d03caccb9fd27c4f4e83d74006",
+      "historical_semantic_sha256": "690e6217df300248a2bad9c61a417da43e2e45d03caccb9fd27c4f4e83d74006",
+      "source_steps": 6,
+      "rss_mib": 82.109375
+    },
+    {
+      "id": "epsilon:3",
+      "command": [
+        "node",
+        "--max-old-space-size=512",
+        "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/check-epsilon-fixed-bank.cjs",
+        "3"
+      ],
+      "exit_code": 1,
+      "elapsed_seconds": 2.829,
+      "timed_out": false,
+      "process_exited": true,
+      "status": "guarded",
+      "error_message": "recursive row allocation width guard",
+      "historical_semantics_match": true,
+      "semantic_sha256": "fa1ea1e7c208c69ffb6d8bed2c6346f25f21f76b67281a494faa9dc49360c55d",
+      "historical_semantic_sha256": "fa1ea1e7c208c69ffb6d8bed2c6346f25f21f76b67281a494faa9dc49360c55d",
+      "source_steps": 3,
+      "rss_mib": 303.65625
+    },
+    {
+      "id": "epsilon:4",
+      "command": [
+        "node",
+        "--max-old-space-size=512",
+        "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/check-epsilon-fixed-bank.cjs",
+        "4"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.191,
+      "timed_out": false,
+      "process_exited": true,
+      "status": "passed",
+      "error_message": null,
+      "historical_semantics_match": true,
+      "semantic_sha256": "a612fe157a338b1f8fb77717e9aa8a92300786330f7fb6775b60225f4289bb50",
+      "historical_semantic_sha256": "a612fe157a338b1f8fb77717e9aa8a92300786330f7fb6775b60225f4289bb50",
+      "source_steps": 3,
+      "rss_mib": 275.875
+    },
+    {
+      "id": "epsilon:5",
+      "command": [
+        "node",
+        "--max-old-space-size=512",
+        "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/check-epsilon-fixed-bank.cjs",
+        "5"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.482,
+      "timed_out": false,
+      "process_exited": true,
+      "status": "passed",
+      "error_message": null,
+      "historical_semantics_match": true,
+      "semantic_sha256": "0a713bbce618fbf9876dcf6056411c4288d66447f56799f9133b933a4e492527",
+      "historical_semantic_sha256": "0a713bbce618fbf9876dcf6056411c4288d66447f56799f9133b933a4e492527",
+      "source_steps": 10,
+      "rss_mib": 183.8046875
+    },
+    {
+      "id": "epsilon:6",
+      "command": [
+        "node",
+        "--max-old-space-size=512",
+        "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/check-epsilon-fixed-bank.cjs",
+        "6"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.174,
+      "timed_out": false,
+      "process_exited": true,
+      "status": "passed",
+      "error_message": null,
+      "historical_semantics_match": true,
+      "semantic_sha256": "83aee257bedd889891b2d18546798ec28ea692c6b97953b350b9e8c88e1aa3fc",
+      "historical_semantic_sha256": "83aee257bedd889891b2d18546798ec28ea692c6b97953b350b9e8c88e1aa3fc",
+      "source_steps": 1,
+      "rss_mib": 59.625
+    },
+    {
+      "id": "epsilon:7",
+      "command": [
+        "node",
+        "--max-old-space-size=512",
+        "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/check-epsilon-fixed-bank.cjs",
+        "7"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.28,
+      "timed_out": false,
+      "process_exited": true,
+      "status": "passed",
+      "error_message": null,
+      "historical_semantics_match": true,
+      "semantic_sha256": "b9b964dc5ca1ab35c8111146734a8522a4344ee82d4aef0ba4ac77040f3fb06a",
+      "historical_semantic_sha256": "b9b964dc5ca1ab35c8111146734a8522a4344ee82d4aef0ba4ac77040f3fb06a",
+      "source_steps": 4,
+      "rss_mib": 65.1484375
+    },
+    {
+      "id": "epsilon:8",
+      "command": [
+        "node",
+        "--max-old-space-size=512",
+        "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/check-epsilon-fixed-bank.cjs",
+        "8"
+      ],
+      "exit_code": 1,
+      "elapsed_seconds": 2.703,
+      "timed_out": false,
+      "process_exited": true,
+      "status": "guarded",
+      "error_message": "recursive row allocation width guard",
+      "historical_semantics_match": true,
+      "semantic_sha256": "7f9a76b1e575a44352b3a5cc3c139cd65c8990efa22446f0ddb6420706bc546d",
+      "historical_semantic_sha256": "7f9a76b1e575a44352b3a5cc3c139cd65c8990efa22446f0ddb6420706bc546d",
+      "source_steps": 3,
+      "rss_mib": 303.31640625
+    },
+    {
+      "id": "epsilon:9",
+      "command": [
+        "node",
+        "--max-old-space-size=512",
+        "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/check-epsilon-fixed-bank.cjs",
+        "9"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.121,
+      "timed_out": false,
+      "process_exited": true,
+      "status": "passed",
+      "error_message": null,
+      "historical_semantics_match": true,
+      "semantic_sha256": "84f758fe788c4708aa58909aa1bdce49f022b89d6ab2118466f2f1aeff394681",
+      "historical_semantic_sha256": "84f758fe788c4708aa58909aa1bdce49f022b89d6ab2118466f2f1aeff394681",
+      "source_steps": 0,
+      "rss_mib": 49.91796875
+    },
+    {
+      "id": "epsilon:10",
+      "command": [
+        "node",
+        "--max-old-space-size=512",
+        "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/check-epsilon-fixed-bank.cjs",
+        "10"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.137,
+      "timed_out": false,
+      "process_exited": true,
+      "status": "passed",
+      "error_message": null,
+      "historical_semantics_match": true,
+      "semantic_sha256": "b249568f045f09866c81c0e47c064192e55560409b4528ca366730c1cb58b4b0",
+      "historical_semantic_sha256": "b249568f045f09866c81c0e47c064192e55560409b4528ca366730c1cb58b4b0",
+      "source_steps": 0,
+      "rss_mib": 52.58984375
+    },
+    {
+      "id": "epsilon:11",
+      "command": [
+        "node",
+        "--max-old-space-size=512",
+        "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/check-epsilon-fixed-bank.cjs",
+        "11"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.184,
+      "timed_out": false,
+      "process_exited": true,
+      "status": "passed",
+      "error_message": null,
+      "historical_semantics_match": true,
+      "semantic_sha256": "f0f04686c869c2058763ca17c655ff696f72371fbf228f57a699038e660b530e",
+      "historical_semantic_sha256": "f0f04686c869c2058763ca17c655ff696f72371fbf228f57a699038e660b530e",
+      "source_steps": 0,
+      "rss_mib": 55.55078125
+    }
+  ]
+}

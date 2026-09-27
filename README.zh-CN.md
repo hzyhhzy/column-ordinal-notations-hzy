@@ -1,10 +1,30 @@
 # 列图序数记号 - HZY · [English](README.md)
 
-9 月 11 日 20:00，@Phyrion 公布了 [Y 序列的良序证明](https://github.com/Phyrion1343/1Y-Well-Ordering-Lean)。不久后，@test_alpha0 进一步将所需的公理体系降低到 $KP_\omega+\text{存在不可数序数}$。本仓库收录 GPT6-astra 在阅读上述证明后设计的 RPD、LRD、Ω-LRD3、ARD、IPD、ARD2，以及它们的良序证明。其中，RPD 的定义所需篇幅短得多；下面的纸面比较链证明其序型不小于固定版本 1Y。LRD 和 Ω-LRD3 则是在此基础上进一步扩展得到的记号。ARD 则把行标改为此前列的地址，使行坐标本身也随展开移动。IPD 则使用有限层迭代树轮廓，连嵌套头内的引用也随列搬运。ARD2 回到每组仅三个自然数坐标的形式，允许行与根同时引用本列，并生成覆盖全上下文的根包。六者均有同一公理体系下的纸面良序证明。它们与 omega-Y 等其他常见记号的序型大小关系暂时未知。
+9 月 11 日 20:00，@Phyrion 公布了 [Y 序列的良序证明](https://github.com/Phyrion1343/1Y-Well-Ordering-Lean)。不久后，@test_alpha0 进一步将所需的公理体系降低到 $KP_\omega+\text{存在不可数序数}$。本仓库收录 GPT6-astra 在阅读上述证明后设计的 RPD、LRD、Ω-LRD3、ARD、IPD、ARD2，以及它们的良序证明。其中，RPD 的定义所需篇幅短得多；下面的纸面比较链证明其序型不小于固定版本 1Y。LRD 和 Ω-LRD3 则是在此基础上进一步扩展得到的记号。ARD 则把行标改为此前列的地址，使行坐标本身也随展开移动。IPD 则使用有限层迭代树轮廓，连嵌套头内的引用也随列搬运。ARD2 回到每组仅三个自然数坐标的形式，允许行与根同时引用本列，并生成覆盖全上下文的根包。六者均有同一公理体系下的纸面良序证明。它们与 omega-Y 的整体比较仍未解决；已知的具体比较和公共初段见下文。
 
-本仓库收录列图序数记号的定义、可执行基本列展开器和良序证明。源码快照更新于 **2026-09-23**，仓库地址为 [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy)。名称中的 `hzy` 来自仓库所有者的名字。
+本仓库收录列图序数记号的定义、可执行基本列展开器和良序证明。源码快照更新于 **2026-09-28**，仓库地址为 [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy)。名称中的 `hzy` 来自仓库所有者的名字。
 
-记号实现收录 **RPD、LRD、Ω-LRD3、ARD、IPD、ARD2、SPD、CWY、CWY2、Ω-CWY、ACD、CSD、ICP、FMP**，其中候选和失败版本明确区分；Lean 证明仍只覆盖 **Y、RPD、LRD、Ω-LRD3、ARD、IPD、ARD2**。另保留旧版 ARD-legacy、ARD2-legacy，其他 Ω-LRD 版本不收录。外部 e0MN 实现单独署名，不算本项目发明。
+记号实现收录 **SRPD、RPD、LRD、Ω-LRD3、ARD、IPD、ARD2、SPD、CWY、CWY2、Ω-CWY、ACD、CSD、ICP、FMP**，其中候选和失败版本明确区分；Lean 证明仍只覆盖 **Y、RPD、LRD、Ω-LRD3、ARD、IPD、ARD2**。另保留旧版 ARD-legacy、ARD2-legacy，其他 Ω-LRD 版本不收录。外部 e0MN 实现单独署名，不算本项目发明。
+
+## SRPD：公共初段与 TBMS 比较（2026-09-28）
+
+[**SRPD**](notations/SRPD/definition.zh-CN.md) 现作为独立记号收录：每列只是非增父列表，首根隐含；提供 [NER 展开器](notations/SRPD/SRPD.ne-rewritten.js)、[Python 核心](notations/SRPD/srpd.py)、双语定义与[公共初段／良序转移说明](notations/SRPD/correspondence.zh-CN.md)。NER 保留父列表、计数序列及带还原检查的 BMS 式高度列表三种显示，原展开规则不变。
+
+**SRPD 是 RPD、ARD、ARD2、IPD 的公共初段的独立呈现**。准确说，SRPD 起点 `[0]` 严格以下的序型，对应下列标准初段：
+
+| 系统 | 对应端点（取严格以下） |
+| --- | --- |
+| RPD | `1,2` |
+| ARD | `1,1,3` |
+| ARD2 | `1,1,3` |
+| IPD | `1,2` |
+| 普通 e0MN（@test_alpha0） | `1,3`，即 M13 |
+
+这是初段序型的对应，**不是整个 RPD 等于 SRPD**。原始投影的有限底部、隐含根与顶端基本列的一位偏移须按对应说明处理；不能无条件把所有原始字符串或展开指标视为相同。良序性通过 RPD 初段转移，仍沿用已有纸面弱 KP 上界；**此次没有新增 SRPD Lean 定理**，也未更改原七系统证明。
+
+[**SRPD vs TBMS 双语分析汇总**](research/srpd-tbms/README.zh-CN.md)只整理最终路线：整个普通 TBMS 的当前承载界，以及 `TBMS ()(1^ε₀)` 的更紧专用界。已有纸面下降模拟给出整个 TBMS 极限严格小于 SRPD 的 `1,2,4,8,4,2`，并进一步压到其第一基本列项之下的固定式；这不是仅凭计数作出的比较。最新 `…6,7,9` 仍是未决候选。文稿明确区分纸面论证、有限核验和未证结论，不声称已完成 Lean 比较或规范逐指标转换器。
+
+要了解**完整证明过程与“怎么嵌入”**，请从[证明档案导读](research/srpd-tbms/archive/README.zh-CN.md)开始：25篇必要证明／引理及其模拟器、运行依赖和2份路线核验记录（共73份导入材料）集中放在 `research/srpd-tbms/archive/`，附双语阅读顺序、纸面步骤与函数对照及仓库内复现入口，不散放到顶层。
 
 ## FMP：有限映射的完整补点（2026-09-23）
 
@@ -63,10 +83,11 @@ $$\alpha_{1Y}\le\alpha_{\mathrm{RPD}}<\alpha_{\mathrm{ARD}}
 
 ## 定义与展开器
 
-定义提供中英文。原有十二个版本保留 **48 份 Markdown／PDF 定义文件**；ACD、CSD、ICP 另加六份 Markdown 定义，不新增 PDF。Markdown 默认英文，标题链接到中文版。
+定义提供中英文。RPD 等十三个既有版本保留 **52 份 Markdown／PDF 定义文件**（含 FMP）；ACD、CSD、ICP、SRPD 另有八份 Markdown 定义，不新增 PDF。Markdown 默认英文，标题链接到中文版。
 
 | 记号 | 英文定义 | 中文定义 | NER 展开器 | Python 展开器 |
 | --- | --- | --- | --- | --- |
+| SRPD — 公共初段 | [Markdown](notations/SRPD/definition.md) | [Markdown](notations/SRPD/definition.zh-CN.md) | [JavaScript](notations/SRPD/SRPD.ne-rewritten.js) | [srpd.py](notations/SRPD/srpd.py) |
 | RPD | [Markdown](notations/RPD/definition.md) · [PDF](notations/RPD/definition.pdf) | [Markdown](notations/RPD/definition.zh-CN.md) · [PDF](notations/RPD/definition.zh-CN.pdf) | [JavaScript](notations/RPD/RPD-mountain.ne-rewritten.js) | [rpd.py](notations/RPD/rpd.py) |
 | LRD | [Markdown](notations/LRD/definition.md) · [PDF](notations/LRD/definition.pdf) | [Markdown](notations/LRD/definition.zh-CN.md) · [PDF](notations/LRD/definition.zh-CN.pdf) | [JavaScript](notations/LRD/LRD.ne-rewritten.js) | [lrd.py](notations/LRD/lrd.py) |
 | Ω-LRD3 | [Markdown](notations/Omega-LRD3/definition.md) · [PDF](notations/Omega-LRD3/definition.pdf) | [Markdown](notations/Omega-LRD3/definition.zh-CN.md) · [PDF](notations/Omega-LRD3/definition.zh-CN.pdf) | [JavaScript](notations/Omega-LRD3/Omega-LRD3.ne-rewritten.js) | [omega_lrd3.py](notations/Omega-LRD3/omega_lrd3.py) |
@@ -132,7 +153,7 @@ Y 指固定上游提交 `1689b21131b488ec2ba2515bd630360371a2389d` 的继承祖�
 
 [研究目录](research/README.md)专门保存推导与比较草稿，与形式化证明分开放置。先读 [2026-09-20 双语比较总览](research/order-comparisons/README.zh-CN.md)。较早的 [IPD 比较总览](research/ordinal-comparisons-20260914/README.zh-CN.md)保存 Y≤RPD 的纸面比较、RPD/Y/wY/ARD/TPD 的 IPD 上界候选，以及 ARD2 与 IPD 的后续研究。总结区分纸面论证、局部引理、有限核验和未证候选；归档不等于完成跨记号的 Lean 认证。
 
-关键原稿与候选数据一并保存，实验代码及私人来源稿不随文档归档。历史测试记录与正式仓库当前证明进度应分别阅读。
+其他研究档案保留各自指定的原稿与候选数据；SRPD／TBMS 本次只保留最终路线实际使用的证明、程序依赖与核验记录，不收录全部历史引用链。私人来源 PDF 与无关研究缓存不归档。历史测试记录与正式仓库当前证明进度应分别阅读。
 
 ## 给 AI 阅读的文档
 

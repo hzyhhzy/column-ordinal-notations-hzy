@@ -1,5 +1,13 @@
 # 来源、版本与许可证 · [English](SOURCES.md)
 
+## SRPD 与 TBMS 分析整理（2026-09-28）
+
+[SRPD](notations/SRPD/definition.zh-CN.md) 是既有 RPD 低段的父列表坐标化，也是普通 e0MN `1,3` 以下的等价呈现；不是宣称重新发明了 e0MN。e0MN 与 strong e0MN 仍明确归属 @test_alpha0。NER 和 Python 来自本地 `m13-lists-20260926` 研究快照，均保持原数学规则和界面；[来源清单](notations/SRPD/provenance.json)固定两个实现与两个回归样例的原始及收录哈希。
+
+双语定义与[公共初段说明](notations/SRPD/correspondence.zh-CN.md)把隐含首根、有限底部及端点指标偏移写明。[SRPD／TBMS 总结](research/srpd-tbms/README.zh-CN.md)整理既有的两条最终承载路线，不是重新独立审定全部递归模拟。[最终路线材料](research/srpd-tbms/archive/README.zh-CN.md)保留25篇必要证明／引理、39份运行与核验代码、2份路线核验记录和7份上游源码／编译文本，共73份逐项固定的材料；另有双语导读及复现入口。[来源记录](research/srpd-tbms/source-records.json)与[清单](research/srpd-tbms/archive/manifest.json)区分原始和发布哈希。
+
+本次精简移除无关历史探索的仓库副本，原始研究文件仍在仓库外。必要的截行引理只保留原 §§1—3；可选障碍和候选搜索段落明确省略，清单逐项记录。保留的引理正文、数学内核与预算断言不变；原有状态提示、链接重定位、私人路径脱敏和加载器可移植性改动仍注明。第三方代码的归属及未解决许可边界见[专门说明](research/srpd-tbms/archive/vendor/README.zh-CN.md)。其他记号实现、纸面证明、Lean 源码及验证收据未改；没有新增证书范围。
+
 ## FMP 收录（2026-09-23）
 
 FMP 是本项目设计的研究记号，不是把 IBLP 或延迟补点 DMP 改名。[来源清单](notations/FMP/provenance.json)固定 2026-09-20 的全补实现及收录后哈希。两个 Python 模块与该快照逐字节相同。NER 只改显示名、证明状态帮助，并增加两个初始例子；数学函数、五种显示及保护预算不变。原注册 ID 保留，以兼容已保存数据。

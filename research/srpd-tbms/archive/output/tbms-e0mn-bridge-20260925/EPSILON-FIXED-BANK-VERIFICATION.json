@@ -1,0 +1,5162 @@
+{
+  "date": "2026-09-28",
+  "paperConclusion": "rho(TBMS ()(1^epsilon_0)) < rho(J) <= rho(Ceps); all future rank simulation using the existing finite-bank contract and a fixed finite epsilon top bank",
+  "status": "incremental paper proof, not Lean formalized or independently refereed; finite tests separated from all-future proof",
+  "epsilonRowLabel": "()(1,1)",
+  "E": "()(1^()(1,1))",
+  "J": "()(1^()(1,1),1)",
+  "CepsCounts": "1,2,4,8,4,1,2,9,38,4,9,10,17,51",
+  "summary": {
+    "caseCount": 12,
+    "completePassedCaseCount": 10,
+    "guardedCaseCount": 2,
+    "allCompletedSourceSteps": 38,
+    "sourceStepsInFullyPassedCases": 32,
+    "initializationOnlyCaseCount": 3,
+    "retainedEpsilonCalls": [
+      1,
+      4,
+      6
+    ],
+    "largeFirstIndex": 18,
+    "maxRSSMiB": 344.84765625,
+    "limits": {
+      "nodeHeapMiB": 512,
+      "rssMiB": 650,
+      "ms": 20000,
+      "width": 160000,
+      "maxConcurrentProcesses": 2
+    },
+    "allProcessesExited": true,
+    "frozenPreviousFilesVerifiedUnchanged": 69
+  },
+  "cases": [
+    {
+      "id": "0",
+      "exitCode": 0,
+      "wallTimeSeconds": 0.8672366,
+      "result": {
+        "caseIndex": 0,
+        "test": {
+          "name": "epsilon lowest branch terminates",
+          "columns": 2,
+          "path": [
+            0,
+            0,
+            0
+          ]
+        },
+        "finiteTestsOnly": true,
+        "status": "bounded finite-top epsilon case passed",
+        "error": null,
+        "originalSHA256": "2167705cd24ad2ba0cfa66d8c28adde364692bb50823d493e704b6bfd96c6120",
+        "interfacePatches": [
+          {
+            "before": "?3+(C?Cap.at(C,i+1,j+1):lowerGrade(s,v.level,v.profile[i][j]))",
+            "after": "?2+(C?Cap.at(C,i+1,j+1):lowerGrade(s,v.level,v.profile[i][j]))",
+            "count": 1
+          },
+          {
+            "before": "P.E.restore(s,s.archive);",
+            "after": "P.prepare(s,s.archive,1,true);",
+            "count": 1
+          },
+          {
+            "before": "assert.equal(s.g[s.a-1].length,2);assert.equal(s.g[s.a-1][0],s.g[s.a-1][1]);",
+            "after": "assert.equal(s.g[s.a-1].length,1);",
+            "count": 1
+          },
+          {
+            "before": "v.background>=3&&v.background<=s.seedAudit.background",
+            "after": "v.background>=2&&v.background<=s.seedAudit.background",
+            "count": 1
+          },
+          {
+            "before": "C(u,e)>=3&&C(w,e)>=3",
+            "after": "C(u,e)>=2&&C(w,e)>=2",
+            "count": 1
+          },
+          {
+            "before": "C(p,s.a)>=2,label+': private bank port'",
+            "after": "C(p,s.a)>=1,label+': private bank port'",
+            "count": 1
+          },
+          {
+            "before": "C(s.a,p.point)>=2,'main point private port'",
+            "after": "C(s.a,p.point)>=1,'main point private port'",
+            "count": 1
+          },
+          {
+            "before": "C(s.a,t)>=2&&C(first,t)>=1,'coupon main/private ports'",
+            "after": "C(s.a,t)>=1&&C(first,t)>=1,'coupon main/private ports'",
+            "count": 1
+          },
+          {
+            "before": "C(v.points.at(-1),t)>=2,'coupon all archive ports'",
+            "after": "C(v.points.at(-1),t)>=1,'coupon all archive ports'",
+            "count": 1
+          },
+          {
+            "before": "assert.deepEqual(s.g.at(-1).slice(1),s.g[s.archive-1].slice(1),'active archive inherited tail');",
+            "after": "assert.deepEqual(s.g.at(-1).slice(),s.g[s.archive-1].slice(),'active archive inherited entire column');",
+            "count": 1
+          },
+          {
+            "before": "assert(C(s.a,N)===1&&C(first,N)>=1,'work separation and main reload port');",
+            "after": "assert(C(s.a,N)===0,'bank work has no private ancestry; main returns by actual trim');",
+            "count": 1
+          },
+          {
+            "before": "C(u,N)>=3&&C(v,N)>=3",
+            "after": "C(u,N)>=2&&C(v,N)>=2",
+            "count": 1
+          },
+          {
+            "before": "P.trim(s,z);P.prepare(s,e,2);",
+            "after": "P.trim(s,z);P.prepare(s,e,1);",
+            "count": 1
+          },
+          {
+            "before": "cut=points.at(-2);row=3;blocks=2;",
+            "after": "cut=points.at(-2);row=2;blocks=2;",
+            "count": 1
+          },
+          {
+            "before": "row=3+lowerGrade(s,level,a)+1",
+            "after": "row=2+lowerGrade(s,level,a)+1",
+            "count": 1
+          },
+          {
+            "before": "row=3+lowerGrade(s,level,beta)+1",
+            "after": "row=2+lowerGrade(s,level,beta)+1",
+            "count": 1
+          },
+          {
+            "before": "const needed=3+lowerGrade(s,level,alpha)",
+            "after": "const needed=2+lowerGrade(s,level,alpha)",
+            "count": 1
+          },
+          {
+            "before": "P.prepare(s,s.packets.at(-1).g1,1,true);",
+            "after": "P.trim(s,s.packets.at(-1).g1);",
+            "count": 1
+          },
+          {
+            "before": "if(eq(upper,s.levels[level].root.word)){",
+            "after": "if(s.levels[level].root.kind==='ceiling'&&eq(upper,s.levels[level].root.word)){",
+            "count": 1
+          }
+        ],
+        "path": [
+          0,
+          0,
+          0
+        ],
+        "source": "",
+        "width": 85,
+        "phase": "cold",
+        "slots": [],
+        "rowRoot": "()(1,1)",
+        "mode": "epsilon-finite-top-bank",
+        "seedAudit": {
+          "r": 7,
+          "background": 2,
+          "columns": 2,
+          "events": 33,
+          "port": 1,
+          "finiteTop": true,
+          "commonCounts": "1,2,4,8,4,1,2,9,38,4,9,10,17,51",
+          "previousCounts": "1,2,4,8,4,1,2,9,38,4,12,42,73,105,106,113,150",
+          "stages": [
+            {
+              "name": "five-row working pair before creating permanent four-row bank",
+              "counts": "1,2,4,8,4,1,2,9,38,4,10",
+              "graph": [
+                [],
+                [
+                  1
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  3,
+                  3,
+                  3
+                ],
+                [
+                  2,
+                  2
+                ],
+                [],
+                [
+                  6
+                ],
+                [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                [
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8
+                ],
+                [
+                  7,
+                  7
+                ],
+                [
+                  10,
+                  10,
+                  10,
+                  10,
+                  10
+                ]
+              ]
+            },
+            {
+              "name": "four-row permanent bank plus working copy",
+              "counts": "1,2,4,8,4,1,2,9,38,4,9,20",
+              "graph": [
+                [],
+                [
+                  1
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  3,
+                  3,
+                  3
+                ],
+                [
+                  2,
+                  2
+                ],
+                [],
+                [
+                  6
+                ],
+                [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                [
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8
+                ],
+                [
+                  7,
+                  7
+                ],
+                [
+                  10,
+                  10,
+                  10,
+                  10
+                ],
+                [
+                  11,
+                  11,
+                  11,
+                  11
+                ]
+              ]
+            }
+          ],
+          "certificates": {
+            "nodes": 44,
+            "hits": 754,
+            "traceEntries": 284,
+            "macros": 22,
+            "fs": 11
+          },
+          "pair": [
+            10,
+            11
+          ],
+          "capacity": 4,
+          "requiredCapacity": 4,
+          "path": "Qtrim, trim11, truncate5, [2], expose7row2, [1], trim14; [4c-1], inherit entire11"
+        },
+        "initializationTrace": [],
+        "banks": [
+          {
+            "id": 0,
+            "level": 0,
+            "label": "()(1,1)",
+            "points": [
+              66,
+              81
+            ]
+          },
+          {
+            "id": 1,
+            "level": 0,
+            "label": "()",
+            "points": [
+              38
+            ]
+          }
+        ],
+        "trace": [
+          {
+            "kind": "budget",
+            "count": 1,
+            "width": 30
+          },
+          {
+            "kind": "row-delete",
+            "level": 0,
+            "parent": 0,
+            "node": 1,
+            "n": 0,
+            "row": 2,
+            "cut": 10,
+            "blocks": 2,
+            "label": "()",
+            "parentBefore": [
+              10,
+              11
+            ],
+            "width": 112
+          }
+        ],
+        "stats": {
+          "checks": 12,
+          "pairs": 17,
+          "ports": 31,
+          "sourceSteps": 3,
+          "budgets": 1,
+          "maxBudget": 1,
+          "calls": 1,
+          "allocations": 1,
+          "ordinaryRowSteps": 0,
+          "deletedRowSteps": 1,
+          "keptSmallerBanks": 0,
+          "strictSubcovariances": 0,
+          "topDowns": 5,
+          "maxWidth": 112,
+          "maxNodes": 2,
+          "mainUnits": 0,
+          "mainLimits": 1,
+          "mainDeletes": 2
+        },
+        "sparseStats": {
+          "nativeFS": 4,
+          "zeroSteps": 45,
+          "downMacroEndpoints": 77,
+          "truncationMacroEndpoints": 69,
+          "smallListDifferentials": 75,
+          "smallCapDifferentials": 139,
+          "maxSegments": 122,
+          "maxWidth": 121
+        },
+        "limits": {
+          "ms": 20000,
+          "rssMiB": 650,
+          "width": 160000,
+          "downTransientWidth": 320000,
+          "events": 200000,
+          "pairs": 4000000,
+          "nodes": 160,
+          "sourceWidth": 22,
+          "steps": 30,
+          "navigation": 1800,
+          "index": 32,
+          "wordLength": 100,
+          "nativeWidth": 90,
+          "rows": 400,
+          "rowWidth": 80,
+          "routeSteps": 160,
+          "plan": 80
+        },
+        "elapsedMs": 104,
+        "rssMiB": 138.1875
+      }
+    },
+    {
+      "id": "1",
+      "exitCode": 0,
+      "wallTimeSeconds": 0.7113568,
+      "result": {
+        "caseIndex": 1,
+        "test": {
+          "name": "omega row then main copies",
+          "columns": 2,
+          "path": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        "finiteTestsOnly": true,
+        "status": "bounded finite-top epsilon case passed",
+        "error": null,
+        "originalSHA256": "2167705cd24ad2ba0cfa66d8c28adde364692bb50823d493e704b6bfd96c6120",
+        "interfacePatches": [
+          {
+            "before": "?3+(C?Cap.at(C,i+1,j+1):lowerGrade(s,v.level,v.profile[i][j]))",
+            "after": "?2+(C?Cap.at(C,i+1,j+1):lowerGrade(s,v.level,v.profile[i][j]))",
+            "count": 1
+          },
+          {
+            "before": "P.E.restore(s,s.archive);",
+            "after": "P.prepare(s,s.archive,1,true);",
+            "count": 1
+          },
+          {
+            "before": "assert.equal(s.g[s.a-1].length,2);assert.equal(s.g[s.a-1][0],s.g[s.a-1][1]);",
+            "after": "assert.equal(s.g[s.a-1].length,1);",
+            "count": 1
+          },
+          {
+            "before": "v.background>=3&&v.background<=s.seedAudit.background",
+            "after": "v.background>=2&&v.background<=s.seedAudit.background",
+            "count": 1
+          },
+          {
+            "before": "C(u,e)>=3&&C(w,e)>=3",
+            "after": "C(u,e)>=2&&C(w,e)>=2",
+            "count": 1
+          },
+          {
+            "before": "C(p,s.a)>=2,label+': private bank port'",
+            "after": "C(p,s.a)>=1,label+': private bank port'",
+            "count": 1
+          },
+          {
+            "before": "C(s.a,p.point)>=2,'main point private port'",
+            "after": "C(s.a,p.point)>=1,'main point private port'",
+            "count": 1
+          },
+          {
+            "before": "C(s.a,t)>=2&&C(first,t)>=1,'coupon main/private ports'",
+            "after": "C(s.a,t)>=1&&C(first,t)>=1,'coupon main/private ports'",
+            "count": 1
+          },
+          {
+            "before": "C(v.points.at(-1),t)>=2,'coupon all archive ports'",
+            "after": "C(v.points.at(-1),t)>=1,'coupon all archive ports'",
+            "count": 1
+          },
+          {
+            "before": "assert.deepEqual(s.g.at(-1).slice(1),s.g[s.archive-1].slice(1),'active archive inherited tail');",
+            "after": "assert.deepEqual(s.g.at(-1).slice(),s.g[s.archive-1].slice(),'active archive inherited entire column');",
+            "count": 1
+          },
+          {
+            "before": "assert(C(s.a,N)===1&&C(first,N)>=1,'work separation and main reload port');",
+            "after": "assert(C(s.a,N)===0,'bank work has no private ancestry; main returns by actual trim');",
+            "count": 1
+          },
+          {
+            "before": "C(u,N)>=3&&C(v,N)>=3",
+            "after": "C(u,N)>=2&&C(v,N)>=2",
+            "count": 1
+          },
+          {
+            "before": "P.trim(s,z);P.prepare(s,e,2);",
+            "after": "P.trim(s,z);P.prepare(s,e,1);",
+            "count": 1
+          },
+          {
+            "before": "cut=points.at(-2);row=3;blocks=2;",
+            "after": "cut=points.at(-2);row=2;blocks=2;",
+            "count": 1
+          },
+          {
+            "before": "row=3+lowerGrade(s,level,a)+1",
+            "after": "row=2+lowerGrade(s,level,a)+1",
+            "count": 1
+          },
+          {
+            "before": "row=3+lowerGrade(s,level,beta)+1",
+            "after": "row=2+lowerGrade(s,level,beta)+1",
+            "count": 1
+          },
+          {
+            "before": "const needed=3+lowerGrade(s,level,alpha)",
+            "after": "const needed=2+lowerGrade(s,level,alpha)",
+            "count": 1
+          },
+          {
+            "before": "P.prepare(s,s.packets.at(-1).g1,1,true);",
+            "after": "P.trim(s,s.packets.at(-1).g1);",
+            "count": 1
+          },
+          {
+            "before": "if(eq(upper,s.levels[level].root.word)){",
+            "after": "if(s.levels[level].root.kind==='ceiling'&&eq(upper,s.levels[level].root.word)){",
+            "count": 1
+          }
+        ],
+        "path": [
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "source": "",
+        "width": 404,
+        "phase": "cold",
+        "slots": [],
+        "rowRoot": "()(1,1)",
+        "mode": "epsilon-finite-top-bank",
+        "seedAudit": {
+          "r": 7,
+          "background": 2,
+          "columns": 2,
+          "events": 33,
+          "port": 1,
+          "finiteTop": true,
+          "commonCounts": "1,2,4,8,4,1,2,9,38,4,9,10,17,51",
+          "previousCounts": "1,2,4,8,4,1,2,9,38,4,12,42,73,105,106,113,150",
+          "stages": [
+            {
+              "name": "five-row working pair before creating permanent four-row bank",
+              "counts": "1,2,4,8,4,1,2,9,38,4,10",
+              "graph": [
+                [],
+                [
+                  1
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  3,
+                  3,
+                  3
+                ],
+                [
+                  2,
+                  2
+                ],
+                [],
+                [
+                  6
+                ],
+                [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                [
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8
+                ],
+                [
+                  7,
+                  7
+                ],
+                [
+                  10,
+                  10,
+                  10,
+                  10,
+                  10
+                ]
+              ]
+            },
+            {
+              "name": "four-row permanent bank plus working copy",
+              "counts": "1,2,4,8,4,1,2,9,38,4,9,20",
+              "graph": [
+                [],
+                [
+                  1
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  3,
+                  3,
+                  3
+                ],
+                [
+                  2,
+                  2
+                ],
+                [],
+                [
+                  6
+                ],
+                [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                [
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8
+                ],
+                [
+                  7,
+                  7
+                ],
+                [
+                  10,
+                  10,
+                  10,
+                  10
+                ],
+                [
+                  11,
+                  11,
+                  11,
+                  11
+                ]
+              ]
+            }
+          ],
+          "certificates": {
+            "nodes": 44,
+            "hits": 754,
+            "traceEntries": 284,
+            "macros": 22,
+            "fs": 11
+          },
+          "pair": [
+            10,
+            11
+          ],
+          "capacity": 4,
+          "requiredCapacity": 4,
+          "path": "Qtrim, trim11, truncate5, [2], expose7row2, [1], trim14; [4c-1], inherit entire11"
+        },
+        "initializationTrace": [],
+        "banks": [
+          {
+            "id": 0,
+            "level": 0,
+            "label": "()(1,1)",
+            "points": [
+              385,
+              400
+            ]
+          },
+          {
+            "id": 1,
+            "level": 0,
+            "label": "()(1)",
+            "points": [
+              276,
+              357
+            ]
+          },
+          {
+            "id": 2,
+            "level": 0,
+            "label": "()",
+            "points": [
+              143
+            ]
+          }
+        ],
+        "trace": [
+          {
+            "kind": "budget",
+            "count": 1,
+            "width": 30
+          },
+          {
+            "kind": "row-unit",
+            "level": 0,
+            "parent": 0,
+            "node": 1,
+            "n": 1,
+            "row": 4,
+            "cut": 10,
+            "blocks": 2,
+            "label": "()(1)",
+            "parentBefore": [
+              10,
+              11
+            ],
+            "width": 112
+          },
+          {
+            "kind": "budget",
+            "count": 1,
+            "width": 92
+          },
+          {
+            "kind": "row-delete",
+            "level": 0,
+            "parent": 1,
+            "node": 2,
+            "n": 0,
+            "row": 2,
+            "cut": 10,
+            "blocks": 2,
+            "label": "()",
+            "parentBefore": [
+              10,
+              38
+            ],
+            "width": 536
+          }
+        ],
+        "stats": {
+          "checks": 21,
+          "pairs": 47,
+          "ports": 87,
+          "sourceSteps": 5,
+          "budgets": 2,
+          "maxBudget": 1,
+          "calls": 2,
+          "allocations": 2,
+          "ordinaryRowSteps": 1,
+          "deletedRowSteps": 1,
+          "keptSmallerBanks": 0,
+          "strictSubcovariances": 0,
+          "topDowns": 6,
+          "maxWidth": 536,
+          "maxNodes": 3,
+          "mainUnits": 1,
+          "mainLimits": 2,
+          "mainDeletes": 2
+        },
+        "sparseStats": {
+          "nativeFS": 9,
+          "zeroSteps": 186,
+          "downMacroEndpoints": 157,
+          "truncationMacroEndpoints": 145,
+          "smallListDifferentials": 70,
+          "smallCapDifferentials": 126,
+          "maxSegments": 542,
+          "maxWidth": 541
+        },
+        "limits": {
+          "ms": 20000,
+          "rssMiB": 650,
+          "width": 160000,
+          "downTransientWidth": 320000,
+          "events": 200000,
+          "pairs": 4000000,
+          "nodes": 160,
+          "sourceWidth": 22,
+          "steps": 30,
+          "navigation": 1800,
+          "index": 32,
+          "wordLength": 100,
+          "nativeWidth": 90,
+          "rows": 400,
+          "rowWidth": 80,
+          "routeSteps": 160,
+          "plan": 80
+        },
+        "elapsedMs": 106,
+        "rssMiB": 138.40625
+      }
+    },
+    {
+      "id": "2",
+      "exitCode": 0,
+      "wallTimeSeconds": 0.902296,
+      "result": {
+        "caseIndex": 2,
+        "test": {
+          "name": "two-level child terminates",
+          "columns": 2,
+          "path": [
+            2,
+            0,
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        "finiteTestsOnly": true,
+        "status": "bounded finite-top epsilon case passed",
+        "error": null,
+        "originalSHA256": "2167705cd24ad2ba0cfa66d8c28adde364692bb50823d493e704b6bfd96c6120",
+        "interfacePatches": [
+          {
+            "before": "?3+(C?Cap.at(C,i+1,j+1):lowerGrade(s,v.level,v.profile[i][j]))",
+            "after": "?2+(C?Cap.at(C,i+1,j+1):lowerGrade(s,v.level,v.profile[i][j]))",
+            "count": 1
+          },
+          {
+            "before": "P.E.restore(s,s.archive);",
+            "after": "P.prepare(s,s.archive,1,true);",
+            "count": 1
+          },
+          {
+            "before": "assert.equal(s.g[s.a-1].length,2);assert.equal(s.g[s.a-1][0],s.g[s.a-1][1]);",
+            "after": "assert.equal(s.g[s.a-1].length,1);",
+            "count": 1
+          },
+          {
+            "before": "v.background>=3&&v.background<=s.seedAudit.background",
+            "after": "v.background>=2&&v.background<=s.seedAudit.background",
+            "count": 1
+          },
+          {
+            "before": "C(u,e)>=3&&C(w,e)>=3",
+            "after": "C(u,e)>=2&&C(w,e)>=2",
+            "count": 1
+          },
+          {
+            "before": "C(p,s.a)>=2,label+': private bank port'",
+            "after": "C(p,s.a)>=1,label+': private bank port'",
+            "count": 1
+          },
+          {
+            "before": "C(s.a,p.point)>=2,'main point private port'",
+            "after": "C(s.a,p.point)>=1,'main point private port'",
+            "count": 1
+          },
+          {
+            "before": "C(s.a,t)>=2&&C(first,t)>=1,'coupon main/private ports'",
+            "after": "C(s.a,t)>=1&&C(first,t)>=1,'coupon main/private ports'",
+            "count": 1
+          },
+          {
+            "before": "C(v.points.at(-1),t)>=2,'coupon all archive ports'",
+            "after": "C(v.points.at(-1),t)>=1,'coupon all archive ports'",
+            "count": 1
+          },
+          {
+            "before": "assert.deepEqual(s.g.at(-1).slice(1),s.g[s.archive-1].slice(1),'active archive inherited tail');",
+            "after": "assert.deepEqual(s.g.at(-1).slice(),s.g[s.archive-1].slice(),'active archive inherited entire column');",
+            "count": 1
+          },
+          {
+            "before": "assert(C(s.a,N)===1&&C(first,N)>=1,'work separation and main reload port');",
+            "after": "assert(C(s.a,N)===0,'bank work has no private ancestry; main returns by actual trim');",
+            "count": 1
+          },
+          {
+            "before": "C(u,N)>=3&&C(v,N)>=3",
+            "after": "C(u,N)>=2&&C(v,N)>=2",
+            "count": 1
+          },
+          {
+            "before": "P.trim(s,z);P.prepare(s,e,2);",
+            "after": "P.trim(s,z);P.prepare(s,e,1);",
+            "count": 1
+          },
+          {
+            "before": "cut=points.at(-2);row=3;blocks=2;",
+            "after": "cut=points.at(-2);row=2;blocks=2;",
+            "count": 1
+          },
+          {
+            "before": "row=3+lowerGrade(s,level,a)+1",
+            "after": "row=2+lowerGrade(s,level,a)+1",
+            "count": 1
+          },
+          {
+            "before": "row=3+lowerGrade(s,level,beta)+1",
+            "after": "row=2+lowerGrade(s,level,beta)+1",
+            "count": 1
+          },
+          {
+            "before": "const needed=3+lowerGrade(s,level,alpha)",
+            "after": "const needed=2+lowerGrade(s,level,alpha)",
+            "count": 1
+          },
+          {
+            "before": "P.prepare(s,s.packets.at(-1).g1,1,true);",
+            "after": "P.trim(s,s.packets.at(-1).g1);",
+            "count": 1
+          },
+          {
+            "before": "if(eq(upper,s.levels[level].root.word)){",
+            "after": "if(s.levels[level].root.kind==='ceiling'&&eq(upper,s.levels[level].root.word)){",
+            "count": 1
+          }
+        ],
+        "path": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "source": "",
+        "width": 2087,
+        "phase": "cold",
+        "slots": [],
+        "rowRoot": "()(1,1)",
+        "mode": "epsilon-finite-top-bank",
+        "seedAudit": {
+          "r": 7,
+          "background": 2,
+          "columns": 2,
+          "events": 33,
+          "port": 1,
+          "finiteTop": true,
+          "commonCounts": "1,2,4,8,4,1,2,9,38,4,9,10,17,51",
+          "previousCounts": "1,2,4,8,4,1,2,9,38,4,12,42,73,105,106,113,150",
+          "stages": [
+            {
+              "name": "five-row working pair before creating permanent four-row bank",
+              "counts": "1,2,4,8,4,1,2,9,38,4,10",
+              "graph": [
+                [],
+                [
+                  1
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  3,
+                  3,
+                  3
+                ],
+                [
+                  2,
+                  2
+                ],
+                [],
+                [
+                  6
+                ],
+                [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                [
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8
+                ],
+                [
+                  7,
+                  7
+                ],
+                [
+                  10,
+                  10,
+                  10,
+                  10,
+                  10
+                ]
+              ]
+            },
+            {
+              "name": "four-row permanent bank plus working copy",
+              "counts": "1,2,4,8,4,1,2,9,38,4,9,20",
+              "graph": [
+                [],
+                [
+                  1
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  3,
+                  3,
+                  3
+                ],
+                [
+                  2,
+                  2
+                ],
+                [],
+                [
+                  6
+                ],
+                [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                [
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8
+                ],
+                [
+                  7,
+                  7
+                ],
+                [
+                  10,
+                  10,
+                  10,
+                  10
+                ],
+                [
+                  11,
+                  11,
+                  11,
+                  11
+                ]
+              ]
+            }
+          ],
+          "certificates": {
+            "nodes": 44,
+            "hits": 754,
+            "traceEntries": 284,
+            "macros": 22,
+            "fs": 11
+          },
+          "pair": [
+            10,
+            11
+          ],
+          "capacity": 4,
+          "requiredCapacity": 4,
+          "path": "Qtrim, trim11, truncate5, [2], expose7row2, [1], trim14; [4c-1], inherit entire11"
+        },
+        "initializationTrace": [],
+        "banks": [
+          {
+            "id": 0,
+            "level": 0,
+            "label": "()(1,1)",
+            "points": [
+              2068,
+              2083
+            ]
+          },
+          {
+            "id": 1,
+            "level": 0,
+            "label": "()(1)(2)",
+            "points": [
+              1398,
+              1959,
+              2040
+            ]
+          },
+          {
+            "id": 2,
+            "level": 0,
+            "label": "()(1)",
+            "points": [
+              1398,
+              1826
+            ]
+          },
+          {
+            "id": 3,
+            "level": 0,
+            "label": "()",
+            "points": [
+              704
+            ]
+          }
+        ],
+        "trace": [
+          {
+            "kind": "budget",
+            "count": 1,
+            "width": 30
+          },
+          {
+            "kind": "row-unit",
+            "level": 0,
+            "parent": 0,
+            "node": 1,
+            "n": 2,
+            "row": 4,
+            "cut": 10,
+            "blocks": 3,
+            "label": "()(1)(2)",
+            "parentBefore": [
+              10,
+              11
+            ],
+            "width": 140
+          },
+          {
+            "kind": "budget",
+            "count": 1,
+            "width": 120
+          },
+          {
+            "kind": "row-delete",
+            "level": 0,
+            "parent": 1,
+            "node": 2,
+            "n": 0,
+            "row": 2,
+            "cut": 38,
+            "blocks": 2,
+            "label": "()(1)",
+            "parentBefore": [
+              10,
+              38,
+              66
+            ],
+            "width": 564
+          },
+          {
+            "kind": "budget",
+            "count": 1,
+            "width": 439
+          },
+          {
+            "kind": "row-delete",
+            "level": 0,
+            "parent": 2,
+            "node": 3,
+            "n": 0,
+            "row": 2,
+            "cut": 10,
+            "blocks": 2,
+            "label": "()",
+            "parentBefore": [
+              10,
+              171
+            ],
+            "width": 2780
+          }
+        ],
+        "stats": {
+          "checks": 28,
+          "pairs": 138,
+          "ports": 176,
+          "sourceSteps": 6,
+          "budgets": 3,
+          "maxBudget": 1,
+          "calls": 3,
+          "allocations": 3,
+          "ordinaryRowSteps": 1,
+          "deletedRowSteps": 2,
+          "keptSmallerBanks": 0,
+          "strictSubcovariances": 0,
+          "topDowns": 7,
+          "maxWidth": 2780,
+          "maxNodes": 4,
+          "mainUnits": 1,
+          "mainLimits": 3,
+          "mainDeletes": 2
+        },
+        "sparseStats": {
+          "nativeFS": 13,
+          "zeroSteps": 884,
+          "downMacroEndpoints": 240,
+          "truncationMacroEndpoints": 225,
+          "smallListDifferentials": 53,
+          "smallCapDifferentials": 96,
+          "maxSegments": 2802,
+          "maxWidth": 2785
+        },
+        "limits": {
+          "ms": 20000,
+          "rssMiB": 650,
+          "width": 160000,
+          "downTransientWidth": 320000,
+          "events": 200000,
+          "pairs": 4000000,
+          "nodes": 160,
+          "sourceWidth": 22,
+          "steps": 30,
+          "navigation": 1800,
+          "index": 32,
+          "wordLength": 100,
+          "nativeWidth": 90,
+          "rows": 400,
+          "rowWidth": 80,
+          "routeSteps": 160,
+          "plan": 80
+        },
+        "elapsedMs": 161,
+        "rssMiB": 168.75390625
+      }
+    },
+    {
+      "id": "3",
+      "exitCode": 1,
+      "wallTimeSeconds": 4.0045963,
+      "result": {
+        "caseIndex": 3,
+        "test": {
+          "name": "finite endpoint insertion",
+          "columns": 2,
+          "path": [
+            3,
+            0,
+            1,
+            1
+          ]
+        },
+        "finiteTestsOnly": true,
+        "status": "failed or guarded",
+        "error": {
+          "message": "recursive row allocation width guard",
+          "stack": "AssertionError [ERR_ASSERTION]: recursive row allocation width guard\n    at allocateStep ([workspace]/output\\tbms-e0mn-bridge-20260925\\epsilon-fixed-row-bank.generated.cjs:258:3)\n    at register ([workspace]/output\\tbms-e0mn-bridge-20260925\\epsilon-fixed-row-bank.generated.cjs:335:10)\n    at Object.step ([workspace]/output\\tbms-e0mn-bridge-20260925\\epsilon-fixed-row-bank.generated.cjs:357:7)\n    at Object.<anonymous> ([workspace]/output\\tbms-e0mn-bridge-20260925\\check-epsilon-fixed-bank.cjs:22:34)\n    at Module._compile (node:internal/modules/cjs/loader:1871:14)\n    at Object..js (node:internal/modules/cjs/loader:2002:10)\n    at Module.load (node:internal/modules/cjs/loader:1594:32)\n    at Module._load (node:internal/modules/cjs/loader:1396:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)"
+        },
+        "originalSHA256": "2167705cd24ad2ba0cfa66d8c28adde364692bb50823d493e704b6bfd96c6120",
+        "interfacePatches": [
+          {
+            "before": "?3+(C?Cap.at(C,i+1,j+1):lowerGrade(s,v.level,v.profile[i][j]))",
+            "after": "?2+(C?Cap.at(C,i+1,j+1):lowerGrade(s,v.level,v.profile[i][j]))",
+            "count": 1
+          },
+          {
+            "before": "P.E.restore(s,s.archive);",
+            "after": "P.prepare(s,s.archive,1,true);",
+            "count": 1
+          },
+          {
+            "before": "assert.equal(s.g[s.a-1].length,2);assert.equal(s.g[s.a-1][0],s.g[s.a-1][1]);",
+            "after": "assert.equal(s.g[s.a-1].length,1);",
+            "count": 1
+          },
+          {
+            "before": "v.background>=3&&v.background<=s.seedAudit.background",
+            "after": "v.background>=2&&v.background<=s.seedAudit.background",
+            "count": 1
+          },
+          {
+            "before": "C(u,e)>=3&&C(w,e)>=3",
+            "after": "C(u,e)>=2&&C(w,e)>=2",
+            "count": 1
+          },
+          {
+            "before": "C(p,s.a)>=2,label+': private bank port'",
+            "after": "C(p,s.a)>=1,label+': private bank port'",
+            "count": 1
+          },
+          {
+            "before": "C(s.a,p.point)>=2,'main point private port'",
+            "after": "C(s.a,p.point)>=1,'main point private port'",
+            "count": 1
+          },
+          {
+            "before": "C(s.a,t)>=2&&C(first,t)>=1,'coupon main/private ports'",
+            "after": "C(s.a,t)>=1&&C(first,t)>=1,'coupon main/private ports'",
+            "count": 1
+          },
+          {
+            "before": "C(v.points.at(-1),t)>=2,'coupon all archive ports'",
+            "after": "C(v.points.at(-1),t)>=1,'coupon all archive ports'",
+            "count": 1
+          },
+          {
+            "before": "assert.deepEqual(s.g.at(-1).slice(1),s.g[s.archive-1].slice(1),'active archive inherited tail');",
+            "after": "assert.deepEqual(s.g.at(-1).slice(),s.g[s.archive-1].slice(),'active archive inherited entire column');",
+            "count": 1
+          },
+          {
+            "before": "assert(C(s.a,N)===1&&C(first,N)>=1,'work separation and main reload port');",
+            "after": "assert(C(s.a,N)===0,'bank work has no private ancestry; main returns by actual trim');",
+            "count": 1
+          },
+          {
+            "before": "C(u,N)>=3&&C(v,N)>=3",
+            "after": "C(u,N)>=2&&C(v,N)>=2",
+            "count": 1
+          },
+          {
+            "before": "P.trim(s,z);P.prepare(s,e,2);",
+            "after": "P.trim(s,z);P.prepare(s,e,1);",
+            "count": 1
+          },
+          {
+            "before": "cut=points.at(-2);row=3;blocks=2;",
+            "after": "cut=points.at(-2);row=2;blocks=2;",
+            "count": 1
+          },
+          {
+            "before": "row=3+lowerGrade(s,level,a)+1",
+            "after": "row=2+lowerGrade(s,level,a)+1",
+            "count": 1
+          },
+          {
+            "before": "row=3+lowerGrade(s,level,beta)+1",
+            "after": "row=2+lowerGrade(s,level,beta)+1",
+            "count": 1
+          },
+          {
+            "before": "const needed=3+lowerGrade(s,level,alpha)",
+            "after": "const needed=2+lowerGrade(s,level,alpha)",
+            "count": 1
+          },
+          {
+            "before": "P.prepare(s,s.packets.at(-1).g1,1,true);",
+            "after": "P.trim(s,s.packets.at(-1).g1);",
+            "count": 1
+          },
+          {
+            "before": "if(eq(upper,s.levels[level].root.word)){",
+            "after": "if(s.levels[level].root.kind==='ceiling'&&eq(upper,s.levels[level].root.word)){",
+            "count": 1
+          }
+        ],
+        "path": [
+          3,
+          0,
+          1
+        ],
+        "source": "()(1^()(1)(1))",
+        "width": 73499,
+        "phase": "budget",
+        "slots": [],
+        "rowRoot": "()(1,1)",
+        "mode": "epsilon-finite-top-bank",
+        "seedAudit": {
+          "r": 7,
+          "background": 2,
+          "columns": 2,
+          "events": 33,
+          "port": 1,
+          "finiteTop": true,
+          "commonCounts": "1,2,4,8,4,1,2,9,38,4,9,10,17,51",
+          "previousCounts": "1,2,4,8,4,1,2,9,38,4,12,42,73,105,106,113,150",
+          "stages": [
+            {
+              "name": "five-row working pair before creating permanent four-row bank",
+              "counts": "1,2,4,8,4,1,2,9,38,4,10",
+              "graph": [
+                [],
+                [
+                  1
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  3,
+                  3,
+                  3
+                ],
+                [
+                  2,
+                  2
+                ],
+                [],
+                [
+                  6
+                ],
+                [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                [
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8
+                ],
+                [
+                  7,
+                  7
+                ],
+                [
+                  10,
+                  10,
+                  10,
+                  10,
+                  10
+                ]
+              ]
+            },
+            {
+              "name": "four-row permanent bank plus working copy",
+              "counts": "1,2,4,8,4,1,2,9,38,4,9,20",
+              "graph": [
+                [],
+                [
+                  1
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  3,
+                  3,
+                  3
+                ],
+                [
+                  2,
+                  2
+                ],
+                [],
+                [
+                  6
+                ],
+                [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                [
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8
+                ],
+                [
+                  7,
+                  7
+                ],
+                [
+                  10,
+                  10,
+                  10,
+                  10
+                ],
+                [
+                  11,
+                  11,
+                  11,
+                  11
+                ]
+              ]
+            }
+          ],
+          "certificates": {
+            "nodes": 44,
+            "hits": 754,
+            "traceEntries": 284,
+            "macros": 22,
+            "fs": 11
+          },
+          "pair": [
+            10,
+            11
+          ],
+          "capacity": 4,
+          "requiredCapacity": 4,
+          "path": "Qtrim, trim11, truncate5, [2], expose7row2, [1], trim14; [4c-1], inherit entire11"
+        },
+        "initializationTrace": [],
+        "banks": [
+          {
+            "id": 0,
+            "level": 0,
+            "label": "()(1,1)",
+            "points": [
+              73475,
+              73490
+            ]
+          },
+          {
+            "id": 1,
+            "level": 0,
+            "label": "()(1)(2)(3)",
+            "points": [
+              69996,
+              72805,
+              73366,
+              73447
+            ]
+          },
+          {
+            "id": 2,
+            "level": 0,
+            "label": "()(1)(2)",
+            "points": [
+              69996,
+              72805,
+              73233
+            ]
+          },
+          {
+            "id": 3,
+            "level": 0,
+            "label": "()(1)(1)",
+            "points": [
+              69996,
+              70024,
+              72111
+            ]
+          },
+          {
+            "id": 4,
+            "level": 0,
+            "label": "()(1)()(1)",
+            "points": [
+              10,
+              38,
+              59504,
+              66517
+            ]
+          },
+          {
+            "id": 5,
+            "level": 0,
+            "label": "()(1)()",
+            "points": [
+              10,
+              38,
+              45507
+            ]
+          }
+        ],
+        "trace": [
+          {
+            "kind": "budget",
+            "count": 1,
+            "width": 30
+          },
+          {
+            "kind": "row-unit",
+            "level": 0,
+            "parent": 0,
+            "node": 1,
+            "n": 3,
+            "row": 4,
+            "cut": 10,
+            "blocks": 4,
+            "label": "()(1)(2)(3)",
+            "parentBefore": [
+              10,
+              11
+            ],
+            "width": 168
+          },
+          {
+            "kind": "budget",
+            "count": 1,
+            "width": 148
+          },
+          {
+            "kind": "row-delete",
+            "level": 0,
+            "parent": 1,
+            "node": 2,
+            "n": 0,
+            "row": 2,
+            "cut": 66,
+            "blocks": 2,
+            "label": "()(1)(2)",
+            "parentBefore": [
+              10,
+              38,
+              66,
+              94
+            ],
+            "width": 592
+          },
+          {
+            "kind": "budget",
+            "count": 1,
+            "width": 467
+          },
+          {
+            "kind": "row-unit",
+            "level": 0,
+            "parent": 2,
+            "node": 3,
+            "n": 1,
+            "row": 3,
+            "cut": 38,
+            "blocks": 2,
+            "label": "()(1)(1)",
+            "parentBefore": [
+              10,
+              38,
+              199
+            ],
+            "width": 2808
+          },
+          {
+            "kind": "budget",
+            "count": 3,
+            "width": 2126
+          },
+          {
+            "kind": "row-unit",
+            "level": 0,
+            "parent": 3,
+            "node": 4,
+            "n": 1,
+            "row": 3,
+            "cut": 10,
+            "blocks": 2,
+            "label": "()(1)()(1)",
+            "parentBefore": [
+              10,
+              38,
+              732
+            ],
+            "width": 14028
+          },
+          {
+            "kind": "row-delete",
+            "level": 0,
+            "parent": 4,
+            "node": 5,
+            "n": 0,
+            "row": 2,
+            "cut": 3517,
+            "blocks": 2,
+            "label": "()(1)()",
+            "parentBefore": [
+              10,
+              38,
+              3517,
+              3545
+            ],
+            "width": 59497
+          }
+        ],
+        "stats": {
+          "checks": 33,
+          "pairs": 456,
+          "ports": 468,
+          "sourceSteps": 3,
+          "budgets": 4,
+          "maxBudget": 3,
+          "calls": 6,
+          "allocations": 5,
+          "ordinaryRowSteps": 3,
+          "deletedRowSteps": 3,
+          "keptSmallerBanks": 0,
+          "strictSubcovariances": 0,
+          "topDowns": 8,
+          "maxWidth": 73499,
+          "maxNodes": 6,
+          "mainUnits": 0,
+          "mainLimits": 3,
+          "mainDeletes": 0
+        },
+        "sparseStats": {
+          "nativeFS": 18,
+          "zeroSteps": 18381,
+          "downMacroEndpoints": 405,
+          "truncationMacroEndpoints": 384,
+          "smallListDifferentials": 53,
+          "smallCapDifferentials": 96,
+          "maxSegments": 74102,
+          "maxWidth": 73499
+        },
+        "limits": {
+          "ms": 20000,
+          "rssMiB": 650,
+          "width": 160000,
+          "downTransientWidth": 320000,
+          "events": 200000,
+          "pairs": 4000000,
+          "nodes": 160,
+          "sourceWidth": 22,
+          "steps": 30,
+          "navigation": 1800,
+          "index": 32,
+          "wordLength": 100,
+          "nativeWidth": 90,
+          "rows": 400,
+          "rowWidth": 80,
+          "routeSteps": 160,
+          "plan": 80
+        },
+        "elapsedMs": 3251,
+        "rssMiB": 343.6484375
+      }
+    },
+    {
+      "id": "4",
+      "exitCode": 0,
+      "wallTimeSeconds": 3.4945682,
+      "result": {
+        "caseIndex": 4,
+        "test": {
+          "name": "coefficients and finite row matrices",
+          "columns": 2,
+          "path": [
+            2,
+            1,
+            1
+          ]
+        },
+        "finiteTestsOnly": true,
+        "status": "bounded finite-top epsilon case passed",
+        "error": null,
+        "originalSHA256": "2167705cd24ad2ba0cfa66d8c28adde364692bb50823d493e704b6bfd96c6120",
+        "interfacePatches": [
+          {
+            "before": "?3+(C?Cap.at(C,i+1,j+1):lowerGrade(s,v.level,v.profile[i][j]))",
+            "after": "?2+(C?Cap.at(C,i+1,j+1):lowerGrade(s,v.level,v.profile[i][j]))",
+            "count": 1
+          },
+          {
+            "before": "P.E.restore(s,s.archive);",
+            "after": "P.prepare(s,s.archive,1,true);",
+            "count": 1
+          },
+          {
+            "before": "assert.equal(s.g[s.a-1].length,2);assert.equal(s.g[s.a-1][0],s.g[s.a-1][1]);",
+            "after": "assert.equal(s.g[s.a-1].length,1);",
+            "count": 1
+          },
+          {
+            "before": "v.background>=3&&v.background<=s.seedAudit.background",
+            "after": "v.background>=2&&v.background<=s.seedAudit.background",
+            "count": 1
+          },
+          {
+            "before": "C(u,e)>=3&&C(w,e)>=3",
+            "after": "C(u,e)>=2&&C(w,e)>=2",
+            "count": 1
+          },
+          {
+            "before": "C(p,s.a)>=2,label+': private bank port'",
+            "after": "C(p,s.a)>=1,label+': private bank port'",
+            "count": 1
+          },
+          {
+            "before": "C(s.a,p.point)>=2,'main point private port'",
+            "after": "C(s.a,p.point)>=1,'main point private port'",
+            "count": 1
+          },
+          {
+            "before": "C(s.a,t)>=2&&C(first,t)>=1,'coupon main/private ports'",
+            "after": "C(s.a,t)>=1&&C(first,t)>=1,'coupon main/private ports'",
+            "count": 1
+          },
+          {
+            "before": "C(v.points.at(-1),t)>=2,'coupon all archive ports'",
+            "after": "C(v.points.at(-1),t)>=1,'coupon all archive ports'",
+            "count": 1
+          },
+          {
+            "before": "assert.deepEqual(s.g.at(-1).slice(1),s.g[s.archive-1].slice(1),'active archive inherited tail');",
+            "after": "assert.deepEqual(s.g.at(-1).slice(),s.g[s.archive-1].slice(),'active archive inherited entire column');",
+            "count": 1
+          },
+          {
+            "before": "assert(C(s.a,N)===1&&C(first,N)>=1,'work separation and main reload port');",
+            "after": "assert(C(s.a,N)===0,'bank work has no private ancestry; main returns by actual trim');",
+            "count": 1
+          },
+          {
+            "before": "C(u,N)>=3&&C(v,N)>=3",
+            "after": "C(u,N)>=2&&C(v,N)>=2",
+            "count": 1
+          },
+          {
+            "before": "P.trim(s,z);P.prepare(s,e,2);",
+            "after": "P.trim(s,z);P.prepare(s,e,1);",
+            "count": 1
+          },
+          {
+            "before": "cut=points.at(-2);row=3;blocks=2;",
+            "after": "cut=points.at(-2);row=2;blocks=2;",
+            "count": 1
+          },
+          {
+            "before": "row=3+lowerGrade(s,level,a)+1",
+            "after": "row=2+lowerGrade(s,level,a)+1",
+            "count": 1
+          },
+          {
+            "before": "row=3+lowerGrade(s,level,beta)+1",
+            "after": "row=2+lowerGrade(s,level,beta)+1",
+            "count": 1
+          },
+          {
+            "before": "const needed=3+lowerGrade(s,level,alpha)",
+            "after": "const needed=2+lowerGrade(s,level,alpha)",
+            "count": 1
+          },
+          {
+            "before": "P.prepare(s,s.packets.at(-1).g1,1,true);",
+            "after": "P.trim(s,s.packets.at(-1).g1);",
+            "count": 1
+          },
+          {
+            "before": "if(eq(upper,s.levels[level].root.word)){",
+            "after": "if(s.levels[level].root.kind==='ceiling'&&eq(upper,s.levels[level].root.word)){",
+            "count": 1
+          }
+        ],
+        "path": [
+          2,
+          1,
+          1
+        ],
+        "source": "()(1^ω,1^ω)",
+        "width": 43706,
+        "phase": "cold",
+        "slots": [],
+        "rowRoot": "()(1,1)",
+        "mode": "epsilon-finite-top-bank",
+        "seedAudit": {
+          "r": 7,
+          "background": 2,
+          "columns": 2,
+          "events": 33,
+          "port": 1,
+          "finiteTop": true,
+          "commonCounts": "1,2,4,8,4,1,2,9,38,4,9,10,17,51",
+          "previousCounts": "1,2,4,8,4,1,2,9,38,4,12,42,73,105,106,113,150",
+          "stages": [
+            {
+              "name": "five-row working pair before creating permanent four-row bank",
+              "counts": "1,2,4,8,4,1,2,9,38,4,10",
+              "graph": [
+                [],
+                [
+                  1
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  3,
+                  3,
+                  3
+                ],
+                [
+                  2,
+                  2
+                ],
+                [],
+                [
+                  6
+                ],
+                [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                [
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8
+                ],
+                [
+                  7,
+                  7
+                ],
+                [
+                  10,
+                  10,
+                  10,
+                  10,
+                  10
+                ]
+              ]
+            },
+            {
+              "name": "four-row permanent bank plus working copy",
+              "counts": "1,2,4,8,4,1,2,9,38,4,9,20",
+              "graph": [
+                [],
+                [
+                  1
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  3,
+                  3,
+                  3
+                ],
+                [
+                  2,
+                  2
+                ],
+                [],
+                [
+                  6
+                ],
+                [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                [
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8
+                ],
+                [
+                  7,
+                  7
+                ],
+                [
+                  10,
+                  10,
+                  10,
+                  10
+                ],
+                [
+                  11,
+                  11,
+                  11,
+                  11
+                ]
+              ]
+            }
+          ],
+          "certificates": {
+            "nodes": 44,
+            "hits": 754,
+            "traceEntries": 284,
+            "macros": 22,
+            "fs": 11
+          },
+          "pair": [
+            10,
+            11
+          ],
+          "capacity": 4,
+          "requiredCapacity": 4,
+          "path": "Qtrim, trim11, truncate5, [2], expose7row2, [1], trim14; [4c-1], inherit entire11"
+        },
+        "initializationTrace": [],
+        "banks": [
+          {
+            "id": 0,
+            "level": 0,
+            "label": "()(1,1)",
+            "points": [
+              43682,
+              43697
+            ]
+          },
+          {
+            "id": 1,
+            "level": 0,
+            "label": "()(1)(2)",
+            "points": [
+              43008,
+              43573,
+              43654
+            ]
+          },
+          {
+            "id": 2,
+            "level": 0,
+            "label": "()(1)(1)",
+            "points": [
+              43008,
+              43036,
+              43440
+            ]
+          },
+          {
+            "id": 3,
+            "level": 0,
+            "label": "()(1)()(1)",
+            "points": [
+              10,
+              29150,
+              40931,
+              42334
+            ]
+          },
+          {
+            "id": 4,
+            "level": 0,
+            "label": "()(1)()",
+            "points": [
+              10,
+              29150,
+              38154
+            ]
+          },
+          {
+            "id": 5,
+            "level": 0,
+            "label": "()(1)",
+            "points": [
+              10,
+              14594
+            ]
+          }
+        ],
+        "trace": [
+          {
+            "kind": "budget",
+            "count": 1,
+            "width": 30
+          },
+          {
+            "kind": "row-unit",
+            "level": 0,
+            "parent": 0,
+            "node": 1,
+            "n": 2,
+            "row": 4,
+            "cut": 10,
+            "blocks": 3,
+            "label": "()(1)(2)",
+            "parentBefore": [
+              10,
+              11
+            ],
+            "width": 140
+          },
+          {
+            "kind": "budget",
+            "count": 1,
+            "width": 120
+          },
+          {
+            "kind": "row-unit",
+            "level": 0,
+            "parent": 1,
+            "node": 2,
+            "n": 1,
+            "row": 3,
+            "cut": 38,
+            "blocks": 2,
+            "label": "()(1)(1)",
+            "parentBefore": [
+              10,
+              38,
+              66
+            ],
+            "width": 564
+          },
+          {
+            "kind": "budget",
+            "count": 3,
+            "width": 443
+          },
+          {
+            "kind": "row-unit",
+            "level": 0,
+            "parent": 2,
+            "node": 3,
+            "n": 1,
+            "row": 3,
+            "cut": 10,
+            "blocks": 2,
+            "label": "()(1)()(1)",
+            "parentBefore": [
+              10,
+              38,
+              171
+            ],
+            "width": 2808
+          },
+          {
+            "kind": "row-delete",
+            "level": 0,
+            "parent": 3,
+            "node": 4,
+            "n": 0,
+            "row": 2,
+            "cut": 712,
+            "blocks": 2,
+            "label": "()(1)()",
+            "parentBefore": [
+              10,
+              38,
+              712,
+              740
+            ],
+            "width": 11812
+          },
+          {
+            "kind": "row-delete",
+            "level": 0,
+            "parent": 4,
+            "node": 5,
+            "n": 0,
+            "row": 2,
+            "cut": 38,
+            "blocks": 2,
+            "label": "()(1)",
+            "parentBefore": [
+              10,
+              38,
+              3489
+            ],
+            "width": 58256
+          }
+        ],
+        "stats": {
+          "checks": 28,
+          "pairs": 281,
+          "ports": 338,
+          "sourceSteps": 3,
+          "budgets": 3,
+          "maxBudget": 3,
+          "calls": 5,
+          "allocations": 5,
+          "ordinaryRowSteps": 3,
+          "deletedRowSteps": 2,
+          "keptSmallerBanks": 0,
+          "strictSubcovariances": 0,
+          "topDowns": 7,
+          "maxWidth": 58256,
+          "maxNodes": 6,
+          "mainUnits": 0,
+          "mainLimits": 3,
+          "mainDeletes": 0
+        },
+        "sparseStats": {
+          "nativeFS": 16,
+          "zeroSteps": 18216,
+          "downMacroEndpoints": 324,
+          "truncationMacroEndpoints": 305,
+          "smallListDifferentials": 53,
+          "smallCapDifferentials": 96,
+          "maxSegments": 58614,
+          "maxWidth": 58261
+        },
+        "limits": {
+          "ms": 20000,
+          "rssMiB": 650,
+          "width": 160000,
+          "downTransientWidth": 320000,
+          "events": 200000,
+          "pairs": 4000000,
+          "nodes": 160,
+          "sourceWidth": 22,
+          "steps": 30,
+          "navigation": 1800,
+          "index": 32,
+          "wordLength": 100,
+          "nativeWidth": 90,
+          "rows": 400,
+          "rowWidth": 80,
+          "routeSteps": 160,
+          "plan": 80
+        },
+        "elapsedMs": 2758,
+        "rssMiB": 330.3515625
+      }
+    },
+    {
+      "id": "5",
+      "exitCode": 0,
+      "wallTimeSeconds": 1.0590368,
+      "result": {
+        "caseIndex": 5,
+        "test": {
+          "name": "retained epsilon called at later higher index",
+          "columns": 3,
+          "path": [
+            1,
+            0,
+            1,
+            4,
+            0,
+            0,
+            0,
+            0,
+            1,
+            6
+          ]
+        },
+        "finiteTestsOnly": true,
+        "status": "bounded finite-top epsilon case passed",
+        "error": null,
+        "originalSHA256": "2167705cd24ad2ba0cfa66d8c28adde364692bb50823d493e704b6bfd96c6120",
+        "interfacePatches": [
+          {
+            "before": "?3+(C?Cap.at(C,i+1,j+1):lowerGrade(s,v.level,v.profile[i][j]))",
+            "after": "?2+(C?Cap.at(C,i+1,j+1):lowerGrade(s,v.level,v.profile[i][j]))",
+            "count": 1
+          },
+          {
+            "before": "P.E.restore(s,s.archive);",
+            "after": "P.prepare(s,s.archive,1,true);",
+            "count": 1
+          },
+          {
+            "before": "assert.equal(s.g[s.a-1].length,2);assert.equal(s.g[s.a-1][0],s.g[s.a-1][1]);",
+            "after": "assert.equal(s.g[s.a-1].length,1);",
+            "count": 1
+          },
+          {
+            "before": "v.background>=3&&v.background<=s.seedAudit.background",
+            "after": "v.background>=2&&v.background<=s.seedAudit.background",
+            "count": 1
+          },
+          {
+            "before": "C(u,e)>=3&&C(w,e)>=3",
+            "after": "C(u,e)>=2&&C(w,e)>=2",
+            "count": 1
+          },
+          {
+            "before": "C(p,s.a)>=2,label+': private bank port'",
+            "after": "C(p,s.a)>=1,label+': private bank port'",
+            "count": 1
+          },
+          {
+            "before": "C(s.a,p.point)>=2,'main point private port'",
+            "after": "C(s.a,p.point)>=1,'main point private port'",
+            "count": 1
+          },
+          {
+            "before": "C(s.a,t)>=2&&C(first,t)>=1,'coupon main/private ports'",
+            "after": "C(s.a,t)>=1&&C(first,t)>=1,'coupon main/private ports'",
+            "count": 1
+          },
+          {
+            "before": "C(v.points.at(-1),t)>=2,'coupon all archive ports'",
+            "after": "C(v.points.at(-1),t)>=1,'coupon all archive ports'",
+            "count": 1
+          },
+          {
+            "before": "assert.deepEqual(s.g.at(-1).slice(1),s.g[s.archive-1].slice(1),'active archive inherited tail');",
+            "after": "assert.deepEqual(s.g.at(-1).slice(),s.g[s.archive-1].slice(),'active archive inherited entire column');",
+            "count": 1
+          },
+          {
+            "before": "assert(C(s.a,N)===1&&C(first,N)>=1,'work separation and main reload port');",
+            "after": "assert(C(s.a,N)===0,'bank work has no private ancestry; main returns by actual trim');",
+            "count": 1
+          },
+          {
+            "before": "C(u,N)>=3&&C(v,N)>=3",
+            "after": "C(u,N)>=2&&C(v,N)>=2",
+            "count": 1
+          },
+          {
+            "before": "P.trim(s,z);P.prepare(s,e,2);",
+            "after": "P.trim(s,z);P.prepare(s,e,1);",
+            "count": 1
+          },
+          {
+            "before": "cut=points.at(-2);row=3;blocks=2;",
+            "after": "cut=points.at(-2);row=2;blocks=2;",
+            "count": 1
+          },
+          {
+            "before": "row=3+lowerGrade(s,level,a)+1",
+            "after": "row=2+lowerGrade(s,level,a)+1",
+            "count": 1
+          },
+          {
+            "before": "row=3+lowerGrade(s,level,beta)+1",
+            "after": "row=2+lowerGrade(s,level,beta)+1",
+            "count": 1
+          },
+          {
+            "before": "const needed=3+lowerGrade(s,level,alpha)",
+            "after": "const needed=2+lowerGrade(s,level,alpha)",
+            "count": 1
+          },
+          {
+            "before": "P.prepare(s,s.packets.at(-1).g1,1,true);",
+            "after": "P.trim(s,s.packets.at(-1).g1);",
+            "count": 1
+          },
+          {
+            "before": "if(eq(upper,s.levels[level].root.word)){",
+            "after": "if(s.levels[level].root.kind==='ceiling'&&eq(upper,s.levels[level].root.word)){",
+            "count": 1
+          }
+        ],
+        "path": [
+          1,
+          0,
+          1,
+          4,
+          0,
+          0,
+          0,
+          0,
+          1,
+          6
+        ],
+        "source": "()(1^()(1,1))()(1^()(1)(2)(3)(4)(5)(6))",
+        "width": 6664,
+        "phase": "cold",
+        "slots": [],
+        "rowRoot": "()(1,1)",
+        "mode": "epsilon-finite-top-bank",
+        "seedAudit": {
+          "r": 7,
+          "background": 2,
+          "columns": 3,
+          "events": 41,
+          "port": 1,
+          "finiteTop": true,
+          "commonCounts": "1,2,4,8,4,1,2,9,38,4,9,10,17,51",
+          "previousCounts": "1,2,4,8,4,1,2,9,38,4,12,42,73,105,106,113,150",
+          "stages": [
+            {
+              "name": "five-row working pair before creating permanent four-row bank",
+              "counts": "1,2,4,8,4,1,2,9,38,4,10",
+              "graph": [
+                [],
+                [
+                  1
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  3,
+                  3,
+                  3
+                ],
+                [
+                  2,
+                  2
+                ],
+                [],
+                [
+                  6
+                ],
+                [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                [
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8
+                ],
+                [
+                  7,
+                  7
+                ],
+                [
+                  10,
+                  10,
+                  10,
+                  10,
+                  10
+                ]
+              ]
+            },
+            {
+              "name": "four-row permanent bank plus working copy",
+              "counts": "1,2,4,8,4,1,2,9,38,4,9,20",
+              "graph": [
+                [],
+                [
+                  1
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  3,
+                  3,
+                  3
+                ],
+                [
+                  2,
+                  2
+                ],
+                [],
+                [
+                  6
+                ],
+                [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                [
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8
+                ],
+                [
+                  7,
+                  7
+                ],
+                [
+                  10,
+                  10,
+                  10,
+                  10
+                ],
+                [
+                  11,
+                  11,
+                  11,
+                  11
+                ]
+              ]
+            }
+          ],
+          "certificates": {
+            "nodes": 56,
+            "hits": 1262,
+            "traceEntries": 396,
+            "macros": 30,
+            "fs": 11
+          },
+          "pair": [
+            10,
+            11
+          ],
+          "capacity": 4,
+          "requiredCapacity": 4,
+          "path": "Qtrim, trim11, truncate5, [2], expose7row2, [1], trim14; [4c-1], inherit entire11"
+        },
+        "initializationTrace": [],
+        "banks": [
+          {
+            "id": 0,
+            "level": 0,
+            "label": "()(1,1)",
+            "points": [
+              6574,
+              6645
+            ]
+          },
+          {
+            "id": 1,
+            "level": 0,
+            "label": "()(1)",
+            "points": [
+              452,
+              585
+            ]
+          },
+          {
+            "id": 2,
+            "level": 0,
+            "label": "()",
+            "points": [
+              231
+            ]
+          },
+          {
+            "id": 3,
+            "level": 0,
+            "label": "()(1)(2)(3)(4)",
+            "points": [
+              629,
+              699,
+              4241,
+              5644,
+              5846
+            ]
+          },
+          {
+            "id": 4,
+            "level": 0,
+            "label": "()(1)(2)(3)",
+            "points": [
+              629,
+              699,
+              4241,
+              5311
+            ]
+          },
+          {
+            "id": 5,
+            "level": 0,
+            "label": "()(1)(2)",
+            "points": [
+              629,
+              699,
+              2505
+            ]
+          },
+          {
+            "id": 6,
+            "level": 0,
+            "label": "()(1)(2)(3)(4)(5)(6)",
+            "points": [
+              5916,
+              6010,
+              6104,
+              6198,
+              6292,
+              6386,
+              6480
+            ]
+          }
+        ],
+        "trace": [
+          {
+            "kind": "budget",
+            "count": 1,
+            "width": 42
+          },
+          {
+            "kind": "row-unit",
+            "level": 0,
+            "parent": 0,
+            "node": 1,
+            "n": 1,
+            "row": 4,
+            "cut": 10,
+            "blocks": 2,
+            "label": "()(1)",
+            "parentBefore": [
+              10,
+              11
+            ],
+            "width": 168
+          },
+          {
+            "kind": "budget",
+            "count": 1,
+            "width": 152
+          },
+          {
+            "kind": "row-delete",
+            "level": 0,
+            "parent": 1,
+            "node": 2,
+            "n": 0,
+            "row": 2,
+            "cut": 10,
+            "blocks": 2,
+            "label": "()",
+            "parentBefore": [
+              10,
+              54
+            ],
+            "width": 876
+          },
+          {
+            "kind": "budget",
+            "count": 1,
+            "width": 686
+          },
+          {
+            "kind": "row-unit",
+            "level": 0,
+            "parent": 0,
+            "node": 3,
+            "n": 4,
+            "row": 4,
+            "cut": 629,
+            "blocks": 5,
+            "label": "()(1)(2)(3)(4)",
+            "parentBefore": [
+              629,
+              652
+            ],
+            "width": 1099
+          },
+          {
+            "kind": "budget",
+            "count": 1,
+            "width": 1042
+          },
+          {
+            "kind": "row-delete",
+            "level": 0,
+            "parent": 3,
+            "node": 4,
+            "n": 0,
+            "row": 2,
+            "cut": 839,
+            "blocks": 2,
+            "label": "()(1)(2)(3)",
+            "parentBefore": [
+              629,
+              699,
+              769,
+              839,
+              909
+            ],
+            "width": 2160
+          },
+          {
+            "kind": "budget",
+            "count": 1,
+            "width": 1840
+          },
+          {
+            "kind": "row-delete",
+            "level": 0,
+            "parent": 4,
+            "node": 5,
+            "n": 0,
+            "row": 2,
+            "cut": 769,
+            "blocks": 2,
+            "label": "()(1)(2)",
+            "parentBefore": [
+              629,
+              699,
+              769,
+              1172
+            ],
+            "width": 7702
+          },
+          {
+            "kind": "budget",
+            "count": 1,
+            "width": 5992
+          },
+          {
+            "kind": "row-unit",
+            "level": 0,
+            "parent": 0,
+            "node": 6,
+            "n": 6,
+            "row": 4,
+            "cut": 5916,
+            "blocks": 7,
+            "label": "()(1)(2)(3)(4)(5)(6)",
+            "parentBefore": [
+              5916,
+              5963
+            ],
+            "width": 6742
+          }
+        ],
+        "stats": {
+          "checks": 51,
+          "pairs": 810,
+          "ports": 606,
+          "sourceSteps": 10,
+          "budgets": 6,
+          "maxBudget": 1,
+          "calls": 6,
+          "allocations": 6,
+          "ordinaryRowSteps": 3,
+          "deletedRowSteps": 3,
+          "keptSmallerBanks": 11,
+          "strictSubcovariances": 0,
+          "topDowns": 26,
+          "maxWidth": 7702,
+          "maxNodes": 7,
+          "mainUnits": 2,
+          "mainLimits": 8,
+          "mainDeletes": 0
+        },
+        "sparseStats": {
+          "nativeFS": 28,
+          "zeroSteps": 2618,
+          "downMacroEndpoints": 728,
+          "truncationMacroEndpoints": 687,
+          "smallListDifferentials": 85,
+          "smallCapDifferentials": 156,
+          "maxSegments": 8509,
+          "maxWidth": 7712
+        },
+        "limits": {
+          "ms": 20000,
+          "rssMiB": 650,
+          "width": 160000,
+          "downTransientWidth": 320000,
+          "events": 200000,
+          "pairs": 4000000,
+          "nodes": 160,
+          "sourceWidth": 22,
+          "steps": 30,
+          "navigation": 1800,
+          "index": 32,
+          "wordLength": 100,
+          "nativeWidth": 90,
+          "rows": 400,
+          "rowWidth": 80,
+          "routeSteps": 160,
+          "plan": 80
+        },
+        "elapsedMs": 412,
+        "rssMiB": 213.83984375
+      }
+    },
+    {
+      "id": "6",
+      "exitCode": 0,
+      "wallTimeSeconds": 0.870694,
+      "result": {
+        "caseIndex": 6,
+        "test": {
+          "name": "large first epsilon index",
+          "columns": 2,
+          "path": [
+            18
+          ]
+        },
+        "finiteTestsOnly": true,
+        "status": "bounded finite-top epsilon case passed",
+        "error": null,
+        "originalSHA256": "2167705cd24ad2ba0cfa66d8c28adde364692bb50823d493e704b6bfd96c6120",
+        "interfacePatches": [
+          {
+            "before": "?3+(C?Cap.at(C,i+1,j+1):lowerGrade(s,v.level,v.profile[i][j]))",
+            "after": "?2+(C?Cap.at(C,i+1,j+1):lowerGrade(s,v.level,v.profile[i][j]))",
+            "count": 1
+          },
+          {
+            "before": "P.E.restore(s,s.archive);",
+            "after": "P.prepare(s,s.archive,1,true);",
+            "count": 1
+          },
+          {
+            "before": "assert.equal(s.g[s.a-1].length,2);assert.equal(s.g[s.a-1][0],s.g[s.a-1][1]);",
+            "after": "assert.equal(s.g[s.a-1].length,1);",
+            "count": 1
+          },
+          {
+            "before": "v.background>=3&&v.background<=s.seedAudit.background",
+            "after": "v.background>=2&&v.background<=s.seedAudit.background",
+            "count": 1
+          },
+          {
+            "before": "C(u,e)>=3&&C(w,e)>=3",
+            "after": "C(u,e)>=2&&C(w,e)>=2",
+            "count": 1
+          },
+          {
+            "before": "C(p,s.a)>=2,label+': private bank port'",
+            "after": "C(p,s.a)>=1,label+': private bank port'",
+            "count": 1
+          },
+          {
+            "before": "C(s.a,p.point)>=2,'main point private port'",
+            "after": "C(s.a,p.point)>=1,'main point private port'",
+            "count": 1
+          },
+          {
+            "before": "C(s.a,t)>=2&&C(first,t)>=1,'coupon main/private ports'",
+            "after": "C(s.a,t)>=1&&C(first,t)>=1,'coupon main/private ports'",
+            "count": 1
+          },
+          {
+            "before": "C(v.points.at(-1),t)>=2,'coupon all archive ports'",
+            "after": "C(v.points.at(-1),t)>=1,'coupon all archive ports'",
+            "count": 1
+          },
+          {
+            "before": "assert.deepEqual(s.g.at(-1).slice(1),s.g[s.archive-1].slice(1),'active archive inherited tail');",
+            "after": "assert.deepEqual(s.g.at(-1).slice(),s.g[s.archive-1].slice(),'active archive inherited entire column');",
+            "count": 1
+          },
+          {
+            "before": "assert(C(s.a,N)===1&&C(first,N)>=1,'work separation and main reload port');",
+            "after": "assert(C(s.a,N)===0,'bank work has no private ancestry; main returns by actual trim');",
+            "count": 1
+          },
+          {
+            "before": "C(u,N)>=3&&C(v,N)>=3",
+            "after": "C(u,N)>=2&&C(v,N)>=2",
+            "count": 1
+          },
+          {
+            "before": "P.trim(s,z);P.prepare(s,e,2);",
+            "after": "P.trim(s,z);P.prepare(s,e,1);",
+            "count": 1
+          },
+          {
+            "before": "cut=points.at(-2);row=3;blocks=2;",
+            "after": "cut=points.at(-2);row=2;blocks=2;",
+            "count": 1
+          },
+          {
+            "before": "row=3+lowerGrade(s,level,a)+1",
+            "after": "row=2+lowerGrade(s,level,a)+1",
+            "count": 1
+          },
+          {
+            "before": "row=3+lowerGrade(s,level,beta)+1",
+            "after": "row=2+lowerGrade(s,level,beta)+1",
+            "count": 1
+          },
+          {
+            "before": "const needed=3+lowerGrade(s,level,alpha)",
+            "after": "const needed=2+lowerGrade(s,level,alpha)",
+            "count": 1
+          },
+          {
+            "before": "P.prepare(s,s.packets.at(-1).g1,1,true);",
+            "after": "P.trim(s,s.packets.at(-1).g1);",
+            "count": 1
+          },
+          {
+            "before": "if(eq(upper,s.levels[level].root.word)){",
+            "after": "if(s.levels[level].root.kind==='ceiling'&&eq(upper,s.levels[level].root.word)){",
+            "count": 1
+          }
+        ],
+        "path": [
+          18
+        ],
+        "source": "()(1^()(1)(2)(3)(4)(5)(6)(7)(8)(9)(10)(11)(12)(13)(14)(15)(16)(17)(18))",
+        "width": 566,
+        "phase": "cold",
+        "slots": [],
+        "rowRoot": "()(1,1)",
+        "mode": "epsilon-finite-top-bank",
+        "seedAudit": {
+          "r": 7,
+          "background": 2,
+          "columns": 2,
+          "events": 33,
+          "port": 1,
+          "finiteTop": true,
+          "commonCounts": "1,2,4,8,4,1,2,9,38,4,9,10,17,51",
+          "previousCounts": "1,2,4,8,4,1,2,9,38,4,12,42,73,105,106,113,150",
+          "stages": [
+            {
+              "name": "five-row working pair before creating permanent four-row bank",
+              "counts": "1,2,4,8,4,1,2,9,38,4,10",
+              "graph": [
+                [],
+                [
+                  1
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  3,
+                  3,
+                  3
+                ],
+                [
+                  2,
+                  2
+                ],
+                [],
+                [
+                  6
+                ],
+                [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                [
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8
+                ],
+                [
+                  7,
+                  7
+                ],
+                [
+                  10,
+                  10,
+                  10,
+                  10,
+                  10
+                ]
+              ]
+            },
+            {
+              "name": "four-row permanent bank plus working copy",
+              "counts": "1,2,4,8,4,1,2,9,38,4,9,20",
+              "graph": [
+                [],
+                [
+                  1
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  3,
+                  3,
+                  3
+                ],
+                [
+                  2,
+                  2
+                ],
+                [],
+                [
+                  6
+                ],
+                [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                [
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8
+                ],
+                [
+                  7,
+                  7
+                ],
+                [
+                  10,
+                  10,
+                  10,
+                  10
+                ],
+                [
+                  11,
+                  11,
+                  11,
+                  11
+                ]
+              ]
+            }
+          ],
+          "certificates": {
+            "nodes": 44,
+            "hits": 754,
+            "traceEntries": 284,
+            "macros": 22,
+            "fs": 11
+          },
+          "pair": [
+            10,
+            11
+          ],
+          "capacity": 4,
+          "requiredCapacity": 4,
+          "path": "Qtrim, trim11, truncate5, [2], expose7row2, [1], trim14; [4c-1], inherit entire11"
+        },
+        "initializationTrace": [],
+        "banks": [
+          {
+            "id": 0,
+            "level": 0,
+            "label": "()(1,1)",
+            "points": [
+              542,
+              557
+            ]
+          },
+          {
+            "id": 1,
+            "level": 0,
+            "label": "()(1)(2)(3)(4)(5)(6)(7)(8)(9)(10)(11)(12)(13)(14)(15)(16)(17)(18)",
+            "points": [
+              10,
+              38,
+              66,
+              94,
+              122,
+              150,
+              178,
+              206,
+              234,
+              262,
+              290,
+              318,
+              346,
+              374,
+              402,
+              430,
+              458,
+              486,
+              514
+            ]
+          }
+        ],
+        "trace": [
+          {
+            "kind": "budget",
+            "count": 1,
+            "width": 30
+          },
+          {
+            "kind": "row-unit",
+            "level": 0,
+            "parent": 0,
+            "node": 1,
+            "n": 18,
+            "row": 4,
+            "cut": 10,
+            "blocks": 19,
+            "label": "()(1)(2)(3)(4)(5)(6)(7)(8)(9)(10)(11)(12)(13)(14)(15)(16)(17)(18)",
+            "parentBefore": [
+              10,
+              11
+            ],
+            "width": 588
+          }
+        ],
+        "stats": {
+          "checks": 8,
+          "pairs": 698,
+          "ports": 58,
+          "sourceSteps": 1,
+          "budgets": 1,
+          "maxBudget": 1,
+          "calls": 1,
+          "allocations": 1,
+          "ordinaryRowSteps": 1,
+          "deletedRowSteps": 0,
+          "keptSmallerBanks": 0,
+          "strictSubcovariances": 0,
+          "topDowns": 5,
+          "maxWidth": 588,
+          "maxNodes": 2,
+          "mainUnits": 0,
+          "mainLimits": 1,
+          "mainDeletes": 0
+        },
+        "sparseStats": {
+          "nativeFS": 4,
+          "zeroSteps": 40,
+          "downMacroEndpoints": 70,
+          "truncationMacroEndpoints": 62,
+          "smallListDifferentials": 52,
+          "smallCapDifferentials": 96,
+          "maxSegments": 595,
+          "maxWidth": 597
+        },
+        "limits": {
+          "ms": 20000,
+          "rssMiB": 650,
+          "width": 160000,
+          "downTransientWidth": 320000,
+          "events": 200000,
+          "pairs": 4000000,
+          "nodes": 160,
+          "sourceWidth": 22,
+          "steps": 30,
+          "navigation": 1800,
+          "index": 32,
+          "wordLength": 100,
+          "nativeWidth": 90,
+          "rows": 400,
+          "rowWidth": 80,
+          "routeSteps": 160,
+          "plan": 80
+        },
+        "elapsedMs": 99,
+        "rssMiB": 148.265625
+      }
+    },
+    {
+      "id": "7",
+      "exitCode": 0,
+      "wallTimeSeconds": 0.9171005,
+      "result": {
+        "caseIndex": 7,
+        "test": {
+          "name": "four-column retained epsilon source",
+          "columns": 4,
+          "path": [
+            1,
+            0,
+            1,
+            3
+          ]
+        },
+        "finiteTestsOnly": true,
+        "status": "bounded finite-top epsilon case passed",
+        "error": null,
+        "originalSHA256": "2167705cd24ad2ba0cfa66d8c28adde364692bb50823d493e704b6bfd96c6120",
+        "interfacePatches": [
+          {
+            "before": "?3+(C?Cap.at(C,i+1,j+1):lowerGrade(s,v.level,v.profile[i][j]))",
+            "after": "?2+(C?Cap.at(C,i+1,j+1):lowerGrade(s,v.level,v.profile[i][j]))",
+            "count": 1
+          },
+          {
+            "before": "P.E.restore(s,s.archive);",
+            "after": "P.prepare(s,s.archive,1,true);",
+            "count": 1
+          },
+          {
+            "before": "assert.equal(s.g[s.a-1].length,2);assert.equal(s.g[s.a-1][0],s.g[s.a-1][1]);",
+            "after": "assert.equal(s.g[s.a-1].length,1);",
+            "count": 1
+          },
+          {
+            "before": "v.background>=3&&v.background<=s.seedAudit.background",
+            "after": "v.background>=2&&v.background<=s.seedAudit.background",
+            "count": 1
+          },
+          {
+            "before": "C(u,e)>=3&&C(w,e)>=3",
+            "after": "C(u,e)>=2&&C(w,e)>=2",
+            "count": 1
+          },
+          {
+            "before": "C(p,s.a)>=2,label+': private bank port'",
+            "after": "C(p,s.a)>=1,label+': private bank port'",
+            "count": 1
+          },
+          {
+            "before": "C(s.a,p.point)>=2,'main point private port'",
+            "after": "C(s.a,p.point)>=1,'main point private port'",
+            "count": 1
+          },
+          {
+            "before": "C(s.a,t)>=2&&C(first,t)>=1,'coupon main/private ports'",
+            "after": "C(s.a,t)>=1&&C(first,t)>=1,'coupon main/private ports'",
+            "count": 1
+          },
+          {
+            "before": "C(v.points.at(-1),t)>=2,'coupon all archive ports'",
+            "after": "C(v.points.at(-1),t)>=1,'coupon all archive ports'",
+            "count": 1
+          },
+          {
+            "before": "assert.deepEqual(s.g.at(-1).slice(1),s.g[s.archive-1].slice(1),'active archive inherited tail');",
+            "after": "assert.deepEqual(s.g.at(-1).slice(),s.g[s.archive-1].slice(),'active archive inherited entire column');",
+            "count": 1
+          },
+          {
+            "before": "assert(C(s.a,N)===1&&C(first,N)>=1,'work separation and main reload port');",
+            "after": "assert(C(s.a,N)===0,'bank work has no private ancestry; main returns by actual trim');",
+            "count": 1
+          },
+          {
+            "before": "C(u,N)>=3&&C(v,N)>=3",
+            "after": "C(u,N)>=2&&C(v,N)>=2",
+            "count": 1
+          },
+          {
+            "before": "P.trim(s,z);P.prepare(s,e,2);",
+            "after": "P.trim(s,z);P.prepare(s,e,1);",
+            "count": 1
+          },
+          {
+            "before": "cut=points.at(-2);row=3;blocks=2;",
+            "after": "cut=points.at(-2);row=2;blocks=2;",
+            "count": 1
+          },
+          {
+            "before": "row=3+lowerGrade(s,level,a)+1",
+            "after": "row=2+lowerGrade(s,level,a)+1",
+            "count": 1
+          },
+          {
+            "before": "row=3+lowerGrade(s,level,beta)+1",
+            "after": "row=2+lowerGrade(s,level,beta)+1",
+            "count": 1
+          },
+          {
+            "before": "const needed=3+lowerGrade(s,level,alpha)",
+            "after": "const needed=2+lowerGrade(s,level,alpha)",
+            "count": 1
+          },
+          {
+            "before": "P.prepare(s,s.packets.at(-1).g1,1,true);",
+            "after": "P.trim(s,s.packets.at(-1).g1);",
+            "count": 1
+          },
+          {
+            "before": "if(eq(upper,s.levels[level].root.word)){",
+            "after": "if(s.levels[level].root.kind==='ceiling'&&eq(upper,s.levels[level].root.word)){",
+            "count": 1
+          }
+        ],
+        "path": [
+          1,
+          0,
+          1,
+          3
+        ],
+        "source": "()(1^()(1,1))(2^()(1,1))(2^()(1)(2)(3))",
+        "width": 1310,
+        "phase": "cold",
+        "slots": [],
+        "rowRoot": "()(1,1)",
+        "mode": "epsilon-finite-top-bank",
+        "seedAudit": {
+          "r": 7,
+          "background": 2,
+          "columns": 4,
+          "events": 49,
+          "port": 1,
+          "finiteTop": true,
+          "commonCounts": "1,2,4,8,4,1,2,9,38,4,9,10,17,51",
+          "previousCounts": "1,2,4,8,4,1,2,9,38,4,12,42,73,105,106,113,150",
+          "stages": [
+            {
+              "name": "five-row working pair before creating permanent four-row bank",
+              "counts": "1,2,4,8,4,1,2,9,38,4,10",
+              "graph": [
+                [],
+                [
+                  1
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  3,
+                  3,
+                  3
+                ],
+                [
+                  2,
+                  2
+                ],
+                [],
+                [
+                  6
+                ],
+                [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                [
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8
+                ],
+                [
+                  7,
+                  7
+                ],
+                [
+                  10,
+                  10,
+                  10,
+                  10,
+                  10
+                ]
+              ]
+            },
+            {
+              "name": "four-row permanent bank plus working copy",
+              "counts": "1,2,4,8,4,1,2,9,38,4,9,20",
+              "graph": [
+                [],
+                [
+                  1
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  3,
+                  3,
+                  3
+                ],
+                [
+                  2,
+                  2
+                ],
+                [],
+                [
+                  6
+                ],
+                [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                [
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8
+                ],
+                [
+                  7,
+                  7
+                ],
+                [
+                  10,
+                  10,
+                  10,
+                  10
+                ],
+                [
+                  11,
+                  11,
+                  11,
+                  11
+                ]
+              ]
+            }
+          ],
+          "certificates": {
+            "nodes": 68,
+            "hits": 1898,
+            "traceEntries": 508,
+            "macros": 38,
+            "fs": 11
+          },
+          "pair": [
+            10,
+            11
+          ],
+          "capacity": 4,
+          "requiredCapacity": 4,
+          "path": "Qtrim, trim11, truncate5, [2], expose7row2, [1], trim14; [4c-1], inherit entire11"
+        },
+        "initializationTrace": [],
+        "banks": [
+          {
+            "id": 0,
+            "level": 0,
+            "label": "()(1,1)",
+            "points": [
+              1229,
+              1292
+            ]
+          },
+          {
+            "id": 1,
+            "level": 0,
+            "label": "()(1)",
+            "points": [
+              612,
+              793
+            ]
+          },
+          {
+            "id": 2,
+            "level": 0,
+            "label": "()",
+            "points": [
+              311
+            ]
+          },
+          {
+            "id": 3,
+            "level": 0,
+            "label": "()(1)(2)(3)",
+            "points": [
+              853,
+              947,
+              1041,
+              1135
+            ]
+          }
+        ],
+        "trace": [
+          {
+            "kind": "budget",
+            "count": 1,
+            "width": 54
+          },
+          {
+            "kind": "row-unit",
+            "level": 0,
+            "parent": 0,
+            "node": 1,
+            "n": 1,
+            "row": 4,
+            "cut": 10,
+            "blocks": 2,
+            "label": "()(1)",
+            "parentBefore": [
+              10,
+              11
+            ],
+            "width": 224
+          },
+          {
+            "kind": "budget",
+            "count": 1,
+            "width": 204
+          },
+          {
+            "kind": "row-delete",
+            "level": 0,
+            "parent": 1,
+            "node": 2,
+            "n": 0,
+            "row": 2,
+            "cut": 10,
+            "blocks": 2,
+            "label": "()",
+            "parentBefore": [
+              10,
+              70
+            ],
+            "width": 1188
+          },
+          {
+            "kind": "budget",
+            "count": 1,
+            "width": 930
+          },
+          {
+            "kind": "row-unit",
+            "level": 0,
+            "parent": 0,
+            "node": 3,
+            "n": 3,
+            "row": 4,
+            "cut": 853,
+            "blocks": 4,
+            "label": "()(1)(2)(3)",
+            "parentBefore": [
+              853,
+              884
+            ],
+            "width": 1389
+          }
+        ],
+        "stats": {
+          "checks": 24,
+          "pairs": 80,
+          "ports": 127,
+          "sourceSteps": 4,
+          "budgets": 3,
+          "maxBudget": 1,
+          "calls": 3,
+          "allocations": 3,
+          "ordinaryRowSteps": 2,
+          "deletedRowSteps": 1,
+          "keptSmallerBanks": 2,
+          "strictSubcovariances": 0,
+          "topDowns": 31,
+          "maxWidth": 1389,
+          "maxNodes": 4,
+          "mainUnits": 1,
+          "mainLimits": 3,
+          "mainDeletes": 0
+        },
+        "sparseStats": {
+          "nativeFS": 13,
+          "zeroSteps": 549,
+          "downMacroEndpoints": 466,
+          "truncationMacroEndpoints": 427,
+          "smallListDifferentials": 117,
+          "smallCapDifferentials": 216,
+          "maxSegments": 1474,
+          "maxWidth": 1416
+        },
+        "limits": {
+          "ms": 20000,
+          "rssMiB": 650,
+          "width": 160000,
+          "downTransientWidth": 320000,
+          "events": 200000,
+          "pairs": 4000000,
+          "nodes": 160,
+          "sourceWidth": 22,
+          "steps": 30,
+          "navigation": 1800,
+          "index": 32,
+          "wordLength": 100,
+          "nativeWidth": 90,
+          "rows": 400,
+          "rowWidth": 80,
+          "routeSteps": 160,
+          "plan": 80
+        },
+        "elapsedMs": 190,
+        "rssMiB": 156.171875
+      }
+    },
+    {
+      "id": "8",
+      "exitCode": 1,
+      "wallTimeSeconds": 3.4253477,
+      "result": {
+        "caseIndex": 8,
+        "test": {
+          "name": "deeper bounded finite prefix",
+          "columns": 2,
+          "path": [
+            3,
+            0,
+            1,
+            1,
+            1
+          ]
+        },
+        "finiteTestsOnly": true,
+        "status": "failed or guarded",
+        "error": {
+          "message": "recursive row allocation width guard",
+          "stack": "AssertionError [ERR_ASSERTION]: recursive row allocation width guard\n    at allocateStep ([workspace]/output\\tbms-e0mn-bridge-20260925\\epsilon-fixed-row-bank.generated.cjs:258:3)\n    at register ([workspace]/output\\tbms-e0mn-bridge-20260925\\epsilon-fixed-row-bank.generated.cjs:335:10)\n    at Object.step ([workspace]/output\\tbms-e0mn-bridge-20260925\\epsilon-fixed-row-bank.generated.cjs:357:7)\n    at Object.<anonymous> ([workspace]/output\\tbms-e0mn-bridge-20260925\\check-epsilon-fixed-bank.cjs:22:34)\n    at Module._compile (node:internal/modules/cjs/loader:1871:14)\n    at Object..js (node:internal/modules/cjs/loader:2002:10)\n    at Module.load (node:internal/modules/cjs/loader:1594:32)\n    at Module._load (node:internal/modules/cjs/loader:1396:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)"
+        },
+        "originalSHA256": "2167705cd24ad2ba0cfa66d8c28adde364692bb50823d493e704b6bfd96c6120",
+        "interfacePatches": [
+          {
+            "before": "?3+(C?Cap.at(C,i+1,j+1):lowerGrade(s,v.level,v.profile[i][j]))",
+            "after": "?2+(C?Cap.at(C,i+1,j+1):lowerGrade(s,v.level,v.profile[i][j]))",
+            "count": 1
+          },
+          {
+            "before": "P.E.restore(s,s.archive);",
+            "after": "P.prepare(s,s.archive,1,true);",
+            "count": 1
+          },
+          {
+            "before": "assert.equal(s.g[s.a-1].length,2);assert.equal(s.g[s.a-1][0],s.g[s.a-1][1]);",
+            "after": "assert.equal(s.g[s.a-1].length,1);",
+            "count": 1
+          },
+          {
+            "before": "v.background>=3&&v.background<=s.seedAudit.background",
+            "after": "v.background>=2&&v.background<=s.seedAudit.background",
+            "count": 1
+          },
+          {
+            "before": "C(u,e)>=3&&C(w,e)>=3",
+            "after": "C(u,e)>=2&&C(w,e)>=2",
+            "count": 1
+          },
+          {
+            "before": "C(p,s.a)>=2,label+': private bank port'",
+            "after": "C(p,s.a)>=1,label+': private bank port'",
+            "count": 1
+          },
+          {
+            "before": "C(s.a,p.point)>=2,'main point private port'",
+            "after": "C(s.a,p.point)>=1,'main point private port'",
+            "count": 1
+          },
+          {
+            "before": "C(s.a,t)>=2&&C(first,t)>=1,'coupon main/private ports'",
+            "after": "C(s.a,t)>=1&&C(first,t)>=1,'coupon main/private ports'",
+            "count": 1
+          },
+          {
+            "before": "C(v.points.at(-1),t)>=2,'coupon all archive ports'",
+            "after": "C(v.points.at(-1),t)>=1,'coupon all archive ports'",
+            "count": 1
+          },
+          {
+            "before": "assert.deepEqual(s.g.at(-1).slice(1),s.g[s.archive-1].slice(1),'active archive inherited tail');",
+            "after": "assert.deepEqual(s.g.at(-1).slice(),s.g[s.archive-1].slice(),'active archive inherited entire column');",
+            "count": 1
+          },
+          {
+            "before": "assert(C(s.a,N)===1&&C(first,N)>=1,'work separation and main reload port');",
+            "after": "assert(C(s.a,N)===0,'bank work has no private ancestry; main returns by actual trim');",
+            "count": 1
+          },
+          {
+            "before": "C(u,N)>=3&&C(v,N)>=3",
+            "after": "C(u,N)>=2&&C(v,N)>=2",
+            "count": 1
+          },
+          {
+            "before": "P.trim(s,z);P.prepare(s,e,2);",
+            "after": "P.trim(s,z);P.prepare(s,e,1);",
+            "count": 1
+          },
+          {
+            "before": "cut=points.at(-2);row=3;blocks=2;",
+            "after": "cut=points.at(-2);row=2;blocks=2;",
+            "count": 1
+          },
+          {
+            "before": "row=3+lowerGrade(s,level,a)+1",
+            "after": "row=2+lowerGrade(s,level,a)+1",
+            "count": 1
+          },
+          {
+            "before": "row=3+lowerGrade(s,level,beta)+1",
+            "after": "row=2+lowerGrade(s,level,beta)+1",
+            "count": 1
+          },
+          {
+            "before": "const needed=3+lowerGrade(s,level,alpha)",
+            "after": "const needed=2+lowerGrade(s,level,alpha)",
+            "count": 1
+          },
+          {
+            "before": "P.prepare(s,s.packets.at(-1).g1,1,true);",
+            "after": "P.trim(s,s.packets.at(-1).g1);",
+            "count": 1
+          },
+          {
+            "before": "if(eq(upper,s.levels[level].root.word)){",
+            "after": "if(s.levels[level].root.kind==='ceiling'&&eq(upper,s.levels[level].root.word)){",
+            "count": 1
+          }
+        ],
+        "path": [
+          3,
+          0,
+          1
+        ],
+        "source": "()(1^()(1)(1))",
+        "width": 73499,
+        "phase": "budget",
+        "slots": [],
+        "rowRoot": "()(1,1)",
+        "mode": "epsilon-finite-top-bank",
+        "seedAudit": {
+          "r": 7,
+          "background": 2,
+          "columns": 2,
+          "events": 33,
+          "port": 1,
+          "finiteTop": true,
+          "commonCounts": "1,2,4,8,4,1,2,9,38,4,9,10,17,51",
+          "previousCounts": "1,2,4,8,4,1,2,9,38,4,12,42,73,105,106,113,150",
+          "stages": [
+            {
+              "name": "five-row working pair before creating permanent four-row bank",
+              "counts": "1,2,4,8,4,1,2,9,38,4,10",
+              "graph": [
+                [],
+                [
+                  1
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  3,
+                  3,
+                  3
+                ],
+                [
+                  2,
+                  2
+                ],
+                [],
+                [
+                  6
+                ],
+                [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                [
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8
+                ],
+                [
+                  7,
+                  7
+                ],
+                [
+                  10,
+                  10,
+                  10,
+                  10,
+                  10
+                ]
+              ]
+            },
+            {
+              "name": "four-row permanent bank plus working copy",
+              "counts": "1,2,4,8,4,1,2,9,38,4,9,20",
+              "graph": [
+                [],
+                [
+                  1
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  3,
+                  3,
+                  3
+                ],
+                [
+                  2,
+                  2
+                ],
+                [],
+                [
+                  6
+                ],
+                [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                [
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8
+                ],
+                [
+                  7,
+                  7
+                ],
+                [
+                  10,
+                  10,
+                  10,
+                  10
+                ],
+                [
+                  11,
+                  11,
+                  11,
+                  11
+                ]
+              ]
+            }
+          ],
+          "certificates": {
+            "nodes": 44,
+            "hits": 754,
+            "traceEntries": 284,
+            "macros": 22,
+            "fs": 11
+          },
+          "pair": [
+            10,
+            11
+          ],
+          "capacity": 4,
+          "requiredCapacity": 4,
+          "path": "Qtrim, trim11, truncate5, [2], expose7row2, [1], trim14; [4c-1], inherit entire11"
+        },
+        "initializationTrace": [],
+        "banks": [
+          {
+            "id": 0,
+            "level": 0,
+            "label": "()(1,1)",
+            "points": [
+              73475,
+              73490
+            ]
+          },
+          {
+            "id": 1,
+            "level": 0,
+            "label": "()(1)(2)(3)",
+            "points": [
+              69996,
+              72805,
+              73366,
+              73447
+            ]
+          },
+          {
+            "id": 2,
+            "level": 0,
+            "label": "()(1)(2)",
+            "points": [
+              69996,
+              72805,
+              73233
+            ]
+          },
+          {
+            "id": 3,
+            "level": 0,
+            "label": "()(1)(1)",
+            "points": [
+              69996,
+              70024,
+              72111
+            ]
+          },
+          {
+            "id": 4,
+            "level": 0,
+            "label": "()(1)()(1)",
+            "points": [
+              10,
+              38,
+              59504,
+              66517
+            ]
+          },
+          {
+            "id": 5,
+            "level": 0,
+            "label": "()(1)()",
+            "points": [
+              10,
+              38,
+              45507
+            ]
+          }
+        ],
+        "trace": [
+          {
+            "kind": "budget",
+            "count": 1,
+            "width": 30
+          },
+          {
+            "kind": "row-unit",
+            "level": 0,
+            "parent": 0,
+            "node": 1,
+            "n": 3,
+            "row": 4,
+            "cut": 10,
+            "blocks": 4,
+            "label": "()(1)(2)(3)",
+            "parentBefore": [
+              10,
+              11
+            ],
+            "width": 168
+          },
+          {
+            "kind": "budget",
+            "count": 1,
+            "width": 148
+          },
+          {
+            "kind": "row-delete",
+            "level": 0,
+            "parent": 1,
+            "node": 2,
+            "n": 0,
+            "row": 2,
+            "cut": 66,
+            "blocks": 2,
+            "label": "()(1)(2)",
+            "parentBefore": [
+              10,
+              38,
+              66,
+              94
+            ],
+            "width": 592
+          },
+          {
+            "kind": "budget",
+            "count": 1,
+            "width": 467
+          },
+          {
+            "kind": "row-unit",
+            "level": 0,
+            "parent": 2,
+            "node": 3,
+            "n": 1,
+            "row": 3,
+            "cut": 38,
+            "blocks": 2,
+            "label": "()(1)(1)",
+            "parentBefore": [
+              10,
+              38,
+              199
+            ],
+            "width": 2808
+          },
+          {
+            "kind": "budget",
+            "count": 3,
+            "width": 2126
+          },
+          {
+            "kind": "row-unit",
+            "level": 0,
+            "parent": 3,
+            "node": 4,
+            "n": 1,
+            "row": 3,
+            "cut": 10,
+            "blocks": 2,
+            "label": "()(1)()(1)",
+            "parentBefore": [
+              10,
+              38,
+              732
+            ],
+            "width": 14028
+          },
+          {
+            "kind": "row-delete",
+            "level": 0,
+            "parent": 4,
+            "node": 5,
+            "n": 0,
+            "row": 2,
+            "cut": 3517,
+            "blocks": 2,
+            "label": "()(1)()",
+            "parentBefore": [
+              10,
+              38,
+              3517,
+              3545
+            ],
+            "width": 59497
+          }
+        ],
+        "stats": {
+          "checks": 33,
+          "pairs": 456,
+          "ports": 468,
+          "sourceSteps": 3,
+          "budgets": 4,
+          "maxBudget": 3,
+          "calls": 6,
+          "allocations": 5,
+          "ordinaryRowSteps": 3,
+          "deletedRowSteps": 3,
+          "keptSmallerBanks": 0,
+          "strictSubcovariances": 0,
+          "topDowns": 8,
+          "maxWidth": 73499,
+          "maxNodes": 6,
+          "mainUnits": 0,
+          "mainLimits": 3,
+          "mainDeletes": 0
+        },
+        "sparseStats": {
+          "nativeFS": 18,
+          "zeroSteps": 18381,
+          "downMacroEndpoints": 405,
+          "truncationMacroEndpoints": 384,
+          "smallListDifferentials": 53,
+          "smallCapDifferentials": 96,
+          "maxSegments": 74102,
+          "maxWidth": 73499
+        },
+        "limits": {
+          "ms": 20000,
+          "rssMiB": 650,
+          "width": 160000,
+          "downTransientWidth": 320000,
+          "events": 200000,
+          "pairs": 4000000,
+          "nodes": 160,
+          "sourceWidth": 22,
+          "steps": 30,
+          "navigation": 1800,
+          "index": 32,
+          "wordLength": 100,
+          "nativeWidth": 90,
+          "rows": 400,
+          "rowWidth": 80,
+          "routeSteps": 160,
+          "plan": 80
+        },
+        "elapsedMs": 2687,
+        "rssMiB": 344.84765625
+      }
+    },
+    {
+      "id": "9",
+      "exitCode": 0,
+      "wallTimeSeconds": 0.7768208,
+      "result": {
+        "caseIndex": 9,
+        "test": {
+          "name": "one-column initialization",
+          "columns": 1,
+          "path": []
+        },
+        "finiteTestsOnly": true,
+        "status": "bounded finite-top epsilon case passed",
+        "error": null,
+        "originalSHA256": "2167705cd24ad2ba0cfa66d8c28adde364692bb50823d493e704b6bfd96c6120",
+        "interfacePatches": [
+          {
+            "before": "?3+(C?Cap.at(C,i+1,j+1):lowerGrade(s,v.level,v.profile[i][j]))",
+            "after": "?2+(C?Cap.at(C,i+1,j+1):lowerGrade(s,v.level,v.profile[i][j]))",
+            "count": 1
+          },
+          {
+            "before": "P.E.restore(s,s.archive);",
+            "after": "P.prepare(s,s.archive,1,true);",
+            "count": 1
+          },
+          {
+            "before": "assert.equal(s.g[s.a-1].length,2);assert.equal(s.g[s.a-1][0],s.g[s.a-1][1]);",
+            "after": "assert.equal(s.g[s.a-1].length,1);",
+            "count": 1
+          },
+          {
+            "before": "v.background>=3&&v.background<=s.seedAudit.background",
+            "after": "v.background>=2&&v.background<=s.seedAudit.background",
+            "count": 1
+          },
+          {
+            "before": "C(u,e)>=3&&C(w,e)>=3",
+            "after": "C(u,e)>=2&&C(w,e)>=2",
+            "count": 1
+          },
+          {
+            "before": "C(p,s.a)>=2,label+': private bank port'",
+            "after": "C(p,s.a)>=1,label+': private bank port'",
+            "count": 1
+          },
+          {
+            "before": "C(s.a,p.point)>=2,'main point private port'",
+            "after": "C(s.a,p.point)>=1,'main point private port'",
+            "count": 1
+          },
+          {
+            "before": "C(s.a,t)>=2&&C(first,t)>=1,'coupon main/private ports'",
+            "after": "C(s.a,t)>=1&&C(first,t)>=1,'coupon main/private ports'",
+            "count": 1
+          },
+          {
+            "before": "C(v.points.at(-1),t)>=2,'coupon all archive ports'",
+            "after": "C(v.points.at(-1),t)>=1,'coupon all archive ports'",
+            "count": 1
+          },
+          {
+            "before": "assert.deepEqual(s.g.at(-1).slice(1),s.g[s.archive-1].slice(1),'active archive inherited tail');",
+            "after": "assert.deepEqual(s.g.at(-1).slice(),s.g[s.archive-1].slice(),'active archive inherited entire column');",
+            "count": 1
+          },
+          {
+            "before": "assert(C(s.a,N)===1&&C(first,N)>=1,'work separation and main reload port');",
+            "after": "assert(C(s.a,N)===0,'bank work has no private ancestry; main returns by actual trim');",
+            "count": 1
+          },
+          {
+            "before": "C(u,N)>=3&&C(v,N)>=3",
+            "after": "C(u,N)>=2&&C(v,N)>=2",
+            "count": 1
+          },
+          {
+            "before": "P.trim(s,z);P.prepare(s,e,2);",
+            "after": "P.trim(s,z);P.prepare(s,e,1);",
+            "count": 1
+          },
+          {
+            "before": "cut=points.at(-2);row=3;blocks=2;",
+            "after": "cut=points.at(-2);row=2;blocks=2;",
+            "count": 1
+          },
+          {
+            "before": "row=3+lowerGrade(s,level,a)+1",
+            "after": "row=2+lowerGrade(s,level,a)+1",
+            "count": 1
+          },
+          {
+            "before": "row=3+lowerGrade(s,level,beta)+1",
+            "after": "row=2+lowerGrade(s,level,beta)+1",
+            "count": 1
+          },
+          {
+            "before": "const needed=3+lowerGrade(s,level,alpha)",
+            "after": "const needed=2+lowerGrade(s,level,alpha)",
+            "count": 1
+          },
+          {
+            "before": "P.prepare(s,s.packets.at(-1).g1,1,true);",
+            "after": "P.trim(s,s.packets.at(-1).g1);",
+            "count": 1
+          },
+          {
+            "before": "if(eq(upper,s.levels[level].root.word)){",
+            "after": "if(s.levels[level].root.kind==='ceiling'&&eq(upper,s.levels[level].root.word)){",
+            "count": 1
+          }
+        ],
+        "path": [],
+        "source": "()",
+        "width": 16,
+        "phase": "cold",
+        "slots": [],
+        "rowRoot": "()(1,1)",
+        "mode": "epsilon-finite-top-bank",
+        "seedAudit": {
+          "r": 7,
+          "background": 2,
+          "columns": 1,
+          "events": 25,
+          "port": 1,
+          "finiteTop": true,
+          "commonCounts": "1,2,4,8,4,1,2,9,38,4,9,10,17,51",
+          "previousCounts": "1,2,4,8,4,1,2,9,38,4,12,42,73,105,106,113,150",
+          "stages": [
+            {
+              "name": "five-row working pair before creating permanent four-row bank",
+              "counts": "1,2,4,8,4,1,2,9,38,4,10",
+              "graph": [
+                [],
+                [
+                  1
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  3,
+                  3,
+                  3
+                ],
+                [
+                  2,
+                  2
+                ],
+                [],
+                [
+                  6
+                ],
+                [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                [
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8
+                ],
+                [
+                  7,
+                  7
+                ],
+                [
+                  10,
+                  10,
+                  10,
+                  10,
+                  10
+                ]
+              ]
+            },
+            {
+              "name": "four-row permanent bank plus working copy",
+              "counts": "1,2,4,8,4,1,2,9,38,4,9,20",
+              "graph": [
+                [],
+                [
+                  1
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  3,
+                  3,
+                  3
+                ],
+                [
+                  2,
+                  2
+                ],
+                [],
+                [
+                  6
+                ],
+                [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                [
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8
+                ],
+                [
+                  7,
+                  7
+                ],
+                [
+                  10,
+                  10,
+                  10,
+                  10
+                ],
+                [
+                  11,
+                  11,
+                  11,
+                  11
+                ]
+              ]
+            }
+          ],
+          "certificates": {
+            "nodes": 32,
+            "hits": 374,
+            "traceEntries": 172,
+            "macros": 14,
+            "fs": 11
+          },
+          "pair": [
+            10,
+            11
+          ],
+          "capacity": 4,
+          "requiredCapacity": 4,
+          "path": "Qtrim, trim11, truncate5, [2], expose7row2, [1], trim14; [4c-1], inherit entire11"
+        },
+        "initializationTrace": [],
+        "banks": [
+          {
+            "id": 0,
+            "level": 0,
+            "label": "()(1,1)",
+            "points": [
+              10,
+              11
+            ]
+          }
+        ],
+        "trace": [],
+        "stats": {
+          "checks": 1,
+          "pairs": 2,
+          "ports": 2,
+          "sourceSteps": 0,
+          "budgets": 0,
+          "maxBudget": 0,
+          "calls": 0,
+          "allocations": 0,
+          "ordinaryRowSteps": 0,
+          "deletedRowSteps": 0,
+          "keptSmallerBanks": 0,
+          "strictSubcovariances": 0,
+          "topDowns": 0,
+          "maxWidth": 16,
+          "maxNodes": 1,
+          "mainUnits": 0,
+          "mainLimits": 0,
+          "mainDeletes": 0
+        },
+        "sparseStats": {
+          "nativeFS": 0,
+          "zeroSteps": 0,
+          "downMacroEndpoints": 0,
+          "truncationMacroEndpoints": 0,
+          "smallListDifferentials": 0,
+          "smallCapDifferentials": 1,
+          "maxSegments": 14,
+          "maxWidth": 16
+        },
+        "limits": {
+          "ms": 20000,
+          "rssMiB": 650,
+          "width": 160000,
+          "downTransientWidth": 320000,
+          "events": 200000,
+          "pairs": 4000000,
+          "nodes": 160,
+          "sourceWidth": 22,
+          "steps": 30,
+          "navigation": 1800,
+          "index": 32,
+          "wordLength": 100,
+          "nativeWidth": 90,
+          "rows": 400,
+          "rowWidth": 80,
+          "routeSteps": 160,
+          "plan": 80
+        },
+        "elapsedMs": 48,
+        "rssMiB": 116.5625
+      }
+    },
+    {
+      "id": "10",
+      "exitCode": 0,
+      "wallTimeSeconds": 0.7875568,
+      "result": {
+        "caseIndex": 10,
+        "test": {
+          "name": "five-column initialization",
+          "columns": 5,
+          "path": []
+        },
+        "finiteTestsOnly": true,
+        "status": "bounded finite-top epsilon case passed",
+        "error": null,
+        "originalSHA256": "2167705cd24ad2ba0cfa66d8c28adde364692bb50823d493e704b6bfd96c6120",
+        "interfacePatches": [
+          {
+            "before": "?3+(C?Cap.at(C,i+1,j+1):lowerGrade(s,v.level,v.profile[i][j]))",
+            "after": "?2+(C?Cap.at(C,i+1,j+1):lowerGrade(s,v.level,v.profile[i][j]))",
+            "count": 1
+          },
+          {
+            "before": "P.E.restore(s,s.archive);",
+            "after": "P.prepare(s,s.archive,1,true);",
+            "count": 1
+          },
+          {
+            "before": "assert.equal(s.g[s.a-1].length,2);assert.equal(s.g[s.a-1][0],s.g[s.a-1][1]);",
+            "after": "assert.equal(s.g[s.a-1].length,1);",
+            "count": 1
+          },
+          {
+            "before": "v.background>=3&&v.background<=s.seedAudit.background",
+            "after": "v.background>=2&&v.background<=s.seedAudit.background",
+            "count": 1
+          },
+          {
+            "before": "C(u,e)>=3&&C(w,e)>=3",
+            "after": "C(u,e)>=2&&C(w,e)>=2",
+            "count": 1
+          },
+          {
+            "before": "C(p,s.a)>=2,label+': private bank port'",
+            "after": "C(p,s.a)>=1,label+': private bank port'",
+            "count": 1
+          },
+          {
+            "before": "C(s.a,p.point)>=2,'main point private port'",
+            "after": "C(s.a,p.point)>=1,'main point private port'",
+            "count": 1
+          },
+          {
+            "before": "C(s.a,t)>=2&&C(first,t)>=1,'coupon main/private ports'",
+            "after": "C(s.a,t)>=1&&C(first,t)>=1,'coupon main/private ports'",
+            "count": 1
+          },
+          {
+            "before": "C(v.points.at(-1),t)>=2,'coupon all archive ports'",
+            "after": "C(v.points.at(-1),t)>=1,'coupon all archive ports'",
+            "count": 1
+          },
+          {
+            "before": "assert.deepEqual(s.g.at(-1).slice(1),s.g[s.archive-1].slice(1),'active archive inherited tail');",
+            "after": "assert.deepEqual(s.g.at(-1).slice(),s.g[s.archive-1].slice(),'active archive inherited entire column');",
+            "count": 1
+          },
+          {
+            "before": "assert(C(s.a,N)===1&&C(first,N)>=1,'work separation and main reload port');",
+            "after": "assert(C(s.a,N)===0,'bank work has no private ancestry; main returns by actual trim');",
+            "count": 1
+          },
+          {
+            "before": "C(u,N)>=3&&C(v,N)>=3",
+            "after": "C(u,N)>=2&&C(v,N)>=2",
+            "count": 1
+          },
+          {
+            "before": "P.trim(s,z);P.prepare(s,e,2);",
+            "after": "P.trim(s,z);P.prepare(s,e,1);",
+            "count": 1
+          },
+          {
+            "before": "cut=points.at(-2);row=3;blocks=2;",
+            "after": "cut=points.at(-2);row=2;blocks=2;",
+            "count": 1
+          },
+          {
+            "before": "row=3+lowerGrade(s,level,a)+1",
+            "after": "row=2+lowerGrade(s,level,a)+1",
+            "count": 1
+          },
+          {
+            "before": "row=3+lowerGrade(s,level,beta)+1",
+            "after": "row=2+lowerGrade(s,level,beta)+1",
+            "count": 1
+          },
+          {
+            "before": "const needed=3+lowerGrade(s,level,alpha)",
+            "after": "const needed=2+lowerGrade(s,level,alpha)",
+            "count": 1
+          },
+          {
+            "before": "P.prepare(s,s.packets.at(-1).g1,1,true);",
+            "after": "P.trim(s,s.packets.at(-1).g1);",
+            "count": 1
+          },
+          {
+            "before": "if(eq(upper,s.levels[level].root.word)){",
+            "after": "if(s.levels[level].root.kind==='ceiling'&&eq(upper,s.levels[level].root.word)){",
+            "count": 1
+          }
+        ],
+        "path": [],
+        "source": "()(1^()(1,1))(2^()(1,1))(3^()(1,1))(4^()(1,1))",
+        "width": 32,
+        "phase": "cold",
+        "slots": [],
+        "rowRoot": "()(1,1)",
+        "mode": "epsilon-finite-top-bank",
+        "seedAudit": {
+          "r": 7,
+          "background": 2,
+          "columns": 5,
+          "events": 57,
+          "port": 1,
+          "finiteTop": true,
+          "commonCounts": "1,2,4,8,4,1,2,9,38,4,9,10,17,51",
+          "previousCounts": "1,2,4,8,4,1,2,9,38,4,12,42,73,105,106,113,150",
+          "stages": [
+            {
+              "name": "five-row working pair before creating permanent four-row bank",
+              "counts": "1,2,4,8,4,1,2,9,38,4,10",
+              "graph": [
+                [],
+                [
+                  1
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  3,
+                  3,
+                  3
+                ],
+                [
+                  2,
+                  2
+                ],
+                [],
+                [
+                  6
+                ],
+                [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                [
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8
+                ],
+                [
+                  7,
+                  7
+                ],
+                [
+                  10,
+                  10,
+                  10,
+                  10,
+                  10
+                ]
+              ]
+            },
+            {
+              "name": "four-row permanent bank plus working copy",
+              "counts": "1,2,4,8,4,1,2,9,38,4,9,20",
+              "graph": [
+                [],
+                [
+                  1
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  3,
+                  3,
+                  3
+                ],
+                [
+                  2,
+                  2
+                ],
+                [],
+                [
+                  6
+                ],
+                [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                [
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8
+                ],
+                [
+                  7,
+                  7
+                ],
+                [
+                  10,
+                  10,
+                  10,
+                  10
+                ],
+                [
+                  11,
+                  11,
+                  11,
+                  11
+                ]
+              ]
+            }
+          ],
+          "certificates": {
+            "nodes": 80,
+            "hits": 2662,
+            "traceEntries": 620,
+            "macros": 46,
+            "fs": 11
+          },
+          "pair": [
+            10,
+            11
+          ],
+          "capacity": 4,
+          "requiredCapacity": 4,
+          "path": "Qtrim, trim11, truncate5, [2], expose7row2, [1], trim14; [4c-1], inherit entire11"
+        },
+        "initializationTrace": [],
+        "banks": [
+          {
+            "id": 0,
+            "level": 0,
+            "label": "()(1,1)",
+            "points": [
+              10,
+              11
+            ]
+          }
+        ],
+        "trace": [],
+        "stats": {
+          "checks": 1,
+          "pairs": 2,
+          "ports": 2,
+          "sourceSteps": 0,
+          "budgets": 0,
+          "maxBudget": 0,
+          "calls": 0,
+          "allocations": 0,
+          "ordinaryRowSteps": 0,
+          "deletedRowSteps": 0,
+          "keptSmallerBanks": 0,
+          "strictSubcovariances": 0,
+          "topDowns": 0,
+          "maxWidth": 32,
+          "maxNodes": 1,
+          "mainUnits": 0,
+          "mainLimits": 0,
+          "mainDeletes": 0
+        },
+        "sparseStats": {
+          "nativeFS": 0,
+          "zeroSteps": 0,
+          "downMacroEndpoints": 0,
+          "truncationMacroEndpoints": 0,
+          "smallListDifferentials": 0,
+          "smallCapDifferentials": 1,
+          "maxSegments": 30,
+          "maxWidth": 32
+        },
+        "limits": {
+          "ms": 20000,
+          "rssMiB": 650,
+          "width": 160000,
+          "downTransientWidth": 320000,
+          "events": 200000,
+          "pairs": 4000000,
+          "nodes": 160,
+          "sourceWidth": 22,
+          "steps": 30,
+          "navigation": 1800,
+          "index": 32,
+          "wordLength": 100,
+          "nativeWidth": 90,
+          "rows": 400,
+          "rowWidth": 80,
+          "routeSteps": 160,
+          "plan": 80
+        },
+        "elapsedMs": 60,
+        "rssMiB": 121.48828125
+      }
+    },
+    {
+      "id": "11",
+      "exitCode": 0,
+      "wallTimeSeconds": 0.8203275,
+      "result": {
+        "caseIndex": 11,
+        "test": {
+          "name": "twelve-column initialization",
+          "columns": 12,
+          "path": []
+        },
+        "finiteTestsOnly": true,
+        "status": "bounded finite-top epsilon case passed",
+        "error": null,
+        "originalSHA256": "2167705cd24ad2ba0cfa66d8c28adde364692bb50823d493e704b6bfd96c6120",
+        "interfacePatches": [
+          {
+            "before": "?3+(C?Cap.at(C,i+1,j+1):lowerGrade(s,v.level,v.profile[i][j]))",
+            "after": "?2+(C?Cap.at(C,i+1,j+1):lowerGrade(s,v.level,v.profile[i][j]))",
+            "count": 1
+          },
+          {
+            "before": "P.E.restore(s,s.archive);",
+            "after": "P.prepare(s,s.archive,1,true);",
+            "count": 1
+          },
+          {
+            "before": "assert.equal(s.g[s.a-1].length,2);assert.equal(s.g[s.a-1][0],s.g[s.a-1][1]);",
+            "after": "assert.equal(s.g[s.a-1].length,1);",
+            "count": 1
+          },
+          {
+            "before": "v.background>=3&&v.background<=s.seedAudit.background",
+            "after": "v.background>=2&&v.background<=s.seedAudit.background",
+            "count": 1
+          },
+          {
+            "before": "C(u,e)>=3&&C(w,e)>=3",
+            "after": "C(u,e)>=2&&C(w,e)>=2",
+            "count": 1
+          },
+          {
+            "before": "C(p,s.a)>=2,label+': private bank port'",
+            "after": "C(p,s.a)>=1,label+': private bank port'",
+            "count": 1
+          },
+          {
+            "before": "C(s.a,p.point)>=2,'main point private port'",
+            "after": "C(s.a,p.point)>=1,'main point private port'",
+            "count": 1
+          },
+          {
+            "before": "C(s.a,t)>=2&&C(first,t)>=1,'coupon main/private ports'",
+            "after": "C(s.a,t)>=1&&C(first,t)>=1,'coupon main/private ports'",
+            "count": 1
+          },
+          {
+            "before": "C(v.points.at(-1),t)>=2,'coupon all archive ports'",
+            "after": "C(v.points.at(-1),t)>=1,'coupon all archive ports'",
+            "count": 1
+          },
+          {
+            "before": "assert.deepEqual(s.g.at(-1).slice(1),s.g[s.archive-1].slice(1),'active archive inherited tail');",
+            "after": "assert.deepEqual(s.g.at(-1).slice(),s.g[s.archive-1].slice(),'active archive inherited entire column');",
+            "count": 1
+          },
+          {
+            "before": "assert(C(s.a,N)===1&&C(first,N)>=1,'work separation and main reload port');",
+            "after": "assert(C(s.a,N)===0,'bank work has no private ancestry; main returns by actual trim');",
+            "count": 1
+          },
+          {
+            "before": "C(u,N)>=3&&C(v,N)>=3",
+            "after": "C(u,N)>=2&&C(v,N)>=2",
+            "count": 1
+          },
+          {
+            "before": "P.trim(s,z);P.prepare(s,e,2);",
+            "after": "P.trim(s,z);P.prepare(s,e,1);",
+            "count": 1
+          },
+          {
+            "before": "cut=points.at(-2);row=3;blocks=2;",
+            "after": "cut=points.at(-2);row=2;blocks=2;",
+            "count": 1
+          },
+          {
+            "before": "row=3+lowerGrade(s,level,a)+1",
+            "after": "row=2+lowerGrade(s,level,a)+1",
+            "count": 1
+          },
+          {
+            "before": "row=3+lowerGrade(s,level,beta)+1",
+            "after": "row=2+lowerGrade(s,level,beta)+1",
+            "count": 1
+          },
+          {
+            "before": "const needed=3+lowerGrade(s,level,alpha)",
+            "after": "const needed=2+lowerGrade(s,level,alpha)",
+            "count": 1
+          },
+          {
+            "before": "P.prepare(s,s.packets.at(-1).g1,1,true);",
+            "after": "P.trim(s,s.packets.at(-1).g1);",
+            "count": 1
+          },
+          {
+            "before": "if(eq(upper,s.levels[level].root.word)){",
+            "after": "if(s.levels[level].root.kind==='ceiling'&&eq(upper,s.levels[level].root.word)){",
+            "count": 1
+          }
+        ],
+        "path": [],
+        "source": "()(1^()(1,1))(2^()(1,1))(3^()(1,1))(4^()(1,1))(5^()(1,1))(6^()(1,1))(7^()(1,1))(8^()(1,1))(9^()(1,1))(10^()(1,1))(11^()(1,1))",
+        "width": 60,
+        "phase": "cold",
+        "slots": [],
+        "rowRoot": "()(1,1)",
+        "mode": "epsilon-finite-top-bank",
+        "seedAudit": {
+          "r": 7,
+          "background": 2,
+          "columns": 12,
+          "events": 113,
+          "port": 1,
+          "finiteTop": true,
+          "commonCounts": "1,2,4,8,4,1,2,9,38,4,9,10,17,51",
+          "previousCounts": "1,2,4,8,4,1,2,9,38,4,12,42,73,105,106,113,150",
+          "stages": [
+            {
+              "name": "five-row working pair before creating permanent four-row bank",
+              "counts": "1,2,4,8,4,1,2,9,38,4,10",
+              "graph": [
+                [],
+                [
+                  1
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  3,
+                  3,
+                  3
+                ],
+                [
+                  2,
+                  2
+                ],
+                [],
+                [
+                  6
+                ],
+                [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                [
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8
+                ],
+                [
+                  7,
+                  7
+                ],
+                [
+                  10,
+                  10,
+                  10,
+                  10,
+                  10
+                ]
+              ]
+            },
+            {
+              "name": "four-row permanent bank plus working copy",
+              "counts": "1,2,4,8,4,1,2,9,38,4,9,20",
+              "graph": [
+                [],
+                [
+                  1
+                ],
+                [
+                  2,
+                  2
+                ],
+                [
+                  3,
+                  3,
+                  3
+                ],
+                [
+                  2,
+                  2
+                ],
+                [],
+                [
+                  6
+                ],
+                [
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7,
+                  7
+                ],
+                [
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8,
+                  8
+                ],
+                [
+                  7,
+                  7
+                ],
+                [
+                  10,
+                  10,
+                  10,
+                  10
+                ],
+                [
+                  11,
+                  11,
+                  11,
+                  11
+                ]
+              ]
+            }
+          ],
+          "certificates": {
+            "nodes": 164,
+            "hits": 11594,
+            "traceEntries": 1404,
+            "macros": 102,
+            "fs": 11
+          },
+          "pair": [
+            10,
+            11
+          ],
+          "capacity": 4,
+          "requiredCapacity": 4,
+          "path": "Qtrim, trim11, truncate5, [2], expose7row2, [1], trim14; [4c-1], inherit entire11"
+        },
+        "initializationTrace": [],
+        "banks": [
+          {
+            "id": 0,
+            "level": 0,
+            "label": "()(1,1)",
+            "points": [
+              10,
+              11
+            ]
+          }
+        ],
+        "trace": [],
+        "stats": {
+          "checks": 1,
+          "pairs": 2,
+          "ports": 2,
+          "sourceSteps": 0,
+          "budgets": 0,
+          "maxBudget": 0,
+          "calls": 0,
+          "allocations": 0,
+          "ordinaryRowSteps": 0,
+          "deletedRowSteps": 0,
+          "keptSmallerBanks": 0,
+          "strictSubcovariances": 0,
+          "topDowns": 0,
+          "maxWidth": 60,
+          "maxNodes": 1,
+          "mainUnits": 0,
+          "mainLimits": 0,
+          "mainDeletes": 0
+        },
+        "sparseStats": {
+          "nativeFS": 0,
+          "zeroSteps": 0,
+          "downMacroEndpoints": 0,
+          "truncationMacroEndpoints": 0,
+          "smallListDifferentials": 0,
+          "smallCapDifferentials": 1,
+          "maxSegments": 58,
+          "maxWidth": 60
+        },
+        "limits": {
+          "ms": 20000,
+          "rssMiB": 650,
+          "width": 160000,
+          "downTransientWidth": 320000,
+          "events": 200000,
+          "pairs": 4000000,
+          "nodes": 160,
+          "sourceWidth": 22,
+          "steps": 30,
+          "navigation": 1800,
+          "index": 32,
+          "wordLength": 100,
+          "nativeWidth": 90,
+          "rows": 400,
+          "rowWidth": 80,
+          "routeSteps": 160,
+          "plan": 80
+        },
+        "elapsedMs": 109,
+        "rssMiB": 136.74609375
+      }
+    }
+  ],
+  "sourceSha256": {
+    "output/tbms-e0mn-bridge-20260925/packet-epsilon-omega-cover.cjs": "924bf338cdf09dfa551535dc22e2f70e0d5208ec0e4f8963bda25d82771bfc21",
+    "output/tbms-e0mn-bridge-20260925/check-epsilon-omega-case.cjs": "d209882f9030da77b02c2c8d11cd352d531cd339c03ef0df4aff8316fce89e90",
+    "output/tbms-e0mn-bridge-20260925/check-epsilon-omega-initial.cjs": "473c8d9ddafa29a312d90ec9511bccc5cbdaeeed1dd2fb74430219ab8252ed47",
+    "output/tbms-e0mn-bridge-20260925/EPSILON-OMEGA-BOUND.zh-CN.md": "7a46759cf40e84446540dc83f891f0ef26e99ec84a8ef324c6a9a3c4f6e4581e",
+    "output/tbms-e0mn-bridge-20260925/PERSISTENT-EPSILON-BOUND.zh-CN.md": "3e817fa0c9c33ae3e90d9be4f4fdc5e44bba77b15e0420c119210b45fef5db69",
+    "output/tbms-e0mn-bridge-20260925/packet-amplified-resource-cover.cjs": "9c1e9851e70e5b3e0846530dde8aa33a2d8bc68a1adafb887828e33a9dc3e974",
+    "output/tbms-e0mn-bridge-20260925/packet-main-cover.cjs": "f537152bfeaad91a014224b0afd82049402bdebb7fc3a3cf64518412eeb5412a",
+    "output/tbms-e0mn-bridge-20260925/packet-sparse-native-state.cjs": "d97393264605fb0cd5c995c5c50a1bb4dc7873e236154c72feec296401786ad2",
+    "output/tbms-e0mn-bridge-20260925/epsilon-row-cover.cjs": "e5757a1bf40242d5dd70587b1785c90c843aeb8fe8fe6150ac50cb659910b500",
+    "output/tbms-e0mn-bridge-20260925/crossing-lower-sparse-parent-return.cjs": "213c857fd39454081790504a939f2ca5bc71e23dcabfc6244f967bbda0d92964",
+    "output/tbms-e0mn-bridge-20260925/FULL-REFLECTION-CAPACITY-INTERFACE.zh-CN.md": "4b086f8c3b6fcc76c86d6ea575a2a63d5c52f48761ddd97cc0e136ceee99c8ad",
+    "output/tbms-e0mn-bridge-20260925/PREFIX-ROW-STRETCH-COVARIANCE.zh-CN.md": "51bf107602dce59a4e39586a05279297146ee7be6506ec53b73bd9115ffb0e09",
+    "output/tbms-e0mn-bridge-20260925/WHOLE-TBMS-INTERFACE.zh-CN.md": "6eb2928e101e32d47e373ae042cc3322810e411ef616b9a9367e1540f29ac48c",
+    "output/m13-lists-20260926/SRPD.ne-rewritten.js": "fdbd0d0788afe0cd6949cb280ffea4c85813bbd6d5e47d04e6a078e00bbee85a",
+    ".research-ne-rewritten/src/notations/BM-like/TBM.ts": "ebc510ea3e2a032de6c793d25a84d3741e8b427b7f0d225b32fa49326b6be1bb",
+    "output/tbms-e0mn-bridge-20260925/epsilon-ladder-row-algebra.cjs": "7f902d38b84b10600db62c1b4eda4655f400b432a7c082c15969e65eef2e1ed0",
+    "output/tbms-e0mn-bridge-20260925/packet-epsilon-ladder-cover.cjs": "7ed5f04e5777c7dea474a3cb409ed04b1bb0243cb346242f17178a84b3386aa8",
+    "output/tbms-e0mn-bridge-20260925/check-epsilon-ladder-row.cjs": "7029ead89e937e7f38d45f1b31102def7d63d0e2822eb52bace7120693b2fed0",
+    "output/tbms-e0mn-bridge-20260925/check-epsilon-ladder-case.cjs": "6d3c3aa809ec0af9d69b91e0425801d9b8b6a2c1d7c0a796d31b7bf2022c088d",
+    "output/tbms-e0mn-bridge-20260925/check-epsilon-ladder-local.cjs": "32c0177aa2c69d44b48b27d56ca3311cfcaa341a4196d88e6263037cb03e63f5",
+    "output/tbms-e0mn-bridge-20260925/check-epsilon-ladder-initial.cjs": "3b72606eae09171fa816964b524ec86637cf6c8a3ff1b99598cc4fd907d2f0c1",
+    "output/tbms-e0mn-bridge-20260925/EPSILON-LADDER-ROW-INTERPRETATION.zh-CN.md": "6d715abe04a38fb3818a28517d79435bf25bb73a6103f8ca4183da1c5cdd560c",
+    "output/tbms-e0mn-bridge-20260925/EPSILON-LADDER-BOUND.zh-CN.md": "418564297b762d23f6b41bf703f90014a57b502308b0080ef5fbdb319022756c",
+    "output/tbms-e0mn-bridge-20260925/load-tbm.cjs": "9fdbcf0ef60a6a28dcf6ae9d48f81f4da36f00154219caec539b67ced7674307",
+    "output/tbms-e0mn-bridge-20260925/srpd-boundary-factorization.cjs": "3e89ad1a3e272b953f06cdd33dbfd11f5c364932a10dbb447c33905e456e81b9",
+    "output/tbms-e0mn-bridge-20260925/packet-native-row-bank-cover.cjs": "69d320b8151e521c479d67403b49cfb718c056d1df0022c2544063e4ea1aa3c6",
+    "output/tbms-e0mn-bridge-20260925/native-row-bank-seed.cjs": "a4a92db8c7643b07e592b283e70a9108225a19ec1167ae06cb09cfbecc2ccd5a",
+    "output/tbms-e0mn-bridge-20260925/check-native-row-bank-local.cjs": "fe9b6745de92b144d2dd11f14a396c86073f2c8f18176a5217343f215b0a32f0",
+    "output/tbms-e0mn-bridge-20260925/check-native-row-bank-source.cjs": "99386fe5b2ed84f3fadacb11f6dc5f37cd341bd63c62d6b705380b303f2a5667",
+    "output/tbms-e0mn-bridge-20260925/check-native-row-bank-case.cjs": "a830e725d23966a0bf24c49765fed52991e92f4b0e1e70a4d96d3cacffea819b",
+    "output/tbms-e0mn-bridge-20260925/check-native-bms-ceiling-case.cjs": "d95e6fa275f6e1a5b807e9539f7e4f31913947bb1617cbd1462c33b77a26095c",
+    "output/tbms-e0mn-bridge-20260925/check-native-row-bank-initial.cjs": "97d009441ac7558666e905e0324095104daf75931c7b8e8f053a8f28140f50c4",
+    "output/tbms-e0mn-bridge-20260925/check-native-row-forest-closure.cjs": "a65ea5fe6dc701065529f49844ffc063115139b83d6236ff269869557aa0ff56",
+    "output/tbms-e0mn-bridge-20260925/NATIVE-ROW-ENDPOINT-CLOSURE.zh-CN.md": "9b87c77451e8c1c6598968f71868f650117e47fbc5dbbed77228b2d9d608c9d6",
+    "output/tbms-e0mn-bridge-20260925/NATIVE-ROW-BANK-BOUND.zh-CN.md": "dd558a61a0deb185fa49dd11cd413ba2de679305224a089815a5bc1ba5eba742",
+    "output/tbms-e0mn-bridge-20260925/finite-parent-capacity.cjs": "5d285fef664e79de63bc1f2432bf9a9c5ce5e59c0e38373964a8eb29de461e4c",
+    "output/tbms-e0mn-bridge-20260925/SPACED-PRIVATE-CONTROLLERS.zh-CN.md": "04cb00bf7e716cc1cb43be72b3a8848fe9c4c77eff2d4d03c11afe27300911cc",
+    "output/tbms-e0mn-bridge-20260925/POLYNOMIAL-ROW-BOUND.zh-CN.md": "f73fc1bc83b8557ae7746b702b69274661604119a2acd26c0a8d0da6a22f960a",
+    "output/e0mn-y13425810-20260920/finite-local-certificate.cjs": "176937db68818f6f720d286336c31b0a07401c246e1344c4f148307bf58854d1",
+    ".research-ne-rewritten/src/notations/notation_utils.ts": "c13f6bb79f4d5d44f99e99d779c0cce2c22401340163c84b1a5116daba58f932",
+    ".research-ne-rewritten/src/utils.ts": "5cc07aaf4932ee53bd6cb0623c2a2db90b339e98c9b9a7a6e25a96a8340f067a",
+    "output/tbms-e0mn-bridge-20260925/RECURSIVE-ENDPOINT-CLOSURE.zh-CN.md": "87cf2ddb84e4f1b3f1c4b4821bd876eaaa009be42dd3ea17a6c5a43f78b4ae6b",
+    "output/tbms-e0mn-bridge-20260925/RECURSIVE-ROW-BANK-BOUND.zh-CN.md": "d4247c4644d639a9ce1b5565c2e8e84408907166ad74d5b88e98f49950f600dd",
+    "output/tbms-e0mn-bridge-20260925/RECURSIVE-ROW-BANK-DESIGN.zh-CN.md": "808556f3a9fad3a888aee05650ed173adcf9b8570c8833b69c78361b26255674",
+    "output/tbms-e0mn-bridge-20260925/packet-recursive-row-bank-cover.cjs": "2167705cd24ad2ba0cfa66d8c28adde364692bb50823d493e704b6bfd96c6120",
+    "output/tbms-e0mn-bridge-20260925/check-recursive-row-bank-case.cjs": "30765f3182fc23bba269b813d3d4e1dbe03ccdac138c6f7043f026180ecd66a6",
+    "output/tbms-e0mn-bridge-20260925/check-recursive-row-bank-local.cjs": "33eb6bda8c2ea755cd2a455fe43cfc5bcf9063db53de04e5b49c4a1cedfd5fb6",
+    "output/tbms-e0mn-bridge-20260925/check-recursive-row-source-structure.cjs": "5f73908ec2dcacd2f5e48e7393c2fcad98975f7a0d26933c4d3e9a79f3342b5a",
+    "output/tbms-e0mn-bridge-20260925/check-recursive-prefix-contract.cjs": "265b0e2b98266c2d47ad7b6b83e111f4fe54e5f7d5dd8bec306b1b007b81d6cc",
+    "output/tbms-e0mn-bridge-20260925/RANKED-ROW-RESERVOIRS.zh-CN.md": "9e659e320bf9f4fdd7569a3ca4808f856974b9122b8e8b891e60ab838d66963d",
+    "output/tbms-e0mn-bridge-20260925/FIXED-CHILD-WHOLE-TBMS.zh-CN.md": "27e142915eb7247c8055ce426c2660fc66cda3061bd1e98fd9dcc47d783e9748",
+    "output/tbms-e0mn-bridge-20260925/fixed-child-recursive-row-bank.cjs": "817137d1673016ede8226bdb83ef6f2f8c1f223b3546140a68f5203ca5a213b1",
+    "output/tbms-e0mn-bridge-20260925/check-fixed-child-recursive-case.cjs": "54ba86455cf9f8b15ddbf1b775b6e9ab9fd53fb717245b746dec3803c0036f21",
+    "output/tbms-e0mn-bridge-20260925/check-fixed-child-recursive-local.cjs": "d1f96904d7b1cf81ffffcfb11e5724bbf8d2fca51e51ff16b8607e32cd73a783",
+    "output/tbms-e0mn-bridge-20260925/one-port-recursive-row-bank.cjs": "fb30310b8f29f34e5e1465982fa12e736dea645298619a506e55c66b98c53be4",
+    "output/tbms-e0mn-bridge-20260925/check-one-port-recursive-case.cjs": "ff42e8143c9f27c415d314674abc3e4340c4c1958ea77f9796d0b61d8a7854ea",
+    "output/tbms-e0mn-bridge-20260925/probe-tail47-template.cjs": "9224bc4ab9b8bdaf5eb998fc262a664ee3bdfbd96b4c8914885b12a3815bffe6",
+    "output/tbms-e0mn-bridge-20260925/ONE-PORT-WHOLE-TBMS.zh-CN.md": "f06d8c11cd71a5fe17a25e23ef391660bb756e726639c0c1e1bb4c81a77353e8",
+    "output/tbms-e0mn-bridge-20260925/trimmed-one-port-row-bank.cjs": "7f22288d659c3d174d1895b59dbc5c8b49aef28627ed076810f6833ced858e06",
+    "output/tbms-e0mn-bridge-20260925/check-trimmed-one-port-case.cjs": "6fc18c73ffe749f9c5716efd69585d9bb35da7239a7aed0048e67d5245577985",
+    "output/tbms-e0mn-bridge-20260925/check-trimmed-common-gate.cjs": "b01a04af2507acb96aa27c7e19bc69e4a282672437f90bebfc66682dbab3040f",
+    "output/tbms-e0mn-bridge-20260925/TRIMMED-ONE-PORT-SEED.zh-CN.md": "451eaf7025321793863691a22be887afc9ce6c168e1317485e9022d7f552e9cd",
+    "output/tbms-e0mn-bridge-20260925/probe-eleventh-count.cjs": "3e4f4e3dc81196bd72cab8e8b7048b3676778fc27c4d8ddf88df1dcd5eded1f1",
+    "output/tbms-e0mn-bridge-20260925/audit-eleventh-peak-barrier.cjs": "95508f2ba807fb230b593d1a1a601fcd486f04df38ba4b7e4f16372ecf657ae2",
+    "output/tbms-e0mn-bridge-20260925/ELEVENTH-COUNT-BARRIER.zh-CN.md": "c8692ec297bda95d21f633ff9084ac5e1ea32cc7261fea68894bb755eaf3c2df",
+    "output/tbms-e0mn-bridge-20260925/weak-archive-row-bank.cjs": "ebeeeb9bd5cf9b389a0d5048c2f80398d36651a56601e38ce1234d95cbe3dd09",
+    "output/tbms-e0mn-bridge-20260925/check-weak-archive-case.cjs": "f0e0a30bb66a557f9d3b1de96aedd9e61e6505db1179e53c60b8339b63ff1c21",
+    "output/tbms-e0mn-bridge-20260925/check-weak-archive-gate.cjs": "dde3808c2d3b641b4aa4dc532a9e29b6b0ed0975e79bee3e08698f3dd4314ca4",
+    "output/tbms-e0mn-bridge-20260925/WEAK-ARCHIVE-SEED.zh-CN.md": "0fcad903d94e72fca2f53e5e58836b1999b0782253fbf748dfb677070bfb79d9",
+    "output/tbms-e0mn-bridge-20260925/epsilon-fixed-row-bank.cjs": "d8d20a5e7d1cf1f00b73be4b94fd400a64c4496f08baad2fcb550bb718a9e144",
+    "output/tbms-e0mn-bridge-20260925/check-epsilon-fixed-bank.cjs": "875ff77237241fcda486ea2f5e20524b5347454377843b27f4a36d6224f95bbe",
+    "output/tbms-e0mn-bridge-20260925/probe-epsilon-679.cjs": "0b09c5b4bd9bd6bc8a3e59751331752c7e1c02a3fe405a02841ef50211305bbf",
+    "output/tbms-e0mn-bridge-20260925/check-epsilon-679.cjs": "30211169a0d8a57bb4c05437f9ce9f8d19d7de6c30f70901d4284cfae65d9848",
+    "output/tbms-e0mn-bridge-20260925/EPSILON-FIXED-BANK-BOUND.zh-CN.md": "476e24c1775f2c6fe5cc2bbdcdaa249ba0b7474d691e2cc5cec2a8842c4d61b6"
+  },
+  "package_scope": "Only final fixed-epsilon-bank simulation and its 12 original cases; candidate search/audit omitted."
+}

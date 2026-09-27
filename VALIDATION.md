@@ -1,5 +1,53 @@
 # Snapshot validation · [中文版](VALIDATION.zh-CN.md)
 
+## 2026-09-28 supplement: final-route SRPD/TBMS pruning and replay
+
+At the user's request, the [dedicated directory](research/srpd-tbms/archive/README.md) retains only actual dependencies of the two final carrier routes. The imported inventory was reduced from 607 to 73 files: 25 original-language proof/lemma manuscripts, 39 research runtime/checking files, 2 route-specific verification records, 4 upstream sources and 3 compiled text modules. The 534 removed items were archival copies in Git; original research files outside it were untouched.
+
+This is not a new proof or Lean certification. The required truncation lemma retains original §§1–3; separate obstruction/candidate-search sections are explicitly marked as omitted. Other retained arguments and simulator kernels are unchanged. Bilingual guides, provenance indexes, hashes and links are updated accordingly.
+
+The [post-pruning replay receipt](research/srpd-tbms/archive/ARCHIVE-VALIDATION.json) is separate from the original case records:
+
+- All 14 weak-archive cases, one paid local case and the common-gate check completed. The fixed ε bank completed 10 cases and hit its original 160,000-column guard in 2. Total: **26 completed checks and 2 guarded cases**, not 28 fully completed source paths.
+- Entire returned records match all 28 original cases after excluding only elapsed time, RSS and machine-specific exception stacks. Shared patches and seed stages deduplicated in the old weak receipt are restored before comparison. Guarded cases retain exit code 1.
+- Children ran sequentially with 512 MiB Node heaps and 30-second outer timeouts, retaining the original time, width, step and 650 MiB RSS checks. Maximum reported RSS: **380.71 MiB**; all children exited.
+- The [integrity checker](research/srpd-tbms/archive/verify_archive.py) verifies the exact inventory, LF hashes and lengths of all 73 imported files. Only the 25 individually pinned original-language papers receive a bilingual-counterpart exemption, not their whole directory.
+
+Reproduce from the repository root:
+
+```sh
+python -B research/srpd-tbms/archive/verify_archive.py
+python -B research/srpd-tbms/archive/run_checks.py --suite current
+python -B tools/check_release.py
+```
+
+These checks cover package integrity and bounded implementation behavior, not formal certification of the universal paper arguments. Existing public expanders, other notations and Lean sources/receipts remain unchanged.
+
+Release checking passed: 187 Markdown files (106 bilingual files and 81 individually pinned original-language archives), 50 existing PDFs, 1,937 local links and 19 pinned NER snapshots. Existing source/receipt scopes still match for 11 Lean projects / 338 modules. Syntax parsing passed for the 43 retained JS/CJS files, and all 18 summary-provenance entries match manifest hashes. No new Lean build was run.
+
+## 2026-09-28: independent SRPD implementation and TBMS summary
+
+Added SRPD's existing NER/Python kernels, bilingual rules, a common-segment / well-ordering transfer argument, and a bilingual TBMS research summary. Both implementations match the selected research snapshot exactly; the [provenance manifest](notations/SRPD/provenance.json) pins their hashes. The [run record](tools/srpd-validation.json) records the initial packaging tests, which did not yet rerun historical recursive TBMS simulations. The later archive replay is recorded separately in the supplement above; do not combine their scopes.
+
+From the repository root:
+
+```sh
+node --max-old-space-size=512 tests/srpd.cjs
+node --max-old-space-size=512 tests/srpd.cjs --python-cases | python -B tests/srpd_python.py
+node --max-old-space-size=512 tests/srpd_tbms_bounds.cjs
+python -B tools/check_release.py
+```
+
+- Passed **1,200 standard states / 3,857 expansions** and **1,024 four-column raw graphs / 4,096 expansions**, checking parent-list projection, exact counts, prefixes, order and nonmutation. Also passed 4,000 order pairs, 3,849 low-cone steps each for ARD and ARD2, and 52 endpoint-FS pairs. The 943 width skips and 500 still-queued states are not counted as passes.
+- The BMS-style height view passed 5,057 round trips. Of the 1,024 raw graphs, 388 supported lossless height reconstruction and 636 were intentionally rejected; those refusals are not mathematical counterexamples or a proof of unique height decoding for every standard term. The two historical regression paths have 99 and 26 indices.
+- Python/JS differential checks passed **150 states / 463 steps** and independent unit checks. The main JS test took about 1.97 seconds with reported RSS 181.19 MiB; streamed Python comparison took about 1.94 seconds.
+- The native-path test actually constructs W, W[1], Qw, V, Cε, Z and the open candidate rather than guessing graphs from counts. It completed **4,391 bounded events** (including 8 candidate-formula checks) and **1,143 local decreases**, in about 0.017 seconds with reported RSS 43.14 MiB. This checks target reachability and finite FS formulas, **not the TBMS rank inequality itself**.
+- Explicit time, queue, width and work limits apply. Node uses a 512 MiB heap ceiling; the main test also checks 650 MiB RSS. There is no unbounded iterate-to-zero search. All processes completed.
+
+No new browser visual test, PDF generation or Lean kernel compilation was performed. The seven systems and two legacy backends retain their Lean sources and receipts; release checking still validates the original 11 scopes / 338 modules. SRPD has no new Lean theorem. Finite testing does not replace the universal paper arguments for common segments or TBMS simulation.
+
+Release checking passed **158 Markdown files (102 bilingual files, 56 historical originals), 50 existing PDFs, 1,678 local links and 19 pinned NER snapshots**. Existing Lean receipts remain valid; a fresh build still needs 12 pinned external BMS source files. Language, link and earlier-proof checks were not relaxed for these additions.
+
 ## 2026-09-23: BMS below the eight-column FMP carrier
 
 Added a complete bilingual [comparison manuscript](proofs/paper/bms-le-fmp-12242444.md) and PDFs proving the paper-level lower bound $\Theta_{\mathrm{BMS}}\le o_{\mathrm{FMP}}(1,2,2,4,2,4,4,4)$. It uses original FMP's actual copy index, includes a direct five-column/full-completion calculation, and separates a branching simulation from its finite-representation/minimum construction of an order embedding. The companion ZFC + I3 paper supplies the ordinal interpretation. No equality, minimality, independent referee approval or Lean comparison certificate is asserted.

@@ -1,0 +1,1016 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-28",
+  "notation": "SRPD",
+  "scope": "Bounded repository-local implementation and native target-path checks",
+  "universal_proof": false,
+  "lean_compilation": false,
+  "browser_visual_test": false,
+  "recursive_tbms_simulation_rerun": false,
+  "limitations": [
+    "Finite tests are not universal equivalence or ordinal-comparison proofs.",
+    "Width skips and unvisited queued states are not passed cases.",
+    "Target path checks validate actual SRPD graphs, not the TBMS all-future simulation.",
+    "Original notation kernels, proof papers and Lean sources/receipts are unchanged.",
+    "Historical paper comparisons and original recursive-simulation summaries are recorded separately in research/srpd-tbms."
+  ],
+  "all_test_processes_completed": true,
+  "checked_files": [
+    {
+      "file": "notations/SRPD/SRPD.ne-rewritten.js",
+      "sha256_lf": "fdbd0d0788afe0cd6949cb280ffea4c85813bbd6d5e47d04e6a078e00bbee85a"
+    },
+    {
+      "file": "notations/SRPD/srpd.py",
+      "sha256_lf": "4f8509dcd1d191e81298b5e6fc7689397e62d9d0947e9311ba7bb6f2c4c1e44b"
+    },
+    {
+      "file": "notations/SRPD/fixtures/height-naive-counterexample.json",
+      "sha256_lf": "3086af2369ef53d591f78a90588b9840e2632edaade5b3248fb715fcbf50bf44"
+    },
+    {
+      "file": "notations/SRPD/fixtures/completion-counterexample.json",
+      "sha256_lf": "6b68c3358aab8d68b14d0bd882fc4cbe75ed6c7cef3d2c4a3c7380186ab574ae"
+    },
+    {
+      "file": "tests/srpd.cjs",
+      "sha256_lf": "08777ed12c3e683d3eb721ef5fbc3ea49c9cc16329a35f1043d88cfa7a7bbac1"
+    },
+    {
+      "file": "tests/srpd_python.py",
+      "sha256_lf": "fcb496fe5de8c0e78c36cb47cbdd150c184399e698f4ba463bac127b99230d2a"
+    },
+    {
+      "file": "tests/srpd_tbms_bounds.cjs",
+      "sha256_lf": "94062ebe1e7537b2aee89780a8f0e05299642c75d9bf7fd3d71c664de61216d0"
+    }
+  ],
+  "runs": [
+    {
+      "command": "node --max-old-space-size=512 tests/srpd.cjs",
+      "exit_code": 0,
+      "wall_time_seconds": 2.2483794,
+      "result": {
+        "scope": "bounded packaged SRPD/RPD raw correspondence, ARD/ARD2 strict low-cone correspondence, views and exact counts",
+        "noLeanOrUniversalProof": true,
+        "limits": {
+          "ms": 30000,
+          "rssMiB": 650,
+          "width": 27,
+          "states": 1200,
+          "queue": 1700
+        },
+        "states": 1200,
+        "steps": 3857,
+        "rawGraphs": 1024,
+        "rawSteps": 4096,
+        "rawCountPairs": 1024,
+        "countPairs": 1200,
+        "orderPairs": 4000,
+        "localSteps": 1131,
+        "widthSkipped": 943,
+        "heightRoundTrips": 5057,
+        "heightRawSupported": 388,
+        "heightRawRejected": 636,
+        "ardSteps": 3849,
+        "ard2Steps": 3849,
+        "endpointPairs": 52,
+        "fixturePaths": [
+          99,
+          26
+        ],
+        "uncheckedQueued": 500,
+        "pythonCases": 150,
+        "elapsedMs": 1965,
+        "rssMiB": 181.1875
+      }
+    },
+    {
+      "command": "node --max-old-space-size=512 tests/srpd.cjs --python-cases | python -B tests/srpd_python.py",
+      "exit_code": 0,
+      "wall_time_seconds": 2.1762858,
+      "result": {
+        "states": 150,
+        "steps": 463,
+        "unit_checks": "passed",
+        "elapsed_seconds": 1.9413063999963924
+      }
+    },
+    {
+      "command": "node --max-old-space-size=512 tests/srpd_tbms_bounds.cjs",
+      "exit_code": 0,
+      "wall_time_seconds": 0.302599,
+      "result": {
+        "scope": "actual native target reachability and candidate FS formula only; not a TBMS rank proof",
+        "limits": {
+          "ms": 15000,
+          "rssMiB": 512,
+          "events": 60000,
+          "width": 800
+        },
+        "stages": [
+          {
+            "name": "W",
+            "counts": "1,2,4,8,4,2",
+            "graph": [
+              [],
+              [
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                3,
+                3
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                1
+              ]
+            ],
+            "events": 37
+          },
+          {
+            "name": "W[1]",
+            "counts": "1,2,4,8,4,1,2,9,38,9",
+            "graph": [
+              [],
+              [
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                3,
+                3
+              ],
+              [
+                2,
+                2
+              ],
+              [],
+              [
+                6
+              ],
+              [
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7
+              ],
+              [
+                8,
+                8,
+                8,
+                8,
+                8,
+                8,
+                8,
+                8
+              ],
+              [
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7
+              ]
+            ],
+            "events": 38
+          },
+          {
+            "name": "Q1",
+            "counts": "1,2,4,8,4,1,2,9,38,4,12,44,156,503,504,511,548",
+            "graph": [
+              [],
+              [
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                3,
+                3
+              ],
+              [
+                2,
+                2
+              ],
+              [],
+              [
+                6
+              ],
+              [
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7
+              ],
+              [
+                8,
+                8,
+                8,
+                8,
+                8,
+                8,
+                8,
+                8
+              ],
+              [
+                7,
+                7
+              ],
+              [
+                10,
+                10,
+                10,
+                10,
+                10,
+                10,
+                10
+              ],
+              [
+                11,
+                11,
+                11,
+                11,
+                11,
+                11,
+                11,
+                11,
+                11,
+                11
+              ],
+              [
+                12,
+                12,
+                12,
+                12,
+                12,
+                12,
+                12,
+                12,
+                12,
+                12
+              ],
+              [
+                13,
+                13,
+                13,
+                13,
+                13,
+                13,
+                13,
+                13,
+                13,
+                13
+              ],
+              [
+                14
+              ],
+              [
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15
+              ],
+              [
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16
+              ]
+            ],
+            "events": 3892
+          },
+          {
+            "name": "Qtrim",
+            "counts": "1,2,4,8,4,1,2,9,38,4,12,42,73,105,106,113,150",
+            "graph": [
+              [],
+              [
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                3,
+                3
+              ],
+              [
+                2,
+                2
+              ],
+              [],
+              [
+                6
+              ],
+              [
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7
+              ],
+              [
+                8,
+                8,
+                8,
+                8,
+                8,
+                8,
+                8,
+                8
+              ],
+              [
+                7,
+                7
+              ],
+              [
+                10,
+                10,
+                10,
+                10,
+                10,
+                10,
+                10
+              ],
+              [
+                11,
+                11,
+                11,
+                11,
+                11,
+                11,
+                11,
+                11
+              ],
+              [
+                12,
+                12
+              ],
+              [
+                13,
+                13
+              ],
+              [
+                14
+              ],
+              [
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15
+              ],
+              [
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16
+              ]
+            ],
+            "events": 4201
+          },
+          {
+            "name": "Qw",
+            "counts": "1,2,4,8,4,1,2,9,38,4,12,42,44,46,47,54,91",
+            "graph": [
+              [],
+              [
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                3,
+                3
+              ],
+              [
+                2,
+                2
+              ],
+              [],
+              [
+                6
+              ],
+              [
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7
+              ],
+              [
+                8,
+                8,
+                8,
+                8,
+                8,
+                8,
+                8,
+                8
+              ],
+              [
+                7,
+                7
+              ],
+              [
+                10,
+                10,
+                10,
+                10,
+                10,
+                10,
+                10
+              ],
+              [
+                11,
+                11,
+                11,
+                11,
+                11,
+                11,
+                11,
+                11
+              ],
+              [
+                12,
+                7
+              ],
+              [
+                13,
+                7
+              ],
+              [
+                14
+              ],
+              [
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15
+              ],
+              [
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16
+              ]
+            ],
+            "events": 4294
+          },
+          {
+            "name": "V",
+            "counts": "1,2,4,8,4,1,2,9,38,4,12,42,44,46,47,54,90,266,1072,4384,16474,56026,173593,495365,1315558,3281173",
+            "graph": [
+              [],
+              [
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                3,
+                3
+              ],
+              [
+                2,
+                2
+              ],
+              [],
+              [
+                6
+              ],
+              [
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7
+              ],
+              [
+                8,
+                8,
+                8,
+                8,
+                8,
+                8,
+                8,
+                8
+              ],
+              [
+                7,
+                7
+              ],
+              [
+                10,
+                10,
+                10,
+                10,
+                10,
+                10,
+                10
+              ],
+              [
+                11,
+                11,
+                11,
+                11,
+                11,
+                11,
+                11,
+                11
+              ],
+              [
+                12,
+                7
+              ],
+              [
+                13,
+                7
+              ],
+              [
+                14
+              ],
+              [
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15
+              ],
+              [
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16,
+                16
+              ],
+              [
+                17,
+                17,
+                17,
+                17,
+                17,
+                17,
+                17,
+                17,
+                17,
+                17,
+                17,
+                17,
+                17,
+                17,
+                17
+              ],
+              [
+                18,
+                18,
+                18,
+                18,
+                18,
+                18,
+                18,
+                18,
+                18,
+                18,
+                18,
+                18,
+                18,
+                18,
+                18
+              ],
+              [
+                19,
+                19,
+                19,
+                19,
+                19,
+                19,
+                19,
+                19,
+                19,
+                19,
+                19,
+                19,
+                19,
+                19,
+                19
+              ],
+              [
+                20,
+                20,
+                20,
+                20,
+                20,
+                20,
+                20,
+                20,
+                20,
+                20,
+                20,
+                20,
+                20,
+                20,
+                20
+              ],
+              [
+                21,
+                21,
+                21,
+                21,
+                21,
+                21,
+                21,
+                21,
+                21,
+                21,
+                21,
+                21,
+                21,
+                21,
+                21
+              ],
+              [
+                22,
+                22,
+                22,
+                22,
+                22,
+                22,
+                22,
+                22,
+                22,
+                22,
+                22,
+                22,
+                22,
+                22,
+                22
+              ],
+              [
+                23,
+                23,
+                23,
+                23,
+                23,
+                23,
+                23,
+                23,
+                23,
+                23,
+                23,
+                23,
+                23,
+                23,
+                23
+              ],
+              [
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24,
+                24
+              ],
+              [
+                25,
+                25,
+                25,
+                25,
+                25,
+                25,
+                25,
+                25,
+                25,
+                25,
+                25,
+                25,
+                25,
+                25,
+                16
+              ]
+            ],
+            "events": 4341
+          },
+          {
+            "name": "Cepsilon",
+            "counts": "1,2,4,8,4,1,2,9,38,4,9,10,17,51",
+            "graph": [
+              [],
+              [
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                3,
+                3
+              ],
+              [
+                2,
+                2
+              ],
+              [],
+              [
+                6
+              ],
+              [
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7
+              ],
+              [
+                8,
+                8,
+                8,
+                8,
+                8,
+                8,
+                8,
+                8
+              ],
+              [
+                7,
+                7
+              ],
+              [
+                10,
+                10,
+                10,
+                10
+              ],
+              [
+                11
+              ],
+              [
+                12,
+                12,
+                12,
+                12,
+                12,
+                12,
+                12
+              ],
+              [
+                13,
+                13,
+                13,
+                13,
+                13,
+                13,
+                13,
+                13,
+                13,
+                13,
+                13,
+                13,
+                13
+              ]
+            ],
+            "events": 4368
+          },
+          {
+            "name": "Z",
+            "counts": "1,2,4,8,4,1,2,9,38,4,7",
+            "graph": [
+              [],
+              [
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                3,
+                3
+              ],
+              [
+                2,
+                2
+              ],
+              [],
+              [
+                6
+              ],
+              [
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7
+              ],
+              [
+                8,
+                8,
+                8,
+                8,
+                8,
+                8,
+                8,
+                8
+              ],
+              [
+                7,
+                7
+              ],
+              [
+                10,
+                10
+              ]
+            ],
+            "events": 4373
+          },
+          {
+            "name": "open epsilon candidate",
+            "counts": "1,2,4,8,4,1,2,9,38,4,6,7,9",
+            "graph": [
+              [],
+              [
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                3,
+                3
+              ],
+              [
+                2,
+                2
+              ],
+              [],
+              [
+                6
+              ],
+              [
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7
+              ],
+              [
+                8,
+                8,
+                8,
+                8,
+                8,
+                8,
+                8,
+                8
+              ],
+              [
+                7,
+                7
+              ],
+              [
+                10,
+                7
+              ],
+              [
+                11
+              ],
+              [
+                12,
+                12
+              ]
+            ],
+            "events": 4383
+          }
+        ],
+        "events": 4391,
+        "localSteps": 1143,
+        "candidateIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          8,
+          16,
+          32
+        ],
+        "elapsedMs": 17,
+        "rssMiB": 43.140625
+      }
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "schema_version": 1,
+  "recorded": "2026-09-28",
+  "scope": "Provenance for the two final SRPD/TBMS carrier routes and their required lemmas/runtime dependencies only.",
+  "source_label_base": "Research snapshot labels; bundled entries supply repository-relative packaged_file paths.",
+  "source_hash_basis": "SHA-256 of original source bytes.",
+  "new_packaged_tests": "Repository-local target/correspondence checks plus a separate replay of 28 current final-route cases; not a universal proof.",
+  "history_rerun_during_packaging": true,
+  "lean_comparison": false,
+  "independent_final_review": false,
+  "upstream": {
+    "repository": "https://github.com/SmileLee-lyx/ne-rewritten",
+    "revision": "c539d8f68c5553da2d681c1251ea443b6b735e62",
+    "file": "src/notations/BM-like/TBM.ts",
+    "sha256": "ebc510ea3e2a032de6c793d25a84d3741e8b427b7f0d225b32fa49326b6be1bb",
+    "url": "https://github.com/SmileLee-lyx/ne-rewritten/blob/c539d8f68c5553da2d681c1251ea443b6b735e62/src/notations/BM-like/TBM.ts",
+    "variant": "Ordinary TBMS, default fundamental sequences; not strong or short expansion.",
+    "bundled": true,
+    "packaged_file": "research/srpd-tbms/archive/vendor/ne-rewritten/src/notations/BM-like/TBM.ts",
+    "packaged_sha256_lf": "49ff4e3ea5e7026cb81fdbe553a9b5bc3c86ba8429b8b1d0fd615eea642bb614"
+  },
+  "historical_test_summaries": {
+    "weak_archive": {
+      "source_or_initialization_cases": 14,
+      "paid_local_case": 1,
+      "source_steps": 41,
+      "paid_local_operations": 6,
+      "initialization_only_cases": 2,
+      "common_state_coupon_counts": [
+        1,
+        2,
+        5,
+        11
+      ],
+      "max_rss_mib": 393.37109375,
+      "max_width": 148933
+    },
+    "fixed_epsilon_bank": {
+      "cases": 12,
+      "complete_passes": 10,
+      "width_guarded_cases": 2,
+      "all_completed_source_steps": 38,
+      "steps_in_completely_passed_cases": 32,
+      "initialization_only_cases": 3,
+      "retained_epsilon_calls": [
+        1,
+        4,
+        6
+      ],
+      "max_rss_mib": 344.84765625
+    },
+    "limits": {
+      "per_process_ms": 20000,
+      "node_heap_mib": 512,
+      "rss_checkpoint_mib": 650,
+      "width": 160000,
+      "max_concurrent_processes": 2
+    },
+    "source_records_report_all_processes_exited": true
+  },
+  "sources": [
+    {
+      "source": "tbms-e0mn-bridge-20260925/WEAK-ARCHIVE-SEED.zh-CN.md",
+      "sha256": "0fcad903d94e72fca2f53e5e58836b1999b0782253fbf748dfb677070bfb79d9",
+      "bytes": 10680,
+      "bundled": true,
+      "packaged_file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/WEAK-ARCHIVE-SEED.zh-CN.md",
+      "packaged_sha256_lf": "b17eb648b4c860ac5aadc877a068560bd004345e70685d7a276554c8f07c2619"
+    },
+    {
+      "source": "tbms-e0mn-bridge-20260925/WEAK-ARCHIVE-VERIFICATION.json",
+      "sha256": "4661d020447963d2f5c793826621633f64eed4a6cde7a9ca16781058b2b4ff8b",
+      "bytes": 126659,
+      "bundled": true,
+      "packaged_file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/WEAK-ARCHIVE-VERIFICATION.json",
+      "packaged_sha256_lf": "4661d020447963d2f5c793826621633f64eed4a6cde7a9ca16781058b2b4ff8b"
+    },
+    {
+      "source": "tbms-e0mn-bridge-20260925/EPSILON-FIXED-BANK-BOUND.zh-CN.md",
+      "sha256": "476e24c1775f2c6fe5cc2bbdcdaa249ba0b7474d691e2cc5cec2a8842c4d61b6",
+      "bytes": 8841,
+      "bundled": true,
+      "packaged_file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/EPSILON-FIXED-BANK-BOUND.zh-CN.md",
+      "packaged_sha256_lf": "581037aaa89f644c0590f9cfd3d9746bc1e1a1a7c71ac78dbf56a53e48fade8b"
+    },
+    {
+      "source": "tbms-e0mn-bridge-20260925/EPSILON-FIXED-BANK-VERIFICATION.json",
+      "sha256": "b804710f749e4c8c5878dbbcfd7caa5dea6e69f3814809c3a01519041a14002c",
+      "bytes": 155531,
+      "bundled": true,
+      "packaged_file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/EPSILON-FIXED-BANK-VERIFICATION.json",
+      "packaged_sha256_lf": "c9690dfff114acab1d30da98e879d811dc42c440b97e4745f8ca1e6fee231f12"
+    },
+    {
+      "source": "tbms-e0mn-bridge-20260925/ONE-PORT-WHOLE-TBMS.zh-CN.md",
+      "sha256": "f06d8c11cd71a5fe17a25e23ef391660bb756e726639c0c1e1bb4c81a77353e8",
+      "bytes": 17302,
+      "bundled": true,
+      "packaged_file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/ONE-PORT-WHOLE-TBMS.zh-CN.md",
+      "packaged_sha256_lf": "0ebe9cd1bbf792493fb7be65b74a99f25d708e2320d94c376d16ae4bb3cebce0"
+    },
+    {
+      "source": "tbms-e0mn-bridge-20260925/RECURSIVE-ROW-BANK-BOUND.zh-CN.md",
+      "sha256": "d4247c4644d639a9ce1b5565c2e8e84408907166ad74d5b88e98f49950f600dd",
+      "bytes": 15330,
+      "bundled": true,
+      "packaged_file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/RECURSIVE-ROW-BANK-BOUND.zh-CN.md",
+      "packaged_sha256_lf": "cfc292e8ca5a2fd82fad2254092c9a15a83a38203c3acdc357902ba3aea7bd4a"
+    },
+    {
+      "source": "tbms-e0mn-bridge-20260925/RECURSIVE-ENDPOINT-CLOSURE.zh-CN.md",
+      "sha256": "87cf2ddb84e4f1b3f1c4b4821bd876eaaa009be42dd3ea17a6c5a43f78b4ae6b",
+      "bytes": 14524,
+      "bundled": true,
+      "packaged_file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/RECURSIVE-ENDPOINT-CLOSURE.zh-CN.md",
+      "packaged_sha256_lf": "8766616341637b59476fb799031c16d019f4807c4d67e47b19dbe549281f3fb4"
+    },
+    {
+      "source": "tbms-e0mn-bridge-20260925/NATIVE-ROW-ENDPOINT-CLOSURE.zh-CN.md",
+      "sha256": "9b87c77451e8c1c6598968f71868f650117e47fbc5dbbed77228b2d9d608c9d6",
+      "bytes": 11361,
+      "bundled": true,
+      "packaged_file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/NATIVE-ROW-ENDPOINT-CLOSURE.zh-CN.md",
+      "packaged_sha256_lf": "bd11ec9cc1c3ae7e23419833addb5ad48ee7641e90c564b1efbef6d3484d7675"
+    },
+    {
+      "source": "tbms-e0mn-bridge-20260925/FULL-REFLECTION-CAPACITY-INTERFACE.zh-CN.md",
+      "sha256": "4b086f8c3b6fcc76c86d6ea575a2a63d5c52f48761ddd97cc0e136ceee99c8ad",
+      "bytes": 5999,
+      "bundled": true,
+      "packaged_file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/FULL-REFLECTION-CAPACITY-INTERFACE.zh-CN.md",
+      "packaged_sha256_lf": "acf5eb9c39aad8177680a20c08b293fbf371b984faf157955793b2e0affe1d63"
+    },
+    {
+      "source": "tbms-e0mn-bridge-20260925/TRIMMED-ONE-PORT-SEED.zh-CN.md",
+      "sha256": "451eaf7025321793863691a22be887afc9ce6c168e1317485e9022d7f552e9cd",
+      "bytes": 8446,
+      "bundled": true,
+      "packaged_file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/TRIMMED-ONE-PORT-SEED.zh-CN.md",
+      "packaged_sha256_lf": "8aa1eaca2f1b8a9e25e5b3d07f1fd8ca0ae33d0e1b55514084a3dcfb7980350e"
+    },
+    {
+      "source": "tbms-e0mn-bridge-20260925/PERSISTENT-EPSILON-BOUND.zh-CN.md",
+      "sha256": "3e817fa0c9c33ae3e90d9be4f4fdc5e44bba77b15e0420c119210b45fef5db69",
+      "bytes": 13015,
+      "bundled": true,
+      "packaged_file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/PERSISTENT-EPSILON-BOUND.zh-CN.md",
+      "packaged_sha256_lf": "2657791e65b11e255353946715c4069f432d4a956b1faa60d3badedda60f91a6"
+    },
+    {
+      "source": "tbms-e0mn-bridge-20260925/EPSILON-ROW-BOUND.zh-CN.md",
+      "sha256": "5cb3c88c924435ddc8f3aa4e771cf15ac23aebfb31ddf8b094590556cc78fe15",
+      "bytes": 19048,
+      "bundled": true,
+      "packaged_file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/EPSILON-ROW-BOUND.zh-CN.md",
+      "packaged_sha256_lf": "97f27eec149fd153ddf00feef7b1f9b09ce12906635476483b46cdc86d696e86"
+    },
+    {
+      "source": "tbms-e0mn-bridge-20260925/weak-archive-row-bank.cjs",
+      "sha256": "ebeeeb9bd5cf9b389a0d5048c2f80398d36651a56601e38ce1234d95cbe3dd09",
+      "bytes": 7354,
+      "bundled": true,
+      "packaged_file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/weak-archive-row-bank.cjs",
+      "packaged_sha256_lf": "ebeeeb9bd5cf9b389a0d5048c2f80398d36651a56601e38ce1234d95cbe3dd09"
+    },
+    {
+      "source": "tbms-e0mn-bridge-20260925/check-weak-archive-case.cjs",
+      "sha256": "f0e0a30bb66a557f9d3b1de96aedd9e61e6505db1179e53c60b8339b63ff1c21",
+      "bytes": 1062,
+      "bundled": true,
+      "packaged_file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/check-weak-archive-case.cjs",
+      "packaged_sha256_lf": "f0e0a30bb66a557f9d3b1de96aedd9e61e6505db1179e53c60b8339b63ff1c21"
+    },
+    {
+      "source": "tbms-e0mn-bridge-20260925/check-weak-archive-gate.cjs",
+      "sha256": "dde3808c2d3b641b4aa4dc532a9e29b6b0ed0975e79bee3e08698f3dd4314ca4",
+      "bytes": 1388,
+      "bundled": true,
+      "packaged_file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/check-weak-archive-gate.cjs",
+      "packaged_sha256_lf": "dde3808c2d3b641b4aa4dc532a9e29b6b0ed0975e79bee3e08698f3dd4314ca4"
+    },
+    {
+      "source": "tbms-e0mn-bridge-20260925/epsilon-fixed-row-bank.cjs",
+      "sha256": "d8d20a5e7d1cf1f00b73be4b94fd400a64c4496f08baad2fcb550bb718a9e144",
+      "bytes": 4891,
+      "bundled": true,
+      "packaged_file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/epsilon-fixed-row-bank.cjs",
+      "packaged_sha256_lf": "d8d20a5e7d1cf1f00b73be4b94fd400a64c4496f08baad2fcb550bb718a9e144"
+    },
+    {
+      "source": "tbms-e0mn-bridge-20260925/check-epsilon-fixed-bank.cjs",
+      "sha256": "875ff77237241fcda486ea2f5e20524b5347454377843b27f4a36d6224f95bbe",
+      "bytes": 1606,
+      "bundled": true,
+      "packaged_file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/check-epsilon-fixed-bank.cjs",
+      "packaged_sha256_lf": "875ff77237241fcda486ea2f5e20524b5347454377843b27f4a36d6224f95bbe"
+    }
+  ],
+  "replay_scope": "All current weak-archive and fixed-epsilon cases plus the common gate; separate candidate audits/searches omitted.",
+  "packaged_replay_receipt": "research/srpd-tbms/archive/ARCHIVE-VALIDATION.json",
+  "final_route_manifest": "research/srpd-tbms/archive/manifest.json"
+}

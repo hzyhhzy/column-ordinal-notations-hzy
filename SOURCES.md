@@ -1,5 +1,13 @@
 # Sources, versions and licenses · [中文版](SOURCES.zh-CN.md)
 
+## SRPD and TBMS research packaging (2026-09-28)
+
+[SRPD](notations/SRPD/definition.md) is a parent-list coordinate presentation of an existing RPD segment, also presenting ordinary e0MN below `1,3`; it is not a claim to have reinvented e0MN. Both e0MN editions remain credited to @test_alpha0. NER and Python come from the local `m13-lists-20260926` research snapshot, with their rules and UI unchanged. The [provenance manifest](notations/SRPD/provenance.json) pins the original and packaged hashes of both implementations and two regression fixtures.
+
+The bilingual rules and [common-segment argument](notations/SRPD/correspondence.md) explain the implicit root, finite bottom and top-index shift. The [SRPD/TBMS summary](research/srpd-tbms/README.md) organizes the two final carrier routes rather than independently re-auditing the simulation. The [final-route material](research/srpd-tbms/archive/README.md) retains 25 required proof/lemma manuscripts, 39 runtime/checking files, 2 route-specific verification records and 7 upstream source/compiled files: 73 individually pinned items, plus bilingual guides and replay tools. [Source records](research/srpd-tbms/source-records.json) and the [manifest](research/srpd-tbms/archive/manifest.json) distinguish original and packaged hashes.
+
+Pruning removes unrelated historical copies from Git; original research files remain outside it. The required truncation lemma retains original §§1–3 only; optional obstruction and candidate-search sections are explicitly omitted. Each edit is recorded in the manifest. Retained lemma bodies, mathematical kernels and budget assertions are unchanged; earlier banners, link relocation, private-path redaction and portable-loader edits remain documented. Third-party code retains its [attribution and unresolved licensing boundary](research/srpd-tbms/archive/vendor/README.md). Other notation kernels, papers, Lean sources and receipts are unchanged; no certificate scope is added.
+
 ## FMP addition (2026-09-23)
 
 FMP is a project-authored research notation, not a renamed copy of IBLP or deferred DMP. The [provenance manifest](notations/FMP/provenance.json) pins the selected 2026-09-20 full-completion implementation and the packaged hashes. Both Python modules are byte-identical to that snapshot. NER changes are confined to the display name, proof-status help and two initial examples; its mathematical functions, five views and resource guards are unchanged. Its original registration ID is retained for saved-data compatibility.

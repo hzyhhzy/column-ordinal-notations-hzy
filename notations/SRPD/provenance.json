@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "notation": "SRPD",
+  "source_snapshot": "m13-lists-20260926",
+  "packaged": "2026-09-28",
+  "mathematical_rule": "implicit root 0; nonincreasing parent lists; full reflected row insertion; n reflections followed by last-column deletion",
+  "initial_graph": [
+    [
+      0
+    ]
+  ],
+  "ner_registration_id": "srpd-implicit-root-v02",
+  "attribution": "Project-authored coordinate presentation of a common low segment; ordinary and strong e0MN remain credited to @test_alpha0.",
+  "proof_status": "Paper well-ordering transfer from the RPD initial segment; no new Lean theorem. TBMS comparisons are separately marked paper-level.",
+  "hash_basis": "SHA-256 of the delivered bytes (also LF-normalized for these four snapshots).",
+  "files": [
+    {
+      "file": "SRPD.ne-rewritten.js",
+      "packaged_sha256": "fdbd0d0788afe0cd6949cb280ffea4c85813bbd6d5e47d04e6a078e00bbee85a",
+      "original_sha256": "fdbd0d0788afe0cd6949cb280ffea4c85813bbd6d5e47d04e6a078e00bbee85a",
+      "changes": "none"
+    },
+    {
+      "file": "srpd.py",
+      "packaged_sha256": "4f8509dcd1d191e81298b5e6fc7689397e62d9d0947e9311ba7bb6f2c4c1e44b",
+      "original_sha256": "4f8509dcd1d191e81298b5e6fc7689397e62d9d0947e9311ba7bb6f2c4c1e44b",
+      "changes": "none"
+    },
+    {
+      "file": "fixtures/height-naive-counterexample.json",
+      "packaged_sha256": "3086af2369ef53d591f78a90588b9840e2632edaade5b3248fb715fcbf50bf44",
+      "original_sha256": "3086af2369ef53d591f78a90588b9840e2632edaade5b3248fb715fcbf50bf44",
+      "changes": "none"
+    },
+    {
+      "file": "fixtures/completion-counterexample.json",
+      "packaged_sha256": "6b68c3358aab8d68b14d0bd882fc4cbe75ed6c7cef3d2c4a3c7380186ab574ae",
+      "original_sha256": "6b68c3358aab8d68b14d0bd882fc4cbe75ed6c7cef3d2c4a3c7380186ab574ae",
+      "changes": "none"
+    }
+  ]
+}

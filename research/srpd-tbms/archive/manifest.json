@@ -1,0 +1,854 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-28",
+  "scope": "Only the final recursive-bank TBMS carrier and fixed-epsilon-bank carrier, their supporting lemmas, runtime dependencies and replay baselines.",
+  "original_language_archives": true,
+  "typescript_version": "6.0.3",
+  "not_a_new_proof_or_lean_certificate": true,
+  "files": [
+    {
+      "file": "research/srpd-tbms/archive/output/e0mn-counting-20260917/e0MN-counting.ne-rewritten.js",
+      "source": "output/e0mn-counting-20260917/e0MN-counting.ne-rewritten.js",
+      "original_sha256": "704825ee16334559d1647ec14a9725d0d332166e5b192c417d38a5fc50b6f811",
+      "packaged_sha256_lf": "704825ee16334559d1647ec14a9725d0d332166e5b192c417d38a5fc50b6f811",
+      "bytes": 29632,
+      "kind": "research-code",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/e0mn-counting-20260917/e0MN计数序列优化加速版.ne-rewritten.js",
+      "source": "output/e0mn-counting-20260917/e0MN计数序列优化加速版.ne-rewritten.js",
+      "original_sha256": "7438973d153f96b27ee218f926d70c390dadd5e1edac37b53e5ff1ee54e9d33a",
+      "packaged_sha256_lf": "7438973d153f96b27ee218f926d70c390dadd5e1edac37b53e5ff1ee54e9d33a",
+      "bytes": 34735,
+      "kind": "research-code",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/e0mn-y134258-hierarchical-20260920/ladder-cover.cjs",
+      "source": "output/e0mn-y134258-hierarchical-20260920/ladder-cover.cjs",
+      "original_sha256": "1a25714e4eae942046a732a6076e1f9f16b082d790cedd75d9f8c2e9eca1bb4d",
+      "packaged_sha256_lf": "1a25714e4eae942046a732a6076e1f9f16b082d790cedd75d9f8c2e9eca1bb4d",
+      "bytes": 7822,
+      "kind": "research-code",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/e0mn-y134258-hierarchical-20260920/nested-source.cjs",
+      "source": "output/e0mn-y134258-hierarchical-20260920/nested-source.cjs",
+      "original_sha256": "b92f29204e3bb3370e365eea37eae21b82765e326c8486e77d68dd35c2724ca5",
+      "packaged_sha256_lf": "b92f29204e3bb3370e365eea37eae21b82765e326c8486e77d68dd35c2724ca5",
+      "bytes": 4560,
+      "kind": "research-code",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/e0mn-y13425810-20260920/finite-local-certificate.cjs",
+      "source": "output/e0mn-y13425810-20260920/finite-local-certificate.cjs",
+      "original_sha256": "176937db68818f6f720d286336c31b0a07401c246e1344c4f148307bf58854d1",
+      "packaged_sha256_lf": "176937db68818f6f720d286336c31b0a07401c246e1344c4f148307bf58854d1",
+      "bytes": 3696,
+      "kind": "research-code",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/e0mn-y134258a-20260920/omega-star-simulation.cjs",
+      "source": "output/e0mn-y134258a-20260920/omega-star-simulation.cjs",
+      "original_sha256": "c6c94724fa41798719b2328940dead53aae246a5033ad118b4f05c894cd15cf8",
+      "packaged_sha256_lf": "c6c94724fa41798719b2328940dead53aae246a5033ad118b4f05c894cd15cf8",
+      "bytes": 6558,
+      "kind": "research-code",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/e0mn-y1343-greedy-20260920/abstract-greedy.cjs",
+      "source": "output/e0mn-y1343-greedy-20260920/abstract-greedy.cjs",
+      "original_sha256": "0d5005be4f24035066f69209908f5698250ea131b964dd6e762a2d27f5218612",
+      "packaged_sha256_lf": "0d5005be4f24035066f69209908f5698250ea131b964dd6e762a2d27f5218612",
+      "bytes": 4880,
+      "kind": "research-code",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/e0mn-y1343-greedy-20260920/greedy-cover.cjs",
+      "source": "output/e0mn-y1343-greedy-20260920/greedy-cover.cjs",
+      "original_sha256": "1614c1c526c03a6bdab0b0e181b7a0da88cb64f5c99883611b41f1c8dd9ff823",
+      "packaged_sha256_lf": "1614c1c526c03a6bdab0b0e181b7a0da88cb64f5c99883611b41f1c8dd9ff823",
+      "bytes": 3665,
+      "kind": "research-code",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/e0mn13-y-location-20260920/banded-source.cjs",
+      "source": "output/e0mn13-y-location-20260920/banded-source.cjs",
+      "original_sha256": "4c9f2921f1bdb50f10c6194d07c241f92498957a00308e3c1b378e5e771f321a",
+      "packaged_sha256_lf": "4c9f2921f1bdb50f10c6194d07c241f92498957a00308e3c1b378e5e771f321a",
+      "bytes": 3131,
+      "kind": "research-code",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/e0mn13-y-location-20260920/direct-source.cjs",
+      "source": "output/e0mn13-y-location-20260920/direct-source.cjs",
+      "original_sha256": "6ea3b8e3cf03065380a8ee7f94822975b77da1fb023539412824da64c0e705d2",
+      "packaged_sha256_lf": "6ea3b8e3cf03065380a8ee7f94822975b77da1fb023539412824da64c0e705d2",
+      "bytes": 1316,
+      "kind": "research-code",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/e0mn13-y-location-20260920/graded-bands-real.cjs",
+      "source": "output/e0mn13-y-location-20260920/graded-bands-real.cjs",
+      "original_sha256": "902b305707e4a6441d6782088cedcd7ce279903a46d514982fc8fc9497237a81",
+      "packaged_sha256_lf": "902b305707e4a6441d6782088cedcd7ce279903a46d514982fc8fc9497237a81",
+      "bytes": 4811,
+      "kind": "research-code",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/e0mn13-y-location-20260920/graded-bands.cjs",
+      "source": "output/e0mn13-y-location-20260920/graded-bands.cjs",
+      "original_sha256": "6bd8a6550235e3e554bf1081d733a832e0d68d86e27ffee9fde5c1271c681f8e",
+      "packaged_sha256_lf": "6bd8a6550235e3e554bf1081d733a832e0d68d86e27ffee9fde5c1271c681f8e",
+      "bytes": 6491,
+      "kind": "research-code",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/m13-lists-20260926/M13-lists.ne-rewritten.js",
+      "source": "output/m13-lists-20260926/M13-lists.ne-rewritten.js",
+      "original_sha256": "6a775f0336edf0d285ecd0f93152a210f59879fae38c79cd13abfe7f5907d5de",
+      "packaged_sha256_lf": "6a775f0336edf0d285ecd0f93152a210f59879fae38c79cd13abfe7f5907d5de",
+      "bytes": 6779,
+      "kind": "research-code",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/m13-lists-20260926/SRPD.ne-rewritten.js",
+      "source": "output/m13-lists-20260926/SRPD.ne-rewritten.js",
+      "original_sha256": "fdbd0d0788afe0cd6949cb280ffea4c85813bbd6d5e47d04e6a078e00bbee85a",
+      "packaged_sha256_lf": "fdbd0d0788afe0cd6949cb280ffea4c85813bbd6d5e47d04e6a078e00bbee85a",
+      "bytes": 10086,
+      "kind": "research-code",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/rpd-to-e0mn-20260917/probe.cjs",
+      "source": "output/rpd-to-e0mn-20260917/probe.cjs",
+      "original_sha256": "664897a9ce4d69bdbba79a2fe403beb99cfc4b5ad70909e830500029a6ef4aa7",
+      "packaged_sha256_lf": "31ccb614dec71a6fbdac0aaf5315c464b072bcb1b6c97ce6973bba18e19a3099",
+      "bytes": 6920,
+      "kind": "research-code",
+      "changes": [
+        "portable path/loader: 'ordinal-notations/"
+      ],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/rpd-y-converter-20260914/rpd-engine.cjs",
+      "source": "output/rpd-y-converter-20260914/rpd-engine.cjs",
+      "original_sha256": "6c9c2e78f860b1fdba17f57013d1e39223dce81f931392fc82abada1b6c551b3",
+      "packaged_sha256_lf": "6c9c2e78f860b1fdba17f57013d1e39223dce81f931392fc82abada1b6c551b3",
+      "bytes": 10849,
+      "kind": "research-code",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/rpd-y-converter-20260914/y-engine.cjs",
+      "source": "output/rpd-y-converter-20260914/y-engine.cjs",
+      "original_sha256": "be925554b24699d0b8ee34a5135ec56e80a39112bec931ba5876568135216ab8",
+      "packaged_sha256_lf": "eeb8bfb71d055933ca3a30e4173ea471fde5cd8ab28d5c026da1bc29fe23782f",
+      "bytes": 10131,
+      "kind": "research-code",
+      "changes": [
+        "portable path/loader: ../../.audit-hypcos-notation-explorer/1-Y.js"
+      ],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/rpd-y-converter-20260914/y-mountain.cjs",
+      "source": "output/rpd-y-converter-20260914/y-mountain.cjs",
+      "original_sha256": "26b23fdc551c321ada6ade6ce39b9b0e8befbf19e54c67b9036be99d426d7191",
+      "packaged_sha256_lf": "26b23fdc551c321ada6ade6ce39b9b0e8befbf19e54c67b9036be99d426d7191",
+      "bytes": 5433,
+      "kind": "research-code",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/AMPLIFIED-RESOURCE-BOUND.zh-CN.md",
+      "source": "output/tbms-e0mn-bridge-20260925/AMPLIFIED-RESOURCE-BOUND.zh-CN.md",
+      "original_sha256": "cc52b9981aa23793502d528a62f228e2a69c2ca65b5ad37b0b14f4495f661a9e",
+      "packaged_sha256_lf": "32dccd9f380194457281e4dd667c13fbd64477f5dfc83ba05418b5a97231fb85",
+      "bytes": 11181,
+      "kind": "original-language-manuscript",
+      "changes": [
+        "archival-status banner and relocated local links; mathematical body retained",
+        "unlinked historical-only references: output/tbms-e0mn-bridge-20260925/AMPLIFIED-RESOURCE-VERIFICATION.json",
+        "final-route-only archival banner; mathematical claims retain paper-level status"
+      ],
+      "final_route_role": "supporting-lemma"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/check-epsilon-fixed-bank.cjs",
+      "source": "output/tbms-e0mn-bridge-20260925/check-epsilon-fixed-bank.cjs",
+      "original_sha256": "875ff77237241fcda486ea2f5e20524b5347454377843b27f4a36d6224f95bbe",
+      "packaged_sha256_lf": "875ff77237241fcda486ea2f5e20524b5347454377843b27f4a36d6224f95bbe",
+      "bytes": 1606,
+      "kind": "research-code",
+      "changes": [],
+      "final_route_role": "current-check-or-lemma-implementation"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/check-one-port-recursive-case.cjs",
+      "source": "output/tbms-e0mn-bridge-20260925/check-one-port-recursive-case.cjs",
+      "original_sha256": "ff42e8143c9f27c415d314674abc3e4340c4c1958ea77f9796d0b61d8a7854ea",
+      "packaged_sha256_lf": "ff42e8143c9f27c415d314674abc3e4340c4c1958ea77f9796d0b61d8a7854ea",
+      "bytes": 2508,
+      "kind": "research-code",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/check-weak-archive-case.cjs",
+      "source": "output/tbms-e0mn-bridge-20260925/check-weak-archive-case.cjs",
+      "original_sha256": "f0e0a30bb66a557f9d3b1de96aedd9e61e6505db1179e53c60b8339b63ff1c21",
+      "packaged_sha256_lf": "f0e0a30bb66a557f9d3b1de96aedd9e61e6505db1179e53c60b8339b63ff1c21",
+      "bytes": 1062,
+      "kind": "research-code",
+      "changes": [],
+      "final_route_role": "current-check-or-lemma-implementation"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/check-weak-archive-gate.cjs",
+      "source": "output/tbms-e0mn-bridge-20260925/check-weak-archive-gate.cjs",
+      "original_sha256": "dde3808c2d3b641b4aa4dc532a9e29b6b0ed0975e79bee3e08698f3dd4314ca4",
+      "packaged_sha256_lf": "dde3808c2d3b641b4aa4dc532a9e29b6b0ed0975e79bee3e08698f3dd4314ca4",
+      "bytes": 1388,
+      "kind": "research-code",
+      "changes": [],
+      "final_route_role": "current-check-or-lemma-implementation"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/crossing-lower-extra-copy-resource.zh-CN.md",
+      "source": "output/tbms-e0mn-bridge-20260925/crossing-lower-extra-copy-resource.zh-CN.md",
+      "original_sha256": "af25a1cbe24ff2af971f834ebe9e677cb3cb5cbdd44ec7b4235d9dd6bc8543b6",
+      "packaged_sha256_lf": "4b29a5dfa15e75c2892fb5d6d287c7a1166069c861be99025005681f0491f729",
+      "bytes": 7435,
+      "kind": "original-language-manuscript",
+      "changes": [
+        "archival-status banner and relocated local links; mathematical body retained",
+        "final-route-only archival banner; mathematical claims retain paper-level status"
+      ],
+      "final_route_role": "supporting-lemma"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/crossing-lower-sparse-parent-return.cjs",
+      "source": "output/tbms-e0mn-bridge-20260925/crossing-lower-sparse-parent-return.cjs",
+      "original_sha256": "213c857fd39454081790504a939f2ca5bc71e23dcabfc6244f967bbda0d92964",
+      "packaged_sha256_lf": "213c857fd39454081790504a939f2ca5bc71e23dcabfc6244f967bbda0d92964",
+      "bytes": 10422,
+      "kind": "research-code",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/EPSILON-FIXED-BANK-BOUND.zh-CN.md",
+      "source": "output/tbms-e0mn-bridge-20260925/EPSILON-FIXED-BANK-BOUND.zh-CN.md",
+      "original_sha256": "476e24c1775f2c6fe5cc2bbdcdaa249ba0b7474d691e2cc5cec2a8842c4d61b6",
+      "packaged_sha256_lf": "581037aaa89f644c0590f9cfd3d9746bc1e1a1a7c71ac78dbf56a53e48fade8b",
+      "bytes": 7904,
+      "kind": "original-language-manuscript",
+      "changes": [
+        "archival-status banner and relocated local links; mathematical body retained",
+        "omit optional 679 candidate analysis, not used in the final fixed-epsilon-bank proof",
+        "final-route-only archival banner; mathematical claims retain paper-level status"
+      ],
+      "final_route_role": "final-proof"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/EPSILON-FIXED-BANK-VERIFICATION.json",
+      "source": "output/tbms-e0mn-bridge-20260925/EPSILON-FIXED-BANK-VERIFICATION.json",
+      "original_sha256": "b804710f749e4c8c5878dbbcfd7caa5dea6e69f3814809c3a01519041a14002c",
+      "packaged_sha256_lf": "c9690dfff114acab1d30da98e879d811dc42c440b97e4745f8ca1e6fee231f12",
+      "bytes": 146637,
+      "kind": "historical-evidence",
+      "changes": [
+        "JSON formatting and private-path redaction, evidence values retained",
+        "retain the 12 original epsilon cases; omit separate open-candidate audit/search fields"
+      ],
+      "final_route_role": "current-replay-baseline"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/epsilon-fixed-row-bank.cjs",
+      "source": "output/tbms-e0mn-bridge-20260925/epsilon-fixed-row-bank.cjs",
+      "original_sha256": "d8d20a5e7d1cf1f00b73be4b94fd400a64c4496f08baad2fcb550bb718a9e144",
+      "packaged_sha256_lf": "d8d20a5e7d1cf1f00b73be4b94fd400a64c4496f08baad2fcb550bb718a9e144",
+      "bytes": 4891,
+      "kind": "research-code",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/EPSILON-ROW-BOUND.zh-CN.md",
+      "source": "output/tbms-e0mn-bridge-20260925/EPSILON-ROW-BOUND.zh-CN.md",
+      "original_sha256": "5cb3c88c924435ddc8f3aa4e771cf15ac23aebfb31ddf8b094590556cc78fe15",
+      "packaged_sha256_lf": "97f27eec149fd153ddf00feef7b1f9b09ce12906635476483b46cdc86d696e86",
+      "bytes": 19420,
+      "kind": "original-language-manuscript",
+      "changes": [
+        "archival-status banner and relocated local links; mathematical body retained",
+        "unlinked historical-only references: output/tbms-e0mn-bridge-20260925/check-epsilon-row-cover.cjs, output/tbms-e0mn-bridge-20260925/check-epsilon-row-local.cjs, output/tbms-e0mn-bridge-20260925/EPSILON-ROW-VERIFICATION.json",
+        "final-route-only archival banner; mathematical claims retain paper-level status"
+      ],
+      "final_route_role": "supporting-lemma"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/epsilon-row-cover.cjs",
+      "source": "output/tbms-e0mn-bridge-20260925/epsilon-row-cover.cjs",
+      "original_sha256": "e5757a1bf40242d5dd70587b1785c90c843aeb8fe8fe6150ac50cb659910b500",
+      "packaged_sha256_lf": "e5757a1bf40242d5dd70587b1785c90c843aeb8fe8fe6150ac50cb659910b500",
+      "bytes": 15593,
+      "kind": "research-code",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/FINITE-BAND-BOUND.zh-CN.md",
+      "source": "output/tbms-e0mn-bridge-20260925/FINITE-BAND-BOUND.zh-CN.md",
+      "original_sha256": "3be1c7cdcb713715ce10c89ba7eb0e847bec415e3bc5e4064c43ef5872f0fbc4",
+      "packaged_sha256_lf": "844bf96be8771ec4cfdd650ee93521c6aace2ad4d7b26db83dd530c3750f8cb0",
+      "bytes": 16963,
+      "kind": "original-language-manuscript",
+      "changes": [
+        "archival-status banner and relocated local links; mathematical body retained",
+        "unlinked historical-only references: output/tbms-e0mn-bridge-20260925/COMMON-SEED-BOUND.zh-CN.md, output/tbms-e0mn-bridge-20260925/finite-band-cover.cjs, output/tbms-e0mn-bridge-20260925/check-finite-band-cover.cjs, output/tbms-e0mn-bridge-20260925/check-finite-band-episode.cjs, output/tbms-e0mn-bridge-20260925/FINITE-BAND-VERIFICATION.json, output/tbms-e0mn-bridge-20260925/VARIABLE-BAND-BOUND.zh-CN.md",
+        "final-route-only archival banner; mathematical claims retain paper-level status"
+      ],
+      "final_route_role": "supporting-lemma"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/finite-parent-capacity.cjs",
+      "source": "output/tbms-e0mn-bridge-20260925/finite-parent-capacity.cjs",
+      "original_sha256": "5d285fef664e79de63bc1f2432bf9a9c5ce5e59c0e38373964a8eb29de461e4c",
+      "packaged_sha256_lf": "5d285fef664e79de63bc1f2432bf9a9c5ce5e59c0e38373964a8eb29de461e4c",
+      "bytes": 707,
+      "kind": "research-code",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/FIXED-CHILD-WHOLE-TBMS.zh-CN.md",
+      "source": "output/tbms-e0mn-bridge-20260925/FIXED-CHILD-WHOLE-TBMS.zh-CN.md",
+      "original_sha256": "27e142915eb7247c8055ce426c2660fc66cda3061bd1e98fd9dcc47d783e9748",
+      "packaged_sha256_lf": "f9eb486bfb4150e065413a85d6698527f66b2b36aee29a1dcc24498a3bcf29a7",
+      "bytes": 10728,
+      "kind": "original-language-manuscript",
+      "changes": [
+        "archival-status banner and relocated local links; mathematical body retained",
+        "unlinked historical-only references: output/tbms-e0mn-bridge-20260925/fixed-child-recursive-row-bank.cjs, output/tbms-e0mn-bridge-20260925/check-fixed-child-recursive-case.cjs, output/tbms-e0mn-bridge-20260925/check-fixed-child-recursive-local.cjs, output/tbms-e0mn-bridge-20260925/FIXED-CHILD-WHOLE-TBMS-VERIFICATION.json",
+        "final-route-only archival banner; mathematical claims retain paper-level status"
+      ],
+      "final_route_role": "supporting-lemma"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/full-reflection-capacities.cjs",
+      "source": "output/tbms-e0mn-bridge-20260925/full-reflection-capacities.cjs",
+      "original_sha256": "732044d504aa0070292ca79312cfd68dc84b98607a707fc4c1692c739f12a5e5",
+      "packaged_sha256_lf": "732044d504aa0070292ca79312cfd68dc84b98607a707fc4c1692c739f12a5e5",
+      "bytes": 1019,
+      "kind": "research-code",
+      "changes": [],
+      "final_route_role": "current-check-or-lemma-implementation"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/FULL-REFLECTION-CAPACITY-INTERFACE.zh-CN.md",
+      "source": "output/tbms-e0mn-bridge-20260925/FULL-REFLECTION-CAPACITY-INTERFACE.zh-CN.md",
+      "original_sha256": "4b086f8c3b6fcc76c86d6ea575a2a63d5c52f48761ddd97cc0e136ceee99c8ad",
+      "packaged_sha256_lf": "acf5eb9c39aad8177680a20c08b293fbf371b984faf157955793b2e0affe1d63",
+      "bytes": 6325,
+      "kind": "original-language-manuscript",
+      "changes": [
+        "archival-status banner and relocated local links; mathematical body retained",
+        "unlinked historical-only references: output/tbms-e0mn-bridge-20260925/SEPARATOR-AND-ROW-BARRIER-OBSTRUCTIONS.zh-CN.md, output/tbms-e0mn-bridge-20260925/check-full-reflection-capacities.cjs",
+        "final-route-only archival banner; mathematical claims retain paper-level status"
+      ],
+      "final_route_role": "supporting-lemma"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/GRADED-RESOURCE-BOUND.zh-CN.md",
+      "source": "output/tbms-e0mn-bridge-20260925/GRADED-RESOURCE-BOUND.zh-CN.md",
+      "original_sha256": "b0cbfdffdb8ef74fbb7ec498735dad7e48ad269d4fa5e20e0fcd0efca8e9c6a8",
+      "packaged_sha256_lf": "e7bfa742cdc067f700bcd7e96d8564f20526cce1c76ba685c9f2e625c9c27f3a",
+      "bytes": 12221,
+      "kind": "original-language-manuscript",
+      "changes": [
+        "archival-status banner and relocated local links; mathematical body retained",
+        "unlinked historical-only references: output/tbms-e0mn-bridge-20260925/packet-graded-resource-cover.cjs, output/tbms-e0mn-bridge-20260925/GRADED-RESOURCE-VERIFICATION.json",
+        "final-route-only archival banner; mathematical claims retain paper-level status"
+      ],
+      "final_route_role": "supporting-lemma"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/LAYERED-RESOURCE-BOUND.zh-CN.md",
+      "source": "output/tbms-e0mn-bridge-20260925/LAYERED-RESOURCE-BOUND.zh-CN.md",
+      "original_sha256": "a8b859f61fdd82f853c86dd845ffc3f75126a21fb62b2ac95d293a00ade40d75",
+      "packaged_sha256_lf": "1fa0d6de347ecea56a03ff67f1ba923b97ea0f2fb55e83c2bdcb33f40bd26d08",
+      "bytes": 12740,
+      "kind": "original-language-manuscript",
+      "changes": [
+        "archival-status banner and relocated local links; mathematical body retained",
+        "unlinked historical-only references: output/tbms-e0mn-bridge-20260925/packet-layered-resource-cover.cjs, output/tbms-e0mn-bridge-20260925/LAYERED-RESOURCE-VERIFICATION.json",
+        "final-route-only archival banner; mathematical claims retain paper-level status"
+      ],
+      "final_route_role": "supporting-lemma"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/load-tbm.cjs",
+      "source": "output/tbms-e0mn-bridge-20260925/load-tbm.cjs",
+      "original_sha256": "9fdbcf0ef60a6a28dcf6ae9d48f81f4da36f00154219caec539b67ced7674307",
+      "packaged_sha256_lf": "abf40425e6790139530f3d015fad10f117c9d13d770e1e38748d982e8d5b00a8",
+      "bytes": 1686,
+      "kind": "research-code",
+      "changes": [
+        "portable path/loader: const ts = require('../../.research-ne-rewritten/node_modules/typescript');",
+        "portable path/loader: '../../.research-ne-rewritten'",
+        "read pinned pretranspiled CommonJS instead of private TypeScript installation"
+      ],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/NATIVE-ROW-BANK-BOUND.zh-CN.md",
+      "source": "output/tbms-e0mn-bridge-20260925/NATIVE-ROW-BANK-BOUND.zh-CN.md",
+      "original_sha256": "dd558a61a0deb185fa49dd11cd413ba2de679305224a089815a5bc1ba5eba742",
+      "packaged_sha256_lf": "b1545992c68e725ebcf207caa779a7572264875a9c75f33c83d6d140960f3505",
+      "bytes": 12714,
+      "kind": "original-language-manuscript",
+      "changes": [
+        "archival-status banner and relocated local links; mathematical body retained",
+        "unlinked historical-only references: output/tbms-e0mn-bridge-20260925/TEMPLATE-NO-LOSS-CLONE-OBSTRUCTION.zh-CN.md, output/tbms-e0mn-bridge-20260925/packet-native-row-bank-cover.cjs, output/tbms-e0mn-bridge-20260925/NATIVE-ROW-BANK-VERIFICATION.json",
+        "final-route-only archival banner; mathematical claims retain paper-level status"
+      ],
+      "final_route_role": "supporting-lemma"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/native-row-bank-seed.cjs",
+      "source": "output/tbms-e0mn-bridge-20260925/native-row-bank-seed.cjs",
+      "original_sha256": "a4a92db8c7643b07e592b283e70a9108225a19ec1167ae06cb09cfbecc2ccd5a",
+      "packaged_sha256_lf": "a4a92db8c7643b07e592b283e70a9108225a19ec1167ae06cb09cfbecc2ccd5a",
+      "bytes": 2293,
+      "kind": "research-code",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/NATIVE-ROW-ENDPOINT-CLOSURE.zh-CN.md",
+      "source": "output/tbms-e0mn-bridge-20260925/NATIVE-ROW-ENDPOINT-CLOSURE.zh-CN.md",
+      "original_sha256": "9b87c77451e8c1c6598968f71868f650117e47fbc5dbbed77228b2d9d608c9d6",
+      "packaged_sha256_lf": "bd11ec9cc1c3ae7e23419833addb5ad48ee7641e90c564b1efbef6d3484d7675",
+      "bytes": 11595,
+      "kind": "original-language-manuscript",
+      "changes": [
+        "archival-status banner and relocated local links; mathematical body retained",
+        "final-route-only archival banner; mathematical claims retain paper-level status"
+      ],
+      "final_route_role": "supporting-lemma"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/OMEGA-DEGREE-BOUND.zh-CN.md",
+      "source": "output/tbms-e0mn-bridge-20260925/OMEGA-DEGREE-BOUND.zh-CN.md",
+      "original_sha256": "71123bbfc0adddd02aaa4e77d818cef4a3306bfd5d4f144184a80f3802543821",
+      "packaged_sha256_lf": "a449eca5b0011583044f9e0a73023c3d2176ac5c26a7059e39dc3b2520f5a201",
+      "bytes": 17071,
+      "kind": "original-language-manuscript",
+      "changes": [
+        "archival-status banner and relocated local links; mathematical body retained",
+        "unlinked historical-only references: output/tbms-e0mn-bridge-20260925/omega-degree-cover.cjs, output/tbms-e0mn-bridge-20260925/check-omega-degree-cover.cjs, output/tbms-e0mn-bridge-20260925/OMEGA-DEGREE-VERIFICATION.json",
+        "final-route-only archival banner; mathematical claims retain paper-level status"
+      ],
+      "final_route_role": "supporting-lemma"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/one-port-recursive-row-bank.cjs",
+      "source": "output/tbms-e0mn-bridge-20260925/one-port-recursive-row-bank.cjs",
+      "original_sha256": "fb30310b8f29f34e5e1465982fa12e736dea645298619a506e55c66b98c53be4",
+      "packaged_sha256_lf": "fb30310b8f29f34e5e1465982fa12e736dea645298619a506e55c66b98c53be4",
+      "bytes": 8529,
+      "kind": "research-code",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/ONE-PORT-WHOLE-TBMS.zh-CN.md",
+      "source": "output/tbms-e0mn-bridge-20260925/ONE-PORT-WHOLE-TBMS.zh-CN.md",
+      "original_sha256": "f06d8c11cd71a5fe17a25e23ef391660bb756e726639c0c1e1bb4c81a77353e8",
+      "packaged_sha256_lf": "0ebe9cd1bbf792493fb7be65b74a99f25d708e2320d94c376d16ae4bb3cebce0",
+      "bytes": 17628,
+      "kind": "original-language-manuscript",
+      "changes": [
+        "archival-status banner and relocated local links; mathematical body retained",
+        "unlinked historical-only references: output/tbms-e0mn-bridge-20260925/probe-tail47-template.cjs, output/tbms-e0mn-bridge-20260925/ONE-PORT-WHOLE-TBMS-VERIFICATION.json",
+        "final-route-only archival banner; mathematical claims retain paper-level status"
+      ],
+      "final_route_role": "supporting-lemma"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/packet-amplified-resource-cover.cjs",
+      "source": "output/tbms-e0mn-bridge-20260925/packet-amplified-resource-cover.cjs",
+      "original_sha256": "9c1e9851e70e5b3e0846530dde8aa33a2d8bc68a1adafb887828e33a9dc3e974",
+      "packaged_sha256_lf": "9c1e9851e70e5b3e0846530dde8aa33a2d8bc68a1adafb887828e33a9dc3e974",
+      "bytes": 21806,
+      "kind": "research-code",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/PACKET-MAIN-AND-PARENT-RENEWAL.zh-CN.md",
+      "source": "output/tbms-e0mn-bridge-20260925/PACKET-MAIN-AND-PARENT-RENEWAL.zh-CN.md",
+      "original_sha256": "3b4efa75537a13d7e53ceb89a48d42617e1b357e648a3701f60b6e5c8d6569a3",
+      "packaged_sha256_lf": "b7b4b955f841b8ec1271b7ec7cff307506e64f286d993a14d7bcfbe2476d0360",
+      "bytes": 15931,
+      "kind": "original-language-manuscript",
+      "changes": [
+        "archival-status banner and relocated local links; mathematical body retained",
+        "unlinked historical-only references: output/tbms-e0mn-bridge-20260925/check-packet-main-cover.cjs, output/tbms-e0mn-bridge-20260925/check-packet-parent-renewal.cjs, output/tbms-e0mn-bridge-20260925/check-packet-top-parent-ancestry.cjs, output/tbms-e0mn-bridge-20260925/check-packet-resource-separation.cjs, output/tbms-e0mn-bridge-20260925/check-packet-old-resource-recall.cjs, output/tbms-e0mn-bridge-20260925/PACKET-RENEWAL-VERIFICATION.json, output/tbms-e0mn-bridge-20260925/SPARE-PARENT-RECALL-AND-GAP.zh-CN.md, output/tbms-e0mn-bridge-20260925/FRAMED-ROOT-BANK-RENEWAL.zh-CN.md",
+        "final-route-only archival banner; mathematical claims retain paper-level status"
+      ],
+      "final_route_role": "supporting-lemma"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/packet-main-cover.cjs",
+      "source": "output/tbms-e0mn-bridge-20260925/packet-main-cover.cjs",
+      "original_sha256": "f537152bfeaad91a014224b0afd82049402bdebb7fc3a3cf64518412eeb5412a",
+      "packaged_sha256_lf": "f537152bfeaad91a014224b0afd82049402bdebb7fc3a3cf64518412eeb5412a",
+      "bytes": 10840,
+      "kind": "research-code",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/packet-recursive-row-bank-cover.cjs",
+      "source": "output/tbms-e0mn-bridge-20260925/packet-recursive-row-bank-cover.cjs",
+      "original_sha256": "2167705cd24ad2ba0cfa66d8c28adde364692bb50823d493e704b6bfd96c6120",
+      "packaged_sha256_lf": "2167705cd24ad2ba0cfa66d8c28adde364692bb50823d493e704b6bfd96c6120",
+      "bytes": 21801,
+      "kind": "research-code",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/packet-sparse-native-state.cjs",
+      "source": "output/tbms-e0mn-bridge-20260925/packet-sparse-native-state.cjs",
+      "original_sha256": "d97393264605fb0cd5c995c5c50a1bb4dc7873e236154c72feec296401786ad2",
+      "packaged_sha256_lf": "d97393264605fb0cd5c995c5c50a1bb4dc7873e236154c72feec296401786ad2",
+      "bytes": 5132,
+      "kind": "research-code",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/PERSISTENT-EPSILON-BOUND.zh-CN.md",
+      "source": "output/tbms-e0mn-bridge-20260925/PERSISTENT-EPSILON-BOUND.zh-CN.md",
+      "original_sha256": "3e817fa0c9c33ae3e90d9be4f4fdc5e44bba77b15e0420c119210b45fef5db69",
+      "packaged_sha256_lf": "2657791e65b11e255353946715c4069f432d4a956b1faa60d3badedda60f91a6",
+      "bytes": 13341,
+      "kind": "original-language-manuscript",
+      "changes": [
+        "archival-status banner and relocated local links; mathematical body retained",
+        "unlinked historical-only references: output/tbms-e0mn-bridge-20260925/packet-persistent-epsilon-cover.cjs, output/tbms-e0mn-bridge-20260925/PERSISTENT-EPSILON-VERIFICATION.json",
+        "final-route-only archival banner; mathematical claims retain paper-level status"
+      ],
+      "final_route_role": "supporting-lemma"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/POLYNOMIAL-ROW-BOUND.zh-CN.md",
+      "source": "output/tbms-e0mn-bridge-20260925/POLYNOMIAL-ROW-BOUND.zh-CN.md",
+      "original_sha256": "f73fc1bc83b8557ae7746b702b69274661604119a2acd26c0a8d0da6a22f960a",
+      "packaged_sha256_lf": "20911dd83796155a8bef74320fbe4884e5f79fc8ece48329a56f05a0fd4570f1",
+      "bytes": 14855,
+      "kind": "original-language-manuscript",
+      "changes": [
+        "archival-status banner and relocated local links; mathematical body retained",
+        "unlinked historical-only references: output/tbms-e0mn-bridge-20260925/SMALLER-OMEGA-OMEGA-SEED.zh-CN.md, output/tbms-e0mn-bridge-20260925/BOUNDARY-POLYNOMIAL-SEED.zh-CN.md, output/tbms-e0mn-bridge-20260925/polynomial-row-cover.cjs, output/tbms-e0mn-bridge-20260925/check-polynomial-cover.cjs",
+        "final-route-only archival banner; mathematical claims retain paper-level status"
+      ],
+      "final_route_role": "supporting-lemma"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/PREFIX-ROW-STRETCH-COVARIANCE.zh-CN.md",
+      "source": "output/tbms-e0mn-bridge-20260925/PREFIX-ROW-STRETCH-COVARIANCE.zh-CN.md",
+      "original_sha256": "51bf107602dce59a4e39586a05279297146ee7be6506ec53b73bd9115ffb0e09",
+      "packaged_sha256_lf": "9f5230d4b478713e32cd6f7b22ff7bdca3a7e11b26eafdbc4d9774714a26b40d",
+      "bytes": 6601,
+      "kind": "original-language-manuscript",
+      "changes": [
+        "archival-status banner and relocated local links; mathematical body retained",
+        "unlinked historical-only references: output/tbms-e0mn-bridge-20260925/check-prefix-row-stretch-covariance.cjs",
+        "final-route-only archival banner; mathematical claims retain paper-level status"
+      ],
+      "final_route_role": "supporting-lemma"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/RANKED-ROW-RESERVOIRS.zh-CN.md",
+      "source": "output/tbms-e0mn-bridge-20260925/RANKED-ROW-RESERVOIRS.zh-CN.md",
+      "original_sha256": "9e659e320bf9f4fdd7569a3ca4808f856974b9122b8e8b891e60ab838d66963d",
+      "packaged_sha256_lf": "78230febe520f65dffc7ca537bd5bc5fbd37a2295725d21efebd30e5847d15ca",
+      "bytes": 4404,
+      "kind": "original-language-manuscript",
+      "changes": [
+        "archival-status banner and relocated local links; mathematical body retained",
+        "retain only original sections 1-3 used by final source endpoint closure; omit reverse-embedding conjectures",
+        "final-route-only archival banner; mathematical claims retain paper-level status"
+      ],
+      "final_route_role": "supporting-lemma"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/RECURSIVE-ENDPOINT-CLOSURE.zh-CN.md",
+      "source": "output/tbms-e0mn-bridge-20260925/RECURSIVE-ENDPOINT-CLOSURE.zh-CN.md",
+      "original_sha256": "87cf2ddb84e4f1b3f1c4b4821bd876eaaa009be42dd3ea17a6c5a43f78b4ae6b",
+      "packaged_sha256_lf": "8766616341637b59476fb799031c16d019f4807c4d67e47b19dbe549281f3fb4",
+      "bytes": 14758,
+      "kind": "original-language-manuscript",
+      "changes": [
+        "archival-status banner and relocated local links; mathematical body retained",
+        "final-route-only archival banner; mathematical claims retain paper-level status"
+      ],
+      "final_route_role": "supporting-lemma"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/RECURSIVE-ROW-BANK-BOUND.zh-CN.md",
+      "source": "output/tbms-e0mn-bridge-20260925/RECURSIVE-ROW-BANK-BOUND.zh-CN.md",
+      "original_sha256": "d4247c4644d639a9ce1b5565c2e8e84408907166ad74d5b88e98f49950f600dd",
+      "packaged_sha256_lf": "cfc292e8ca5a2fd82fad2254092c9a15a83a38203c3acdc357902ba3aea7bd4a",
+      "bytes": 15656,
+      "kind": "original-language-manuscript",
+      "changes": [
+        "archival-status banner and relocated local links; mathematical body retained",
+        "unlinked historical-only references: output/tbms-e0mn-bridge-20260925/RECURSIVE-ROW-BANK-DESIGN.zh-CN.md, output/tbms-e0mn-bridge-20260925/RECURSIVE-ROW-BANK-VERIFICATION.json",
+        "final-route-only archival banner; mathematical claims retain paper-level status"
+      ],
+      "final_route_role": "supporting-lemma"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/SPACED-PRIVATE-CONTROLLERS.zh-CN.md",
+      "source": "output/tbms-e0mn-bridge-20260925/SPACED-PRIVATE-CONTROLLERS.zh-CN.md",
+      "original_sha256": "04cb00bf7e716cc1cb43be72b3a8848fe9c4c77eff2d4d03c11afe27300911cc",
+      "packaged_sha256_lf": "d7204f19f88a8dd8ebc31405f280aa5bcfccea80a289d62bbd407705e95bcdd2",
+      "bytes": 15380,
+      "kind": "original-language-manuscript",
+      "changes": [
+        "archival-status banner and relocated local links; mathematical body retained",
+        "unlinked historical-only references: output/tbms-e0mn-bridge-20260925/spaced-m-cover.cjs, output/tbms-e0mn-bridge-20260925/check-spaced-m-cover.cjs, output/tbms-e0mn-bridge-20260925/check-spaced-boundaries.cjs, output/tbms-e0mn-bridge-20260925/check-spaced-small-cone.cjs, output/tbms-e0mn-bridge-20260925/check-private-reactivation.cjs, output/tbms-e0mn-bridge-20260925/check-old-label-reactivation.cjs, output/tbms-e0mn-bridge-20260925/SPACED-CONTROLLERS-VERIFICATION.json",
+        "final-route-only archival banner; mathematical claims retain paper-level status"
+      ],
+      "final_route_role": "supporting-lemma"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/srpd-boundary-factorization.cjs",
+      "source": "output/tbms-e0mn-bridge-20260925/srpd-boundary-factorization.cjs",
+      "original_sha256": "3e89ad1a3e272b953f06cdd33dbfd11f5c364932a10dbb447c33905e456e81b9",
+      "packaged_sha256_lf": "3e89ad1a3e272b953f06cdd33dbfd11f5c364932a10dbb447c33905e456e81b9",
+      "bytes": 3244,
+      "kind": "research-code",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/STAR-RESOURCE-STRICT-SEPARATION.zh-CN.md",
+      "source": "output/tbms-e0mn-bridge-20260925/STAR-RESOURCE-STRICT-SEPARATION.zh-CN.md",
+      "original_sha256": "9bf3fc1d896a8f26ca3b62903227c78f427bd80c7150fa817f9c6377542ee6d6",
+      "packaged_sha256_lf": "4c442219b5a96621a97cb3a0053cff09837a22ce939ab12f646a98e3d5cf9492",
+      "bytes": 19476,
+      "kind": "original-language-manuscript",
+      "changes": [
+        "archival-status banner and relocated local links; mathematical body retained",
+        "unlinked historical-only references: output/tbms-e0mn-bridge-20260925/packet-polynomial-resource-cover.cjs, output/tbms-e0mn-bridge-20260925/check-packet-star-uniform.cjs, output/tbms-e0mn-bridge-20260925/STAR-RESOURCE-VERIFICATION.json",
+        "final-route-only archival banner; mathematical claims retain paper-level status"
+      ],
+      "final_route_role": "supporting-lemma"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/tbms-row-profile.cjs",
+      "source": "output/tbms-e0mn-bridge-20260925/tbms-row-profile.cjs",
+      "original_sha256": "b2ef5a4789c4384f6460c6f39db760e5e05dbd74dd168d197a57e4e1f701157e",
+      "packaged_sha256_lf": "b2ef5a4789c4384f6460c6f39db760e5e05dbd74dd168d197a57e4e1f701157e",
+      "bytes": 3544,
+      "kind": "research-code",
+      "changes": [],
+      "final_route_role": "current-check-or-lemma-implementation"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/trimmed-one-port-row-bank.cjs",
+      "source": "output/tbms-e0mn-bridge-20260925/trimmed-one-port-row-bank.cjs",
+      "original_sha256": "7f22288d659c3d174d1895b59dbc5c8b49aef28627ed076810f6833ced858e06",
+      "packaged_sha256_lf": "7f22288d659c3d174d1895b59dbc5c8b49aef28627ed076810f6833ced858e06",
+      "bytes": 5970,
+      "kind": "research-code",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/TRIMMED-ONE-PORT-SEED.zh-CN.md",
+      "source": "output/tbms-e0mn-bridge-20260925/TRIMMED-ONE-PORT-SEED.zh-CN.md",
+      "original_sha256": "451eaf7025321793863691a22be887afc9ce6c168e1317485e9022d7f552e9cd",
+      "packaged_sha256_lf": "8aa1eaca2f1b8a9e25e5b3d07f1fd8ca0ae33d0e1b55514084a3dcfb7980350e",
+      "bytes": 8818,
+      "kind": "original-language-manuscript",
+      "changes": [
+        "archival-status banner and relocated local links; mathematical body retained",
+        "unlinked historical-only references: output/tbms-e0mn-bridge-20260925/check-trimmed-one-port-case.cjs, output/tbms-e0mn-bridge-20260925/check-trimmed-common-gate.cjs, output/tbms-e0mn-bridge-20260925/TRIMMED-ONE-PORT-VERIFICATION.json",
+        "final-route-only archival banner; mathematical claims retain paper-level status"
+      ],
+      "final_route_role": "supporting-lemma"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/weak-archive-row-bank.cjs",
+      "source": "output/tbms-e0mn-bridge-20260925/weak-archive-row-bank.cjs",
+      "original_sha256": "ebeeeb9bd5cf9b389a0d5048c2f80398d36651a56601e38ce1234d95cbe3dd09",
+      "packaged_sha256_lf": "ebeeeb9bd5cf9b389a0d5048c2f80398d36651a56601e38ce1234d95cbe3dd09",
+      "bytes": 7354,
+      "kind": "research-code",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/WEAK-ARCHIVE-SEED.zh-CN.md",
+      "source": "output/tbms-e0mn-bridge-20260925/WEAK-ARCHIVE-SEED.zh-CN.md",
+      "original_sha256": "0fcad903d94e72fca2f53e5e58836b1999b0782253fbf748dfb677070bfb79d9",
+      "packaged_sha256_lf": "b17eb648b4c860ac5aadc877a068560bd004345e70685d7a276554c8f07c2619",
+      "bytes": 10438,
+      "kind": "original-language-manuscript",
+      "changes": [
+        "archival-status banner and relocated local links; mathematical body retained",
+        "omit optional lower-seed obstruction analysis, not used in the final carrier proof",
+        "final-route-only archival banner; mathematical claims retain paper-level status"
+      ],
+      "final_route_role": "final-proof"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/WEAK-ARCHIVE-VERIFICATION.json",
+      "source": "output/tbms-e0mn-bridge-20260925/WEAK-ARCHIVE-VERIFICATION.json",
+      "original_sha256": "4661d020447963d2f5c793826621633f64eed4a6cde7a9ca16781058b2b4ff8b",
+      "packaged_sha256_lf": "4661d020447963d2f5c793826621633f64eed4a6cde7a9ca16781058b2b4ff8b",
+      "bytes": 126659,
+      "kind": "historical-evidence",
+      "changes": [],
+      "final_route_role": "current-replay-baseline"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/WHOLE-TBMS-INTERFACE.zh-CN.md",
+      "source": "output/tbms-e0mn-bridge-20260925/WHOLE-TBMS-INTERFACE.zh-CN.md",
+      "original_sha256": "6eb2928e101e32d47e373ae042cc3322810e411ef616b9a9367e1540f29ac48c",
+      "packaged_sha256_lf": "54834c8866caa17a918c6aba0490570405db36aa09e4f8a36e65fe4373687151",
+      "bytes": 14418,
+      "kind": "original-language-manuscript",
+      "changes": [
+        "archival-status banner and relocated local links; mathematical body retained",
+        "unlinked historical-only references: output/tbms-e0mn-bridge-20260925/recursive-label-interface.cjs, output/tbms-e0mn-bridge-20260925/check-recursive-label-interface.cjs, output/tbms-e0mn-bridge-20260925/check-recursive-port-fork.cjs, output/tbms-e0mn-bridge-20260925/RECURSIVE-INTERFACE-VERIFICATION.json",
+        "final-route-only archival banner; mathematical claims retain paper-level status"
+      ],
+      "final_route_role": "supporting-lemma"
+    },
+    {
+      "file": "research/srpd-tbms/archive/output/y139-e0mn-target-20260917/mn-omega-trace.cjs",
+      "source": "output/y139-e0mn-target-20260917/mn-omega-trace.cjs",
+      "original_sha256": "7b7bf767e3f756b20f6cba1eba0bfe2904c55c2dc223cfc17143dc10fd6133aa",
+      "packaged_sha256_lf": "7b7bf767e3f756b20f6cba1eba0bfe2904c55c2dc223cfc17143dc10fd6133aa",
+      "bytes": 2276,
+      "kind": "research-code",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/vendor/hypcos/1-Y.js",
+      "source": ".audit-hypcos-notation-explorer/1-Y.js",
+      "original_sha256": "40951b7bac7d8bc63dee531976e374e10b9b24c72777ea180410cb5503629798",
+      "packaged_sha256_lf": "7a9b073ed155d8180ff0b747889e5db58861687b4d53ef600c24eea412a1321e",
+      "bytes": 17776,
+      "kind": "upstream-source",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/vendor/ne-rewritten/compiled/notation_utils.cjs",
+      "source": ".research-ne-rewritten/src/notations/notation_utils.ts [TypeScript 6.0.3 CommonJS output]",
+      "original_sha256": "154d4ac22760157c7686200b1dbdebe3df3a0e611a566ea5f935727704df271f",
+      "packaged_sha256_lf": "d8b692c050d7b675a6a3ad9870ab08b50cb24c7d2632ff3a1b8d0d91ebe82ff6",
+      "bytes": 10775,
+      "kind": "upstream-transpilation",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/vendor/ne-rewritten/compiled/TBM.cjs",
+      "source": ".research-ne-rewritten/src/notations/BM-like/TBM.ts [TypeScript 6.0.3 CommonJS output]",
+      "original_sha256": "49ff4e3ea5e7026cb81fdbe553a9b5bc3c86ba8429b8b1d0fd615eea642bb614",
+      "packaged_sha256_lf": "5860cf8dadb5065b3e561541981df9a5b779b1f9eb045805a691679ccfc72136",
+      "bytes": 11814,
+      "kind": "upstream-transpilation",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/vendor/ne-rewritten/compiled/utils.cjs",
+      "source": ".research-ne-rewritten/src/utils.ts [TypeScript 6.0.3 CommonJS output]",
+      "original_sha256": "bd905d3adf4a8a14d83f0bac93da0e21b00abec823dcbab7f2217134f018d724",
+      "packaged_sha256_lf": "902e2427f10f405d12a740b082f2ed9c9d5f53e2a524c392071229a9fbf86444",
+      "bytes": 5524,
+      "kind": "upstream-transpilation",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/vendor/ne-rewritten/src/notations/BM-like/TBM.ts",
+      "source": ".research-ne-rewritten/src/notations/BM-like/TBM.ts",
+      "original_sha256": "ebc510ea3e2a032de6c793d25a84d3741e8b427b7f0d225b32fa49326b6be1bb",
+      "packaged_sha256_lf": "49ff4e3ea5e7026cb81fdbe553a9b5bc3c86ba8429b8b1d0fd615eea642bb614",
+      "bytes": 11928,
+      "kind": "upstream-source",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/vendor/ne-rewritten/src/notations/notation_utils.ts",
+      "source": ".research-ne-rewritten/src/notations/notation_utils.ts",
+      "original_sha256": "c13f6bb79f4d5d44f99e99d779c0cce2c22401340163c84b1a5116daba58f932",
+      "packaged_sha256_lf": "154d4ac22760157c7686200b1dbdebe3df3a0e611a566ea5f935727704df271f",
+      "bytes": 11225,
+      "kind": "upstream-source",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    },
+    {
+      "file": "research/srpd-tbms/archive/vendor/ne-rewritten/src/utils.ts",
+      "source": ".research-ne-rewritten/src/utils.ts",
+      "original_sha256": "5cc07aaf4932ee53bd6cb0623c2a2db90b339e98c9b9a7a6e25a96a8340f067a",
+      "packaged_sha256_lf": "bd905d3adf4a8a14d83f0bac93da0e21b00abec823dcbab7f2217134f018d724",
+      "bytes": 6385,
+      "kind": "upstream-source",
+      "changes": [],
+      "final_route_role": "runtime-dependency"
+    }
+  ],
+  "normalization": "UTF-8/LF; original and packaged hashes recorded. Final-route mathematical arguments retained; omitted historical sections, the truncation-lemma excerpt, link changes, private-path redaction and portable loader edits are listed per file.",
+  "selection_policy": "Do not follow historical exploration links; retain mathematical dependencies and executable imports of the final routes.",
+  "final_proof_roots": [
+    "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/WEAK-ARCHIVE-SEED.zh-CN.md",
+    "research/srpd-tbms/archive/output/tbms-e0mn-bridge-20260925/EPSILON-FIXED-BANK-BOUND.zh-CN.md"
+  ]
+}

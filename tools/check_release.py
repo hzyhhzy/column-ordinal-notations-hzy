@@ -77,6 +77,7 @@ MONOLINGUAL_ARCHIVES = frozenset({
     'research/README.md',
 })
 NER_HASHES = {
+    'notations/SRPD/SRPD.ne-rewritten.js': 'fdbd0d0788afe0cd6949cb280ffea4c85813bbd6d5e47d04e6a078e00bbee85a',
     'notations/FMP/FMP.ne-rewritten.js': '199fd418a9ac5a684d8e5232971f98552c8cb6607b1262668f11f80cbdbbda22',
     'notations/ACD/ACD.ne-rewritten.js': '1ee4a75ddab26088163219bd78d0cdd326cf0312840a5e0adb0006bd54a7609e',
     'notations/CSD/CSD.ne-rewritten.js': '5384de992dc01caedff7efeac73dbfbf671182b97b691f3dd122d7a7acf1e247',
@@ -96,6 +97,7 @@ NER_HASHES = {
     'notations/ARD2/ARD2.ne-rewritten.js': '0b50ff720cd33874f2401ea24ef2fc951ba5df21d81935b73d5bfde1aab7a562',
     'notations/SPD/SPD.ne-rewritten.js': 'd693c23564a766ecbbe3072cd200632c49b490d47d18428e1310ea438e85f266',
 }
+SRPD_ARCHIVE_MANIFEST_SHA256 = '41e9b307324156545e05ce64735681aa7014c1da916608f8e4163a78c2329033'
 LEAN_ROOTS = {
     # SPD and FMP have paper manuscripts, but no Lean certificates. Their addition must
     # neither relabel the existing seven proofs nor weaken their receipt checks.
@@ -126,6 +128,50 @@ def release_files(folder=ROOT):
 
 def sha256_lf(path):
     return hashlib.sha256(path.read_bytes().replace(b'\r\n', b'\n')).hexdigest()
+
+
+def check_srpd_archive():
+    """Allow only the 25 individually pinned original-language manuscripts."""
+    directory = ROOT / 'research/srpd-tbms/archive'
+    if sha256_lf(directory / 'manifest.json') != SRPD_ARCHIVE_MANIFEST_SHA256:
+        raise ValueError('SRPD archive manifest changed without explicit review')
+    sys.dont_write_bytecode = True
+    sys.path.insert(0, str(directory))
+    from verify_archive import verify
+    integrity, manuscripts = verify()
+    receipt = json.loads((directory / 'ARCHIVE-VALIDATION.json').read_text(encoding='utf-8'))
+    if (receipt.get('schema_version') != 1 or receipt.get('suite') != 'current'
+            or receipt.get('integrity') != integrity
+            or receipt.get('universal_proof') is not False
+            or receipt.get('independent_mathematical_review') is not False
+            or receipt.get('status') != 'bounded archive replay reproduced'):
+        raise ValueError('Stale or incorrectly scoped SRPD archive replay receipt')
+    expected_tools = {f'research/srpd-tbms/archive/{name}.py'
+                      for name in ('verify_archive', 'run_checks')}
+    tools = receipt['checked_tools']
+    if len(tools) != 2 or {r['file'] for r in tools} != expected_tools:
+        raise ValueError('Archive replay tool inventory changed')
+    for record in tools:
+        if sha256_lf(ROOT / record['file']) != record['sha256_lf']:
+            raise ValueError('Stale archive replay tool: ' + record['file'])
+    runs = receipt['runs']
+    expected_ids = ({f'weak:{i}' for i in range(14)} | {'weak:local', 'weak:common-gate'}
+                    | {f'epsilon:{i}' for i in range(12)})
+    if (len(runs) != 28 or {r['id'] for r in runs} != expected_ids
+            or receipt.get('counts') != {'passed': 26, 'guarded': 2}
+            or receipt.get('all_children_exited') is not True):
+        raise ValueError('Archive replay is incomplete or misreports guarded cases')
+    for run in runs:
+        guarded = run['id'] in {'epsilon:3', 'epsilon:8'}
+        if (run['status'] != ('guarded' if guarded else 'passed')
+                or run['exit_code'] != (1 if guarded else 0)
+                or run['timed_out'] or not run['process_exited']
+                or not run['historical_semantics_match']
+                or run['semantic_sha256'] != run['historical_semantic_sha256']
+                or run['error_message'] != ('recursive row allocation width guard' if guarded else None)):
+            raise ValueError('Invalid archive replay case: ' + run['id'])
+    print(f'SRPD archive: {integrity["imported_files"]} pinned files; 26 bounded passes, 2 recorded width guards')
+    return manuscripts
 
 
 def load_release_lean_plans(repository):
@@ -223,14 +269,19 @@ def check_lean_receipt(problems):
 def main():
     files = list(release_files())
     problems, links = [], 0
+    archives = set(MONOLINGUAL_ARCHIVES)
+    try:
+        archives.update(check_srpd_archive())
+    except (ValueError, KeyError, OSError) as error:
+        problems.append('SRPD final-route archive: ' + str(error))
     markdown = [p for p in files if p.suffix.lower() == '.md']
     pdfs = [p for p in files if p.suffix.lower() == '.pdf']
-    for relative in sorted(MONOLINGUAL_ARCHIVES):
+    for relative in sorted(archives):
         if not (ROOT / relative).is_file():
             problems.append(f'Missing monolingual archive: {relative}')
-    archive_count = sum(p.relative_to(ROOT).as_posix() in MONOLINGUAL_ARCHIVES for p in markdown)
+    archive_count = sum(p.relative_to(ROOT).as_posix() in archives for p in markdown)
     for path in markdown:
-        archive = path.relative_to(ROOT).as_posix() in MONOLINGUAL_ARCHIVES
+        archive = path.relative_to(ROOT).as_posix() in archives
         zh = path.name.endswith('.zh-CN.md')
         partner = path.with_name(path.name.replace('.zh-CN.md', '.md') if zh else path.stem+'.zh-CN.md')
         if not archive and not partner.is_file():
@@ -267,7 +318,7 @@ def main():
     for path in pdfs:
         if not path.with_suffix('.md').is_file() or path.stat().st_size < 1000:
             problems.append(f'Invalid PDF/source pair: {path.relative_to(ROOT)}')
-    if {p.name for p in (ROOT/'notations').iterdir() if p.is_dir()} != {'RPD','LRD','Omega-LRD3','ARD','ARD-legacy','IPD','ARD2','ARD2-legacy','SPD','CWY','CWY2','Omega-CWY','ACD','CSD','ICP','FMP'}:
+    if {p.name for p in (ROOT/'notations').iterdir() if p.is_dir()} != {'SRPD','RPD','LRD','Omega-LRD3','ARD','ARD-legacy','IPD','ARD2','ARD2-legacy','SPD','CWY','CWY2','Omega-CWY','ACD','CSD','ICP','FMP'}:
         problems.append('Unexpected notation directory')
     for relative, expected in NER_HASHES.items():
         actual = hashlib.sha256((ROOT/relative).read_bytes()).hexdigest()
@@ -290,6 +341,39 @@ def main():
                 raise ValueError('FMP Python core is no longer the unchanged imported snapshot')
     except (ValueError, KeyError, OSError) as error:
         problems.append('FMP import manifest: ' + str(error))
+    # SRPD is a separate implicit-root presentation, not an eighth Lean proof.
+    # Pin its exact implementation/fixture set without waiving other checks.
+    try:
+        directory = ROOT / 'notations/SRPD'
+        manifest = json.loads((directory / 'provenance.json').read_text(encoding='utf-8'))
+        if manifest.get('schema_version') != 1 or manifest.get('notation') != 'SRPD':
+            raise ValueError('Unexpected SRPD provenance schema/identity')
+        expected = {'SRPD.ne-rewritten.js', 'srpd.py',
+                    'fixtures/height-naive-counterexample.json',
+                    'fixtures/completion-counterexample.json'}
+        records = manifest['files']
+        if len(records) != len(expected) or {r['file'] for r in records} != expected:
+            raise ValueError('SRPD provenance must pin exactly two implementations and two fixtures')
+        for record in records:
+            if sha256_lf(directory / record['file']) != record['packaged_sha256']:
+                raise ValueError('SRPD provenance hash mismatch: ' + record['file'])
+            if record['original_sha256'] != record['packaged_sha256']:
+                raise ValueError('SRPD is no longer the unchanged imported snapshot')
+        receipt = json.loads((ROOT / 'tools/srpd-validation.json').read_text(encoding='utf-8'))
+        if receipt.get('schema_version') != 1 or receipt.get('universal_proof') is not False:
+            raise ValueError('Unexpected SRPD finite-validation schema/scope')
+        expected_checks = {'notations/SRPD/' + name for name in expected} | {
+            'tests/srpd.cjs', 'tests/srpd_python.py', 'tests/srpd_tbms_bounds.cjs'}
+        checks = receipt['checked_files']
+        if len(checks) != len(expected_checks) or {r['file'] for r in checks} != expected_checks:
+            raise ValueError('SRPD receipt has an unexpected implementation/test inventory')
+        for record in checks:
+            if sha256_lf(ROOT / record['file']) != record['sha256_lf']:
+                raise ValueError('Stale SRPD finite-validation receipt: ' + record['file'])
+        if len(receipt['runs']) != 3 or any(r['exit_code'] != 0 for r in receipt['runs']):
+            raise ValueError('SRPD receipt must record all three completed bounded tests')
+    except (ValueError, KeyError, OSError) as error:
+        problems.append('SRPD import/finite-validation manifest: ' + str(error))
     # Explicit provenance inventory: do not silently treat all files in the
     # comparison directory as untranslated historical manuscripts.
     import_path = ROOT / 'research/order-comparisons/import-manifest.json'

@@ -1,10 +1,30 @@
 # Column Ordinal Notations - HZY · [中文版](README.zh-CN.md)
 
-At 20:00 on September 11, @Phyrion published a [well-ordering proof for the Y-sequence system](https://github.com/Phyrion1343/1Y-Well-Ordering-Lean). Shortly afterwards, @test_alpha0 reduced the required axiomatic foundation to $KP_\omega+\text{there exists an uncountable ordinal}$. This repository collects RPD, LRD, Ω-LRD3, ARD, IPD, and ARD2, notation systems devised by GPT6-astra after studying those proofs, together with their well-ordering proofs. RPD admits a much shorter definition than Y; the paper comparison chain below proves it is at least as strong as the fixed 1Y definition. LRD and Ω-LRD3 are further extensions of that construction. ARD makes row labels into references to earlier columns, so the row coordinate itself moves during expansion. IPD uses finite-level iterated tree profiles and relocates references even inside nested heads. ARD2 returns to three natural-number coordinates, allowing both row and root SELF references and full-context root packages. All six admit paper well-ordering proofs in the same axiomatic system. Their order-type relationships with omega-Y and other familiar notation systems are currently unknown.
+At 20:00 on September 11, @Phyrion published a [well-ordering proof for the Y-sequence system](https://github.com/Phyrion1343/1Y-Well-Ordering-Lean). Shortly afterwards, @test_alpha0 reduced the required axiomatic foundation to $KP_\omega+\text{there exists an uncountable ordinal}$. This repository collects RPD, LRD, Ω-LRD3, ARD, IPD, and ARD2, notation systems devised by GPT6-astra after studying those proofs, together with their well-ordering proofs. RPD admits a much shorter definition than Y; the paper comparison chain below proves it is at least as strong as the fixed 1Y definition. LRD and Ω-LRD3 are further extensions of that construction. ARD makes row labels into references to earlier columns, so the row coordinate itself moves during expansion. IPD uses finite-level iterated tree profiles and relocates references even inside nested heads. ARD2 returns to three natural-number coordinates, allowing both row and root SELF references and full-context root packages. All six admit paper well-ordering proofs in the same axiomatic system. Whole-system comparisons with omega-Y remain open; the specific known comparisons and common initial segments are recorded below.
 
-Definitions, executable fundamental sequences, and well-ordering proofs for column-diagram ordinal notations. This source snapshot was updated on **2026-09-23** for [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy). The suffix `hzy` refers to the repository owner's name.
+Definitions, executable fundamental sequences, and well-ordering proofs for column-diagram ordinal notations. This source snapshot was updated on **2026-09-28** for [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy). The suffix `hzy` refers to the repository owner's name.
 
-The notation implementations are **RPD, LRD, Ω-LRD3, ARD, IPD, ARD2, SPD, CWY, CWY2, Ω-CWY, ACD, CSD, ICP and FMP**, with the candidate/failed-version distinctions below. The Lean proof collection still covers only **Y, RPD, LRD, Ω-LRD3, ARD, IPD and ARD2**. ARD-legacy and ARD2-legacy are retained as explicit previous editions; other Ω-LRD variants are excluded. External e0MN implementations are credited separately, not counted as inventions of this project.
+The notation implementations are **SRPD, RPD, LRD, Ω-LRD3, ARD, IPD, ARD2, SPD, CWY, CWY2, Ω-CWY, ACD, CSD, ICP and FMP**, with the candidate/failed-version distinctions below. The Lean proof collection still covers only **Y, RPD, LRD, Ω-LRD3, ARD, IPD and ARD2**. ARD-legacy and ARD2-legacy are retained as explicit previous editions; other Ω-LRD variants are excluded. External e0MN implementations are credited separately, not counted as inventions of this project.
+
+## SRPD: a common initial segment and TBMS comparisons (2026-09-28)
+
+[**SRPD**](notations/SRPD/definition.md) is now packaged independently: each column is just a nonincreasing parent list, with an implicit first root. It includes a [NER expander](notations/SRPD/SRPD.ne-rewritten.js), [Python kernel](notations/SRPD/srpd.py), bilingual rules, and a [common-segment / well-ordering transfer argument](notations/SRPD/correspondence.md). NER retains parent-list, count-sequence and round-trip-checked BMS-style height-list views. The existing expansion rule is unchanged.
+
+**SRPD independently presents a common initial segment of RPD, ARD, ARD2 and IPD.** Precisely, the order type strictly below SRPD's initial `[0]` agrees with the following standard initial segments:
+
+| System | Endpoint (strictly below it) |
+| --- | --- |
+| RPD | `1,2` |
+| ARD | `1,1,3` |
+| ARD2 | `1,1,3` |
+| IPD | `1,2` |
+| Ordinary e0MN (@test_alpha0) | `1,3`, namely M13 |
+
+This identifies initial-segment order types; **it does not identify SRPD with the whole RPD system**. The correspondence handles the raw projection's finite bottom, implicit root and one-index shift at the top; raw strings and all expansion indices must not be equated without those qualifications. Well-ordering transfers from the RPD segment under the existing paper's weak-KP upper bound. **No new SRPD Lean theorem is added**, and the seven existing systems' proofs are unchanged.
+
+The [**bilingual SRPD vs TBMS summary**](research/srpd-tbms/README.md) retains the final routes: current carriers for whole ordinary TBMS and the tighter special bound for `TBMS ()(1^ε₀)`. The existing paper descent simulation puts the whole TBMS limit strictly below SRPD `1,2,4,8,4,2`, and further below a fixed descendant of its first fundamental-sequence term. This is not a comparison inferred from count growth. The latest `…6,7,9` remains an open candidate. Paper arguments, finite checks and unproved claims are separated; neither a Lean comparison nor a canonical index-preserving converter is claimed.
+
+For the **complete proof process and the construction of the simulation**, start with the [proof archive guide](research/srpd-tbms/archive/README.md): 25 required proof/lemma manuscripts, their simulators/runtime dependencies and 2 route-specific verification records (73 imported items) are collected under `research/srpd-tbms/archive/`. Bilingual reading routes, paper-to-code references and portable replay commands keep this material discoverable without cluttering the root.
 
 ## FMP: full finite-map completion (2026-09-23)
 
@@ -63,10 +83,11 @@ This too is a **paper comparison, not yet Lean-formalized**. It claims neither a
 
 ## Definitions and expanders
 
-Definitions are available in English and Chinese. The earlier twelve editions retain their **48 Markdown/PDF definition artifacts**; ACD, CSD and ICP add six Markdown definitions without new PDFs. English Markdown is the default, with a title link to Chinese.
+Definitions are available in English and Chinese. Thirteen existing editions retain **52 Markdown/PDF definition artifacts** (including FMP); ACD, CSD, ICP and SRPD have eight further Markdown definitions without new PDFs. English Markdown is the default, with a title link to Chinese.
 
 | Notation | English definition | Chinese definition | NER expander | Python expander |
 | --- | --- | --- | --- | --- |
+| SRPD — common initial segment | [Markdown](notations/SRPD/definition.md) | [Markdown](notations/SRPD/definition.zh-CN.md) | [JavaScript](notations/SRPD/SRPD.ne-rewritten.js) | [srpd.py](notations/SRPD/srpd.py) |
 | RPD | [Markdown](notations/RPD/definition.md) · [PDF](notations/RPD/definition.pdf) | [Markdown](notations/RPD/definition.zh-CN.md) · [PDF](notations/RPD/definition.zh-CN.pdf) | [JavaScript](notations/RPD/RPD-mountain.ne-rewritten.js) | [rpd.py](notations/RPD/rpd.py) |
 | LRD | [Markdown](notations/LRD/definition.md) · [PDF](notations/LRD/definition.pdf) | [Markdown](notations/LRD/definition.zh-CN.md) · [PDF](notations/LRD/definition.zh-CN.pdf) | [JavaScript](notations/LRD/LRD.ne-rewritten.js) | [lrd.py](notations/LRD/lrd.py) |
 | Ω-LRD3 | [Markdown](notations/Omega-LRD3/definition.md) · [PDF](notations/Omega-LRD3/definition.pdf) | [Markdown](notations/Omega-LRD3/definition.zh-CN.md) · [PDF](notations/Omega-LRD3/definition.zh-CN.pdf) | [JavaScript](notations/Omega-LRD3/Omega-LRD3.ne-rewritten.js) | [omega_lrd3.py](notations/Omega-LRD3/omega_lrd3.py) |
@@ -132,7 +153,7 @@ Y means the fixed upstream inherited-ancestry definition, pinned to commit `1689
 
 The separate [research directory](research/README.md) contains derivations and comparison drafts, not additional certified theorems. Start with the [2026-09-20 bilingual result catalogue](research/order-comparisons/README.md). The earlier [IPD comparison overview (Chinese)](research/ordinal-comparisons-20260914/README.zh-CN.md) covers the paper-level Y≤RPD argument, proposed IPD upper bounds for RPD/Y/wY/ARD/TPD, and the subsequent ARD2–IPD investigation. The notes distinguish paper arguments, local lemmas, bounded checks, and unproved candidates; archiving them does not establish an end-to-end Lean comparison.
 
-Supporting manuscripts and candidate data are included. Experimental code and private source manuscripts are not bundled. Historical test reports and the current status of the formal proofs must be read separately.
+Other research archives retain their designated manuscripts and candidate data. The SRPD/TBMS package retains only proofs, runtime dependencies and checks actually used by the final routes, not the whole historical reference graph. Private source PDFs and unrelated research caches are excluded. Historical test reports and current formal-proof status must be read separately.
 
 ## Documents for AI readers
 

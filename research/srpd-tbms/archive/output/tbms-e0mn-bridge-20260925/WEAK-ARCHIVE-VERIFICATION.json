@@ -1,0 +1,5586 @@
+{
+  "date": "2026-09-28",
+  "paperConclusion": "rho(TBMS Limit)<=rho(V)<rho(Qw)<rho(U)<rho(Qtrim).",
+  "status": "Incremental PAPER simulation proof, not Lean, not independently externally audited; no same-index or history-independent order converter.",
+  "oldSeedCounts": "1,2,4,8,4,1,2,9,38,4,12,42,73,105,106,113,150",
+  "newSeedCounts": "1,2,4,8,4,1,2,9,38,4,12,42,44,46,47,54,91",
+  "VCounts": "1,2,4,8,4,1,2,9,38,4,12,42,44,46,47,54,90,266,1072,4384,16474,56026,173593,495365,1315558,3281173",
+  "summary": {
+    "cases": 15,
+    "allPassed": true,
+    "sourceSteps": 41,
+    "initializationOnly": 2,
+    "amplification": [
+      {
+        "id": "12",
+        "trace": [
+          {
+            "kind": "ceiling",
+            "level": 0,
+            "node": 1,
+            "n": 7,
+            "needed": 10,
+            "childCopy": 1,
+            "background": 2,
+            "width": 133
+          }
+        ]
+      },
+      {
+        "id": "13",
+        "trace": [
+          {
+            "kind": "ceiling",
+            "level": 0,
+            "node": 1,
+            "n": 18,
+            "needed": 21,
+            "childCopy": 1,
+            "background": 2,
+            "width": 133
+          }
+        ]
+      }
+    ],
+    "localCase": {
+      "before": 4809,
+      "after": 4809,
+      "cut": 11,
+      "higherBank": 5
+    },
+    "maxRSSMiB": 393.37109375,
+    "maxWidth": 148933,
+    "maxConcurrent": 2,
+    "allExecProcessesExited": true,
+    "frozenEarlierFilesChecked": 65,
+    "frozenMismatches": []
+  },
+  "interfacePatches": [
+    {
+      "before": "?3+(C?Cap.at(C,i+1,j+1):lowerGrade(s,v.level,v.profile[i][j]))",
+      "after": "?2+(C?Cap.at(C,i+1,j+1):lowerGrade(s,v.level,v.profile[i][j]))",
+      "count": 1
+    },
+    {
+      "before": "P.E.restore(s,s.archive);",
+      "after": "P.prepare(s,s.archive,1,true);",
+      "count": 1
+    },
+    {
+      "before": "assert.equal(s.g[s.a-1].length,2);assert.equal(s.g[s.a-1][0],s.g[s.a-1][1]);",
+      "after": "assert.equal(s.g[s.a-1].length,1);",
+      "count": 1
+    },
+    {
+      "before": "v.background>=3&&v.background<=s.seedAudit.background",
+      "after": "v.background>=2&&v.background<=s.seedAudit.background",
+      "count": 1
+    },
+    {
+      "before": "C(u,e)>=3&&C(w,e)>=3",
+      "after": "C(u,e)>=2&&C(w,e)>=2",
+      "count": 1
+    },
+    {
+      "before": "C(p,s.a)>=2,label+': private bank port'",
+      "after": "C(p,s.a)>=1,label+': private bank port'",
+      "count": 1
+    },
+    {
+      "before": "C(s.a,p.point)>=2,'main point private port'",
+      "after": "C(s.a,p.point)>=1,'main point private port'",
+      "count": 1
+    },
+    {
+      "before": "C(s.a,t)>=2&&C(first,t)>=1,'coupon main/private ports'",
+      "after": "C(s.a,t)>=1&&C(first,t)>=1,'coupon main/private ports'",
+      "count": 1
+    },
+    {
+      "before": "C(v.points.at(-1),t)>=2,'coupon all archive ports'",
+      "after": "C(v.points.at(-1),t)>=1,'coupon all archive ports'",
+      "count": 1
+    },
+    {
+      "before": "assert.deepEqual(s.g.at(-1).slice(1),s.g[s.archive-1].slice(1),'active archive inherited tail');",
+      "after": "assert.deepEqual(s.g.at(-1).slice(),s.g[s.archive-1].slice(),'active archive inherited entire column');",
+      "count": 1
+    },
+    {
+      "before": "assert(C(s.a,N)===1&&C(first,N)>=1,'work separation and main reload port');",
+      "after": "assert(C(s.a,N)===0,'bank work has no private ancestry; main returns by actual trim');",
+      "count": 1
+    },
+    {
+      "before": "C(u,N)>=3&&C(v,N)>=3",
+      "after": "C(u,N)>=2&&C(v,N)>=2",
+      "count": 1
+    },
+    {
+      "before": "P.trim(s,z);P.prepare(s,e,2);",
+      "after": "P.trim(s,z);P.prepare(s,e,1);",
+      "count": 1
+    },
+    {
+      "before": "cut=points.at(-2);row=3;blocks=2;",
+      "after": "cut=points.at(-2);row=2;blocks=2;",
+      "count": 1
+    },
+    {
+      "before": "row=3+lowerGrade(s,level,a)+1",
+      "after": "row=2+lowerGrade(s,level,a)+1",
+      "count": 1
+    },
+    {
+      "before": "row=3+lowerGrade(s,level,beta)+1",
+      "after": "row=2+lowerGrade(s,level,beta)+1",
+      "count": 1
+    },
+    {
+      "before": "const needed=3+lowerGrade(s,level,alpha)",
+      "after": "const needed=2+lowerGrade(s,level,alpha)",
+      "count": 1
+    },
+    {
+      "before": "P.prepare(s,s.packets.at(-1).g1,1,true);",
+      "after": "P.trim(s,s.packets.at(-1).g1);",
+      "count": 1
+    },
+    {
+      "before": "C(u,w)>=v.high&&C(u,e)>=2&&C(w,e)>=2",
+      "after": "C(u,w)>=v.high&&C(u,e)>=1&&C(w,e)>=1",
+      "count": 1
+    },
+    {
+      "before": "C(r,N)>=s.active.background&&C(u,N)>=2&&C(v,N)>=2",
+      "after": "C(r,N)>=s.active.background&&C(u,N)>=1&&C(v,N)>=1",
+      "count": 1
+    }
+  ],
+  "seedStages": [
+    {
+      "name": "expose10 at row2 while keeping first parent12",
+      "counts": "1,2,4,8,4,1,2,9,38,4,12,42,45",
+      "graph": [
+        [],
+        [
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [],
+        [
+          6
+        ],
+        [
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7
+        ],
+        [
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10
+        ],
+        [
+          11,
+          11,
+          11,
+          11,
+          11,
+          11,
+          11,
+          11
+        ],
+        [
+          12,
+          10
+        ]
+      ]
+    },
+    {
+      "name": "child archive13 has parents12 and7",
+      "counts": "1,2,4,8,4,1,2,9,38,4,12,42,44,52",
+      "graph": [
+        [],
+        [
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [],
+        [
+          6
+        ],
+        [
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7
+        ],
+        [
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10
+        ],
+        [
+          11,
+          11,
+          11,
+          11,
+          11,
+          11,
+          11,
+          11
+        ],
+        [
+          12,
+          7
+        ],
+        [
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13
+        ]
+      ]
+    },
+    {
+      "name": "mother archive14 and work15 retain root port2",
+      "counts": "1,2,4,8,4,1,2,9,38,4,12,42,44,46,48",
+      "graph": [
+        [],
+        [
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [],
+        [
+          6
+        ],
+        [
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7
+        ],
+        [
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10
+        ],
+        [
+          11,
+          11,
+          11,
+          11,
+          11,
+          11,
+          11,
+          11
+        ],
+        [
+          12,
+          7
+        ],
+        [
+          13,
+          7
+        ],
+        [
+          14,
+          7
+        ]
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "caseIndex": "0",
+      "test": {
+        "name": "one layer ordinary refinements",
+        "levels": 1,
+        "c": 2,
+        "path": [
+          2,
+          2,
+          1,
+          0
+        ]
+      },
+      "finiteTestsOnly": true,
+      "proofDocument": "WEAK-ARCHIVE-SEED.zh-CN.md",
+      "status": "bounded one-port contract passed",
+      "error": null,
+      "strictHigherDemand": null,
+      "originalSHA256": "2167705cd24ad2ba0cfa66d8c28adde364692bb50823d493e704b6bfd96c6120",
+      "path": [
+        2,
+        2,
+        1,
+        0
+      ],
+      "source": "()(1^()(1,1))",
+      "width": 9149,
+      "phase": "cold",
+      "slots": [],
+      "rowRoot": "()(1^ω)",
+      "mode": "weak-ceiling-archive-paper-interface",
+      "seedAudit": {
+        "WIndex": 1,
+        "r": 7,
+        "background": 2,
+        "columns": 2,
+        "events": 36,
+        "port": 1,
+        "extraArchive": true,
+        "ceilingArchivePort": 1,
+        "archiveAudit": [
+          {
+            "e": 13,
+            "root": 2,
+            "u": 1,
+            "v": 1
+          },
+          {
+            "e": 14,
+            "root": 2,
+            "u": 1,
+            "v": 1
+          }
+        ],
+        "previousCounts": "1,2,4,8,4,1,2,9,38,4,12,42,73,105,106,113,150",
+        "commonCounts": "1,2,4,8,4,1,2,9,38,4,12,42,44,46,47,54,91",
+        "certificates": {
+          "nodes": 47,
+          "hits": 867,
+          "traceEntries": 343,
+          "macros": 22,
+          "fs": 14
+        },
+        "previousSeedCertificates": {
+          "nodes": 46,
+          "hits": 688,
+          "traceEntries": 276,
+          "macros": 23,
+          "fs": 16
+        },
+        "path": "Qtrim, trim13, expose10row2, [1], trim14, truncate2, [2], expose7row2, [1], trim17; [4c-1], inherit entire14"
+      },
+      "initializationTrace": [],
+      "banks": [
+        {
+          "id": 0,
+          "level": 0,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^ω)",
+          "points": [
+            9119,
+            9123,
+            9124,
+            9140
+          ]
+        },
+        {
+          "id": 1,
+          "level": 0,
+          "label": "()(1,1,1)",
+          "points": [
+            9029,
+            9090
+          ]
+        },
+        {
+          "id": 2,
+          "level": 0,
+          "label": "()(1,1)(2,2)",
+          "points": [
+            11,
+            8548,
+            8909
+          ]
+        },
+        {
+          "id": 3,
+          "level": 0,
+          "label": "()(1,1)(2,1)",
+          "points": [
+            11,
+            6143,
+            7947
+          ]
+        },
+        {
+          "id": 4,
+          "level": 0,
+          "label": "()(1,1)",
+          "points": [
+            11,
+            3137
+          ]
+        }
+      ],
+      "trace": [
+        {
+          "kind": "budget",
+          "count": 1,
+          "width": 33
+        },
+        {
+          "kind": "ceiling",
+          "level": 0,
+          "node": 1,
+          "n": 2,
+          "needed": 5,
+          "childCopy": 0,
+          "background": 2,
+          "width": 99
+        },
+        {
+          "kind": "budget",
+          "count": 1,
+          "width": 73
+        },
+        {
+          "kind": "row-unit",
+          "level": 0,
+          "parent": 1,
+          "node": 2,
+          "n": 2,
+          "row": 5,
+          "cut": 11,
+          "blocks": 3,
+          "label": "()(1,1)(2,2)",
+          "parentBefore": [
+            11,
+            12
+          ],
+          "width": 605
+        },
+        {
+          "kind": "budget",
+          "count": 1,
+          "width": 493
+        },
+        {
+          "kind": "row-unit",
+          "level": 0,
+          "parent": 2,
+          "node": 3,
+          "n": 1,
+          "row": 4,
+          "cut": 131,
+          "blocks": 2,
+          "label": "()(1,1)(2,1)",
+          "parentBefore": [
+            11,
+            131,
+            251
+          ],
+          "width": 2529
+        },
+        {
+          "kind": "budget",
+          "count": 1,
+          "width": 1936
+        },
+        {
+          "kind": "row-delete",
+          "level": 0,
+          "parent": 3,
+          "node": 4,
+          "n": 0,
+          "row": 2,
+          "cut": 131,
+          "blocks": 2,
+          "label": "()(1,1)",
+          "parentBefore": [
+            11,
+            131,
+            732
+          ],
+          "width": 12149
+        }
+      ],
+      "stats": {
+        "checks": 30,
+        "pairs": 151,
+        "ports": 286,
+        "sourceSteps": 4,
+        "budgets": 4,
+        "maxBudget": 1,
+        "calls": 4,
+        "allocations": 4,
+        "ordinaryRowSteps": 2,
+        "deletedRowSteps": 1,
+        "keptSmallerBanks": 0,
+        "strictSubcovariances": 0,
+        "topDowns": 8,
+        "maxWidth": 12149,
+        "maxNodes": 5,
+        "mainUnits": 0,
+        "mainLimits": 4,
+        "mainDeletes": 0,
+        "ceilingAllocations": 1
+      },
+      "sparseStats": {
+        "nativeFS": 16,
+        "zeroSteps": 3785,
+        "downMacroEndpoints": 369,
+        "truncationMacroEndpoints": 334,
+        "smallListDifferentials": 110,
+        "smallCapDifferentials": 201,
+        "maxSegments": 13483,
+        "maxWidth": 12154
+      },
+      "limits": {
+        "ms": 20000,
+        "rssMiB": 650,
+        "width": 160000,
+        "downTransientWidth": 320000,
+        "events": 200000,
+        "pairs": 4000000,
+        "nodes": 160,
+        "sourceWidth": 22,
+        "steps": 30,
+        "navigation": 1800,
+        "index": 32,
+        "wordLength": 100,
+        "nativeWidth": 90,
+        "rows": 400,
+        "rowWidth": 80,
+        "routeSteps": 160,
+        "plan": 80
+      },
+      "elapsedMs": 321,
+      "rssMiB": 217.92578125
+    },
+    {
+      "caseIndex": "1",
+      "test": {
+        "name": "two layers through a main copy to empty",
+        "levels": 2,
+        "c": 2,
+        "path": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "empty": true
+      },
+      "finiteTestsOnly": true,
+      "proofDocument": "WEAK-ARCHIVE-SEED.zh-CN.md",
+      "status": "bounded one-port contract passed",
+      "error": null,
+      "strictHigherDemand": null,
+      "originalSHA256": "2167705cd24ad2ba0cfa66d8c28adde364692bb50823d493e704b6bfd96c6120",
+      "path": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "source": "",
+      "width": 6863,
+      "phase": "cold",
+      "slots": [],
+      "rowRoot": "()(1^()(1^ω))",
+      "mode": "weak-ceiling-archive-paper-interface",
+      "seedAudit": {
+        "WIndex": 1,
+        "r": 7,
+        "background": 2,
+        "columns": 3,
+        "events": 44,
+        "port": 1,
+        "extraArchive": true,
+        "ceilingArchivePort": 1,
+        "archiveAudit": [
+          {
+            "e": 13,
+            "root": 2,
+            "u": 1,
+            "v": 1
+          },
+          {
+            "e": 14,
+            "root": 2,
+            "u": 1,
+            "v": 1
+          }
+        ],
+        "previousCounts": "1,2,4,8,4,1,2,9,38,4,12,42,73,105,106,113,150",
+        "commonCounts": "1,2,4,8,4,1,2,9,38,4,12,42,44,46,47,54,91",
+        "certificates": {
+          "nodes": 59,
+          "hits": 1423,
+          "traceEntries": 479,
+          "macros": 30,
+          "fs": 14
+        },
+        "previousSeedCertificates": {
+          "nodes": 46,
+          "hits": 688,
+          "traceEntries": 276,
+          "macros": 23,
+          "fs": 16
+        },
+        "path": "Qtrim, trim13, expose10row2, [1], trim14, truncate2, [2], expose7row2, [1], trim17; [4c-1], inherit entire14"
+      },
+      "initializationTrace": [
+        {
+          "kind": "budget",
+          "count": 1,
+          "width": 45
+        },
+        {
+          "kind": "weak-archive-initial-layer",
+          "level": 0,
+          "points": [
+            7,
+            11,
+            12,
+            13
+          ],
+          "parent": [
+            107,
+            111,
+            112,
+            113,
+            136
+          ],
+          "width": 189
+        }
+      ],
+      "banks": [
+        {
+          "id": 1,
+          "level": 0,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^ω)",
+          "points": [
+            3498,
+            3502,
+            3503,
+            3647
+          ]
+        },
+        {
+          "id": 2,
+          "level": 0,
+          "label": "()(1)",
+          "points": [
+            2571,
+            3212
+          ]
+        },
+        {
+          "id": 4,
+          "level": 0,
+          "label": "()",
+          "points": [
+            1291
+          ]
+        },
+        {
+          "id": 0,
+          "level": 1,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^()(1^ω))",
+          "points": [
+            6816,
+            6820,
+            6821,
+            6859
+          ]
+        },
+        {
+          "id": 3,
+          "level": 1,
+          "label": "()(1^ω)",
+          "points": [
+            6660,
+            6765
+          ]
+        },
+        {
+          "id": 5,
+          "level": 1,
+          "label": "()(1)",
+          "points": [
+            5827,
+            6452
+          ]
+        },
+        {
+          "id": 6,
+          "level": 1,
+          "label": "()",
+          "points": [
+            4786
+          ]
+        }
+      ],
+      "trace": [
+        {
+          "kind": "budget",
+          "count": 2,
+          "width": 161
+        },
+        {
+          "kind": "ceiling",
+          "level": 0,
+          "node": 2,
+          "n": 0,
+          "needed": 3,
+          "childCopy": 0,
+          "background": 2,
+          "width": 864
+        },
+        {
+          "kind": "ceiling",
+          "level": 1,
+          "node": 3,
+          "n": 0,
+          "needed": 15,
+          "childCopy": 0,
+          "background": 2,
+          "width": 699
+        },
+        {
+          "kind": "budget",
+          "count": 2,
+          "width": 653
+        },
+        {
+          "kind": "row-delete",
+          "level": 0,
+          "parent": 2,
+          "node": 4,
+          "n": 0,
+          "row": 2,
+          "cut": 11,
+          "blocks": 2,
+          "label": "()",
+          "parentBefore": [
+            11,
+            12
+          ],
+          "width": 5123
+        },
+        {
+          "kind": "row-limit",
+          "level": 1,
+          "parent": 3,
+          "node": 5,
+          "n": 0,
+          "row": 1295,
+          "cut": 3745,
+          "blocks": 2,
+          "label": "()(1)",
+          "parentBefore": [
+            3745,
+            3746
+          ],
+          "width": 4571
+        },
+        {
+          "kind": "budget",
+          "count": 1,
+          "width": 4371
+        },
+        {
+          "kind": "row-delete",
+          "level": 1,
+          "parent": 5,
+          "node": 6,
+          "n": 0,
+          "row": 2,
+          "cut": 3745,
+          "blocks": 2,
+          "label": "()",
+          "parentBefore": [
+            3745,
+            3953
+          ],
+          "width": 7903
+        }
+      ],
+      "stats": {
+        "checks": 40,
+        "pairs": 82,
+        "ports": 572,
+        "sourceSteps": 6,
+        "budgets": 4,
+        "maxBudget": 2,
+        "calls": 6,
+        "allocations": 5,
+        "ordinaryRowSteps": 0,
+        "deletedRowSteps": 2,
+        "keptSmallerBanks": 0,
+        "strictSubcovariances": 0,
+        "topDowns": 16,
+        "maxWidth": 7903,
+        "maxNodes": 7,
+        "mainUnits": 1,
+        "mainLimits": 3,
+        "mainDeletes": 2,
+        "ceilingAllocations": 2,
+        "recursiveRowLimits": 1
+      },
+      "sparseStats": {
+        "nativeFS": 20,
+        "zeroSteps": 2980,
+        "downMacroEndpoints": 597,
+        "truncationMacroEndpoints": 528,
+        "smallListDifferentials": 85,
+        "smallCapDifferentials": 156,
+        "maxSegments": 8469,
+        "maxWidth": 7908
+      },
+      "limits": {
+        "ms": 20000,
+        "rssMiB": 650,
+        "width": 160000,
+        "downTransientWidth": 320000,
+        "events": 200000,
+        "pairs": 4000000,
+        "nodes": 160,
+        "sourceWidth": 22,
+        "steps": 30,
+        "navigation": 1800,
+        "index": 32,
+        "wordLength": 100,
+        "nativeWidth": 90,
+        "rows": 400,
+        "rowWidth": 80,
+        "routeSteps": 160,
+        "plan": 80
+      },
+      "elapsedMs": 382,
+      "rssMiB": 216.8203125
+    },
+    {
+      "caseIndex": "2",
+      "test": {
+        "name": "retained high source across main copy",
+        "levels": 2,
+        "c": 3,
+        "path": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "finiteTestsOnly": true,
+      "proofDocument": "WEAK-ARCHIVE-SEED.zh-CN.md",
+      "status": "bounded one-port contract passed",
+      "error": null,
+      "strictHigherDemand": null,
+      "originalSHA256": "2167705cd24ad2ba0cfa66d8c28adde364692bb50823d493e704b6bfd96c6120",
+      "path": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "source": "()(1^()(1^()(1^ω)))(1^()(1^()(1^ω)))",
+      "width": 9849,
+      "phase": "cold",
+      "slots": [],
+      "rowRoot": "()(1^()(1^ω))",
+      "mode": "weak-ceiling-archive-paper-interface",
+      "seedAudit": {
+        "WIndex": 1,
+        "r": 7,
+        "background": 2,
+        "columns": 4,
+        "events": 52,
+        "port": 1,
+        "extraArchive": true,
+        "ceilingArchivePort": 1,
+        "archiveAudit": [
+          {
+            "e": 13,
+            "root": 2,
+            "u": 1,
+            "v": 1
+          },
+          {
+            "e": 14,
+            "root": 2,
+            "u": 1,
+            "v": 1
+          }
+        ],
+        "previousCounts": "1,2,4,8,4,1,2,9,38,4,12,42,73,105,106,113,150",
+        "commonCounts": "1,2,4,8,4,1,2,9,38,4,12,42,44,46,47,54,91",
+        "certificates": {
+          "nodes": 71,
+          "hits": 2107,
+          "traceEntries": 615,
+          "macros": 38,
+          "fs": 14
+        },
+        "previousSeedCertificates": {
+          "nodes": 46,
+          "hits": 688,
+          "traceEntries": 276,
+          "macros": 23,
+          "fs": 16
+        },
+        "path": "Qtrim, trim13, expose10row2, [1], trim14, truncate2, [2], expose7row2, [1], trim17; [4c-1], inherit entire14"
+      },
+      "initializationTrace": [
+        {
+          "kind": "budget",
+          "count": 1,
+          "width": 57
+        },
+        {
+          "kind": "weak-archive-initial-layer",
+          "level": 0,
+          "points": [
+            7,
+            11,
+            12,
+            13
+          ],
+          "parent": [
+            139,
+            143,
+            144,
+            145,
+            176
+          ],
+          "width": 245
+        }
+      ],
+      "banks": [
+        {
+          "id": 1,
+          "level": 0,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^ω)",
+          "points": [
+            4842,
+            4846,
+            4847,
+            5043
+          ]
+        },
+        {
+          "id": 2,
+          "level": 0,
+          "label": "()(1)",
+          "points": [
+            3563,
+            4452
+          ]
+        },
+        {
+          "id": 4,
+          "level": 0,
+          "label": "()",
+          "points": [
+            1787
+          ]
+        },
+        {
+          "id": 0,
+          "level": 1,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^()(1^ω))",
+          "points": [
+            9776,
+            9780,
+            9781,
+            9835
+          ]
+        },
+        {
+          "id": 3,
+          "level": 1,
+          "label": "()(1^ω)",
+          "points": [
+            9544,
+            9701
+          ]
+        },
+        {
+          "id": 5,
+          "level": 1,
+          "label": "()(1)",
+          "points": [
+            8295,
+            9232
+          ]
+        },
+        {
+          "id": 6,
+          "level": 1,
+          "label": "()",
+          "points": [
+            6734
+          ]
+        }
+      ],
+      "trace": [
+        {
+          "kind": "budget",
+          "count": 2,
+          "width": 217
+        },
+        {
+          "kind": "ceiling",
+          "level": 0,
+          "node": 2,
+          "n": 0,
+          "needed": 3,
+          "childCopy": 0,
+          "background": 2,
+          "width": 1164
+        },
+        {
+          "kind": "ceiling",
+          "level": 1,
+          "node": 3,
+          "n": 0,
+          "needed": 15,
+          "childCopy": 0,
+          "background": 2,
+          "width": 951
+        },
+        {
+          "kind": "budget",
+          "count": 2,
+          "width": 909
+        },
+        {
+          "kind": "row-delete",
+          "level": 0,
+          "parent": 2,
+          "node": 4,
+          "n": 0,
+          "row": 2,
+          "cut": 11,
+          "blocks": 2,
+          "label": "()",
+          "parentBefore": [
+            11,
+            12
+          ],
+          "width": 7087
+        },
+        {
+          "kind": "row-limit",
+          "level": 1,
+          "parent": 3,
+          "node": 5,
+          "n": 0,
+          "row": 1791,
+          "cut": 5173,
+          "blocks": 2,
+          "label": "()(1)",
+          "parentBefore": [
+            5173,
+            5174
+          ],
+          "width": 6403
+        },
+        {
+          "kind": "budget",
+          "count": 1,
+          "width": 6119
+        },
+        {
+          "kind": "row-delete",
+          "level": 1,
+          "parent": 5,
+          "node": 6,
+          "n": 0,
+          "row": 2,
+          "cut": 5173,
+          "blocks": 2,
+          "label": "()",
+          "parentBefore": [
+            5173,
+            5485
+          ],
+          "width": 11399
+        }
+      ],
+      "stats": {
+        "checks": 36,
+        "pairs": 73,
+        "ports": 524,
+        "sourceSteps": 4,
+        "budgets": 4,
+        "maxBudget": 2,
+        "calls": 6,
+        "allocations": 5,
+        "ordinaryRowSteps": 0,
+        "deletedRowSteps": 2,
+        "keptSmallerBanks": 0,
+        "strictSubcovariances": 0,
+        "topDowns": 32,
+        "maxWidth": 11399,
+        "maxNodes": 7,
+        "mainUnits": 1,
+        "mainLimits": 3,
+        "mainDeletes": 0,
+        "ceilingAllocations": 2,
+        "recursiveRowLimits": 1
+      },
+      "sparseStats": {
+        "nativeFS": 20,
+        "zeroSteps": 4298,
+        "downMacroEndpoints": 837,
+        "truncationMacroEndpoints": 754,
+        "smallListDifferentials": 117,
+        "smallCapDifferentials": 216,
+        "maxSegments": 12072,
+        "maxWidth": 11416
+      },
+      "limits": {
+        "ms": 20000,
+        "rssMiB": 650,
+        "width": 160000,
+        "downTransientWidth": 320000,
+        "events": 200000,
+        "pairs": 4000000,
+        "nodes": 160,
+        "sourceWidth": 22,
+        "steps": 30,
+        "navigation": 1800,
+        "index": 32,
+        "wordLength": 100,
+        "nativeWidth": 90,
+        "rows": 400,
+        "rowWidth": 80,
+        "routeSteps": 160,
+        "plan": 80
+      },
+      "elapsedMs": 533,
+      "rssMiB": 219.25
+    },
+    {
+      "caseIndex": "3",
+      "test": {
+        "name": "high source reused after low main work",
+        "levels": 2,
+        "c": 3,
+        "path": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ]
+      },
+      "finiteTestsOnly": true,
+      "proofDocument": "WEAK-ARCHIVE-SEED.zh-CN.md",
+      "status": "bounded one-port contract passed",
+      "error": null,
+      "strictHigherDemand": null,
+      "originalSHA256": "2167705cd24ad2ba0cfa66d8c28adde364692bb50823d493e704b6bfd96c6120",
+      "path": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "source": "()(1^()(1^()(1^ω)))(1^()(1,1))",
+      "width": 39682,
+      "phase": "cold",
+      "slots": [],
+      "rowRoot": "()(1^()(1^ω))",
+      "mode": "weak-ceiling-archive-paper-interface",
+      "seedAudit": {
+        "WIndex": 1,
+        "r": 7,
+        "background": 2,
+        "columns": 4,
+        "events": 52,
+        "port": 1,
+        "extraArchive": true,
+        "ceilingArchivePort": 1,
+        "archiveAudit": [
+          {
+            "e": 13,
+            "root": 2,
+            "u": 1,
+            "v": 1
+          },
+          {
+            "e": 14,
+            "root": 2,
+            "u": 1,
+            "v": 1
+          }
+        ],
+        "previousCounts": "1,2,4,8,4,1,2,9,38,4,12,42,73,105,106,113,150",
+        "commonCounts": "1,2,4,8,4,1,2,9,38,4,12,42,44,46,47,54,91",
+        "certificates": {
+          "nodes": 71,
+          "hits": 2107,
+          "traceEntries": 615,
+          "macros": 38,
+          "fs": 14
+        },
+        "previousSeedCertificates": {
+          "nodes": 46,
+          "hits": 688,
+          "traceEntries": 276,
+          "macros": 23,
+          "fs": 16
+        },
+        "path": "Qtrim, trim13, expose10row2, [1], trim14, truncate2, [2], expose7row2, [1], trim17; [4c-1], inherit entire14"
+      },
+      "initializationTrace": [
+        {
+          "kind": "budget",
+          "count": 1,
+          "width": 57
+        },
+        {
+          "kind": "weak-archive-initial-layer",
+          "level": 0,
+          "points": [
+            7,
+            11,
+            12,
+            13
+          ],
+          "parent": [
+            139,
+            143,
+            144,
+            145,
+            176
+          ],
+          "width": 245
+        }
+      ],
+      "banks": [
+        {
+          "id": 1,
+          "level": 0,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^ω)",
+          "points": [
+            33618,
+            33622,
+            33623,
+            33819
+          ]
+        },
+        {
+          "id": 2,
+          "level": 0,
+          "label": "()(1)",
+          "points": [
+            26939,
+            33228
+          ]
+        },
+        {
+          "id": 4,
+          "level": 0,
+          "label": "()",
+          "points": [
+            1787
+          ]
+        },
+        {
+          "id": 7,
+          "level": 0,
+          "label": "()()",
+          "points": [
+            3563,
+            15251
+          ]
+        },
+        {
+          "id": 0,
+          "level": 1,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^()(1^ω))",
+          "points": [
+            39609,
+            39613,
+            39614,
+            39668
+          ]
+        },
+        {
+          "id": 3,
+          "level": 1,
+          "label": "()(1^ω)",
+          "points": [
+            39228,
+            39534
+          ]
+        },
+        {
+          "id": 5,
+          "level": 1,
+          "label": "()(1)",
+          "points": [
+            37071,
+            38008
+          ]
+        },
+        {
+          "id": 6,
+          "level": 1,
+          "label": "()",
+          "points": [
+            35510
+          ]
+        },
+        {
+          "id": 8,
+          "level": 1,
+          "label": "()(1,1)",
+          "points": [
+            38320,
+            38774
+          ]
+        }
+      ],
+      "trace": [
+        {
+          "kind": "budget",
+          "count": 2,
+          "width": 217
+        },
+        {
+          "kind": "ceiling",
+          "level": 0,
+          "node": 2,
+          "n": 0,
+          "needed": 3,
+          "childCopy": 0,
+          "background": 2,
+          "width": 1164
+        },
+        {
+          "kind": "ceiling",
+          "level": 1,
+          "node": 3,
+          "n": 0,
+          "needed": 15,
+          "childCopy": 0,
+          "background": 2,
+          "width": 951
+        },
+        {
+          "kind": "budget",
+          "count": 2,
+          "width": 909
+        },
+        {
+          "kind": "row-delete",
+          "level": 0,
+          "parent": 2,
+          "node": 4,
+          "n": 0,
+          "row": 2,
+          "cut": 11,
+          "blocks": 2,
+          "label": "()",
+          "parentBefore": [
+            11,
+            12
+          ],
+          "width": 7087
+        },
+        {
+          "kind": "row-limit",
+          "level": 1,
+          "parent": 3,
+          "node": 5,
+          "n": 0,
+          "row": 1791,
+          "cut": 5173,
+          "blocks": 2,
+          "label": "()(1)",
+          "parentBefore": [
+            5173,
+            5174
+          ],
+          "width": 6403
+        },
+        {
+          "kind": "budget",
+          "count": 1,
+          "width": 6119
+        },
+        {
+          "kind": "row-delete",
+          "level": 1,
+          "parent": 5,
+          "node": 6,
+          "n": 0,
+          "row": 2,
+          "cut": 5173,
+          "blocks": 2,
+          "label": "()",
+          "parentBefore": [
+            5173,
+            5485
+          ],
+          "width": 11399
+        },
+        {
+          "kind": "budget",
+          "count": 2,
+          "width": 9853
+        },
+        {
+          "kind": "row-unit",
+          "level": 0,
+          "parent": 2,
+          "node": 7,
+          "n": 1,
+          "row": 3,
+          "cut": 3563,
+          "blocks": 2,
+          "label": "()()",
+          "parentBefore": [
+            3563,
+            4452
+          ],
+          "width": 50302
+        },
+        {
+          "kind": "row-limit",
+          "level": 1,
+          "parent": 3,
+          "node": 8,
+          "n": 1,
+          "row": 15255,
+          "cut": 38320,
+          "blocks": 2,
+          "label": "()(1,1)",
+          "parentBefore": [
+            38320,
+            38477
+          ],
+          "width": 40125
+        }
+      ],
+      "stats": {
+        "checks": 48,
+        "pairs": 122,
+        "ports": 832,
+        "sourceSteps": 6,
+        "budgets": 5,
+        "maxBudget": 2,
+        "calls": 8,
+        "allocations": 7,
+        "ordinaryRowSteps": 1,
+        "deletedRowSteps": 2,
+        "keptSmallerBanks": 3,
+        "strictSubcovariances": 0,
+        "topDowns": 33,
+        "maxWidth": 50302,
+        "maxNodes": 9,
+        "mainUnits": 1,
+        "mainLimits": 5,
+        "mainDeletes": 0,
+        "ceilingAllocations": 2,
+        "recursiveRowLimits": 2
+      },
+      "sparseStats": {
+        "nativeFS": 27,
+        "zeroSteps": 16457,
+        "downMacroEndpoints": 1089,
+        "truncationMacroEndpoints": 984,
+        "smallListDifferentials": 117,
+        "smallCapDifferentials": 216,
+        "maxSegments": 53349,
+        "maxWidth": 50314
+      },
+      "limits": {
+        "ms": 20000,
+        "rssMiB": 650,
+        "width": 160000,
+        "downTransientWidth": 320000,
+        "events": 200000,
+        "pairs": 4000000,
+        "nodes": 160,
+        "sourceWidth": 22,
+        "steps": 30,
+        "navigation": 1800,
+        "index": 32,
+        "wordLength": 100,
+        "nativeWidth": 90,
+        "rows": 400,
+        "rowWidth": 80,
+        "routeSteps": 160,
+        "plan": 80
+      },
+      "elapsedMs": 2863,
+      "rssMiB": 339.3984375
+    },
+    {
+      "caseIndex": "4",
+      "test": {
+        "name": "nonzero recursive refinements",
+        "levels": 2,
+        "c": 2,
+        "path": [
+          1,
+          1,
+          0
+        ]
+      },
+      "finiteTestsOnly": true,
+      "proofDocument": "WEAK-ARCHIVE-SEED.zh-CN.md",
+      "status": "bounded one-port contract passed",
+      "error": null,
+      "strictHigherDemand": null,
+      "originalSHA256": "2167705cd24ad2ba0cfa66d8c28adde364692bb50823d493e704b6bfd96c6120",
+      "path": [
+        1,
+        1,
+        0
+      ],
+      "source": "()(1^ω)",
+      "width": 24831,
+      "phase": "cold",
+      "slots": [],
+      "rowRoot": "()(1^()(1^ω))",
+      "mode": "weak-ceiling-archive-paper-interface",
+      "seedAudit": {
+        "WIndex": 1,
+        "r": 7,
+        "background": 2,
+        "columns": 3,
+        "events": 44,
+        "port": 1,
+        "extraArchive": true,
+        "ceilingArchivePort": 1,
+        "archiveAudit": [
+          {
+            "e": 13,
+            "root": 2,
+            "u": 1,
+            "v": 1
+          },
+          {
+            "e": 14,
+            "root": 2,
+            "u": 1,
+            "v": 1
+          }
+        ],
+        "previousCounts": "1,2,4,8,4,1,2,9,38,4,12,42,73,105,106,113,150",
+        "commonCounts": "1,2,4,8,4,1,2,9,38,4,12,42,44,46,47,54,91",
+        "certificates": {
+          "nodes": 59,
+          "hits": 1423,
+          "traceEntries": 479,
+          "macros": 30,
+          "fs": 14
+        },
+        "previousSeedCertificates": {
+          "nodes": 46,
+          "hits": 688,
+          "traceEntries": 276,
+          "macros": 23,
+          "fs": 16
+        },
+        "path": "Qtrim, trim13, expose10row2, [1], trim14, truncate2, [2], expose7row2, [1], trim17; [4c-1], inherit entire14"
+      },
+      "initializationTrace": [
+        {
+          "kind": "budget",
+          "count": 1,
+          "width": 45
+        },
+        {
+          "kind": "weak-archive-initial-layer",
+          "level": 0,
+          "points": [
+            7,
+            11,
+            12,
+            13
+          ],
+          "parent": [
+            107,
+            111,
+            112,
+            113,
+            136
+          ],
+          "width": 189
+        }
+      ],
+      "banks": [
+        {
+          "id": 1,
+          "level": 0,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^ω)",
+          "points": [
+            21461,
+            21465,
+            21466,
+            21610
+          ]
+        },
+        {
+          "id": 2,
+          "level": 0,
+          "label": "()(1,1)",
+          "points": [
+            20534,
+            21175
+          ]
+        },
+        {
+          "id": 4,
+          "level": 0,
+          "label": "()(1)",
+          "points": [
+            14893,
+            19254
+          ]
+        },
+        {
+          "id": 6,
+          "level": 0,
+          "label": "()",
+          "points": [
+            7452
+          ]
+        },
+        {
+          "id": 0,
+          "level": 1,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^()(1^ω))",
+          "points": [
+            24779,
+            24783,
+            24784,
+            24822
+          ]
+        },
+        {
+          "id": 3,
+          "level": 1,
+          "label": "()(1^()(1,1))",
+          "points": [
+            24623,
+            24728
+          ]
+        },
+        {
+          "id": 5,
+          "level": 1,
+          "label": "()(1^ω)",
+          "points": [
+            23790,
+            24415
+          ]
+        },
+        {
+          "id": 7,
+          "level": 1,
+          "label": "()(1)",
+          "points": [
+            21708,
+            22749
+          ]
+        }
+      ],
+      "trace": [
+        {
+          "kind": "budget",
+          "count": 2,
+          "width": 161
+        },
+        {
+          "kind": "ceiling",
+          "level": 0,
+          "node": 2,
+          "n": 1,
+          "needed": 4,
+          "childCopy": 0,
+          "background": 2,
+          "width": 864
+        },
+        {
+          "kind": "ceiling",
+          "level": 1,
+          "node": 3,
+          "n": 1,
+          "needed": 15,
+          "childCopy": 0,
+          "background": 2,
+          "width": 699
+        },
+        {
+          "kind": "budget",
+          "count": 2,
+          "width": 653
+        },
+        {
+          "kind": "row-unit",
+          "level": 0,
+          "parent": 2,
+          "node": 4,
+          "n": 1,
+          "row": 4,
+          "cut": 11,
+          "blocks": 2,
+          "label": "()(1)",
+          "parentBefore": [
+            11,
+            12
+          ],
+          "width": 5123
+        },
+        {
+          "kind": "row-limit",
+          "level": 1,
+          "parent": 3,
+          "node": 5,
+          "n": 1,
+          "row": 1295,
+          "cut": 3745,
+          "blocks": 2,
+          "label": "()(1^ω)",
+          "parentBefore": [
+            3745,
+            3746
+          ],
+          "width": 4571
+        },
+        {
+          "kind": "budget",
+          "count": 2,
+          "width": 4373
+        },
+        {
+          "kind": "row-delete",
+          "level": 0,
+          "parent": 4,
+          "node": 6,
+          "n": 0,
+          "row": 2,
+          "cut": 11,
+          "blocks": 2,
+          "label": "()",
+          "parentBefore": [
+            11,
+            1291
+          ],
+          "width": 29767
+        },
+        {
+          "kind": "row-limit",
+          "level": 1,
+          "parent": 5,
+          "node": 7,
+          "n": 0,
+          "row": 7456,
+          "cut": 21708,
+          "blocks": 2,
+          "label": "()(1)",
+          "parentBefore": [
+            21708,
+            21916
+          ],
+          "width": 25866
+        }
+      ],
+      "stats": {
+        "checks": 37,
+        "pairs": 98,
+        "ports": 623,
+        "sourceSteps": 3,
+        "budgets": 4,
+        "maxBudget": 2,
+        "calls": 7,
+        "allocations": 6,
+        "ordinaryRowSteps": 1,
+        "deletedRowSteps": 1,
+        "keptSmallerBanks": 0,
+        "strictSubcovariances": 0,
+        "topDowns": 16,
+        "maxWidth": 29767,
+        "maxNodes": 8,
+        "mainUnits": 0,
+        "mainLimits": 3,
+        "mainDeletes": 0,
+        "ceilingAllocations": 2,
+        "recursiveRowLimits": 2
+      },
+      "sparseStats": {
+        "nativeFS": 21,
+        "zeroSteps": 10412,
+        "downMacroEndpoints": 661,
+        "truncationMacroEndpoints": 582,
+        "smallListDifferentials": 85,
+        "smallCapDifferentials": 156,
+        "maxSegments": 31751,
+        "maxWidth": 29774
+      },
+      "limits": {
+        "ms": 20000,
+        "rssMiB": 650,
+        "width": 160000,
+        "downTransientWidth": 320000,
+        "events": 200000,
+        "pairs": 4000000,
+        "nodes": 160,
+        "sourceWidth": 22,
+        "steps": 30,
+        "navigation": 1800,
+        "index": 32,
+        "wordLength": 100,
+        "nativeWidth": 90,
+        "rows": 400,
+        "rowWidth": 80,
+        "routeSteps": 160,
+        "plan": 80
+      },
+      "elapsedMs": 1591,
+      "rssMiB": 307.69921875
+    },
+    {
+      "caseIndex": "5",
+      "test": {
+        "name": "three layers lower-code updates",
+        "levels": 3,
+        "c": 2,
+        "path": [
+          0,
+          0
+        ]
+      },
+      "finiteTestsOnly": true,
+      "proofDocument": "WEAK-ARCHIVE-SEED.zh-CN.md",
+      "status": "bounded one-port contract passed",
+      "error": null,
+      "strictHigherDemand": null,
+      "originalSHA256": "2167705cd24ad2ba0cfa66d8c28adde364692bb50823d493e704b6bfd96c6120",
+      "path": [
+        0,
+        0
+      ],
+      "source": "()(1^()(1^ω))",
+      "width": 20275,
+      "phase": "cold",
+      "slots": [],
+      "rowRoot": "()(1^()(1^()(1^ω)))",
+      "mode": "weak-ceiling-archive-paper-interface",
+      "seedAudit": {
+        "WIndex": 1,
+        "r": 7,
+        "background": 2,
+        "columns": 3,
+        "events": 44,
+        "port": 1,
+        "extraArchive": true,
+        "ceilingArchivePort": 1,
+        "archiveAudit": [
+          {
+            "e": 13,
+            "root": 2,
+            "u": 1,
+            "v": 1
+          },
+          {
+            "e": 14,
+            "root": 2,
+            "u": 1,
+            "v": 1
+          }
+        ],
+        "previousCounts": "1,2,4,8,4,1,2,9,38,4,12,42,73,105,106,113,150",
+        "commonCounts": "1,2,4,8,4,1,2,9,38,4,12,42,44,46,47,54,91",
+        "certificates": {
+          "nodes": 59,
+          "hits": 1423,
+          "traceEntries": 479,
+          "macros": 30,
+          "fs": 14
+        },
+        "previousSeedCertificates": {
+          "nodes": 46,
+          "hits": 688,
+          "traceEntries": 276,
+          "macros": 23,
+          "fs": 16
+        },
+        "path": "Qtrim, trim13, expose10row2, [1], trim14, truncate2, [2], expose7row2, [1], trim17; [4c-1], inherit entire14"
+      },
+      "initializationTrace": [
+        {
+          "kind": "budget",
+          "count": 2,
+          "width": 55
+        },
+        {
+          "kind": "weak-archive-initial-layer",
+          "level": 0,
+          "points": [
+            7,
+            11,
+            12,
+            13
+          ],
+          "parent": [
+            147,
+            151,
+            152,
+            153,
+            186
+          ],
+          "width": 259
+        },
+        {
+          "kind": "weak-archive-initial-layer",
+          "level": 1,
+          "points": [
+            147,
+            151,
+            152,
+            153
+          ],
+          "parent": [
+            311,
+            315,
+            316,
+            317,
+            372
+          ],
+          "width": 457
+        }
+      ],
+      "banks": [
+        {
+          "id": 1,
+          "level": 0,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^ω)",
+          "points": [
+            12572,
+            12576,
+            12577,
+            12963
+          ]
+        },
+        {
+          "id": 3,
+          "level": 0,
+          "label": "()(1)",
+          "points": [
+            9443,
+            11802
+          ]
+        },
+        {
+          "id": 6,
+          "level": 0,
+          "label": "()",
+          "points": [
+            4727
+          ]
+        },
+        {
+          "id": 2,
+          "level": 1,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^()(1^ω))",
+          "points": [
+            18860,
+            18864,
+            18865,
+            19105
+          ]
+        },
+        {
+          "id": 4,
+          "level": 1,
+          "label": "()(1^ω)",
+          "points": [
+            17325,
+            18382
+          ]
+        },
+        {
+          "id": 7,
+          "level": 1,
+          "label": "()(1)",
+          "points": [
+            13101,
+            15213
+          ]
+        },
+        {
+          "id": 0,
+          "level": 2,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^()(1^()(1^ω)))",
+          "points": [
+            20191,
+            20195,
+            20196,
+            20266
+          ]
+        },
+        {
+          "id": 5,
+          "level": 2,
+          "label": "()(1^()(1^ω))",
+          "points": [
+            19939,
+            20108
+          ]
+        },
+        {
+          "id": 8,
+          "level": 2,
+          "label": "()(1^ω)",
+          "points": [
+            19267,
+            19603
+          ]
+        }
+      ],
+      "trace": [
+        {
+          "kind": "budget",
+          "count": 3,
+          "width": 403
+        },
+        {
+          "kind": "ceiling",
+          "level": 0,
+          "node": 3,
+          "n": 0,
+          "needed": 3,
+          "childCopy": 0,
+          "background": 2,
+          "width": 2310
+        },
+        {
+          "kind": "ceiling",
+          "level": 1,
+          "node": 4,
+          "n": 0,
+          "needed": 15,
+          "childCopy": 0,
+          "background": 2,
+          "width": 2740
+        },
+        {
+          "kind": "ceiling",
+          "level": 2,
+          "node": 5,
+          "n": 0,
+          "needed": 1315,
+          "childCopy": 0,
+          "background": 2,
+          "width": 2447
+        },
+        {
+          "kind": "budget",
+          "count": 3,
+          "width": 2371
+        },
+        {
+          "kind": "row-delete",
+          "level": 0,
+          "parent": 3,
+          "node": 6,
+          "n": 0,
+          "row": 2,
+          "cut": 11,
+          "blocks": 2,
+          "label": "()",
+          "parentBefore": [
+            11,
+            12
+          ],
+          "width": 18865
+        },
+        {
+          "kind": "row-limit",
+          "level": 1,
+          "parent": 4,
+          "node": 7,
+          "n": 0,
+          "row": 4731,
+          "cut": 13101,
+          "blocks": 2,
+          "label": "()(1)",
+          "parentBefore": [
+            13101,
+            13102
+          ],
+          "width": 21541
+        },
+        {
+          "kind": "row-limit",
+          "level": 2,
+          "parent": 5,
+          "node": 8,
+          "n": 0,
+          "row": 15217,
+          "cut": 19267,
+          "blocks": 2,
+          "label": "()(1^ω)",
+          "parentBefore": [
+            19267,
+            19268
+          ],
+          "width": 20605
+        }
+      ],
+      "stats": {
+        "checks": 36,
+        "pairs": 78,
+        "ports": 843,
+        "sourceSteps": 2,
+        "budgets": 3,
+        "maxBudget": 3,
+        "calls": 8,
+        "allocations": 6,
+        "ordinaryRowSteps": 0,
+        "deletedRowSteps": 1,
+        "keptSmallerBanks": 0,
+        "strictSubcovariances": 0,
+        "topDowns": 15,
+        "maxWidth": 21541,
+        "maxNodes": 9,
+        "mainUnits": 0,
+        "mainLimits": 2,
+        "mainDeletes": 0,
+        "ceilingAllocations": 3,
+        "recursiveRowLimits": 2
+      },
+      "sparseStats": {
+        "nativeFS": 21,
+        "zeroSteps": 8715,
+        "downMacroEndpoints": 822,
+        "truncationMacroEndpoints": 721,
+        "smallListDifferentials": 115,
+        "smallCapDifferentials": 216,
+        "maxSegments": 22610,
+        "maxWidth": 21548
+      },
+      "limits": {
+        "ms": 20000,
+        "rssMiB": 650,
+        "width": 160000,
+        "downTransientWidth": 320000,
+        "events": 200000,
+        "pairs": 4000000,
+        "nodes": 160,
+        "sourceWidth": 22,
+        "steps": 30,
+        "navigation": 1800,
+        "index": 32,
+        "wordLength": 100,
+        "nativeWidth": 90,
+        "rows": 400,
+        "rowWidth": 80,
+        "routeSteps": 160,
+        "plan": 80
+      },
+      "elapsedMs": 1376,
+      "rssMiB": 301.5234375
+    },
+    {
+      "caseIndex": "6",
+      "test": {
+        "name": "three layers nonzero first index",
+        "levels": 3,
+        "c": 2,
+        "path": [
+          1,
+          0
+        ]
+      },
+      "finiteTestsOnly": true,
+      "proofDocument": "WEAK-ARCHIVE-SEED.zh-CN.md",
+      "status": "bounded one-port contract passed",
+      "error": null,
+      "strictHigherDemand": null,
+      "originalSHA256": "2167705cd24ad2ba0cfa66d8c28adde364692bb50823d493e704b6bfd96c6120",
+      "path": [
+        1,
+        0
+      ],
+      "source": "()(1^()(1^ω))",
+      "width": 20275,
+      "phase": "cold",
+      "slots": [],
+      "rowRoot": "()(1^()(1^()(1^ω)))",
+      "mode": "weak-ceiling-archive-paper-interface",
+      "seedAudit": {
+        "WIndex": 1,
+        "r": 7,
+        "background": 2,
+        "columns": 3,
+        "events": 44,
+        "port": 1,
+        "extraArchive": true,
+        "ceilingArchivePort": 1,
+        "archiveAudit": [
+          {
+            "e": 13,
+            "root": 2,
+            "u": 1,
+            "v": 1
+          },
+          {
+            "e": 14,
+            "root": 2,
+            "u": 1,
+            "v": 1
+          }
+        ],
+        "previousCounts": "1,2,4,8,4,1,2,9,38,4,12,42,73,105,106,113,150",
+        "commonCounts": "1,2,4,8,4,1,2,9,38,4,12,42,44,46,47,54,91",
+        "certificates": {
+          "nodes": 59,
+          "hits": 1423,
+          "traceEntries": 479,
+          "macros": 30,
+          "fs": 14
+        },
+        "previousSeedCertificates": {
+          "nodes": 46,
+          "hits": 688,
+          "traceEntries": 276,
+          "macros": 23,
+          "fs": 16
+        },
+        "path": "Qtrim, trim13, expose10row2, [1], trim14, truncate2, [2], expose7row2, [1], trim17; [4c-1], inherit entire14"
+      },
+      "initializationTrace": [
+        {
+          "kind": "budget",
+          "count": 2,
+          "width": 55
+        },
+        {
+          "kind": "weak-archive-initial-layer",
+          "level": 0,
+          "points": [
+            7,
+            11,
+            12,
+            13
+          ],
+          "parent": [
+            147,
+            151,
+            152,
+            153,
+            186
+          ],
+          "width": 259
+        },
+        {
+          "kind": "weak-archive-initial-layer",
+          "level": 1,
+          "points": [
+            147,
+            151,
+            152,
+            153
+          ],
+          "parent": [
+            311,
+            315,
+            316,
+            317,
+            372
+          ],
+          "width": 457
+        }
+      ],
+      "banks": [
+        {
+          "id": 1,
+          "level": 0,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^ω)",
+          "points": [
+            12572,
+            12576,
+            12577,
+            12963
+          ]
+        },
+        {
+          "id": 3,
+          "level": 0,
+          "label": "()(1,1)",
+          "points": [
+            9443,
+            11802
+          ]
+        },
+        {
+          "id": 6,
+          "level": 0,
+          "label": "()",
+          "points": [
+            4727
+          ]
+        },
+        {
+          "id": 2,
+          "level": 1,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^()(1^ω))",
+          "points": [
+            18860,
+            18864,
+            18865,
+            19105
+          ]
+        },
+        {
+          "id": 4,
+          "level": 1,
+          "label": "()(1^()(1,1))",
+          "points": [
+            17325,
+            18382
+          ]
+        },
+        {
+          "id": 7,
+          "level": 1,
+          "label": "()(1)",
+          "points": [
+            13101,
+            15213
+          ]
+        },
+        {
+          "id": 0,
+          "level": 2,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^()(1^()(1^ω)))",
+          "points": [
+            20191,
+            20195,
+            20196,
+            20266
+          ]
+        },
+        {
+          "id": 5,
+          "level": 2,
+          "label": "()(1^()(1^()(1,1)))",
+          "points": [
+            19939,
+            20108
+          ]
+        },
+        {
+          "id": 8,
+          "level": 2,
+          "label": "()(1^ω)",
+          "points": [
+            19267,
+            19603
+          ]
+        }
+      ],
+      "trace": [
+        {
+          "kind": "budget",
+          "count": 3,
+          "width": 403
+        },
+        {
+          "kind": "ceiling",
+          "level": 0,
+          "node": 3,
+          "n": 1,
+          "needed": 4,
+          "childCopy": 0,
+          "background": 2,
+          "width": 2310
+        },
+        {
+          "kind": "ceiling",
+          "level": 1,
+          "node": 4,
+          "n": 1,
+          "needed": 15,
+          "childCopy": 0,
+          "background": 2,
+          "width": 2740
+        },
+        {
+          "kind": "ceiling",
+          "level": 2,
+          "node": 5,
+          "n": 1,
+          "needed": 1315,
+          "childCopy": 0,
+          "background": 2,
+          "width": 2447
+        },
+        {
+          "kind": "budget",
+          "count": 3,
+          "width": 2371
+        },
+        {
+          "kind": "row-delete",
+          "level": 0,
+          "parent": 3,
+          "node": 6,
+          "n": 0,
+          "row": 2,
+          "cut": 11,
+          "blocks": 2,
+          "label": "()",
+          "parentBefore": [
+            11,
+            12
+          ],
+          "width": 18865
+        },
+        {
+          "kind": "row-limit",
+          "level": 1,
+          "parent": 4,
+          "node": 7,
+          "n": 0,
+          "row": 4731,
+          "cut": 13101,
+          "blocks": 2,
+          "label": "()(1)",
+          "parentBefore": [
+            13101,
+            13102
+          ],
+          "width": 21541
+        },
+        {
+          "kind": "row-limit",
+          "level": 2,
+          "parent": 5,
+          "node": 8,
+          "n": 0,
+          "row": 15217,
+          "cut": 19267,
+          "blocks": 2,
+          "label": "()(1^ω)",
+          "parentBefore": [
+            19267,
+            19268
+          ],
+          "width": 20605
+        }
+      ],
+      "stats": {
+        "checks": 36,
+        "pairs": 78,
+        "ports": 843,
+        "sourceSteps": 2,
+        "budgets": 3,
+        "maxBudget": 3,
+        "calls": 8,
+        "allocations": 6,
+        "ordinaryRowSteps": 0,
+        "deletedRowSteps": 1,
+        "keptSmallerBanks": 0,
+        "strictSubcovariances": 0,
+        "topDowns": 15,
+        "maxWidth": 21541,
+        "maxNodes": 9,
+        "mainUnits": 0,
+        "mainLimits": 2,
+        "mainDeletes": 0,
+        "ceilingAllocations": 3,
+        "recursiveRowLimits": 2
+      },
+      "sparseStats": {
+        "nativeFS": 21,
+        "zeroSteps": 8715,
+        "downMacroEndpoints": 822,
+        "truncationMacroEndpoints": 721,
+        "smallListDifferentials": 115,
+        "smallCapDifferentials": 216,
+        "maxSegments": 22610,
+        "maxWidth": 21548
+      },
+      "limits": {
+        "ms": 20000,
+        "rssMiB": 650,
+        "width": 160000,
+        "downTransientWidth": 320000,
+        "events": 200000,
+        "pairs": 4000000,
+        "nodes": 160,
+        "sourceWidth": 22,
+        "steps": 30,
+        "navigation": 1800,
+        "index": 32,
+        "wordLength": 100,
+        "nativeWidth": 90,
+        "rows": 400,
+        "rowWidth": 80,
+        "routeSteps": 160,
+        "plan": 80
+      },
+      "elapsedMs": 1179,
+      "rssMiB": 300.15625
+    },
+    {
+      "caseIndex": "7",
+      "test": {
+        "name": "five same-background layers",
+        "levels": 5,
+        "c": 2,
+        "path": []
+      },
+      "finiteTestsOnly": true,
+      "proofDocument": "WEAK-ARCHIVE-SEED.zh-CN.md",
+      "status": "bounded one-port contract passed",
+      "error": null,
+      "strictHigherDemand": null,
+      "originalSHA256": "2167705cd24ad2ba0cfa66d8c28adde364692bb50823d493e704b6bfd96c6120",
+      "path": [],
+      "source": "()(1^()(1^()(1^()(1^()(1^()(1^ω))))))",
+      "width": 1355,
+      "phase": "cold",
+      "slots": [],
+      "rowRoot": "()(1^()(1^()(1^()(1^()(1^ω)))))",
+      "mode": "weak-ceiling-archive-paper-interface",
+      "seedAudit": {
+        "WIndex": 1,
+        "r": 7,
+        "background": 2,
+        "columns": 3,
+        "events": 44,
+        "port": 1,
+        "extraArchive": true,
+        "ceilingArchivePort": 1,
+        "archiveAudit": [
+          {
+            "e": 13,
+            "root": 2,
+            "u": 1,
+            "v": 1
+          },
+          {
+            "e": 14,
+            "root": 2,
+            "u": 1,
+            "v": 1
+          }
+        ],
+        "previousCounts": "1,2,4,8,4,1,2,9,38,4,12,42,73,105,106,113,150",
+        "commonCounts": "1,2,4,8,4,1,2,9,38,4,12,42,44,46,47,54,91",
+        "certificates": {
+          "nodes": 59,
+          "hits": 1423,
+          "traceEntries": 479,
+          "macros": 30,
+          "fs": 14
+        },
+        "previousSeedCertificates": {
+          "nodes": 46,
+          "hits": 688,
+          "traceEntries": 276,
+          "macros": 23,
+          "fs": 16
+        },
+        "path": "Qtrim, trim13, expose10row2, [1], trim14, truncate2, [2], expose7row2, [1], trim17; [4c-1], inherit entire14"
+      },
+      "initializationTrace": [
+        {
+          "kind": "budget",
+          "count": 4,
+          "width": 75
+        },
+        {
+          "kind": "weak-archive-initial-layer",
+          "level": 0,
+          "points": [
+            7,
+            11,
+            12,
+            13
+          ],
+          "parent": [
+            227,
+            231,
+            232,
+            233,
+            286
+          ],
+          "width": 399
+        },
+        {
+          "kind": "weak-archive-initial-layer",
+          "level": 1,
+          "points": [
+            227,
+            231,
+            232,
+            233
+          ],
+          "parent": [
+            511,
+            515,
+            516,
+            517,
+            612
+          ],
+          "width": 757
+        },
+        {
+          "kind": "weak-archive-initial-layer",
+          "level": 2,
+          "points": [
+            511,
+            515,
+            516,
+            517
+          ],
+          "parent": [
+            839,
+            843,
+            844,
+            845,
+            972
+          ],
+          "width": 1139
+        },
+        {
+          "kind": "weak-archive-initial-layer",
+          "level": 3,
+          "points": [
+            839,
+            843,
+            844,
+            845
+          ],
+          "parent": [
+            1191,
+            1195,
+            1196,
+            1197,
+            1346
+          ],
+          "width": 1525
+        }
+      ],
+      "banks": [
+        {
+          "id": 1,
+          "level": 0,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^ω)",
+          "points": [
+            7,
+            11,
+            12,
+            13
+          ]
+        },
+        {
+          "id": 2,
+          "level": 1,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^()(1^ω))",
+          "points": [
+            227,
+            231,
+            232,
+            233
+          ]
+        },
+        {
+          "id": 3,
+          "level": 2,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^()(1^()(1^ω)))",
+          "points": [
+            511,
+            515,
+            516,
+            517
+          ]
+        },
+        {
+          "id": 4,
+          "level": 3,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^()(1^()(1^()(1^ω))))",
+          "points": [
+            839,
+            843,
+            844,
+            845
+          ]
+        },
+        {
+          "id": 0,
+          "level": 4,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^()(1^()(1^()(1^()(1^ω)))))",
+          "points": [
+            1191,
+            1195,
+            1196,
+            1346
+          ]
+        }
+      ],
+      "trace": [],
+      "stats": {
+        "checks": 16,
+        "pairs": 0,
+        "ports": 283,
+        "sourceSteps": 0,
+        "budgets": 1,
+        "maxBudget": 4,
+        "calls": 4,
+        "allocations": 0,
+        "ordinaryRowSteps": 0,
+        "deletedRowSteps": 0,
+        "keptSmallerBanks": 0,
+        "strictSubcovariances": 0,
+        "topDowns": 9,
+        "maxWidth": 1525,
+        "maxNodes": 5,
+        "mainUnits": 0,
+        "mainLimits": 0,
+        "mainDeletes": 0
+      },
+      "sparseStats": {
+        "nativeFS": 9,
+        "zeroSteps": 637,
+        "downMacroEndpoints": 443,
+        "truncationMacroEndpoints": 412,
+        "smallListDifferentials": 123,
+        "smallCapDifferentials": 234,
+        "maxSegments": 1588,
+        "maxWidth": 1542
+      },
+      "limits": {
+        "ms": 20000,
+        "rssMiB": 650,
+        "width": 160000,
+        "downTransientWidth": 320000,
+        "events": 200000,
+        "pairs": 4000000,
+        "nodes": 160,
+        "sourceWidth": 22,
+        "steps": 30,
+        "navigation": 1800,
+        "index": 32,
+        "wordLength": 100,
+        "nativeWidth": 90,
+        "rows": 400,
+        "rowWidth": 80,
+        "routeSteps": 160,
+        "plan": 80
+      },
+      "elapsedMs": 196,
+      "rssMiB": 152.21875
+    },
+    {
+      "caseIndex": "8",
+      "test": {
+        "name": "twelve same-background layers",
+        "levels": 12,
+        "c": 2,
+        "path": []
+      },
+      "finiteTestsOnly": true,
+      "proofDocument": "WEAK-ARCHIVE-SEED.zh-CN.md",
+      "status": "bounded one-port contract passed",
+      "error": null,
+      "strictHigherDemand": null,
+      "originalSHA256": "2167705cd24ad2ba0cfa66d8c28adde364692bb50823d493e704b6bfd96c6120",
+      "path": [],
+      "source": "()(1^()(1^()(1^()(1^()(1^()(1^()(1^()(1^()(1^()(1^()(1^()(1^()(1^ω)))))))))))))",
+      "width": 14235,
+      "phase": "cold",
+      "slots": [],
+      "rowRoot": "()(1^()(1^()(1^()(1^()(1^()(1^()(1^()(1^()(1^()(1^()(1^()(1^ω))))))))))))",
+      "mode": "weak-ceiling-archive-paper-interface",
+      "seedAudit": {
+        "WIndex": 1,
+        "r": 7,
+        "background": 2,
+        "columns": 3,
+        "events": 44,
+        "port": 1,
+        "extraArchive": true,
+        "ceilingArchivePort": 1,
+        "archiveAudit": [
+          {
+            "e": 13,
+            "root": 2,
+            "u": 1,
+            "v": 1
+          },
+          {
+            "e": 14,
+            "root": 2,
+            "u": 1,
+            "v": 1
+          }
+        ],
+        "previousCounts": "1,2,4,8,4,1,2,9,38,4,12,42,73,105,106,113,150",
+        "commonCounts": "1,2,4,8,4,1,2,9,38,4,12,42,44,46,47,54,91",
+        "certificates": {
+          "nodes": 59,
+          "hits": 1423,
+          "traceEntries": 479,
+          "macros": 30,
+          "fs": 14
+        },
+        "previousSeedCertificates": {
+          "nodes": 46,
+          "hits": 688,
+          "traceEntries": 276,
+          "macros": 23,
+          "fs": 16
+        },
+        "path": "Qtrim, trim13, expose10row2, [1], trim14, truncate2, [2], expose7row2, [1], trim17; [4c-1], inherit entire14"
+      },
+      "initializationTrace": [
+        {
+          "kind": "budget",
+          "count": 11,
+          "width": 145
+        },
+        {
+          "kind": "weak-archive-initial-layer",
+          "level": 0,
+          "points": [
+            7,
+            11,
+            12,
+            13
+          ],
+          "parent": [
+            507,
+            511,
+            512,
+            513,
+            636
+          ],
+          "width": 889
+        },
+        {
+          "kind": "weak-archive-initial-layer",
+          "level": 1,
+          "points": [
+            507,
+            511,
+            512,
+            513
+          ],
+          "parent": [
+            1211,
+            1215,
+            1216,
+            1217,
+            1452
+          ],
+          "width": 1807
+        },
+        {
+          "kind": "weak-archive-initial-layer",
+          "level": 2,
+          "points": [
+            1211,
+            1215,
+            1216,
+            1217
+          ],
+          "parent": [
+            2099,
+            2103,
+            2104,
+            2105,
+            2442
+          ],
+          "width": 2889
+        },
+        {
+          "kind": "weak-archive-initial-layer",
+          "level": 3,
+          "points": [
+            2099,
+            2103,
+            2104,
+            2105
+          ],
+          "parent": [
+            3151,
+            3155,
+            3156,
+            3157,
+            3586
+          ],
+          "width": 4115
+        },
+        {
+          "kind": "weak-archive-initial-layer",
+          "level": 4,
+          "points": [
+            3151,
+            3155,
+            3156,
+            3157
+          ],
+          "parent": [
+            4347,
+            4351,
+            4352,
+            4353,
+            4864
+          ],
+          "width": 5465
+        },
+        {
+          "kind": "weak-archive-initial-layer",
+          "level": 5,
+          "points": [
+            4347,
+            4351,
+            4352,
+            4353
+          ],
+          "parent": [
+            5667,
+            5671,
+            5672,
+            5673,
+            6256
+          ],
+          "width": 6919
+        },
+        {
+          "kind": "weak-archive-initial-layer",
+          "level": 6,
+          "points": [
+            5667,
+            5671,
+            5672,
+            5673
+          ],
+          "parent": [
+            7091,
+            7095,
+            7096,
+            7097,
+            7742
+          ],
+          "width": 8457
+        },
+        {
+          "kind": "weak-archive-initial-layer",
+          "level": 7,
+          "points": [
+            7091,
+            7095,
+            7096,
+            7097
+          ],
+          "parent": [
+            8599,
+            8603,
+            8604,
+            8605,
+            9302
+          ],
+          "width": 10059
+        },
+        {
+          "kind": "weak-archive-initial-layer",
+          "level": 8,
+          "points": [
+            8599,
+            8603,
+            8604,
+            8605
+          ],
+          "parent": [
+            10171,
+            10175,
+            10176,
+            10177,
+            10916
+          ],
+          "width": 11705
+        },
+        {
+          "kind": "weak-archive-initial-layer",
+          "level": 9,
+          "points": [
+            10171,
+            10175,
+            10176,
+            10177
+          ],
+          "parent": [
+            11787,
+            11791,
+            11792,
+            11793,
+            12564
+          ],
+          "width": 13375
+        },
+        {
+          "kind": "weak-archive-initial-layer",
+          "level": 10,
+          "points": [
+            11787,
+            11791,
+            11792,
+            11793
+          ],
+          "parent": [
+            13427,
+            13431,
+            13432,
+            13433,
+            14226
+          ],
+          "width": 15049
+        }
+      ],
+      "banks": [
+        {
+          "id": 1,
+          "level": 0,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^ω)",
+          "points": [
+            7,
+            11,
+            12,
+            13
+          ]
+        },
+        {
+          "id": 2,
+          "level": 1,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^()(1^ω))",
+          "points": [
+            507,
+            511,
+            512,
+            513
+          ]
+        },
+        {
+          "id": 3,
+          "level": 2,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^()(1^()(1^ω)))",
+          "points": [
+            1211,
+            1215,
+            1216,
+            1217
+          ]
+        },
+        {
+          "id": 4,
+          "level": 3,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^()(1^()(1^()(1^ω))))",
+          "points": [
+            2099,
+            2103,
+            2104,
+            2105
+          ]
+        },
+        {
+          "id": 5,
+          "level": 4,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^()(1^()(1^()(1^()(1^ω)))))",
+          "points": [
+            3151,
+            3155,
+            3156,
+            3157
+          ]
+        },
+        {
+          "id": 6,
+          "level": 5,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^()(1^()(1^()(1^()(1^()(1^ω))))))",
+          "points": [
+            4347,
+            4351,
+            4352,
+            4353
+          ]
+        },
+        {
+          "id": 7,
+          "level": 6,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^()(1^()(1^()(1^()(1^()(1^()(1^ω)))))))",
+          "points": [
+            5667,
+            5671,
+            5672,
+            5673
+          ]
+        },
+        {
+          "id": 8,
+          "level": 7,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^()(1^()(1^()(1^()(1^()(1^()(1^()(1^ω))))))))",
+          "points": [
+            7091,
+            7095,
+            7096,
+            7097
+          ]
+        },
+        {
+          "id": 9,
+          "level": 8,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^()(1^()(1^()(1^()(1^()(1^()(1^()(1^()(1^ω)))))))))",
+          "points": [
+            8599,
+            8603,
+            8604,
+            8605
+          ]
+        },
+        {
+          "id": 10,
+          "level": 9,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^()(1^()(1^()(1^()(1^()(1^()(1^()(1^()(1^()(1^ω))))))))))",
+          "points": [
+            10171,
+            10175,
+            10176,
+            10177
+          ]
+        },
+        {
+          "id": 11,
+          "level": 10,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^()(1^()(1^()(1^()(1^()(1^()(1^()(1^()(1^()(1^()(1^ω)))))))))))",
+          "points": [
+            11787,
+            11791,
+            11792,
+            11793
+          ]
+        },
+        {
+          "id": 0,
+          "level": 11,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^()(1^()(1^()(1^()(1^()(1^()(1^()(1^()(1^()(1^()(1^()(1^ω))))))))))))",
+          "points": [
+            13427,
+            13431,
+            13432,
+            14226
+          ]
+        }
+      ],
+      "trace": [],
+      "stats": {
+        "checks": 37,
+        "pairs": 0,
+        "ports": 2516,
+        "sourceSteps": 0,
+        "budgets": 1,
+        "maxBudget": 11,
+        "calls": 11,
+        "allocations": 0,
+        "ordinaryRowSteps": 0,
+        "deletedRowSteps": 0,
+        "keptSmallerBanks": 0,
+        "strictSubcovariances": 0,
+        "topDowns": 9,
+        "maxWidth": 15049,
+        "maxNodes": 12,
+        "mainUnits": 0,
+        "mainLimits": 0,
+        "mainDeletes": 0
+      },
+      "sparseStats": {
+        "nativeFS": 23,
+        "zeroSteps": 6811,
+        "downMacroEndpoints": 1920,
+        "truncationMacroEndpoints": 1854,
+        "smallListDifferentials": 10,
+        "smallCapDifferentials": 10,
+        "maxSegments": 15266,
+        "maxWidth": 15066
+      },
+      "limits": {
+        "ms": 20000,
+        "rssMiB": 650,
+        "width": 160000,
+        "downTransientWidth": 320000,
+        "events": 200000,
+        "pairs": 4000000,
+        "nodes": 160,
+        "sourceWidth": 22,
+        "steps": 30,
+        "navigation": 1800,
+        "index": 32,
+        "wordLength": 100,
+        "nativeWidth": 90,
+        "rows": 400,
+        "rowWidth": 80,
+        "routeSteps": 160,
+        "plan": 80
+      },
+      "elapsedMs": 1239,
+      "rssMiB": 243.53125
+    },
+    {
+      "caseIndex": "9",
+      "test": {
+        "name": "larger native row matrices",
+        "levels": 2,
+        "c": 3,
+        "path": [
+          2,
+          2,
+          1
+        ]
+      },
+      "finiteTestsOnly": true,
+      "proofDocument": "WEAK-ARCHIVE-SEED.zh-CN.md",
+      "status": "bounded one-port contract passed",
+      "error": null,
+      "strictHigherDemand": null,
+      "originalSHA256": "2167705cd24ad2ba0cfa66d8c28adde364692bb50823d493e704b6bfd96c6120",
+      "path": [
+        2,
+        2,
+        1
+      ],
+      "source": "()(1^()(1^()(1^ω)))(2^()(1^()(1,1)(2,1)))",
+      "width": 36839,
+      "phase": "cold",
+      "slots": [],
+      "rowRoot": "()(1^()(1^ω))",
+      "mode": "weak-ceiling-archive-paper-interface",
+      "seedAudit": {
+        "WIndex": 1,
+        "r": 7,
+        "background": 2,
+        "columns": 4,
+        "events": 52,
+        "port": 1,
+        "extraArchive": true,
+        "ceilingArchivePort": 1,
+        "archiveAudit": [
+          {
+            "e": 13,
+            "root": 2,
+            "u": 1,
+            "v": 1
+          },
+          {
+            "e": 14,
+            "root": 2,
+            "u": 1,
+            "v": 1
+          }
+        ],
+        "previousCounts": "1,2,4,8,4,1,2,9,38,4,12,42,73,105,106,113,150",
+        "commonCounts": "1,2,4,8,4,1,2,9,38,4,12,42,44,46,47,54,91",
+        "certificates": {
+          "nodes": 71,
+          "hits": 2107,
+          "traceEntries": 615,
+          "macros": 38,
+          "fs": 14
+        },
+        "previousSeedCertificates": {
+          "nodes": 46,
+          "hits": 688,
+          "traceEntries": 276,
+          "macros": 23,
+          "fs": 16
+        },
+        "path": "Qtrim, trim13, expose10row2, [1], trim14, truncate2, [2], expose7row2, [1], trim17; [4c-1], inherit entire14"
+      },
+      "initializationTrace": [
+        {
+          "kind": "budget",
+          "count": 1,
+          "width": 57
+        },
+        {
+          "kind": "weak-archive-initial-layer",
+          "level": 0,
+          "points": [
+            7,
+            11,
+            12,
+            13
+          ],
+          "parent": [
+            139,
+            143,
+            144,
+            145,
+            176
+          ],
+          "width": 245
+        }
+      ],
+      "banks": [
+        {
+          "id": 1,
+          "level": 0,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^ω)",
+          "points": [
+            31833,
+            31837,
+            31838,
+            32034
+          ]
+        },
+        {
+          "id": 2,
+          "level": 0,
+          "label": "()(1,1,1)",
+          "points": [
+            30554,
+            31443
+          ]
+        },
+        {
+          "id": 4,
+          "level": 0,
+          "label": "()(1,1)(2,2)",
+          "points": [
+            11,
+            22669,
+            28778
+          ]
+        },
+        {
+          "id": 6,
+          "level": 0,
+          "label": "()(1,1)(2,1)",
+          "points": [
+            11,
+            1787,
+            12228
+          ]
+        },
+        {
+          "id": 0,
+          "level": 1,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^()(1^ω))",
+          "points": [
+            36767,
+            36771,
+            36772,
+            36826
+          ]
+        },
+        {
+          "id": 3,
+          "level": 1,
+          "label": "()(1^()(1,1,1))",
+          "points": [
+            36535,
+            36692
+          ]
+        },
+        {
+          "id": 5,
+          "level": 1,
+          "label": "()(1^()(1,1)(2,2))",
+          "points": [
+            35286,
+            36223
+          ]
+        },
+        {
+          "id": 7,
+          "level": 1,
+          "label": "()(1^()(1,1)(2,1))",
+          "points": [
+            32164,
+            33725
+          ]
+        }
+      ],
+      "trace": [
+        {
+          "kind": "budget",
+          "count": 2,
+          "width": 217
+        },
+        {
+          "kind": "ceiling",
+          "level": 0,
+          "node": 2,
+          "n": 2,
+          "needed": 5,
+          "childCopy": 0,
+          "background": 2,
+          "width": 1164
+        },
+        {
+          "kind": "ceiling",
+          "level": 1,
+          "node": 3,
+          "n": 2,
+          "needed": 15,
+          "childCopy": 0,
+          "background": 2,
+          "width": 951
+        },
+        {
+          "kind": "budget",
+          "count": 2,
+          "width": 909
+        },
+        {
+          "kind": "row-unit",
+          "level": 0,
+          "parent": 2,
+          "node": 4,
+          "n": 2,
+          "row": 5,
+          "cut": 11,
+          "blocks": 3,
+          "label": "()(1,1)(2,2)",
+          "parentBefore": [
+            11,
+            12
+          ],
+          "width": 8863
+        },
+        {
+          "kind": "row-limit",
+          "level": 1,
+          "parent": 3,
+          "node": 5,
+          "n": 2,
+          "row": 3567,
+          "cut": 6949,
+          "blocks": 2,
+          "label": "()(1^()(1,1)(2,2))",
+          "parentBefore": [
+            6949,
+            6950
+          ],
+          "width": 8179
+        },
+        {
+          "kind": "budget",
+          "count": 2,
+          "width": 7905
+        },
+        {
+          "kind": "row-unit",
+          "level": 0,
+          "parent": 4,
+          "node": 6,
+          "n": 1,
+          "row": 4,
+          "cut": 1787,
+          "blocks": 2,
+          "label": "()(1,1)(2,1)",
+          "parentBefore": [
+            11,
+            1787,
+            3563
+          ],
+          "width": 43523
+        },
+        {
+          "kind": "row-limit",
+          "level": 1,
+          "parent": 5,
+          "node": 7,
+          "n": 1,
+          "row": 12232,
+          "cut": 32164,
+          "blocks": 2,
+          "label": "()(1^()(1,1)(2,1))",
+          "parentBefore": [
+            32164,
+            32476
+          ],
+          "width": 38390
+        }
+      ],
+      "stats": {
+        "checks": 37,
+        "pairs": 155,
+        "ports": 648,
+        "sourceSteps": 3,
+        "budgets": 4,
+        "maxBudget": 2,
+        "calls": 7,
+        "allocations": 6,
+        "ordinaryRowSteps": 2,
+        "deletedRowSteps": 0,
+        "keptSmallerBanks": 0,
+        "strictSubcovariances": 0,
+        "topDowns": 32,
+        "maxWidth": 43523,
+        "maxNodes": 8,
+        "mainUnits": 0,
+        "mainLimits": 3,
+        "mainDeletes": 0,
+        "ceilingAllocations": 2,
+        "recursiveRowLimits": 2
+      },
+      "sparseStats": {
+        "nativeFS": 21,
+        "zeroSteps": 14744,
+        "downMacroEndpoints": 961,
+        "truncationMacroEndpoints": 866,
+        "smallListDifferentials": 117,
+        "smallCapDifferentials": 216,
+        "maxSegments": 45819,
+        "maxWidth": 43550
+      },
+      "limits": {
+        "ms": 20000,
+        "rssMiB": 650,
+        "width": 160000,
+        "downTransientWidth": 320000,
+        "events": 200000,
+        "pairs": 4000000,
+        "nodes": 160,
+        "sourceWidth": 22,
+        "steps": 30,
+        "navigation": 1800,
+        "index": 32,
+        "wordLength": 100,
+        "nativeWidth": 90,
+        "rows": 400,
+        "rowWidth": 80,
+        "routeSteps": 160,
+        "plan": 80
+      },
+      "elapsedMs": 2822,
+      "rssMiB": 324.0625
+    },
+    {
+      "caseIndex": "10",
+      "test": {
+        "name": "higher row copy then split",
+        "levels": 2,
+        "c": 3,
+        "path": [
+          0,
+          0,
+          1,
+          1,
+          0
+        ]
+      },
+      "finiteTestsOnly": true,
+      "proofDocument": "WEAK-ARCHIVE-SEED.zh-CN.md",
+      "status": "bounded one-port contract passed",
+      "error": null,
+      "strictHigherDemand": null,
+      "originalSHA256": "2167705cd24ad2ba0cfa66d8c28adde364692bb50823d493e704b6bfd96c6120",
+      "path": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "source": "()(1^()(1^()(1^ω)))(2,1^()(1^ω))",
+      "width": 28824,
+      "phase": "cold",
+      "slots": [],
+      "rowRoot": "()(1^()(1^ω))",
+      "mode": "weak-ceiling-archive-paper-interface",
+      "seedAudit": {
+        "WIndex": 1,
+        "r": 7,
+        "background": 2,
+        "columns": 4,
+        "events": 52,
+        "port": 1,
+        "extraArchive": true,
+        "ceilingArchivePort": 1,
+        "archiveAudit": [
+          {
+            "e": 13,
+            "root": 2,
+            "u": 1,
+            "v": 1
+          },
+          {
+            "e": 14,
+            "root": 2,
+            "u": 1,
+            "v": 1
+          }
+        ],
+        "previousCounts": "1,2,4,8,4,1,2,9,38,4,12,42,73,105,106,113,150",
+        "commonCounts": "1,2,4,8,4,1,2,9,38,4,12,42,44,46,47,54,91",
+        "certificates": {
+          "nodes": 71,
+          "hits": 2107,
+          "traceEntries": 615,
+          "macros": 38,
+          "fs": 14
+        },
+        "previousSeedCertificates": {
+          "nodes": 46,
+          "hits": 688,
+          "traceEntries": 276,
+          "macros": 23,
+          "fs": 16
+        },
+        "path": "Qtrim, trim13, expose10row2, [1], trim14, truncate2, [2], expose7row2, [1], trim17; [4c-1], inherit entire14"
+      },
+      "initializationTrace": [
+        {
+          "kind": "budget",
+          "count": 1,
+          "width": 57
+        },
+        {
+          "kind": "weak-archive-initial-layer",
+          "level": 0,
+          "points": [
+            7,
+            11,
+            12,
+            13
+          ],
+          "parent": [
+            139,
+            143,
+            144,
+            145,
+            176
+          ],
+          "width": 245
+        }
+      ],
+      "banks": [
+        {
+          "id": 1,
+          "level": 0,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^ω)",
+          "points": [
+            4842,
+            4846,
+            4847,
+            5043
+          ]
+        },
+        {
+          "id": 2,
+          "level": 0,
+          "label": "()(1)",
+          "points": [
+            3563,
+            4452
+          ]
+        },
+        {
+          "id": 4,
+          "level": 0,
+          "label": "()",
+          "points": [
+            1787
+          ]
+        },
+        {
+          "id": 0,
+          "level": 1,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^()(1^ω))",
+          "points": [
+            28751,
+            28755,
+            28756,
+            28810
+          ]
+        },
+        {
+          "id": 3,
+          "level": 1,
+          "label": "()(1^ω)",
+          "points": [
+            28519,
+            28676
+          ]
+        },
+        {
+          "id": 5,
+          "level": 1,
+          "label": "()(1)",
+          "points": [
+            27260,
+            28207
+          ]
+        },
+        {
+          "id": 6,
+          "level": 1,
+          "label": "()()",
+          "points": [
+            20945,
+            25679
+          ]
+        },
+        {
+          "id": 7,
+          "level": 1,
+          "label": "()",
+          "points": [
+            13059
+          ]
+        }
+      ],
+      "trace": [
+        {
+          "kind": "budget",
+          "count": 2,
+          "width": 217
+        },
+        {
+          "kind": "ceiling",
+          "level": 0,
+          "node": 2,
+          "n": 0,
+          "needed": 3,
+          "childCopy": 0,
+          "background": 2,
+          "width": 1164
+        },
+        {
+          "kind": "ceiling",
+          "level": 1,
+          "node": 3,
+          "n": 0,
+          "needed": 15,
+          "childCopy": 0,
+          "background": 2,
+          "width": 951
+        },
+        {
+          "kind": "budget",
+          "count": 2,
+          "width": 909
+        },
+        {
+          "kind": "row-delete",
+          "level": 0,
+          "parent": 2,
+          "node": 4,
+          "n": 0,
+          "row": 2,
+          "cut": 11,
+          "blocks": 2,
+          "label": "()",
+          "parentBefore": [
+            11,
+            12
+          ],
+          "width": 7087
+        },
+        {
+          "kind": "row-limit",
+          "level": 1,
+          "parent": 3,
+          "node": 5,
+          "n": 0,
+          "row": 1791,
+          "cut": 5173,
+          "blocks": 2,
+          "label": "()(1)",
+          "parentBefore": [
+            5173,
+            5174
+          ],
+          "width": 6403
+        },
+        {
+          "kind": "budget",
+          "count": 2,
+          "width": 6129
+        },
+        {
+          "kind": "row-unit",
+          "level": 1,
+          "parent": 5,
+          "node": 6,
+          "n": 1,
+          "row": 3,
+          "cut": 5173,
+          "blocks": 2,
+          "label": "()()",
+          "parentBefore": [
+            5173,
+            5485
+          ],
+          "width": 11469
+        },
+        {
+          "kind": "row-delete",
+          "level": 1,
+          "parent": 6,
+          "node": 7,
+          "n": 0,
+          "row": 2,
+          "cut": 5173,
+          "blocks": 2,
+          "label": "()",
+          "parentBefore": [
+            5173,
+            6754
+          ],
+          "width": 36699
+        }
+      ],
+      "stats": {
+        "checks": 41,
+        "pairs": 100,
+        "ports": 683,
+        "sourceSteps": 5,
+        "budgets": 4,
+        "maxBudget": 2,
+        "calls": 7,
+        "allocations": 6,
+        "ordinaryRowSteps": 1,
+        "deletedRowSteps": 2,
+        "keptSmallerBanks": 0,
+        "strictSubcovariances": 0,
+        "topDowns": 32,
+        "maxWidth": 36699,
+        "maxNodes": 8,
+        "mainUnits": 1,
+        "mainLimits": 4,
+        "mainDeletes": 0,
+        "ceilingAllocations": 2,
+        "recursiveRowLimits": 1
+      },
+      "sparseStats": {
+        "nativeFS": 23,
+        "zeroSteps": 12220,
+        "downMacroEndpoints": 982,
+        "truncationMacroEndpoints": 894,
+        "smallListDifferentials": 117,
+        "smallCapDifferentials": 216,
+        "maxSegments": 39020,
+        "maxWidth": 36716
+      },
+      "limits": {
+        "ms": 20000,
+        "rssMiB": 650,
+        "width": 160000,
+        "downTransientWidth": 320000,
+        "events": 200000,
+        "pairs": 4000000,
+        "nodes": 160,
+        "sourceWidth": 22,
+        "steps": 30,
+        "navigation": 1800,
+        "index": 32,
+        "wordLength": 100,
+        "nativeWidth": 90,
+        "rows": 400,
+        "rowWidth": 80,
+        "routeSteps": 160,
+        "plan": 80
+      },
+      "elapsedMs": 2144,
+      "rssMiB": 301.125
+    },
+    {
+      "caseIndex": "11",
+      "test": {
+        "name": "four layers nonzero actual refinement",
+        "levels": 4,
+        "c": 2,
+        "path": [
+          1,
+          0
+        ]
+      },
+      "finiteTestsOnly": true,
+      "proofDocument": "WEAK-ARCHIVE-SEED.zh-CN.md",
+      "status": "bounded one-port contract passed",
+      "error": null,
+      "strictHigherDemand": null,
+      "originalSHA256": "2167705cd24ad2ba0cfa66d8c28adde364692bb50823d493e704b6bfd96c6120",
+      "path": [
+        1,
+        0
+      ],
+      "source": "()(1^()(1^()(1^ω)))",
+      "width": 64253,
+      "phase": "cold",
+      "slots": [],
+      "rowRoot": "()(1^()(1^()(1^()(1^ω))))",
+      "mode": "weak-ceiling-archive-paper-interface",
+      "seedAudit": {
+        "WIndex": 1,
+        "r": 7,
+        "background": 2,
+        "columns": 3,
+        "events": 44,
+        "port": 1,
+        "extraArchive": true,
+        "ceilingArchivePort": 1,
+        "archiveAudit": [
+          {
+            "e": 13,
+            "root": 2,
+            "u": 1,
+            "v": 1
+          },
+          {
+            "e": 14,
+            "root": 2,
+            "u": 1,
+            "v": 1
+          }
+        ],
+        "previousCounts": "1,2,4,8,4,1,2,9,38,4,12,42,73,105,106,113,150",
+        "commonCounts": "1,2,4,8,4,1,2,9,38,4,12,42,44,46,47,54,91",
+        "certificates": {
+          "nodes": 59,
+          "hits": 1423,
+          "traceEntries": 479,
+          "macros": 30,
+          "fs": 14
+        },
+        "previousSeedCertificates": {
+          "nodes": 46,
+          "hits": 688,
+          "traceEntries": 276,
+          "macros": 23,
+          "fs": 16
+        },
+        "path": "Qtrim, trim13, expose10row2, [1], trim14, truncate2, [2], expose7row2, [1], trim17; [4c-1], inherit entire14"
+      },
+      "initializationTrace": [
+        {
+          "kind": "budget",
+          "count": 3,
+          "width": 65
+        },
+        {
+          "kind": "weak-archive-initial-layer",
+          "level": 0,
+          "points": [
+            7,
+            11,
+            12,
+            13
+          ],
+          "parent": [
+            187,
+            191,
+            192,
+            193,
+            236
+          ],
+          "width": 329
+        },
+        {
+          "kind": "weak-archive-initial-layer",
+          "level": 1,
+          "points": [
+            187,
+            191,
+            192,
+            193
+          ],
+          "parent": [
+            411,
+            415,
+            416,
+            417,
+            492
+          ],
+          "width": 607
+        },
+        {
+          "kind": "weak-archive-initial-layer",
+          "level": 2,
+          "points": [
+            411,
+            415,
+            416,
+            417
+          ],
+          "parent": [
+            659,
+            663,
+            664,
+            665,
+            762
+          ],
+          "width": 889
+        }
+      ],
+      "banks": [
+        {
+          "id": 1,
+          "level": 0,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^ω)",
+          "points": [
+            32314,
+            32318,
+            32319,
+            33101
+          ]
+        },
+        {
+          "id": 4,
+          "level": 0,
+          "label": "()(1,1)",
+          "points": [
+            24603,
+            30752
+          ]
+        },
+        {
+          "id": 8,
+          "level": 0,
+          "label": "()",
+          "points": [
+            12307
+          ]
+        },
+        {
+          "id": 2,
+          "level": 1,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^()(1^ω))",
+          "points": [
+            52560,
+            52564,
+            52565,
+            53161
+          ]
+        },
+        {
+          "id": 5,
+          "level": 1,
+          "label": "()(1^()(1,1))",
+          "points": [
+            47751,
+            51370
+          ]
+        },
+        {
+          "id": 9,
+          "level": 1,
+          "label": "()(1)",
+          "points": [
+            33279,
+            40515
+          ]
+        },
+        {
+          "id": 3,
+          "level": 2,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^()(1^()(1^ω)))",
+          "points": [
+            62124,
+            62128,
+            62129,
+            62495
+          ]
+        },
+        {
+          "id": 6,
+          "level": 2,
+          "label": "()(1^()(1^()(1,1)))",
+          "points": [
+            59791,
+            61394
+          ]
+        },
+        {
+          "id": 10,
+          "level": 2,
+          "label": "()(1^ω)",
+          "points": [
+            53383,
+            56587
+          ]
+        },
+        {
+          "id": 0,
+          "level": 3,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^()(1^()(1^()(1^ω))))",
+          "points": [
+            64127,
+            64131,
+            64132,
+            64244
+          ]
+        },
+        {
+          "id": 7,
+          "level": 3,
+          "label": "()(1^()(1^()(1^()(1,1))))",
+          "points": [
+            63749,
+            64002
+          ]
+        },
+        {
+          "id": 11,
+          "level": 3,
+          "label": "()(1^()(1^ω))",
+          "points": [
+            62741,
+            63245
+          ]
+        }
+      ],
+      "trace": [
+        {
+          "kind": "budget",
+          "count": 4,
+          "width": 799
+        },
+        {
+          "kind": "ceiling",
+          "level": 0,
+          "node": 4,
+          "n": 1,
+          "needed": 4,
+          "childCopy": 0,
+          "background": 2,
+          "width": 4680
+        },
+        {
+          "kind": "ceiling",
+          "level": 1,
+          "node": 5,
+          "n": 1,
+          "needed": 15,
+          "childCopy": 0,
+          "background": 2,
+          "width": 6098
+        },
+        {
+          "kind": "ceiling",
+          "level": 2,
+          "node": 6,
+          "n": 1,
+          "needed": 2543,
+          "childCopy": 0,
+          "background": 2,
+          "width": 6738
+        },
+        {
+          "kind": "ceiling",
+          "level": 3,
+          "node": 7,
+          "n": 1,
+          "needed": 4557,
+          "childCopy": 0,
+          "background": 2,
+          "width": 6277
+        },
+        {
+          "kind": "budget",
+          "count": 4,
+          "width": 6161
+        },
+        {
+          "kind": "row-delete",
+          "level": 0,
+          "parent": 4,
+          "node": 8,
+          "n": 0,
+          "row": 2,
+          "cut": 11,
+          "blocks": 2,
+          "label": "()",
+          "parentBefore": [
+            11,
+            12
+          ],
+          "width": 49183
+        },
+        {
+          "kind": "row-limit",
+          "level": 1,
+          "parent": 5,
+          "node": 9,
+          "n": 0,
+          "row": 12311,
+          "cut": 33279,
+          "blocks": 2,
+          "label": "()(1)",
+          "parentBefore": [
+            33279,
+            33280
+          ],
+          "width": 62213
+        },
+        {
+          "kind": "row-limit",
+          "level": 2,
+          "parent": 6,
+          "node": 10,
+          "n": 0,
+          "row": 40519,
+          "cut": 53383,
+          "blocks": 2,
+          "label": "()(1^ω)",
+          "parentBefore": [
+            53383,
+            53384
+          ],
+          "width": 66191
+        },
+        {
+          "kind": "row-limit",
+          "level": 3,
+          "parent": 7,
+          "node": 11,
+          "n": 0,
+          "row": 56591,
+          "cut": 62741,
+          "blocks": 2,
+          "label": "()(1^()(1^ω))",
+          "parentBefore": [
+            62741,
+            62742
+          ],
+          "width": 64751
+        }
+      ],
+      "stats": {
+        "checks": 45,
+        "pairs": 127,
+        "ports": 1625,
+        "sourceSteps": 2,
+        "budgets": 3,
+        "maxBudget": 4,
+        "calls": 11,
+        "allocations": 8,
+        "ordinaryRowSteps": 0,
+        "deletedRowSteps": 1,
+        "keptSmallerBanks": 0,
+        "strictSubcovariances": 0,
+        "topDowns": 15,
+        "maxWidth": 66191,
+        "maxNodes": 12,
+        "mainUnits": 0,
+        "mainLimits": 2,
+        "mainDeletes": 0,
+        "ceilingAllocations": 4,
+        "recursiveRowLimits": 3
+      },
+      "sparseStats": {
+        "nativeFS": 27,
+        "zeroSteps": 27258,
+        "downMacroEndpoints": 1291,
+        "truncationMacroEndpoints": 1132,
+        "smallListDifferentials": 103,
+        "smallCapDifferentials": 194,
+        "maxSegments": 68809,
+        "maxWidth": 66198
+      },
+      "limits": {
+        "ms": 20000,
+        "rssMiB": 650,
+        "width": 160000,
+        "downTransientWidth": 320000,
+        "events": 200000,
+        "pairs": 4000000,
+        "nodes": 160,
+        "sourceWidth": 22,
+        "steps": 30,
+        "navigation": 1800,
+        "index": 32,
+        "wordLength": 100,
+        "nativeWidth": 90,
+        "rows": 400,
+        "rowWidth": 80,
+        "routeSteps": 160,
+        "plan": 80
+      },
+      "elapsedMs": 7851,
+      "rssMiB": 368.57421875
+    },
+    {
+      "caseIndex": "12",
+      "test": {
+        "name": "minimal high reserve actually amplifies",
+        "levels": 1,
+        "c": 2,
+        "path": [
+          7,
+          0
+        ]
+      },
+      "finiteTestsOnly": true,
+      "proofDocument": "WEAK-ARCHIVE-SEED.zh-CN.md",
+      "status": "bounded one-port contract passed",
+      "error": null,
+      "strictHigherDemand": null,
+      "originalSHA256": "2167705cd24ad2ba0cfa66d8c28adde364692bb50823d493e704b6bfd96c6120",
+      "path": [
+        7,
+        0
+      ],
+      "source": "()(1)",
+      "width": 405,
+      "phase": "cold",
+      "slots": [],
+      "rowRoot": "()(1^ω)",
+      "mode": "weak-ceiling-archive-paper-interface",
+      "seedAudit": {
+        "WIndex": 1,
+        "r": 7,
+        "background": 2,
+        "columns": 2,
+        "events": 36,
+        "port": 1,
+        "extraArchive": true,
+        "ceilingArchivePort": 1,
+        "archiveAudit": [
+          {
+            "e": 13,
+            "root": 2,
+            "u": 1,
+            "v": 1
+          },
+          {
+            "e": 14,
+            "root": 2,
+            "u": 1,
+            "v": 1
+          }
+        ],
+        "previousCounts": "1,2,4,8,4,1,2,9,38,4,12,42,73,105,106,113,150",
+        "commonCounts": "1,2,4,8,4,1,2,9,38,4,12,42,44,46,47,54,91",
+        "certificates": {
+          "nodes": 47,
+          "hits": 867,
+          "traceEntries": 343,
+          "macros": 22,
+          "fs": 14
+        },
+        "previousSeedCertificates": {
+          "nodes": 46,
+          "hits": 688,
+          "traceEntries": 276,
+          "macros": 23,
+          "fs": 16
+        },
+        "path": "Qtrim, trim13, expose10row2, [1], trim14, truncate2, [2], expose7row2, [1], trim17; [4c-1], inherit entire14"
+      },
+      "initializationTrace": [],
+      "banks": [
+        {
+          "id": 0,
+          "level": 0,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^ω)",
+          "points": [
+            375,
+            379,
+            380,
+            396
+          ]
+        },
+        {
+          "id": 1,
+          "level": 0,
+          "label": "()(1,1,1,1,1,1,1,1)",
+          "points": [
+            285,
+            346
+          ]
+        },
+        {
+          "id": 2,
+          "level": 0,
+          "label": "()",
+          "points": [
+            165
+          ]
+        }
+      ],
+      "trace": [
+        {
+          "kind": "budget",
+          "count": 1,
+          "width": 33
+        },
+        {
+          "kind": "ceiling",
+          "level": 0,
+          "node": 1,
+          "n": 7,
+          "needed": 10,
+          "childCopy": 1,
+          "background": 2,
+          "width": 133
+        },
+        {
+          "kind": "budget",
+          "count": 1,
+          "width": 107
+        },
+        {
+          "kind": "row-delete",
+          "level": 0,
+          "parent": 1,
+          "node": 2,
+          "n": 0,
+          "row": 2,
+          "cut": 45,
+          "blocks": 2,
+          "label": "()",
+          "parentBefore": [
+            45,
+            46
+          ],
+          "width": 519
+        }
+      ],
+      "stats": {
+        "checks": 16,
+        "pairs": 16,
+        "ports": 97,
+        "sourceSteps": 2,
+        "budgets": 2,
+        "maxBudget": 1,
+        "calls": 2,
+        "allocations": 2,
+        "ordinaryRowSteps": 0,
+        "deletedRowSteps": 1,
+        "keptSmallerBanks": 0,
+        "strictSubcovariances": 0,
+        "topDowns": 6,
+        "maxWidth": 519,
+        "maxNodes": 3,
+        "mainUnits": 0,
+        "mainLimits": 2,
+        "mainDeletes": 0,
+        "ceilingAllocations": 1
+      },
+      "sparseStats": {
+        "nativeFS": 8,
+        "zeroSteps": 170,
+        "downMacroEndpoints": 169,
+        "truncationMacroEndpoints": 150,
+        "smallListDifferentials": 53,
+        "smallCapDifferentials": 96,
+        "maxSegments": 576,
+        "maxWidth": 524
+      },
+      "limits": {
+        "ms": 20000,
+        "rssMiB": 650,
+        "width": 160000,
+        "downTransientWidth": 320000,
+        "events": 200000,
+        "pairs": 4000000,
+        "nodes": 160,
+        "sourceWidth": 22,
+        "steps": 30,
+        "navigation": 1800,
+        "index": 32,
+        "wordLength": 100,
+        "nativeWidth": 90,
+        "rows": 400,
+        "rowWidth": 80,
+        "routeSteps": 160,
+        "plan": 80
+      },
+      "elapsedMs": 103,
+      "rssMiB": 147.97265625
+    },
+    {
+      "caseIndex": "13",
+      "test": {
+        "name": "larger finite row request amplifies",
+        "levels": 1,
+        "c": 2,
+        "path": [
+          18,
+          0
+        ]
+      },
+      "finiteTestsOnly": true,
+      "proofDocument": "WEAK-ARCHIVE-SEED.zh-CN.md",
+      "status": "bounded one-port contract passed",
+      "error": null,
+      "strictHigherDemand": null,
+      "originalSHA256": "2167705cd24ad2ba0cfa66d8c28adde364692bb50823d493e704b6bfd96c6120",
+      "path": [
+        18,
+        0
+      ],
+      "source": "()(1)",
+      "width": 405,
+      "phase": "cold",
+      "slots": [],
+      "rowRoot": "()(1^ω)",
+      "mode": "weak-ceiling-archive-paper-interface",
+      "seedAudit": {
+        "WIndex": 1,
+        "r": 7,
+        "background": 2,
+        "columns": 2,
+        "events": 36,
+        "port": 1,
+        "extraArchive": true,
+        "ceilingArchivePort": 1,
+        "archiveAudit": [
+          {
+            "e": 13,
+            "root": 2,
+            "u": 1,
+            "v": 1
+          },
+          {
+            "e": 14,
+            "root": 2,
+            "u": 1,
+            "v": 1
+          }
+        ],
+        "previousCounts": "1,2,4,8,4,1,2,9,38,4,12,42,73,105,106,113,150",
+        "commonCounts": "1,2,4,8,4,1,2,9,38,4,12,42,44,46,47,54,91",
+        "certificates": {
+          "nodes": 47,
+          "hits": 867,
+          "traceEntries": 343,
+          "macros": 22,
+          "fs": 14
+        },
+        "previousSeedCertificates": {
+          "nodes": 46,
+          "hits": 688,
+          "traceEntries": 276,
+          "macros": 23,
+          "fs": 16
+        },
+        "path": "Qtrim, trim13, expose10row2, [1], trim14, truncate2, [2], expose7row2, [1], trim17; [4c-1], inherit entire14"
+      },
+      "initializationTrace": [],
+      "banks": [
+        {
+          "id": 0,
+          "level": 0,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^ω)",
+          "points": [
+            375,
+            379,
+            380,
+            396
+          ]
+        },
+        {
+          "id": 1,
+          "level": 0,
+          "label": "()(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)",
+          "points": [
+            285,
+            346
+          ]
+        },
+        {
+          "id": 2,
+          "level": 0,
+          "label": "()",
+          "points": [
+            165
+          ]
+        }
+      ],
+      "trace": [
+        {
+          "kind": "budget",
+          "count": 1,
+          "width": 33
+        },
+        {
+          "kind": "ceiling",
+          "level": 0,
+          "node": 1,
+          "n": 18,
+          "needed": 21,
+          "childCopy": 1,
+          "background": 2,
+          "width": 133
+        },
+        {
+          "kind": "budget",
+          "count": 1,
+          "width": 107
+        },
+        {
+          "kind": "row-delete",
+          "level": 0,
+          "parent": 1,
+          "node": 2,
+          "n": 0,
+          "row": 2,
+          "cut": 45,
+          "blocks": 2,
+          "label": "()",
+          "parentBefore": [
+            45,
+            46
+          ],
+          "width": 519
+        }
+      ],
+      "stats": {
+        "checks": 16,
+        "pairs": 16,
+        "ports": 97,
+        "sourceSteps": 2,
+        "budgets": 2,
+        "maxBudget": 1,
+        "calls": 2,
+        "allocations": 2,
+        "ordinaryRowSteps": 0,
+        "deletedRowSteps": 1,
+        "keptSmallerBanks": 0,
+        "strictSubcovariances": 0,
+        "topDowns": 6,
+        "maxWidth": 519,
+        "maxNodes": 3,
+        "mainUnits": 0,
+        "mainLimits": 2,
+        "mainDeletes": 0,
+        "ceilingAllocations": 1
+      },
+      "sparseStats": {
+        "nativeFS": 8,
+        "zeroSteps": 170,
+        "downMacroEndpoints": 169,
+        "truncationMacroEndpoints": 150,
+        "smallListDifferentials": 53,
+        "smallCapDifferentials": 96,
+        "maxSegments": 576,
+        "maxWidth": 524
+      },
+      "limits": {
+        "ms": 20000,
+        "rssMiB": 650,
+        "width": 160000,
+        "downTransientWidth": 320000,
+        "events": 200000,
+        "pairs": 4000000,
+        "nodes": 160,
+        "sourceWidth": 22,
+        "steps": 30,
+        "navigation": 1800,
+        "index": 32,
+        "wordLength": 100,
+        "nativeWidth": 90,
+        "rows": 400,
+        "rowWidth": 80,
+        "routeSteps": 160,
+        "plan": 80
+      },
+      "elapsedMs": 117,
+      "rssMiB": 145.671875
+    },
+    {
+      "caseIndex": "local",
+      "test": {
+        "name": "six paid local operations, no source steps",
+        "levels": 2,
+        "c": 1,
+        "path": []
+      },
+      "finiteTestsOnly": true,
+      "proofDocument": "WEAK-ARCHIVE-SEED.zh-CN.md",
+      "status": "bounded one-port contract passed",
+      "error": null,
+      "strictHigherDemand": {
+        "before": 4809,
+        "after": 4809,
+        "cut": 11,
+        "higherBank": 5
+      },
+      "originalSHA256": "2167705cd24ad2ba0cfa66d8c28adde364692bb50823d493e704b6bfd96c6120",
+      "path": [],
+      "source": "()",
+      "width": 148933,
+      "phase": "budget",
+      "slots": [],
+      "rowRoot": "()(1^()(1^ω))",
+      "mode": "weak-ceiling-archive-paper-interface",
+      "seedAudit": {
+        "WIndex": 1,
+        "r": 7,
+        "background": 2,
+        "columns": 2,
+        "events": 36,
+        "port": 1,
+        "extraArchive": true,
+        "ceilingArchivePort": 1,
+        "archiveAudit": [
+          {
+            "e": 13,
+            "root": 2,
+            "u": 1,
+            "v": 1
+          },
+          {
+            "e": 14,
+            "root": 2,
+            "u": 1,
+            "v": 1
+          }
+        ],
+        "previousCounts": "1,2,4,8,4,1,2,9,38,4,12,42,73,105,106,113,150",
+        "commonCounts": "1,2,4,8,4,1,2,9,38,4,12,42,44,46,47,54,91",
+        "certificates": {
+          "nodes": 47,
+          "hits": 867,
+          "traceEntries": 343,
+          "macros": 22,
+          "fs": 14
+        },
+        "previousSeedCertificates": {
+          "nodes": 46,
+          "hits": 688,
+          "traceEntries": 276,
+          "macros": 23,
+          "fs": 16
+        },
+        "path": "Qtrim, trim13, expose10row2, [1], trim14, truncate2, [2], expose7row2, [1], trim17; [4c-1], inherit entire14"
+      },
+      "initializationTrace": [
+        {
+          "kind": "budget",
+          "count": 1,
+          "width": 33
+        },
+        {
+          "kind": "weak-archive-initial-layer",
+          "level": 0,
+          "points": [
+            7,
+            11,
+            12,
+            13
+          ],
+          "parent": [
+            75,
+            79,
+            80,
+            81,
+            96
+          ],
+          "width": 133
+        }
+      ],
+      "banks": [
+        {
+          "id": 1,
+          "level": 0,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^ω)",
+          "points": [
+            111461,
+            111465,
+            111466,
+            111566
+          ]
+        },
+        {
+          "id": 2,
+          "level": 0,
+          "label": "()(1,1,1)",
+          "points": [
+            110862,
+            111263
+          ]
+        },
+        {
+          "id": 3,
+          "level": 0,
+          "label": "()(1,1)(2,2)",
+          "points": [
+            74473,
+            106018,
+            110062
+          ]
+        },
+        {
+          "id": 4,
+          "level": 0,
+          "label": "()(1,1)",
+          "points": [
+            11,
+            4808
+          ]
+        },
+        {
+          "id": 6,
+          "level": 0,
+          "label": "()(1,1)(2,1)",
+          "points": [
+            74473,
+            83267,
+            100330
+          ]
+        },
+        {
+          "id": 7,
+          "level": 0,
+          "label": "()(1,1)(2)(3,1)",
+          "points": [
+            11,
+            8805,
+            37242,
+            46036
+          ]
+        },
+        {
+          "id": 0,
+          "level": 1,
+          "kind": "ceiling",
+          "background": 2,
+          "label": "()(1^()(1^ω))",
+          "points": [
+            111668,
+            111672,
+            111673,
+            111699
+          ]
+        },
+        {
+          "id": 5,
+          "level": 1,
+          "label": "()(1^()(1,1))",
+          "points": [
+            111632,
+            111633
+          ]
+        }
+      ],
+      "trace": [
+        {
+          "kind": "budget",
+          "count": 6,
+          "width": 113
+        },
+        {
+          "kind": "ceiling",
+          "level": 0,
+          "node": 2,
+          "n": 2,
+          "needed": 5,
+          "childCopy": 0,
+          "background": 2,
+          "width": 604
+        },
+        {
+          "kind": "row-unit",
+          "level": 0,
+          "parent": 2,
+          "node": 3,
+          "n": 2,
+          "row": 5,
+          "cut": 11,
+          "blocks": 3,
+          "label": "()(1,1)(2,2)",
+          "parentBefore": [
+            11,
+            12
+          ],
+          "width": 4001
+        },
+        {
+          "kind": "row-delete",
+          "level": 0,
+          "parent": 3,
+          "node": 4,
+          "n": 0,
+          "row": 2,
+          "cut": 811,
+          "blocks": 2,
+          "label": "()(1,1)",
+          "parentBefore": [
+            11,
+            811,
+            1611
+          ],
+          "width": 16791
+        },
+        {
+          "kind": "ceiling",
+          "level": 1,
+          "node": 5,
+          "n": 1,
+          "needed": 4811,
+          "childCopy": 0,
+          "background": 2,
+          "width": 12884
+        },
+        {
+          "kind": "row-unit",
+          "level": 0,
+          "parent": 3,
+          "node": 6,
+          "n": 1,
+          "row": 4,
+          "cut": 8805,
+          "blocks": 2,
+          "label": "()(1,1)(2,1)",
+          "parentBefore": [
+            11,
+            8805,
+            11204
+          ],
+          "width": 31553
+        },
+        {
+          "kind": "row-unit",
+          "level": 0,
+          "parent": 6,
+          "node": 7,
+          "n": 1,
+          "row": 4,
+          "cut": 11,
+          "blocks": 2,
+          "label": "()(1,1)(2)(3,1)",
+          "parentBefore": [
+            11,
+            8805,
+            14493
+          ],
+          "width": 148933
+        }
+      ],
+      "stats": {
+        "checks": 28,
+        "pairs": 145,
+        "ports": 759,
+        "sourceSteps": 0,
+        "budgets": 2,
+        "maxBudget": 6,
+        "calls": 7,
+        "allocations": 6,
+        "ordinaryRowSteps": 3,
+        "deletedRowSteps": 1,
+        "keptSmallerBanks": 2,
+        "strictSubcovariances": 1,
+        "topDowns": 6,
+        "maxWidth": 148933,
+        "maxNodes": 8,
+        "mainUnits": 0,
+        "mainLimits": 0,
+        "mainDeletes": 0,
+        "ceilingAllocations": 2
+      },
+      "sparseStats": {
+        "nativeFS": 16,
+        "zeroSteps": 10778,
+        "downMacroEndpoints": 548,
+        "truncationMacroEndpoints": 474,
+        "smallListDifferentials": 53,
+        "smallCapDifferentials": 96,
+        "maxSegments": 162588,
+        "maxWidth": 148934
+      },
+      "limits": {
+        "ms": 20000,
+        "rssMiB": 650,
+        "width": 160000,
+        "downTransientWidth": 320000,
+        "events": 200000,
+        "pairs": 4000000,
+        "nodes": 160,
+        "sourceWidth": 22,
+        "steps": 30,
+        "navigation": 1800,
+        "index": 32,
+        "wordLength": 100,
+        "nativeWidth": 90,
+        "rows": 400,
+        "rowWidth": 80,
+        "routeSteps": 160,
+        "plan": 80
+      },
+      "elapsedMs": 3273,
+      "rssMiB": 393.37109375
+    }
+  ],
+  "commonGate": {
+    "status": "weak archive fixed pre-coupon gate verified on four budgets",
+    "finiteTestsOnly": true,
+    "QCounts": "1,2,4,8,4,1,2,9,38,4,12,42,44,46,47,54,91",
+    "gateCounts": "1,2,4,8,4,1,2,9,38,4,12,42,44,46,47,54,90,266,1072,4384,16474,56026,173593,495365,1315558,3281173",
+    "graph": [
+      [],
+      [
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        3,
+        3
+      ],
+      [
+        2,
+        2
+      ],
+      [],
+      [
+        6
+      ],
+      [
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      [
+        7,
+        7
+      ],
+      [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      [
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11,
+        11
+      ],
+      [
+        12,
+        7
+      ],
+      [
+        13,
+        7
+      ],
+      [
+        14
+      ],
+      [
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15
+      ],
+      [
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16
+      ],
+      [
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17,
+        17
+      ],
+      [
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18
+      ],
+      [
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19
+      ],
+      [
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      [
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21,
+        21
+      ],
+      [
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22
+      ],
+      [
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23
+      ],
+      [
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24
+      ],
+      [
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        25,
+        16
+      ]
+    ],
+    "cut": 16,
+    "K": 15,
+    "z": 26,
+    "topDowns": 9,
+    "tests": [
+      {
+        "coupons": 1,
+        "index": 2,
+        "width": 45,
+        "slots": 1
+      },
+      {
+        "coupons": 2,
+        "index": 3,
+        "width": 55,
+        "slots": 2
+      },
+      {
+        "coupons": 5,
+        "index": 6,
+        "width": 85,
+        "slots": 5
+      },
+      {
+        "coupons": 11,
+        "index": 12,
+        "width": 145,
+        "slots": 11
+      }
+    ],
+    "seedCertificates": {
+      "nodes": 59,
+      "hits": 1423,
+      "traceEntries": 479,
+      "macros": 30,
+      "fs": 14
+    },
+    "rssMiB": 160.44140625
+  },
+  "sourceSha256": {
+    "output/tbms-e0mn-bridge-20260925/packet-epsilon-omega-cover.cjs": "924bf338cdf09dfa551535dc22e2f70e0d5208ec0e4f8963bda25d82771bfc21",
+    "output/tbms-e0mn-bridge-20260925/check-epsilon-omega-case.cjs": "d209882f9030da77b02c2c8d11cd352d531cd339c03ef0df4aff8316fce89e90",
+    "output/tbms-e0mn-bridge-20260925/check-epsilon-omega-initial.cjs": "473c8d9ddafa29a312d90ec9511bccc5cbdaeeed1dd2fb74430219ab8252ed47",
+    "output/tbms-e0mn-bridge-20260925/EPSILON-OMEGA-BOUND.zh-CN.md": "7a46759cf40e84446540dc83f891f0ef26e99ec84a8ef324c6a9a3c4f6e4581e",
+    "output/tbms-e0mn-bridge-20260925/PERSISTENT-EPSILON-BOUND.zh-CN.md": "3e817fa0c9c33ae3e90d9be4f4fdc5e44bba77b15e0420c119210b45fef5db69",
+    "output/tbms-e0mn-bridge-20260925/packet-amplified-resource-cover.cjs": "9c1e9851e70e5b3e0846530dde8aa33a2d8bc68a1adafb887828e33a9dc3e974",
+    "output/tbms-e0mn-bridge-20260925/packet-main-cover.cjs": "f537152bfeaad91a014224b0afd82049402bdebb7fc3a3cf64518412eeb5412a",
+    "output/tbms-e0mn-bridge-20260925/packet-sparse-native-state.cjs": "d97393264605fb0cd5c995c5c50a1bb4dc7873e236154c72feec296401786ad2",
+    "output/tbms-e0mn-bridge-20260925/epsilon-row-cover.cjs": "e5757a1bf40242d5dd70587b1785c90c843aeb8fe8fe6150ac50cb659910b500",
+    "output/tbms-e0mn-bridge-20260925/crossing-lower-sparse-parent-return.cjs": "213c857fd39454081790504a939f2ca5bc71e23dcabfc6244f967bbda0d92964",
+    "output/tbms-e0mn-bridge-20260925/FULL-REFLECTION-CAPACITY-INTERFACE.zh-CN.md": "4b086f8c3b6fcc76c86d6ea575a2a63d5c52f48761ddd97cc0e136ceee99c8ad",
+    "output/tbms-e0mn-bridge-20260925/PREFIX-ROW-STRETCH-COVARIANCE.zh-CN.md": "51bf107602dce59a4e39586a05279297146ee7be6506ec53b73bd9115ffb0e09",
+    "output/tbms-e0mn-bridge-20260925/WHOLE-TBMS-INTERFACE.zh-CN.md": "6eb2928e101e32d47e373ae042cc3322810e411ef616b9a9367e1540f29ac48c",
+    "output/m13-lists-20260926/SRPD.ne-rewritten.js": "fdbd0d0788afe0cd6949cb280ffea4c85813bbd6d5e47d04e6a078e00bbee85a",
+    ".research-ne-rewritten/src/notations/BM-like/TBM.ts": "ebc510ea3e2a032de6c793d25a84d3741e8b427b7f0d225b32fa49326b6be1bb",
+    "output/tbms-e0mn-bridge-20260925/epsilon-ladder-row-algebra.cjs": "7f902d38b84b10600db62c1b4eda4655f400b432a7c082c15969e65eef2e1ed0",
+    "output/tbms-e0mn-bridge-20260925/packet-epsilon-ladder-cover.cjs": "7ed5f04e5777c7dea474a3cb409ed04b1bb0243cb346242f17178a84b3386aa8",
+    "output/tbms-e0mn-bridge-20260925/check-epsilon-ladder-row.cjs": "7029ead89e937e7f38d45f1b31102def7d63d0e2822eb52bace7120693b2fed0",
+    "output/tbms-e0mn-bridge-20260925/check-epsilon-ladder-case.cjs": "6d3c3aa809ec0af9d69b91e0425801d9b8b6a2c1d7c0a796d31b7bf2022c088d",
+    "output/tbms-e0mn-bridge-20260925/check-epsilon-ladder-local.cjs": "32c0177aa2c69d44b48b27d56ca3311cfcaa341a4196d88e6263037cb03e63f5",
+    "output/tbms-e0mn-bridge-20260925/check-epsilon-ladder-initial.cjs": "3b72606eae09171fa816964b524ec86637cf6c8a3ff1b99598cc4fd907d2f0c1",
+    "output/tbms-e0mn-bridge-20260925/EPSILON-LADDER-ROW-INTERPRETATION.zh-CN.md": "6d715abe04a38fb3818a28517d79435bf25bb73a6103f8ca4183da1c5cdd560c",
+    "output/tbms-e0mn-bridge-20260925/EPSILON-LADDER-BOUND.zh-CN.md": "418564297b762d23f6b41bf703f90014a57b502308b0080ef5fbdb319022756c",
+    "output/tbms-e0mn-bridge-20260925/load-tbm.cjs": "9fdbcf0ef60a6a28dcf6ae9d48f81f4da36f00154219caec539b67ced7674307",
+    "output/tbms-e0mn-bridge-20260925/srpd-boundary-factorization.cjs": "3e89ad1a3e272b953f06cdd33dbfd11f5c364932a10dbb447c33905e456e81b9",
+    "output/tbms-e0mn-bridge-20260925/packet-native-row-bank-cover.cjs": "69d320b8151e521c479d67403b49cfb718c056d1df0022c2544063e4ea1aa3c6",
+    "output/tbms-e0mn-bridge-20260925/native-row-bank-seed.cjs": "a4a92db8c7643b07e592b283e70a9108225a19ec1167ae06cb09cfbecc2ccd5a",
+    "output/tbms-e0mn-bridge-20260925/check-native-row-bank-local.cjs": "fe9b6745de92b144d2dd11f14a396c86073f2c8f18176a5217343f215b0a32f0",
+    "output/tbms-e0mn-bridge-20260925/check-native-row-bank-source.cjs": "99386fe5b2ed84f3fadacb11f6dc5f37cd341bd63c62d6b705380b303f2a5667",
+    "output/tbms-e0mn-bridge-20260925/check-native-row-bank-case.cjs": "a830e725d23966a0bf24c49765fed52991e92f4b0e1e70a4d96d3cacffea819b",
+    "output/tbms-e0mn-bridge-20260925/check-native-bms-ceiling-case.cjs": "d95e6fa275f6e1a5b807e9539f7e4f31913947bb1617cbd1462c33b77a26095c",
+    "output/tbms-e0mn-bridge-20260925/check-native-row-bank-initial.cjs": "97d009441ac7558666e905e0324095104daf75931c7b8e8f053a8f28140f50c4",
+    "output/tbms-e0mn-bridge-20260925/check-native-row-forest-closure.cjs": "a65ea5fe6dc701065529f49844ffc063115139b83d6236ff269869557aa0ff56",
+    "output/tbms-e0mn-bridge-20260925/NATIVE-ROW-ENDPOINT-CLOSURE.zh-CN.md": "9b87c77451e8c1c6598968f71868f650117e47fbc5dbbed77228b2d9d608c9d6",
+    "output/tbms-e0mn-bridge-20260925/NATIVE-ROW-BANK-BOUND.zh-CN.md": "dd558a61a0deb185fa49dd11cd413ba2de679305224a089815a5bc1ba5eba742",
+    "output/tbms-e0mn-bridge-20260925/finite-parent-capacity.cjs": "5d285fef664e79de63bc1f2432bf9a9c5ce5e59c0e38373964a8eb29de461e4c",
+    "output/tbms-e0mn-bridge-20260925/SPACED-PRIVATE-CONTROLLERS.zh-CN.md": "04cb00bf7e716cc1cb43be72b3a8848fe9c4c77eff2d4d03c11afe27300911cc",
+    "output/tbms-e0mn-bridge-20260925/POLYNOMIAL-ROW-BOUND.zh-CN.md": "f73fc1bc83b8557ae7746b702b69274661604119a2acd26c0a8d0da6a22f960a",
+    "output/e0mn-y13425810-20260920/finite-local-certificate.cjs": "176937db68818f6f720d286336c31b0a07401c246e1344c4f148307bf58854d1",
+    ".research-ne-rewritten/src/notations/notation_utils.ts": "c13f6bb79f4d5d44f99e99d779c0cce2c22401340163c84b1a5116daba58f932",
+    ".research-ne-rewritten/src/utils.ts": "5cc07aaf4932ee53bd6cb0623c2a2db90b339e98c9b9a7a6e25a96a8340f067a",
+    "output/tbms-e0mn-bridge-20260925/RECURSIVE-ENDPOINT-CLOSURE.zh-CN.md": "87cf2ddb84e4f1b3f1c4b4821bd876eaaa009be42dd3ea17a6c5a43f78b4ae6b",
+    "output/tbms-e0mn-bridge-20260925/RECURSIVE-ROW-BANK-BOUND.zh-CN.md": "d4247c4644d639a9ce1b5565c2e8e84408907166ad74d5b88e98f49950f600dd",
+    "output/tbms-e0mn-bridge-20260925/RECURSIVE-ROW-BANK-DESIGN.zh-CN.md": "808556f3a9fad3a888aee05650ed173adcf9b8570c8833b69c78361b26255674",
+    "output/tbms-e0mn-bridge-20260925/packet-recursive-row-bank-cover.cjs": "2167705cd24ad2ba0cfa66d8c28adde364692bb50823d493e704b6bfd96c6120",
+    "output/tbms-e0mn-bridge-20260925/check-recursive-row-bank-case.cjs": "30765f3182fc23bba269b813d3d4e1dbe03ccdac138c6f7043f026180ecd66a6",
+    "output/tbms-e0mn-bridge-20260925/check-recursive-row-bank-local.cjs": "33eb6bda8c2ea755cd2a455fe43cfc5bcf9063db53de04e5b49c4a1cedfd5fb6",
+    "output/tbms-e0mn-bridge-20260925/check-recursive-row-source-structure.cjs": "5f73908ec2dcacd2f5e48e7393c2fcad98975f7a0d26933c4d3e9a79f3342b5a",
+    "output/tbms-e0mn-bridge-20260925/check-recursive-prefix-contract.cjs": "265b0e2b98266c2d47ad7b6b83e111f4fe54e5f7d5dd8bec306b1b007b81d6cc",
+    "output/tbms-e0mn-bridge-20260925/RANKED-ROW-RESERVOIRS.zh-CN.md": "9e659e320bf9f4fdd7569a3ca4808f856974b9122b8e8b891e60ab838d66963d",
+    "output/tbms-e0mn-bridge-20260925/FIXED-CHILD-WHOLE-TBMS.zh-CN.md": "27e142915eb7247c8055ce426c2660fc66cda3061bd1e98fd9dcc47d783e9748",
+    "output/tbms-e0mn-bridge-20260925/fixed-child-recursive-row-bank.cjs": "817137d1673016ede8226bdb83ef6f2f8c1f223b3546140a68f5203ca5a213b1",
+    "output/tbms-e0mn-bridge-20260925/check-fixed-child-recursive-case.cjs": "54ba86455cf9f8b15ddbf1b775b6e9ab9fd53fb717245b746dec3803c0036f21",
+    "output/tbms-e0mn-bridge-20260925/check-fixed-child-recursive-local.cjs": "d1f96904d7b1cf81ffffcfb11e5724bbf8d2fca51e51ff16b8607e32cd73a783",
+    "output/tbms-e0mn-bridge-20260925/one-port-recursive-row-bank.cjs": "fb30310b8f29f34e5e1465982fa12e736dea645298619a506e55c66b98c53be4",
+    "output/tbms-e0mn-bridge-20260925/check-one-port-recursive-case.cjs": "ff42e8143c9f27c415d314674abc3e4340c4c1958ea77f9796d0b61d8a7854ea",
+    "output/tbms-e0mn-bridge-20260925/probe-tail47-template.cjs": "9224bc4ab9b8bdaf5eb998fc262a664ee3bdfbd96b4c8914885b12a3815bffe6",
+    "output/tbms-e0mn-bridge-20260925/ONE-PORT-WHOLE-TBMS.zh-CN.md": "f06d8c11cd71a5fe17a25e23ef391660bb756e726639c0c1e1bb4c81a77353e8",
+    "output/tbms-e0mn-bridge-20260925/trimmed-one-port-row-bank.cjs": "7f22288d659c3d174d1895b59dbc5c8b49aef28627ed076810f6833ced858e06",
+    "output/tbms-e0mn-bridge-20260925/check-trimmed-one-port-case.cjs": "6fc18c73ffe749f9c5716efd69585d9bb35da7239a7aed0048e67d5245577985",
+    "output/tbms-e0mn-bridge-20260925/check-trimmed-common-gate.cjs": "b01a04af2507acb96aa27c7e19bc69e4a282672437f90bebfc66682dbab3040f",
+    "output/tbms-e0mn-bridge-20260925/TRIMMED-ONE-PORT-SEED.zh-CN.md": "451eaf7025321793863691a22be887afc9ce6c168e1317485e9022d7f552e9cd",
+    "output/tbms-e0mn-bridge-20260925/probe-eleventh-count.cjs": "3e4f4e3dc81196bd72cab8e8b7048b3676778fc27c4d8ddf88df1dcd5eded1f1",
+    "output/tbms-e0mn-bridge-20260925/audit-eleventh-peak-barrier.cjs": "95508f2ba807fb230b593d1a1a601fcd486f04df38ba4b7e4f16372ecf657ae2",
+    "output/tbms-e0mn-bridge-20260925/ELEVENTH-COUNT-BARRIER.zh-CN.md": "c8692ec297bda95d21f633ff9084ac5e1ea32cc7261fea68894bb755eaf3c2df",
+    "output/tbms-e0mn-bridge-20260925/weak-archive-row-bank.cjs": "ebeeeb9bd5cf9b389a0d5048c2f80398d36651a56601e38ce1234d95cbe3dd09",
+    "output/tbms-e0mn-bridge-20260925/check-weak-archive-case.cjs": "f0e0a30bb66a557f9d3b1de96aedd9e61e6505db1179e53c60b8339b63ff1c21",
+    "output/tbms-e0mn-bridge-20260925/check-weak-archive-gate.cjs": "dde3808c2d3b641b4aa4dc532a9e29b6b0ed0975e79bee3e08698f3dd4314ca4",
+    "output/tbms-e0mn-bridge-20260925/WEAK-ARCHIVE-SEED.zh-CN.md": "0fcad903d94e72fca2f53e5e58836b1999b0782253fbf748dfb677070bfb79d9"
+  }
+}
