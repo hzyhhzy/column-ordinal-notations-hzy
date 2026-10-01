@@ -1,5 +1,15 @@
 # 来源、版本与许可证 · [English](SOURCES.md)
 
+## CTN 的命名与来源边界（2026-10-01）
+
+[CTN](notations/CTN/definition.zh-CN.md) 全称 **Comprehension Table Notation**，收录原研究名 CTN2 的线性基本列版。最初名为 CTN 的旧展开前端作废，不作为竞争定义收录；仓库外的原始研究文件没有删除或覆盖。
+
+来源为 `ck-pseudo-notation-20260927` 快照，小序数工作更新至 9 月 28 日。[provenance.json](notations/CTN/provenance.json) 记录六份实现／样例的原始与收录哈希及改动：JS 标签、ID、帮助改名；原 CTN2 Python 前端改为 `ctn.py`；共用逻辑检查器原样抽出为 `ctn_table.py`，不带入其后的废弃前端。稀疏生成器／辅助模块只改依赖和名称，ω^ω 数值证书以紧凑 JSON 完整保留。不加入约 70 MB 的原始串、ZIP、临时输出或私有绝对路径。
+
+双语定义把完整有限检查器与当前列规则整理为独立可读文档；[CK 初始段证明稿](proofs/paper/ctn-well-founded-part.zh-CN.md)合并已有逻辑树与后继填充论证，小序数文档保留原有纸面计算。这是整理与翻译，不是新的第三方终审。Harrison 定理和 ω-模型超算术封闭性在正文中注明来源，不复制其 PDF 或代码。CTN 全局不良序，没有 Lean 项目。本次不推定新增许可证，下述许可边界不变。
+
+[有限验证记录](tools/ctn-validation.json)固定实际收录代码及测试的哈希。语法 oracle 和样例不再导入废弃 CTN 展开器或私有 NER 工作目录；历史本地主站测试改为独立注册桩，所以此次不声称完成网页点击验收。其他记号及 Lean 源文件不变。
+
 ## SRPD 与 TBMS 分析整理（2026-09-28）
 
 [SRPD](notations/SRPD/definition.zh-CN.md) 是既有 RPD 低段的父列表坐标化，也是普通 e0MN `1,3` 以下的等价呈现；不是宣称重新发明了 e0MN。e0MN 与 strong e0MN 仍明确归属 @test_alpha0。NER 和 Python 来自本地 `m13-lists-20260926` 研究快照，均保持原数学规则和界面；[来源清单](notations/SRPD/provenance.json)固定两个实现与两个回归样例的原始及收录哈希。

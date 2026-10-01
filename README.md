@@ -2,9 +2,17 @@
 
 At 20:00 on September 11, @Phyrion published a [well-ordering proof for the Y-sequence system](https://github.com/Phyrion1343/1Y-Well-Ordering-Lean). Shortly afterwards, @test_alpha0 reduced the required axiomatic foundation to $KP_\omega+\text{there exists an uncountable ordinal}$. This repository collects RPD, LRD, Ω-LRD3, ARD, IPD, and ARD2, notation systems devised by GPT6-astra after studying those proofs, together with their well-ordering proofs. RPD admits a much shorter definition than Y; the paper comparison chain below proves it is at least as strong as the fixed 1Y definition. LRD and Ω-LRD3 are further extensions of that construction. ARD makes row labels into references to earlier columns, so the row coordinate itself moves during expansion. IPD uses finite-level iterated tree profiles and relocates references even inside nested heads. ARD2 returns to three natural-number coordinates, allowing both row and root SELF references and full-context root packages. All six admit paper well-ordering proofs in the same axiomatic system. Whole-system comparisons with omega-Y remain open; the specific known comparisons and common initial segments are recorded below.
 
-Definitions, executable fundamental sequences, and well-ordering proofs for column-diagram ordinal notations. This source snapshot was updated on **2026-09-28** for [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy). The suffix `hzy` refers to the repository owner's name.
+Definitions, executable fundamental sequences, and proof/status documents for column notations, including explicitly marked pseudo-orders. This source snapshot was updated on **2026-10-01** for [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy). The suffix `hzy` refers to the repository owner's name.
 
-The notation implementations are **SRPD, RPD, LRD, Ω-LRD3, ARD, IPD, ARD2, SPD, CWY, CWY2, Ω-CWY, ACD, CSD, ICP and FMP**, with the candidate/failed-version distinctions below. The Lean proof collection still covers only **Y, RPD, LRD, Ω-LRD3, ARD, IPD and ARD2**. ARD-legacy and ARD2-legacy are retained as explicit previous editions; other Ω-LRD variants are excluded. External e0MN implementations are credited separately, not counted as inventions of this project.
+The notation implementations are **SRPD, RPD, LRD, Ω-LRD3, ARD, IPD, ARD2, SPD, CWY, CWY2, Ω-CWY, ACD, CSD, ICP, FMP and CTN**, with the candidate/failed/pseudo-order distinctions below. The Lean proof collection still covers only **Y, RPD, LRD, Ω-LRD3, ARD, IPD and ARD2**. ARD-legacy and ARD2-legacy are retained as explicit previous editions; other Ω-LRD variants are excluded. External e0MN implementations are credited separately, not counted as inventions of this project.
+
+## CTN: a computable pseudo-order with a CK initial segment (2026-10-01)
+
+[**CTN — Comprehension Table Notation**](notations/CTN/definition.md) is the linear-limit system previously called **CTN2** in research files. It is now named CTN throughout this package; the original CTN frontend is retired and not included. The mathematical rules of the former CTN2 are unchanged.
+
+Its actual columns are just 1 and 2, compared lexicographically. Expansion deletes or replaces only the last column, A[0] deletes it, and A[n] is a full prefix of A[n+1]. Ending in 1 is exactly being a successor; non-successor fundamental sequences grow by exactly one column per index after their first term. `12=ω`.
+
+**The whole system is deliberately ill-founded.** The [bilingual paper argument](proofs/paper/ctn-well-founded-part.md) gives $\operatorname{otp}(\mathrm{WF}(\mathrm{CTN}))=\omega_1^{CK}$, not whole-system well-ordering or PTO(Z₂). The top `2` is not CK or a genuine ordinal. The package includes a six-view [NER expander](notations/CTN/CTN.ne-rewritten.js), [Python frontend](notations/CTN/ctn.py), separate finite-table checker, bilingual definitions and proof, and [small-ordinal locations](notations/CTN/small-ordinals.md). The ω^ω certificate is stored sparsely with its generator, not as a 69-million-column string. ε₀ remains unlocated. There is no CTN Lean project, new PDF, or change to other notations.
 
 ## SRPD: a common initial segment and TBMS comparisons (2026-09-28)
 
@@ -83,7 +91,7 @@ This too is a **paper comparison, not yet Lean-formalized**. It claims neither a
 
 ## Definitions and expanders
 
-Definitions are available in English and Chinese. Thirteen existing editions retain **52 Markdown/PDF definition artifacts** (including FMP); ACD, CSD, ICP and SRPD have eight further Markdown definitions without new PDFs. English Markdown is the default, with a title link to Chinese.
+Definitions are available in English and Chinese. Thirteen existing editions retain **52 Markdown/PDF definition artifacts** (including FMP); ACD, CSD, ICP, SRPD and CTN have ten further Markdown definitions without new PDFs. English Markdown is the default, with a title link to Chinese.
 
 | Notation | English definition | Chinese definition | NER expander | Python expander |
 | --- | --- | --- | --- | --- |
@@ -104,6 +112,7 @@ Definitions are available in English and Chinese. Thirteen existing editions ret
 | ACD — open | [Markdown](notations/ACD/definition.md) | [Markdown](notations/ACD/definition.zh-CN.md) | [JavaScript](notations/ACD/ACD.ne-rewritten.js) | [acd.py](notations/ACD/acd.py) |
 | CSD — open | [Markdown](notations/CSD/definition.md) | [Markdown](notations/CSD/definition.zh-CN.md) | [JavaScript](notations/CSD/CSD.ne-rewritten.js) | [csd.py](notations/CSD/csd.py) · [local clock](notations/CSD/local_clock.py) |
 | ICP — not well-ordered | [Markdown](notations/ICP/definition.md) | [Markdown](notations/ICP/definition.zh-CN.md) | [JavaScript](notations/ICP/ICP.ne-rewritten.js) | [icp.py](notations/ICP/icp.py) |
+| CTN — CK pseudo-order | [Markdown](notations/CTN/definition.md) | [Markdown](notations/CTN/definition.zh-CN.md) | [JavaScript](notations/CTN/CTN.ne-rewritten.js) | [ctn.py](notations/CTN/ctn.py) · [table checker](notations/CTN/ctn_table.py) |
 
 For the browser version, load the complete JavaScript file into the custom-notation facility of [ne-rewritten](https://smilelee-lyx.github.io/ne-rewritten/). Each file is an independent registration script; no build step is needed. Existing display modes and resource guards are preserved. The scripts also retain their original Chinese help text, including historical proof-status notes; the papers and validation record in this package state the current proof scope.
 

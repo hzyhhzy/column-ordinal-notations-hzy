@@ -1,5 +1,15 @@
 # Sources, versions and licenses · [中文版](SOURCES.zh-CN.md)
 
+## CTN naming and source boundary (2026-10-01)
+
+[CTN](notations/CTN/definition.md) means **Comprehension Table Notation**. It packages the linear-limit research edition previously named CTN2. The original CTN frontend is retired and not included as a competing definition. Original research files outside this repository were not deleted or overwritten.
+
+The source snapshot is `ck-pseudo-notation-20260927`, with small-ordinal work updated on September 28. [provenance.json](notations/CTN/provenance.json) records the six original/package implementation and fixture hashes and every adaptation: renamed JS labels/ID/help, the former CTN2 Python frontend renamed `ctn.py`, and extraction of the unchanged common logical checker as `ctn_table.py`. The obsolete frontend following that checker is excluded. The sparse generator/helper only change their imports and names; the exact numeric ω^ω certificate is retained in compact JSON. No approximately 70 MB raw word, ZIP, temporary output or private path is included.
+
+Bilingual definitions combine the finite checker and current frontend into a self-contained account. The [CK initial-segment manuscript](proofs/paper/ctn-well-founded-part.md) combines the existing logical-tree and padding arguments; the small-ordinal documents preserve the earlier paper calculations. This is packaging and translation, not independent referee certification. Harrison's theorem and the hyperarithmetic closure of ω-models are credited in the paper; their PDFs or source code are not vendored. CTN is globally ill-founded and has no Lean project. No new license is inferred by this addition; the repository's license boundary below remains unchanged.
+
+The [finite-validation receipt](tools/ctn-validation.json) pins the actual packaged code and tests. The test fixtures/grammar oracle no longer import an obsolete CTN expander or a private NER checkout. A standalone registration stub replaces the historical local-host harness; this run therefore makes no live-browser integration claim. Other notation and Lean source files are unchanged.
+
 ## SRPD and TBMS research packaging (2026-09-28)
 
 [SRPD](notations/SRPD/definition.md) is a parent-list coordinate presentation of an existing RPD segment, also presenting ordinary e0MN below `1,3`; it is not a claim to have reinvented e0MN. Both e0MN editions remain credited to @test_alpha0. NER and Python come from the local `m13-lists-20260926` research snapshot, with their rules and UI unchanged. The [provenance manifest](notations/SRPD/provenance.json) pins the original and packaged hashes of both implementations and two regression fixtures.

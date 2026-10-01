@@ -1,5 +1,27 @@
 # Snapshot validation · [中文版](VALIDATION.zh-CN.md)
 
+## 2026-10-01: CTN, formerly CTN2
+
+The linear-limit edition is now packaged as [CTN](notations/CTN/definition.md), with six-view NER, Python frontend, extracted logical checker, bilingual definition/proof and small-ordinal documents, sparse ω^ω fixture/generator, and portable tests. The original CTN frontend is not included. This changes names and packaging, not the former CTN2 mathematical rule. No Lean source, proof receipt, existing notation implementation or PDF was changed.
+
+Reproduce from the repository root:
+
+```sh
+python -B -m unittest discover -s tests -p 'ctn_*.py' -v
+node tests/ctn.cjs --print-reference-script | python -B - | node --max-old-space-size=256 tests/ctn.cjs --fixtures-stdin
+python -B notations/CTN/locate_omega_omega.py
+python -B tools/check_release.py
+```
+
+- **25 Python tests passed**, including 947 legal samples across five checker/tree cases, 722 bounded reachability pairs (maximum 13 rewrites; each search capped at 120), table clauses and exact ω²/ω³ addresses. The seven ω^ω checks regenerated all 4,352 nonzero fields, checked lengths 23,191,452 / 69,593,927, audited active formula addresses and tested the independent finite-fragment evaluator without materializing the raw word. Python reported 1.155 seconds for the suite.
+- JS agreed with Python on **8,191 input classifications, 1,093 table cases, 3,660 expansions of 305 terms and 24 sparse logical clauses**. Passed 1,830 display checks, 7,023 count checks and all six registered views. This was a standalone VM registration test, not a new live NER session. Node reported 386.2 ms and 56 MiB RSS, with a 256 MiB heap ceiling, 512 MiB RSS checkpoint and 45-second suite checkpoint.
+- The 355,021-column large sample was correctly refused by JS's existing 200,000-column guard. This **one guarded input is not a completed JS expansion**; Python's corresponding finite case completed. The 33,010-column table sample and 100,001-column open block completed in JS. No resource thresholds were raised.
+- Direct Node-to-Python child spawning was refused by the sandbox. The documented stdin-fixture pipeline completed without escalation; it preserves the same reference cases. Every launched test command exited; there is no background search.
+
+[provenance.json](notations/CTN/provenance.json) and the [run receipt](tools/ctn-validation.json) record hashes and scope. Finite testing does not establish the CK theorem, full source equivalence, or a new ε₀ location. The paper's global ill-foundedness and exact well-founded-part claim are distinct from the existing whole-system Lean proofs. No new PDF or browser visual review is claimed.
+
+Release checking passed: **195 Markdown files (114 bilingual, 81 individually listed historical archives), 50 existing PDFs, 2,023 local links and 20 pinned NER snapshots**. All 11 existing Lean receipt scopes / 338 modules remain current; 12 pinned external BMS source entries still await fetching for a fresh build. This is source/receipt checking, not a new Lean compilation. Git whitespace checking passed.
+
 ## 2026-09-28 supplement: final-route SRPD/TBMS pruning and replay
 
 At the user's request, the [dedicated directory](research/srpd-tbms/archive/README.md) retains only actual dependencies of the two final carrier routes. The imported inventory was reduced from 607 to 73 files: 25 original-language proof/lemma manuscripts, 39 research runtime/checking files, 2 route-specific verification records, 4 upstream sources and 3 compiled text modules. The 534 removed items were archival copies in Git; original research files outside it were untouched.

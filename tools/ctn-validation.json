@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "notation": "CTN",
+  "date": "2026-10-01",
+  "universal_proof": false,
+  "lean_build": false,
+  "browser_click_test": false,
+  "all_test_commands_exited": true,
+  "checked_files": [
+    {
+      "file": "notations/CTN/ctn_table.py",
+      "sha256_lf": "c7b2613603e646ba9c7b64bd1c352eb20af2b16accce9149ef491e0969a2f3b4"
+    },
+    {
+      "file": "notations/CTN/ctn.py",
+      "sha256_lf": "a8838d765069a3f48eb6d60e2754cb72efb9c42d2a34b5dfe9c892cf115c9c71"
+    },
+    {
+      "file": "notations/CTN/CTN.ne-rewritten.js",
+      "sha256_lf": "bf86d434760bb904886783fca76a2c7e5808e245eb4561068c78881ac30b104b"
+    },
+    {
+      "file": "notations/CTN/ctn_sparse.py",
+      "sha256_lf": "6ab48c4ad46e25a8686d8017dc1b5ee5bca3a759de030a3ff4d8afaba275df7f"
+    },
+    {
+      "file": "notations/CTN/locate_omega_omega.py",
+      "sha256_lf": "9ba1ba3ba5ff047ecd534948b30259b083edc98b17110ae09df2aa80f00a5d67"
+    },
+    {
+      "file": "notations/CTN/fixtures/omega-omega.sparse.json",
+      "sha256_lf": "a667f284b63e55c46553a8a944ebe5867d20ce184e68921c8458f1ff032275ed"
+    },
+    {
+      "file": "tests/ctn_table_cases.py",
+      "sha256_lf": "0d10c957da9c0df5749b121adcf1d8a7ea9682f8808711b34e9c353afa3d10c1"
+    },
+    {
+      "file": "tests/ctn_rules.py",
+      "sha256_lf": "25daa506429dff79079ba815851c63616b4626ba3d078743d6db514e12451bec"
+    },
+    {
+      "file": "tests/ctn_small_ordinals.py",
+      "sha256_lf": "d8e66fa26558cda05bb3daf4410b58bb3e34d543c6cb2929771e5e78e04c6ae1"
+    },
+    {
+      "file": "tests/ctn_omega_omega.py",
+      "sha256_lf": "559acf3a7c0ef2266282ed20195f94737ab6df07a01ad01b07834b756b13aca9"
+    },
+    {
+      "file": "tests/ctn.cjs",
+      "sha256_lf": "bbc75e4682a5fb997830c7aef3e829f972d430b961196dd7313429a3522e7a00"
+    }
+  ],
+  "runs": [
+    {
+      "id": "python",
+      "command": "python -B -m unittest discover -s tests -p 'ctn_*.py' -v",
+      "exit_code": 0,
+      "unit_tests": 25,
+      "legal_terms_across_five_test_trees": 947,
+      "bounded_reachability_pairs": 722,
+      "max_path_steps": 13,
+      "wall_seconds": 1.68125
+    },
+    {
+      "id": "ner",
+      "command": "node tests/ctn.cjs --print-reference-script | python -B - | node --max-old-space-size=256 tests/ctn.cjs --fixtures-stdin",
+      "exit_code": 0,
+      "wall_seconds": 0.7490167,
+      "passed": true,
+      "classifiedInputs": 8191,
+      "legalTerms": 305,
+      "tableCases": 1093,
+      "fsChecks": 3660,
+      "displayChecks": 1830,
+      "countChecks": 7023,
+      "sparseClauses": 24,
+      "views": 6,
+      "registration": "standalone VM stub; not browser clicks",
+      "benchmarks": [
+        {
+          "tableEntries": 1000,
+          "columns": 33010,
+          "ms": 3.19
+        },
+        {
+          "columns": 100001,
+          "ms": 3.11
+        }
+      ],
+      "oversizedInputGuards": 1,
+      "milliseconds": 386.2,
+      "rssMiB": 56
+    }
+  ],
+  "caveats": [
+    "Finite tests do not prove CK strength or universal source equivalence.",
+    "One 355021-column JS input was refused by the original 200000-column guard, not counted as a completed expansion.",
+    "Node heap is 256 MiB; RSS check is 512 MiB. These are not hard limits on combined process memory.",
+    "Direct Node-to-Python child spawning was blocked in this sandbox; the existing stdin-fixture route was used instead."
+  ]
+}

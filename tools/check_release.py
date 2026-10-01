@@ -77,6 +77,7 @@ MONOLINGUAL_ARCHIVES = frozenset({
     'research/README.md',
 })
 NER_HASHES = {
+    'notations/CTN/CTN.ne-rewritten.js': 'bf86d434760bb904886783fca76a2c7e5808e245eb4561068c78881ac30b104b',
     'notations/SRPD/SRPD.ne-rewritten.js': 'fdbd0d0788afe0cd6949cb280ffea4c85813bbd6d5e47d04e6a078e00bbee85a',
     'notations/FMP/FMP.ne-rewritten.js': '199fd418a9ac5a684d8e5232971f98552c8cb6607b1262668f11f80cbdbbda22',
     'notations/ACD/ACD.ne-rewritten.js': '1ee4a75ddab26088163219bd78d0cdd326cf0312840a5e0adb0006bd54a7609e',
@@ -318,12 +319,54 @@ def main():
     for path in pdfs:
         if not path.with_suffix('.md').is_file() or path.stat().st_size < 1000:
             problems.append(f'Invalid PDF/source pair: {path.relative_to(ROOT)}')
-    if {p.name for p in (ROOT/'notations').iterdir() if p.is_dir()} != {'SRPD','RPD','LRD','Omega-LRD3','ARD','ARD-legacy','IPD','ARD2','ARD2-legacy','SPD','CWY','CWY2','Omega-CWY','ACD','CSD','ICP','FMP'}:
+    if {p.name for p in (ROOT/'notations').iterdir() if p.is_dir()} != {'SRPD','RPD','LRD','Omega-LRD3','ARD','ARD-legacy','IPD','ARD2','ARD2-legacy','SPD','CWY','CWY2','Omega-CWY','ACD','CSD','ICP','FMP','CTN'}:
         problems.append('Unexpected notation directory')
     for relative, expected in NER_HASHES.items():
         actual = hashlib.sha256((ROOT/relative).read_bytes()).hexdigest()
         if actual != expected:
             problems.append(f'NER snapshot changed: {relative}')
+    # CTN is the former CTN2 frontend, not a new whole-system Lean theorem.
+    # Pin its renamed implementation and sparse artifact; do not revive old CTN.
+    try:
+        directory = ROOT / 'notations/CTN'
+        manifest = json.loads((directory / 'provenance.json').read_text(encoding='utf-8'))
+        if (manifest.get('schema_version') != 1 or manifest.get('notation') != 'CTN'
+                or manifest.get('previous_research_name') != 'CTN2'
+                or manifest.get('mathematical_rules_changed') is not False):
+            raise ValueError('Unexpected CTN provenance identity/scope')
+        expected = {'CTN.ne-rewritten.js', 'ctn.py', 'ctn_table.py', 'ctn_sparse.py',
+                    'locate_omega_omega.py', 'fixtures/omega-omega.sparse.json'}
+        records = manifest['files']
+        if len(records) != len(expected) or {r['file'] for r in records} != expected:
+            raise ValueError('Unexpected CTN implementation/fixture inventory')
+        for record in records:
+            if sha256_lf(directory / record['file']) != record['packaged_sha256']:
+                raise ValueError('CTN provenance hash mismatch: ' + record['file'])
+        fixture = json.loads((directory / 'fixtures/omega-omega.sparse.json').read_text(encoding='utf-8'))
+        if (fixture.get('table_length') != 23191452 or fixture.get('raw_columns') != 69593927
+                or len(fixture.get('nonzero_values', [])) != 4352):
+            raise ValueError('CTN sparse certificate dimensions changed')
+        receipt = json.loads((ROOT / 'tools/ctn-validation.json').read_text(encoding='utf-8'))
+        if (receipt.get('schema_version') != 1 or receipt.get('notation') != 'CTN'
+                or receipt.get('universal_proof') is not False
+                or receipt.get('lean_build') is not False
+                or receipt.get('browser_click_test') is not False
+                or receipt.get('all_test_commands_exited') is not True):
+            raise ValueError('Unexpected CTN finite-validation scope')
+        expected_checks = {'notations/CTN/' + name for name in expected} | {
+            'tests/ctn.cjs', 'tests/ctn_table_cases.py', 'tests/ctn_rules.py',
+            'tests/ctn_small_ordinals.py', 'tests/ctn_omega_omega.py'}
+        checks = receipt['checked_files']
+        if len(checks) != len(expected_checks) or {r['file'] for r in checks} != expected_checks:
+            raise ValueError('Unexpected CTN finite-validation inventory')
+        for record in checks:
+            if sha256_lf(ROOT / record['file']) != record['sha256_lf']:
+                raise ValueError('Stale CTN finite-validation record: ' + record['file'])
+        runs = receipt['runs']
+        if len(runs) != 2 or {r['id'] for r in runs} != {'python', 'ner'} or any(r['exit_code'] != 0 for r in runs):
+            raise ValueError('CTN finite-validation runs did not complete')
+    except (ValueError, KeyError, OSError) as error:
+        problems.append('CTN import/finite-validation manifest: ' + str(error))
     # Keep FMP's imported implementation provenance separate from proof status.
     try:
         directory = ROOT / 'notations/FMP'

@@ -2,9 +2,17 @@
 
 9 月 11 日 20:00，@Phyrion 公布了 [Y 序列的良序证明](https://github.com/Phyrion1343/1Y-Well-Ordering-Lean)。不久后，@test_alpha0 进一步将所需的公理体系降低到 $KP_\omega+\text{存在不可数序数}$。本仓库收录 GPT6-astra 在阅读上述证明后设计的 RPD、LRD、Ω-LRD3、ARD、IPD、ARD2，以及它们的良序证明。其中，RPD 的定义所需篇幅短得多；下面的纸面比较链证明其序型不小于固定版本 1Y。LRD 和 Ω-LRD3 则是在此基础上进一步扩展得到的记号。ARD 则把行标改为此前列的地址，使行坐标本身也随展开移动。IPD 则使用有限层迭代树轮廓，连嵌套头内的引用也随列搬运。ARD2 回到每组仅三个自然数坐标的形式，允许行与根同时引用本列，并生成覆盖全上下文的根包。六者均有同一公理体系下的纸面良序证明。它们与 omega-Y 的整体比较仍未解决；已知的具体比较和公共初段见下文。
 
-本仓库收录列图序数记号的定义、可执行基本列展开器和良序证明。源码快照更新于 **2026-09-28**，仓库地址为 [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy)。名称中的 `hzy` 来自仓库所有者的名字。
+本仓库收录列式记号的定义、可执行基本列展开器与证明／状态说明，也包含明确标注的伪序记号。源码快照更新于 **2026-10-01**，仓库地址为 [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy)。名称中的 `hzy` 来自仓库所有者的名字。
 
-记号实现收录 **SRPD、RPD、LRD、Ω-LRD3、ARD、IPD、ARD2、SPD、CWY、CWY2、Ω-CWY、ACD、CSD、ICP、FMP**，其中候选和失败版本明确区分；Lean 证明仍只覆盖 **Y、RPD、LRD、Ω-LRD3、ARD、IPD、ARD2**。另保留旧版 ARD-legacy、ARD2-legacy，其他 Ω-LRD 版本不收录。外部 e0MN 实现单独署名，不算本项目发明。
+记号实现收录 **SRPD、RPD、LRD、Ω-LRD3、ARD、IPD、ARD2、SPD、CWY、CWY2、Ω-CWY、ACD、CSD、ICP、FMP、CTN**，其中候选、失败版本和伪序记号明确区分；Lean 证明仍只覆盖 **Y、RPD、LRD、Ω-LRD3、ARD、IPD、ARD2**。另保留旧版 ARD-legacy、ARD2-legacy，其他 Ω-LRD 版本不收录。外部 e0MN 实现单独署名，不算本项目发明。
+
+## CTN：良序初始段为 CK 的可计算伪序（2026-10-01）
+
+[**CTN — Comprehension Table Notation，概括表伪序记号**](notations/CTN/definition.zh-CN.md)，即研究文件中原称 **CTN2** 的线性基本列版。现在统一命名为 CTN；最初名为 CTN 的旧展开规则作废，不另行收录。原 CTN2 的数学规则不变。
+
+实际列只有 1、2，按普通字典序比较。展开只删改末列，A[0] 删末列，A[n] 是 A[n+1] 的完整前缀；末列 1 恰好判别后继，非后继基本列在第 1 项之后每次恰增加一列。`12=ω`。
+
+**全系统特意不是良序。** [双语纸面论证](proofs/paper/ctn-well-founded-part.zh-CN.md)给出 $\operatorname{otp}(\mathrm{WF}(\mathrm{CTN}))=\omega_1^{CK}$，不是全体良序证明，也不是 PTO(Z₂) 定位；顶端 `2` 不等于 CK，不代表真实序数。收录六视图 [NER](notations/CTN/CTN.ne-rewritten.js)、[Python 前端](notations/CTN/ctn.py)、独立有限表检查器、双语定义与证明、[小序数定位](notations/CTN/small-ordinals.zh-CN.md)。ω^ω 只保存稀疏证书和生成器，不加入近 7000 万列的原始串；ε₀ 尚未定位。没有 CTN Lean 项目或新增 PDF，也不修改其他记号。
 
 ## SRPD：公共初段与 TBMS 比较（2026-09-28）
 
@@ -83,7 +91,7 @@ $$\alpha_{1Y}\le\alpha_{\mathrm{RPD}}<\alpha_{\mathrm{ARD}}
 
 ## 定义与展开器
 
-定义提供中英文。RPD 等十三个既有版本保留 **52 份 Markdown／PDF 定义文件**（含 FMP）；ACD、CSD、ICP、SRPD 另有八份 Markdown 定义，不新增 PDF。Markdown 默认英文，标题链接到中文版。
+定义提供中英文。RPD 等十三个既有版本保留 **52 份 Markdown／PDF 定义文件**（含 FMP）；ACD、CSD、ICP、SRPD、CTN 另有十份 Markdown 定义，不新增 PDF。Markdown 默认英文，标题链接到中文版。
 
 | 记号 | 英文定义 | 中文定义 | NER 展开器 | Python 展开器 |
 | --- | --- | --- | --- | --- |
@@ -104,6 +112,7 @@ $$\alpha_{1Y}\le\alpha_{\mathrm{RPD}}<\alpha_{\mathrm{ARD}}
 | ACD — 良序未决 | [Markdown](notations/ACD/definition.md) | [Markdown](notations/ACD/definition.zh-CN.md) | [JavaScript](notations/ACD/ACD.ne-rewritten.js) | [acd.py](notations/ACD/acd.py) |
 | CSD — 良序未决 | [Markdown](notations/CSD/definition.md) | [Markdown](notations/CSD/definition.zh-CN.md) | [JavaScript](notations/CSD/CSD.ne-rewritten.js) | [csd.py](notations/CSD/csd.py) · [局部计数](notations/CSD/local_clock.py) |
 | ICP — 已知非良序 | [Markdown](notations/ICP/definition.md) | [Markdown](notations/ICP/definition.zh-CN.md) | [JavaScript](notations/ICP/ICP.ne-rewritten.js) | [icp.py](notations/ICP/icp.py) |
+| CTN — CK 伪序 | [Markdown](notations/CTN/definition.md) | [Markdown](notations/CTN/definition.zh-CN.md) | [JavaScript](notations/CTN/CTN.ne-rewritten.js) | [ctn.py](notations/CTN/ctn.py) · [表检查器](notations/CTN/ctn_table.py) |
 
 网页版：把所选 JavaScript 文件的完整内容载入 [ne-rewritten](https://smilelee-lyx.github.io/ne-rewritten/) 的自定义记号功能。每份文件均独立注册，无需构建；保留已有显示方式及资源保护。脚本也保留原来的中文帮助文字，其中可能有历史证明进度说明；当前证明范围以本包论文及验收记录为准。
 

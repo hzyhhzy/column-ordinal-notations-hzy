@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "notation": "CTN",
+  "previous_research_name": "CTN2",
+  "packaged_date": "2026-10-01",
+  "source_snapshot": "ck-pseudo-notation-20260927; ordinal locations updated 2026-09-28",
+  "retired": "The original CTN frontend is not included. Only its common logical table checker is extracted.",
+  "mathematical_rules_changed": false,
+  "proof_status": "Paper argument for ill-foundedness and WF order type omega_1^CK; not Lean-certified.",
+  "hash_policy": "original_sha256 is source-file bytes; packaged_sha256 is LF-normalized package bytes.",
+  "files": [
+    {
+      "file": "ctn_table.py",
+      "source_name": "ctn.py",
+      "original_sha256": "f6286979dfe6f4956e9e8e16ec860488755c14ba8e0134990dad3cbf44413ab1",
+      "changes": "Extract only the unchanged logical table checker; discard the obsolete frontend.",
+      "packaged_sha256": "c7b2613603e646ba9c7b64bd1c352eb20af2b16accce9149ef491e0969a2f3b4"
+    },
+    {
+      "file": "ctn.py",
+      "source_name": "ctn2.py",
+      "original_sha256": "5644d0279638366edeb45d04fe86b3cb4cc8e879de29b900f34d9d4288cad742",
+      "changes": "Rename CTN2 to CTN; import the extracted checker. Expansion and domain rules unchanged.",
+      "packaged_sha256": "a8838d765069a3f48eb6d60e2754cb72efb9c42d2a34b5dfe9c892cf115c9c71"
+    },
+    {
+      "file": "CTN.ne-rewritten.js",
+      "source_name": "CTN2.ne-rewritten.js",
+      "original_sha256": "b2df235c1d0b46bf3f46760ec4b978621900097699fbcb388a2fa818e44f5baa",
+      "changes": "Rename labels, input alias and registration ID; adjust documentation. All mathematical/display functions otherwise unchanged.",
+      "packaged_sha256": "bf86d434760bb904886783fca76a2c7e5808e245eb4561068c78881ac30b104b"
+    },
+    {
+      "file": "ctn_sparse.py",
+      "source_name": "ctn_sparse.py",
+      "original_sha256": "b1bbccce44fcb7738840c1a93c3492480c0cf77c9394a6ba93c7de058ea280d8",
+      "changes": "Rename dependency and metadata only; same sparse calculation.",
+      "packaged_sha256": "6ab48c4ad46e25a8686d8017dc1b5ee5bca3a759de030a3ff4d8afaba275df7f"
+    },
+    {
+      "file": "locate_omega_omega.py",
+      "source_name": "locate_ctn2_omega_omega.py",
+      "original_sha256": "2363b250cdb7b7caa8e392006f72b46aeb34c7517a13ebfe64dc21e75f543c20",
+      "changes": "Rename dependency and metadata only; same sparse calculation.",
+      "packaged_sha256": "9ba1ba3ba5ff047ecd534948b30259b083edc98b17110ae09df2aa80f00a5d67"
+    },
+    {
+      "file": "fixtures/omega-omega.sparse.json",
+      "source_name": "CTN2-omega-omega.sparse.json",
+      "original_sha256": "b137345833b2d467e2d1045d8ef5db2ff117dfaae31591fd8d2db2b856d50210",
+      "changes": "Same numeric fixture, compact JSON and current name; no expanded 69-million-column word.",
+      "packaged_sha256": "a667f284b63e55c46553a8a944ebe5867d20ce184e68921c8458f1ff032275ed"
+    }
+  ]
+}
