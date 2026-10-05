@@ -6,6 +6,8 @@ The original-language manuscripts and their mathematical supporting notes are in
 
 ## 1. Conventions and versions
 
+2026-10-06 addition: the [SRPD/TBMS/Y overview at the research pause](../srpd-tbms/continuation/README.md) and [proof guide](../srpd-tbms/continuation/PROOF-ROUTES.md) collect subsequent positive results, including the whole-TBMS D44 carrier, the ω³-row equality, and the historical-premise-dependent Y(S9) lower bound. The September 28 paragraph below is an older baseline, not the latest status. Neither archive layer changes this page's frozen historical import manifest.
+
 2026-09-28 addition: the [bilingual SRPD/TBMS summary](../srpd-tbms/README.md), [final-route material and replay guide](../srpd-tbms/archive/README.md), and [common-segment argument](../../notations/SRPD/correspondence.md). SRPD's strict initial cone corresponds to RPD `1,2`, ARD/ARD2 `1,1,3`, IPD `1,2` and ordinary e0MN `1,3`, with the stated finite-bottom and endpoint-index alignment. The summary records the whole ordinary-TBMS paper bound, the improved special carrier for `()(1^ε₀)` and the open `…6,7,9` candidate. No Lean comparison is added; only actual final-route dependencies are retained, separate from the frozen historical import manifest below.
 
 2026-09-23 addition: the new bilingual [BMS-to-FMP paper](../../proofs/paper/bms-le-fmp-12242444.md) supplies a direct original-FMP proof, with a bundled bounded audit. It is separate from the unchanged historical import manifest.

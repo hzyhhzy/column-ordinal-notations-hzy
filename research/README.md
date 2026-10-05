@@ -4,6 +4,14 @@ This directory keeps exploratory order-type comparisons separate from the well-o
 
 本目录专门存放推导、比较思路与未完成结论，不与正式良序证明或 Lean 已验证定理混在一起。每份总结区分纸面论证、局部引理、程序核验及未证候选。
 
+## SRPD versus TBMS and Y / SRPD、TBMS、Y 比较（2026-10-06）
+
+[English overview](srpd-tbms/continuation/README.md) · [中文总览](srpd-tbms/continuation/README.zh-CN.md) · [Proof guide / 推导过程](srpd-tbms/continuation/PROOF-ROUTES.zh-CN.md) · [原稿目录](srpd-tbms/continuation/CATALOGUE.md).
+
+The paused research is collected here: tighter whole-TBMS carriers, concrete TBMS/Y rank equalities, successive conditional Y lower bounds for all SRPD, and the last local resource interfaces. The original 73-item runnable archive remains intact. Failed-route notebooks are excluded; hypotheses and open directions are retained. Archival checks do not verify mathematics.
+
+本次整理收录更紧的全体 TBMS 承载、TBMS／Y 的具体秩等号、全体 SRPD 的条件性 Y 下界推进，以及暂停前的共同容量／有限准备引理。最新 S9 下界仍依赖明列历史接口，主候选末尾17,10尚未解决；没有新增 Lean 证明、修改记号或继续研究。原始／整理后哈希及删节位置可查，历史浏览器的映射范围另作说明。
+
 ## DQDN collected results and proofs / 结论与证明（2026-10-06）
 
 [English index](dqdn/README.md) · [中文总览](dqdn/README.zh-CN.md). The DQDN archive keeps the complete Chinese small-ordinal derivations, 41-row view table, epsilon-zero/tower proofs, Veblen and Buchholz carrier bounds, the BMS-to-TOP[2] comparison and the global PTO(Zω) lower-bound interface. English companions state the evidence boundary; the long location document is an explicitly condensed reading edition. Bounded portable helpers and tests are included under `dqdn/code/`, with runtime dependencies in `notations/DQDN/`.
@@ -29,6 +37,6 @@ The notes are currently in Chinese. They include a paper-level Y≤RPD argument 
 
 先读总结，再读 `archive/` 中的原稿。原稿的证明进展、时间和测试结果是历史记录；与较新总结有区别时，以明确标注的最新结论为准。共同的良序公理上界、局部编码或有限计数，不能代替两个序型的大小证明。
 
-本目录只收录研究文档与候选 JSON 数据，不收录私人来源 PDF、实验代码、机器缓存或后台搜索结果目录。指向仓库内已有定义的链接已转换为相对链接；未收录的原工作区文件改为明确标注的路径记录，不伪装成可用下载链接。历史复核命令依赖那些未随文档归档的脚本，不能直接在新克隆的仓库中执行。
+较早的文稿档案只收录研究文档与候选 JSON 数据；较新的可运行材料以各专题导读明确列出的范围为准。不收录私人来源 PDF、机器缓存或后台搜索目录。指向仓库内已有定义的链接使用相对路径；未收录的工作区文件明确标为来源记录，不伪装成下载链接。历史命令若依赖未打包脚本，不能直接在新克隆的仓库中执行。
 
 The older archive did not change notation definitions or expanders. The 2026-09-20 import adds the explicitly listed implementations without changing the existing formal proofs. See the [repository overview](../README.md) or [中文主页](../README.zh-CN.md).

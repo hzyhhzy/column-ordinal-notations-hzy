@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-06",
+  "purpose": "Read-only archival QA, not mathematical review or resumed research",
+  "research_status": "paused",
+  "continuation": {
+    "status": "archive identity, inventory, relative file links and viewer syntax verified",
+    "importedFiles": 300,
+    "kinds": {
+      "original-language-proof-excerpt": 290,
+      "historical-finite-check-record": 7,
+      "standalone-historical-explorer": 3
+    },
+    "bytesLF": 3719290,
+    "markdownFiles": 304,
+    "relativeLinks": 2945,
+    "viewerSyntaxChecks": 3,
+    "researchStatus": "paused",
+    "mathematicalProofVerified": false
+  },
+  "baseline_integrity": {
+    "schema_version": 1,
+    "status": "hashes and exact imported inventory verified",
+    "manifest_sha256_lf": "41e9b307324156545e05ce64735681aa7014c1da916608f8e4163a78c2329033",
+    "imported_files": 73,
+    "original_language_manuscripts": 25,
+    "kinds": {
+      "historical-evidence": 2,
+      "original-language-manuscript": 25,
+      "research-code": 39,
+      "upstream-source": 4,
+      "upstream-transpilation": 3
+    },
+    "bytes_lf": 961890,
+    "universal_proof": false
+  },
+  "baseline_smoke": {
+    "suite": "smoke",
+    "status": "bounded archive replay reproduced",
+    "counts": {
+      "passed": 6
+    },
+    "cases": 6,
+    "max_reported_rss_mib": 377.2109375,
+    "all_children_exited": true,
+    "limits": {
+      "node_heap_mib": 512,
+      "outer_timeout_seconds": 30,
+      "max_concurrent_children": 1,
+      "original_simulator_guards_retained": true
+    },
+    "checks": [
+      {
+        "id": "weak:0",
+        "status": "passed",
+        "process_exited": true,
+        "historical_semantics_match": true
+      },
+      {
+        "id": "weak:1",
+        "status": "passed",
+        "process_exited": true,
+        "historical_semantics_match": true
+      },
+      {
+        "id": "weak:local",
+        "status": "passed",
+        "process_exited": true,
+        "historical_semantics_match": true
+      },
+      {
+        "id": "weak:common-gate",
+        "status": "passed",
+        "process_exited": true,
+        "historical_semantics_match": true
+      },
+      {
+        "id": "epsilon:0",
+        "status": "passed",
+        "process_exited": true,
+        "historical_semantics_match": true
+      },
+      {
+        "id": "epsilon:5",
+        "status": "passed",
+        "process_exited": true,
+        "historical_semantics_match": true
+      }
+    ]
+  },
+  "new_lean_theorems": 0,
+  "mathematical_proof_verified": false,
+  "notation_rules_changed": false,
+  "historical_viewer_ui_retested": false
+}

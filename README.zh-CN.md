@@ -22,7 +22,7 @@ TOP[1] 的纸面值为 ε₀，TOP[2] 的计数字为 `1,2,1,2`。NER 默认六�
 
 **全系统特意不是良序。** [双语纸面论证](proofs/paper/ctn-well-founded-part.zh-CN.md)给出 $\operatorname{otp}(\mathrm{WF}(\mathrm{CTN}))=\omega_1^{CK}$，不是全体良序证明，也不是 PTO(Z₂) 定位；顶端 `2` 不等于 CK，不代表真实序数。收录六视图 [NER](notations/CTN/CTN.ne-rewritten.js)、[Python 前端](notations/CTN/ctn.py)、独立有限表检查器、双语定义与证明、[小序数定位](notations/CTN/small-ordinals.zh-CN.md)。ω^ω 只保存稀疏证书和生成器，不加入近 7000 万列的原始串；ε₀ 尚未定位。没有 CTN Lean 项目或新增 PDF，也不修改其他记号。
 
-## SRPD：公共初段与 TBMS 比较（2026-09-28）
+## SRPD：公共初段及 TBMS／Y 比较（整理至 2026-10-06）
 
 [**SRPD**](notations/SRPD/definition.zh-CN.md) 现作为独立记号收录：每列只是非增父列表，首根隐含；提供 [NER 展开器](notations/SRPD/SRPD.ne-rewritten.js)、[Python 核心](notations/SRPD/srpd.py)、双语定义与[公共初段／良序转移说明](notations/SRPD/correspondence.zh-CN.md)。NER 保留父列表、计数序列及带还原检查的 BMS 式高度列表三种显示，原展开规则不变。
 
@@ -38,9 +38,9 @@ TOP[1] 的纸面值为 ε₀，TOP[2] 的计数字为 `1,2,1,2`。NER 默认六�
 
 这是初段序型的对应，**不是整个 RPD 等于 SRPD**。原始投影的有限底部、隐含根与顶端基本列的一位偏移须按对应说明处理；不能无条件把所有原始字符串或展开指标视为相同。良序性通过 RPD 初段转移，仍沿用已有纸面弱 KP 上界；**此次没有新增 SRPD Lean 定理**，也未更改原七系统证明。
 
-[**SRPD vs TBMS 双语分析汇总**](research/srpd-tbms/README.zh-CN.md)只整理最终路线：整个普通 TBMS 的当前承载界，以及 `TBMS ()(1^ε₀)` 的更紧专用界。已有纸面下降模拟给出整个 TBMS 极限严格小于 SRPD 的 `1,2,4,8,4,2`，并进一步压到其第一基本列项之下的固定式；这不是仅凭计数作出的比较。最新 `…6,7,9` 仍是未决候选。文稿明确区分纸面论证、有限核验和未证结论，不声称已完成 Lean 比较或规范逐指标转换器。
+[**SRPD vs TBMS／Y 双语汇总**](research/srpd-tbms/README.zh-CN.md)现已补齐暂停时的正向成果。全体 TBMS 的纸面界为 `TBMS Limit≤SRPD(1,2,4,8,4,1,2,9,38,4,12,42,44)<SRPD(1,2,4,8,4,2)`；前一个界的反向未完成。另保存 TBMS 至 ω³ 行节点的等号、Y 的具体等值点，以及最高完整 Y 下界 `Y(1,3,4,2,5,8,10,4,9,14,16,6,9)≤lim(SRPD)`；**该 Y 下界仍依赖明列历史接口，未整链独立重审、未 Lean**。主候选末尾 `17,10` 仍开放。秩等号、持续模拟、规范保序映射和有限检查分别标明，不混为一谈。
 
-要了解**完整证明过程与“怎么嵌入”**，请从[证明档案导读](research/srpd-tbms/archive/README.zh-CN.md)开始：25篇必要证明／引理及其模拟器、运行依赖和2份路线核验记录（共73份导入材料）集中放在 `research/srpd-tbms/archive/`，附双语阅读顺序、纸面步骤与函数对照及仓库内复现入口，不散放到顶层。
+要了解**完整证明过程与“怎么嵌入”**，请读[新增双语推导导读](research/srpd-tbms/continuation/PROOF-ROUTES.zh-CN.md)和[分类原稿目录](research/srpd-tbms/continuation/CATALOGUE.md)。续篇保存 290 篇原语言正向论证／辅助稿、7 份有限核验回执及3个历史 NER 浏览器；未将这些篇数算作已验证定理数。原[73项可复现档案](research/srpd-tbms/archive/README.zh-CN.md)保持不动。研究已暂停，本次不新增 Lean 定理或修改记号展开规则。
 
 ## FMP：有限映射的完整补点（2026-09-23）
 
@@ -171,7 +171,7 @@ Y 指固定上游提交 `1689b21131b488ec2ba2515bd630360371a2389d` 的继承祖�
 
 [研究目录](research/README.md)专门保存推导与比较草稿，与形式化证明分开放置。先读 [2026-09-20 双语比较总览](research/order-comparisons/README.zh-CN.md)。较早的 [IPD 比较总览](research/ordinal-comparisons-20260914/README.zh-CN.md)保存 Y≤RPD 的纸面比较、RPD/Y/wY/ARD/TPD 的 IPD 上界候选，以及 ARD2 与 IPD 的后续研究。总结区分纸面论证、局部引理、有限核验和未证候选；归档不等于完成跨记号的 Lean 认证。
 
-其他研究档案保留各自指定的原稿与候选数据；SRPD／TBMS 本次只保留最终路线实际使用的证明、程序依赖与核验记录，不收录全部历史引用链。私人来源 PDF 与无关研究缓存不归档。历史测试记录与正式仓库当前证明进度应分别阅读。
+其他研究档案保留各自指定的原稿与候选数据；SRPD／TBMS 的原可运行档案与新增 TBMS／Y 正向文稿分层保存，来源清单标明删节及未打包的研究引用，不导入失败路线日志。私人来源 PDF 与无关研究缓存不归档。历史测试记录与正式仓库当前证明进度应分别阅读。
 
 ## 给 AI 阅读的文档
 

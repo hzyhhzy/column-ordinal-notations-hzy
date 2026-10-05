@@ -1,0 +1,226 @@
+{
+  "complete": true,
+  "diagnosticOnly": true,
+  "targetOnly": true,
+  "limits": {
+    "ms": 20000,
+    "targetWidth": 500,
+    "events": 6000,
+    "cells": 150000,
+    "cases": 12,
+    "rssMiB": 600,
+    "heapMiB": 400
+  },
+  "cases": [
+    {
+      "preparations": 1,
+      "copies": 1,
+      "targetWidth": 40,
+      "controls": 14,
+      "Q": 34
+    },
+    {
+      "preparations": 1,
+      "copies": 2,
+      "targetWidth": 59,
+      "controls": 14,
+      "Q": 53
+    },
+    {
+      "preparations": 1,
+      "copies": 3,
+      "targetWidth": 78,
+      "controls": 14,
+      "Q": 72
+    },
+    {
+      "preparations": 2,
+      "copies": 1,
+      "targetWidth": 60,
+      "controls": 20,
+      "Q": 54
+    },
+    {
+      "preparations": 2,
+      "copies": 2,
+      "targetWidth": 99,
+      "controls": 20,
+      "Q": 93
+    },
+    {
+      "preparations": 2,
+      "copies": 3,
+      "targetWidth": 138,
+      "controls": 20,
+      "Q": 132
+    },
+    {
+      "preparations": 3,
+      "copies": 1,
+      "targetWidth": 81,
+      "controls": 26,
+      "Q": 75
+    },
+    {
+      "preparations": 3,
+      "copies": 2,
+      "targetWidth": 141,
+      "controls": 26,
+      "Q": 135
+    },
+    {
+      "preparations": 3,
+      "copies": 3,
+      "targetWidth": 201,
+      "controls": 26,
+      "Q": 195
+    },
+    {
+      "preparations": 4,
+      "copies": 1,
+      "targetWidth": 103,
+      "controls": 32,
+      "Q": 97
+    },
+    {
+      "preparations": 4,
+      "copies": 2,
+      "targetWidth": 185,
+      "controls": 32,
+      "Q": 179
+    },
+    {
+      "preparations": 4,
+      "copies": 3,
+      "targetWidth": 267,
+      "controls": 32,
+      "Q": 261
+    }
+  ],
+  "independentFS": 90,
+  "independentDowns": 594,
+  "normalizedTables": 570,
+  "events": 1254,
+  "maxTargetWidth": 267,
+  "uniformControlsVerified": 876,
+  "elapsedMs": 339,
+  "rssMiB": 60.3203125,
+  "dependencies": [
+    {
+      "file": "../e0mn-y134258-hierarchical-20260920/ladder-cover.cjs",
+      "sha256": "1a25714e4eae942046a732a6076e1f9f16b082d790cedd75d9f8c2e9eca1bb4d"
+    },
+    {
+      "file": "../e0mn-y134258-hierarchical-20260920/nested-source.cjs",
+      "sha256": "b92f29204e3bb3370e365eea37eae21b82765e326c8486e77d68dd35c2724ca5"
+    },
+    {
+      "file": "../e0mn-y134258-m12484-20260920/tight-initialization.cjs",
+      "sha256": "447c47d5077b6eab3a972df6d9e9fdb726a5138c4ae5106efe5b3a4779a5e179"
+    },
+    {
+      "file": "../e0mn-y134258a-20260920/omega-star-simulation.cjs",
+      "sha256": "c6c94724fa41798719b2328940dead53aae246a5033ad118b4f05c894cd15cf8"
+    },
+    {
+      "file": "../e0mn-y1343-greedy-20260920/abstract-greedy.cjs",
+      "sha256": "0d5005be4f24035066f69209908f5698250ea131b964dd6e762a2d27f5218612"
+    },
+    {
+      "file": "../e0mn-y1343-greedy-20260920/greedy-cover.cjs",
+      "sha256": "1614c1c526c03a6bdab0b0e181b7a0da88cb64f5c99883611b41f1c8dd9ff823"
+    },
+    {
+      "file": "../e0mn13-y-location-20260920/banded-source.cjs",
+      "sha256": "4c9f2921f1bdb50f10c6194d07c241f92498957a00308e3c1b378e5e771f321a"
+    },
+    {
+      "file": "../e0mn13-y-location-20260920/direct-source.cjs",
+      "sha256": "6ea3b8e3cf03065380a8ee7f94822975b77da1fb023539412824da64c0e705d2"
+    },
+    {
+      "file": "../e0mn13-y-location-20260920/graded-bands-real.cjs",
+      "sha256": "902b305707e4a6441d6782088cedcd7ce279903a46d514982fc8fc9497237a81"
+    },
+    {
+      "file": "../e0mn13-y-location-20260920/graded-bands.cjs",
+      "sha256": "6bd8a6550235e3e554bf1081d733a832e0d68d86e27ffee9fde5c1271c681f8e"
+    },
+    {
+      "file": "../rpd-to-e0mn-20260917/probe.cjs",
+      "sha256": "664897a9ce4d69bdbba79a2fe403beb99cfc4b5ad70909e830500029a6ef4aa7"
+    },
+    {
+      "file": "../rpd-y-converter-20260914/rpd-engine.cjs",
+      "sha256": "6c9c2e78f860b1fdba17f57013d1e39223dce81f931392fc82abada1b6c551b3"
+    },
+    {
+      "file": "../rpd-y-converter-20260914/y-engine.cjs",
+      "sha256": "be925554b24699d0b8ee34a5135ec56e80a39112bec931ba5876568135216ab8"
+    },
+    {
+      "file": "../rpd-y-converter-20260914/y-mountain.cjs",
+      "sha256": "26b23fdc551c321ada6ade6ce39b9b0e8befbf19e54c67b9036be99d426d7191"
+    },
+    {
+      "file": "buffered-uniform-control-pumps.cjs",
+      "sha256": "174628e63e114f62c71296a48028dba6b76e52372fbad4b5546f0a378c5b2cb6"
+    },
+    {
+      "file": "check-buffered-pumps-independent.cjs",
+      "sha256": "b74998b46e6503686f77f4b627cedf5bf01d2c200610f505e74623646f9d37f4"
+    },
+    {
+      "file": "compact-raw-ladder-cover.cjs",
+      "sha256": "eb126bebc7f9e277f726e67c267007e0875f941de33925befb91b3571a0f8119"
+    },
+    {
+      "file": "external-control-registry.cjs",
+      "sha256": "585d6bad2a4f7a10b3a8a46a6437e8bb514fd40069cf46796a45a115080c7595"
+    },
+    {
+      "file": "external-reserve-pump.cjs",
+      "sha256": "b6994640f19da12690bfb80fd2c1532039e94a40e8feff3fe28f0f0b47a19bf7"
+    },
+    {
+      "file": "private-buffer-step.cjs",
+      "sha256": "9d619af654e792b88aad546be3e56c07af8b4c21244c42e8d1cefa8d61a9a25f"
+    },
+    {
+      "file": "uniform-anchor-reserves.cjs",
+      "sha256": "b72cc9f405202fa2a9121f2455d61fda46893711bd0410a1442f30000ebed014"
+    },
+    {
+      "file": "../y-134258a-49141710-srpd-20260930/colored-uniform-y.cjs",
+      "sha256": "c9548dcc1cae16db17782a314f9d96a81a77520895c62ccca6163615a1bd9066"
+    },
+    {
+      "file": "../y-134258a-49141710-srpd-20260930/first-tip-return-phase.cjs",
+      "sha256": "6aabe75f3246448adb9d90c5e62a40aa5cd5ab00bbe97e5a7fc4b7d457424b1c"
+    },
+    {
+      "file": "../y-134258a-49141710-srpd-20260930/raw-uniform-ladder-cover.cjs",
+      "sha256": "0742b60f1e66115bd1c0769448aafd88ead4ac73981a25a1725e77bc6aae3d00"
+    },
+    {
+      "file": "../y-134258a-49141710-srpd-20260930/raw-uniform-y.cjs",
+      "sha256": "baa17bfb53fff15a3e9123be851d8a608209987943cb70a511e926556ef2abbf"
+    },
+    {
+      "file": "../y-134258a-49141710-srpd-20260930/srpd-component-kernel.cjs",
+      "sha256": "e3ee14ce1c6ae9266f1d31a566e55dba891bc67e321f43ac6410e72ddd3d22d5"
+    },
+    {
+      "file": "../y-134258a-49141710-srpd-20260930/upper-phase-cover.cjs",
+      "sha256": "d1527e59575a8691e77e323a36debf67d87ed9745541211850bd8d59ade21cc1"
+    },
+    {
+      "file": "../y-134258a-49141710-srpd-20260930/y-induced-core.cjs",
+      "sha256": "ab15f7a75ac6d8b551a968ad1037d6015cffee669f62dd3dab005e7f6eb03b3d"
+    },
+    {
+      "file": "../y139-e0mn-target-20260917/mn-omega-trace.cjs",
+      "sha256": "7b7bf767e3f756b20f6cba1eba0bfe2904c55c2dc223cfc17143dc10fd6133aa"
+    }
+  ]
+}

@@ -1,0 +1,2195 @@
+{
+  "date": "2026-09-29",
+  "scope": "Implementation regression checks supporting an incremental paper argument, not finite rank calculations.",
+  "results": {
+    "multipleq-lower": {
+      "exit_code": 0,
+      "result": {
+        "scope": "Multiple-Q lower interface finite checks; no upper-bound claim",
+        "complete": true,
+        "failure": null,
+        "error": null,
+        "limits": {
+          "ms": 15000,
+          "rssMiB": 480,
+          "width": 180,
+          "events": 16000
+        },
+        "stats": {
+          "events": 2058,
+          "sourceSteps": 360,
+          "finitePrefixes": 46,
+          "widthStops": 0
+        },
+        "runs": [
+          {
+            "k": 1,
+            "n": 0,
+            "r": 1,
+            "m": 0,
+            "path": [
+              1,
+              1,
+              1,
+              2,
+              1,
+              0,
+              1
+            ],
+            "remaining": 2,
+            "width": 28
+          },
+          {
+            "k": 1,
+            "n": 0,
+            "r": 1,
+            "m": 0,
+            "path": [
+              2,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "remaining": 2,
+            "width": 29
+          },
+          {
+            "k": 1,
+            "n": 0,
+            "r": 4,
+            "m": 1,
+            "path": [
+              1,
+              1,
+              1,
+              2,
+              1,
+              0,
+              1
+            ],
+            "remaining": 3,
+            "width": 40
+          },
+          {
+            "k": 1,
+            "n": 0,
+            "r": 4,
+            "m": 1,
+            "path": [
+              2,
+              0,
+              1,
+              0,
+              1
+            ],
+            "remaining": 0,
+            "width": 5
+          },
+          {
+            "k": 1,
+            "n": 1,
+            "r": 1,
+            "m": 1,
+            "path": [
+              1,
+              1,
+              1,
+              2,
+              1,
+              0,
+              1
+            ],
+            "remaining": 3,
+            "width": 40
+          },
+          {
+            "k": 1,
+            "n": 1,
+            "r": 1,
+            "m": 1,
+            "path": [
+              2,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "remaining": 4,
+            "width": 19
+          },
+          {
+            "k": 1,
+            "n": 1,
+            "r": 4,
+            "m": 2,
+            "path": [
+              1,
+              1,
+              1,
+              2,
+              1,
+              0,
+              1
+            ],
+            "remaining": 2,
+            "width": 20
+          },
+          {
+            "k": 1,
+            "n": 1,
+            "r": 4,
+            "m": 2,
+            "path": [
+              2,
+              0,
+              1,
+              0,
+              1
+            ],
+            "remaining": 0,
+            "width": 5
+          },
+          {
+            "k": 1,
+            "n": 3,
+            "r": 1,
+            "m": 3,
+            "path": [
+              1,
+              1,
+              1,
+              2,
+              1,
+              0,
+              1
+            ],
+            "remaining": 2,
+            "width": 45
+          },
+          {
+            "k": 1,
+            "n": 3,
+            "r": 1,
+            "m": 3,
+            "path": [
+              2,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "remaining": 4,
+            "width": 25
+          },
+          {
+            "k": 1,
+            "n": 3,
+            "r": 4,
+            "m": 4,
+            "path": [
+              1,
+              1,
+              1,
+              2,
+              1,
+              0,
+              1
+            ],
+            "remaining": 2,
+            "width": 36
+          },
+          {
+            "k": 1,
+            "n": 3,
+            "r": 4,
+            "m": 4,
+            "path": [
+              2,
+              0,
+              1,
+              0,
+              1
+            ],
+            "remaining": 0,
+            "width": 5
+          },
+          {
+            "k": 2,
+            "n": 0,
+            "r": 1,
+            "m": 0,
+            "path": [
+              1,
+              1,
+              1,
+              2,
+              1,
+              0,
+              1
+            ],
+            "remaining": 2,
+            "width": 32
+          },
+          {
+            "k": 2,
+            "n": 0,
+            "r": 1,
+            "m": 0,
+            "path": [
+              2,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "remaining": 2,
+            "width": 33
+          },
+          {
+            "k": 2,
+            "n": 0,
+            "r": 4,
+            "m": 1,
+            "path": [
+              1,
+              1,
+              1,
+              2,
+              1,
+              0,
+              1
+            ],
+            "remaining": 3,
+            "width": 44
+          },
+          {
+            "k": 2,
+            "n": 0,
+            "r": 4,
+            "m": 1,
+            "path": [
+              2,
+              0,
+              1,
+              0,
+              1
+            ],
+            "remaining": 0,
+            "width": 5
+          },
+          {
+            "k": 2,
+            "n": 1,
+            "r": 1,
+            "m": 1,
+            "path": [
+              1,
+              1,
+              1,
+              2,
+              1,
+              0,
+              1
+            ],
+            "remaining": 3,
+            "width": 44
+          },
+          {
+            "k": 2,
+            "n": 1,
+            "r": 1,
+            "m": 1,
+            "path": [
+              2,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "remaining": 4,
+            "width": 23
+          },
+          {
+            "k": 2,
+            "n": 1,
+            "r": 4,
+            "m": 2,
+            "path": [
+              1,
+              1,
+              1,
+              2,
+              1,
+              0,
+              1
+            ],
+            "remaining": 2,
+            "width": 24
+          },
+          {
+            "k": 2,
+            "n": 1,
+            "r": 4,
+            "m": 2,
+            "path": [
+              2,
+              0,
+              1,
+              0,
+              1
+            ],
+            "remaining": 0,
+            "width": 5
+          },
+          {
+            "k": 2,
+            "n": 3,
+            "r": 1,
+            "m": 3,
+            "path": [
+              1,
+              1,
+              1,
+              2,
+              1,
+              0,
+              1
+            ],
+            "remaining": 2,
+            "width": 49
+          },
+          {
+            "k": 2,
+            "n": 3,
+            "r": 1,
+            "m": 3,
+            "path": [
+              2,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "remaining": 4,
+            "width": 29
+          },
+          {
+            "k": 2,
+            "n": 3,
+            "r": 4,
+            "m": 4,
+            "path": [
+              1,
+              1,
+              1,
+              2,
+              1,
+              0,
+              1
+            ],
+            "remaining": 2,
+            "width": 40
+          },
+          {
+            "k": 2,
+            "n": 3,
+            "r": 4,
+            "m": 4,
+            "path": [
+              2,
+              0,
+              1,
+              0,
+              1
+            ],
+            "remaining": 0,
+            "width": 5
+          },
+          {
+            "k": 3,
+            "n": 0,
+            "r": 1,
+            "m": 0,
+            "path": [
+              1,
+              1,
+              1,
+              2,
+              1,
+              0,
+              1
+            ],
+            "remaining": 2,
+            "width": 36
+          },
+          {
+            "k": 3,
+            "n": 0,
+            "r": 1,
+            "m": 0,
+            "path": [
+              2,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "remaining": 2,
+            "width": 37
+          },
+          {
+            "k": 3,
+            "n": 0,
+            "r": 4,
+            "m": 1,
+            "path": [
+              1,
+              1,
+              1,
+              2,
+              1,
+              0,
+              1
+            ],
+            "remaining": 3,
+            "width": 48
+          },
+          {
+            "k": 3,
+            "n": 0,
+            "r": 4,
+            "m": 1,
+            "path": [
+              2,
+              0,
+              1,
+              0,
+              1
+            ],
+            "remaining": 0,
+            "width": 5
+          },
+          {
+            "k": 3,
+            "n": 1,
+            "r": 1,
+            "m": 1,
+            "path": [
+              1,
+              1,
+              1,
+              2,
+              1,
+              0,
+              1
+            ],
+            "remaining": 3,
+            "width": 48
+          },
+          {
+            "k": 3,
+            "n": 1,
+            "r": 1,
+            "m": 1,
+            "path": [
+              2,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "remaining": 4,
+            "width": 27
+          },
+          {
+            "k": 3,
+            "n": 1,
+            "r": 4,
+            "m": 2,
+            "path": [
+              1,
+              1,
+              1,
+              2,
+              1,
+              0,
+              1
+            ],
+            "remaining": 2,
+            "width": 28
+          },
+          {
+            "k": 3,
+            "n": 1,
+            "r": 4,
+            "m": 2,
+            "path": [
+              2,
+              0,
+              1,
+              0,
+              1
+            ],
+            "remaining": 0,
+            "width": 5
+          },
+          {
+            "k": 3,
+            "n": 3,
+            "r": 1,
+            "m": 3,
+            "path": [
+              1,
+              1,
+              1,
+              2,
+              1,
+              0,
+              1
+            ],
+            "remaining": 2,
+            "width": 53
+          },
+          {
+            "k": 3,
+            "n": 3,
+            "r": 1,
+            "m": 3,
+            "path": [
+              2,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "remaining": 4,
+            "width": 33
+          },
+          {
+            "k": 3,
+            "n": 3,
+            "r": 4,
+            "m": 4,
+            "path": [
+              1,
+              1,
+              1,
+              2,
+              1,
+              0,
+              1
+            ],
+            "remaining": 2,
+            "width": 44
+          },
+          {
+            "k": 3,
+            "n": 3,
+            "r": 4,
+            "m": 4,
+            "path": [
+              2,
+              0,
+              1,
+              0,
+              1
+            ],
+            "remaining": 0,
+            "width": 5
+          },
+          {
+            "k": 5,
+            "n": 0,
+            "r": 1,
+            "m": 0,
+            "path": [
+              1,
+              1,
+              1,
+              2,
+              1,
+              0,
+              1
+            ],
+            "remaining": 2,
+            "width": 44
+          },
+          {
+            "k": 5,
+            "n": 0,
+            "r": 1,
+            "m": 0,
+            "path": [
+              2,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "remaining": 2,
+            "width": 45
+          },
+          {
+            "k": 5,
+            "n": 0,
+            "r": 4,
+            "m": 1,
+            "path": [
+              1,
+              1,
+              1,
+              2,
+              1,
+              0,
+              1
+            ],
+            "remaining": 3,
+            "width": 56
+          },
+          {
+            "k": 5,
+            "n": 0,
+            "r": 4,
+            "m": 1,
+            "path": [
+              2,
+              0,
+              1,
+              0,
+              1
+            ],
+            "remaining": 0,
+            "width": 5
+          },
+          {
+            "k": 5,
+            "n": 1,
+            "r": 1,
+            "m": 1,
+            "path": [
+              1,
+              1,
+              1,
+              2,
+              1,
+              0,
+              1
+            ],
+            "remaining": 3,
+            "width": 56
+          },
+          {
+            "k": 5,
+            "n": 1,
+            "r": 1,
+            "m": 1,
+            "path": [
+              2,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "remaining": 4,
+            "width": 35
+          },
+          {
+            "k": 5,
+            "n": 1,
+            "r": 4,
+            "m": 2,
+            "path": [
+              1,
+              1,
+              1,
+              2,
+              1,
+              0,
+              1
+            ],
+            "remaining": 2,
+            "width": 36
+          },
+          {
+            "k": 5,
+            "n": 1,
+            "r": 4,
+            "m": 2,
+            "path": [
+              2,
+              0,
+              1,
+              0,
+              1
+            ],
+            "remaining": 0,
+            "width": 5
+          },
+          {
+            "k": 5,
+            "n": 3,
+            "r": 1,
+            "m": 3,
+            "path": [
+              1,
+              1,
+              1,
+              2,
+              1,
+              0,
+              1
+            ],
+            "remaining": 2,
+            "width": 61
+          },
+          {
+            "k": 5,
+            "n": 3,
+            "r": 1,
+            "m": 3,
+            "path": [
+              2,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "remaining": 4,
+            "width": 41
+          },
+          {
+            "k": 5,
+            "n": 3,
+            "r": 4,
+            "m": 4,
+            "path": [
+              1,
+              1,
+              1,
+              2,
+              1,
+              0,
+              1
+            ],
+            "remaining": 2,
+            "width": 52
+          },
+          {
+            "k": 5,
+            "n": 3,
+            "r": 4,
+            "m": 4,
+            "path": [
+              2,
+              0,
+              1,
+              0,
+              1
+            ],
+            "remaining": 0,
+            "width": 5
+          },
+          {
+            "kind": "earlier-bank",
+            "k": 2,
+            "j": 1,
+            "path": [
+              1,
+              2,
+              1,
+              1,
+              2,
+              0
+            ],
+            "remaining": 3,
+            "banks": [
+              {
+                "base": [
+                  0,
+                  0,
+                  0
+                ],
+                "anchor": 29,
+                "driver": 32,
+                "children": 2
+              },
+              {
+                "base": [
+                  0,
+                  0,
+                  1
+                ],
+                "anchor": 33,
+                "driver": 36,
+                "children": 0
+              }
+            ],
+            "width": 41
+          },
+          {
+            "kind": "earlier-bank",
+            "k": 2,
+            "j": 2,
+            "path": [
+              1,
+              2,
+              1,
+              1,
+              2,
+              0
+            ],
+            "remaining": 3,
+            "banks": [
+              {
+                "base": [
+                  0,
+                  0,
+                  0
+                ],
+                "anchor": 7,
+                "driver": 10,
+                "children": 0
+              },
+              {
+                "base": [
+                  0,
+                  0,
+                  1
+                ],
+                "anchor": 25,
+                "driver": 28,
+                "children": 2
+              }
+            ],
+            "width": 33
+          },
+          {
+            "kind": "earlier-bank",
+            "k": 3,
+            "j": 1,
+            "path": [
+              1,
+              2,
+              1,
+              1,
+              2,
+              0
+            ],
+            "remaining": 3,
+            "banks": [
+              {
+                "base": [
+                  0,
+                  0,
+                  0
+                ],
+                "anchor": 37,
+                "driver": 40,
+                "children": 2
+              },
+              {
+                "base": [
+                  0,
+                  0,
+                  1
+                ],
+                "anchor": 41,
+                "driver": 44,
+                "children": 0
+              },
+              {
+                "base": [
+                  0,
+                  0,
+                  2
+                ],
+                "anchor": 45,
+                "driver": 48,
+                "children": 0
+              }
+            ],
+            "width": 53
+          },
+          {
+            "kind": "earlier-bank",
+            "k": 3,
+            "j": 2,
+            "path": [
+              1,
+              2,
+              1,
+              1,
+              2,
+              0
+            ],
+            "remaining": 3,
+            "banks": [
+              {
+                "base": [
+                  0,
+                  0,
+                  0
+                ],
+                "anchor": 7,
+                "driver": 10,
+                "children": 0
+              },
+              {
+                "base": [
+                  0,
+                  0,
+                  1
+                ],
+                "anchor": 33,
+                "driver": 36,
+                "children": 2
+              },
+              {
+                "base": [
+                  0,
+                  0,
+                  2
+                ],
+                "anchor": 37,
+                "driver": 40,
+                "children": 0
+              }
+            ],
+            "width": 45
+          },
+          {
+            "kind": "earlier-bank",
+            "k": 3,
+            "j": 3,
+            "path": [
+              1,
+              2,
+              1,
+              1,
+              2,
+              0
+            ],
+            "remaining": 3,
+            "banks": [
+              {
+                "base": [
+                  0,
+                  0,
+                  0
+                ],
+                "anchor": 7,
+                "driver": 10,
+                "children": 0
+              },
+              {
+                "base": [
+                  0,
+                  0,
+                  1
+                ],
+                "anchor": 11,
+                "driver": 14,
+                "children": 0
+              },
+              {
+                "base": [
+                  0,
+                  0,
+                  2
+                ],
+                "anchor": 29,
+                "driver": 32,
+                "children": 2
+              }
+            ],
+            "width": 37
+          },
+          {
+            "kind": "earlier-bank",
+            "k": 5,
+            "j": 1,
+            "path": [
+              1,
+              2,
+              1,
+              1,
+              2,
+              0
+            ],
+            "remaining": 3,
+            "banks": [
+              {
+                "base": [
+                  0,
+                  0,
+                  0
+                ],
+                "anchor": 53,
+                "driver": 56,
+                "children": 2
+              },
+              {
+                "base": [
+                  0,
+                  0,
+                  1
+                ],
+                "anchor": 57,
+                "driver": 60,
+                "children": 0
+              },
+              {
+                "base": [
+                  0,
+                  0,
+                  2
+                ],
+                "anchor": 61,
+                "driver": 64,
+                "children": 0
+              },
+              {
+                "base": [
+                  0,
+                  0,
+                  3
+                ],
+                "anchor": 65,
+                "driver": 68,
+                "children": 0
+              },
+              {
+                "base": [
+                  0,
+                  0,
+                  4
+                ],
+                "anchor": 69,
+                "driver": 72,
+                "children": 0
+              }
+            ],
+            "width": 77
+          },
+          {
+            "kind": "earlier-bank",
+            "k": 5,
+            "j": 2,
+            "path": [
+              1,
+              2,
+              1,
+              1,
+              2,
+              0
+            ],
+            "remaining": 3,
+            "banks": [
+              {
+                "base": [
+                  0,
+                  0,
+                  0
+                ],
+                "anchor": 7,
+                "driver": 10,
+                "children": 0
+              },
+              {
+                "base": [
+                  0,
+                  0,
+                  1
+                ],
+                "anchor": 49,
+                "driver": 52,
+                "children": 2
+              },
+              {
+                "base": [
+                  0,
+                  0,
+                  2
+                ],
+                "anchor": 53,
+                "driver": 56,
+                "children": 0
+              },
+              {
+                "base": [
+                  0,
+                  0,
+                  3
+                ],
+                "anchor": 57,
+                "driver": 60,
+                "children": 0
+              },
+              {
+                "base": [
+                  0,
+                  0,
+                  4
+                ],
+                "anchor": 61,
+                "driver": 64,
+                "children": 0
+              }
+            ],
+            "width": 69
+          },
+          {
+            "kind": "earlier-bank",
+            "k": 5,
+            "j": 3,
+            "path": [
+              1,
+              2,
+              1,
+              1,
+              2,
+              0
+            ],
+            "remaining": 3,
+            "banks": [
+              {
+                "base": [
+                  0,
+                  0,
+                  0
+                ],
+                "anchor": 7,
+                "driver": 10,
+                "children": 0
+              },
+              {
+                "base": [
+                  0,
+                  0,
+                  1
+                ],
+                "anchor": 11,
+                "driver": 14,
+                "children": 0
+              },
+              {
+                "base": [
+                  0,
+                  0,
+                  2
+                ],
+                "anchor": 45,
+                "driver": 48,
+                "children": 2
+              },
+              {
+                "base": [
+                  0,
+                  0,
+                  3
+                ],
+                "anchor": 49,
+                "driver": 52,
+                "children": 0
+              },
+              {
+                "base": [
+                  0,
+                  0,
+                  4
+                ],
+                "anchor": 53,
+                "driver": 56,
+                "children": 0
+              }
+            ],
+            "width": 61
+          },
+          {
+            "kind": "earlier-bank",
+            "k": 5,
+            "j": 4,
+            "path": [
+              1,
+              2,
+              1,
+              1,
+              2,
+              0
+            ],
+            "remaining": 3,
+            "banks": [
+              {
+                "base": [
+                  0,
+                  0,
+                  0
+                ],
+                "anchor": 7,
+                "driver": 10,
+                "children": 0
+              },
+              {
+                "base": [
+                  0,
+                  0,
+                  1
+                ],
+                "anchor": 11,
+                "driver": 14,
+                "children": 0
+              },
+              {
+                "base": [
+                  0,
+                  0,
+                  2
+                ],
+                "anchor": 15,
+                "driver": 18,
+                "children": 0
+              },
+              {
+                "base": [
+                  0,
+                  0,
+                  3
+                ],
+                "anchor": 41,
+                "driver": 44,
+                "children": 2
+              },
+              {
+                "base": [
+                  0,
+                  0,
+                  4
+                ],
+                "anchor": 45,
+                "driver": 48,
+                "children": 0
+              }
+            ],
+            "width": 53
+          },
+          {
+            "kind": "earlier-bank",
+            "k": 5,
+            "j": 5,
+            "path": [
+              1,
+              2,
+              1,
+              1,
+              2,
+              0
+            ],
+            "remaining": 3,
+            "banks": [
+              {
+                "base": [
+                  0,
+                  0,
+                  0
+                ],
+                "anchor": 7,
+                "driver": 10,
+                "children": 0
+              },
+              {
+                "base": [
+                  0,
+                  0,
+                  1
+                ],
+                "anchor": 11,
+                "driver": 14,
+                "children": 0
+              },
+              {
+                "base": [
+                  0,
+                  0,
+                  2
+                ],
+                "anchor": 15,
+                "driver": 18,
+                "children": 0
+              },
+              {
+                "base": [
+                  0,
+                  0,
+                  3
+                ],
+                "anchor": 19,
+                "driver": 22,
+                "children": 0
+              },
+              {
+                "base": [
+                  0,
+                  0,
+                  4
+                ],
+                "anchor": 37,
+                "driver": 40,
+                "children": 2
+              }
+            ],
+            "width": 45
+          }
+        ],
+        "cover": {
+          "checks": 820,
+          "sourceSteps": 360,
+          "sourceParents": 5108,
+          "limitSteps": 126,
+          "unitSteps": 178,
+          "deletions": 56,
+          "rankOnePumps": 12,
+          "rankTwoPumps": 30,
+          "auxiliaryReturns": 30,
+          "newIntervals": 52,
+          "bareFiniteGrades": 0,
+          "lowControls": 0,
+          "maxWidth": 98,
+          "maxNodes": 9
+        },
+        "certificate": {
+          "nodes": 1049,
+          "hits": 28987,
+          "traceEntries": 14453,
+          "macros": 514,
+          "fs": 1544
+        },
+        "elapsedMs": 732,
+        "rssMiB": 114.56640625
+      }
+    },
+    "recursive-upper": {
+      "exit_code": 0,
+      "result": {
+        "scope": "Nested crown structural experiment; not yet a paper rank theorem",
+        "complete": true,
+        "error": null,
+        "failure": null,
+        "limits": {
+          "ms": 15000,
+          "rssMiB": 480,
+          "width": 120,
+          "events": 12000
+        },
+        "stats": {
+          "events": 449,
+          "steps": 449,
+          "finitePrefixes": 13,
+          "widthStops": 0
+        },
+        "runs": [
+          {
+            "k": 0,
+            "trial": 0,
+            "path": [
+              1,
+              2,
+              2,
+              1,
+              0,
+              0,
+              1,
+              2,
+              1,
+              2,
+              1,
+              0,
+              1,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "width": 7
+          },
+          {
+            "k": 0,
+            "trial": 1,
+            "path": [
+              1,
+              2,
+              1,
+              1,
+              2,
+              0,
+              1,
+              1,
+              2,
+              2,
+              2,
+              2,
+              2,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "width": 26
+          },
+          {
+            "k": 0,
+            "trial": 2,
+            "path": [
+              1,
+              2,
+              1,
+              2,
+              1,
+              2,
+              2,
+              2,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "width": 30
+          },
+          {
+            "k": 1,
+            "trial": 0,
+            "path": [
+              0,
+              1,
+              2,
+              0,
+              1,
+              2,
+              2,
+              2,
+              0,
+              2,
+              1,
+              2,
+              0,
+              2,
+              2,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "width": 22
+          },
+          {
+            "k": 1,
+            "trial": 1,
+            "path": [
+              0,
+              0,
+              2,
+              1,
+              1,
+              1,
+              2,
+              1,
+              1,
+              0,
+              0,
+              1,
+              2,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "width": 12
+          },
+          {
+            "k": 1,
+            "trial": 2,
+            "path": [
+              2,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              2,
+              1,
+              1,
+              0,
+              1,
+              2,
+              2,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "width": 5
+          },
+          {
+            "k": 2,
+            "trial": 0,
+            "path": [
+              0,
+              0,
+              2,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0,
+              2,
+              1,
+              1,
+              2,
+              0,
+              2,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "width": 5
+          },
+          {
+            "k": 2,
+            "trial": 1,
+            "path": [
+              1,
+              0,
+              2,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              1,
+              2,
+              0,
+              2,
+              0,
+              2,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "width": 14
+          },
+          {
+            "k": 2,
+            "trial": 2,
+            "path": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              1,
+              1,
+              2,
+              0,
+              2,
+              1,
+              2,
+              2,
+              1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "width": 6
+          },
+          {
+            "k": 3,
+            "trial": 0,
+            "path": [
+              2,
+              1,
+              1,
+              2,
+              0,
+              0,
+              0,
+              2,
+              2,
+              0,
+              2,
+              2,
+              2,
+              0,
+              1,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "width": 23
+          },
+          {
+            "k": 3,
+            "trial": 1,
+            "path": [
+              1,
+              1,
+              1,
+              0,
+              0,
+              1,
+              2,
+              1,
+              0,
+              2,
+              0,
+              1,
+              2,
+              1,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "width": 11
+          },
+          {
+            "k": 3,
+            "trial": 2,
+            "path": [
+              2,
+              2,
+              1,
+              1,
+              1,
+              1,
+              2,
+              2,
+              1,
+              0,
+              2,
+              2,
+              0,
+              1,
+              1,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "width": 39
+          },
+          {
+            "k": 5,
+            "trial": 0,
+            "path": [
+              1,
+              2,
+              2,
+              0,
+              0,
+              1,
+              1,
+              1,
+              0,
+              2,
+              0,
+              0,
+              2,
+              2,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "width": 23
+          },
+          {
+            "k": 5,
+            "trial": 1,
+            "path": [
+              0,
+              2,
+              0,
+              2,
+              0,
+              1,
+              0,
+              2,
+              2,
+              0,
+              2,
+              2,
+              2,
+              2,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "width": 25
+          },
+          {
+            "k": 5,
+            "trial": 2,
+            "path": [
+              1,
+              1,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0,
+              2,
+              0,
+              1,
+              0,
+              2,
+              1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "width": 20
+          }
+        ],
+        "upper": {
+          "checks": 7018,
+          "steps": 1347,
+          "rootSteps": 449,
+          "indexSteps": 895,
+          "openings": 28,
+          "crownCopies": 2,
+          "callbacks": 20,
+          "internal": 396,
+          "componentErasures": 5,
+          "transports": 2,
+          "transportedRows": 0,
+          "privateProfiles": 2507,
+          "parentChecks": 30866,
+          "maxDepth": 6,
+          "maxNativeQBound": 6
+        },
+        "native": {
+          "events": 531,
+          "probes": 64,
+          "localDowns": 0,
+          "truncations": 46,
+          "potentialChecks": 49
+        },
+        "certificate": {
+          "nodes": 0,
+          "hits": 0,
+          "traceEntries": 0,
+          "macros": 0,
+          "fs": 449
+        },
+        "elapsedMs": 6795,
+        "rssMiB": 107.38671875
+      }
+    },
+    "recursive-probes": {
+      "exit_code": 0,
+      "result": {
+        "scope": "Directed recursive transport checks; no sampling-to-theorem inference",
+        "part": "probes",
+        "complete": true,
+        "error": null,
+        "failure": null,
+        "limits": {
+          "ms": 16000,
+          "rssMiB": 480,
+          "width": 180,
+          "events": 14000
+        },
+        "stats": {
+          "events": 42,
+          "steps": 42,
+          "finitePrefixes": 6
+        },
+        "runs": [
+          {
+            "kind": "synthetic-contract-probe",
+            "k": 1,
+            "depth": 0,
+            "path": [
+              2,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "width": 24
+          },
+          {
+            "kind": "synthetic-contract-probe",
+            "k": 2,
+            "depth": 0,
+            "path": [
+              2,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "width": 36
+          },
+          {
+            "kind": "synthetic-contract-probe",
+            "k": 2,
+            "depth": 1,
+            "path": [
+              2,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "width": 28
+          },
+          {
+            "kind": "synthetic-contract-probe",
+            "k": 3,
+            "depth": 0,
+            "path": [
+              2,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "width": 48
+          },
+          {
+            "kind": "synthetic-contract-probe",
+            "k": 3,
+            "depth": 1,
+            "path": [
+              2,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "width": 40
+          },
+          {
+            "kind": "synthetic-contract-probe",
+            "k": 3,
+            "depth": 2,
+            "path": [
+              2,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "width": 32
+          }
+        ],
+        "upper": {
+          "checks": 1016,
+          "steps": 136,
+          "rootSteps": 42,
+          "indexSteps": 82,
+          "openings": 6,
+          "crownCopies": 12,
+          "callbacks": 6,
+          "internal": 18,
+          "componentErasures": 12,
+          "transports": 20,
+          "transportedRows": 531,
+          "privateProfiles": 418,
+          "parentChecks": 1642,
+          "maxDepth": 4,
+          "maxNativeQBound": 4
+        },
+        "native": {
+          "events": 36,
+          "probes": 6,
+          "localDowns": 0,
+          "truncations": 6,
+          "potentialChecks": 6
+        },
+        "certificate": {
+          "nodes": 0,
+          "hits": 0,
+          "traceEntries": 0,
+          "macros": 0,
+          "fs": 42
+        },
+        "elapsedMs": 259,
+        "rssMiB": 88.78125
+      }
+    },
+    "recursive-standard": {
+      "exit_code": 0,
+      "result": {
+        "scope": "Directed recursive transport checks; no sampling-to-theorem inference",
+        "part": "standard",
+        "complete": true,
+        "error": null,
+        "failure": null,
+        "limits": {
+          "ms": 16000,
+          "rssMiB": 480,
+          "width": 180,
+          "events": 14000
+        },
+        "stats": {
+          "events": 380,
+          "steps": 380,
+          "finitePrefixes": 1
+        },
+        "runs": [
+          {
+            "kind": "standard",
+            "route": "J6[1][0][1][2] D149 [1][0][0][0][1]",
+            "width": 20
+          }
+        ],
+        "upper": {
+          "checks": 2286,
+          "steps": 760,
+          "rootSteps": 380,
+          "indexSteps": 379,
+          "openings": 1,
+          "crownCopies": 1,
+          "callbacks": 2,
+          "internal": 376,
+          "componentErasures": 1,
+          "transports": 1,
+          "transportedRows": 7,
+          "privateProfiles": 1531,
+          "parentChecks": 11018,
+          "maxDepth": 2,
+          "maxNativeQBound": 2
+        },
+        "native": {
+          "events": 518,
+          "probes": 56,
+          "localDowns": 0,
+          "truncations": 47,
+          "potentialChecks": 56
+        },
+        "certificate": {
+          "nodes": 0,
+          "hits": 0,
+          "traceEntries": 0,
+          "macros": 0,
+          "fs": 380
+        },
+        "elapsedMs": 717,
+        "rssMiB": 93.9609375
+      }
+    }
+  }
+}

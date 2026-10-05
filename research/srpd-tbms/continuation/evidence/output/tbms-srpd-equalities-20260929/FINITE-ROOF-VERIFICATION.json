@@ -1,0 +1,734 @@
+{
+  "date": "2026-09-30",
+  "scope": "Finite checks, not the all-parameter proof and not an equality",
+  "records": [
+    {
+      "key": "finite-entry",
+      "exitCode": 0,
+      "result": {
+        "scope": "Exact D44 block formula and finite-row-bank seed capacities",
+        "complete": true,
+        "error": null,
+        "limits": {
+          "ms": 12000,
+          "rssMiB": 440,
+          "width": 150,
+          "events": 180
+        },
+        "report": {
+          "startCounts": "1,2,4,8,4,1,2,9,38,4,12,42,73",
+          "D44": "1,2,4,8,4,1,2,9,38,4,12,42,44",
+          "parents": [
+            [],
+            [
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              3,
+              3,
+              3
+            ],
+            [
+              2,
+              2
+            ],
+            [],
+            [
+              6
+            ],
+            [
+              7,
+              7,
+              7,
+              7,
+              7,
+              7,
+              7
+            ],
+            [
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8,
+              8
+            ],
+            [
+              7,
+              7
+            ],
+            [
+              10,
+              10,
+              10,
+              10,
+              10,
+              10,
+              10
+            ],
+            [
+              11,
+              11,
+              11,
+              11,
+              11,
+              11,
+              11,
+              11
+            ],
+            [
+              12,
+              7
+            ]
+          ],
+          "route": [
+            {
+              "kind": "FS",
+              "n": 0
+            },
+            {
+              "kind": "FS",
+              "n": 0
+            },
+            {
+              "kind": "FS",
+              "n": 0
+            },
+            {
+              "kind": "FS",
+              "n": 0
+            },
+            {
+              "kind": "FS",
+              "n": 0
+            },
+            {
+              "kind": "FS",
+              "n": 0
+            },
+            {
+              "kind": "FS",
+              "n": 0
+            },
+            {
+              "kind": "FS",
+              "n": 0
+            },
+            {
+              "kind": "FS",
+              "n": 0
+            },
+            {
+              "kind": "FS",
+              "n": 0
+            },
+            {
+              "kind": "down"
+            },
+            {
+              "kind": "truncate",
+              "height": 2
+            },
+            {
+              "kind": "down"
+            },
+            {
+              "kind": "truncate",
+              "height": 2
+            },
+            {
+              "kind": "down"
+            }
+          ],
+          "certificates": {
+            "nodes": 18,
+            "hits": 112,
+            "traceEntries": 82,
+            "macros": 5,
+            "fs": 10
+          },
+          "formulas": [
+            {
+              "n": 0,
+              "width": 12,
+              "blocks": 1,
+              "formula": true
+            },
+            {
+              "n": 1,
+              "width": 18,
+              "blocks": 2,
+              "formula": true
+            },
+            {
+              "n": 2,
+              "width": 24,
+              "blocks": 3,
+              "formula": true
+            },
+            {
+              "n": 3,
+              "width": 30,
+              "blocks": 4,
+              "formula": true
+            },
+            {
+              "n": 5,
+              "width": 42,
+              "blocks": 6,
+              "formula": true
+            },
+            {
+              "n": 7,
+              "width": 54,
+              "blocks": 8,
+              "formula": true
+            },
+            {
+              "n": 13,
+              "width": 90,
+              "blocks": 14,
+              "formula": true
+            },
+            {
+              "n": 17,
+              "width": 114,
+              "blocks": 18,
+              "formula": true
+            }
+          ],
+          "initializations": [
+            {
+              "layers": 1,
+              "index": 3,
+              "a": 22,
+              "K": 20,
+              "main": [
+                23,
+                24
+              ],
+              "H": 25,
+              "W": 26,
+              "archives": [
+                12
+              ],
+              "mainCapacity": 20
+            },
+            {
+              "layers": 2,
+              "index": 5,
+              "a": 34,
+              "K": 32,
+              "main": [
+                35,
+                36
+              ],
+              "H": 37,
+              "W": 38,
+              "archives": [
+                12,
+                24
+              ],
+              "mainCapacity": 32
+            },
+            {
+              "layers": 3,
+              "index": 7,
+              "a": 46,
+              "K": 44,
+              "main": [
+                47,
+                48
+              ],
+              "H": 49,
+              "W": 50,
+              "archives": [
+                12,
+                24,
+                36
+              ],
+              "mainCapacity": 44
+            },
+            {
+              "layers": 4,
+              "index": 9,
+              "a": 58,
+              "K": 56,
+              "main": [
+                59,
+                60
+              ],
+              "H": 61,
+              "W": 62,
+              "archives": [
+                12,
+                24,
+                36,
+                48
+              ],
+              "mainCapacity": 56
+            },
+            {
+              "layers": 6,
+              "index": 13,
+              "a": 82,
+              "K": 80,
+              "main": [
+                83,
+                84
+              ],
+              "H": 85,
+              "W": 86,
+              "archives": [
+                12,
+                24,
+                36,
+                48,
+                60,
+                72
+              ],
+              "mainCapacity": 80
+            },
+            {
+              "layers": 8,
+              "index": 17,
+              "a": 106,
+              "K": 104,
+              "main": [
+                107,
+                108
+              ],
+              "H": 109,
+              "W": 110,
+              "archives": [
+                12,
+                24,
+                36,
+                48,
+                60,
+                72,
+                84,
+                96
+              ],
+              "mainCapacity": 104
+            }
+          ]
+        },
+        "elapsedMs": 18,
+        "rssMiB": 114.6953125
+      }
+    },
+    {
+      "key": "finite-1",
+      "exitCode": 0,
+      "result": {
+        "scope": "Candidate finite upper row banks, no infinite ceilings",
+        "complete": true,
+        "error": null,
+        "layers": 1,
+        "requestedPath": [
+          3,
+          2,
+          1,
+          0,
+          1,
+          0
+        ],
+        "interfacePatchCount": 41,
+        "initialization": {
+          "layers": 1,
+          "index": 3,
+          "gateCounts": "1,2,4,8,4,1,2,9,38,4,12,42,44",
+          "source": "()(1^ω)",
+          "finiteMaxima": [
+            {
+              "word": "()(1)",
+              "points": [
+                11,
+                12
+              ]
+            }
+          ],
+          "a": 22,
+          "K": 20,
+          "main": [
+            23,
+            24
+          ],
+          "width": 26
+        },
+        "report": {
+          "path": [
+            3,
+            2,
+            1,
+            0,
+            1,
+            0
+          ],
+          "source": "()",
+          "width": 16237,
+          "phase": "cold",
+          "stats": {
+            "checks": 27,
+            "pairs": 258,
+            "ports": 334,
+            "sourceSteps": 6,
+            "budgets": 1,
+            "maxBudget": 4,
+            "calls": 4,
+            "allocations": 4,
+            "ordinaryRowSteps": 1,
+            "deletedRowSteps": 3,
+            "keptSmallerBanks": 0,
+            "strictSubcovariances": 0,
+            "topDowns": 0,
+            "maxWidth": 21645,
+            "maxNodes": 5,
+            "mainUnits": 3,
+            "mainLimits": 1,
+            "mainDeletes": 2
+          },
+          "sparseStats": {
+            "nativeFS": 14,
+            "zeroSteps": 6757,
+            "downMacroEndpoints": 321,
+            "truncationMacroEndpoints": 291,
+            "smallListDifferentials": 40,
+            "smallCapDifferentials": 68,
+            "maxSegments": 22264,
+            "maxWidth": 21646
+          },
+          "elapsedMs": 765,
+          "rssMiB": 286.70703125
+        }
+      }
+    },
+    {
+      "key": "finite-2",
+      "exitCode": 0,
+      "result": {
+        "scope": "Candidate finite upper row banks, no infinite ceilings",
+        "complete": true,
+        "error": null,
+        "layers": 2,
+        "requestedPath": [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "interfacePatchCount": 41,
+        "initialization": {
+          "layers": 2,
+          "index": 5,
+          "gateCounts": "1,2,4,8,4,1,2,9,38,4,12,42,44",
+          "source": "()(1^()(1^ω))",
+          "finiteMaxima": [
+            {
+              "word": "()(1)",
+              "points": [
+                11,
+                12
+              ]
+            },
+            {
+              "word": "()(1^ω)",
+              "points": [
+                23,
+                24
+              ]
+            }
+          ],
+          "a": 34,
+          "K": 32,
+          "main": [
+            35,
+            36
+          ],
+          "width": 38
+        },
+        "report": {
+          "path": [
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "source": "",
+          "width": 3181,
+          "phase": "cold",
+          "stats": {
+            "checks": 32,
+            "pairs": 142,
+            "ports": 385,
+            "sourceSteps": 5,
+            "budgets": 3,
+            "maxBudget": 3,
+            "calls": 5,
+            "allocations": 5,
+            "ordinaryRowSteps": 2,
+            "deletedRowSteps": 2,
+            "keptSmallerBanks": 0,
+            "strictSubcovariances": 0,
+            "topDowns": 0,
+            "maxWidth": 3937,
+            "maxNodes": 7,
+            "mainUnits": 0,
+            "mainLimits": 3,
+            "mainDeletes": 2,
+            "recursiveRowLimits": 1
+          },
+          "sparseStats": {
+            "nativeFS": 17,
+            "zeroSteps": 1331,
+            "downMacroEndpoints": 302,
+            "truncationMacroEndpoints": 257,
+            "smallListDifferentials": 56,
+            "smallCapDifferentials": 96,
+            "maxSegments": 3953,
+            "maxWidth": 3938
+          },
+          "elapsedMs": 159,
+          "rssMiB": 154.9921875
+        }
+      }
+    },
+    {
+      "key": "finite-deep-0",
+      "exitCode": 0,
+      "result": {
+        "scope": "Candidate finite upper row banks, no infinite ceilings",
+        "complete": true,
+        "error": null,
+        "layers": 3,
+        "requestedPath": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "interfacePatchCount": 41,
+        "initialization": {
+          "layers": 3,
+          "index": 7,
+          "gateCounts": "1,2,4,8,4,1,2,9,38,4,12,42,44",
+          "source": "()(1^()(1^()(1^ω)))",
+          "finiteMaxima": [
+            {
+              "word": "()(1)",
+              "points": [
+                11,
+                12
+              ]
+            },
+            {
+              "word": "()(1^ω)",
+              "points": [
+                23,
+                24
+              ]
+            },
+            {
+              "word": "()(1^()(1^ω))",
+              "points": [
+                35,
+                36
+              ]
+            }
+          ],
+          "a": 46,
+          "K": 44,
+          "main": [
+            47,
+            48
+          ],
+          "width": 50
+        },
+        "report": {
+          "path": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "source": "()",
+          "width": 12859,
+          "phase": "cold",
+          "stats": {
+            "checks": 36,
+            "pairs": 208,
+            "ports": 723,
+            "sourceSteps": 4,
+            "budgets": 3,
+            "maxBudget": 3,
+            "calls": 7,
+            "allocations": 7,
+            "ordinaryRowSteps": 1,
+            "deletedRowSteps": 3,
+            "keptSmallerBanks": 0,
+            "strictSubcovariances": 0,
+            "topDowns": 0,
+            "maxWidth": 16655,
+            "maxNodes": 10,
+            "mainUnits": 0,
+            "mainLimits": 3,
+            "mainDeletes": 1,
+            "recursiveRowLimits": 3
+          },
+          "sparseStats": {
+            "nativeFS": 21,
+            "zeroSteps": 5347,
+            "downMacroEndpoints": 430,
+            "truncationMacroEndpoints": 365,
+            "smallListDifferentials": 47,
+            "smallCapDifferentials": 80,
+            "maxSegments": 16677,
+            "maxWidth": 16656
+          },
+          "elapsedMs": 340,
+          "rssMiB": 222.203125
+        }
+      }
+    },
+    {
+      "key": "finite-deep-1",
+      "exitCode": 0,
+      "result": {
+        "scope": "Candidate finite upper row banks, no infinite ceilings",
+        "complete": true,
+        "error": null,
+        "layers": 6,
+        "requestedPath": [],
+        "interfacePatchCount": 41,
+        "initialization": {
+          "layers": 6,
+          "index": 13,
+          "gateCounts": "1,2,4,8,4,1,2,9,38,4,12,42,44",
+          "source": "()(1^()(1^()(1^()(1^()(1^()(1^ω))))))",
+          "finiteMaxima": [
+            {
+              "word": "()(1)",
+              "points": [
+                11,
+                12
+              ]
+            },
+            {
+              "word": "()(1^ω)",
+              "points": [
+                23,
+                24
+              ]
+            },
+            {
+              "word": "()(1^()(1^ω))",
+              "points": [
+                35,
+                36
+              ]
+            },
+            {
+              "word": "()(1^()(1^()(1^ω)))",
+              "points": [
+                47,
+                48
+              ]
+            },
+            {
+              "word": "()(1^()(1^()(1^()(1^ω))))",
+              "points": [
+                59,
+                60
+              ]
+            },
+            {
+              "word": "()(1^()(1^()(1^()(1^()(1^ω)))))",
+              "points": [
+                71,
+                72
+              ]
+            }
+          ],
+          "a": 82,
+          "K": 80,
+          "main": [
+            83,
+            84
+          ],
+          "width": 86
+        },
+        "report": {
+          "path": [],
+          "source": "()(1^()(1^()(1^()(1^()(1^()(1^ω))))))",
+          "width": 86,
+          "phase": "cold",
+          "stats": {
+            "checks": 1,
+            "pairs": 7,
+            "ports": 12,
+            "sourceSteps": 0,
+            "budgets": 0,
+            "maxBudget": 0,
+            "calls": 0,
+            "allocations": 0,
+            "ordinaryRowSteps": 0,
+            "deletedRowSteps": 0,
+            "keptSmallerBanks": 0,
+            "strictSubcovariances": 0,
+            "topDowns": 0,
+            "maxWidth": 86,
+            "maxNodes": 6,
+            "mainUnits": 0,
+            "mainLimits": 0,
+            "mainDeletes": 0
+          },
+          "sparseStats": {
+            "nativeFS": 1,
+            "zeroSteps": 14,
+            "downMacroEndpoints": 13,
+            "truncationMacroEndpoints": 9,
+            "smallListDifferentials": 14,
+            "smallCapDifferentials": 24,
+            "maxSegments": 88,
+            "maxWidth": 90
+          },
+          "elapsedMs": 67,
+          "rssMiB": 138.71484375
+        }
+      }
+    },
+    {
+      "key": "D44-returns",
+      "exitCode": 0,
+      "result": {
+        "scope": "Finite samples below D44: high pair with simultaneous bottom return and two-row root return",
+        "complete": true,
+        "error": null,
+        "found": null,
+        "visited": 1800,
+        "created": 6521,
+        "unprocessed": 4724,
+        "limits": {
+          "ms": 12000,
+          "rssMiB": 440,
+          "states": 1800,
+          "width": 48,
+          "depth": 9,
+          "index": 2
+        },
+        "elapsedMs": 78,
+        "rssMiB": 135.953125
+      }
+    }
+  ]
+}

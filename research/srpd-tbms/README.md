@@ -1,6 +1,19 @@
-# SRPD versus ordinary TBMS: research summary · [中文版](README.zh-CN.md)
+# SRPD versus TBMS and Y: research summary · [中文版](README.zh-CN.md)
 
-Current through **2026-09-28**. This page summarizes the two final carrier routes
+## 2026-10-06: collected results at the research pause
+
+Research is paused. The new [bilingual overview](continuation/README.md), [proof guide](continuation/PROOF-ROUTES.md), [manuscript catalogue](continuation/CATALOGUE.md), and [evidence guide](continuation/EVIDENCE.md) collect subsequent positive TBMS and Y work, excluding chronological notebooks and standalone failed routes.
+
+- The whole-TBMS paper carrier improves to `D44=SRPD(1,2,4,8,4,1,2,9,38,4,12,42,44)`. Only `TBMS Limit≤D44` is established on paper; the converse remains open.
+- TBMS equality calibrations reach `SRPD(1,2,4,8,4,1,2,9,38,4,6)=TBMS ()(1^(ω³))`. The larger ω^ω-row node has only a one-sided bound.
+- Concrete Y equality papers include `134258`, `1342583`, and `1342584`. The highest whole-node lower-bound record is `Y(1,3,4,2,5,8,10,4,9,14,16,6,9)≤lim(SRPD)`, **conditional on listed historical interfaces, without an independent whole-chain review or Lean comparison**.
+- The main candidate ending `17,10` remains unresolved. The last common-floor, finite-preparation, external-registry, and ordinary-phase lemmas are recorded separately, not promoted to a new whole-node bound.
+
+The continuation contains 290 original-language arguments/supporting manuscripts, 7 historical finite receipts, and 3 previously delivered NER files. Manuscript count is not verified-theorem count. The [new manifest](continuation/manifest.json) records source/packaged hashes and excerpt ranges. The original 73-item archive is unchanged; curation is neither a new proof nor a publication.
+
+## 2026-09-28 baseline: two final carrier routes
+
+**The remainder describes the September 28 baseline, not the latest October 6 result.** Read the continuation above for subsequent results and status. This baseline summarizes the two final carrier routes
 and their proof architecture, not the complete research history. “Paper result”
 means an all-future descent-simulation argument was written; **no Lean
 formalization or independent final review is claimed**.
