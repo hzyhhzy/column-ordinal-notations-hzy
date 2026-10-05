@@ -2,9 +2,17 @@
 
 9 月 11 日 20:00，@Phyrion 公布了 [Y 序列的良序证明](https://github.com/Phyrion1343/1Y-Well-Ordering-Lean)。不久后，@test_alpha0 进一步将所需的公理体系降低到 $KP_\omega+\text{存在不可数序数}$。本仓库收录 GPT6-astra 在阅读上述证明后设计的 RPD、LRD、Ω-LRD3、ARD、IPD、ARD2，以及它们的良序证明。其中，RPD 的定义所需篇幅短得多；下面的纸面比较链证明其序型不小于固定版本 1Y。LRD 和 Ω-LRD3 则是在此基础上进一步扩展得到的记号。ARD 则把行标改为此前列的地址，使行坐标本身也随展开移动。IPD 则使用有限层迭代树轮廓，连嵌套头内的引用也随列搬运。ARD2 回到每组仅三个自然数坐标的形式，允许行与根同时引用本列，并生成覆盖全上下文的根包。六者均有同一公理体系下的纸面良序证明。它们与 omega-Y 的整体比较仍未解决；已知的具体比较和公共初段见下文。
 
-本仓库收录列式记号的定义、可执行基本列展开器与证明／状态说明，也包含明确标注的伪序记号。源码快照更新于 **2026-10-01**，仓库地址为 [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy)。名称中的 `hzy` 来自仓库所有者的名字。
+本仓库收录列式记号的定义、可执行基本列展开器与证明／状态说明，也包含明确标注的伪序记号。源码快照更新于 **2026-10-06**，仓库地址为 [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy)。名称中的 `hzy` 来自仓库所有者的名字。
 
-记号实现收录 **SRPD、RPD、LRD、Ω-LRD3、ARD、IPD、ARD2、SPD、CWY、CWY2、Ω-CWY、ACD、CSD、ICP、FMP、CTN**，其中候选、失败版本和伪序记号明确区分；Lean 证明仍只覆盖 **Y、RPD、LRD、Ω-LRD3、ARD、IPD、ARD2**。另保留旧版 ARD-legacy、ARD2-legacy，其他 Ω-LRD 版本不收录。外部 e0MN 实现单独署名，不算本项目发明。
+记号实现收录 **SRPD、RPD、LRD、Ω-LRD3、ARD、IPD、ARD2、SPD、CWY、CWY2、Ω-CWY、ACD、CSD、ICP、FMP、CTN、DQDN**，其中候选、失败版本和伪序记号明确区分；Lean 证明仍只覆盖 **Y、RPD、LRD、Ω-LRD3、ARD、IPD、ARD2**。另保留旧版 ARD-legacy、ARD2-legacy，其他 Ω-LRD 版本不收录。外部 e0MN 实现单独署名，不算本项目发明。
+
+## DQDN 及其结论归档（2026-10-06）
+
+[**DQDN — Demand Query Diagram Notation，按需查询图列记号**](notations/DQDN/README.zh-CN.md) 现收录不改规则的四视图 [NER](notations/DQDN/DQDN.ne-rewritten.js)、本地依赖完整的 Python 实现及检查标准域的[公共入口](notations/DQDN/standard.py)、双语定义和[纸面良序论证](proofs/paper/dqdn-well-ordering.zh-CN.md)。良序对象是同一个 TOP 的标准域，不是任意无类型裸图。旧记号的弱 KP 上界不自动套用，也没有新增 DQDN Lean 项目。
+
+[结论与证明总览](research/dqdn/README.zh-CN.md) 保存三视图等号表、ζ₀/Γ₀/BHO 承载下界、BO 约定、全局 ≥PTO(Zω) 论证，以及 $\lim(\mathrm{BMS})\le\mathrm{PTO}(Z_2)\le|\mathrm{TOP}[2]|$ 和四行 BMS 的严格界。**纸面论证、有限核验与未决结论明确区分。** 没有证明 TOP[2]=PTO(Z₂) 或 lim(DQDN)=PTO(Zω)。完整中文推导保留并附英文配套；长篇定位稿明确采用英文缩编。
+
+TOP[1] 的纸面值为 ε₀，TOP[2] 的计数字为 `1,2,1,2`。NER 默认六个小节点不变，不恢复 880 列 ω^ω 默认示例。[验收](research/dqdn/validation.zh-CN.md) 与[来源记录](notations/DQDN/provenance.json) 保存迁移及有界复核情况。其他记号、PDF 和 Lean 项目不变。
 
 ## CTN：良序初始段为 CK 的可计算伪序（2026-10-01）
 
@@ -91,7 +99,7 @@ $$\alpha_{1Y}\le\alpha_{\mathrm{RPD}}<\alpha_{\mathrm{ARD}}
 
 ## 定义与展开器
 
-定义提供中英文。RPD 等十三个既有版本保留 **52 份 Markdown／PDF 定义文件**（含 FMP）；ACD、CSD、ICP、SRPD、CTN 另有十份 Markdown 定义，不新增 PDF。Markdown 默认英文，标题链接到中文版。
+定义提供中英文。RPD 等十三个既有版本保留 **52 份 Markdown／PDF 定义文件**（含 FMP）；ACD、CSD、ICP、SRPD、CTN、DQDN 另有十二份 Markdown 定义，不新增 PDF。Markdown 默认英文，标题链接到中文版。
 
 | 记号 | 英文定义 | 中文定义 | NER 展开器 | Python 展开器 |
 | --- | --- | --- | --- | --- |
@@ -113,6 +121,7 @@ $$\alpha_{1Y}\le\alpha_{\mathrm{RPD}}<\alpha_{\mathrm{ARD}}
 | CSD — 良序未决 | [Markdown](notations/CSD/definition.md) | [Markdown](notations/CSD/definition.zh-CN.md) | [JavaScript](notations/CSD/CSD.ne-rewritten.js) | [csd.py](notations/CSD/csd.py) · [局部计数](notations/CSD/local_clock.py) |
 | ICP — 已知非良序 | [Markdown](notations/ICP/definition.md) | [Markdown](notations/ICP/definition.zh-CN.md) | [JavaScript](notations/ICP/ICP.ne-rewritten.js) | [icp.py](notations/ICP/icp.py) |
 | CTN — CK 伪序 | [Markdown](notations/CTN/definition.md) | [Markdown](notations/CTN/definition.zh-CN.md) | [JavaScript](notations/CTN/CTN.ne-rewritten.js) | [ctn.py](notations/CTN/ctn.py) · [表检查器](notations/CTN/ctn_table.py) |
+| DQDN — 纸面良序 | [Markdown](notations/DQDN/definition.md) | [Markdown](notations/DQDN/definition.zh-CN.md) | [JavaScript](notations/DQDN/DQDN.ne-rewritten.js) | [公共入口](notations/DQDN/standard.py) · [类型生成器](notations/DQDN/typed_builder.py) |
 
 网页版：把所选 JavaScript 文件的完整内容载入 [ne-rewritten](https://smilelee-lyx.github.io/ne-rewritten/) 的自定义记号功能。每份文件均独立注册，无需构建；保留已有显示方式及资源保护。脚本也保留原来的中文帮助文字，其中可能有历史证明进度说明；当前证明范围以本包论文及验收记录为准。
 
@@ -174,6 +183,7 @@ Y 指固定上游提交 `1689b21131b488ec2ba2515bd630360371a2389d` 的继承祖�
 
 ```sh
 python tests/test_python.py
+python -B tests/dqdn.py
 python tests/test_ard.py
 python tests/test_ard_legacy.py
 node --max-old-space-size=512 tests/ard_skyline.cjs
@@ -223,6 +233,7 @@ python tools/qa_pdfs.py
 ```text
 README.md / README.zh-CN.md       总入口
 notations/
+  DQDN/                          有类型查询列、双语规则、四视图 NER、Python
   RPD/                           双语定义、PDF、JS、Python
   LRD/                           双语定义、PDF、JS、Python
   Omega-LRD3/                     双语定义、PDF、JS、Python

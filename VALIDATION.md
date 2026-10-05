@@ -1,5 +1,11 @@
 # Snapshot validation · [中文版](VALIDATION.zh-CN.md)
 
+## 2026-10-06: DQDN
+
+[DQDN validation](research/dqdn/validation.md) records 84 passing Python tests, 1,504 Python/JS expansion comparisons, 1,614 local construction records covering all 28 generator operations, 106 minimal-path/growth round trips with 665 checked steps, 12 requested power paths and 41 table rows. The complete local Python dependencies and validated standard-domain frontend are included. Seven bounded commands exited; observed Python peak RSS was below 156 MiB.
+
+The [receipt](tools/dqdn-validation.json) pins 30 checked code files, and [provenance](notations/DQDN/provenance.json) records 34 imports. The NER file is byte-identical to the current research version: four views and the six small default entries remain. No old 880-column default, live-browser test, new PDF or Lean theorem is added. Paper ordinal claims are separately indexed and are not certified by these tests. Run `python -B tests/dqdn.py` and `python -B tools/check_release.py` from the repository root.
+
 ## 2026-10-01: CTN, formerly CTN2
 
 The linear-limit edition is now packaged as [CTN](notations/CTN/definition.md), with six-view NER, Python frontend, extracted logical checker, bilingual definition/proof and small-ordinal documents, sparse ω^ω fixture/generator, and portable tests. The original CTN frontend is not included. This changes names and packaging, not the former CTN2 mathematical rule. No Lean source, proof receipt, existing notation implementation or PDF was changed.

@@ -1,5 +1,11 @@
 # 快照验收记录 · [English](VALIDATION.md)
 
+## 2026-10-06：DQDN
+
+[DQDN 验收](research/dqdn/validation.zh-CN.md) 记录 84 项通过的 Python 测试、1,504 次 Python/JS 展开对照、覆盖全部 28 种生成入口的 1,614 条构造记录、106 个最简路径／增列回读式子及 665 个步骤、12 条指定幂路径、41 行表格。Python 依赖已收齐，另有检查公共标准域的前端。七个有界命令均退出，实测 Python 峰值 RSS 低于 156 MiB。
+
+[测试收据](tools/dqdn-validation.json) 固定 30 个代码文件，[来源清单](notations/DQDN/provenance.json) 记录 34 个导入文件。NER 与当前研究版逐字节相同，保留四视图和六个小默认项。不恢复旧 880 列默认项，不新增真实浏览器测试、PDF 或 Lean 定理。纸面序数结论单独索引，不由这些测试认证。在仓库根运行 `python -B tests/dqdn.py` 和 `python -B tools/check_release.py`。
+
 ## 2026-10-01：原 CTN2 统一命名为 CTN
 
 线性基本列版现以 [CTN](notations/CTN/definition.zh-CN.md) 收录，包含六视图 NER、Python 前端、独立逻辑检查器、双语定义／证明及小序数定位、ω^ω 稀疏证书／生成器与可移植测试。不收录废弃初版展开器；本次只改命名和包装，不改原 CTN2 数学规则。未修改 Lean 源码／证明收据、既有记号实现或 PDF。

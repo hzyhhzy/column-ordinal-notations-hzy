@@ -2,9 +2,17 @@
 
 At 20:00 on September 11, @Phyrion published a [well-ordering proof for the Y-sequence system](https://github.com/Phyrion1343/1Y-Well-Ordering-Lean). Shortly afterwards, @test_alpha0 reduced the required axiomatic foundation to $KP_\omega+\text{there exists an uncountable ordinal}$. This repository collects RPD, LRD, Ω-LRD3, ARD, IPD, and ARD2, notation systems devised by GPT6-astra after studying those proofs, together with their well-ordering proofs. RPD admits a much shorter definition than Y; the paper comparison chain below proves it is at least as strong as the fixed 1Y definition. LRD and Ω-LRD3 are further extensions of that construction. ARD makes row labels into references to earlier columns, so the row coordinate itself moves during expansion. IPD uses finite-level iterated tree profiles and relocates references even inside nested heads. ARD2 returns to three natural-number coordinates, allowing both row and root SELF references and full-context root packages. All six admit paper well-ordering proofs in the same axiomatic system. Whole-system comparisons with omega-Y remain open; the specific known comparisons and common initial segments are recorded below.
 
-Definitions, executable fundamental sequences, and proof/status documents for column notations, including explicitly marked pseudo-orders. This source snapshot was updated on **2026-10-01** for [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy). The suffix `hzy` refers to the repository owner's name.
+Definitions, executable fundamental sequences, and proof/status documents for column notations, including explicitly marked pseudo-orders. This source snapshot was updated on **2026-10-06** for [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy). The suffix `hzy` refers to the repository owner's name.
 
-The notation implementations are **SRPD, RPD, LRD, Ω-LRD3, ARD, IPD, ARD2, SPD, CWY, CWY2, Ω-CWY, ACD, CSD, ICP, FMP and CTN**, with the candidate/failed/pseudo-order distinctions below. The Lean proof collection still covers only **Y, RPD, LRD, Ω-LRD3, ARD, IPD and ARD2**. ARD-legacy and ARD2-legacy are retained as explicit previous editions; other Ω-LRD variants are excluded. External e0MN implementations are credited separately, not counted as inventions of this project.
+The notation implementations are **SRPD, RPD, LRD, Ω-LRD3, ARD, IPD, ARD2, SPD, CWY, CWY2, Ω-CWY, ACD, CSD, ICP, FMP, CTN and DQDN**, with the candidate/failed/pseudo-order distinctions below. The Lean proof collection still covers only **Y, RPD, LRD, Ω-LRD3, ARD, IPD and ARD2**. ARD-legacy and ARD2-legacy are retained as explicit previous editions; other Ω-LRD variants are excluded. External e0MN implementations are credited separately, not counted as inventions of this project.
+
+## DQDN and its collected results (2026-10-06)
+
+[**DQDN — Demand Query Diagram Notation**](notations/DQDN/README.md) is now packaged with its unchanged four-view [NER expander](notations/DQDN/DQDN.ne-rewritten.js), a self-contained Python dependency set and validated [public frontend](notations/DQDN/standard.py), bilingual definitions and a [paper well-ordering argument](proofs/paper/dqdn-well-ordering.md). This is the common TOP-standard domain, not arbitrary untyped graphs. The old weak-KP upper bounds are not asserted for it, and no DQDN Lean project is added.
+
+The [results and proof index](research/dqdn/README.md) collects the three-view equality tables, ζ₀/Γ₀/BHO carrier bounds, the BO convention, the global ≥PTO(Zω) argument and the paper chain $\lim(\mathrm{BMS})\le\mathrm{PTO}(Z_2)\le|\mathrm{TOP}[2]|$, including the strict four-row BMS bound. **Paper arguments, finite replay and open claims are distinguished.** Neither TOP[2]=PTO(Z₂) nor lim(DQDN)=PTO(Zω) is proved here. Full Chinese derivations are preserved with English companions; the long location manuscript has an explicitly condensed English reading edition.
+
+TOP[1] has the paper value ε₀, while TOP[2] has count word `1,2,1,2`. The default NER list remains six small entries; the 880-column ω^ω example is not restored to it. [Validation](research/dqdn/validation.md) and [provenance](notations/DQDN/provenance.json) record the migration and bounded tests. Other notations, PDFs and Lean projects are unchanged.
 
 ## CTN: a computable pseudo-order with a CK initial segment (2026-10-01)
 
@@ -91,7 +99,7 @@ This too is a **paper comparison, not yet Lean-formalized**. It claims neither a
 
 ## Definitions and expanders
 
-Definitions are available in English and Chinese. Thirteen existing editions retain **52 Markdown/PDF definition artifacts** (including FMP); ACD, CSD, ICP, SRPD and CTN have ten further Markdown definitions without new PDFs. English Markdown is the default, with a title link to Chinese.
+Definitions are available in English and Chinese. Thirteen existing editions retain **52 Markdown/PDF definition artifacts** (including FMP); ACD, CSD, ICP, SRPD, CTN and DQDN have twelve further Markdown definitions without new PDFs. English Markdown is the default, with a title link to Chinese.
 
 | Notation | English definition | Chinese definition | NER expander | Python expander |
 | --- | --- | --- | --- | --- |
@@ -113,6 +121,7 @@ Definitions are available in English and Chinese. Thirteen existing editions ret
 | CSD — open | [Markdown](notations/CSD/definition.md) | [Markdown](notations/CSD/definition.zh-CN.md) | [JavaScript](notations/CSD/CSD.ne-rewritten.js) | [csd.py](notations/CSD/csd.py) · [local clock](notations/CSD/local_clock.py) |
 | ICP — not well-ordered | [Markdown](notations/ICP/definition.md) | [Markdown](notations/ICP/definition.zh-CN.md) | [JavaScript](notations/ICP/ICP.ne-rewritten.js) | [icp.py](notations/ICP/icp.py) |
 | CTN — CK pseudo-order | [Markdown](notations/CTN/definition.md) | [Markdown](notations/CTN/definition.zh-CN.md) | [JavaScript](notations/CTN/CTN.ne-rewritten.js) | [ctn.py](notations/CTN/ctn.py) · [table checker](notations/CTN/ctn_table.py) |
+| DQDN — paper well-ordering | [Markdown](notations/DQDN/definition.md) | [Markdown](notations/DQDN/definition.zh-CN.md) | [JavaScript](notations/DQDN/DQDN.ne-rewritten.js) | [public frontend](notations/DQDN/standard.py) · [typed generator](notations/DQDN/typed_builder.py) |
 
 For the browser version, load the complete JavaScript file into the custom-notation facility of [ne-rewritten](https://smilelee-lyx.github.io/ne-rewritten/). Each file is an independent registration script; no build step is needed. Existing display modes and resource guards are preserved. The scripts also retain their original Chinese help text, including historical proof-status notes; the papers and validation record in this package state the current proof scope.
 
@@ -174,6 +183,7 @@ Run the bounded expander and build-verifier tests from this directory:
 
 ```sh
 python tests/test_python.py
+python -B tests/dqdn.py
 python tests/test_ard.py
 python tests/test_ard_legacy.py
 node --max-old-space-size=512 tests/ard_skyline.cjs
@@ -223,6 +233,7 @@ See [validation and provenance](VALIDATION.md) for the checks performed on this 
 ```text
 README.md / README.zh-CN.md       Main entry points
 notations/
+  DQDN/                          Typed-query columns, bilingual rules, four-view NER, Python
   RPD/                           Bilingual definitions, PDFs, JS, Python
   LRD/                           Bilingual definitions, PDFs, JS, Python
   Omega-LRD3/                     Bilingual definitions, PDFs, JS, Python

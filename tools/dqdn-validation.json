@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "notation": "DQDN",
+  "integration_date": "2026-10-06",
+  "command": "python -B tests/dqdn.py",
+  "universal_proof": false,
+  "independent_mathematical_review": false,
+  "lean_build": false,
+  "browser_click_test": false,
+  "all_test_commands_exited": true,
+  "budgets": {
+    "child_wall_seconds": 45,
+    "python_tick_wall_seconds": 40,
+    "python_peak_rss_guard_mib": 768,
+    "node_heap_mib": 512,
+    "output_mib": 16
+  },
+  "checked_files": [
+    {
+      "file": "notations/DQDN/DQDN.ne-rewritten.js",
+      "sha256_lf": "b25e394be74f9351b899598e559aaf7367c3833d810a25a7b764dd184c3529c6"
+    },
+    {
+      "file": "notations/DQDN/dqdn.py",
+      "sha256_lf": "1695c3e11b327c8bc05b6059ded2b4e0a7f885928232d60707915dcedde4002b"
+    },
+    {
+      "file": "notations/DQDN/lambda_columns.py",
+      "sha256_lf": "720bc5152da2faa51551bdf5fff0fac49b16bb3021a263f15bdb1c01fbe56886"
+    },
+    {
+      "file": "notations/DQDN/lcdn.py",
+      "sha256_lf": "94cfe9382e6a2e2fd08c9cffd083fe35e1c06c1846e529856eb17d1d9bb9e02c"
+    },
+    {
+      "file": "notations/DQDN/lqdn.py",
+      "sha256_lf": "2fa3d6600c1284d81d4d6ce24578d839b1e414fcb05643cb02d7a99455406033"
+    },
+    {
+      "file": "notations/DQDN/standard.py",
+      "sha256_lf": "30ddc669252eefdad9c3795cf37463bf747abe850da1c4ec09e855545b14db72"
+    },
+    {
+      "file": "notations/DQDN/typed_builder.py",
+      "sha256_lf": "26eac3b67fd31db63e09827e734b8bd5d2a70ac462b83feab3ec5b9db67428c0"
+    },
+    {
+      "file": "research/dqdn/code/audit_wellfounded_boundary.py",
+      "sha256_lf": "ef4cd108874861a09be3127c92a55f0ec99a584235b90d0847536dec69f09af2"
+    },
+    {
+      "file": "research/dqdn/code/buchholz_tree_macros.py",
+      "sha256_lf": "3b34dcd7a3f5883dd7d5fc75fdf667b147394112a2a3adf7e7ad43a7a662e66f"
+    },
+    {
+      "file": "research/dqdn/code/check_dqdn_seeds.py",
+      "sha256_lf": "9fe30abc71f821d48e07f6fd39dce4a0354f1122b33490044077345b97aff7ff"
+    },
+    {
+      "file": "research/dqdn/code/compact_iteration_seeds.py",
+      "sha256_lf": "733926a8bcad736c45fca6d810ea272f2ad9a43a52530f8ab0c8ebcf9cf3f570"
+    },
+    {
+      "file": "research/dqdn/code/compact_type_author.py",
+      "sha256_lf": "1b8cb47345bd51786ef3404022e234658d2d7886736555c8b1832fa90bd4534c"
+    },
+    {
+      "file": "research/dqdn/code/exact_node_views.cjs",
+      "sha256_lf": "f8802553a1027209ed6351f45c6b667f9a40d8fae330cab7902d6112142e266b"
+    },
+    {
+      "file": "research/dqdn/code/locate_requested_powers.py",
+      "sha256_lf": "8c4838b886bab8d7e8e188b4cf113cc26273a924cdd249e5e6a0cc7eeab50c99"
+    },
+    {
+      "file": "research/dqdn/code/locate_standard_small.py",
+      "sha256_lf": "760b1792dbd9b63ae37d6c1faef20d3e448447a496b057cf5cb1a40ecbd65495"
+    },
+    {
+      "file": "research/dqdn/code/ner_test_vectors.py",
+      "sha256_lf": "b446b074001035e3d498f255de289a8bd702d17b7a24b260a1d9ebc616218adc"
+    },
+    {
+      "file": "research/dqdn/code/ordinal_tree_macros.py",
+      "sha256_lf": "6a96f9c5df111d2bb9fb90acd86f836392c8a347bd2cd6b184b7dd44236ad0a3"
+    },
+    {
+      "file": "research/dqdn/code/small_generator_ranks.py",
+      "sha256_lf": "77b7315510e19308a1cbe84d8d057e2b808990fdfa81c213daabd8b9abb86274"
+    },
+    {
+      "file": "research/dqdn/code/test_buchholz_tree_macros.py",
+      "sha256_lf": "6817dff168e0ea13d730d5b9f3a99a8d25a8c823808319d8ab854cb51928b9eb"
+    },
+    {
+      "file": "research/dqdn/code/test_dqdn_minimal_path.cjs",
+      "sha256_lf": "5adfc14ec99037e10bfe1cb510b0ca86c564a531d60aad9060b6e20d13ec92c3"
+    },
+    {
+      "file": "research/dqdn/code/test_dqdn_ner.cjs",
+      "sha256_lf": "95ce9b2c66bfa71b8d062a4561c000daed794389f64f19aced62f3634f211e13"
+    },
+    {
+      "file": "research/dqdn/code/test_dqdn.py",
+      "sha256_lf": "1ac2641792652a109e52978d85124ba2e0ad65fb9ae6633271f84854796dfe44"
+    },
+    {
+      "file": "research/dqdn/code/test_lcdn.py",
+      "sha256_lf": "55d4f73a074d137ada4531206e862660e5797b25bb3e242f30fbf38d25fce602"
+    },
+    {
+      "file": "research/dqdn/code/test_lqdn.py",
+      "sha256_lf": "d8aaef77f1add2a139cf6da036a79039d89d4d4933d1726f41d1862e41a5950f"
+    },
+    {
+      "file": "research/dqdn/code/test_ordinal_tree_macros.py",
+      "sha256_lf": "e1d7332c6b283e8afeba9326e554a13240ada7f0bebd10c10710b1ce0ad86f25"
+    },
+    {
+      "file": "research/dqdn/code/test_requested_powers.cjs",
+      "sha256_lf": "432f073c3f28209b70ecf8dd995db0b5ccc7e56993e1b710157d71f8d1729f11"
+    },
+    {
+      "file": "research/dqdn/code/test_standard_frontend.py",
+      "sha256_lf": "bf54b95c10bf04505e04003c6d621f77785702721a9a6fd4a9dfd5b75a4621fe"
+    },
+    {
+      "file": "research/dqdn/code/test_system_f_oracle_bridge.py",
+      "sha256_lf": "2a10a95aad6d42fefecebe6d0d8093ce8e87795c63423ea6e48e56d21bc84710"
+    },
+    {
+      "file": "research/dqdn/code/test_typed_builder.py",
+      "sha256_lf": "0728a3775c0c09208da50bfc5b9aafd16f8b90641dec88c3c4d4c5ac63d50cee"
+    },
+    {
+      "file": "tests/dqdn.py",
+      "sha256_lf": "1141da7bcc45b4f3a32b89dda350701fb079e800a5caaa9daf5f0c623d55d5fa"
+    }
+  ],
+  "runs": [
+    {
+      "id": "core",
+      "exit_code": 0,
+      "seconds": 3.094,
+      "tests": 41,
+      "peak_mib": 31.62,
+      "budget_ticks": 2443203
+    },
+    {
+      "id": "research",
+      "exit_code": 0,
+      "seconds": 31.578,
+      "tests": 43,
+      "peak_mib": 155.27,
+      "budget_ticks": 29797729
+    },
+    {
+      "id": "fixtures",
+      "exit_code": 0,
+      "seconds": 1.125,
+      "bytes": 1763645
+    },
+    {
+      "id": "test_dqdn_ner.cjs",
+      "exit_code": 0,
+      "seconds": 0.547,
+      "parents": 188,
+      "expansions": 1504,
+      "construction_commands": 1614,
+      "rule_kinds": 28,
+      "views": 4,
+      "registration_vm": true
+    },
+    {
+      "id": "test_dqdn_minimal_path.cjs",
+      "exit_code": 0,
+      "seconds": 0.406,
+      "examples": 106,
+      "checked_steps": 665,
+      "views": 4,
+      "defaults_unchanged": true
+    },
+    {
+      "id": "test_requested_powers.cjs",
+      "exit_code": 0,
+      "seconds": 0.203,
+      "paths": 12
+    },
+    {
+      "id": "exact_node_views.cjs",
+      "exit_code": 0,
+      "seconds": 0.187,
+      "main_rows": 18,
+      "early_rows": 23,
+      "scope": "Column/view round trips only; ordinal labels remain paper claims"
+    }
+  ]
+}

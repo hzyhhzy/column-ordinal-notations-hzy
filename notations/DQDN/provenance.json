@@ -1,0 +1,285 @@
+{
+  "schema_version": 1,
+  "notation": "DQDN",
+  "source_date": "2026-10-05",
+  "integrated_on": "2026-10-06",
+  "source_base": "original working directory (not needed to run the package)",
+  "mathematical_rules_changed": false,
+  "ner_id": "dqdn-20261005-init-v2",
+  "lean_project": false,
+  "files": [
+    {
+      "file": "notations/DQDN/DQDN.ne-rewritten.js",
+      "source": "output/zomega-column-research-20261005/DQDN.ne-rewritten.js",
+      "original_sha256": "b25e394be74f9351b899598e559aaf7367c3833d810a25a7b764dd184c3529c6",
+      "packaged_sha256": "b25e394be74f9351b899598e559aaf7367c3833d810a25a7b764dd184c3529c6",
+      "sha256_lf": "b25e394be74f9351b899598e559aaf7367c3833d810a25a7b764dd184c3529c6",
+      "adaptation": "Byte-for-byte copy"
+    },
+    {
+      "file": "notations/DQDN/typed_builder.py",
+      "source": "output/zomega-column-research-20261005/typed_builder.py",
+      "original_sha256": "26eac3b67fd31db63e09827e734b8bd5d2a70ac462b83feab3ec5b9db67428c0",
+      "packaged_sha256": "26eac3b67fd31db63e09827e734b8bd5d2a70ac462b83feab3ec5b9db67428c0",
+      "sha256_lf": "26eac3b67fd31db63e09827e734b8bd5d2a70ac462b83feab3ec5b9db67428c0",
+      "adaptation": "Byte-for-byte copy"
+    },
+    {
+      "file": "notations/DQDN/dqdn.py",
+      "source": "output/zomega-column-research-20261005/dqdn.py",
+      "original_sha256": "1695c3e11b327c8bc05b6059ded2b4e0a7f885928232d60707915dcedde4002b",
+      "packaged_sha256": "1695c3e11b327c8bc05b6059ded2b4e0a7f885928232d60707915dcedde4002b",
+      "sha256_lf": "1695c3e11b327c8bc05b6059ded2b4e0a7f885928232d60707915dcedde4002b",
+      "adaptation": "Byte-for-byte copy"
+    },
+    {
+      "file": "notations/DQDN/lqdn.py",
+      "source": "output/zomega-column-research-20261005/lqdn.py",
+      "original_sha256": "2fa3d6600c1284d81d4d6ce24578d839b1e414fcb05643cb02d7a99455406033",
+      "packaged_sha256": "2fa3d6600c1284d81d4d6ce24578d839b1e414fcb05643cb02d7a99455406033",
+      "sha256_lf": "2fa3d6600c1284d81d4d6ce24578d839b1e414fcb05643cb02d7a99455406033",
+      "adaptation": "Byte-for-byte copy"
+    },
+    {
+      "file": "notations/DQDN/lcdn.py",
+      "source": "output/zomega-column-research-20261005/lcdn.py",
+      "original_sha256": "d8edaf8633fd14d1d499cbb90c033d796bed8dea66401d5b45f0ceab3141a0f4",
+      "packaged_sha256": "94cfe9382e6a2e2fd08c9cffd083fe35e1c06c1846e529856eb17d1d9bb9e02c",
+      "sha256_lf": "94cfe9382e6a2e2fd08c9cffd083fe35e1c06c1846e529856eb17d1d9bb9e02c",
+      "adaptation": "Resolve lambda_columns from the same packaged directory"
+    },
+    {
+      "file": "notations/DQDN/lambda_columns.py",
+      "source": "output/zomega-two-hour-design-20260928/lambda_columns.py",
+      "original_sha256": "720bc5152da2faa51551bdf5fff0fac49b16bb3021a263f15bdb1c01fbe56886",
+      "packaged_sha256": "720bc5152da2faa51551bdf5fff0fac49b16bb3021a263f15bdb1c01fbe56886",
+      "sha256_lf": "720bc5152da2faa51551bdf5fff0fac49b16bb3021a263f15bdb1c01fbe56886",
+      "adaptation": "Byte-for-byte copy"
+    },
+    {
+      "file": "research/dqdn/code/check_dqdn_seeds.py",
+      "source": "output/zomega-column-research-20261005/check_dqdn_seeds.py",
+      "original_sha256": "9fe30abc71f821d48e07f6fd39dce4a0354f1122b33490044077345b97aff7ff",
+      "packaged_sha256": "9fe30abc71f821d48e07f6fd39dce4a0354f1122b33490044077345b97aff7ff",
+      "sha256_lf": "9fe30abc71f821d48e07f6fd39dce4a0354f1122b33490044077345b97aff7ff",
+      "adaptation": "Byte-for-byte copy"
+    },
+    {
+      "file": "research/dqdn/code/audit_wellfounded_boundary.py",
+      "source": "output/zomega-column-research-20261005/audit_wellfounded_boundary.py",
+      "original_sha256": "ef4cd108874861a09be3127c92a55f0ec99a584235b90d0847536dec69f09af2",
+      "packaged_sha256": "ef4cd108874861a09be3127c92a55f0ec99a584235b90d0847536dec69f09af2",
+      "sha256_lf": "ef4cd108874861a09be3127c92a55f0ec99a584235b90d0847536dec69f09af2",
+      "adaptation": "Byte-for-byte copy"
+    },
+    {
+      "file": "research/dqdn/code/test_typed_builder.py",
+      "source": "output/zomega-column-research-20261005/test_typed_builder.py",
+      "original_sha256": "0728a3775c0c09208da50bfc5b9aafd16f8b90641dec88c3c4d4c5ac63d50cee",
+      "packaged_sha256": "0728a3775c0c09208da50bfc5b9aafd16f8b90641dec88c3c4d4c5ac63d50cee",
+      "sha256_lf": "0728a3775c0c09208da50bfc5b9aafd16f8b90641dec88c3c4d4c5ac63d50cee",
+      "adaptation": "Byte-for-byte copy"
+    },
+    {
+      "file": "research/dqdn/code/test_dqdn.py",
+      "source": "output/zomega-column-research-20261005/test_dqdn.py",
+      "original_sha256": "1ac2641792652a109e52978d85124ba2e0ad65fb9ae6633271f84854796dfe44",
+      "packaged_sha256": "1ac2641792652a109e52978d85124ba2e0ad65fb9ae6633271f84854796dfe44",
+      "sha256_lf": "1ac2641792652a109e52978d85124ba2e0ad65fb9ae6633271f84854796dfe44",
+      "adaptation": "Byte-for-byte copy"
+    },
+    {
+      "file": "research/dqdn/code/test_lqdn.py",
+      "source": "output/zomega-column-research-20261005/test_lqdn.py",
+      "original_sha256": "d8aaef77f1add2a139cf6da036a79039d89d4d4933d1726f41d1862e41a5950f",
+      "packaged_sha256": "d8aaef77f1add2a139cf6da036a79039d89d4d4933d1726f41d1862e41a5950f",
+      "sha256_lf": "d8aaef77f1add2a139cf6da036a79039d89d4d4933d1726f41d1862e41a5950f",
+      "adaptation": "Byte-for-byte copy"
+    },
+    {
+      "file": "research/dqdn/code/test_lcdn.py",
+      "source": "output/zomega-column-research-20261005/test_lcdn.py",
+      "original_sha256": "55d4f73a074d137ada4531206e862660e5797b25bb3e242f30fbf38d25fce602",
+      "packaged_sha256": "55d4f73a074d137ada4531206e862660e5797b25bb3e242f30fbf38d25fce602",
+      "sha256_lf": "55d4f73a074d137ada4531206e862660e5797b25bb3e242f30fbf38d25fce602",
+      "adaptation": "Byte-for-byte copy"
+    },
+    {
+      "file": "research/dqdn/code/ner_test_vectors.py",
+      "source": "output/zomega-column-research-20261005/ner_test_vectors.py",
+      "original_sha256": "b446b074001035e3d498f255de289a8bd702d17b7a24b260a1d9ebc616218adc",
+      "packaged_sha256": "b446b074001035e3d498f255de289a8bd702d17b7a24b260a1d9ebc616218adc",
+      "sha256_lf": "b446b074001035e3d498f255de289a8bd702d17b7a24b260a1d9ebc616218adc",
+      "adaptation": "Byte-for-byte copy"
+    },
+    {
+      "file": "research/dqdn/code/test_dqdn_ner.cjs",
+      "source": "output/zomega-column-research-20261005/test_dqdn_ner.cjs",
+      "original_sha256": "0d8e0f5bfcc999e4dac618e04b9609938e49e354f0055c4c711aae3a26ca9967",
+      "packaged_sha256": "95ce9b2c66bfa71b8d062a4561c000daed794389f64f19aced62f3634f211e13",
+      "sha256_lf": "95ce9b2c66bfa71b8d062a4561c000daed794389f64f19aced62f3634f211e13",
+      "adaptation": "Relocate NER imports to the packaged script"
+    },
+    {
+      "file": "research/dqdn/code/test_dqdn_minimal_path.cjs",
+      "source": "output/zomega-column-research-20261005/test_dqdn_minimal_path.cjs",
+      "original_sha256": "ad0325e6afd6c6c2299b17f22d59462fdafe2a88bf7bef43d20a0d68a32f8a8b",
+      "packaged_sha256": "5adfc14ec99037e10bfe1cb510b0ca86c564a531d60aad9060b6e20d13ec92c3",
+      "sha256_lf": "5adfc14ec99037e10bfe1cb510b0ca86c564a531d60aad9060b6e20d13ec92c3",
+      "adaptation": "Relocate NER imports to the packaged script"
+    },
+    {
+      "file": "research/dqdn/code/test_requested_powers.cjs",
+      "source": "output/zomega-column-research-20261005/test_requested_powers.cjs",
+      "original_sha256": "efc0b222e8b6fff02ebe0a07c6458b3dd8ceb771e882bbe6d69ed0bd0b1a3778",
+      "packaged_sha256": "432f073c3f28209b70ecf8dd995db0b5ccc7e56993e1b710157d71f8d1729f11",
+      "sha256_lf": "432f073c3f28209b70ecf8dd995db0b5ccc7e56993e1b710157d71f8d1729f11",
+      "adaptation": "Relocate NER imports to the packaged script"
+    },
+    {
+      "file": "research/dqdn/code/exact_node_views.cjs",
+      "source": "output/zomega-column-research-20261005/exact_node_views.cjs",
+      "original_sha256": "3cf0fe5e4db49e7f42d96010fbb38d91090a543410121c46495e5eeb5d163d2e",
+      "packaged_sha256": "f8802553a1027209ed6351f45c6b667f9a40d8fae330cab7902d6112142e266b",
+      "sha256_lf": "f8802553a1027209ed6351f45c6b667f9a40d8fae330cab7902d6112142e266b",
+      "adaptation": "Relocate NER imports to the packaged script"
+    },
+    {
+      "file": "research/dqdn/code/locate_standard_small.py",
+      "source": "output/zomega-column-research-20261005/locate_standard_small.py",
+      "original_sha256": "760b1792dbd9b63ae37d6c1faef20d3e448447a496b057cf5cb1a40ecbd65495",
+      "packaged_sha256": "760b1792dbd9b63ae37d6c1faef20d3e448447a496b057cf5cb1a40ecbd65495",
+      "sha256_lf": "760b1792dbd9b63ae37d6c1faef20d3e448447a496b057cf5cb1a40ecbd65495",
+      "adaptation": "Byte-for-byte copy"
+    },
+    {
+      "file": "research/dqdn/code/locate_requested_powers.py",
+      "source": "output/zomega-column-research-20261005/locate_requested_powers.py",
+      "original_sha256": "8c4838b886bab8d7e8e188b4cf113cc26273a924cdd249e5e6a0cc7eeab50c99",
+      "packaged_sha256": "8c4838b886bab8d7e8e188b4cf113cc26273a924cdd249e5e6a0cc7eeab50c99",
+      "sha256_lf": "8c4838b886bab8d7e8e188b4cf113cc26273a924cdd249e5e6a0cc7eeab50c99",
+      "adaptation": "Byte-for-byte copy"
+    },
+    {
+      "file": "research/dqdn/code/ordinal_tree_macros.py",
+      "source": "output/zomega-column-research-20261005/ordinal_tree_macros.py",
+      "original_sha256": "6a96f9c5df111d2bb9fb90acd86f836392c8a347bd2cd6b184b7dd44236ad0a3",
+      "packaged_sha256": "6a96f9c5df111d2bb9fb90acd86f836392c8a347bd2cd6b184b7dd44236ad0a3",
+      "sha256_lf": "6a96f9c5df111d2bb9fb90acd86f836392c8a347bd2cd6b184b7dd44236ad0a3",
+      "adaptation": "Byte-for-byte copy"
+    },
+    {
+      "file": "research/dqdn/code/test_ordinal_tree_macros.py",
+      "source": "output/zomega-column-research-20261005/test_ordinal_tree_macros.py",
+      "original_sha256": "e1d7332c6b283e8afeba9326e554a13240ada7f0bebd10c10710b1ce0ad86f25",
+      "packaged_sha256": "e1d7332c6b283e8afeba9326e554a13240ada7f0bebd10c10710b1ce0ad86f25",
+      "sha256_lf": "e1d7332c6b283e8afeba9326e554a13240ada7f0bebd10c10710b1ce0ad86f25",
+      "adaptation": "Byte-for-byte copy"
+    },
+    {
+      "file": "research/dqdn/code/buchholz_tree_macros.py",
+      "source": "output/zomega-column-research-20261005/buchholz_tree_macros.py",
+      "original_sha256": "3b34dcd7a3f5883dd7d5fc75fdf667b147394112a2a3adf7e7ad43a7a662e66f",
+      "packaged_sha256": "3b34dcd7a3f5883dd7d5fc75fdf667b147394112a2a3adf7e7ad43a7a662e66f",
+      "sha256_lf": "3b34dcd7a3f5883dd7d5fc75fdf667b147394112a2a3adf7e7ad43a7a662e66f",
+      "adaptation": "Byte-for-byte copy"
+    },
+    {
+      "file": "research/dqdn/code/test_buchholz_tree_macros.py",
+      "source": "output/zomega-column-research-20261005/test_buchholz_tree_macros.py",
+      "original_sha256": "6817dff168e0ea13d730d5b9f3a99a8d25a8c823808319d8ab854cb51928b9eb",
+      "packaged_sha256": "6817dff168e0ea13d730d5b9f3a99a8d25a8c823808319d8ab854cb51928b9eb",
+      "sha256_lf": "6817dff168e0ea13d730d5b9f3a99a8d25a8c823808319d8ab854cb51928b9eb",
+      "adaptation": "Byte-for-byte copy"
+    },
+    {
+      "file": "research/dqdn/code/compact_iteration_seeds.py",
+      "source": "output/zomega-column-research-20261005/compact_iteration_seeds.py",
+      "original_sha256": "733926a8bcad736c45fca6d810ea272f2ad9a43a52530f8ab0c8ebcf9cf3f570",
+      "packaged_sha256": "733926a8bcad736c45fca6d810ea272f2ad9a43a52530f8ab0c8ebcf9cf3f570",
+      "sha256_lf": "733926a8bcad736c45fca6d810ea272f2ad9a43a52530f8ab0c8ebcf9cf3f570",
+      "adaptation": "Byte-for-byte copy"
+    },
+    {
+      "file": "research/dqdn/code/compact_type_author.py",
+      "source": "output/zomega-column-research-20261005/compact_type_author.py",
+      "original_sha256": "1b8cb47345bd51786ef3404022e234658d2d7886736555c8b1832fa90bd4534c",
+      "packaged_sha256": "1b8cb47345bd51786ef3404022e234658d2d7886736555c8b1832fa90bd4534c",
+      "sha256_lf": "1b8cb47345bd51786ef3404022e234658d2d7886736555c8b1832fa90bd4534c",
+      "adaptation": "Byte-for-byte copy"
+    },
+    {
+      "file": "research/dqdn/code/test_system_f_oracle_bridge.py",
+      "source": "output/zomega-column-research-20261005/test_system_f_oracle_bridge.py",
+      "original_sha256": "2a10a95aad6d42fefecebe6d0d8093ce8e87795c63423ea6e48e56d21bc84710",
+      "packaged_sha256": "2a10a95aad6d42fefecebe6d0d8093ce8e87795c63423ea6e48e56d21bc84710",
+      "sha256_lf": "2a10a95aad6d42fefecebe6d0d8093ce8e87795c63423ea6e48e56d21bc84710",
+      "adaptation": "Byte-for-byte copy"
+    },
+    {
+      "file": "research/dqdn/code/small_generator_ranks.py",
+      "source": "output/zomega-column-research-20261005/small_generator_ranks.py",
+      "original_sha256": "24130b836a4bbf1742ea81f1aee1aa388ec2396a716316aa3967bf5a97083e49",
+      "packaged_sha256": "77b7315510e19308a1cbe84d8d057e2b808990fdfa81c213daabd8b9abb86274",
+      "sha256_lf": "77b7315510e19308a1cbe84d8d057e2b808990fdfa81c213daabd8b9abb86274",
+      "adaptation": "Clarify the witness-bound error text; candidate formulas and mathematical rules unchanged"
+    },
+    {
+      "file": "notations/DQDN/definition.zh-CN.md",
+      "source": "output/zomega-column-research-20261005/DQDN-INCREMENTAL-DEFINITION.zh-CN.md",
+      "original_sha256": "8d74947b893f8b921d04ba81f95f08e75e147133280195dbc43d5c4558603caa",
+      "packaged_sha256": "a21e60ea7cfcd6c75a9b174361ba3cf284bdcb5d548a28f8cf1ddb4c01303b21",
+      "sha256_lf": "a21e60ea7cfcd6c75a9b174361ba3cf284bdcb5d548a28f8cf1ddb4c01303b21",
+      "adaptation": "Language links, relative references, status annotations and GitHub math delimiters; mathematical argument retained"
+    },
+    {
+      "file": "research/dqdn/small-ordinals.zh-CN.md",
+      "source": "output/zomega-column-research-20261005/DQDN-EXACT-SMALL-ORDINALS.zh-CN.md",
+      "original_sha256": "c38a7230857d93376c97a6914592fdc86008f714df4f5057a8838e2baa0a22ee",
+      "packaged_sha256": "de082dc1991f9a15a984afe80530226608558f154b1d320dd6c4fe5077fd688d",
+      "sha256_lf": "de082dc1991f9a15a984afe80530226608558f154b1d320dd6c4fe5077fd688d",
+      "adaptation": "Language links, relative references, status annotations and GitHub math delimiters; mathematical argument retained"
+    },
+    {
+      "file": "research/dqdn/epsilon0.zh-CN.md",
+      "source": "output/zomega-column-research-20261005/DQDN-EXACT-EPSILON0.zh-CN.md",
+      "original_sha256": "89679ff4f0c6cadf932f402861d4117ecec50d0664f147cbf059b8cbb532b75c",
+      "packaged_sha256": "1178c88001ee18d0a984d848ac7c2eb955d82bfff6a6af58136e4ea43b1afc78",
+      "sha256_lf": "1178c88001ee18d0a984d848ac7c2eb955d82bfff6a6af58136e4ea43b1afc78",
+      "adaptation": "Language links, relative references, status annotations and GitHub math delimiters; mathematical argument retained"
+    },
+    {
+      "file": "research/dqdn/tower-profiles.zh-CN.md",
+      "source": "output/zomega-column-research-20261005/DQDN-TOWER-PROFILES.zh-CN.md",
+      "original_sha256": "827b1bb0083819fa39eb88ceb4971ddc94622e443ac5fe8d20c5a0109a1e70df",
+      "packaged_sha256": "5b963f5465cb010c99ec7a19cc169d640605f7a6971a7e94b041efef3884a1e9",
+      "sha256_lf": "5b963f5465cb010c99ec7a19cc169d640605f7a6971a7e94b041efef3884a1e9",
+      "adaptation": "Language links, relative references, status annotations and GitHub math delimiters; mathematical argument retained"
+    },
+    {
+      "file": "research/dqdn/upper-bound-open.zh-CN.md",
+      "source": "output/zomega-column-research-20261005/DQDN-UPPER-BOUND-OPEN.zh-CN.md",
+      "original_sha256": "f49cae6fc119a20731c708ab5c5e9d1df58126bb5b57f36271f41b3ff2367ff6",
+      "packaged_sha256": "d40dad4e8825106aa83fa40187cb3f7a7ef4f82fef663ef21bcd2c70cc680cb5",
+      "sha256_lf": "d40dad4e8825106aa83fa40187cb3f7a7ef4f82fef663ef21bcd2c70cc680cb5",
+      "adaptation": "Language links, relative references, status annotations and GitHub math delimiters; mathematical argument retained"
+    },
+    {
+      "file": "research/dqdn/girard-oracle-bridge.zh-CN.md",
+      "source": "output/zomega-column-research-20261005/GIRARD-ORACLE-BRIDGE.zh-CN.md",
+      "original_sha256": "74c1af68ca2efe6e61dbdb0075e7e8cf3aab3eabdb2a73152a0637df9d8adbc9",
+      "packaged_sha256": "1be3326e9c4966f326b2aed6a975ecc9abe56800f2e502bf42bf3d371c5a5e10",
+      "sha256_lf": "1be3326e9c4966f326b2aed6a975ecc9abe56800f2e502bf42bf3d371c5a5e10",
+      "adaptation": "Language links, relative references, status annotations and GitHub math delimiters; mathematical argument retained"
+    },
+    {
+      "file": "research/dqdn/bms-top2.zh-CN.md",
+      "source": "output/zomega-column-research-20261005/BMS-TOP2-COMPARISON.zh-CN.md",
+      "original_sha256": "a96271d872d01823b5e3c8655d82cb7779085ab643f63967cb284a94925e36ff",
+      "packaged_sha256": "aedd9e385d2071c6f4567e153942686391318f43742ae1bf1ceda45227eccb56",
+      "sha256_lf": "aedd9e385d2071c6f4567e153942686391318f43742ae1bf1ceda45227eccb56",
+      "adaptation": "Language links, relative references, status annotations and GitHub math delimiters; mathematical argument retained"
+    }
+  ],
+  "added_material": "Bilingual usage and proof/index documents, English research companions, validated standard.py frontend, bounded test runner and frontend regression test."
+}

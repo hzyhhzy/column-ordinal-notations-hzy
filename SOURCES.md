@@ -1,5 +1,13 @@
 # Sources, versions and licenses · [中文版](SOURCES.zh-CN.md)
 
+## DQDN packaging (2026-10-06)
+
+[DQDN](notations/DQDN/README.md) preserves the 2026-10-05 `zomega-column-research-20261005` incremental-generator edition. [provenance.json](notations/DQDN/provenance.json) lists 34 imported implementation, test and Chinese-manuscript files with original/package hashes and adaptations. The NER file is unchanged byte for byte, including ID, defaults and four views. The Python helper `lambda_columns.py` is included locally; the only runtime dependency adaptation is removal of `lcdn.py`'s old sibling-directory path injection. Test NER imports are repository-relative. One witness-range error message was clarified without changing formulas or rules.
+
+New material consists of the validated `standard.py` frontend, a bounded replay runner and frontend tests, bilingual usage/definition/proof/index documents and English research companions. The full Chinese mathematical derivations are retained; status banners and references are updated rather than presenting old future-work notes as current instructions. The long location manuscript's English companion is explicitly condensed. No original research file is moved or deleted, and no recovery script, private PDF, huge default example or obsolete notation frontend is included.
+
+Mathematical sources are linked where used: Girard and related functional-interpretation work; Hunter's BM4 argument; Montalbán–Shore conservativity; the cited System T dialogue-tree result; and Buchholz's original tree/rank conventions. Their papers are not redistributed. The collected DQDN results are paper arguments, not independent referee or Lean certification; the existing weak-KP upper bound is not asserted for DQDN. No new license is inferred. Other notations, Lean projects and PDF snapshots are unchanged.
+
 ## CTN naming and source boundary (2026-10-01)
 
 [CTN](notations/CTN/definition.md) means **Comprehension Table Notation**. It packages the linear-limit research edition previously named CTN2. The original CTN frontend is retired and not included as a competing definition. Original research files outside this repository were not deleted or overwritten.

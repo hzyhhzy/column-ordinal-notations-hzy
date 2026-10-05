@@ -4,6 +4,12 @@ This directory keeps exploratory order-type comparisons separate from the well-o
 
 本目录专门存放推导、比较思路与未完成结论，不与正式良序证明或 Lean 已验证定理混在一起。每份总结区分纸面论证、局部引理、程序核验及未证候选。
 
+## DQDN collected results and proofs / 结论与证明（2026-10-06）
+
+[English index](dqdn/README.md) · [中文总览](dqdn/README.zh-CN.md). The DQDN archive keeps the complete Chinese small-ordinal derivations, 41-row view table, epsilon-zero/tower proofs, Veblen and Buchholz carrier bounds, the BMS-to-TOP[2] comparison and the global PTO(Zω) lower-bound interface. English companions state the evidence boundary; the long location document is an explicitly condensed reading edition. Bounded portable helpers and tests are included under `dqdn/code/`, with runtime dependencies in `notations/DQDN/`.
+
+DQDN 归档区分纸面等号、承载下界、原型核验和未决 PTO 上界；原 H(31) 更正及 b=32…35 尚未完成的上界状态均保留。新增目录不改变旧记号，也不新增 Lean 证明；整理不会重启已暂停的定时研究。
+
 ## 2026-09-14：IPD 与其他记号的比较
 
 For the newer collected results, see the [2026-09-20 bilingual catalogue](order-comparisons/README.md): ordinary e0MN upper bounds, exact low segments, wY→RWD, BMS→ACD/CSD/ICP, and the conditional BMS→IBLP `initial[0][1]` argument. It links the original-language proof manuscripts and states their assumptions and non-Lean status.

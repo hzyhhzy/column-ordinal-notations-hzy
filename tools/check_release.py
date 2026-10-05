@@ -77,6 +77,7 @@ MONOLINGUAL_ARCHIVES = frozenset({
     'research/README.md',
 })
 NER_HASHES = {
+    'notations/DQDN/DQDN.ne-rewritten.js': 'b25e394be74f9351b899598e559aaf7367c3833d810a25a7b764dd184c3529c6',
     'notations/CTN/CTN.ne-rewritten.js': 'bf86d434760bb904886783fca76a2c7e5808e245eb4561068c78881ac30b104b',
     'notations/SRPD/SRPD.ne-rewritten.js': 'fdbd0d0788afe0cd6949cb280ffea4c85813bbd6d5e47d04e6a078e00bbee85a',
     'notations/FMP/FMP.ne-rewritten.js': '199fd418a9ac5a684d8e5232971f98552c8cb6607b1262668f11f80cbdbbda22',
@@ -267,6 +268,87 @@ def check_lean_receipt(problems):
         print(f'Independent Lean receipts current: {len(plans)} scopes, {len(aggregate)} distinct modules')
 
 
+def check_dqdn_import(problems):
+    """Check DQDN scope/integrity without enlarging the Lean theorem set."""
+    expected_imports = {
+        "notations/DQDN/DQDN.ne-rewritten.js",
+        "notations/DQDN/typed_builder.py",
+        "notations/DQDN/dqdn.py",
+        "notations/DQDN/lqdn.py",
+        "notations/DQDN/lcdn.py",
+        "notations/DQDN/lambda_columns.py",
+        "research/dqdn/code/check_dqdn_seeds.py",
+        "research/dqdn/code/audit_wellfounded_boundary.py",
+        "research/dqdn/code/test_typed_builder.py",
+        "research/dqdn/code/test_dqdn.py",
+        "research/dqdn/code/test_lqdn.py",
+        "research/dqdn/code/test_lcdn.py",
+        "research/dqdn/code/ner_test_vectors.py",
+        "research/dqdn/code/test_dqdn_ner.cjs",
+        "research/dqdn/code/test_dqdn_minimal_path.cjs",
+        "research/dqdn/code/test_requested_powers.cjs",
+        "research/dqdn/code/exact_node_views.cjs",
+        "research/dqdn/code/locate_standard_small.py",
+        "research/dqdn/code/locate_requested_powers.py",
+        "research/dqdn/code/ordinal_tree_macros.py",
+        "research/dqdn/code/test_ordinal_tree_macros.py",
+        "research/dqdn/code/buchholz_tree_macros.py",
+        "research/dqdn/code/test_buchholz_tree_macros.py",
+        "research/dqdn/code/compact_iteration_seeds.py",
+        "research/dqdn/code/compact_type_author.py",
+        "research/dqdn/code/test_system_f_oracle_bridge.py",
+        "research/dqdn/code/small_generator_ranks.py",
+        "notations/DQDN/definition.zh-CN.md",
+        "research/dqdn/small-ordinals.zh-CN.md",
+        "research/dqdn/epsilon0.zh-CN.md",
+        "research/dqdn/tower-profiles.zh-CN.md",
+        "research/dqdn/upper-bound-open.zh-CN.md",
+        "research/dqdn/girard-oracle-bridge.zh-CN.md",
+        "research/dqdn/bms-top2.zh-CN.md",
+    }
+    try:
+        manifest = json.loads((ROOT / 'notations/DQDN/provenance.json').read_text(encoding='utf-8'))
+        if (manifest.get('schema_version') != 1 or manifest.get('notation') != 'DQDN'
+                or manifest.get('mathematical_rules_changed') is not False
+                or manifest.get('lean_project') is not False
+                or manifest.get('ner_id') != 'dqdn-20261005-init-v2'):
+            raise ValueError('Unexpected DQDN provenance scope')
+        records = manifest['files']
+        if len(records) != len(expected_imports) or {r['file'] for r in records} != expected_imports:
+            raise ValueError('Unexpected DQDN imported file inventory')
+        for record in records:
+            if sha256_lf(ROOT / record['file']) != record['sha256_lf']:
+                raise ValueError('DQDN import changed: ' + record['file'])
+            if record['adaptation'] == 'Byte-for-byte copy' and record['original_sha256'] != record['packaged_sha256']:
+                raise ValueError('Unrecorded DQDN source adaptation: ' + record['file'])
+        receipt = json.loads((ROOT / 'tools/dqdn-validation.json').read_text(encoding='utf-8'))
+        if (receipt.get('schema_version') != 1 or receipt.get('notation') != 'DQDN'
+                or receipt.get('universal_proof') is not False
+                or receipt.get('lean_build') is not False
+                or receipt.get('independent_mathematical_review') is not False
+                or receipt.get('browser_click_test') is not False
+                or receipt.get('all_test_commands_exited') is not True):
+            raise ValueError('Unexpected DQDN finite-validation scope')
+        expected_checks = {p for p in expected_imports if p.endswith(('.py', '.cjs', '.js'))} | {
+            'notations/DQDN/standard.py', 'tests/dqdn.py',
+            'research/dqdn/code/test_standard_frontend.py'}
+        checks = receipt['checked_files']
+        if len(checks) != len(expected_checks) or {r['file'] for r in checks} != expected_checks:
+            raise ValueError('Unexpected DQDN checked-code inventory')
+        for record in checks:
+            if sha256_lf(ROOT / record['file']) != record['sha256_lf']:
+                raise ValueError('Stale DQDN test receipt: ' + record['file'])
+        runs = receipt['runs']
+        expected_runs = {'core', 'research', 'fixtures', 'test_dqdn_ner.cjs',
+                         'test_dqdn_minimal_path.cjs', 'test_requested_powers.cjs',
+                         'exact_node_views.cjs'}
+        if len(runs) != len(expected_runs) or {r['id'] for r in runs} != expected_runs or any(r['exit_code'] != 0 for r in runs):
+            raise ValueError('Incomplete DQDN finite replay')
+        print('DQDN: 34 pinned imports, current bounded replay; no Lean or universal-proof claim')
+    except (ValueError, KeyError, OSError) as error:
+        problems.append('DQDN import/finite-validation manifest: ' + str(error))
+
+
 def main():
     files = list(release_files())
     problems, links = [], 0
@@ -319,12 +401,13 @@ def main():
     for path in pdfs:
         if not path.with_suffix('.md').is_file() or path.stat().st_size < 1000:
             problems.append(f'Invalid PDF/source pair: {path.relative_to(ROOT)}')
-    if {p.name for p in (ROOT/'notations').iterdir() if p.is_dir()} != {'SRPD','RPD','LRD','Omega-LRD3','ARD','ARD-legacy','IPD','ARD2','ARD2-legacy','SPD','CWY','CWY2','Omega-CWY','ACD','CSD','ICP','FMP','CTN'}:
+    if {p.name for p in (ROOT/'notations').iterdir() if p.is_dir()} != {'SRPD','RPD','LRD','Omega-LRD3','ARD','ARD-legacy','IPD','ARD2','ARD2-legacy','SPD','CWY','CWY2','Omega-CWY','ACD','CSD','ICP','FMP','CTN','DQDN'}:
         problems.append('Unexpected notation directory')
     for relative, expected in NER_HASHES.items():
         actual = hashlib.sha256((ROOT/relative).read_bytes()).hexdigest()
         if actual != expected:
             problems.append(f'NER snapshot changed: {relative}')
+    check_dqdn_import(problems)
     # CTN is the former CTN2 frontend, not a new whole-system Lean theorem.
     # Pin its renamed implementation and sparse artifact; do not revive old CTN.
     try:

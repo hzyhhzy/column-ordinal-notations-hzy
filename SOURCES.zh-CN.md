@@ -1,5 +1,13 @@
 # 来源、版本与许可证 · [English](SOURCES.md)
 
+## DQDN 整理（2026-10-06）
+
+[DQDN](notations/DQDN/README.zh-CN.md) 沿用 2026-10-05 的 `zomega-column-research-20261005` 增量生成器版本。[来源清单](notations/DQDN/provenance.json) 逐项记录 34 个导入实现、测试及中文文稿的原始／入库哈希和改动。NER 与原文件逐字节一致，包括 ID、默认项、四视图。Python 辅助文件 `lambda_columns.py` 收进本地，运行依赖只删除 `lcdn.py` 原来的相邻研究目录导入注入；测试的 NER 路径改为仓库相对路径。另澄清一处下界见证范围的报错文案，不改公式或规则。
+
+新增内容是检查标准域的 `standard.py`、有界测试入口及其前端测试、双语使用／定义／证明／索引，以及英文研究配套。完整中文数学推导保留，只更新状态开头与引用，不把历史后续计划当作当前指令；长篇定位稿的英文配套明确为缩编。不移动或删除原研究文件，不收录恢复脚本、私人 PDF、超长默认示例或已弃用记号前端。
+
+数学来源在相应正文引用：Girard 及相关函数解释、Hunter 的 BM4 证明、Montalbán–Shore 保守性、所引 System T 查询树定理，以及 Buchholz 原始树与秩约定。不转发这些论文。DQDN 结论按纸面论证标注，不是独立审稿或 Lean 认证；旧弱 KP 上界不套用到 DQDN。本次不推定新许可证，不改其他记号、Lean 工程或 PDF 快照。
+
 ## CTN 的命名与来源边界（2026-10-01）
 
 [CTN](notations/CTN/definition.zh-CN.md) 全称 **Comprehension Table Notation**，收录原研究名 CTN2 的线性基本列版。最初名为 CTN 的旧展开前端作废，不作为竞争定义收录；仓库外的原始研究文件没有删除或覆盖。
