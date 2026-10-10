@@ -1,0 +1,21 @@
+{
+  "limits": {
+    "milliseconds": 9000,
+    "states": 2400,
+    "sourceWidth": 24,
+    "sourceHeight": 8,
+    "targetWidth": 6000,
+    "rssMiB": 384
+  },
+  "rawStates": 2400,
+  "gammaChecks": 11583,
+  "parentChecks": 1150418,
+  "infinitePrefixChecks": 6783,
+  "zeroChecks": 2400,
+  "terminalCorrections": 390,
+  "preparationStops": 86,
+  "inversionColumns": 806,
+  "failed": null,
+  "elapsedMs": 247,
+  "rssMiB": 46.625
+}

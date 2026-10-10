@@ -1,0 +1,27 @@
+{
+  "limits": {
+    "milliseconds": 12000,
+    "states": 9000,
+    "sourceWidth": 28,
+    "targetWidth": 5000,
+    "work": 5000000,
+    "rssMiB": 384
+  },
+  "states": 9000,
+  "seeds": 275,
+  "gammaChecks": 9000,
+  "parentChecks": 2077868,
+  "positiveChecks": 27000,
+  "zeroChecks": 9000,
+  "cofinalChecks": 25572,
+  "terminalCorrections": 10079,
+  "preparationStops": 7584,
+  "maxPreparation": 40,
+  "maxRepeat": 7,
+  "maxTargetRows": 9,
+  "widthStops": 630,
+  "failed": null,
+  "elapsedMs": 5189,
+  "work": 441171,
+  "rssMiB": 108.23046875
+}

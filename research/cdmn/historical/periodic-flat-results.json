@@ -1,0 +1,14 @@
+{
+  "sampleStates": 99304,
+  "families": 107183,
+  "firstYes": 0,
+  "secondYes": 0,
+  "unknown": 0,
+  "deepest": 0,
+  "best": [],
+  "stops": 0,
+  "found": null,
+  "elapsedMs": 22000,
+  "rssMiB": 175.34375,
+  "warning": "Only finite periodic-family tests. Even a survivor would still need an all-k proof and explicit standard entrance."
+}

@@ -1,0 +1,219 @@
+{
+  "frozen_core_sha256": "306E8201F0A71B23A6CE062A21101E91051BF00B033AD0B7238C98BB57D8E4F1",
+  "source_simulation": {
+    "anchors": 30,
+    "source_edges": 1498,
+    "native_replay_steps": 18126,
+    "order_comparisons": 2996,
+    "interval_checks": 2946,
+    "resource_unknown": 1,
+    "unknown_reason": "row lifting resource limit",
+    "size_skips": 1,
+    "milliseconds": 1703,
+    "rss_MiB": 109.06640625
+  },
+  "absorbed_endpoint_cases": {
+    "levels": [0, 1, 2, 4, 7],
+    "source_edges": 40,
+    "absorption_events": 10,
+    "native_replay_steps": 18029,
+    "resource_unknown": 0,
+    "milliseconds": 313,
+    "rss_MiB": 88.4296875
+  },
+  "independent_python": {
+    "complete_paths": 98,
+    "exact_native_edges": 500,
+    "resource_skips": 0,
+    "seconds": 0.448
+  },
+  "sharp_depth_paths": {"n_min": 0, "n_max": 36, "successful_paths": 37},
+  "isolation_raw_flat_bases": {
+    "bases": 90,
+    "native_steps": 40314,
+    "separator_formula_checks": 360,
+    "maximum_depth": 2,
+    "resource_unknown": 186,
+    "size_skips": 2669,
+    "milliseconds": 249,
+    "rss_MiB": 73.2109375
+  },
+  "exploratory_depth_search": [
+    {"carrier_n": 2, "attempts": 50000, "maximum_depth": 5, "resource_unknown": 2049, "size_skips": 11692, "milliseconds": 2139, "rss_MiB": 212.98828125},
+    {"carrier_n": 4, "attempts": 50000, "maximum_depth": 7, "resource_unknown": 1003, "size_skips": 12427, "milliseconds": 2545, "rss_MiB": 216.71484375}
+  ],
+  "limit_row_source": {
+    "source_edges": 1263,
+    "native_replay_steps": 204200,
+    "row_comparisons": 1296,
+    "term_comparisons": 1263,
+    "gamma_steps": 44,
+    "lambda_steps": 119,
+    "unit_copy_steps": 143,
+    "resource_unknown": 30,
+    "size_skips": 7,
+    "milliseconds": 9089,
+    "rss_MiB": 216.97265625
+  },
+  "independent_source_parent_cover": {
+    "source_edges": 6810,
+    "unit_copy_steps": 528,
+    "truncations": 5326,
+    "deletions": 956,
+    "record_inclusions": 4793,
+    "targeted_absorptions": 2,
+    "resource_unknown": 0,
+    "size_skips": 27,
+    "milliseconds": 8501,
+    "rss_MiB": 225.94921875
+  },
+  "limit_row_python_replay": {
+    "complete_paths": 49,
+    "exact_native_edges": 442,
+    "resource_skips": 0,
+    "seconds": 0.397
+  },
+  "finite_iteration_source": {
+    "entry_steps": 26,
+    "carrier_entries": 8,
+    "anchors": 24,
+    "source_levels": [1, 2, 3, 4],
+    "source_edges": 920,
+    "native_replay_steps": 16748,
+    "same_level_comparisons": 920,
+    "level_interval_checks": 1836,
+    "independent_level1_source_fidelity": 230,
+    "resource_unknown": 0,
+    "size_skips": 0,
+    "milliseconds": 1029,
+    "rss_MiB": 112.75390625
+  },
+  "finite_iteration_python_replay": {
+    "complete_paths": 97,
+    "exact_native_edges": 149,
+    "resource_skips": 0,
+    "seconds": 0.411
+  },
+  "cumulative_endpoint_source": {
+    "entry_steps": 25, "pump_entries": 8, "row_anchors": 5, "row_steps": 29,
+    "anchors": 8, "complete_source_edges": 1253, "native_replay_steps": 92442,
+    "comparisons": 1253, "source_copy_cases": 9, "resource_unknown": 47,
+    "size_skips": 0, "milliseconds": 7905, "rss_MiB": 268.09375
+  },
+  "targeted_cumulative_all_legal_cases": {
+    "cases": 364, "copies": 126, "limits": 196, "deletions": 42,
+    "redundant_predecessor": 18, "shortened_parent_tables": 8,
+    "covered_edges": 657, "complete_simulations": 364, "native_replay_steps": 25358,
+    "resource_unknown": 0, "size_skips": 0, "milliseconds": 280, "rss_MiB": 110.015625,
+    "scope": "Arbitrary legal skyline source graphs; not claimed all standard. Tests the universal finite-step lemma."
+  },
+  "omega_cumulative_direct_limit": {
+    "omega_anchors": 12, "direct_anchors": 4, "initial_embedding_checks": 12,
+    "source_edges": 139, "native_replay_steps": 221, "order_checks": 142,
+    "resource_unknown": 0, "size_skips": 0, "milliseconds": 71, "rss_MiB": 115.67578125
+  },
+  "cumulative_independent_python": {"complete_paths": 77, "exact_native_edges": 146, "resource_skips": 0, "seconds": 0.36},
+  "decorated_component_potential": {
+    "bases": 8, "steps": 1642, "copy": 620, "lower": 192, "delete": 792, "internal": 38,
+    "nonmonotone_adjacent_row_visits": 3820, "closed_row_record_visits": 61420,
+    "maximum_mass_observed": 12786, "resource_unknown": 0, "size_skips": 24,
+    "memory_stop": true, "milliseconds": 587, "rss_MiB": 284.3515625,
+    "scope": "Conditional L(G) invariant and symbolic cumulative-CNF parent cover; unproved G included only as structural tests, not WO claims."
+  },
+  "arbitrary_valid_component_decompositions": {
+    "states": 1320, "steps": 3960, "copy": 1224, "lower": 1029, "delete": 1287,
+    "internal": 420, "nonmonotone_adjacent_row_visits": 323, "resource_unknown": 0,
+    "size_skips": 0, "milliseconds": 214, "rss_MiB": 103.58203125,
+    "scope": "Not claimed globally standard. Tests the conditional invariant for every valid decomposition, supporting the minimum-over-decompositions proof."
+  },
+  "finite_p_operators": {
+    "identities": 90, "bases": 3, "k_range": [1,6], "n_range": [0,4],
+    "standard_entries": 12, "J_entry_length": 24, "higher_H_entry_length": 16,
+    "resource_unknown": 0, "milliseconds": 5, "rss_MiB": 73.40234375
+  },
+  "separated_L_drivers": {
+    "raw_states": 2600, "checks": 9942, "copy": 1918, "lower": 4759,
+    "delete": 1480, "L_macro": 1460, "cap_macro": 325,
+    "nonmonotone_row_visits": 1789, "row_checks": 154739, "N_anchors": 10,
+    "resource_unknown": 0, "size_skips": 2, "milliseconds": 310, "rss_MiB": 77.87109375
+  },
+  "generic_operator_algebra": {
+    "operators": 6, "bases": 3, "identities": 576,
+    "raw_states": 1620, "checks": 4965, "copy": 1061, "lower": 1849,
+    "delete": 801, "operator_macro": 994, "cap_macro": 260,
+    "D_standard_entry_length": 19, "E_standard_entry_length": 27,
+    "resource_unknown": 0, "size_skips": 2, "milliseconds": 237, "rss_MiB": 58.6796875
+  },
+  "operator_driver_independent_python": {
+    "complete_paths": 209, "exact_native_edges": 235, "resource_skips": 0, "seconds": 0.089
+  },
+  "finite_type_templates": {
+    "type_levels": [1,8], "bases": 3, "typed_diagonal_identities": 864,
+    "root_cap_identities": 216, "finite_family_top_identities": 216,
+    "nonzero_root_driver_states": 900, "driver_checks": 2477,
+    "copy": 508, "lower": 763, "delete": 499, "operator_macro": 527, "cap_macro": 180,
+    "resource_unknown": 0, "size_skips": 0, "H_standard_entry_length": 16,
+    "Z_standard_entry_length": 33, "milliseconds": 165, "rss_MiB": 54.20703125
+  },
+  "finite_type_independent_python": {
+    "complete_paths": 505, "exact_native_edges": 537, "resource_skips": 0, "seconds": 0.069
+  },
+  "polymorphic_family_templates": {
+    "second_type_levels": [2,7], "original_type_levels": [1,4], "base_families": 2,
+    "diagonal_identities": 1008, "root_cap_identities": 336, "family_top_identities": 336,
+    "row_two_driver_states": 1200, "driver_checks": 3148,
+    "copy": 880, "lower": 426, "delete": 833, "operator_macro": 399, "cap_macro": 610,
+    "resource_unknown": 0, "size_skips": 0, "milliseconds": 196, "rss_MiB": 51.9765625,
+    "Z2_standard_entry_length": 33,
+    "Z2_standard_entry": [1,0,1,0,0,0,1,0,1,1,0,1,0,0,0,1,2,1,1,0,0,1,0,0,1,1,0,0,0,2,0,0,0]
+  },
+  "global_coherent_patterns": {
+    "patterns": 5, "identities": 900, "universe_range": [0,4],
+    "resource_unknown": 0, "size_skips": 0, "milliseconds": 107, "rss_MiB": 49.23
+  },
+  "exposed_twin_drivers": {
+    "raw_states": 1560, "checks": 4801, "copy": 1110, "lower": 1519,
+    "delete": 888, "Xi_macro": 1097, "Delta_macro": 187,
+    "last_W_identities": 576, "mixed_control_parent_visits": 1257,
+    "resource_unknown": 0, "size_skips": 3, "milliseconds": 251, "rss_MiB": 74.1,
+    "R_standard_entry_length": 27
+  },
+  "global_twin_independent_python": {
+    "complete_paths": 141, "exact_native_edges": 222,
+    "resource_skips": 0, "seconds": 0.035
+  },
+  "unclaimed_interface_operator_candidates": {
+    "D_identities": 720, "finite_identities": 720, "top_identities": 312,
+    "candidate_entry_length": 38, "resource_unknown": 0, "size_skips": 0,
+    "milliseconds": 160, "rss_MiB": 47.94,
+    "status": "Finite identities only; paper extension not yet written or audited. User changed target."
+  },
+  "user_adjacent_reader_target": {
+    "target": "()(1^(1)())", "standard_seed": 3,
+    "standard_entry": [2,2,1,1,0], "formula_cases": 361,
+    "random_trials": 1600, "native_steps": 30335,
+    "closed_replica_candidate_checks": 9537360, "found": false,
+    "size_stops": 973, "resource_unknown": 39, "scope_truncations": 13288,
+    "milliseconds": 1790, "rss_MiB": 105.29,
+    "status": "Neither target WO nor C2 WO proved; bounded checks do not exclude infinite chains."
+  },
+  "adjacent_reader_independent_python": {
+    "complete_paths": 104, "exact_native_edges": 178,
+    "resource_skips": 0, "seconds": 0.031
+  },
+  "finite_proof_universes": {
+    "universe_range": [0,8], "within_type_identities": 189,
+    "cross_universe_identities": 189, "staircase_evaluations": 18,
+    "literal_finite_top_steps": 31, "standard_entry_length": 29,
+    "resource_unknown": 0, "size_skips": 0, "milliseconds": 80,
+    "rss_MiB": 52.4
+  },
+  "finite_universe_independent_python": {
+    "complete_paths": 186, "exact_native_edges": 214,
+    "resource_skips": 0, "seconds": 0.060
+  },
+  "polymorphic_family_independent_python": {
+    "complete_paths": 421, "exact_native_edges": 453, "resource_skips": 0, "seconds": 0.063
+  },
+  "note": "Finite checks are not proofs of the universal claims. Isolation, independent source semantic ranks, full-target cumulative row potential and simulation inductions are in separate papers. All command processes completed; no background process was launched. A CIM process-inventory query was denied; no global process audit is claimed. No repository or old-directory edits."
+}

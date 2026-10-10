@@ -1,0 +1,18 @@
+{
+  "candidate": "(0)(1^(2,1^(3)),1)",
+  "firstLayer": 33,
+  "secondLayerPositive": 144,
+  "secondLayerZero": 16,
+  "exactReplayedSteps": 32135,
+  "positiveEdges": 1802,
+  "positiveCrossScope": 1473,
+  "positiveNonSkyline": 10,
+  "targetUnknown": 0,
+  "sourceUnknown": 1,
+  "sizeSkipped": 351,
+  "maximumSourceDepth": 14,
+  "maximumRouteLength": 21,
+  "milliseconds": 22221,
+  "rssMiB": 278.5625,
+  "status": "Whole-cone embedding remains unproved."
+}

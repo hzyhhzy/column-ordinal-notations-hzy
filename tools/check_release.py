@@ -77,6 +77,7 @@ MONOLINGUAL_ARCHIVES = frozenset({
     'research/README.md',
 })
 NER_HASHES = {
+    'notations/CDMN/CDMN.ne-rewritten.js': '54f27196232b6a9e3f7bad1f320d165ea7e4c77aec448b4a1b627ebb8ae33205',
     'notations/DQDN/DQDN.ne-rewritten.js': 'b25e394be74f9351b899598e559aaf7367c3833d810a25a7b764dd184c3529c6',
     'notations/CTN/CTN.ne-rewritten.js': 'bf86d434760bb904886783fca76a2c7e5808e245eb4561068c78881ac30b104b',
     'notations/SRPD/SRPD.ne-rewritten.js': 'fdbd0d0788afe0cd6949cb280ffea4c85813bbd6d5e47d04e6a078e00bbee85a',
@@ -349,6 +350,78 @@ def check_dqdn_import(problems):
         problems.append('DQDN import/finite-validation manifest: ' + str(error))
 
 
+def check_cdmn_import(problems):
+    """Pin an open candidate without enlarging the existing Lean theorem set."""
+    try:
+        directory = ROOT / 'notations/CDMN'
+        manifest = json.loads((directory / 'provenance.json').read_text(encoding='utf-8'))
+        if (manifest.get('schema_version') != 1 or manifest.get('notation') != 'CDMN'
+                or manifest.get('previous_research_name') != 'CDM'
+                or manifest.get('mathematical_rules_changed') is not True
+                or manifest.get('rule_version') != 'prefix-zero-unshifted-20261009'
+                or manifest.get('positive_indices_unchanged') is not True
+                or manifest.get('ner_registration_id') != 'cdmn-prefix-fs-unshifted-20261009'
+                or manifest.get('zero_rule') != 'delete-last-column-at-active-copy-layer'
+                or manifest.get('well_ordering_status') != 'open'
+                or manifest.get('lean_project') is not False
+                or manifest.get('axiom_upper_bound') is not None):
+            raise ValueError('Unexpected CDMN identity or proof scope')
+        expected = {'cdmn-core.cjs', 'cdmn-ner-wrapper.js', 'cdmn.py',
+                    'build-ner.cjs', 'CDMN.ne-rewritten.js', 'fixtures/regressions.json'}
+        records = manifest['files']
+        if len(records) != len(expected) or {r['file'] for r in records} != expected:
+            raise ValueError('Unexpected CDMN implementation inventory')
+        for record in records:
+            if sha256_lf(directory / record['file']) != record['packaged_sha256']:
+                raise ValueError('CDMN implementation hash mismatch: ' + record['file'])
+        expected_history = {'research/cdmn/historical/' + name for name in (
+            'dilation-results.json', 'dilated-replica-results.json',
+            'interior-replica-results.json', 'periodic-flat-results.json')}
+        history = manifest['historical_reports']
+        if len(history) != 4 or {r['file'] for r in history} != expected_history:
+            raise ValueError('Unexpected CDMN historical report inventory')
+        for record in history:
+            if sha256_lf(ROOT / record['file']) != record['sha256']:
+                raise ValueError('Changed CDMN historical report: ' + record['file'])
+        receipt = json.loads((ROOT / 'tools/cdmn-validation.json').read_text(encoding='utf-8'))
+        if (receipt.get('schema_version') != 1 or receipt.get('notation') != 'CDMN'
+                or receipt.get('universal_proof') is not False
+                or receipt.get('well_ordering_proved') is not False
+                or receipt.get('lean_build') is not False
+                or receipt.get('browser_click_test') is not False
+                or receipt.get('all_test_commands_exited') is not True):
+            raise ValueError('Unexpected CDMN finite-validation scope')
+        expected_checks = {'notations/CDMN/' + name for name in expected} | {
+            'research/cdmn/dilation.cjs', 'tests/cdmn.py', 'tests/cdmn.cjs', 'tests/cdmn_counts.cjs',
+            'tests/cdmn_python.py', 'tests/cdmn_vectors.cjs', 'tests/cdmn_support.cjs'}
+        checks = receipt['checked_files']
+        if len(checks) != len(expected_checks) or {r['file'] for r in checks} != expected_checks:
+            raise ValueError('Unexpected CDMN checked-source inventory')
+        for record in checks:
+            if sha256_lf(ROOT / record['file']) != record['sha256_lf']:
+                raise ValueError('Stale CDMN finite-validation record: ' + record['file'])
+        runs = receipt['runs']
+        if (len(runs) != 6 or {r['id'] for r in runs} != {
+                'bundle', 'ner', 'counts', 'python', 'vectors', 'cross-language'}
+                or any(r['exit_code'] != 0 for r in runs)):
+            raise ValueError('CDMN finite-validation commands did not all complete')
+        replay = next(r for r in runs if r['id'] == 'cross-language')
+        if json.loads(replay['stdout']).get('independent_expansions') != 6000:
+            raise ValueError('Incomplete CDMN cross-language replay')
+        counts = json.loads(next(r for r in runs if r['id'] == 'counts')['stdout'])
+        if counts.get('graphs', 0) < 1000 or counts.get('naiveColumns', 0) < 4000 or counts.get('stepStops') != 0:
+            raise ValueError('Incomplete CDMN exact-count replay')
+        ner = json.loads(next(r for r in runs if r['id'] == 'ner')['stdout'])
+        if (ner.get('legacyZeroPaths', 0) < 4000 or ner.get('outerPrefixPairs', 0) < 100
+                or ner.get('retreatPairs', 0) < 100 or ner.get('dilationMacros', 0) < 100
+                or not isinstance(ner.get('retreatUnknown'), int)
+                or not isinstance(ner.get('dilationUnknown'), int)):
+            raise ValueError('Incomplete CDMN prefix-zero replay or missing unknown-case counts')
+        print('CDMN: prefix-zero sources and bounded replay current; global well-ordering open')
+    except (ValueError, KeyError, OSError) as error:
+        problems.append('CDMN import/finite-validation manifest: ' + str(error))
+
+
 def main():
     files = list(release_files())
     problems, links = [], 0
@@ -401,13 +474,14 @@ def main():
     for path in pdfs:
         if not path.with_suffix('.md').is_file() or path.stat().st_size < 1000:
             problems.append(f'Invalid PDF/source pair: {path.relative_to(ROOT)}')
-    if {p.name for p in (ROOT/'notations').iterdir() if p.is_dir()} != {'SRPD','RPD','LRD','Omega-LRD3','ARD','ARD-legacy','IPD','ARD2','ARD2-legacy','SPD','CWY','CWY2','Omega-CWY','ACD','CSD','ICP','FMP','CTN','DQDN'}:
+    if {p.name for p in (ROOT/'notations').iterdir() if p.is_dir()} != {'SRPD','RPD','LRD','Omega-LRD3','ARD','ARD-legacy','IPD','ARD2','ARD2-legacy','SPD','CWY','CWY2','Omega-CWY','ACD','CSD','ICP','FMP','CTN','DQDN','CDMN'}:
         problems.append('Unexpected notation directory')
     for relative, expected in NER_HASHES.items():
         actual = hashlib.sha256((ROOT/relative).read_bytes()).hexdigest()
         if actual != expected:
             problems.append(f'NER snapshot changed: {relative}')
     check_dqdn_import(problems)
+    check_cdmn_import(problems)
     # CTN is the former CTN2 frontend, not a new whole-system Lean theorem.
     # Pin its renamed implementation and sparse artifact; do not revive old CTN.
     try:

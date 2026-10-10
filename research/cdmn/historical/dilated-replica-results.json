@@ -1,0 +1,17 @@
+{
+  "warning": "Only a sufficient affine-closed-replica criterion is tested; a negative result is not well-ordering.",
+  "limits": {
+    "seconds": 25,
+    "trials": 2200,
+    "depth": 55,
+    "nodes": 6500,
+    "heapMiB": 256
+  },
+  "steps": 61731,
+  "tests": 7622655,
+  "sizeStops": 101,
+  "engineStops": 763,
+  "found": null,
+  "seconds": 3.306,
+  "rssMiB": 107.1953125
+}

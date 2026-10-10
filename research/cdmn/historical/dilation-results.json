@@ -1,0 +1,10 @@
+{
+  "cases": 17139,
+  "contextual": 7196,
+  "actualSteps": 49484,
+  "stops": 0,
+  "failure": null,
+  "elapsedMs": 347,
+  "rssMiB": 71.24609375,
+  "warning": "Bounded implementation replay. The proposed lemma requires the separate structural proof; it does not show WO or preserve standardness."
+}

@@ -1,5 +1,13 @@
 # 来源、版本与许可证 · [English](SOURCES.md)
 
+## CDMN 的名称、规则修改与来源边界（2026-10-10）
+
+CDMN 全称 **Compact Deep Mountain Notation**，对应 `compact-fs-design-20261008` 研究快照里旧称 **CDM** 的严格阈值候选。文件名、NER 注册 ID、显示名称、顶端及 JS 工厂接口现统一为 CDMN；旧称仅在来源记录中说明。仓库外原研究文件保留。
+
+[来源清单](notations/CDMN/provenance.json)固定本地 JS 核心、适配器、构建器、独立 Python 核心、生成的 NER 文件和回归样例。当前采用 `cdmn-prefix-fs-20261009` 的前缀零项修改：JS 与 Python 均在零指标删除活动复制层末列；全部正指标操作、内部规范字符串和严格来源阈值不变。这是数学零项规则修改，不只是改名或改显示。旧回归样例中含零指标的路径已迁移到新规则，目标图保持不变。保留四种视图：默认 BTBMS 式、列表、完整列表及自然数行计数序列。单文件从核心与适配器确定性重建，使用前缀版新注册 ID；Python 只依赖标准库。
+
+双语定义和[有限性质论文](proofs/paper/cdmn-properties.zh-CN.md)整理当前规则、源自 `cdmn-localization-20261009` 的新旧有限可达模拟、回退／比较／规模论证及 BMS 纸面下界。[研究目录](research/cdmn/README.zh-CN.md)另收录 `cdmn-s2-bms-20261009` 的 BMS 精确兄弟编码，以及 `cdmn-four-hour-bounds-20261010` 的最小深度节点与局部良序文稿，附英文配套，明确未决比较边界。旧插空证明加上版本限定：其短零指标宏属于旧规则；新规则只迁移有限模拟的存在性，不继承该步数界。四份旧 JSON、近期历史验收记录与当前有界测试分别标明。本次没有新增全局良序证明、Lean 证明、经独立审计的弱 KP 上界、公开网页验收或整体嵌入，不推定新许可证，不改其他记号及已有证明快照。
+
 ## DQDN 整理（2026-10-06）
 
 [DQDN](notations/DQDN/README.zh-CN.md) 沿用 2026-10-05 的 `zomega-column-research-20261005` 增量生成器版本。[来源清单](notations/DQDN/provenance.json) 逐项记录 34 个导入实现、测试及中文文稿的原始／入库哈希和改动。NER 与原文件逐字节一致，包括 ID、默认项、四视图。Python 辅助文件 `lambda_columns.py` 收进本地，运行依赖只删除 `lcdn.py` 原来的相邻研究目录导入注入；测试的 NER 路径改为仓库相对路径。另澄清一处下界见证范围的报错文案，不改公式或规则。

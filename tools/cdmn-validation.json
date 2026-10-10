@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "notation": "CDMN",
+  "date": "2026-10-10",
+  "universal_proof": false,
+  "well_ordering_proved": false,
+  "lean_build": false,
+  "browser_click_test": false,
+  "all_test_commands_exited": true,
+  "checked_files": [
+    {
+      "file": "notations/CDMN/cdmn-core.cjs",
+      "sha256_lf": "6ca88009277ba35a44bdeb7a95ff0787897bc7cf8c801b90f3beb4fa9bd16e89"
+    },
+    {
+      "file": "notations/CDMN/cdmn-ner-wrapper.js",
+      "sha256_lf": "cb3273b18de7d893afe97ced3d447fe86431469a15a93bedc9103308fc52c6e9"
+    },
+    {
+      "file": "notations/CDMN/CDMN.ne-rewritten.js",
+      "sha256_lf": "54f27196232b6a9e3f7bad1f320d165ea7e4c77aec448b4a1b627ebb8ae33205"
+    },
+    {
+      "file": "notations/CDMN/cdmn.py",
+      "sha256_lf": "5cab0075cc9e24b3fa7e2cafc77e96f59d1006e8d8393d8a438c5837e2b9398d"
+    },
+    {
+      "file": "notations/CDMN/build-ner.cjs",
+      "sha256_lf": "b5dc96364a664a116092710e3180592f4184841f097342020f63fc11985ac755"
+    },
+    {
+      "file": "notations/CDMN/fixtures/regressions.json",
+      "sha256_lf": "61b284c657de452dcd14e64507e4c29c7a59337ae13f13291f55dd59dae1b650"
+    },
+    {
+      "file": "research/cdmn/dilation.cjs",
+      "sha256_lf": "f079b094aff45fd5b4838028decc8e30786cb9b01c9974735be1fd275e122139"
+    },
+    {
+      "file": "tests/cdmn.py",
+      "sha256_lf": "953f2567e17de5cce3b0fa193df6f561e4dcaa6b21fbd542d54cbf2051eb6f35"
+    },
+    {
+      "file": "tests/cdmn.cjs",
+      "sha256_lf": "3b78eb2b5ebf870b49acac8c23672fede9de75aa8aef4370762181c385584d83"
+    },
+    {
+      "file": "tests/cdmn_counts.cjs",
+      "sha256_lf": "57fb0397cadaa3a7a6927eadbbc1385b74a85dfe243d536d1b9e4e63a5dc721d"
+    },
+    {
+      "file": "tests/cdmn_python.py",
+      "sha256_lf": "0bbf8ecac6b568610f8efa4bc8393df5734b4506b944d11e17100771e438d134"
+    },
+    {
+      "file": "tests/cdmn_vectors.cjs",
+      "sha256_lf": "826a73e27e89ae3cd0b8fecb2faa5355acd90c55abae9577d78109422510d10f"
+    },
+    {
+      "file": "tests/cdmn_support.cjs",
+      "sha256_lf": "2918d1cb980d3ab24b2a610883d6e9f2592d02af9fb529a5843b78a4edcf1ba6"
+    }
+  ],
+  "runs": [
+    {
+      "id": "bundle",
+      "command": [
+        "node",
+        "notations/CDMN/build-ner.cjs",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.05,
+      "stderr": "",
+      "stdout": "CDMN bundle is current"
+    },
+    {
+      "id": "ner",
+      "command": [
+        "node",
+        "--max-old-space-size=256",
+        "tests/cdmn.cjs"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.187,
+      "stderr": "",
+      "stdout": "{\n  \"expansions\": 7296,\n  \"displayRoundTrips\": 21888,\n  \"legacyZeroPaths\": 7296,\n  \"outerPrefixPairs\": 1612,\n  \"retreatPairs\": 800,\n  \"retreatUnknown\": 0,\n  \"retreatWitnessSteps\": 1453,\n  \"dilationMacros\": 1000,\n  \"dilationUnknown\": 118,\n  \"dilationWitnessSteps\": 29681,\n  \"resourceStops\": 0,\n  \"sizeStops\": 0,\n  \"elapsedMs\": 1110,\n  \"rssMiB\": 225.92578125,\n  \"scope\": \"Finite implementation checks. Legacy trim identities are separate from current FS; retreat/dilation counts require explicit current-step replays, with budget misses recorded as unknown. Not a universal reachability, well-ordering, Lean or live-browser certificate.\"\n}"
+    },
+    {
+      "id": "counts",
+      "command": [
+        "node",
+        "--max-old-space-size=256",
+        "tests/cdmn_counts.cjs"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.317,
+      "stderr": "",
+      "stdout": "{\n  \"graphs\": 1200,\n  \"naiveColumns\": 5900,\n  \"naiveSteps\": 24459,\n  \"firstSeamChecks\": 3600,\n  \"zeroChecks\": 1200,\n  \"stepStops\": 0,\n  \"elapsedMs\": 141,\n  \"rssMiB\": 128.5703125,\n  \"scope\": \"Exact finite-row count DP versus bounded actual seam replay; no well-ordering or live-browser claim.\"\n}"
+    },
+    {
+      "id": "python",
+      "command": [
+        "python",
+        "-B",
+        "tests/cdmn_python.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.133,
+      "stderr": "......\n----------------------------------------------------------------------\nRan 6 tests in 0.002s\n\nOK",
+      "stdout": ""
+    },
+    {
+      "id": "vectors",
+      "command": [
+        "node",
+        "--max-old-space-size=256",
+        "tests/cdmn_vectors.cjs"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.192,
+      "stderr": "{\"emitted\":6000,\"byMode\":[3000,1500,1500],\"resourceStops\":29,\"sizeSkips\":7}"
+    },
+    {
+      "id": "cross-language",
+      "command": [
+        "python",
+        "-B",
+        "tests/cdmn_python.py",
+        "--vectors"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.852,
+      "stderr": "",
+      "stdout": "{\"independent_expansions\": 6000, \"elapsed_seconds\": 0.74}"
+    }
+  ]
+}

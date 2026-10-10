@@ -2,9 +2,17 @@
 
 9 月 11 日 20:00，@Phyrion 公布了 [Y 序列的良序证明](https://github.com/Phyrion1343/1Y-Well-Ordering-Lean)。不久后，@test_alpha0 进一步将所需的公理体系降低到 $KP_\omega+\text{存在不可数序数}$。本仓库收录 GPT6-astra 在阅读上述证明后设计的 RPD、LRD、Ω-LRD3、ARD、IPD、ARD2，以及它们的良序证明。其中，RPD 的定义所需篇幅短得多；下面的纸面比较链证明其序型不小于固定版本 1Y。LRD 和 Ω-LRD3 则是在此基础上进一步扩展得到的记号。ARD 则把行标改为此前列的地址，使行坐标本身也随展开移动。IPD 则使用有限层迭代树轮廓，连嵌套头内的引用也随列搬运。ARD2 回到每组仅三个自然数坐标的形式，允许行与根同时引用本列，并生成覆盖全上下文的根包。六者均有同一公理体系下的纸面良序证明。它们与 omega-Y 的整体比较仍未解决；已知的具体比较和公共初段见下文。
 
-本仓库收录列式记号的定义、可执行基本列展开器与证明／状态说明，也包含明确标注的伪序记号。源码快照更新于 **2026-10-06**，仓库地址为 [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy)。名称中的 `hzy` 来自仓库所有者的名字。
+本仓库收录列式记号的定义、可执行基本列展开器与证明／状态说明，也包含明确标注的伪序记号。源码快照更新于 **2026-10-10**，仓库地址为 [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy)。名称中的 `hzy` 来自仓库所有者的名字。
 
-记号实现收录 **SRPD、RPD、LRD、Ω-LRD3、ARD、IPD、ARD2、SPD、CWY、CWY2、Ω-CWY、ACD、CSD、ICP、FMP、CTN、DQDN**，其中候选、失败版本和伪序记号明确区分；Lean 证明仍只覆盖 **Y、RPD、LRD、Ω-LRD3、ARD、IPD、ARD2**。另保留旧版 ARD-legacy、ARD2-legacy，其他 Ω-LRD 版本不收录。外部 e0MN 实现单独署名，不算本项目发明。
+记号实现收录 **SRPD、RPD、LRD、Ω-LRD3、ARD、IPD、ARD2、SPD、CWY、CWY2、Ω-CWY、ACD、CSD、ICP、FMP、CTN、DQDN、CDMN**，其中候选、失败版本和伪序记号明确区分；Lean 证明仍只覆盖 **Y、RPD、LRD、Ω-LRD3、ARD、IPD、ARD2**。另保留旧版 ARD-legacy、ARD2-legacy，其他 Ω-LRD 版本不收录。外部 e0MN 实现单独署名，不算本项目发明。
+
+## CDMN：前缀零项修改及局部结论（2026-10-10）
+
+[**CDMN — Compact Deep Mountain Notation，紧凑深层山脉记号**](notations/CDMN/definition.zh-CN.md) 收录独立四视图 [NER](notations/CDMN/CDMN.ne-rewritten.js)、[Python 核心](notations/CDMN/cdmn.py)、双语定义、[有限性质论文](proofs/paper/cdmn-properties.zh-CN.md)及[研究索引](research/cdmn/README.zh-CN.md)。两份实现已同步为**前缀零项版**：活动复制层的 `[0]` 删除该层末列，外围只替换受影响的行；正指标不变、不平移。保留默认“BTBMS式”、“列表”、“完整列表”和自然数行“计数序列”，计数范围外自动回退 BTBMS 式。NER 使用新注册 ID，隔离旧零项规则下的保存树。
+
+更新后的纸面引理给出新旧规则的有限可达关系相同，不是逐指标展开路径相同，也不证明整体良序。[BMS 等号论文](research/cdmn/papers/s2-equals-bms.zh-CN.md)给出 `()(1^(1)) = lim(BMS)`，以及 `()(1^3) = BMS(000)(111) = BO`。近期[深度／TBMS 结论](research/cdmn/depth-and-tbms.zh-CN.md)、局部完整后裔锥良序论证及 [BTBMS 比较候选](research/cdmn/btbms-comparisons.zh-CN.md)另行整理。其中，纸面论证把 `T=()(1^(1))(1)(3^(1))(3)` 定位为标准域内后裔嵌套深度无界的最小节点，给出 `lim(TBMS) ≤ T`；局部良序论证推进到 `R∞=()(1^(1))(1)(3^(1))(3^2)(5,3)(6^(1))`。这些是自审纸面论证，不是 Lean 认证，也没有完成弱 KP 公理上界核算。
+
+**整体良序性未决，尚未找到标准无穷降链。** `A=()(1^(1)())`、甚至其第二基本项的良序性，以及整个后裔域的 BTBMS 上界嵌入仍未完成。不声称与整个 SRPD/e0MN 的大小关系。运行 `python -B tests/cdmn.py`；[验收收据](tools/cdmn-validation.json)区分有限测试、预算未知及数学证明。其他记号实现、PDF 和 Lean 项目不变。
 
 ## DQDN 及其结论归档（2026-10-06）
 
@@ -99,10 +107,11 @@ $$\alpha_{1Y}\le\alpha_{\mathrm{RPD}}<\alpha_{\mathrm{ARD}}
 
 ## 定义与展开器
 
-定义提供中英文。RPD 等十三个既有版本保留 **52 份 Markdown／PDF 定义文件**（含 FMP）；ACD、CSD、ICP、SRPD、CTN、DQDN 另有十二份 Markdown 定义，不新增 PDF。Markdown 默认英文，标题链接到中文版。
+定义提供中英文。RPD 等十三个既有版本保留 **52 份 Markdown／PDF 定义文件**（含 FMP）；ACD、CSD、ICP、SRPD、CTN、DQDN、CDMN 另有十四份 Markdown 定义，不新增 PDF。Markdown 默认英文，标题链接到中文版。
 
 | 记号 | 英文定义 | 中文定义 | NER 展开器 | Python 展开器 |
 | --- | --- | --- | --- | --- |
+| CDMN — 良序未决 | [Markdown](notations/CDMN/definition.md) | [Markdown](notations/CDMN/definition.zh-CN.md) | [JavaScript](notations/CDMN/CDMN.ne-rewritten.js) | [cdmn.py](notations/CDMN/cdmn.py) |
 | SRPD — 公共初段 | [Markdown](notations/SRPD/definition.md) | [Markdown](notations/SRPD/definition.zh-CN.md) | [JavaScript](notations/SRPD/SRPD.ne-rewritten.js) | [srpd.py](notations/SRPD/srpd.py) |
 | RPD | [Markdown](notations/RPD/definition.md) · [PDF](notations/RPD/definition.pdf) | [Markdown](notations/RPD/definition.zh-CN.md) · [PDF](notations/RPD/definition.zh-CN.pdf) | [JavaScript](notations/RPD/RPD-mountain.ne-rewritten.js) | [rpd.py](notations/RPD/rpd.py) |
 | LRD | [Markdown](notations/LRD/definition.md) · [PDF](notations/LRD/definition.pdf) | [Markdown](notations/LRD/definition.zh-CN.md) · [PDF](notations/LRD/definition.zh-CN.pdf) | [JavaScript](notations/LRD/LRD.ne-rewritten.js) | [lrd.py](notations/LRD/lrd.py) |
@@ -155,6 +164,7 @@ $$
 - **CWY2／wY 等价（纸面）：**[英文 Markdown](proofs/paper/cwy2-equivalence.md) · [英文 PDF](proofs/paper/cwy2-equivalence.pdf) · [中文 Markdown](proofs/paper/cwy2-equivalence.zh-CN.md) · [中文 PDF](proofs/paper/cwy2-equivalence.zh-CN.pdf)。CWY 的表示及带界良序论证收入其定义；Ω-CWY 暂无整体良序证明。
 - **IPD 定义对应审计：**[英文](proofs/paper/ipd-fidelity.md) · [中文](proofs/paper/ipd-fidelity.zh-CN.md)。
 - **FMP 纸面证明（ZFC + I3，未 Lean）：**[English Markdown](proofs/paper/fmp-well-ordering.md) · [English PDF](proofs/paper/fmp-well-ordering.pdf) · [中文 Markdown](proofs/paper/fmp-well-ordering.zh-CN.md) · [中文 PDF](proofs/paper/fmp-well-ordering.zh-CN.pdf)。这是另一个更强的充分公理上界，不是上面的弱 KP 上界。
+- **CDMN 有限性质（整体良序未决）：**[中文](proofs/paper/cdmn-properties.zh-CN.md) · [English](proofs/paper/cdmn-properties.md)。不加入下列 Lean 集合。
 - **Lean：**[英文构建说明与定理索引](lean/README.md) · [中文说明](lean/README.zh-CN.md)。
 - **独立 Lean 项目：**[Y](lean/Y/README.zh-CN.md) · [RPD](lean/RPD/README.zh-CN.md) · [LRD](lean/LRD/README.zh-CN.md) · [Ω-LRD3](lean/Omega-LRD3/README.zh-CN.md) · [ARD](lean/ARD/README.zh-CN.md) · [IPD](lean/IPD/README.zh-CN.md) · [ARD2](lean/ARD2/README.zh-CN.md)。
 - **可选联合入口：**[ARD2RevisionFinalAudit.lean](lean/src/ARD2RevisionFinalAudit.lean)。
@@ -184,6 +194,7 @@ Y 指固定上游提交 `1689b21131b488ec2ba2515bd630360371a2389d` 的继承祖�
 ```sh
 python tests/test_python.py
 python -B tests/dqdn.py
+python -B tests/cdmn.py
 python tests/test_ard.py
 python tests/test_ard_legacy.py
 node --max-old-space-size=512 tests/ard_skyline.cjs

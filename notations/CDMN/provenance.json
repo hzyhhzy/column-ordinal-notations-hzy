@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "notation": "CDMN",
+  "full_name": "Compact Deep Mountain Notation",
+  "previous_research_name": "CDM",
+  "packaged": "2026-10-10",
+  "mathematical_rules_changed": true,
+  "rule_version": "prefix-zero-unshifted-20261009",
+  "positive_indices_unchanged": true,
+  "zero_rule": "delete-last-column-at-active-copy-layer",
+  "legacy_reachability_equivalence": "Self-reviewed finite paper simulation in proofs/paper/cdmn-properties.md; not a Lean theorem or a global well-ordering proof.",
+  "well_ordering_status": "open",
+  "standard_infinite_chain_found": false,
+  "lean_project": false,
+  "axiom_upper_bound": null,
+  "ner_registration_id": "cdmn-prefix-fs-unshifted-20261009",
+  "source_snapshots": [
+    "compact-fs-design-20261008",
+    "cdmn-well-ordering-20261009",
+    "cdmn-prefix-fs-20261009",
+    "cdmn-localization-20261009",
+    "cdmn-s2-bms-20261009",
+    "cdmn-four-hour-bounds-20261010"
+  ],
+  "attribution": "Project-authored candidate; not an ordinal-equivalent optimization of HMN or an implementation of e0MN.",
+  "hash_basis": "SHA-256 of UTF-8 text after CRLF-to-LF normalization; the same convention is used by the release checker.",
+  "files": [
+    {
+      "file": "cdmn-core.cjs",
+      "source": "compact-fs-design-20261008/cdm-core.cjs",
+      "original_sha256": "9249d8e35fd2cb6d29f2c25d591365f6cee4a04f276c6df6bdbdded562c3ca11",
+      "packaged_sha256": "6ca88009277ba35a44bdeb7a95ff0787897bc7cf8c801b90f3beb4fa9bd16e89",
+      "adaptation": "CDMN names; prefix-zero revision from cdmn-prefix-fs-20261009/cdmn-core.cjs. At the active copy layer zero deletes its last column. Positive-index operation bodies remain unchanged."
+    },
+    {
+      "file": "cdmn-ner-wrapper.js",
+      "source": "compact-fs-design-20261008/cdm-ner-wrapper.js",
+      "original_sha256": "6e7b51b56d2b5bc1629019be4e18ad2288028be43a80d0471fe950461dd8c9bb",
+      "packaged_sha256": "cb3273b18de7d893afe97ced3d447fe86431469a15a93bedc9103308fc52c6e9",
+      "adaptation": "CDMN prefix-rule registration ID, top and help; reversible BTBMS-style default view and parser; exact natural-row BigInt count view with nested-row/resource fallback. Original list views and canonical strings retained. Calls the revised core without shifting positive indices."
+    },
+    {
+      "file": "cdmn.py",
+      "source": "compact-fs-design-20261008/cdm_reference.py",
+      "original_sha256": "4833403f9cd561aad201fb740a9e6bbf1269dfe90feb98015067af909c87c3cc",
+      "packaged_sha256": "5cab0075cc9e24b3fa7e2cafc77e96f59d1006e8d8393d8a438c5837e2b9398d",
+      "adaptation": "CDMN naming and independent prefix-zero implementation. Positive-index expansion retained; zero deletes the active copy layer's last column."
+    },
+    {
+      "file": "build-ner.cjs",
+      "source": "compact-fs-design-20261008/build-ner.cjs",
+      "original_sha256": "2a239627e960f2ebe0814d40115555383f53e822a0befca81444221202c5b8f5",
+      "packaged_sha256": "b5dc96364a664a116092710e3180592f4184841f097342020f63fc11985ac755",
+      "adaptation": "Local CDMN source paths, renamed deterministic bundle and new read-only --check mode."
+    },
+    {
+      "file": "CDMN.ne-rewritten.js",
+      "source": "compact-fs-design-20261008/CDM.ne-rewritten.js",
+      "original_sha256": "4713cc5a8d295821b4a369d41a648ed76d93cb70ea6de48c5661de61b87a4336",
+      "packaged_sha256": "54f27196232b6a9e3f7bad1f320d165ea7e4c77aec448b4a1b627ebb8ae33205",
+      "adaptation": "Deterministic bundle of the prefix-zero core and four-view adapter, with BTBMS-style default, exact natural-row counts and preserved square-bracket canonical strings."
+    },
+    {
+      "file": "fixtures/regressions.json",
+      "source": null,
+      "original_sha256": null,
+      "packaged_sha256": "61b284c657de452dcd14e64507e4c29c7a59337ae13f13291f55dd59dae1b650",
+      "adaptation": "Nine exact seed-path fixtures, including retained-high-row and depth-increase examples. Three legacy-zero paths migrated to the current prefix-zero rule; fixture target graphs unchanged."
+    }
+  ],
+  "historical_reports": [
+    {
+      "file": "research/cdmn/historical/dilated-replica-results.json",
+      "source": "cdmn-well-ordering-20261009/dilated-replica-results.json",
+      "sha256": "4d8153d5cc3b0df8d7a58870d74c479a16f172c55564321c0b60365a776340d8"
+    },
+    {
+      "file": "research/cdmn/historical/dilation-results.json",
+      "source": "cdmn-well-ordering-20261009/dilation-results.json",
+      "sha256": "6c4c54b9fbd5630144d0c8419a933ef5bf74e92ad07b711c39c3206d389fd4d7"
+    },
+    {
+      "file": "research/cdmn/historical/interior-replica-results.json",
+      "source": "cdmn-well-ordering-20261009/interior-replica-results.json",
+      "sha256": "0f3fb47cfe18e64174278a71daa4d35978096e44410043f66b9aa2c4aedca755"
+    },
+    {
+      "file": "research/cdmn/historical/periodic-flat-results.json",
+      "source": "cdmn-well-ordering-20261009/periodic-flat-results.json",
+      "sha256": "063d3947e169e4288fd02d01a02ededc2507db0be6006eb2fc2e2cab256875d7"
+    }
+  ],
+  "added_material": "Updated bilingual definition and finite-properties paper; versioned dilation lemma; minimum-depth, TBMS, local whole-cone well-ordering and candidate BTBMS-upper research manuscripts with English companions. Local bounded tests and current receipt are separate from historical reports. Full-system well-ordering and whole-cone BTBMS upper embedding remain open. No new PDF or Lean proof."
+}

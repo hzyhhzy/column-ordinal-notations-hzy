@@ -1,5 +1,24 @@
 # Snapshot validation · [中文版](VALIDATION.zh-CN.md)
 
+## 2026-10-10 CDMN prefix-zero revision
+
+CDMN is a **globally well-ordering-open candidate**, not an additional Lean-certified system. JS and independent Python now share the prefix-zero rule; positive indices remain unchanged. The four-view NER file is rebuilt from local sources and uses a separate rule-version registration ID. Its default BTBMS-style view, List, Full List and natural-row Count Sequence view are retained. Three historical fixture paths were migrated without changing their target graphs.
+
+```sh
+python -B tests/cdmn.py
+python -B tools/check_release.py
+```
+
+The [finite-validation receipt](tools/cdmn-validation.json) records six completed bounded commands: bundle consistency, NER/property checks, independent count replay, six Python unit tests, vector generation and **6000 independent Python/JS expansion comparisons**. NER checks cover **7296 expansions, 21888 reversible-display round trips, 7296 new-zero/legacy-trim certificates and 1612 outer-prefix pairs**. They replay **800 adjacent retreat witnesses** (no budget misses) and **1000 current-rule dilation witnesses**, with a further **118 dilation cases budget-unknown**. The old pure-zero dilation macro is not claimed for the new rule. The main NER run has no engine-resource or size stops; vector generation separately reports 29 resource stops and 7 size skips, which are not passes. Node heaps are capped at 256 MiB; observed main-suite RSS is about 226 MiB.
+
+Both JS and Python independently replay the current seed entrance to `A=()(1^(1)())`, the formula `A[n]=C_n` for `0≤n≤8`, and the 32-step `C2→T` and 40-step `C2→R∞` paths, checking exact target graphs, legality and strict decrease. Seven exact plain/HTML/LaTeX display examples, invalid syntax, optional exponent braces and existing-input compatibility are also checked. These finite path checks are not proofs of minimum depth, full-cone well-ordering or embedding. Historical research reports remain separate in the [research index](research/cdmn/README.md).
+
+New count checks cover 1200 legal natural-row graphs, independent first-seam replay for 5900 columns (24459 steps), 3600 positive-index count-minus-one checks and 1200 strict zero-index count decreases, without replay step stops. Additional tests check closed formulas for constant-height chains, integers beyond $2^{63}$, nested-row/resource fallback in all three output modes, and FS remaining unaffected by count limits. The count view has no inverse parser and is not counted as a reversible-display round trip; finite local counts do not imply global well-ordering.
+
+The repository-wide release check is **not fully passing**: its remaining 583 diagnostics concern existing files under `research/srpd-tbms/continuation` (582 missing-language-pair/link diagnostics and one H1-format diagnostic). All affected files are tracked and unchanged from HEAD. No CDMN error remains in that check; no historical document or existing validation requirement was changed to suppress those diagnostics.
+
+No live-browser/visual review, new PDF, Lean kernel compilation or well-ordering certification is claimed. Existing notation code and all Lean source/receipt files are untouched.
+
 ## 2026-10-06: DQDN
 
 [DQDN validation](research/dqdn/validation.md) records 84 passing Python tests, 1,504 Python/JS expansion comparisons, 1,614 local construction records covering all 28 generator operations, 106 minimal-path/growth round trips with 665 checked steps, 12 requested power paths and 41 table rows. The complete local Python dependencies and validated standard-domain frontend are included. Seven bounded commands exited; observed Python peak RSS was below 156 MiB.

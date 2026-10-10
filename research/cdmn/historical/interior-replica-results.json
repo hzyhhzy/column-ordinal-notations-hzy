@@ -1,0 +1,11 @@
+{
+  "steps": 31456,
+  "tests": 47295896,
+  "sizeStops": 291,
+  "engineStops": 291,
+  "scopeTruncations": 3400,
+  "found": null,
+  "elapsedMs": 4481,
+  "rssMiB": 175.3046875,
+  "warning": "Bounded sufficient-certificate search; resource and scope truncations are not successes. No claim of well-ordering."
+}

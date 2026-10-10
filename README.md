@@ -2,9 +2,17 @@
 
 At 20:00 on September 11, @Phyrion published a [well-ordering proof for the Y-sequence system](https://github.com/Phyrion1343/1Y-Well-Ordering-Lean). Shortly afterwards, @test_alpha0 reduced the required axiomatic foundation to $KP_\omega+\text{there exists an uncountable ordinal}$. This repository collects RPD, LRD, Ω-LRD3, ARD, IPD, and ARD2, notation systems devised by GPT6-astra after studying those proofs, together with their well-ordering proofs. RPD admits a much shorter definition than Y; the paper comparison chain below proves it is at least as strong as the fixed 1Y definition. LRD and Ω-LRD3 are further extensions of that construction. ARD makes row labels into references to earlier columns, so the row coordinate itself moves during expansion. IPD uses finite-level iterated tree profiles and relocates references even inside nested heads. ARD2 returns to three natural-number coordinates, allowing both row and root SELF references and full-context root packages. All six admit paper well-ordering proofs in the same axiomatic system. Whole-system comparisons with omega-Y remain open; the specific known comparisons and common initial segments are recorded below.
 
-Definitions, executable fundamental sequences, and proof/status documents for column notations, including explicitly marked pseudo-orders. This source snapshot was updated on **2026-10-06** for [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy). The suffix `hzy` refers to the repository owner's name.
+Definitions, executable fundamental sequences, and proof/status documents for column notations, including explicitly marked pseudo-orders. This source snapshot was updated on **2026-10-10** for [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy). The suffix `hzy` refers to the repository owner's name.
 
-The notation implementations are **SRPD, RPD, LRD, Ω-LRD3, ARD, IPD, ARD2, SPD, CWY, CWY2, Ω-CWY, ACD, CSD, ICP, FMP, CTN and DQDN**, with the candidate/failed/pseudo-order distinctions below. The Lean proof collection still covers only **Y, RPD, LRD, Ω-LRD3, ARD, IPD and ARD2**. ARD-legacy and ARD2-legacy are retained as explicit previous editions; other Ω-LRD variants are excluded. External e0MN implementations are credited separately, not counted as inventions of this project.
+The notation implementations are **SRPD, RPD, LRD, Ω-LRD3, ARD, IPD, ARD2, SPD, CWY, CWY2, Ω-CWY, ACD, CSD, ICP, FMP, CTN, DQDN and CDMN**, with the candidate/failed/pseudo-order distinctions below. The Lean proof collection still covers only **Y, RPD, LRD, Ω-LRD3, ARD, IPD and ARD2**. ARD-legacy and ARD2-legacy are retained as explicit previous editions; other Ω-LRD variants are excluded. External e0MN implementations are credited separately, not counted as inventions of this project.
+
+## CDMN: prefix-zero revision and local results (2026-10-10)
+
+[**CDMN — Compact Deep Mountain Notation**](notations/CDMN/definition.md) includes a self-contained four-view [NER expander](notations/CDMN/CDMN.ne-rewritten.js), independent [Python core](notations/CDMN/cdmn.py), bilingual definition, [finite-properties paper](proofs/paper/cdmn-properties.md) and [research index](research/cdmn/README.md). Both implementations now use the **prefix-zero rule**: at the active copy layer, `[0]` deletes that layer's last column; enclosing layers only replace the affected row. Positive indices are unchanged, not shifted. The default BTBMS-style, List, Full List and natural-row Count Sequence views remain available; counts fall back to BTBMS-style outside their domain. A new registration ID separates saved trees from the old zero rule.
+
+The updated paper gives finite reachability equivalence of the old and new rules, not equality of their index-labelled expansion paths and not global well-ordering. The [BMS equality paper](research/cdmn/papers/s2-equals-bms.md) gives `()(1^(1)) = lim(BMS)` and `()(1^3) = BMS(000)(111) = BO`. Recent [depth/TBMS results](research/cdmn/depth-and-tbms.md), local whole-cone well-ordering arguments and [BTBMS comparison candidates](research/cdmn/btbms-comparisons.md) are collected separately. In particular, the papers identify `T=()(1^(1))(1)(3^(1))(3)` as the minimum standard node with unbounded descendant nesting depth and prove `lim(TBMS) ≤ T`. They also provide a local well-ordering argument through `R∞=()(1^(1))(1)(3^(1))(3^2)(5,3)(6^(1))`. These are self-reviewed paper arguments, not Lean certification or a verified weak-KP axiom bound.
+
+**Global well-ordering remains open; no standard infinite descent has been found.** Well-ordering of `A=()(1^(1)())`, already of its second basic term, and the full BTBMS upper embedding remain open. No whole-system SRPD/e0MN comparison is claimed. Run `python -B tests/cdmn.py`; the [receipt](tools/cdmn-validation.json) separates bounded tests, resource-unknown cases and proof. Other notation implementations, PDFs and Lean projects are unchanged.
 
 ## DQDN and its collected results (2026-10-06)
 
@@ -99,10 +107,11 @@ This too is a **paper comparison, not yet Lean-formalized**. It claims neither a
 
 ## Definitions and expanders
 
-Definitions are available in English and Chinese. Thirteen existing editions retain **52 Markdown/PDF definition artifacts** (including FMP); ACD, CSD, ICP, SRPD, CTN and DQDN have twelve further Markdown definitions without new PDFs. English Markdown is the default, with a title link to Chinese.
+Definitions are available in English and Chinese. Thirteen existing editions retain **52 Markdown/PDF definition artifacts** (including FMP); ACD, CSD, ICP, SRPD, CTN, DQDN and CDMN have fourteen further Markdown definitions without new PDFs. English Markdown is the default, with a title link to Chinese.
 
 | Notation | English definition | Chinese definition | NER expander | Python expander |
 | --- | --- | --- | --- | --- |
+| CDMN — well-ordering open | [Markdown](notations/CDMN/definition.md) | [Markdown](notations/CDMN/definition.zh-CN.md) | [JavaScript](notations/CDMN/CDMN.ne-rewritten.js) | [cdmn.py](notations/CDMN/cdmn.py) |
 | SRPD — common initial segment | [Markdown](notations/SRPD/definition.md) | [Markdown](notations/SRPD/definition.zh-CN.md) | [JavaScript](notations/SRPD/SRPD.ne-rewritten.js) | [srpd.py](notations/SRPD/srpd.py) |
 | RPD | [Markdown](notations/RPD/definition.md) · [PDF](notations/RPD/definition.pdf) | [Markdown](notations/RPD/definition.zh-CN.md) · [PDF](notations/RPD/definition.zh-CN.pdf) | [JavaScript](notations/RPD/RPD-mountain.ne-rewritten.js) | [rpd.py](notations/RPD/rpd.py) |
 | LRD | [Markdown](notations/LRD/definition.md) · [PDF](notations/LRD/definition.pdf) | [Markdown](notations/LRD/definition.zh-CN.md) · [PDF](notations/LRD/definition.zh-CN.pdf) | [JavaScript](notations/LRD/LRD.ne-rewritten.js) | [lrd.py](notations/LRD/lrd.py) |
@@ -155,6 +164,7 @@ Here KP includes full set induction. The paper does not add a power-set axiom, f
 - **CWY2/wY equivalence (paper):** [English Markdown](proofs/paper/cwy2-equivalence.md) · [English PDF](proofs/paper/cwy2-equivalence.pdf) · [Chinese Markdown](proofs/paper/cwy2-equivalence.zh-CN.md) · [Chinese PDF](proofs/paper/cwy2-equivalence.zh-CN.pdf). CWY representation/bound arguments are in its definition; Ω-CWY has no global well-ordering proof.
 - **IPD correspondence audit:** [English](proofs/paper/ipd-fidelity.md) · [Chinese](proofs/paper/ipd-fidelity.zh-CN.md).
 - **FMP paper (ZFC + I3; not Lean-formalized):** [English Markdown](proofs/paper/fmp-well-ordering.md) · [English PDF](proofs/paper/fmp-well-ordering.pdf) · [Chinese Markdown](proofs/paper/fmp-well-ordering.zh-CN.md) · [Chinese PDF](proofs/paper/fmp-well-ordering.zh-CN.pdf). This is a separate stronger axiom bound, not the weak-KP bound above.
+- **CDMN finite properties (well-ordering open):** [English](proofs/paper/cdmn-properties.md) · [中文](proofs/paper/cdmn-properties.zh-CN.md). Not added to the Lean collection below.
 - **Lean:** [Build instructions and theorem index](lean/README.md) · [Chinese instructions](lean/README.zh-CN.md).
 - **Independent Lean projects:** [Y](lean/Y/README.md) · [RPD](lean/RPD/README.md) · [LRD](lean/LRD/README.md) · [Ω-LRD3](lean/Omega-LRD3/README.md) · [ARD](lean/ARD/README.md) · [IPD](lean/IPD/README.md) · [ARD2](lean/ARD2/README.md).
 - **Optional aggregate entry:** [ARD2RevisionFinalAudit.lean](lean/src/ARD2RevisionFinalAudit.lean).
@@ -184,6 +194,7 @@ Run the bounded expander and build-verifier tests from this directory:
 ```sh
 python tests/test_python.py
 python -B tests/dqdn.py
+python -B tests/cdmn.py
 python tests/test_ard.py
 python tests/test_ard_legacy.py
 node --max-old-space-size=512 tests/ard_skyline.cjs
