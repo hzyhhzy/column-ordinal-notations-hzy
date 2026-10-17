@@ -1,0 +1,262 @@
+> 整理阅读版 / Collected reading edition. 数学结论以本目录三篇主文为准。
+> 原有局部证明、适用条件和撤回提醒保留；旧进度文字仅作历史记录。
+> 固定输入的历史段落如有省略，逐段位置记录于 SOURCE_MANIFEST.json；
+> 主文已用原证明产生的自然参数补上相应数值推导。未新增 Lean 认证。
+
+Independent marked-entry audit: original S=R[k][n]
+==================================================
+2026-10-16. Same Iter(j), established I3/cap inputs. New files only.
+
+[固定输入的历史段落在本阅读版省略；自然输入及完整推导见本目录三篇主文。]
+
+Read and independently checked:
+  marked-entry-initializer.txt, sections 1--5;
+  local-budget2-initializer.txt, including root shadow sections 15--16;
+  local-budget2-shadow-forest.txt;
+  original-audit-root-forest-interface.txt and its exact scan lemma;
+  original-audit-open-extraction-repair.txt;
+  original Python iblp.py, native completion and copy filter;
+  natural_trace_cutoff_semantics.md;
+  marked-BLP-quantitative-transfer.zh-CN.md;
+  direct-step-bridge.zh-CN.md.
+
+1. First root scan: actual natural identities, not OPEN substitution
+-------------------------------------------------------------------
+For R itself the forest before scanning is unmarked. The original frozen
+scan only native-completes selected medium rows; unselected long step-1
+rows are ineligible and quiet. Newly born families are skipped by that
+same scan, so no inherited-mark completion occurs.
+
+Each native family's row owners are the same actual F AT BIRTH. The
+explicit medium-family formula makes every born mark a direct accurate
+trace (y,delta), with delta=p(y). Therefore its word is J_y=F and its
+natural cutoff is exactly theta_(y+1); carrier and factor are globally
+equal before extraction. This proves the stronger natural certificate
+directly and does not identify it with equality on an open source rank.
+
+The forest selects the entire native family at every selected raw row.
+Thus for each selected carrier r and its mark y, both y and y+1 are
+selected. Its paired source is at least 3. The selected final row and
+its implicit cap are retained. Section 4 below proves the subsequent
+ordinary endpoint repairs also preserve the natural mark identities.
+
+The result is an actual NATURAL certificate for the exact original R[k].
+After repair, a top carrier need not have the same GLOBAL owner as its
+earlier family members. Subsequent arguments use membership congruence,
+not a false continuation of global equality.
+
+2. Second forest: an all-index all-high induction
+------------------------------------------------
+At R[k], active minimum a=2; all marks are direct and their paired
+sources delta satisfy delta>=3>a. Initial whole parallel packets are
+the last two COMPLETE native families (k>=3). Each marked head and its
+physical successor lie in the same family, so all natural data are
+transported together when a packet is duplicated.
+
+Maintain: every direct mark in the current active source band has
+paired source delta>=a. Let P be the copy pivot and y the mark head.
+
+If y>=P, the factor row is copied, and this is the original filter's
+all-high branch. The new trace remains direct. If y<P, then y<a is
+impossible because delta<y and delta>=a. The only other branch is
+mixed/high, and the legacy guard would require f(delta)<=a. But
+  f(delta)>=f(a)>a,
+so that branch rejects it. The paper guard rejects it as well.
+Consequently every RETAINED copied mark is all-high, with no surviving
+legacy/paper discrepancy in this macro.
+
+The new active source band consists entirely of the newly copied rows,
+and its controller minimum is a'=f(a). Its retained paired sources are
+delta'=f(delta)>=a'. This proves the invariant for every prescribed
+number of raw stages, not just a fixed small index.
+
+For short copying a retained marked source carrier r lies in [P,e),
+and P<=y<r<e. Hence y and y+1 are physically copied. Translation on
+this band gives f(y+1)=f(y)+1. Both the factor owner and the natural
+cutoff are transported by the same actual controller E:
+  J'_(f(y))=E(J_y),
+  theta'_(f(y)+1)=E(theta_(y+1)).
+Application congruence therefore gives the desired natural identity.
+There is no mixed three-bound comparison to establish for this family.
+
+The all-n quiet theorem for R[k] means the later frozen scan has no
+native records and no effective mark completion. Thus this natural
+certificate is not exposed to an unproved nonquiet scan in the second
+initializer. The output remains the exact ORIGINAL R[k][n], including
+legacy marks; we have not changed its definition to the paper variant.
+
+3. Selected factor-successor closure survives the entire second forest
+-----------------------------------------------------------------------
+The invariant is SC:
+  selected carrier r with a retained mark y => y,y+1 are selected.
+
+The initial selected prefix is contiguous. Each remaining live packet
+is a transported complete packet whose internal marks have their heads
+inside it. Selecting a whole active packet except its controller keeps
+y+1 whenever it keeps carrier r, since y+1<=r<controller. The final
+packet minus the final cut controller has the same property.
+
+For new selected copies, the source carrier is already selected. The
+all-high proof gives P<=y<r<e. By SC its source y+1 is selected and also
+inside the source band. Both copied rows are consequently selected, and
+f(y+1)=f(y)+1 proves SC in physical coordinates. It is not enough merely
+to see an apparent adjacency after renumbering; this calculation supplies
+the actual physical adjacency needed for the natural cutoff.
+
+This induction does not require every selected set to be convex. It uses
+complete live packets and copying the selected source rows, exactly as
+in the established raw-forest selection procedure.
+
+4. Natural extraction: exact local criterion and repair proof
+------------------------------------------------------------
+For a direct mark y, natural Delta is theta_(y+1). With fixed original
+actual named points, this cutoff stays the SAME ORDINAL after extraction
+if and only if the physical next point y+1 is selected. Otherwise its
+new selected successor is strictly higher. This is a precise necessary
+and sufficient criterion for PRESERVING THE CUTOFF, not a claim that
+natural semantics can never survive a larger cutoff by another argument.
+
+SC ensures factor row y and its implicit cap y+1 are retained. Thus the
+factor owner needs no endpoint repair, and Delta remains unchanged.
+If carrier r's old cap c=theta_(r+1) must move to c'>=c, use the existing
+same-Iter actual transporter G with crit(G)=c, G(c)=c', replacing its
+owner F by G(F). Ordinary edges remain correct. Separately, the standard
+application MEMBERSHIP identity says
+  G(F) equiv_c F.
+Since y<r, Delta=theta_(y+1)<=theta_r<c. Thus
+  G(F) equiv_Delta F equiv_Delta J_y.
+This proves the required natural identity. Any row used as a selected
+factor has its successor selected, so it cannot simultaneously require
+a conflicting repair. All repairs can be performed independently.
+
+This is the missing stronger justification. The previous OPEN repair
+lemma alone did not imply it. The proof here also handles top carriers
+whose owners cease to be globally equal to earlier native-family owners.
+
+5. Cap and the two equal large indices
+--------------------------------------
+The stronger argument changes neither the ordinary endpoint-repair
+operation nor the named actual points of the prior initialization. It
+only proves that these operations preserve the stronger invariant.
+
+In the first forest, the root's supplied penultimate shadow is transported
+through exactly k-1 known short copies; the final row/cap are retained.
+The native-only scan preserves the final top row's central boundary and
+implicit cap. The resulting independently retained current line has
+length 2^M-1, unchanged by repairs of earlier owners.
+
+[固定输入的历史段落在本阅读版省略；自然输入及完整推导见本目录三篇主文。]
+
+The second forest's final row/cap are again retained. Its natural
+upgrade therefore leaves the strict cap<kappa4 unchanged. Proving mere
+existence of S does not require a further shadow resource after S.
+No claim of indefinite budget renewal is used here.
+
+6. What future paper-guard M plus cuts may now use
+-------------------------------------------------
+The entry has ordinary actual row edges, Sat, accurate direct proper
+marks, positive sources, and natural membership certificates. Its first
+two ordinary rows are unchanged; their same-Iter j realization supplies
+the ordinary 1-lined initial triple. Thus it meets the certificate class
+C of marked-BLP-quantitative-transfer.zh-CN.md, subject to that document's
+stated already-proved transition inputs.
+
+Now one may invoke THAT ordinary marked-BLP transition theorem, using
+the correct PAPER guard and complete prescribed M_star scan. A first-full-
+copy domain failure may be handled by cutting: prefixes preserve C.
+Successor cuts are handled in the same way. This defines a process with
+mark completion retained. It is not automatically the original legacy
+short-M process after leaving the two initialized levels.
+
+For the generic finite-table potential one needs, at every successful
+M_star: actual same-Iter owners; cap unchanged; final owner J'=J(K), with
+crit(J')<cap; and the scan preserving that last owner. Cuts strictly
+lower the cap. These are exactly the natural transition theorem's
+ordinary endpoint/owner statements, not consequences of Sat alone.
+
+At cap gamma_r let a in {1,...,2^r-1} be the final owner's finite-table
+class. Phi=2^(r+1)-a strictly decreases at each successful M_star because
+a*_r b>a, and at each cut because r decreases. Completion is part of
+one M_star, not separately counted. Therefore the ENTIRE ordinary
+paper-guard M_star/cut computation, until its fixed zero convention,
+has total length <2^(r+1)<2^q(5), using the existing cap/q5 convention.
+The deletion count is separately <q(5). There is no elimination of the
+exponent for total M_star count in this argument.
+
+7. Bounded diagnostic, not the proof
+-----------------------------------
+marked-entry-audit-probe.py imports the untouched original Python and
+the old raw-forest diagnostic. It checks 30 prescribed cases: root R[n]
+for n=2..6 and R[k][n] for 2<=k,n<=6. Results:
+  all exact forest outputs equal the original cores/steps/masks;
+  all accurate marks have one nonterminal factor (direct);
+  every paired source is positive and every output is Sat;
+  no selected factor-successor gap occurs;
+  no retained mixed legacy event occurs in any inspected forest stage;
+  second-level scans are all quiet.
+Runtime 0.0383 seconds; peak 260 rows / 3126 stored fields. Explicit
+10-second / 600-row / 60000-field limits. The process exited normally.
+No giant forest, Hardy run, or Laver table was computed.
+
+8. The proposed layer-sacrifice / Hardy alternative is a separate task
+---------------------------------------------------------------------
+The same-policy prefix theorem gives, on its common well-founded domain,
+  Q_n(P) prefix O_n(P) prefix Q_(n+1)(P), n>=2,
+and hence variable-index Hardy comparison with an input shift of one.
+It does NOT identify the fixed short-M=Q_2 count with either Hardy value.
+Starting with one or two huge full indices does not itself prove that
+later true successors can repeatedly replenish those indices.
+
+[固定输入的历史段落在本阅读版省略；自然输入及完整推导见本目录三篇主文。]
+
+A sufficient new runtime theorem would explicitly encode each target
+Hardy state (P,x) by a current ordinary marked carrier state and a budget,
+simulate every successor and limit step by a NONEMPTY bounded local
+M_star/cut macro, and preserve the next state's encoding. A stronger
+per-step output budget/readout can compare Hardy's final value directly.
+This is an exact simulation obligation, not ordinal monotonicity.
+
+9. Precise rejection of the original fixed-[1] shortcut
+------------------------------------------------------
+The parent's suggested prefix-visit shortcut would compare the current
+fixed short-M process to repeated original displayed [1]. Even wherever
+the same-mask prefix comparison is valid, its resulting lower-bound
+witness has a severe uniform limitation: original [1] never increases
+row count. It native-completes the one copied source row, then truncates
+back to the old row count; a successor/failure step removes a row.
+
+For an ordinary well-formed state of at most B rows, each row r chooses
+its core/mark data from at most 3^(r+1) possibilities (absent, unmarked,
+marked at each address), and its positive step from at most r+1 values.
+Overcounting harmlessly, the total possible states is at most
+  sum_(h=0)^B product_(r=1)^h ((r+1)*3^(r+1))
+  <= 2*(B+1)!*3^(B*(B+3)/2).
+If the deterministic fixed-[1] run terminates, it has no repeated state,
+so its length is bounded by this explicit elementary expression. This
+does not require any comparison of ordinal sizes.
+
+For the present two-index family the quiet-copy formula is explicit:
+  |R[k]|=(k^2+k+8)/2,
+  pivot(R[k])=5+(k-2)(k-3)/2,
+  |R[k]|-pivot=3k-4,
+  |R[k][n]|=(k^2+k+8)/2+(n-1)(3k-4)-1, k,n>=3.
+In particular for k=n=x,
+  B=|S|=(7x^2-13x+14)/2.
+Thus the fixed-[1] witness from S has an upper bound 2^O(x^4), uniformly
+in x, whenever it terminates. It cannot by itself supply the desired
+high-hierarchy comparison with only a small uniform level loss.
+
+This is NOT an upper bound on the real paper short-M runtime: short M
+can increase row count. Nor does it say that S's ordinal is small. It
+only rules out using the bounded-width fixed-[1] descent as a sufficiently
+strong runtime witness. The original [1] versus Q2 prefix relation also
+needs separate care at full-copy-domain failure, because [1] checks only
+its one copied source row whereas Q2 prechecks the entire full copy.
+
+The minimal remaining quantitative interface is therefore an unbounded-
+width carrier clock, not a better constant in the fixed-[1] comparison:
+after every simulated true successor its residual carrier must pay the
+next input, and after every target limit it must supply the whole required
+copy interval with the correct mark policy. No such uniform carrier
+invariant for S and an original root close to R has been established by
+this entry audit.

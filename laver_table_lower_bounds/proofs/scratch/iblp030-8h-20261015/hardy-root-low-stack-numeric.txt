@@ -1,0 +1,104 @@
+> 整理阅读版 / Collected reading edition. 数学结论以本目录三篇主文为准。
+> 原有局部证明、适用条件和撤回提醒保留；旧进度文字仅作历史记录。
+> 固定输入的历史段落如有省略，逐段位置记录于 SOURCE_MANIFEST.json；
+> 主文已用原证明产生的自然参数补上相应数值推导。未新增 Lean 认证。
+
+Low finite-type staircase: exact original-source numerical compiler
+===================================================================
+2026-10-15. This is the numerical theorem for the new low fan. Its
+actual conclusion is conditional only on the stated finite stack of
+natural contracts. Four such type levels have been established; later
+levels must be checked individually. No full C or R conclusion follows.
+
+1. Objects, types, and source comparisons
+-----------------------------------------
+Use the hereditary all-tail classes X_r of hardy-root-tail-locality.txt.
+At X0 require nondecreasing f(x)>=x+1. At each higher type require
+monotonicity, extensiveness, and preservation of EVERY lower tail order.
+Every comparison of operators below quantifies over ALL admitted
+arguments and ALL final positive inputs, unless explicitly marked >=3.
+
+B_h=(0^h)(1^h), g(x)=x*2^x. Let K be the fast typed BM4 hierarchy:
+zero columns iterate 2^x times, nonzero columns take original [2^x].
+Define
+  S(f)(x)=K_(B_x)^(0,f)(x),
+  D_r(u)(...)(x)=K_(B_(g(x)))^(r,u)(...)(x), r>=1.
+Thus S belongs to X1, and D_r belongs to X_(r+1).
+The scalar S really has height x, NOT g(x).
+
+Put A=I01, C=A(015):1=I[0][3][0][0][1]^8, h=H_A, and
+  B_r(u)=F_A^(r,u).
+The exact original first-root identities give, for n>=3 and x>=3,
+  H_(C[n])(x)=B_(n-2)(B_(n-3))...B_1(B_0)(h)(x).
+All applications are left-associated. The existing safe-D cover and
+literal BMS seed-height paths imply
+  B_0<=_3 S^2,       h<=_3 S^2(f0),      f0(x)=g(x),       (1)
+  B_r<=_3 D_r, r>=1.                                      (2)
+The tail notation compares every argument on every input >=3.
+
+For (1), N(x)=2+x(x+1)/2 and y=x+2^x-1 satisfy y>=N(x)+1
+for x>=3. Fast strong-prefix and f>=successor give
+  S(S(f))(x)>=[S(f)]^[2^x](x)>=S(f)(y)
+    >=G_(B_(N(x)+1))^f(N(x)).
+This is exactly the ordinary padded safe-D bound. For h use base
+successor<=f0. For (2), A[x] is covered by B_(x+2)[N(x)],
+N(x)<=2^x, and the literal path B_H ->* R_(H-1), using only 0,1,2,
+applies because g(x)-1>=x+2. No scalar input was silently preheated.
+
+2. A uniform fourfold whole-object reserve
+------------------------------------------
+For every r>=1 and EVERY u, on all positive inputs,
+                       D_r(u)>=u^4.                    (3)
+Indeed g(x)>=2. Literal bounded-index seed-height paths reduce B_g(x)
+to B_2, then to two zero columns 00, using only indices <=2<=2^x.
+Equivalently one may use the already audited B_H ->* R_(H-1)
+preparation, seed-height descent, and B_1[1]=00.
+Let Z_r(u) denote the one-zero-column operation. Since 2^x>=2,
+Z_r(u)>=u^2 as a WHOLE object. Thus
+  K_00^(r,u)=Z_r(Z_r(u))>=(Z_r(u))^2>=u^4.
+The finite iteration inequality is first proved for every argument
+and input; only then is the input-dependent index g(x) selected.
+
+Fourfold padding descends through a left-associated typed chain.
+More precisely, for L>=2 define
+  T=D_(L-1)(D_(L-2))...D_1  in X2,
+  W=D_L(D_(L-1))...D_1      in X2.
+Then
+                            W>=T^4.                    (4)
+Start with D_L(D_(L-1))>=D_(L-1)^4. At every subsequent argument
+Y use this elementary fact: if X>=power-four, then
+  X^4(Y)>=X^2(Y)=X(X(Y))>=(X(Y))^4.
+The newly collapsed X(Y) still dominates the next named D_r, by
+extensiveness, hence still dominates power-four at its corresponding
+type. Apply this finitely many times. All these are global whole-object
+inequalities, so feeding intermediate objects into them is legitimate.
+
+[固定输入的历史段落在本阅读版省略；自然输入及完整推导见本目录三篇主文。]
+
+First T>=D_1>=power-four. Consequently T(S)>=S^4>=S^2,
+and U=T(T(S))>=T(S^2). The mixed tail comparisons (1)--(2) yield
+  U>=_3 B_(L-1)(B_(L-2))...B_1(B_0).
+Also U>=S^2, so U(f0)>=_3 h. Therefore
+                         q>=_3 H_(C[L+1]).              (6)
+No source object at input 1 has been used.
+
+[固定输入的历史段落在本阅读版省略；自然输入及完整推导见本目录三篇主文。]
+
+[固定输入的历史段落在本阅读版省略；自然输入及完整推导见本目录三篇主文。]
+
+4. Actual interface and present scope
+--------------------------------------
+Suppose the actual low staircase supplies D_1,...,D_L with all the
+lower domains and admission ceilings stated in its geometric proof.
+Then W(S)(f0) is precisely their left-associated legal evaluation:
+the initial scalar f0 has exit kappa3, S exits a, D_1 exits c_exit,
+and each next box accepts the immediately lower box. Only the real
+one-line supplied by j on (kappa0,kappa1,kappa2) is required.
+
+Every whole object used in (1)--(6), including U and q, is NUMERICAL.
+They need not be supplied as separate physical arguments with new
+endpoint contracts: the actual expression is W(S)(f0), whose valid
+copy-tree already realizes the whole-object inequalities. No new
+physical claim is inferred merely from the numerical padding.
+
+[固定输入的历史段落在本阅读版省略；自然输入及完整推导见本目录三篇主文。]

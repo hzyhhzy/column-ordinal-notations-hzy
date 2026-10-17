@@ -1,5 +1,9 @@
 # 来源、版本与许可证 · [English](SOURCES.md)
 
+## Laver 下界证明整理（2026-10-18）
+
+[laver_table_lower_bounds](laver_table_lower_bounds/README.zh-CN.md)收录本次指定的三条研究路线及实际局部证明依赖。清单记录原稿与整理版哈希、链接迁移、旧固定输入段落的省略行号；三篇主文明确推导自然输入版本。仓库外原研究文件不变。固定随附用户提供的原版 IBLP 核心及本地 BMS 父表参考，供有限重放；没有导入外部 PDF 或增加 Lean 定理。出处及版本边界见[文献表](laver_table_lower_bounds/BIBLIOGRAPHY.md)。
+
 ## CDMN 的名称、规则修改与来源边界（2026-10-10）
 
 CDMN 全称 **Compact Deep Mountain Notation**，对应 `compact-fs-design-20261008` 研究快照里旧称 **CDM** 的严格阈值候选。文件名、NER 注册 ID、显示名称、顶端及 JS 工厂接口现统一为 CDMN；旧称仅在来源记录中说明。仓库外原研究文件保留。

@@ -1,0 +1,183 @@
+> 整理阅读版 / Collected reading edition. 数学结论以本目录三篇主文为准。
+> 原有局部证明、适用条件和撤回提醒保留；旧进度文字仅作历史记录。
+> 固定输入的历史段落如有省略，逐段位置记录于 SOURCE_MANIFEST.json；
+> 主文已用原证明产生的自然参数补上相应数值推导。未新增 Lean 认证。
+
+An explicit all-finite-type BMS upper bound for original C Hardy
+==============================================================
+2026-10-15. The main agent independently reviewed the finite-type extension
+and found no gap relative to the previously established safe-D cover and
+the exact J identities; see root-independent-local-audit.txt section 1.
+That review is of the polymorphic extension, not a fresh proof of every
+older dependency. The level-1 cover transfer was separately reviewed.
+
+C=A(0,1,5):1=R[0][1]^8, A=I01, and C[n]=S_n=J_A^(n-1)(A) for n>=2.
+This file concerns C, NOT W=I021 or R=I030. The aim is to remove original
+IBLP from a numerical upper-bound expression, rather than merely rename
+its Hardy function or use its ordinal order type.
+
+1. Finite types and diagonal iteration
+--------------------------------------
+The numeric domain is integers x>=2. Let X_0 consist of nondecreasing
+functions f with f(x)>=x+1. Recursively X_(r+1) consists of pointwise
+order-preserving, extensive maps X_r -> X_r. Thus T(u)>=u at the appropriate
+pointwise order. Elements are curried until their last numeric input x.
+
+For an increasing sequence (u_n) in X_r define its diagonal Delta_r(u_n)
+by selecting n=x at the FINAL numeric input. At type 0,
+  Delta_0(u_n)(x)=u_x(x);
+at higher types,
+  Delta_(r+1)(u_n)(v)=Delta_r(u_n(v)).
+Pointwise monotonicity of n->u_n ensures Delta_r(u_n) is again in X_r.
+
+Define x-iteration and x+1-iteration on each type:
+  I_0(T)(x)=T^x(x),         I_0^+(T)(x)=T^(x+1)(x);
+  I_(r+1)(T)(u)=Delta_r(T^n(u));
+  I_(r+1)^+(T)(u)=Delta_r(T^(n+1)(u)).
+Extensiveness makes the power sequence increasing, so these are admissible.
+
+For an original-IBLP index P and base f in X_r define F_P^(r,f) in X_r by
+  F_empty=f;
+  F_(Q+1)=I_r(F_Q);
+  F_P=Delta_r(F_(P[n])) for a non-successor.
+For BMS define G_M^(r,f) identically, but use I_r^+ at successors and the
+original BMS fundamental sequence at limits. The r=0 clause is the usual
+numeric FGH, with x vs x+1 iterations respectively.
+
+These are well-founded recursions on the previously proved A/grammar cone
+or on BMS. The source limit diagonal is admissible because source positive
+basic terms are nested literal prefixes and the strong-prefix inequality
+below makes their hierarchy values increasing pointwise.
+
+2. Type-uniform prefix and cover lemma
+--------------------------------------
+At every finite type r, simultaneous well-founded induction proves:
+
+* G_M^(r,f) lies in X_r, and depends monotonically on f.
+* Q a strict BMS prefix of M implies
+       G_M^(r,f) >= I_r^+(G_Q^(r,f)) pointwise.           (2.1)
+* A finite BMS descent M -> Q using indices <=x gives, after arbitrary
+  fixed higher-type arguments and final numeric input x,
+       G_M^(r,f)(...)(x) >= G_Q^(r,f)(...)(x).           (2.2)
+
+The proof is the same at every type. Iteration comparison uses monotone
+extensive maps on X_(r-1), while Delta merely selects the final numeric
+input. In a non-successor M, every positive M[x] strictly extends cut(M),
+so every proper prefix Q of M remains a proper prefix of M[x]. At a
+successor use the defining I_r^+. Input monotonicity follows from nested
+basic terms and the lower objects' final-input monotonicity. This is not
+an assumption that arbitrary ordinal inequalities imply FGH inequalities.
+
+The original safe-D arbitrary-cover theorem therefore lifts uniformly:
+if P in D is covered by standard BMS M, then
+
+                    F_P^(r,f) <= G_M^(r,f).             (2.3)
+
+Induct on target M, quantified over every covered P, every admissible f,
+and all higher arguments. A source successor has a strict-prefix target
+cover and is absorbed by (2.1), because source uses I_r and target I_r^+.
+A source non-successor O_x has a target macro using only 0,1,x-1,0; its
+cover is strictly smaller. Apply IH and (2.2) at the final input x.
+Quantification over ALL f permits operator iteration at the next type.
+
+More explicitly, fix r and induct on the TARGET index M with induction
+statement: for every finite source P covered by M, every base f in X_r,
+every tuple of higher arguments, and every final x>=2, (2.3) holds after
+evaluation at that tuple and x. The IH for a fixed smaller target M' is
+therefore a WHOLE-OBJECT pointwise inequality, not a fact at just one x.
+In the source-successor case, cut(P) has a fixed prefix cover M'<M. Its
+whole-object IH may legitimately be used at every intermediate argument
+created by iteration, including changed bottom functions at higher types.
+In the source-limit case, first fix the tuple and final x. The cover macro
+then chooses a possibly x-dependent smaller target M_x covering P[x].
+Apply the already universal IH for M_x, evaluate only at the fixed tuple
+and x, and then use the <=x-index macro comparison (2.2) at that SAME x.
+Nothing iterates this x-specific comparison or promotes it to a uniform
+comparison involving the single chosen M_x. Since the original tuple,x
+were arbitrary, the desired full-object inequality follows at the end.
+
+3. BMS-only seed operators
+-------------------------
+Define the actual A seed operator at type r:
+  B_r : X_r -> X_r,       B_r(f)=F_A^(r,f).
+Thus B_r is an element of X_(r+1).
+
+Let N(x)=2+x(x+1)/2, and define the BMS diagonal at type r:
+  D_r(f)=Delta_r(G_(B_(n+1))^(r,f)),
+where B_k=(0^k)(1^k) is the ordinary BMS seed (not the operator B_r).
+Use distinct notation in an implementation to avoid this typographic clash.
+
+Let Pad_r(u) replace the final numeric input x of u by N(x), keeping all
+higher arguments unchanged. Define a PURE BMS operator
+  E_r(f)=Pad_r(D_r(f)).
+It lies in X_(r+1): the constituent operations preserve pointwise order,
+monotonicity, and extensiveness.
+
+The explicit cover A[x] by B_(x+2)[N(x)], followed by (2.3), input padding,
+and the existing seed-height comparison, proves uniformly in r and f:
+
+                         B_r(f) <= E_r(f).             (3.1)
+
+At r=0, E_0(f)(x)=G_(B_(N(x)+1))^(0,f)(N(x)), the earlier D_f(N(x)).
+At r=1 this is exactly the type-2 operator B_Theta from
+hardy-root-oracle-upper.txt §6, with Theta playing the role of f.
+
+4. Exact type raising by first-root substitution
+------------------------------------------------
+Frozen concatenation obeys, at every type r,
+  F_(U⊕V)^(r,f) = F_V^(r,F_U^(r,f)).                    (4.1)
+Induct on the right source V. Its successor iteration and limit diagonal
+both leave the left prefix U frozen. This is equality of the whole curried
+objects, not merely an inequality at one argument.
+
+The exact J_A basic-sequence identities then imply
+
+         F_(J_A(P))^(r,f) = F_P^(r+1,B_r)(f).           (4.2)
+
+Proof by induction on payload P. At empty P this is B_r(f). At a source
+successor Q+1, the original J_A(P)[x] is x independent J_A(Q) copies;
+apply (4.1) x times, then Delta_r. This is precisely I_(r+1) applied to the
+right-hand hierarchy. At a source limit use conjugacy J_A(P)[x]=J_A(P[x])
+and commute Delta_(r+1) with application to the fixed f. The exceptional
+original [1] does not enter x>=2 numerical evaluation.
+
+5. Explicit bound for all inputs of the actual C root
+----------------------------------------------------
+Let h=H_A and g=F_Lambda^BMS, so the separately established numerical result
+is h<=g o g. Exact first-root Hardy gives H_(J_A(P))=F_P^(0,h).
+Repeatedly applying (4.2), for n>=2,
+
+  H_(S_n) = B_(n-2)(B_(n-3)) ... (B_1)(B_0)(h).        (5.1)
+
+The application is left associated: for n=4 it means
+  ((B_2(B_1))(B_0))(h).
+The types match, since B_r is in X_(r+1), so B_r accepts B_(r-1) in X_r.
+
+Replace each B_r by its BMS-only upper operator E_r using (3.1), and replace
+h by g o g. Every application preserves pointwise order. Therefore
+
+  H_C(x) = H_(S_x)(x)
+    <= [E_(x-2)(E_(x-3)) ... (E_1)(E_0)(g o g)](x),   (5.2)
+       x>=2.
+
+For x=2 the right side is E_0(g o g)(2). For x=3 it is
+E_1(E_0)(g o g)(3), exactly the type-2 bound already written for S_3.
+The right side of (5.2) is an explicit finite-type recursion using only
+ordinary BMS basic sequences, its usual FGH g, the polynomial N, pointwise
+diagonals, and functional iteration. It contains no original-IBLP oracle.
+
+6. Scope and remaining obligations
+----------------------------------
+This is not a comparison with q(5). A Laver-table construction would have
+to dominate the input-dependent tower of TYPES in (5.2), not merely a
+fixed number of ordinary iterates of the numerical BMS diagonal g.
+
+It is also not a bound for W or R: last-root grafts can copy pending
+continuations while executing a lower context, and do not satisfy (4.2).
+The C cone admits the clean first-root grammar; extending that grammar to
+the earlier roots remains a substantive separate problem.
+
+The polymorphic steps, including Delta closure and the induction over all
+higher arguments, have received the scoped independent review noted at
+the beginning. This does not convert the C bound into a q(5) comparison,
+or certify the still missing last-root/record-consumption extension.

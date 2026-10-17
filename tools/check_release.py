@@ -101,6 +101,7 @@ NER_HASHES = {
     'notations/SPD/SPD.ne-rewritten.js': 'd693c23564a766ecbbe3072cd200632c49b490d47d18428e1310ea438e85f266',
 }
 SRPD_ARCHIVE_MANIFEST_SHA256 = '41e9b307324156545e05ce64735681aa7014c1da916608f8e4163a78c2329033'
+LAVER_PUBLICATION_MANIFEST_SHA256 = 'cc244f38a9be6907f2427045f6bb9c88fb8684ce735520be57f9db138133c165'
 LEAN_ROOTS = {
     # SPD and FMP have paper manuscripts, but no Lean certificates. Their addition must
     # neither relabel the existing seven proofs nor weaken their receipt checks.
@@ -131,6 +132,38 @@ def release_files(folder=ROOT):
 
 def sha256_lf(path):
     return hashlib.sha256(path.read_bytes().replace(b'\r\n', b'\n')).hexdigest()
+
+
+def check_laver_bounds_collection():
+    """Register only the individually pinned original-language research texts."""
+    directory = ROOT / 'laver_table_lower_bounds'
+    if sha256_lf(directory / 'PUBLICATION_MANIFEST.json') != LAVER_PUBLICATION_MANIFEST_SHA256:
+        raise ValueError('Laver publication inventory changed without explicit review')
+    inventory = json.loads((directory / 'PUBLICATION_MANIFEST.json').read_text(encoding='utf-8'))
+    if (inventory.get('schema_version') != 1
+            or inventory.get('collection') != 'laver-table-lower-bounds'
+            or sha256_lf(directory / 'SOURCE_MANIFEST.json') != inventory['source_manifest_sha256_lf']):
+        raise ValueError('Unexpected Laver collection identity or source manifest')
+    sources = json.loads((directory / 'SOURCE_MANIFEST.json').read_text(encoding='utf-8'))
+    for entry in sources['items']:
+        path = (directory / entry['package']).resolve()
+        if not path.is_relative_to(directory.resolve()):
+            raise ValueError('Laver source path escapes collection')
+        if hashlib.sha256(path.read_bytes()).hexdigest() != entry['package_sha256']:
+            raise ValueError('Changed Laver proof/kernel: ' + entry['package'])
+    manuscripts = set()
+    for entry in inventory['monolingual_markdown']:
+        path = (directory / entry['path']).resolve()
+        if (not path.is_relative_to(directory.resolve()) or path.suffix != '.md'
+                or sha256_lf(path) != entry['sha256_lf']):
+            raise ValueError('Changed or unsafe Laver Markdown entry: ' + entry['path'])
+        relative = path.relative_to(ROOT).as_posix()
+        if relative in manuscripts:
+            raise ValueError('Duplicate Laver Markdown entry: ' + relative)
+        manuscripts.add(relative)
+    print(f'Laver lower bounds: {len(sources["items"])} pinned source files; '
+          f'{len(manuscripts)} registered original-language manuscripts/guides')
+    return manuscripts
 
 
 def check_srpd_archive():
@@ -430,6 +463,10 @@ def main():
         archives.update(check_srpd_archive())
     except (ValueError, KeyError, OSError) as error:
         problems.append('SRPD final-route archive: ' + str(error))
+    try:
+        archives.update(check_laver_bounds_collection())
+    except (ValueError, KeyError, OSError) as error:
+        problems.append('Laver lower-bound collection: ' + str(error))
     markdown = [p for p in files if p.suffix.lower() == '.md']
     pdfs = [p for p in files if p.suffix.lower() == '.pdf']
     for relative in sorted(archives):

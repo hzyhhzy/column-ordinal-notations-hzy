@@ -1,0 +1,214 @@
+> 整理阅读版 / Collected reading edition. 数学结论以本目录三篇主文为准。
+> 原有局部证明、适用条件和撤回提醒保留；旧进度文字仅作历史记录。
+> 固定输入的历史段落如有省略，逐段位置记录于 SOURCE_MANIFEST.json；
+> 主文已用原证明产生的自然参数补上相应数值推导。未新增 Lean 认证。
+
+Natural-membership entry for S = ORIGINAL R[K][N]
+=================================================
+2026-10-16. growing_full_iblp; entry audit for the parent's new task.
+
+[固定输入的历史段落在本阅读版省略；自然输入及完整推导见本目录三篇主文。]
+
+Dependencies read directly
+-------------------------
+  所固定的原版 iblp.py（见 SOURCE_MANIFEST.json）
+  自然标记引理目录/
+    natural_trace_cutoff_semantics.md
+  scratch/iblp030-8h-20261015/original-audit-root-forest-interface.txt
+  scratch/iblp030-8h-20261015/original-audit-open-extraction-repair.txt
+  scratch/iblp030-8h-20261015/original-audit-two-chain-quiet-cone.txt
+  scratch/iblp-I-to-I0-20261016/local-budget2-initializer.txt
+  scratch/iblp-I-to-I0-20261016/local-budget2-shadow-forest.txt
+
+The OPEN extraction lemma is used only to locate the ordinary endpoint
+repair, not to prove the stronger membership assertion. That assertion
+is proved separately in section 4 below by the standard application
+membership identity G(F) equiv_(crit G) F.
+
+1. Exact natural invariant, and the special direct-mark case
+-----------------------------------------------------------
+For a proper mark y of carrier row r, let its actual p-trace be
+  (v0=y,v1,...,v_(l-1)=t,delta),
+and W=J_v0 o ... o J_t. Its natural cutoff is
+  Delta(W)=(J_v0 o ... o J_v_(l-2))(theta_(t+1)).
+The required invariant is the MEMBERSHIP equality
+  J_r equiv_Delta(W) W.
+For a direct mark its trace is simply (y,delta), hence
+  W=J_y, Delta=theta_(y+1).                         (1.1)
+
+At an ordinary native birth, all members of the new native family carry
+the same actual owner F. The newly created marks are direct and refer
+only to earlier members of that same contiguous native family. Thus
+carrier=F=factor globally, and (1.1) holds without any cutoff issue.
+
+After extraction it is NOT necessary that the global owners remain equal:
+a top carrier can have its endpoint repaired while a factor does not.
+From that point onward retain membership (1.1), not global owner identity.
+
+2. All retained marks in the second forest are direct ALL-HIGH copies
+--------------------------------------------------------------------
+For R[K], K>=3, the active controller minimum is coordinate a=2.
+Every mark is native-born and direct. If its paired source is delta,
+then delta>=3>a. These facts follow from the triangular native family
+formula: the fixed first five rows are unmarked, and new marked targets
+have their paired sources in the chain beginning 3,4,5,... .
+
+More generally suppose every direct mark in the active copied source
+has paired source delta>=a, the current controller minimum. Let P be
+the current copy pivot. For its head y, delta<y. The original legacy
+filter has these alternatives:
+
+  * y>=P: the nonterminal factor row y is fully copied, so the mark
+    remains direct and its owner/factor are transported by the same E;
+  * y<P and y<a: impossible, since delta<y and delta>=a;
+  * a<=y<P: the high legacy branch can keep it only if the transformed
+    paired source f(delta)<=a. But strict increase on the defined row
+    domain gives f(delta)>=f(a)>a. Hence this branch is rejected.
+
+Consequently EVERY retained copied mark is an all-high direct mark.
+In particular no retained mark depends on the disputed difference between
+the legacy high guard and the paper guard. Both guards give the same
+retained marks in this source family.
+
+The next active source interval consists of newly copied rows. Its new
+minimum is a'=f(a), and every retained paired source satisfies
+  delta'=f(delta)>=f(a)=a'.
+All traces remain direct because both the factor row and its p endpoint
+are transported by the commuting raw address map. Thus the induction
+continues for any prescribed finite number of raw copies, not only for
+the small initial coordinate a=2.
+
+For the SHORT forest this source assertion has a separate direct check:
+the current parallel live controllers have the same low pivot P. The
+newly appended short-copy block begins at the old last-row address
+f(P)=old N, and the next surviving controller's pivot is also f(P).
+Therefore its next source interval starts at that new block, rather
+than accidentally reaching back into the frozen old prefix. This is
+not an inference merely from the analogous full-copy property.
+
+The argument applies to the actual short-copy forest too. Its source is
+[P,e), where e is the active whole-packet start. A copied mark has
+  P<=y<r<e,
+so its factor and the physical next point y+1 are both in the copied
+interval. On physical source indices the map is translation, including
+the boundary at e. Thus its natural cutoff is transported EXACTLY:
+  theta'_(f(y)+1)=E(theta_(y+1)).                   (2.1)
+Application congruence transports the old natural membership certificate
+to the new one. No OPEN-to-membership inference and no high-branch
+three-bound argument is needed here.
+
+Initial parallel packets preserve this starting invariant: they comprise
+complete native families, their marks are internal, and their low paired
+sources still satisfy delta>=a. Their actual E duplication transports
+carrier, factor, and successor point together. Therefore they carry
+genuine natural membership certificates before the raw forest starts.
+
+3. The forest's selection is factor-successor closed
+----------------------------------------------------
+Let Sigma be the selected physical row indices used in the exact raw
+forest extraction. The property needed for direct marks is
+
+  if selected carrier r has a retained mark y, then y and y+1 are in Sigma.
+                                                               (3.1)
+This is stronger than ordinary explicit-reference closure but weaker
+than requiring every physical gap to be selected.
+
+At the FIRST R[K] initialization, the raw forest has no marks. Its
+nonquiet scan is native-only, and the known first-root scan/extraction
+theorem selects EVERY member of a native family born at a selected row.
+All newly marked heads lie earlier in that same family, so y+1<=r is
+also selected. The unselected parallel singleton rows are long step-1
+and cannot create a family. Thus (3.1) holds for the first extraction.
+
+At the SECOND forest, the initial selected prefix is a contiguous prefix.
+The full tail packet of R[K] consists of its final two complete native
+families; every direct mark in either family refers inside that family.
+The raw template preserves this internal-direct-mark property on each
+remaining parallel live packet by whole-packet transport.
+
+When a rightmost active packet is consumed, all its rows except the
+controller are selected. This is a contiguous interval. For a mark in
+one of these selected rows, its internal head satisfies y<r<=last-1,
+so y+1 belongs to that interval as well. The final live packet minus
+its cut controller has the same property.
+
+The other newly selected rows are images of already selected source rows.
+Every retained copied mark is all-high by section 2. If r is such a row,
+the inductive selection includes old y+1, and y+1<=r<e. Hence its copied
+physical successor is actually present and selected:
+  f(y+1)=f(y)+1.
+This proves (3.1) by induction on exactly N-1 forest copies. No adjacency
+is inferred merely from a reindexed core or a finite computation.
+
+4. Natural membership survives extraction and endpoint repair
+--------------------------------------------------------------
+Consider ANY actual pattern with direct natural marks, and a selection
+satisfying (3.1), explicit-reference closure, and retaining the final
+row and final implicit cap. For a selected carrier r with mark y:
+
+  (a) Factor row y and its PHYSICAL next point y+1 are both retained.
+      Therefore row y needs no implicit-endpoint repair. Its actual
+      owner J_y stays unchanged. Its natural cutoff theta_(y+1) is the
+      same actual ordinal before and after reindexing.
+
+  (b) The carrier r may skip physical rows on its right. Write its old
+      implicit cap c=theta_(r+1), and its next selected cap c'>=c.
+      If c'>c, choose the established actual endpoint transporter G
+      with crit(G)=c and G(c)=c', and set J'_r=G(J_r).
+      This is the usual ordinary endpoint repair: named explicit edges
+      and the critical point remain correct, and owners stay in Iter(j).
+
+      Independently of that OPEN calculation, application gives the
+      MEMBERSHIP equality J'_r equiv_c J_r. Since y<r,
+        Delta=theta_(y+1)<=theta_r<c,
+      downward weakening and transitivity with the old direct certificate
+      yield
+        J'_r equiv_Delta J_r equiv_Delta J_y.       (4.1)
+      If c'=c there is no change and the assertion is immediate.
+
+  (c) A row serving as any selected mark's factor cannot simultaneously
+      need a repair, by (a). Thus all factor owners used in (4.1) remain
+      unchanged even when carriers are repaired independently. There is
+      no circular simultaneous-owner matching requirement.
+
+This proves the precise natural membership extraction lemma needed here.
+It does NOT prove arbitrary OPEN extraction preserves natural Delta.
+Without (3.1), raising a factor's next point could raise the required
+cutoff and the above argument would fail. The successor-closure hypothesis
+is the essential newly checked feature of these two specific forests.
+
+[固定输入的历史段落在本阅读版省略；自然输入及完整推导见本目录三篇主文。]
+
+Upgrade the FIRST construction as follows: its pre-scan forest is
+unmarked; its native-only scan creates genuine direct membership marks
+by section 1; its family-complete extraction obeys section 3; its
+ordinary endpoint repairs preserve natural membership by section 4.
+This gives an actual NATURAL certificate for original R[K], not merely
+the OPEN certificate used in the earlier weaker proof.
+
+For the SECOND construction, duplicate the complete natural-marked
+packet with all successors and owner witnesses. Section 2 proves exact
+natural transport through every prescribed raw short copy, retaining
+exactly the original legacy marks. The all-N quiet-copy theorem for
+R[K] says that its deferred original scan is the identity: there are
+no native records and hence no effective marked event. Its selected
+raw syntax is exactly the original full-copy output R[K][N]. Section 3
+gives factor-successor closure, and section 4 performs all endpoint
+repairs while retaining the stronger natural membership certificate.
+
+[固定输入的历史段落在本阅读版省略；自然输入及完整推导见本目录三篇主文。]
+
+This closes the initialization's OPEN-versus-membership gap, subject to
+the already audited actual resource and ordinary forest/native lemmas.
+To derive total future paper-guard short-M/cut count <2^q(5), separately
+invoke and audit the complete ordinary marked-BLP transition theorem and
+its finite-table potential at this initialized cap. This note does not
+silently obtain that numerical theorem from well-foundedness alone.
+
+6. Bounded diagnostic only
+--------------------------
+An untouched-original-Python check of K,N=2..7 inspected the traces of
+every retained mark of R[K][N]. Maximum output:133 rows. All nonempty
+traces had length2, i.e. one nonterminal factor. The process completed
+in under one second and exited. This suggested section 2 but is not its
+proof. No large-index descent, Laver table, or persistent process was run.

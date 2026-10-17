@@ -1,0 +1,275 @@
+> 整理阅读版 / Collected reading edition. 数学结论以本目录三篇主文为准。
+> 原有局部证明、适用条件和撤回提醒保留；旧进度文字仅作历史记录。
+> 固定输入的历史段落如有省略，逐段位置记录于 SOURCE_MANIFEST.json；
+> 主文已用原证明产生的自然参数补上相应数值推导。未新增 Lean 认证。
+
+2026-10-15. Actual E-successor windows on a balanced BMS ribbon.
+
+STATUS: Sections 1--4 are proved local algebra/semantic statements. The
+common-cutoff condition in section 2 is an explicit input hypothesis,
+satisfied by the previously constructed front-insertion fans. Section 5
+gives a conservative weak raw-BLS quantitative extension. Section 6
+states exactly why this does NOT yet imply the original IBLP030 Hardy
+target or a BMS-indexed relative FGH. No large trajectory was evaluated.
+
+References (relative to the workspace root):
+  output/iblp-laver-bms-20261013/lined-front-insertion.zh-CN.md
+  output/iblp-laver-bms-20261013/short-terminal-initialization.zh-CN.md
+  output/iblp-laver-bms-20261013/balanced-ribbon-bridge.zh-CN.md
+  output/iblp-laver-bms-20261013/marked-BLP-quantitative-transfer.zh-CN.md
+  output/iblp-030-laver-20261014/parent-packet-quantitative-transfer.zh-CN.md
+  scratch/iblp030-8h-20261015/lift-C-initialization-corrected.txt
+
+1. A three-edge E-successor interface
+-------------------------------------
+All objects belong to the same Iter(j). Use the audited old background
+
+  K=j11,
+  K(kappa0)=kappa2, K(kappa1)=kappa3, K(kappa2)=mu=theta4,
+  kappa2<kappa3<mu<theta5<a=theta6<b=tau<c=theta7<kappa4.
+
+If Q has critical point kappa3, Q(kappa3)=x and Q(mu)=y, then
+
+  S=Q(K):
+  crit(S)=kappa0, S(kappa0)=kappa2,
+  S(kappa1)=x, S(kappa2)=y.                         (1)
+
+Thus S realizes a compressed E-successor row (0,1,2,n):2,
+whose old cap is x=theta_n and new cap is y=theta_(n+1),
+when the three global base points are kappa0,kappa1,kappa2.
+This requires Q's two values at FIXED arguments kappa3 and mu,
+not the stronger, generally unsuitable condition Q(x)<=y.
+
+If an application environment A has critical point >mu, it fixes all
+five low arguments in (1). Transporting the whole row gives A(S) with
+the same first target kappa2 and last targets A(x),A(y). The window
+owner becomes A(Q). We retain A(S) as the actual row owner, rather than
+silently replace it by a globally equal embedding A(Q)(K). The latter
+has the same three displayed edges but need not be the same embedding.
+
+2. Replacing one fan port, with a strict cutoff justification
+------------------------------------------------------------
+Take a closed fan of height h>=2 with
+
+  U0=kappa0, U1=kappa1, U0<...<Uh<V0<...<V_(h+1)<C,
+  crit(K_i)=U0, K_i(U_t)=V_t (t<=i), K_i(V0)=V_(i+1),
+  crit(L)=V0, L(V0)=V_(h+1), L(V_(h+1))=C.
+
+Require additionally C<b and a COMMON membership cutoff epsilon>V1:
+
+  K_i equiv_epsilon K_h, 1<=i<=h.                  (2)
+
+This is stronger than bare pointwise fan compatibility. It is the
+invariant retained by the existing front-insertion construction; in
+particular we are not asserting it for every arbitrary compatible fan.
+
+The old closure L3 and old generator f satisfy
+
+  crit(L3)=kappa3, L3(kappa3)=a, L3(a)=c,
+  f(kappa0)=kappa3, f(kappa1)=theta5, f(theta5)=a.
+
+Set T=L3(f), so T(kappa0)=a, T(kappa1)=b=L3(theta5),
+T(b)=c. Transport the entire closed fan by T. Put
+
+  beta0=L3(mu),
+  beta1=T(K_h)(beta0), beta2=T(L)(beta1).
+
+Since kappa3<mu<theta5,
+
+  a<beta0<b=T(U1).
+
+In the three bands T(U), T(V), T(L(V)), replace ONLY the index-1
+ports by beta0,beta1,beta2 respectively. All other ports and all band
+endpoints remain unchanged.
+
+To check every K_i edge at the replaced source port, first use strict
+monotonicity, not a cutoff guess:
+
+  T(V0)=T(K_i)(a)<T(K_i)(beta0)<T(K_i)(b)=T(V1).
+
+Equation (2) transports to cutoff T(epsilon)>T(V1). Both displayed
+images are STRICTLY below this cutoff, so membership equivalence
+licenses the equality T(K_i)(beta0)=T(K_h)(beta0)=beta1.
+Thus all first-band positive-port edges remain correct. Their second
+critical images T(V_(i+1)) are unchanged. Applying T(L) gives the same
+check for the third band, whose parent is still the FIRST band; the
+three-column parent matrix is (0^h)(1^h)(1^h), not (0^h)(1^h)(2^h).
+
+Ordering is preserved because
+
+  T(V0)<beta1<T(V1),
+  T(V_(h+1))<beta2<T(L(V1)).
+
+The total cap is T(C)<T(b)=c<kappa4. No new unnamed ghost point has
+been inserted between adjacent row addresses: these are REPLACEMENTS
+of existing ports, so there is no missing intermediate-row owner.
+
+3. Common-root windows for all three initialized bands
+------------------------------------------------------
+Set
+
+  Q0=L3, Q1=T(K_h)(Q0), Q2=T(L)(Q1).
+
+The copying owners have critical points at least a>mu and hence fix
+kappa3 and mu. Application identities give
+
+  Q_j(kappa3)=the left endpoint of band j,
+  Q_j(mu)=beta_j=its index-1 port,
+  crit(Q_j)=kappa3.                                (3)
+
+Use Q_j(K) initially as the owner of the band's index-0 anchor row.
+By (1) this is a genuine GLOBAL E-successor row. For the remaining
+zero-coordinate ports keep the usual unowned cut placeholders; all
+positive ports have their usual actual fan owners.
+
+Use an ACTUAL initial prefix ending at a before the first band. For
+example the independently audited C certificate has cap a=theta6,
+base points kappa0,kappa1,kappa2, no marks, and five actual rows.
+The two fixed initial BLS rows alone cannot have their implicit cap
+reassigned to a: that would destroy their required point-image edges.
+
+Thus the initialization supplies a genuine weak ribbon, with an actual
+prefix and actual E-successor anchors, below c<kappa4. Its available
+height is whatever concrete finite h the input fan construction supplied;
+there is no assertion of all finite heights under one fixed cap.
+
+4. Fixed BMS [1] preservation, including the partial-band seam
+-------------------------------------------------------------
+For any current band j, retain both its Q_j decoration and the actual
+three-edge anchor owner S_j. The invariant is (3), with beta_j now
+meaning the current index-1 port. Every band left endpoint is >=a>mu.
+
+For a nonzero last BMS column with active port k>=1 and parent c0,
+the controller A has critical point at the parent-band left endpoint,
+so it fixes kappa0,kappa1,kappa2,kappa3,mu. As in the balanced-ribbon
+proof, the first new band is pointwise the A-image of the parent band:
+ports 0,...,k are retained old target ports, and the remaining ports
+are newly inserted images. In particular k>=1 guarantees that its
+index-1 port is the A-image beta_c0 even at the splice.
+
+Replace the old last-band decoration by A(Q_c0), and transport its
+anchor owner as A(S_c0). The relations (1) and (3) hold at the new
+left endpoint and index-1 port. All later copied bands use A(Q_j),
+A(S_j). Earlier complete bands are untouched. This includes the
+one-band bad-part case: its new right endpoint is the retained current
+temporary cap, exactly as in the original balanced-ribbon proof.
+
+The change of anchor core from a dummy step-1 row to (0,1,2,n):2 does
+not activate native completion. Its p=1,e=2, and B(2)=1. A positive
+port still has e at its band anchor and p at a positive parent port;
+now B(e)=2<=p instead of B(e)=0<=p. Consequently its native scan is
+still empty. Initial marks are empty and raw copying creates no marks.
+
+Removing an all-zero last BMS column cuts its unowned high ports and
+then exposes its actual E-successor anchor. In the quantitative
+interpretation this last anchor is allowed to invoke the E-successor
+rule, not merely discard its point. The resulting interpretation is
+described in section 5; the literal BMS fixed step remains a whole-band
+deletion if only the fixed trajectory is being tracked.
+
+5. A weak raw-BLS quantitative extension
+---------------------------------------
+To avoid assuming unowned zero ports are ordinary BLS rows, use the
+following explicit auxiliary calculus. A row is tagged either real or
+ghost. The first two fixed rows are real. A real row has the usual
+ordinary point-image owner; a ghost row has only an ordered critical
+point and syntactic data. All marks are absent. Operations are:
+
+  - ghost terminal: cut immediately;
+  - real noncopyable terminal: cut;
+  - real E-successor: the usual 2^m iteration of the cut-prefix function;
+  - real E-limit: the usual finite E(m);
+  - other real terminal: one legal raw short copy, or cut on failure.
+
+Raw copies transport real owners by application and retain ghost tags.
+Auxiliary E copies are total address maps, so the same rule applies.
+There is NO native or mark scan in this auxiliary calculus. It is not
+being identified with original IBLP or with PP away from the certified
+inactive-scan ribbon states.
+
+The usual linedness conclusion extends to this class: from an actual
+finite m-lined base and cap Theta, its auxiliary numerical recursion
+is defined and produces (theta0,theta1,Theta) linedness of that value.
+Here is the necessary adaptation of the old finite-potential proof.
+
+First make the endpoint-extension ingredient explicit: all ghost
+points, as well as real ones, are critical points of the SAME Iter(j).
+Dougherty, Critical points in an algebra of elementary embeddings II,
+section 3 opening (printed p.10), https://arxiv.org/pdf/math/9503204,
+recalls Laver's theorem that g_s=j_(2^s) has critical sequence beginning
+gamma_s -> gamma_(s+1). Consequently for p<q the finite composition
+
+  G_(p,q)=g_(q-1) o ... o g_p
+
+has critical point gamma_p and sends gamma_p to gamma_q. Apply this
+G_(p,q) to the old linedness witnesses when extending a cap gamma_p
+to gamma_q. It fixes both base points and all intermediate points,
+and changes only the last endpoint. Thus exact-cap linedness can be
+extended across ghosts WITHOUT postulating a nonexistent row owner.
+Qi's ordinary-row Lemma 2.11 alone is not a justification for ghosts.
+
+Normalize a call only by cutting its trailing ghosts. This is at most
+the finite number of current rows, and strictly lowers cap unless no
+ghost was present. For a normalized real last owner with cap gamma_r,
+use the old potential 2^(r+1)-b, with 1<=b<2^r its finite-table class.
+A legal raw M whose last source is real has the same last-owner
+application decrease as before. If its last source is ghost, normalize
+the output immediately; at least one cut now strictly lowers cap, so
+no nonexistent owner representative is needed. The same alternative
+applies to the last source of an E output.
+
+The two-block E-successor extraction transports tags along with rows.
+Copied row 2 is still real and supplies the new first row. Every other
+real row and every ghost row is recovered by the same inverse address
+map as in the ordinary theorem. The new block has the old block's
+output linedness as its new parameter and the full system's cap.
+If its terminal is real its last owner is exactly the full system's;
+if ghost, the forced normalization lowers cap. Thus every recursive
+call needed by the two-block induction remains below the parent
+potential. More precisely, extraction preserves the identical suffix
+of ghost tags in the new block. Normalizing the full doubled pattern
+and normalizing its extracted new block therefore ends at the SAME
+copied real row, with the SAME cap and last owner. Copied row 2 is real,
+so this suffix cannot run out of the new block. This is the needed
+equality of normalized potentials, not just an unproved inequality.
+At a normalized-away ghost cap use the explicit G_(p,q) construction
+above to recover the original exact endpoint. This does not add a new
+owner to the syntax. These observations give the old strong induction
+on normalized potentials, simultaneously proving definedness.
+
+This extension is useful precisely because E gives SAME-CAP linedness
+parameter substitution, whereas ordinary band deletion only gives a
+smaller cap. The ribbon of sections 2--4 supplies its real-anchor input.
+
+6. What is still missing
+-------------------------
+On the initial ribbon's literal fixed-BMS path, all anchors are E-
+successors, and positive ports are transient. Ignoring the inner E
+realizations, the numerical recurrence therefore has only successor
+function upgrades and fixed one-copy limit steps. It still amounts
+to a finite (possibly huge) number of upgrades over the base prefix.
+It is NOT automatically a relative BMS-indexed FGH.
+
+The absent module must make the CURRENT linedness parameter participate
+in the BMS limit choice, or build an equivalent local E-limit/packet
+controller. Merely inserting a previously compiled fixed BMS forest
+changes the finite number of upgrades, not this logical distinction.
+The point of the present lemma is to provide genuine globally usable
+E-successor anchors and a same-cap output parameter, without arbitrary
+zero-row owners or an invalid global-base reassignment. Original
+IBLP030 full-copy/mark compatibility remains a further separate task.
+
+7. Independent audit record
+---------------------------
+The root agent independently checked the section-2 strict-cutoff reading
+and the distinction between A(S) and A(Q)(K). It identified the missing
+justification for extending linedness over a ghost cap. Section 5 now
+supplies the global successive-critical-point construction; the root
+independently checked the quoted Dougherty II p.10 source.
+
+The original_iblp_target_audit agent independently checked section 2,
+the shared trailing-ghost normalization in the double-block extraction,
+and the G_(p,q) endpoint extension. No local defect was found in these
+steps. This audit was NOT a fresh reproof of every previously used
+ordinary E/M semantic and extraction lemma, and is not being presented
+as an independent audit of the whole auxiliary calculus or main target.

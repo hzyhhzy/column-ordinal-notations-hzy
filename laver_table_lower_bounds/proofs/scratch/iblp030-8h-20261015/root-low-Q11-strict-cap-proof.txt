@@ -1,0 +1,111 @@
+> 整理阅读版 / Collected reading edition. 数学结论以本目录三篇主文为准。
+> 原有局部证明、适用条件和撤回提醒保留；旧进度文字仅作历史记录。
+> 固定输入的历史段落如有省略，逐段位置记录于 SOURCE_MANIFEST.json；
+> 主文已用原证明产生的自然参数补上相应数值推导。未新增 Lean 认证。
+
+A strict-sup cap for the low open-fan type-two staircase
+======================================================
+2026-10-15. New local theorem; NOT the full original-R Hardy target.
+The first independent algebra audit by the Hardy sibling passed.
+
+Notation is exactly that of the existing C[4] and low open-fan papers:
+  K=j11, b=K(j), c=K(b), d=c(K), A=c(d),
+  mu=K(kappa2), a=K(mu), theta8=j9(kappa3),
+  s=j(<kappa1), v=K(<kappa2)=j10(s).
+Application is F(G); superscript 2 or repeated point application below
+means ORDINARY COMPOSITION. In particular c^2(x)=c(c(x)).
+The cut v is not asserted to be a generated critical point.
+
+THEOREM.
+                A(v) < K^2(v) < theta8 < kappa4.          (1)
+
+Proof.
+The published approximation K equivalent to j o j below mu gives
+j^2(t)=K(t) for every t<kappa2: K(t)<K(kappa2)=mu.
+Consequently their strict suprema at kappa2 agree:
+                (j o j)(<kappa2)=K(<kappa2)=v.             (2)
+This uses values strictly below the cutoff, not an equality at mu.
+
+There is an EXACT environment identity
+                c=(K o K)(j),
+because ordinary composition acts on the embedding algebra by successive
+application. Hence, by distribution over ordinary composition,
+                c o c=(K o K)(j o j).
+Apply the strict-sup transport identity to (2). Since
+                (K o K)(kappa2)=K(mu)=a,
+we get the exact cut value
+                (c o c)(<a)=(K o K)(v)=K^2(v).            (3)
+
+Regularity/discontinuity gives v<mu. Thus K(v)<a. As a is a limit,
+strict increase gives c^2(K(v))<c^2(<a). Also c fixes v because
+crit(c)=mu. Application compatibility at this fixed input gives
+                d(v)=c(K)(v)=c(K(v)),
+                A(v)=c(d)(v)=c(d(v))=c^2(K(v)).           (4)
+Equations (3)--(4) yield the FIRST strict inequality in (1).
+
+For the second, use K=j10(j) and j10=j9(j), always at genuine
+j10- or j9-image arguments:
+  K^2(v)=K^2(j10(s))=j10(j^2(s))=j10(K(s)).
+Here j^2(s)=K(s) is justified since s<kappa2 and K(s)<mu.
+The standard strict-sup identities also give
+  K(s)<K(<kappa2)=j10(s)<j10(<kappa2)=j9(s).
+Therefore
+  K^2(v)=j10(K(s))<j10(j9(s))=j9(j(s))<j9(kappa3)=theta8.
+The last comparison uses s<kappa2, hence j(s)<kappa3. The published
+point inequalities give theta8<kappa4. This proves (1).
+
+Low-staircase consequence.
+Let Q11=A(K). Its helper is a, its first outer entry is c_exit=theta7,
+and every low open-fan initialized cap is strictly below Q11(<a).
+Strict-sup transport gives
+                Q11(<a)=A(K(<kappa2))=A(v).
+Consequently ALL such finite initial caps lie below theta8<kappa4.
+The helper a fixes the lower scalar domain kappa3 and moves the previous
+type-one admission a; the first outer entry c_exit accommodates the
+preceding output. Thus the previously proved low-staircase type-two
+interface now has its missing cap guard.
+
+Scope.
+The initial argument established a cheaper actual type-two staircase
+than the older E(V0) construction. The stronger continuation below DOES
+also prove A(mu)<kappa4. Neither result produces all finite type levels,
+the full first-root diagonal C, or original R=I030. No equality of A(<v)
+and A(v), or use of an open cutoff at its endpoint, occurs.
+
+Primary inputs are the approximation and strict-sup rules visually
+checked in Dougherty, Critical Points in an Algebra of Elementary
+Embeddings, printed pp.22--23: https://arxiv.org/pdf/math/9205202 .
+The rest is the displayed application/composition algebra.
+
+Stronger continuation (independently audited by both siblings).
+---------------------------------------------------------------
+In fact
+                 A(<a)<K^2(v)<theta8.                    (5)
+This proves A(x)<theta8 for EVERY x<a, including the actual generated
+critical points A(mu) and A(theta5), formerly unknown.
+
+Indeed A=(c o c)(K) EXACTLY, since d=c(K). Also c^2(mu)=a.
+Strict-sup transport therefore gives
+                 A(<a)=c^2(K(<mu)).
+The point mu is regular and K(mu)=a>mu, so the standard discontinuity
+lemma gives K(<mu)<a. Consequently
+                 A(<a)<c^2(<a)=K^2(v)<theta8.
+This does not contradict A(a)>kappa4: that is a value at a large jump,
+whereas (5) only concerns strictly smaller inputs.
+
+Consequences for initialized low-fan caps:
+  Q11 o V0: helper c_exit, entry A(mu), closed cap A(theta5)<theta8.
+  Q11 o Q11: helper A(mu), entry A(theta5), strict initialized cap
+      < A((K o K)(<kappa2)) < theta8.
+The latter uses (K o K)(<kappa2)<(K o K)(kappa2)=a; regularity applies
+again. The coarse cap A(a)>kappa4 is NOT used.
+
+A useful actual critical upper endpoint for the latter cut is
+                 rho0=j10(gamma3)<a,
+because, using K=j10(j) and kappa2=j10(kappa1),
+  (K o K)(<kappa2)=j10((j o j)(<kappa1))<j10(gamma3)=rho0.
+Here (j o j)(<kappa1)<gamma3 is exactly the published strict-sup
+inequality, not a point-value claim j(j(s))<gamma3.
+Also j10(kappa3)=a: apply K=j10(j) at j10(kappa2)=mu to obtain
+K(mu)=j10(kappa3). Hence A(rho0)<theta8 is a generated critical point
+available as a closed endpoint rather than the coarser theta8.

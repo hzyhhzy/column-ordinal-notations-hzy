@@ -1,0 +1,98 @@
+> 整理阅读版 / Collected reading edition. 数学结论以本目录三篇主文为准。
+> 原有局部证明、适用条件和撤回提醒保留；旧进度文字仅作历史记录。
+> 固定输入的历史段落如有省略，逐段位置记录于 SOURCE_MANIFEST.json；
+> 主文已用原证明产生的自然参数补上相应数值推导。未新增 Lean 认证。
+
+2026-10-15. Four genuine low-fan type levels below kappa4.
+
+STATUS: actual/domain construction conditional only on the already audited
+natural E/full-band compiler, low-open-fan lemma, and listed strict-sup
+identities. The new cap algebra was independently checked by parent and
+the lifting/Hardy agents. This is a finite staircase, not arbitrary type
+height and not the full original-R Hardy theorem.
+
+Notation is as in lift-low-fan-staircase.txt. To avoid an ambiguity,
+cA=K(K(j)) is an ACTOR; c=K(theta5) is the POINT theta7. Set
+  d=cA(K), A=cA(d), V0=cA(d(j)), Q=A(K),
+  s=j(<k1), v=K(<k2)=j10(s), a=K(mu), mu=K(k2).
+
+1. A stronger strict-cap lemma
+-----------------------------
+Exactly A=(cA o cA)(K), and (cA o cA)(mu)=a. Hence
+  A(<a)=(cA o cA)(K(<mu)).
+The point mu is regular, and K(mu)=a>mu. The supremum K(<mu) is the
+supremum of mu ordinals below the regular cardinal a, so K(<mu)<a.
+Strict monotonicity and the fact that a is a limit ordinal now imply
+  A(<a)<(cA o cA)(<a)=(K o K)(v)<theta8<kappa4.       (1)
+The last equality and bound were proved in section 4 of the preceding
+low-fan-staircase note. In particular both A(mu) and A(theta5) are
+actual generated critical points strictly below theta8. No claim is
+made about A(a): in fact A(a)>kappa4, consistent with (1).
+
+2. Exact environments and domain stack
+--------------------------------------
+Each row below transports the SAME low open-fan geometry. The underlying
+scalar geometry has numerical third point k2, argument admission k3,
+and cap <=a (strict after >=2 insertions). Each displayed environment
+fixes k0,k1. We keep the actual numerical base k0,k1,k2 fixed and use
+the mixed-base compiler; this is not a false claim that the environment
+also fixes k2.
+
+ level   environment       helper      first left      chosen output
+   0     id                k2          k3              a
+   1     V0                k3          a               c
+   2     Q                 a           c               A(mu)
+   3     Q o V0            c           A(mu)           A(theta5)
+   4     Q o Q             A(mu)       A(theta5)       theta8
+
+Level 0 is S(u)(m)=fast K_(B_m)^u(m). For levels >=1, preheating by
+f0 from the numerical m-line gives g(m)=m*2^m-linedness at k3; extend
+its endpoint to the displayed helper and drive that environment's
+low-open-fan construction. Thus the higher diagonals use B_(g(m)).
+This uses no inverse image of the supplied line. Since g(m)>=2, every
+actual payload cap is strictly below its environment's image of a.
+
+At each level, its helper is EXACTLY the previous level's new argument
+admission, and its first left is the previous level's chosen output.
+The outer zero-copy critical point is this helper. It fixes all lower
+admission coordinates, and moves the current admission to the preceding
+whole-result endpoint. Therefore the next oracle invocation is in its
+actual domain. These are the same explicit seam conditions checked for
+levels 1 and 2 in the preceding note, now repeated at the actual listed
+coordinates rather than assumed for unrelated Qi P_i environments.
+
+The nested fixed lower domain coordinates, in order, are
+  k3 < a < c < A(mu) < A(theta5) < theta8.
+The order c<A(mu) follows from A(k3)=c and k3<mu. Their strict order
+is therefore actual monotonicity, not a numerical hierarchy convention.
+
+3. Cap checks for the two newly added rows
+-----------------------------------------
+For level 3, exact application compatibility gives
+  Q(V0(k2))=Q(k3)=c,
+  Q(V0(k3))=Q(a)=A(mu),
+  Q(V0(a))=Q(c)=A(theta5).
+The last point is <theta8 by (1). Its ordinary closed cap is already
+safe, so it may be used as a real endpoint for the next row.
+
+For level 4, Q(k2)=a and Q(k3)=c imply
+  Q(Q(k2))=A(mu), Q(Q(k3))=A(theta5).
+The coarse last value Q(Q(a))=A(a) exceeds kappa4 and MUST NOT be used.
+Instead, with a=A(k2), composition compatibility gives
+  (Q o Q)(<a)=A((K o K)(<k2)).
+Since (K o K)(<k2)<=K(K(<k2))=K(v)<a, equation (1) gives
+  (Q o Q)(<a)<=A(K(v))<theta8.
+Every concrete payload cap comes from a source cap strictly below a,
+so it lies strictly below theta8. Endpoint extension to the actual
+critical point theta8 provides the chosen closed natural output.
+
+4. What is still missing
+-----------------------
+This yields four higher-type BMS diagonals above the low scalar S,
+subject to their precise tail-local numerical comparisons. It does not
+yield a fifth row by blindly composing Q again: the needed first-left
+and strict-cap bounds have not been established. In particular the fact
+that some strict sup is below theta8 does not give a Q-transportable
+closed cap at a convenient smaller coordinate.
+The original target R needs substantially more than any single finite
+staircase; no assertion about R or all finite type heights follows here.

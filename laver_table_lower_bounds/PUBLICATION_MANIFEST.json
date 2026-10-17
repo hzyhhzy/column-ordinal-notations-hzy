@@ -1,0 +1,382 @@
+{
+  "schema_version": 1,
+  "collection": "laver-table-lower-bounds",
+  "source_manifest_sha256_lf": "37156de96d7d8b1d4f1f2fd6d3fad7fa55b7165e1fb6486d539b74e6e90cdbe4",
+  "monolingual_markdown": [
+    {
+      "path": "01-blp-tower.zh-CN.md",
+      "sha256_lf": "e5d7d75493cb09fc72b90996417910ae8ece91841d2bf68920327e1a97978f50",
+      "kind": "research-publication-or-guide"
+    },
+    {
+      "path": "02-bms-feedback.zh-CN.md",
+      "sha256_lf": "8a9f15f5e0f5a4912fd606609400f296a12eec62ed43398eeaa1437d55dd9cef",
+      "kind": "research-publication-or-guide"
+    },
+    {
+      "path": "03-iblp-modify.zh-CN.md",
+      "sha256_lf": "94d72c55d431cbc59bced6683109089171bc9f805bc3a358202c59e721778401",
+      "kind": "research-publication-or-guide"
+    },
+    {
+      "path": "BIBLIOGRAPHY.md",
+      "sha256_lf": "8ab6a8c0d20d8b78676be1da30ba8b6d64f3c2c7ffa133d75c0213038d423612",
+      "kind": "research-publication-or-guide"
+    },
+    {
+      "path": "common/bms-fixed-index.zh-CN.md",
+      "sha256_lf": "92d3988a283f3f4dabf0455099c528a95deb1ddbd739077ad40e15d11357da69",
+      "kind": "research-publication-or-guide"
+    },
+    {
+      "path": "common/conventions.zh-CN.md",
+      "sha256_lf": "f0139146798eb0fc618c19c5735d417c2241cebd46fefe841821439da4acda31",
+      "kind": "research-publication-or-guide"
+    },
+    {
+      "path": "common/natural-marks.zh-CN.md",
+      "sha256_lf": "3be63f834821b5d6055000f05c94f01e8305f211ac02c9cd3f00794dfd4ccc2f",
+      "kind": "research-publication-or-guide"
+    },
+    {
+      "path": "PROOF_DEPENDENCIES.zh-CN.md",
+      "sha256_lf": "a21f368c02f4d0fa1926a22f14674be807a8dfe87dc674d73872426d312591e8",
+      "kind": "research-publication-or-guide"
+    },
+    {
+      "path": "proofs/natural-mark-lemmas/copy_scan_mark_repair.md",
+      "sha256_lf": "602d5cd8fe06949d1ee140f9a618f8572963abd9acc74bc01879fa0e67cbbd12",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/natural-mark-lemmas/copy_trace_word_identification.md",
+      "sha256_lf": "5a537464495dc3f132a32ab42ae5b54de12b2729d89a053ea35519221d418d8c",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/natural-mark-lemmas/direct_mark_successor_alignment.md",
+      "sha256_lf": "d8e1eeba768280a963a2959537dfdbf5fbabea84a57e61e5574cd26d2ad3ac30",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/natural-mark-lemmas/full_marked_blp_natural_cutoff_wellorder.md",
+      "sha256_lf": "5121a3add9fae71fc8381dcff1013ff587122748f92e4d18c3a33374a78d47e1",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/natural-mark-lemmas/marked_blp_order_domain.md",
+      "sha256_lf": "49e52f699d6ab26046f24cc06e7d977a384408880665cba3ab5a5cd5c6bbd3be",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/natural-mark-lemmas/marked_blp_proof.md",
+      "sha256_lf": "8033c5eceff644edb8e343e740e669808d78b6ec602d3ad2029a7dd8a93c297e",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/natural-mark-lemmas/marked_completion_interval_lemma.md",
+      "sha256_lf": "5dd152ce0ccf65717a85886482785783eb8e55483a5778f1bb5096db305dd793",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/natural-mark-lemmas/marked_E_transfer_work.md",
+      "sha256_lf": "90c3afe58922dd0b6384e4ba34187bf7866201418ff5d9d27a3fc5105fa2d1dd",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/natural-mark-lemmas/multiple_mark_completion_commutation.md",
+      "sha256_lf": "ff8c0f6bb964ffe00916b756b5896629ff24ad084e16f08e701c725d0884e5cc",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/natural-mark-lemmas/natural_trace_cutoff_semantics.md",
+      "sha256_lf": "da954fd07d70e6128fc28bef9d08a609d3ca280a03e7365a5fa67d4819b74a4f",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/natural-mark-lemmas/sat_endpoint_packet_theorem.md",
+      "sha256_lf": "70e9fdcb0bdd8ab515a0d137bba6dc7d23ff60da80783cd48da269beb0494724",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/natural-mark-lemmas/unqualified_successor_mark_scan.md",
+      "sha256_lf": "a0fd700be189cdb0dbda565f9abc810f16451b577ca642a44a1f882cac53e7d9",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-01-equality-20260923/IBLP-01-BMS-upper-bound.zh-CN.md",
+      "sha256_lf": "047b2b5d9e72d7b1b12718c2c69c89fcff852d69c7f86ee1bcea40cb825c16bb",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-01-equality-20260923/IBLP-01-no-completion-proof.zh-CN.md",
+      "sha256_lf": "8592329567d975fd23c4d5c129b17040b6e7c8c88167489d59ee59485dd561df",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-01-equality-20260923/IBLP-01-unconditional-BMS-lower-bound.zh-CN.md",
+      "sha256_lf": "34ecfcd56318695661b0161dc5ecda4f19abd974bc63f0e0a4b7498b461a9b5f",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-030-laver-20261014/bms-height-feedback.zh-CN.md",
+      "sha256_lf": "ffd365d510b5246828c8adddd83537fa0b8d31d2f7529453870d8f19cd92b18d",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-030-laver-20261014/FGH-standalone-dependency-audit.zh-CN.md",
+      "sha256_lf": "71f828758102077dbfdea70c0479a8c81d901f273d678376f1549dbf4e1b7236",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-030-laver-20261014/full-gap-native-local-closure.zh-CN.md",
+      "sha256_lf": "06673082ec09e093a268227da3eb9733e4be9e92ffeb511a673dc2a39af14b0d",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-030-laver-20261014/full-gap-short-tail-definition.zh-CN.md",
+      "sha256_lf": "b1c3f9ef3a9bc6a9594dc89d179db55edc74a7115516227395b020c8f646025b",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-030-laver-20261014/full-gap-unrestricted-prefix-packet.zh-CN.md",
+      "sha256_lf": "76f50c3246c9d7f43667c2b2c1d708ceefa8d07d678f043e5b6f3c3bb315fd8d",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-030-laver-20261014/lined-feedback-corridor.zh-CN.md",
+      "sha256_lf": "f7ece18685f51b464bf285a6d60980bf9cfaac37bab8701dba9922154b5a30e8",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-030-laver-20261014/nested-bms-FGH-bound.zh-CN.md",
+      "sha256_lf": "55f1345d7ffa32a8ebc55d9676500da6490a79a4ed9c5871a8278621eda3e20f",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-030-laver-20261014/ordinary-l3-native-mark-seed.zh-CN.md",
+      "sha256_lf": "1b8b9e2e87e299eacd6798e99193a0680e91fbc47d0a958710d13e29b5c9a59d",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-030-laver-20261014/parent-packet-partial-copy-audit.zh-CN.md",
+      "sha256_lf": "4c464893ad84aeb29568312198d94b054402fda736e2fbf1245ae6305182ddc7",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-030-laver-20261014/parent-packet-propagation-selector.zh-CN.md",
+      "sha256_lf": "f800af485dc51d95239db19497e97a4efc6146b3a3431bb44f31ac52cba97d27",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-030-laver-20261014/parent-packet-quantitative-transfer.zh-CN.md",
+      "sha256_lf": "72a51ec78f3289f56a3278004b03250f601aecb5b3723050eb4470e3d8ff3eb8",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-030-laver-20261014/parent-packet-short-tail-definition.zh-CN.md",
+      "sha256_lf": "a9506d3b35532bdadf1ee76f99c0d47496b9a04a3fa8689935a90f09ee25003f",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-030-laver-20261014/promoted-bms-feedback.zh-CN.md",
+      "sha256_lf": "d0cfa71db3bdb1610ef701dedc3e6e19e8fd894b2f768e987fcf86efb76af8fa",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-030-laver-20261014/q5-BMS-FGH-two-part-summary.zh-CN.md",
+      "sha256_lf": "8e271336aa575f8dd329f32e9d30260ccdbdf854d7e6c0e0a1198acf3ff4fe7b",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-030-laver-20261014/q5-BMS-successor-single-file-proof.zh-CN.md",
+      "sha256_lf": "1c39893492ba0257e712d91ee90ef3aedc173679208e4c957dd9f915269c5eb2",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-030-laver-20261014/root-lowered-bms-feedback.zh-CN.md",
+      "sha256_lf": "75892081b717a42b59c6e8927037fa812184a3b3fffe7675bf06b232fd2dc4d8",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-030-laver-20261014/same-owner-L3-sat-closure.zh-CN.md",
+      "sha256_lf": "ed7f7129ecfc7b415e9ec780fa6a841b53cde0062a5d8076b1eaf41491c09cc2",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-030-laver-20261014/short-tail-cofinality.zh-CN.md",
+      "sha256_lf": "f7a7970e89ebdd46077278a5a0d81980b4581db574ab66cdb6a88cc61d22610e",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-030-laver-20261014/small-period-endpoint-Sf.zh-CN.md",
+      "sha256_lf": "242db10cc47f49feab4f812bc8b9990eccf025f06837bdd27341e5ffcb716659",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-030-laver-20261014/small-period-native-mark-seed.zh-CN.md",
+      "sha256_lf": "e88ffbcbb74e3e90c8ab90181bb32003b9666a0fdf440d566f44107440cd9493",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-030-laver-20261014/small-period-recursive-corridor.zh-CN.md",
+      "sha256_lf": "1a9b76a1a94a80163d158156b5d37f90210e91a4317b49ab281bfeb9cbc6650a",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-bms-20260918/IBLP-01-BMS-lower-bound.zh-CN.md",
+      "sha256_lf": "1a684c82fc8d37fd6295cde92415bbbd43fd8b009fa24f3208b589b1cdd7f112",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-laver-bms-20261013/ancestor-cover-growth.zh-CN.md",
+      "sha256_lf": "02f2d1aa6468d3f9bb2f4a221631556c07544e82ab33c58f41ec3a8cf7a53602",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-laver-bms-20261013/balanced-ribbon-bridge.zh-CN.md",
+      "sha256_lf": "925d661d2d23c5dc9fa6bfa418ef6b8ede4b6107ce03336d7974e41fc574b06a",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-laver-bms-20261013/block-fan-insertion.zh-CN.md",
+      "sha256_lf": "555beb763937b08c962b84bab26096453601672761da23c0423ca1e311baa410",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-laver-bms-20261013/BMS-fixed-index-to-FGH-summary.zh-CN.md",
+      "sha256_lf": "21663e3dc20258f4546f34e1ab29965b26a2b01cf2929c688137cb03df8883cb",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-laver-bms-20261013/diagonal-forest-hardy-proof.zh-CN.md",
+      "sha256_lf": "c20b24f68057f36e2d54ac5fced10db76711e3bb9df6cd5564989f3f63e64119",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-laver-bms-20261013/diagonal-hardy-compiler.zh-CN.md",
+      "sha256_lf": "ed603a96fa0c76fbb4a0dc42efc8626a0c345ae69458fac2c95aee5d968a3c8a",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-laver-bms-20261013/direct-step-bridge.zh-CN.md",
+      "sha256_lf": "7fa5faa9931addb655671813f4983be688231dc7c7ce01874d7a98db0e354ebc",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-laver-bms-20261013/fixed-index-growth-interface.md",
+      "sha256_lf": "77b2eb2ff1ae62e86eb0b6127aceef090e39224c44405c1ebd99159a2050ee30",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-laver-bms-20261013/laver-period-32-BMS-bound.zh-CN.md",
+      "sha256_lf": "c106c00d77a4da781d72ead5ff3798a577a95154b72e374a15ec1d2c465be127",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-laver-bms-20261013/lined-front-insertion.zh-CN.md",
+      "sha256_lf": "46f81ac934b891baa3b4f35d2f21b49a33a5223a35515518c65859e04532b4a0",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-laver-bms-20261013/lining-prefix-cutoff.zh-CN.md",
+      "sha256_lf": "c00667caae458aae6492a474202ec65402aeebdb9aabb4efbbd086bf5f8d0892",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-laver-bms-20261013/marked-BLP-quantitative-transfer.zh-CN.md",
+      "sha256_lf": "f09cc0439150cbbb7ee3045e2a6e928ee54a3294f5496abce642c0dfd2f019bc",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-laver-bms-20261013/marked-prefix-rebase.zh-CN.md",
+      "sha256_lf": "89456a5afd73268f512b1d2f05842b7b316e10dd13335deee5b6d1414d1d8784",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-laver-bms-20261013/ribbon-initialization.zh-CN.md",
+      "sha256_lf": "c4421b3d3217b7505beba30485c6a800b66579ae46ea75f9b61f9162bdb06854",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-laver-bms-20261013/short-terminal-initialization.zh-CN.md",
+      "sha256_lf": "4a5782dc4872026ddfbd6dcd141751fa9ae0a1a0cf6841f1328d97b3c82dd372",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/iblp-laver-bms-20261013/source-lined-E.zh-CN.md",
+      "sha256_lf": "205bdc5bf7470a9a78e99631a8cf5d447d3471117e5d7cad14b5fc4c9002faba",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/new-notation-20260918/BMS-nonstandard-row-bound.zh-CN.md",
+      "sha256_lf": "2d2be65cff1bc09f50961b1a1c9d1ddaddc3564dc5f27e8041211bad33a1c95c",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/piblp-external-FGH-20261014/active-E-graft-functional-substitution.zh-CN.md",
+      "sha256_lf": "13703c225f40d8dbaa6f6ef92865249f333f9af09d6d5d28fde32dc11dc34652",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/piblp-external-FGH-20261014/P4-pure-E-collapse.zh-CN.md",
+      "sha256_lf": "83117cc1df5ad8f0d145f583f0b26216ed8f43b8dc9a4a0e94ef6110dab97282",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/piblp-q5-enhancement-20261014/audit-BMS-diagonal-input-monotonicity.zh-CN.md",
+      "sha256_lf": "a87bdb9aa28404f835bb3df3c252283a5e4847af3b3d8534b00c823d6cc3c50b",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/piblp-q5-enhancement-20261014/audit-piblp-strict-Cline.zh-CN.md",
+      "sha256_lf": "8e149f9a94f1ec891bfa3111e597b6fc9ea7b7e9cac6be953fea69e6b40d9341",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/piblp-q5-enhancement-20261014/audit-recursive-corridor-FGH.zh-CN.md",
+      "sha256_lf": "1c55399c16339b2927dc0f59551d59d0d47f55d934e50e51f1ea76b4dc31d0e3",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/piblp-q5-enhancement-20261014/baseline-piblp-Cline-prefix.md",
+      "sha256_lf": "07166e0cccf6e22e0d64b11f5d1fa760f01cfd9d6767720beed4793e57a98883",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/piblp-q5-enhancement-20261014/q5-piblp-enhanced-bound.zh-CN.md",
+      "sha256_lf": "85cb9a39646cddc588d86cd8581ce39ba2a1594cee1704cbcbfd025805c20564",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/piblp-q5-enhancement-20261014/quant-self-feedback.zh-CN.md",
+      "sha256_lf": "06fe30c204d5862253e37b3ecf03317d0291579027be304f874b47793203f8fb",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/q5-further-bound-20261014/active-port-stronger-initialization.zh-CN.md",
+      "sha256_lf": "abb8e33e95e88cd4f6ba808001ebd1bf7cdea5bbea42b38b3e70785f4e675728",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/q5-further-bound-20261014/dynamic-depth-Lambda-omega-successor.zh-CN.md",
+      "sha256_lf": "bbcb1557529650b35d8f4940084a10f0139ecc90ad13d017345ecc843d2aed69",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/output/q5-further-bound-20261014/P5-uniform-and-large-input.zh-CN.md",
+      "sha256_lf": "d92d4fe02cba6d0c047ef38516c1995266a1f0822a10dd9588c15335ee79be2a",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "proofs/README.md",
+      "sha256_lf": "8724720073b3eebc8d05a4a5592d8f65a4edad415c254ad7bc33b8ca37acce68",
+      "kind": "original-language-proof-reading-edition"
+    },
+    {
+      "path": "VALIDATION.md",
+      "sha256_lf": "446ada58aba0380ff7b4989bf1a5b39cad47e880463b8158166872e27ef9b8f2",
+      "kind": "research-publication-or-guide"
+    }
+  ]
+}

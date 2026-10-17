@@ -1,0 +1,103 @@
+> 整理阅读版 / Collected reading edition. 数学结论以本目录三篇主文为准。
+> 原有局部证明、适用条件和撤回提醒保留；旧进度文字仅作历史记录。
+> 固定输入的历史段落如有省略，逐段位置记录于 SOURCE_MANIFEST.json；
+> 主文已用原证明产生的自然参数补上相应数值推导。未新增 Lean 认证。
+
+Root independent audit of the new port and FGH results
+======================================================
+2026-10-16. Local paper audit; foundational inputs remain as cited.
+
+1. Two-family seam
+Read port-return-two-family-seam.txt and port-cover-two-family-seam.txt
+completely. Each of K(theta0),K(theta1),K(thetae) is evaluated at a
+genuine H-image fixed point, since H has critical point theta_b and
+0,1,e<b. The strict upper bound uses b+1<c and E1(theta2)<E1(thetab),
+not an invented equality between source cap and output cap. The seam
+matches base cap theta_c exactly and preserves factor successors in
+each of the two contiguous components. The appended source can have
+its own smaller cap; the common C* is only an outer bound. Accepted.
+
+2. Main and shadow inside a shortened source
+For h=j-3, the main outer bound D_h<theta_(a_(j-2)+1)<theta_(a_(j-1))
+is strict. The existing two-window lemma places the penultimate shadow
+strictly INSIDE the source's own cap. Applying K_j to the three line
+endpoints and all witnesses retains these inequalities. Accepted, but
+this transports Y unchanged and is not a regenerative compiler.
+
+3. Direct family clock
+Read port-compiler-family-clock.txt. W=A_h(J2) has the exact four-point
+chain theta0->theta1->theta_e->theta_b, because A_h fixes theta0,theta1
+and theta_e=A_h(theta2). The existing explicit prefix transporter raises
+the supplied third endpoint to theta_e, without changing Y. Applying W
+then the prefix-preserving line product proves Y->Y*2^Y at endpoint
+theta_b. The associated full index update is exactly N->N^N for N=2^Y.
+This finite family clock meets the no-unknown-M requirement. Its finite
+number of available families is not claimed sufficient for F_R.
+The stronger evaluator plug-in remains conditional on an actual low
+output line; f_star's unknown transient M branches are NOT concealed.
+
+4. New clean native shadow
+Read port-renewal-native-shadow.txt completely. Its weaker relining
+uses J=F(V), J(e)=F(p), J(v)=F(e), and p<crit(J)=e; this gives the line
+without requiring the older stronger identity V(p)=v.
+For the clean frame, C=E(A1), Q=C(E), and delta=crit(C)>theta4.
+The restriction C(J3)==J3 below delta transports through Q, and LD
+gives Q(C(J3))=C(E(J3))=E(A1(J3)). Its cutoff Q(delta)>Q(theta4)=C'
+is strictly ABOVE the new family cap, so both input and output of the
+needed row edges are covered. Consequently transporting the old source
+shadow by E gives the exact new z_t,F'(z_t) endpoints. Accepted for the
+stated clean frames only, with unchanged line length. General effective
+marked completion provenance remains unproved.
+
+5. Existing C[7] Hardy theorem really implies a C[6] FGH bound
+Read port-FGH-existing-bound-C6.txt completely. The new comparison uses
+G_Q^h(y)>=F_Q(x)+1 for y>=x+1, x>=2, quantified over all inputs.
+The successor induction preserves a numerical gap through x+1 calls;
+the extra G iterations are extensive. The limit induction uses literal
+Q[x] prefix Q[y] and FIXED-input prefix domination, not input
+monotonicity. Empty uses h(y)>=y+1. The stated P1/P2 scan-prefix proof
+is valid on the old closed defined safe-D/J cone; it neither invokes
+special [1] inside the recursion nor extends to the whole R cone.
+Accepted as a consequence of the EXPLICIT foundations of the old C[7]
+single-file theorem and its exact J substitution identity.
+
+[固定输入的历史段落在本阅读版省略；自然输入及完整推导见本目录三篇主文。]
+
+6. Full-forest source iteration
+Read port-compiler-full-forest-iterator.txt completely. In the audited
+R[j] forest, active A_s has common low minimum T_s(theta2) and first
+image d_s at the rightmost packet start, NOT at the first packet start.
+At least two live packets give T_s(c)<=d_s; this bounds the entire
+previous cut(B) source output strictly below the next source third point.
+T_s fixes theta0,theta1, so quantitative low-line inputs have the same
+two first endpoints throughout. Full application images of the source
+retain steps, traces, successors and natural cutoff semantics even when
+not all image rows are physically listed in the forest.
+For an unlisted smaller-prefix endpoint the explicit two-transporter
+proof is essential; the file includes it. For cut(B), both its current
+cap T_s(b) and the next d_s are physically named. The final cap equals
+T_(n-1)(b), which is preserved by extraction and the known quiet scan.
+Accepted on the existing R[j] forest hypotheses. A general controller
+whose minimum/first image differ is NOT silently covered.
+
+The n-packet main resource and the starting global low Y-line are two
+premises. In the concrete K_j application both are supplied from the
+same retained low certificate; mere packet count alone is insufficient.
+The explicit f(z)=z2^z instance therefore proves actual output
+f^[2^Y-1](Y), not a renamed M runtime. A later family clock can add
+another f, but no such scalar iteration is asserted to match F_R.
+
+7. Prefix-recursive no-M source evaluator
+Read port-renewal-native-prefix-evaluator.txt completely. In the C2
+branch a=core[L],e=core[-L] really give F(theta2)=theta_a and
+F(theta_e)=parent cap, with F fixing theta0,theta1. Both a-1 and e-1
+are smaller row counts and at least2 in the stated class. Computing
+g_(prefix a-1)(Y) and feeding it to the complete F-image of prefix e-1
+therefore matches all three input points and the desired output cap.
+Marks/cutoffs are retained as full application images, not filtered.
+Accepted as a row-count induction, using the explicitly imported
+arbitrary-realization successor-E lemma for the separate S branch.
+The source class covers first R[j] and its cut, not arbitrary descendants.
+The limitation in section7 is essential: here only f and one fixed
+iteration function h occur in finite composition; source syntax size
+does NOT automatically contribute a new FGH iteration type.

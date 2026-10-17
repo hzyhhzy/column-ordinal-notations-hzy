@@ -1,0 +1,149 @@
+> 整理阅读版 / Collected reading edition. 数学结论以本目录三篇主文为准。
+> 原有局部证明、适用条件和撤回提醒保留；旧进度文字仅作历史记录。
+> 固定输入的历史段落如有省略，逐段位置记录于 SOURCE_MANIFEST.json；
+> 主文已用原证明产生的自然参数补上相应数值推导。未新增 Lean 认证。
+
+2026-10-15. A genuinely lower two-band BMS compiler, and its typed seam.
+
+STATUS: local actual geometry proved below, independently proposed by
+the Hardy sibling. The final section isolates a remaining whole-type
+domain obstruction. No all-C or all-R Hardy bound is claimed.
+
+All application products are written F(G); ordinary composition is o.
+Write K=j11, b=K(j), b2=b(b), mu=K(k2), theta5=K(k3), a=K(mu),
+and f=e(K), with f(k0)=k3, f(k1)=theta5, f(theta5)=a.
+
+1. A direct low source of arbitrarily requested finite fan height
+----------------------------------------------------------------
+The published K edges imply
+  crit(b)=k2, b(k2)=k3, b(k3)=mu, b(mu)=theta5.
+Consequently
+  crit(b2)=k3, b2(k3)=mu, b2(mu)=theta5.
+Since b2 fixes k0,k1,k2, the APPLICATION D=b2(K) satisfies
+  D(k0)=k2, D(k1)=mu, D(k2)=theta5.                 (1)
+An arbitrary supplied m-lined witness at (k0,k1,k2) therefore transports
+to an m-lined chain with common root k2, first point mu, final theta5.
+No inverse image or amplification of its finite length is asserted.
+
+The initial OPEN height-one compatible fan is
+  U=(k0,k1), V=(k2,k3,mu), owner K.
+It has K(U0)=V0, K(U1)=V1, K(V0)=V2. Its low owner is j3 and its
+cutoff gamma3, because
+  j3(k0)=k2, j3(k1)=gamma3, j3(k2)=k3,
+  k2<gamma3<k3, K equiv_gamma3 j3.
+No closing owner L and no final point beyond V2 are required.
+
+For the resulting line owners Q_r, put T_r=Q_r(j10). Apply exactly the
+front-insertion transformation of lined-front-insertion.zh-CN.md to
+the U,V lists and their positive owners, omitting its unused L clause.
+After the first insertion the lowest owner is T_0(j3), already of the
+normal form P o T o Q_*(j3), with P and Q_* empty. Thus that paper's
+low-owner reconstruction applies to every subsequent step. Its common
+strict membership cutoff above V1 is retained without a closure L.
+
+Let C_r denote the final point of the OPEN V list, and a_r the current
+line anchor. Initially C_0=a_0=mu. The first insertion gives
+  C_1=T_0(mu)=Q_0(mu)=a_1.
+For r>=1, a_r>mu, and C_r<=a_r gives
+  C_(r+1)=T_r(C_r)<=T_r(a_r)=Q_r(mu)<Q_r(a_r)=a_(r+1).
+Thus after m>=2 insertions the fan has height H=m+1 and final point
+  V_(H+1)=C_m<theta5.                              (2)
+For m=1 equality C_1=theta5 is allowed; all later strict-cap statements
+can be weakened to <=a in that edge case. No claim of infinitely many
+critical points below theta5 is made: construction is conditional on
+the supplied finite m-lined witness.
+
+2. Source connectors do not require the old closed seed
+------------------------------------------------------
+At height one R1=id has R1(k0)=k0, R1(k1)=U1, R1(k2)=V0.
+After insertion set R1'=id and R_(i+1)'=T o R_i. Inductively
+  R_i(k0)=k0, R_i(k1)=U_i, R_i(k2)<=V0.
+The same-critical-set endpoint transporter repairs the last inequality
+to equality while fixing U_i. Denote the result R_i^*. Then
+  S_i=K_i o R_i^*
+has global images (V0,V_i,V_(i+1)). These are ordinary compositions.
+This is exactly the SC/SP input required by the earlier spare compiler.
+
+3. Two full bands, no third band and no closure
+----------------------------------------------
+Choose H=h+1>=2 and use only ports 0,...,h as BMS ports; index H is
+the spare. Apply f to the whole open fan. The two full bands are
+  f(U0),...,f(Uh), f(UH); right f(V0),
+  f(V0),...,f(Vh), f(VH); right f(V_(H+1)).
+They encode B_h=(0^h)(1^h), not R_h.
+
+Lower only the first band's port 1 from theta5=f(k1) to mu, and the
+second band's port 1 to eta=f(K_H)(mu). The first anchor is K itself:
+  K(k0)=k2, K(k1)=k3=f(U0), K(k2)=mu.
+For every positive owner f(K_i), monotonicity gives
+  f(V0)<f(K_i)(mu)<f(K_i)(theta5)=f(V1).
+The transported common cutoff is strictly above f(V1), so all these
+middle images equal eta. Their implicit edges at f(V0) remain exact.
+The second anchor is the APPLICATION f(K_H)(K): since crit f(K_H)=k3
+fixes the numerical base k0,k1,k2, it has images (k2,f(V0),eta).
+
+The spare owners are ORDINARY compositions
+  f o R_H^*,   f o S_H.
+They have respectively global images
+  (f(U0),f(UH),f(V0)), (f(V0),f(VH),f(V_(H+1))).
+H>=2 means that the two port-1 replacements do not alter a spare.
+All band left endpoints exceed k2. The actual prefix/base-oracle box
+ends at k3, and all newly added rows have the correct explicit and
+implicit edges. The final cap is <=f(theta5)=a, strict for m>=2.
+
+Thus the existing unmarked participating full-band BMS compiler applies
+to this two-band initialization. With input m and no preheater it gives
+the natural scalar operation
+  S(u)(m)=K_(B_m)^u(m),
+accepting scalar u of exit <=k3 and returning exit <=a. Its ordinary
+scalar zero copies use threshold k2, thereby moving the numerical third
+base as needed for iteration of numerical arguments.
+
+4. What a Qi P_i image really adds
+----------------------------------
+Let Q_i be a Qi-line owner, t_i>mu, and P_i=K(Q_i). Write
+  w_i=P_i(k2)=K(t_i), beta_i=P_i(k3),
+  gamma_i=P_i(mu), d_i=P_i(a)=K(Q_i(mu)).
+Then w_i<beta_i<gamma_i<d_i<w_(i+1). The final inequality follows from
+mu<t_i and Q_i(t_i)=t_(i+1).
+
+An arbitrary helper m-line at (k0,k1,w_i) can drive P_i(D), irrespective
+of whether it was the P_i-image of an old witness. The entire low fan
+and two-band construction then has first left beta_i and cap <=d_i.
+This is a genuine arbitrary-height compatible fan, including all
+implicit positive-port edges and spares, not merely a bare vector.
+
+If the numerical base remains the original k0,k1,k2, preheat its input
+m to g(m)=m*2^m at endpoint k3 and extend to w_i. This gives helper
+height g(m), with no invalid inverse-image assumption. The resulting
+payload height is g(m). In particular it is NOT correct to use this
+preheater in section 3 while keeping its input endpoint k2.
+
+Its anchors A_j have helper-source images (w_i,left,port1). Reading at
+any lower numerical/control source v<w_i and repairing the last image
+gives a zero permission with threshold w_i. Those copies fix all old
+sources below w_i. This is the mixed-base mechanism for whole-object
+iteration, not a new ordinary scalar interpretation at the old base.
+
+5. Remaining typed gap, with an explicit direction test
+------------------------------------------------------
+The availability of the fan in section 4 is not a complete recursive
+type stack. Suppose a previous scalar operator has admission beta_i
+and output exit d_i, and the next helper is w_(i+1)>d_i>beta_i.
+The next zero-copy actor has critical point w_(i+1), hence FIXES beta_i.
+After the first whole-function evaluation, the new argument can have
+exit greater than beta_i, while the copied base operator still admits
+only inputs of exit <=beta_i. It cannot be called on that argument.
+
+The established high type-1 seed avoided this failure by an independent
+promoter J: its scalar admission J(a) was ABOVE the helper w1, while
+its output J(c) was BELOW the first payload left E(a). A similar fitting
+base-box contract must be supplied here; the inequalities d_i<w_(i+1)
+alone do not supply it. Neither a root certificate for C[k] nor arbitrary
+finite height of a compatible fan settles this whole-function domain
+condition.
+
+The exact published identity mu=gamma256 guarantees t_i>mu after at
+most 257 discarded Qi segments. This removes the finite lower-threshold
+issue in section 4, but does not repair the typed admission direction.
+

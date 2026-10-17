@@ -1,5 +1,13 @@
 # 快照验收记录 · [English](VALIDATION.md)
 
+## 2026-10-18 Laver 下界证明整理
+
+执行本次范围内的只读检查：
+
+    python -B laver_table_lower_bounds/tools/validate.py
+
+[收据](laver_table_lower_bounds/validation.json)记录 100 个固定哈希文件、423 个局部链接、六个准确塔型式子、25 个原版 IBLP 两步小入口及 18 个一行 BMS／指标检查。共执行 53 个原版基本列步骤，峰值 94 行、1,021 个字段，不足两秒结束；没有求值巨大层级或建立 Laver 表。这核验整理和有限语法，不是 ZFC + I3 纸面证明或 Lean 认证。详见[本目录核验范围](laver_table_lower_bounds/VALIDATION.md)。
+
 ## 2026-10-10 CDMN 前缀零项修改
 
 CDMN 按**整体良序性未决候选**收录，不增加 Lean 认证系统。JS 与独立 Python 现同步为前缀零项版，正指标保持不变；四视图 NER 由本地源码重建，使用独立规则版本的注册 ID。保留默认 BTBMS 式、列表、完整列表及自然数行计数序列。三条历史样例路径已经迁移，目标图保持不变。

@@ -1,0 +1,112 @@
+> 整理阅读版 / Collected reading edition. 数学结论以本目录三篇主文为准。
+> 原有局部证明、适用条件和撤回提醒保留；旧进度文字仅作历史记录。
+> 固定输入的历史段落如有省略，逐段位置记录于 SOURCE_MANIFEST.json；
+> 主文已用原证明产生的自然参数补上相应数值推导。未新增 Lean 认证。
+
+2026-10-15. Extra source connectors on front-insertion fans.
+
+STATUS: The local algebra in sections 1--3 is proved. Section 4 explains
+the exact layout obstruction; no relative BMS diagonal has yet been
+compiled. This is a separate module from the port-modified E-window
+ribbon. Combining their global bases requires a new argument.
+
+1. Source-point ancestry retained by front insertion
+----------------------------------------------------
+Use the existing front-insertion closed fans with U0=kappa0,U1=kappa1,
+source U0<...<Uh<V0 and positive owners K_i:
+
+  crit(K_i)=kappa0,
+  K_i(U_t)=V_t for t<=i,
+  K_i(V0)=V_(i+1).
+
+For EVERY source index 1<=i<=h there is a map R_i (possibly the
+identity for i=1), formed by ordinary composition of actual Iter(j)
+owners, such that
+
+  R_i(kappa0)=kappa0,
+  R_i(kappa1)=U_i,
+  R_i(kappa2)<=V0.                                  (SC)
+
+For the initial two-layer fan U=(kappa0,kappa1,kappa2), V0=kappa3,
+take R1=id, R2=j2=j(j). Its first critical sequence is
+kappa1 -> kappa2 -> kappa3, so (SC) is exact.
+
+A front insertion with T, crit(T)=kappa1, has new source list
+
+  kappa0,kappa1,T(U1),...,T(Uh),
+  and new V0'=T(V0).
+
+Set R1'=id and R_(i+1)'=T o R_i. They fix kappa0 and their two
+displayed images satisfy (SC) by monotonicity. This proves (SC) for
+every finite front-insertion fan, without needing a symbolic normal
+form for any of its source points. Equivalently R_i are appropriate
+suffix compositions of the insertion owners, followed by j2 for the
+last original source point.
+
+2. Make the last source image exact
+-----------------------------------
+Write d=R_i(kappa2), so U_i<d<=V0. If d<V0, both are critical points
+in the same Iter(j). The successive-critical-point maps
+g_s=j_(2^s), crit(g_s)=gamma_s, g_s(gamma_s)=gamma_(s+1), give a finite
+ordinary composition G with crit(G)=d and G(d)=V0.
+This is Laver's result recalled at the opening of Dougherty II section
+3 (printed p.10): https://arxiv.org/pdf/math/9503204.
+
+Take R_i^*=G o R_i, or R_i itself if d=V0. Then
+
+  R_i^*(kappa0)=kappa0,
+  R_i^*(kappa1)=U_i,
+  R_i^*(kappa2)=V0.                                 (SC*)
+
+This is ORDINARY COMPOSITION, not application. In the R1=id case,
+application G(id) would remain id and would be wrong. Composition
+also avoids any need to assume that G fixes the argument kappa2.
+Since G fixes the actual image U_i<d, the second equality is valid.
+
+3. A global three-edge E-limit envelope at each positive port
+------------------------------------------------------------
+Define
+
+  S_i=K_i o R_i^*.
+
+Both factors fix ordinals below kappa0; R_i^* fixes kappa0 and K_i
+moves it. Thus crit(S_i)=kappa0. Equations (SC*) give
+
+  S_i(kappa0)=V0,
+  S_i(kappa1)=V_i,
+  S_i(kappa2)=V_(i+1).                               (E)
+
+With actual global base kappa0,kappa1,kappa2, (E) is precisely the
+three-edge permission for an auxiliary E operation at threshold V0,
+whose old cap is V_i and new cap V_(i+1). A current m-lined global base
+therefore allows m rounds of the usual doubling of the prefix after
+V0, within the same cap. This follows from the established source-lined
+E lemma, using S_i as the auxiliary permission owner. It does not
+require changing the existing positive-port owner K_i globally.
+
+All objects are natural under an arbitrary application environment T
+when the ENTIRE base and fan are moved: the new base is
+T(kappa0),T(kappa1),T(kappa2), and T(S_i) realizes the transported
+three edges. There is no assertion that these three old global base
+points remain fixed by T.
+
+4. Why this is not already BMS[m]
+---------------------------------
+The threshold licensed by (E) is the TARGET-band left endpoint V0.
+The BMS bad part instead begins at the PARENT/source-band endpoint U0.
+The two are not equal. E(m) at V0 repeats only the current target-band
+prefix; an ordinary BMS basic sequence needs copies of the source band
+and every intervening band. Neither ordering nor extra point images
+permit relabeling that source interval as physically present after V0.
+
+A potential solution is to store a copied source-prefix packet in
+that target interval and extract a projection after the E copies.
+That requires an actual cap-bounded realization of the cached packet
+and a uniform copy/projection invariant. It is not supplied by (E).
+
+Also, the other E-window construction lowers the first source port of
+a T-image fan from T(kappa1) to beta0<T(kappa1). Its source-coordinate
+list no longer has the literal transported global base used in (SC).
+Consequently this file's global-triple permission cannot be imported
+into that modified fan by silently keeping T(kappa1) as its first port.
+They are two proved but not yet combined local interfaces.

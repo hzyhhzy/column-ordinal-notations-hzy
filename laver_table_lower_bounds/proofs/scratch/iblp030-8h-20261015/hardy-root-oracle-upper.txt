@@ -1,0 +1,240 @@
+> 整理阅读版 / Collected reading edition. 数学结论以本目录三篇主文为准。
+> 原有局部证明、适用条件和撤回提醒保留；旧进度文字仅作历史记录。
+> 固定输入的历史段落如有省略，逐段位置记录于 SOURCE_MANIFEST.json；
+> 主文已用原证明产生的自然参数补上相应数值推导。未新增 Lean 认证。
+
+BMS-oracle upper bound for an exact original-IBLP continuation family
+===================================================================
+2026-10-15. This is a genuine finite-level recursive upper bound, but it
+applies to first-root substitutions J_B(A), not yet to last-root T_m or R.
+The unresolved port conversion must not be omitted.
+
+Notation
+--------
+A=I[0][1], h=H_A under the original Python rules, x>=2.
+Let g(x)=F^BMS_Lambda(x), with Lambda[x]=B_(x+1) and B_r=(0^r)(1^r).
+Previously established h(x)<=g(g(x)). Put N(x)=2+x(x+1)/2.
+
+For a nondecreasing base f with f(x)>=x+1, define the conventional
+f-based BMS fast hierarchy by
+
+  G^f_empty(x)=f(x),
+  G^f_(M+zero-column)(x)=(G^f_M)^(x+1)(x),
+  G^f_M(x)=G^f_(M[x])(x) for M non-successor.
+
+All BMS here is the original BM4 convention used in the existing safe-D
+cover proof. Its positive non-successor [k] has width |M|-1+k*d>=|M|.
+Its basic terms form a prefix chain and all preserve cut(M).
+
+Write D_f(x)=G^f_(B_(x+1))(x), the BMS-oracle diagonal.
+This is an explicit new external function, not a synonym for g.
+
+1. Three purely BMS numerical lemmas
+-----------------------------------
+For f as above and x>=1:
+
+(a) Every G^f_M is nondecreasing in its numeric argument and >=f.
+(b) If Q is a strict column prefix of M, then
+          G^f_M(x) >= (G^f_Q)^(x+1)(x).
+(c) If M reaches Q by a finite BMS path whose every basic index is <=x,
+          G^f_M(x) >= G^f_Q(x).
+
+These follow by simultaneous induction in the known BMS well-order, not
+from an assumed arbitrary ordinal monotonicity of FGH.
+
+For (b), when M is a successor, apply the induction hypothesis to its
+predecessor if Q is shorter, and use the defining iteration if Q is exactly
+the predecessor. When M is non-successor, M[x] contains cut(M) properly
+because positive [x] does not decrease width. Every strict prefix Q of M
+is thus still a strict prefix of M[x]. Apply the induction hypothesis there.
+For (a) at limits, M[x] is a prefix of M[y] for x<=y, so apply either
+inductive input monotonicity or (b) followed by input monotonicity.
+Successors use monotonicity of functional iteration and the larger count.
+For one step of (c), a successor is immediate. For a limit and n<=x,
+M[n] is a prefix of M[x], so (b) or equality applies; iterate along the path.
+
+The same induction proves base monotonicity f<=f' implies
+G^f_M(x)<=G^f'_M(x), provided both bases are nondecreasing and >=x+1.
+
+2. Lifting the existing arbitrary-cover simulation to FGH
+--------------------------------------------------------
+Let P be a safe-D original IBLP pattern, and M any standard BMS cover in
+IBLP-01-BMS-upper-bound.zh-CN.md §§3--8. Define the original-payload f-FGH
+by the x-iteration convention of the continuation interface:
+
+  F^f_empty=f;
+  F^f_(Q+successor)(x)=(F^f_Q)^x(x);
+  F^f_P(x)=F^f_(O_x(P))(x) for non-successors.
+
+Then uniformly for x>=2,
+
+                    F^f_P(x) <= G^f_M(x).              (2.1)
+
+Proof is well-founded induction on target M, quantified over every covered
+source P and every numeric x. The cover theorem says:
+
+* A source successor cut has a cover M' which is a strict prefix of M.
+  By induction F^f_Q(z)<=G^f_M'(z) for every z>=2. Therefore x functional
+  iterates are bounded by x target iterates, and BMS lemma 1(b) absorbs
+  these into G^f_M(x).
+* A non-successor O_x(P) has a new cover M' after a finite strict target
+  descent using only [1], [0], [x-1], [0]. All indices are <=x. Apply the
+  induction hypothesis at M', followed by lemma 1(c).
+* Empty P needs only G^f_M(x)>=f(x).
+
+This also proves termination of the generalized source evaluation on D;
+it does not presuppose a numerical comparison between unrelated indices.
+No bound on the number of [1] preparation moves is required.
+
+The same proof works for the conventional x+1-iteration source FGH: the
+target's strong-prefix estimate has exactly x+1 iterates. We use x only
+because the physical continuation J_B realizes that convention exactly.
+
+3. A whole I01-root oracle inequality
+------------------------------------
+Original A[x] lies in D and has the concrete standard cover
+
+             M_x=B_(x+2)[N(x)].
+
+This is the same concrete cover used in hardy-root-bms-interface.txt.
+By (2.1), the limit clauses, and BMS input/height monotonicity,
+
+  F^f_A(x)
+    =F^f_(A[x])(x)
+    <=G^f_(B_(x+2)[N(x)])(x)
+    <=G^f_(B_(x+2)[N(x)])(N(x))
+    =G^f_(B_(x+2))(N(x))
+    <=D_f(N(x)).                                        (3.1)
+
+The last step uses N(x)+1>=x+2 and the explicit BMS seed-height embedding,
+exactly as the earlier base-free g bound; it is not arbitrary FGH ordinal
+monotonicity. The simple seed-height proof is unchanged by a monotone base.
+
+4. An exact physical family with finite BMS-oracle upper levels
+-------------------------------------------------------------
+For quiet B beginning (0,1):1, J_B(A) is the first-root substitution defined
+in hardy-root-continuation-interface.txt. If H_B<=f pointwise and H_B is
+nondecreasing, exact continuation plus base monotonicity gives
+
+                 H_(J_B(A))(x) <= D_f(N(x)).             (4.1)
+
+Define physical roots P_0=A, P_(r+1)=J_(P_r)(A), and external functions
+
+  E_0(x)=g(g(x)),
+  E_(r+1)(x)=D_(E_r)(N(x)).
+
+Each P_r is quiet and begins with (0,1):1; for every finite r and x>=2,
+
+                         H_(P_r)(x) <= E_r(x).          (4.2)
+
+Here r genuinely counts nested BMS-oracle recursion levels. In particular
+P_1=J_A(A) is not just a finite concatenation of independent A blocks.
+Every E_r is nondecreasing and >=x+1, so the recursive definition is valid.
+This establishes a useful upper-bound language for finite continuations.
+
+The monotonicity hypotheses on the ACTUAL bases also need proof; they do
+not follow from upper bounds. On the A cone, original positive indices
+>=2 preserve the old cut prefix, do not reduce width, and are nested as
+literal prefixes. This follows from safe-D's no-completion copy formula;
+at A itself it follows from its explicit root formula. A true successor
+always cuts one row. Induction in the already established A-cone well-order
+therefore proves input monotonicity of original Hardy: compare the two
+children at x<=y using their prefix relation, then apply induction; a strict
+prefix cannot have larger Hardy value at a common input. The latter prefix
+fact follows by the actual prefix-visitation lemma, or by the same joint
+induction. Hence H_A is nondecreasing for x>=2.
+
+For the generalized source F^f on this same A cone, repeat the simultaneous
+input/strong-prefix induction of Section 1, replacing x+1 successor counts
+by x. The strict-prefix lower estimate now has x iterates, still sufficient
+for input monotonicity, since x>=2 and f>=x+1. Thus monotone H_(P_r) implies
+monotone F_A^(H_(P_r))=H_(P_(r+1)); induction on r supplies every actual base
+monotonicity used in (4.1)--(4.2).
+
+5. Exact boundary of this result
+-------------------------------
+Actual W=I021 has W[n]=T_n, using last-root grafts, not the P_r family.
+Even T_2 and P_1 differ at the first attached zero: T_2 uses address 4,
+P_1 uses address 1. An actual last-root base return may copy the outstanding
+continuations to its left, while P_r executes independent first-root
+continuations in sequence. No simulation T_n -> P_r, nor any bound
+H_(T_n)(x)<=E_r(Cx), is established here. The same limitation applies to R.
+
+Nor is it currently established that any available q(5) lower bound
+dominates E_1. These are explicit candidate numerical interfaces for the
+parent's actual-embedding construction, not claimed q(5) estimates.
+
+6. A rigorous type-2 extension for the ACTUAL first-root tower
+-------------------------------------------------------------
+The actual C=A(0,1,5):1 has C[n]=S_n=J_A^(n-1)(A), n>=2. Do not confuse
+this S_n with the P_r family of Section 4: S_n nests in the PAYLOAD.
+
+Let M be the class of nondecreasing functions f on integers >=2 with
+f(x)>=x+1. Let an admissible function-operator Theta:M->M preserve pointwise
+order and be extensive, Theta(f)>=f. For a BMS index M define operators
+
+  O^Theta_empty = Theta;
+  O^Theta_(M+1)(f)(x) = [(O^Theta_M)^(x+1)(f)](x);
+  O^Theta_M(f)(x) = O^Theta_(M[x])(f)(x), at limits.
+
+The power on the middle line iterates a transformation of FUNCTIONS, not
+the numerical function O^Theta_M(f). All these operators are admissible.
+The simultaneous BMS induction from Section 1 works at this type too:
+
+  Q strict prefix M implies
+    O^Theta_M(f)(x) >= [(O^Theta_Q)^(x+1)(f)](x);        (6.1)
+
+  every <=x-index finite descent M -> Q implies
+    O^Theta_M(f)(x) >= O^Theta_Q(f)(x).                 (6.2)
+
+Here the induction hypotheses are quantified over EVERY admissible f.
+Hence a pointwise comparison of two lower operators may be substituted at
+each intermediate function in the iteration. Operator monotonicity and
+extensiveness give comparison of iteration counts. Input monotonicity of
+the resulting function follows from its lower functions' monotonicity and
+the BMS prefix nesting at x<=y. No transfinite ordinal monotonicity is used.
+
+Define the source operator hierarchy L_P^Theta by the same clauses but
+using original P and x (rather than x+1) successor iterations. The old
+arbitrary-cover proof now lifts verbatim:
+
+  P in D covered by M => L_P^Theta(f)(x)<=O_M^Theta(f)(x).
+
+At a source successor use (6.1) and IH for all intermediate functions;
+at a source limit use the old [0],[1],[x-1] macro and (6.2).
+As at level 1, this is target-well-founded induction, so it establishes the
+source operator recursion rather than assuming its termination.
+
+Put
+  B_Theta(f)(x)=O_(B_(N(x)+1))^Theta(f)(N(x)).
+This is an explicit monotone extensive operator and
+
+                   L_A^Theta(f)(x)<=B_Theta(f)(x).      (6.3)
+
+The argument is the exact same concrete cover M_x=B_(x+2)[N(x)] followed
+by input and seed-height monotonicity. These BMS comparisons remain valid
+for an admissible operator base by (6.1)--(6.2).
+
+Let Phi_A(f)=F_A^f from Section 3 and let
+  Theta_0(f)(x)=D_f(N(x)).
+Then Phi_A<=Theta_0 pointwise as operators, and both are admissible.
+From the exact continuation/concatenation identities in
+hardy-root-first-root-tower.txt,
+
+  H_(S_2)(x)=Phi_A(h)(x)<=Theta_0(g o g)(x),
+
+  H_(S_3)(x)=L_A^(Phi_A)(h)(x)
+            <=L_A^(Theta_0)(g o g)(x)
+            <=B_(Theta_0)(g o g)(x).                   (6.4)
+
+Thus (6.4) is a concrete finite higher-type BMS-oracle upper bound for a
+genuine original descendant S_3=C[3]=R[0][1]^8[3]. It is not just a new
+name for H_(S_3): the right side uses only ordinary BMS basic sequences,
+the polynomial N, and g, with explicitly given function-operator recursion.
+
+One can repeat the same construction at higher finite types using curried
+operators and the final numeric argument to select the iteration count.
+This file explicitly proves only levels 1 and 2; a fully typed all-level
+formulation, needed to write the full C bound with input-dependent type x,
+is still to be supplied. No q(5) dominance of the right side of (6.4) is
+claimed, and the last-anchor W/R port-conversion issue remains unchanged.

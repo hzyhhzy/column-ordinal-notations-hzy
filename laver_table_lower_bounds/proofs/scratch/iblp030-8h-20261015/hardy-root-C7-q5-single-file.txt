@@ -1,0 +1,402 @@
+> 整理阅读版 / Collected reading edition. 数学结论以本目录三篇主文为准。
+> 原有局部证明、适用条件和撤回提醒保留；旧进度文字仅作历史记录。
+> 固定输入的历史段落如有省略，逐段位置记录于 SOURCE_MANIFEST.json；
+> 主文已用原证明产生的自然参数补上相应数值推导。未新增 Lean 认证。
+
+A six-type original-IBLP Hardy lower bound for q(5)
+===================================================
+2026-10-15. Single-file proof assembly under ZFC+I3 and the explicit
+established inputs below. This is a paper proof, not Lean.
+
+[固定输入的历史段落在本阅读版省略；自然输入及完整推导见本目录三篇主文。]
+
+P is an actual original 28-row IBLP expression: J_A0^6(A0). It is not
+a substitute notation and the numerical comparison is not deduced from
+ordinal size alone. The full C, and especially R, remain OPEN.
+
+New ingredients: a lower open two-band fan, a strict-sup theorem
+A(<a)<theta8, six compatible higher-type environments, and a whole-
+object padding lemma that compensates for the low scalar fan's height.
+The actors A and c below must not be confused with the source A0 or
+the endpoint c_exit.
+
+1. Framework and established inputs
+------------------------------------
+Let j:V_lambda->V_lambda witness I3, and work in the same Iter(j), closed
+under application and finite ordinary composition. Put k0=crit(j),
+k_(i+1)=j(k_i). Generated critical points are gamma_i in increasing order.
+Application F(G) and ordinary composition F o G are DISTINCT:
+  F(G)(F(t))=F(G(t)).
+An actor value at t cannot be read by this formula unless t is the
+displayed F-image. Write F(<t) for the strict supremum of F(u), u<t.
+Application transports strict suprema:
+  F(G)(<F(t))=F(G(<t)).
+
+An m-line on (p0,p1,p2) consists of p1=t0<...<t_m=p2 and actual owners
+L_i with critical point p0 and L_i(p0)=t_i, L_i(t_i)=t_(i+1).
+The established critical-counting theorem gives
+  k4=gamma_(F(4)), q(5)=F(4)+1,
+  m-lined(k0,k1,d) => gamma_(2^m)<=d.
+Hence such a line ending below k4 implies q(5)>2^m.
+
+Hardy uses the ORIGINAL Python IBLP semantics, without run-time guards:
+  H_empty(x)=x;
+  H_(Q+true successor)(x)=H_Q(x+1);
+  H_Q(x)=H_(Q[x])(x) otherwise.
+A true successor is a final row (0,last_index):1. A failed-copy cut is
+not declared a successor. The exact source cone used here has no failures.
+Original definition: 所固定的原版 iblp.py（见 SOURCE_MANIFEST.json）.
+
+The following older inputs are used, not re-proved from scratch:
+(S) Safe-D/original-BMS cover and first-root substitution closure.
+    In particular A0[x] is covered by B_(x+2)[N(x)],
+    N(x)=2+x(x+1)/2; cover macros use only 0,1,x-1 and true source
+    successors have strict-prefix target covers. Sources:
+    output/iblp-01-equality-20260923/IBLP-01-no-completion-proof.zh-CN.md,
+    IBLP-01-BMS-upper-bound.zh-CN.md, and this session's exact first-root
+    continuation and tower proofs.
+(B) BMS well-foundedness, prefix basic sequences, and literal seed-height
+    paths. No general ordinal-to-value monotonicity is assumed.
+(E) Actual E/copy-tree lemma, participating full-band BMS compiler with
+    spare ports, and front insertion with ALL implicit positive edges.
+    Source: output/iblp-laver-bms-20261013/lined-front-insertion.zh-CN.md,
+    short-terminal-initialization.zh-CN.md; the all-environment spare
+    interface is in lift-participating-bms-spare.txt.
+(L) Critical counting and same-Iter critical-endpoint extension;
+    the finite point, strict-membership, and strict-sup facts of
+    Dougherty I printed pp20--24, https://arxiv.org/pdf/math/9205202,
+    and endpoint extension in Dougherty II printed p10,
+    https://arxiv.org/pdf/math/9503204.
+
+All new cap algebra, environment seams, and numerical padding are
+included below. This single file does not purport to re-prove the older
+foundational E or arbitrary safe-D cover theorems.
+
+2. Exact source identity
+------------------------
+A0 has the four rows
+  01:1, 012:1, 0123:2, 234:1.
+J_A0(Q) follows A0 with Q renamed by phi(0)=1, phi(i)=4+i for i>0.
+On its closed safe-D/J grammar, original full-copy rules at n>=2 give
+  J(empty)=A0;
+  J(Q)[n]=J(Q[n]) for nonsuccessor Q;
+  J(Q+1)[n]=n frozen copies of J(Q).
+Frozen copies keep their zero address and shift positive addresses.
+The special original [1] is NOT substituted for full copying.
+
+The original controller C=A0(015):1 satisfies C[n]=J^(n-1)(A0), n>=2.
+Thus P=C[7]=J^6(A0), consisting of seven four-row blocks. Renaming
+commutes with the actual +1 trace test, since every nonterminal trace
+node is positive; no active trace enters the frozen A0 background.
+
+For scalar base f define F_empty^(0,f)=f, use x iterations at a true
+successor, and original [x] otherwise. At type r>=1 use the same rules
+but iterate whole type-(r-1) objects, still selecting iteration count
+and basic index by the FINAL numerical argument x. Put
+  B_r(u)=F_A0^(r,u),       h=H_A0.
+Exact substitution yields
+  H_P(x)=B5(B4)(B3)(B2)(B1)(B0)(h)(x), x>=2.       (2.1)
+This is a higher-type identity, not scalar iteration of one function.
+
+3. Actual lower two-band fan
+-----------------------------
+Use actors and points
+  K=j11, b=K(j), c=K(b), d=c(K), e=d(j), f=e(K),
+  A=c(d), V=c(e), Q=A(K),
+  mu=K(k2), theta5=K(k3), a=K(mu), c_exit=K(theta5),
+  theta8=j9(k3), s=j(<k1), v=K(<k2)=j10(s).
+Known point order: k3<mu<theta5<a<c_exit<theta8<k4.
+Also crit(c)=mu, c(mu)=theta5, c(theta5)=a, and c(a)=c_exit.
+
+The actor b has k2->k3->mu->theta5, so b2=b(b) has
+k3->mu->theta5 and fixes k0,k1,k2. Thus D=b2(K) has
+  D(k0)=k2, D(k1)=mu, D(k2)=theta5.
+An arbitrary supplied m-line on (k0,k1,k2) transports to an m-line
+with common root k2, first point mu and last point theta5.
+
+Start an OPEN compatible fan at height one:
+  U=(k0,k1), Vports=(k2,k3,mu), positive owner K,
+  low owner j3, common cutoff gamma3.
+Indeed K has the three required edges, j3 has k0->k2,
+k1->gamma3, k2->k3, and K is membership-equivalent to j3 below gamma3.
+No closing owner is required. With line owners Q_i put T_i=Q_i(j10)
+and perform the established front-insertion transformation, omitting
+only its unused closing-owner clause. After the first step the lowest
+owner T_0(j3) already has the old reconstruction's normal form, so
+every later insertion and its common cutoff remain licensed.
+
+Let C_i be the final Vports point and t_i the current line anchor.
+C_0=t_0=mu. At the first insertion C_1=T_0(mu)=t_1. Thereafter
+  C_(i+1)<=T_i(t_i)=Q_i(mu)<Q_i(t_i)=t_(i+1).
+Thus after m>=2 insertions height H=m+1 has cap C_m<theta5; for
+m=1 equality is allowed. All implicit owner edges are retained.
+
+Source connectors need no closure: R_1=id initially; after insertion
+R'_1=id, R'_(i+1)=T_i o R_i. They have
+R_i(k0)=k0, R_i(k1)=U_i, R_i(k2)<=Vports_0. Endpoint repair yields
+R_i^* with last equality. Ordinary compositions K_i o R_i^* give the
+spare connectors to (Vports_0,Vports_i,Vports_(i+1)).
+
+Apply f to the whole fan, where f(k0)=k3, f(k1)=theta5 and
+f(theta5)=a. Reserve port H as a spare and use ports 0,...,H-1 as
+the BMS payload. Lower the first band's port 1 from theta5 to mu;
+K is its anchor with global images (k2,k3,mu). Lower the second band's
+port 1 to eta=f(K_H)(mu). Every positive owner has the SAME middle
+image eta: mu<theta5 and their transported common cutoff is above
+f(Vports_1). Their last implicit edges at f(Vports_0) are unchanged.
+The second anchor is f(K_H)(K). The two spare owners are ordinary
+f o R_H^* and f o (K_H o R_H^*); their three images are exact. As H>=2,
+the two port-1 changes do not alter either spare.
+
+The resulting payload is B_m=(0^m)(1^m), with scalar argument
+admission k3 and cap<=a, strict for m>=2. Therefore (E) gives the
+natural low scalar operation
+  S(u)(m)=K_(B_m)^(0,u)(m),
+where fast K uses 2^m iterations or BM4 [2^m]. Its scalar zero copies
+have critical point k2 and move the numerical third source as needed.
+Its height really is m, not m*2^m.
+
+4. Strict-sup theorem paying for all six types
+---------------------------------------------
+Every composition power in this section is ORDINARY composition.
+The published approximation K~j o j below mu shows j^2(t)=K(t)
+for t<k2, since K(t)<mu. Hence j^2(<k2)=K(<k2)=v.
+
+Exactly c=(K o K)(j), and consequently
+  c o c=(K o K)(j o j).
+Since K^2(k2)=a, transport of strict suprema gives
+  c^2(<a)=K^2(v).                                    (4.1)
+Using K=j10(j), j10=j9(j), always at genuine image arguments,
+  K^2(v)=K^2(j10(s))=j10(j^2(s))=j10(K(s)).
+The published strict-sup comparisons give
+  K(s)<j10(s)<j9(s),       j(s)<k3.
+Therefore
+  K^2(v)<j10(j9(s))=j9(j(s))<j9(k3)=theta8<k4.       (4.2)
+
+Exactly A=(c o c)(K), and c^2(mu)=a. Thus
+  A(<a)=c^2(K(<mu)).
+The generated critical cardinal mu is regular and K(mu)=a>mu, so
+K(<mu)<a. Strict increase and the fact that a is a limit now yield
+  A(<a)<c^2(<a)=K^2(v)<theta8.                        (4.3)
+In particular A(x)<theta8 for EVERY x<a, including mu and theta5.
+This does not claim A(a)<k4; in fact A(a)>k4, a boundary never used.
+
+Put T=j10(j3), rho=j10(gamma3). The approximation
+j3~j o j below gamma3 transports to
+  T~K o K below rho.
+Exact image readings give T(k0)=mu, T(k2)=rho, T(mu)=a.
+As k1<k2, T(k1)<rho, so reading the cutoff from this strict T side
+gives T(k1)=K^2(k1)=theta5. Consequently
+  mu<theta5<rho<T(k3)<T(v)<a,                         (4.4)
+using k3<v<mu. Define Z=A(T); it fixes k0,k1 and has
+  Z(k2)=A(mu), Z(k3)=A(theta5),
+  Z(a)=A(rho), Z(c_exit)=A(T(k3)).                    (4.5)
+These are actual A-images, not application/composition substitutions.
+Every A-argument in (4.5) is <a, so (4.3) bounds them all by theta8.
+
+5. Six actual whole-object environments, with domains
+------------------------------------------------------
+Each row transports the SAME low open fan. The actual numerical base
+remains (k0,k1,k2). The higher helper base is a different source.
+
+ level  environment   helper       first payload left   closed output
+   0    id            k2           k3                   a
+   1    V             k3           a                    c_exit
+   2    Q             a            c_exit               A(mu)
+   3    Q o V         c_exit       A(mu)                A(theta5)
+   4    Z             A(mu)        A(theta5)            A(rho)
+   5    Z o V         A(theta5)    A(rho)               A(T(k3))
+   6    Z o Q         A(rho)       A(T(k3))             theta8
+
+The first V values are V(k2)=k3, V(k3)=a, V(a)=c_exit.
+Q values are Q(k2)=a, Q(k3)=c_exit, Q(a)=A(mu),
+Q(c_exit)=A(theta5). They follow from A(k0)=k2, A(k1)=k3,
+A(k2)=a, A(k3)=c_exit and the corresponding K values.
+Rows 3 and 5 then follow by ordinary composition. Row 4 is (4.5).
+Row 6 has the stated first two values. Its dangerous CLOSED last
+value is not used. Instead Q(<a)=A(v), so
+  (Z o Q)(<a)<=Z(Q(<a))=Z(A(v))=A(T(v))<theta8.     (5.1)
+The first relation is deliberately an inequality: an ordinary composite
+need not commute with a strict supremum continuously. Each particular
+source cap x<a satisfies Q(x)<A(v), hence Z(Q(x))<A(T(v)); this is
+the strict actual bound required by the initializer.
+
+For levels >=1, the usual two-row scalar f0(m)=m*2^m supplies a
+g(m)-line at k3 from the real m-line. Extend its endpoint to the row's
+helper and drive its transported low fan. This needs no inverse image
+of the supplied witness. It gives payload B_g(m), and g(m)>=2 makes
+the source cap STRICTLY <a, licensing the open cut in (5.1).
+
+Here is the whole-type seam check. Each helper is exactly the preceding
+level's new argument admission, and its first payload left is exactly
+the preceding level's chosen output. A helper anchor has images
+(helper,left,port1). Read it at the smaller numerical/lower source and
+repair the last image to the right endpoint; strict monotonicity puts
+that image below port1 before repair. The zero actor has critical point
+helper, so fixes ALL lower domain coordinates, but moves the current
+admission to the preceding whole-result endpoint. Thus each next copied
+oracle genuinely accepts its argument. Nonzero spare actors have
+critical point at a payload left above all these coordinates.
+
+The domain coordinates are strictly ordered
+  k3<a<c_exit<A(mu)<A(theta5)<A(rho)<A(T(k3))<theta8.
+No disjoint Qi corridor is being mistaken for such overlapping domains.
+The generic E/full-band compiler consequently provides, with ALL input,
+argument and outer-environment quantifiers, the operations
+  D_r(u)(...)(x)=K_(B_(g(x)))^(r,u)(...)(x), 1<=r<=6.
+This is a whole diagonal contract, not just a matrix chosen for one x.
+In particular D6(D5)(D4)(D3)(D2)(D1)(S)(f0) is an actual legal program
+whose output line ends at theta8<k4.
+
+6. Tail-local numerical comparison, including low scalar padding
+-----------------------------------------------------------------
+Let X0 consist of nondecreasing f(x)>=x+1. Higher types are extensive
+operators preserving every lower tail preorder. The relation <=_b
+means comparison at ALL final inputs >=b and all admitted arguments.
+Mixed monotonicity and finite iteration preserve this relation.
+Source objects initially defined only at x>=2 may be harmlessly
+extended at 1; their comparisons here are used only on the tail >=3.
+
+Well-founded induction on BMS, quantified over every base, argument,
+and input, gives fast input/base monotonicity and strong prefix:
+a proper prefix's whole value may be iterated 2^x times below the
+longer matrix's value. Bounded-index descent with indices <=2^x also
+cannot increase the fixed-input value. Source limit cover macros are
+chosen after fixing x; the induction hypotheses used inside iteration
+remain universally quantified. Thus no single-input inequality is
+used as though it were a whole-function inequality.
+
+Put N(x)=2+x(x+1)/2 and y=x+2^x-1. For x>=3, y>=N(x)+1, and
+  S(S(u))(x)>=[S(u)]^[2^x](x)>=S(u)(y)
+    >=G_(B_(N(x)+1))^u(N(x)).
+The last step is an explicit seed-height path plus input monotonicity.
+The safe-D cover therefore gives
+  B0<=_3 S^2,       h<=_3 S^2(f0).                    (6.1)
+For r>=1, N(x)<=2^x and g(x)-1>=x+2. The literal path
+B_H ->* R_(H-1), using only 0,1,2, and the same cover give
+  B_r<=_3 D_r.                                      (6.2)
+This is the needed compensation for S's genuine height x.
+
+For every r>=1 and ALL positive inputs, D_r(u)>=u^4 as a whole object.
+Indeed g(x)>=2; bounded-index seed paths reduce B_g(x) to two zero
+columns 00. If Z_r is the one-zero-column operation, then
+Z_r(u)>=u^2 globally since 2^x>=2. Hence
+  K_00^(r,u)=Z_r(Z_r(u))>=(Z_r(u))^2>=u^4.           (6.3)
+
+Define the WHOLE operators
+  Tstar=D5(D4)(D3)(D2)(D1) in X2,
+  W=D6(D5)(D4)(D3)(D2)(D1) in X2.
+Fourfold reserve descends through the typed chain:
+  W>=Tstar^4.                                       (6.4)
+Start with D6(D5)>=D5^4. At each next argument Y use
+X^4(Y)>=X^2(Y)=X(X(Y))>=(X(Y))^4 when X>=power-four.
+The collapsed X(Y) still dominates the next D_r by extensiveness,
+so still has the power-four property. Repeat down the finite chain.
+
+7. Internal huge input and the q(5) conclusion
+---------------------------------------------
+Put
+  U=Tstar(Tstar(S)) in X1,
+  qfun=U(U(f0)) in X0,
+  M=qfun(1),
+  Y=W(S)(f0)(1).
+All these are exact finite function definitions, not computed oracles.
+
+Since Tstar>=D1>=power-four, Tstar(S)>=S^2, and
+U>=Tstar(S^2). Mixed tail use of (6.1)--(6.2) therefore gives
+  U>=_3 B5(B4)(B3)(B2)(B1)(B0),
+and U(f0)>=_3 h. Consequently
+  qfun>=_3 H_P.                                     (7.1)
+
+[固定输入的历史段落在本阅读版省略；自然输入及完整推导见本目录三篇主文。]
+
+From (6.4), extensiveness, and Tstar>=power-four,
+  W(S)>=Tstar^4(S)>=Tstar^3(S)=Tstar(U)>=U^4.
+Therefore
+  Y>=U^4(f0)(1)>=U^3(f0)(1)=U(qfun)(1)
+    >=S(qfun)(1)>=qfun(qfun(1))=qfun(M)>=H_P(M).
+The penultimate inequality is fast empty-prefix strong growth at
+input 1; the source comparison is used only at M>=3. The true actual
+program is solely W(S)(f0), whose real initial line has length 1.
+U and qfun are numerical lower bounds and are NOT separately supplied
+as physical arguments with unproved endpoint contracts.
+
+[固定输入的历史段落在本阅读版省略；自然输入及完整推导见本目录三篇主文。]
+
+8. Audit status and unresolved main target
+------------------------------------------
+The low open fan, four-type and compressed six-type seams were read by
+the root and lifting agent. The strict-sup cap algebra was independently
+checked by root, lifting and Hardy agents. The general L-type numerical
+compiler was independently read by root, lifting and the original-rule
+auditor; the latter checked its source index, all-tail quantifiers, and
+whole-object padding, not the external geometric foundation.
+Supporting current files: lift-low-compressed-six-type-staircase.txt,
+root-low-Q11-strict-cap-proof.txt, hardy-root-low-stack-numeric.txt,
+and the older dependencies explicitly named in section 1.
+The bounded original-code regression hardy-root-C7-certificate.py also
+checks the exact path I[0][3][0][0][1]^8[7]=J_A0^6(A0), including all
+cores, steps and masks: 28 rows, 112 coordinate/step fields, 0.005 seconds.
+This checks indexing only, not the symbolic Hardy inequality; it never
+evaluates a large Hardy trajectory. Caps were 5 seconds, 100 rows,
+4000 fields and 32 basic steps, and the process has finished.
+
+[固定输入的历史段落在本阅读版省略；自然输入及完整推导见本目录三篇主文。]
+
+Appendix. Exact dependency map and reproducible small checks
+------------------------------------------------------------
+Paths below are relative to 研究源目录.
+Session files without an output/ prefix lie in
+scratch/iblp030-8h-20261015/.
+
+For source rules and termination:
+* output/iblp-01-equality-20260923/IBLP-01-no-completion-proof.zh-CN.md,
+  sections 1--2 define safe D, sections 3--7 prove full-copy/cut closure
+  and quiet scanning, section 8 verifies every A0[n] seed.
+* output/iblp-01-equality-20260923/IBLP-01-BMS-upper-bound.zh-CN.md,
+  sections 3.1--3.3 define arbitrary covers; sections 4--7 preserve them;
+  section 8 gives the nonempty strict simulation, with equation (8.4)
+  the exact B_(n+2)[2+n(n+1)/2] cover used here.
+* hardy-root-continuation-interface.txt, sections 1--3, proves the exact
+  first-root copy conjugacy and original mark/trace conditions.
+  hardy-root-first-root-tower.txt, sections 1--2, closes the grammar;
+  section 3 proves termination without a numerical-rank inference.
+* hardy-root-typed-bms-bound.txt, section 4 equation (4.2) is the
+  type-raising identity; section 5 equation (5.1) gives precisely (2.1).
+
+[固定输入的历史段落在本阅读版省略；自然输入及完整推导见本目录三篇主文。]
+
+For actual geometry and cap:
+* output/iblp-laver-bms-20261013/lined-front-insertion.zh-CN.md,
+  headings 'Front insertion' (Chinese: 前端插入引理), the cutoff identity,
+  and low-owner reconstruction (统一重建下一次插入所需的低拥有者), equations
+  (14)--(22), supply the insertion operation. Only the unused closing
+  owner is omitted in this proof's open version.
+* lift-low-open-fan-and-typed-gap.txt, sections 1--3, proves that omission,
+  source connectors, all positive implicit edges, and the two spares.
+* lift-participating-bms-spare.txt, sections 1--5, supplies the actual
+  spare/root-packet compiler, extraction and endpoint repairs; section 8
+  records its bounded syntax regression. Its older section 6 'candidate'
+  quantitative rank argument is NOT an additional premise: use the
+  later lift-natural-relative-bms-oracle.txt section 4's induction on
+  the known BMS well-order instead, with natural all-environment base
+  contracts from sections 2--3. That proof needs no ghost-owner rank.
+  Mixed whole-object
+  admission is developed in lift-mixed-base-type1-seed.txt and
+  lift-type2-entry-relaxation.txt. Our exact-equality admissions are a
+  special case of the latter enlarged-entry statement.
+* root-low-Q11-strict-cap-proof.txt gives the complete new strict-sup
+  algebra, including the stronger A(<a) theorem. The corresponding
+  actual seams are lift-low-four-type-staircase.txt, sections 1--3, and
+  lift-low-compressed-six-type-staircase.txt, sections 1--3.
+  The ordinary-composition supremum in its final row is an inequality,
+  as explicitly corrected in (5.1) here.
+
+Reproducible tiny regression commands from the workspace root:
+  python scratch/iblp030-8h-20261015/hardy-root-C7-certificate.py
+  python scratch/iblp030-8h-20261015/hardy-root-bms-two-band-check.py
+The first verifies the exact original 28-row source identity. The second
+checks the seed-height preparation at heights 1..20, with at most 2500
+steps, five columns, 21 rows and a five-second guard. These finite checks
+test indexing and literal macro formulas; they do NOT certify the
+transfinite induction, actual elementary embeddings, or gigantic values.

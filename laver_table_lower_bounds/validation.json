@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "proof_certification": false,
+  "scope": "hashes, portable links, literal source identities, bounded mark invariants, one-row index convention",
+  "checks": {
+    "pinned_files": 100,
+    "markdown_files": 77,
+    "local_links": 423,
+    "root_identities": 2,
+    "exact_tower_terms": 6,
+    "small_two_step_entries": 25,
+    "direct_positive_marks": 1025,
+    "one_row_forest_and_index_checks": 18
+  },
+  "basic_steps": 53,
+  "peak_rows": 94,
+  "peak_fields": 1021,
+  "seconds": 0.512561,
+  "limits": {
+    "seconds": 15,
+    "basic_steps": 400,
+    "rows": 600,
+    "fields": 60000,
+    "largest_index": 7,
+    "bms_steps_per_small_case": 300,
+    "forest_integer_bits": 128
+  },
+  "proof_manuscripts": 98,
+  "large_hierarchy_evaluations": 0,
+  "laver_tables_constructed": 0,
+  "edition": "2026-10-18-natural-inputs"
+}

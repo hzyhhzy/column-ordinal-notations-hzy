@@ -6,6 +6,13 @@ Definitions, executable fundamental sequences, and proof/status documents for co
 
 The notation implementations are **SRPD, RPD, LRD, Ω-LRD3, ARD, IPD, ARD2, SPD, CWY, CWY2, Ω-CWY, ACD, CSD, ICP, FMP, CTN, DQDN and CDMN**, with the candidate/failed/pseudo-order distinctions below. The Lean proof collection still covers only **Y, RPD, LRD, Ω-LRD3, ARD, IPD and ARD2**. ARD-legacy and ARD2-legacy are retained as explicit previous editions; other Ω-LRD variants are excluded. External e0MN implementations are credited separately, not counted as inventions of this project.
 
+## Laver-table lower bounds (2026-10-18)
+
+Under **ZFC + I3**, put $\Lambda=\lim(\mathrm{BMS})$, $\alpha_1=\Lambda$ and $\alpha_{n+1}=\Lambda\omega^{\alpha_n}$:
+
+- [**BMS tower lower bounds**](laver_table_lower_bounds/01-blp-tower.zh-CN.md): $q(5)>F_{\alpha_6}(M-1)$ and $q(5)>H_{\alpha_7}(M)$, with the linked fundamental sequences and natural input.
+- [**IBLP modify-count bound**](laver_table_lower_bounds/03-iblp-modify.zh-CN.md): from the specified $S_*$, paper-guard modify plus cuts total less than $2^{q(5)}$ steps, and cuts total less than $q(5)$, retaining marked completion.
+
 ## CDMN: prefix-zero revision and local results (2026-10-10)
 
 [**CDMN — Compact Deep Mountain Notation**](notations/CDMN/definition.md) includes a self-contained four-view [NER expander](notations/CDMN/CDMN.ne-rewritten.js), independent [Python core](notations/CDMN/cdmn.py), bilingual definition, [finite-properties paper](proofs/paper/cdmn-properties.md) and [research index](research/cdmn/README.md). Both implementations now use the **prefix-zero rule**: at the active copy layer, `[0]` deletes that layer's last column; enclosing layers only replace the affected row. Positive indices are unchanged, not shifted. The default BTBMS-style, List, Full List and natural-row Count Sequence views remain available; counts fall back to BTBMS-style outside their domain. A new registration ID separates saved trees from the old zero rule.

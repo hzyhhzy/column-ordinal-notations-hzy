@@ -1,0 +1,255 @@
+> 整理阅读版 / Collected reading edition. 数学结论以本目录三篇主文为准。
+> 原有局部证明、适用条件和撤回提醒保留；旧进度文字仅作历史记录。
+> 固定输入的历史段落如有省略，逐段位置记录于 SOURCE_MANIFEST.json；
+> 主文已用原证明产生的自然参数补上相应数值推导。未新增 Lean 认证。
+
+Parallel tail packets for original IBLP: exact raw syntax and two scans
+====================================================================
+2026-10-15. This separates a useful syntactic forest macro from its
+still-unproved general actual/mark semantics. It is not a q(5) bound
+for original R=I[0][3][0]. No original rule has been changed.
+
+Companion bounded test: original-audit-root-forest-probe.py. It compares
+all cores, steps and mark sets for R and R[n], n=2..6, at macro indices
+2..5: 24 cases, including scan-before-extraction. All passed. Runtime
+0.016 seconds; peak 191 rows and 2271 stored integers; explicit budgets
+10 seconds, 600 rows, 60000 integers. The all-index arguments below are
+separate from this finite check.
+
+1. The packet must start at the FIRST IMAGE, not at the last row
+---------------------------------------------------------------
+Let A have N rows, last step L, last core c. Put
+  a=c[0], P=c[-L-1], e=c[-L],
+using Python indexing. Its full raw map f fixes x<a, maps listed middle
+points by the L-position shift, and translates x>=P by N-P.
+
+The relevant root packet is the ENTIRE row interval [e,N]. The parent
+block before it is [P,e). A packet carries all its cores, steps and
+stars. A parallel copy fixes every point <e and translates every point
+>=e by the packet offset; implicit right caps must also move if actual
+owners are being discussed. Copying only the last row is in general
+wrong: e can be far below N.
+
+For the triangular R[n] family, n>=3,
+  P=a_(n-2), e=a_(n-1),
+where a_0=4, a_j=5+j(j-1)/2 for j>=1. Thus [e,N] contains the LAST TWO
+native families, not merely the last family. Its length is 2n-1.
+The n=2 case has P=4, e=5 and a three-row packet.
+
+2. A precise raw forest macro
+-----------------------------
+Choose k>=2. Keep rows 1..e-1 and append k parallel packets [e,N].
+Then perform k-1 raw SHORT M operations from the right. Such an operation
+at the current last controller (N',P',e') deletes only that controller
+and appends images of rows P',...,e'-1 under its ordinary row map. It
+does NOT scan. Copied marks use exactly the original _copy_mark_filter,
+including its legacy paired-source guard. Finally cut the one remaining
+working controller, again without scanning.
+
+Select the following rows as the macro proceeds:
+  * all initial rows 1..e-1;
+  * immediately before each short M, all rows of its active final packet
+    except its controller;
+  * the copies of already selected source rows made by that short M;
+  * at the end, the last remaining packet except its cut controller.
+Unselected earlier parallel packets and their frozen remainders are
+discarded. Reindex the selected rows and every explicit core/mark point
+in increasing order. Call this extraction pi.
+
+RAW FOREST LEMMA. If the original first full copy is defined, then the
+short copies in this construction are defined and
+
+  pi(forest_k(A)) = cut(fullcopy^(k-1)(A)).            (2.1)
+
+Equality includes cores, steps and legacy mark sets. Consequently the
+right side is exactly the raw buffer used by original A[k]. The rule
+A[1] is deliberately excluded; it has its separate original definition.
+
+Proof structure. Induct on the number of processed roots, retaining a
+selected embedded copy of the direct raw state with a distinguished
+working controller. The remaining packets have the same external-parent
+template and differ only by translation of their internal interval.
+In one short M, the parent block is copied explicitly. A copied remaining
+parallel packet supplies the part that the direct full copy would have
+copied from the active packet. Selecting that packet's low part on the
+next round supplies precisely the next direct buffer segment. The
+original active packet's low part has already been retained, as it is
+by _copy_full. Thus one short M advances one direct full-copy stage and
+decreases the number of available packets by one.
+
+For each selected source point x the address square commutes:
+  selected_image(f_direct(x))=f_forest(selected_source(x)).
+Below the controller minimum both sides fix the point. In the middle
+both sides use the same L-position in the same selected controller core.
+In the high part a newly selected copied source row is assigned its
+translated physical address. All selected explicit references therefore
+stay selected. The remaining packet templates remain parallel.
+
+The first-copy domain condition is enough for successive raw stages:
+the new active source interval consists of images of the old source
+interval, and its new controller is the same image of the old controller.
+A middle reference was already listed and remains listed in the new
+controller; a high reference remains in the new high interval; a fixed
+low reference stays below the new minimum. Parallel templates have the
+same middle references, so the forest short copies introduce no extra
+undefined middle reference.
+
+For stars, an exact selected core embedding also preserves each p edge
+and hence every _tr trace. Marks on parallel packet copies have the same
+external trace suffix; any internal trace prefix is translated within
+its own packet. The filter uses only these p traces, membership/position
+in controller cores, the corresponding controller star, and order
+comparisons with P and a. All commute with the address square. It uses
+no physical +1 adjacency. Hence the raw star induction is exact for the
+legacy policy (and separately for the paper policy, if used consistently).
+The final distinguished controller is cut on both sides. This proves
+(2.1); it does NOT prove that the inherited stars are semantically true.
+
+3. Why one cannot silently commute an arbitrary scan with extraction
+------------------------------------------------------------------
+Native q traces use explicit p/q references, so on an explicit-reference-
+closed selection they project correctly. But mark completion also tests
+literal physical adjacency v+1 and inserts b+1,...,b+t. An arbitrary
+selection can change both notions: the next SELECTED row need not be the
+next physical row. Therefore raw equality (2.1) alone does not imply
+
+  pi(scan(forest_k(A))) = scan(pi(forest_k(A))).       (3.1)
+
+A sufficient local interface is:
+  (i) successful inherited mark packets are proper in the sense of
+      original-audit-proper-scan-interface.txt, including disjointness,
+      correct paired sources and right packets in their OWN native family;
+  (ii) every selected raw row's entire native family is selected;
+  (iii) every physical +1 used by an effective selected trace belongs to
+      the relevant selected native family, rather than a discarded gap.
+Under these hypotheses, a simultaneous scan induction makes all selected
+records agree and makes every left/right inserted point project exactly.
+Unselected native families only renumber selected identities. The earlier
+latent-ghost proof can establish (iii) from an accurate live trace and
+the full proper-packet interface: every nonterminal trace point must have
+a nonempty native record in the current scan. None of these hypotheses
+is asserted here for all original-R descendants.
+
+The initial selected prefix need not be contiguous. Its old gaps do not
+cause effective-mark ambiguity by themselves: a successful current
+record has a source at/after the scan frontier, and its decreasing trace
+has no lower unscanned record that could be substituted by assumption.
+The real issue is live scanned traces and their packet histories.
+
+4. For R itself, scanning DOES commute, for every k>=2
+-----------------------------------------------------
+R has fixed first five rows and last core (4,5,6):1. Here e=N=6, so each
+parallel packet is just one long step-1 row. Before the deferred scan,
+the selected new rows have the exact form
+  (2,3,b_(j-1),b_j):2, j=1,...,k-1, b_0=5,
+where b_j are their increasing physical addresses in the forest.
+The unselected rows are long step-1 parallel-root rows. Their cores have
+length 3>2L, so they cannot native-complete; no inherited marks exist.
+
+At the j-th selected new row, the native q-chain above p=3 contains
+exactly the selected earlier bases
+  b_(j-2),...,b_0=5,4,
+in the applicable range, and has length j. The earlier native base q
+arrows are preserved. Thus its record has exactly the same j selected
+points as the direct raw buffer. Select its entire new native family.
+Every generated mark is internal to that selected family. The unselected
+long rows remain quiet. Induction on j proves (3.1), including all new
+steps and marks, and the selected result is exactly original R[k].
+
+This proof uses the code's explicit ordinary medium-family formula; it
+does not appeal to a sample or to a general mark-preservation assertion.
+
+5. A quiet-copy lemma and all second expansions R[n][k]
+------------------------------------------------------
+Write q(r)=row_r[-2]. Say the active controller is a q ribbon when its
+ENTIRE increasing core is a consecutive q chain: for every consecutive
+core pair x<y, q(y)=x. Assume also:
+  Q1. All current rows are saturated: for every native-eligible row,
+      q(e_r)<=p_r, with its usual central pair p_r,e_r.
+  Q2. The first full-copy address map is defined.
+  Q3. In the active copied interval, no native-eligible row has e_r=a,
+      where a is the controller's minimum.
+
+Then every full raw copy is quiet and has the same three properties for
+its next controller. The corresponding parallel-packet forest short
+copies are quiet as well.
+
+Proof. For a copied row, the new central pair is f(p_r),f(e_r), since f
+is strictly increasing on its defined domain and core length/step do not
+change. If e_r<a, all relevant points are fixed. If a<e_r<P, e_r is a
+listed non-first source point of the controller. The q-ribbon condition
+on both the source and target core portions gives
+  q(f(e_r))=f(q(e_r)).
+If e_r>=P the copied row at f(e_r) itself gives that same equation.
+Thus saturation follows from q(e_r)<=p_r. The only exceptional middle
+boundary is e_r=a: q(f(a)) need not equal f(q(a)); this is why Q3 is
+explicit, not an omitted edge case.
+
+For successive controller-core points, the same argument preserves the
+q-ribbon condition: the right point of any such pair is not the minimum.
+The new controller minimum is f(a), and injectivity preserves e_r!=a
+for every newly copied eligible row. The next active source interval is
+entirely made of these copied rows, so Q3 persists. Q2 persists by the
+domain argument of section 2. Earlier unchanged rows were already quiet.
+Parallel copies preserve the ribbon and Q3 by translating their complete
+tail packet; the short-M argument is the same on its copied subinterval.
+Its next active source interval is again newly copied. This proves the
+claim for any finite number of raw stages.
+
+Every R[n], n>=2, satisfies Q1--Q3. This can be checked uniformly from
+the triangular formula in hardy-root-formula.py. The last controller has
+source portion
+  2,3,a_0,...,a_(n-2)
+and target portion
+  a_(n-1), a_n, a_n+1,...,a_n+n-2.
+Both portions and their joining edge are consecutive q chains. For n=2
+this reads (2,3,4 ; 5,6,7). In all copied eligible rows the first image is
+strictly above a=2. Every ordinary native central gap is an already
+saturated consecutive root-chain gap, and all middle references in the
+copy interval are listed source points. Thus Q1--Q3 hold, including the
+small n=2 exception in the interval lengths.
+
+Consequently for ALL n,k>=2, both the direct raw buffer for R[n][k]
+and its delayed-scan forest are saturated. A scan begins with an empty
+record dictionary. No native record is ever added, so no mark completion
+can fire either, regardless of retained masks. The whole scan is the
+identity. Equation (2.1) therefore already implies exact full output
+equality for R[n][k], including the original legacy masks.
+
+This is a two-level result, not a closure theorem after arbitrary cuts
+or [1] steps, and not a claim that all later controllers are q ribbons.
+
+6. The precise actual obstruction has NOT disappeared
+----------------------------------------------------
+The forest macro removes the need to implement an unknown number of full
+copies by blindly repeating a partial M. It can consume a known finite
+parallel forest obtained from an auxiliary E construction. It does not
+automatically provide that E permission at a low enough cap, nor does it
+automatically certify all legacy stars copied by each short M.
+
+In particular the already proved actual nine-row counterexample in
+original-audit-strict-open-counterexample.txt still lies INSIDE a short
+copy. Its controller has P=6, e=8 and a=1. The offending marked source is
+row 6, which belongs to [P,e)=[6,8), not to the omitted tail. A short M
+therefore keeps exactly the same unsupported legacy mixed star. Its
+open source agreement fails at kappa_1<kappa_2 by the explicit actual
+calculation in that file. This is NOT an R-reachable counterexample, but
+it decisively rules out a generic 'short M repairs legacy mark safety'
+argument. Restricting the copied source interval is insufficient.
+
+Extracting nonadjacent selected rows also changes implicit right
+endpoints. This cannot be dismissed by quoting the unmarked BMS spare
+argument alone. However the subsequent local lemma
+original-audit-open-extraction-repair.txt handles it for an ALREADY valid
+open bounded certificate: repair F to G(F) at crit(G)=F(alpha), where
+alpha is the row's central source endpoint. Its restriction to V_alpha
+is unchanged exactly, so every bounded trace/open mark is preserved.
+This removes the extraction obstruction under those explicit premises;
+it does not supply the still-missing original legacy mark premise.
+
+Thus this note establishes exact raw combinatorics, exact full scans on
+R and the triangular R[n] family, and an explicit interface for later
+scans. The missing general original-R bridge is now concentrated in
+actual inherited-mark safety and scan packet closure, rather than the
+number of copies or the elementary forest layout. Implicit-cap extraction
+has the separate conditional repair just described.

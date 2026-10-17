@@ -1,5 +1,13 @@
 # Snapshot validation · [中文版](VALIDATION.zh-CN.md)
 
+## 2026-10-18 Laver lower-bound collection
+
+Run the scoped read-only check with:
+
+    python -B laver_table_lower_bounds/tools/validate.py
+
+The [receipt](laver_table_lower_bounds/validation.json) records 100 pinned files, 423 local links, six exact tower terms, 25 small two-step original IBLP entries and 18 one-row BMS/index checks. The run used 53 original basic steps, peaked at 94 rows and 1,021 fields, and finished in under two seconds. No large hierarchy or Laver table was evaluated. This validates packaging and finite syntax, not the ZFC + I3 paper proofs or a Lean theorem. See the [collection's validation scope](laver_table_lower_bounds/VALIDATION.md).
+
 ## 2026-10-10 CDMN prefix-zero revision
 
 CDMN is a **globally well-ordering-open candidate**, not an additional Lean-certified system. JS and independent Python now share the prefix-zero rule; positive indices remain unchanged. The four-view NER file is rebuilt from local sources and uses a separate rule-version registration ID. Its default BTBMS-style view, List, Full List and natural-row Count Sequence view are retained. Three historical fixture paths were migrated without changing their target graphs.

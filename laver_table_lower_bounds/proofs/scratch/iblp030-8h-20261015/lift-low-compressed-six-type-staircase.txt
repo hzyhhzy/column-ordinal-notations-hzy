@@ -1,0 +1,75 @@
+> 整理阅读版 / Collected reading edition. 数学结论以本目录三篇主文为准。
+> 原有局部证明、适用条件和撤回提醒保留；旧进度文字仅作历史记录。
+> 固定输入的历史段落如有省略，逐段位置记录于 SOURCE_MANIFEST.json；
+> 主文已用原证明产生的自然参数补上相应数值推导。未新增 Lean 认证。
+
+2026-10-15. Compressing the fourth environment gives two more genuine types.
+
+Dependencies: lift-low-four-type-staircase.txt, including A(<a)<theta8,
+and the same natural mixed-base E/full-band compiler. No unrestricted
+type iteration or full original-R estimate is claimed.
+
+1. A low replacement for the jump of K o K
+-----------------------------------------
+Put T=j10(j3), rho0=j10(gamma3). The established strict-cut identity
+j3 equiv_(gamma3) (j o j) transports to
+  T equiv_(rho0) (K o K).
+Exact application values give
+  T(k0)=mu, T(k2)=rho0, T(mu)=a.
+Because k1<k2, T(k1)<rho0, so the T SIDE of the strict-cut equality
+legitimately yields T(k1)=K(K(k1))=theta5. This also proves
+theta5<rho0; it must not be silently assumed to justify the read.
+Since k3<mu and v=K(<k2)<mu, we also have
+  T(k3)<a, T(v)<a.
+The actual order is mu<theta5<rho0<T(k3)<T(v)<a, using k3<v.
+
+2. Same fourth admission, smaller closed fourth output
+-------------------------------------------------------
+Set Z=A(T). Because A(k0)=k2 and T has critical point k0, Z has
+critical point k2 and fixes k0,k1. Read at the actual A-images:
+  Z(k2)=A(mu), Z(k3)=A(theta5),
+  Z(a)=A(rho0), Z(c)=A(T(k3)).
+Every displayed point lies below theta8, because its A-argument is <a.
+The environment Z may replace Q o Q in level 4 of the preceding note.
+Its helper and first left are unchanged, while its CLOSED output is the
+actual critical point A(rho0), no longer the coarse theta8 endpoint.
+This is an actual background replacement, not equating K o K with T
+above their strict cutoff.
+
+3. Fifth and sixth environments
+--------------------------------
+The additional exact rows are
+
+ level  environment   helper       first left       chosen closed output
+   4    Z             A(mu)        A(theta5)        A(rho0)
+   5    Z o V0        A(theta5)    A(rho0)          A(T(k3))
+   6    Z o Q         A(rho0)      A(T(k3))         theta8
+
+For row 5 all three values follow from V0(k2)=k3,V0(k3)=a,V0(a)=c.
+Its ordinary closed cap A(T(k3)) is <theta8.
+
+For row 6, Q(k2)=a,Q(k3)=c give the first two entries. The coarse
+value Z(Q(a)) need not be used. Since Q(<a)=A(v), monotonicity gives
+  (Z o Q)(<a)<=Z(Q(<a))=Z(A(v))=A(T(v))<theta8.
+The first comparison is deliberately an inequality: the ordinary actor
+Z need not be continuous at the supremum Q(<a). For each source point
+C<a, Q(C)<A(v), so the concrete payload cap Z(Q(C)) is strictly below
+A(T(v)), independently of any continuity at that supremum.
+The low-fan payload has a strict source cap <a at every numerical input
+after g(m)>=2 preheating. Thus each actual row-6 payload cap is strictly
+below theta8, and the actual critical endpoint theta8 is legitimate.
+
+At each added level, the helper is exactly the preceding type's new
+admission, and first left equals its closed output. Every lower domain
+coordinate is smaller than that helper and therefore fixed by its zero
+copy actors. This checks the actual whole-oracle seam, not merely a
+scalar numeric inequality. The existing full-band contract consequently
+applies with the same whole-object quantifiers.
+
+4. Remaining boundary
+---------------------
+The finite stack now reaches six higher-type BMS diagonals above the low
+scalar S. To go farther, one needs another concrete low environment or
+a new closed cap adapted to the next helper/entry pair. The construction
+does not assume that all finite T variants stay below a, nor that the
+current theta8 output can be fed into the next oracle without transport.

@@ -1,0 +1,218 @@
+> 整理阅读版 / Collected reading edition. 数学结论以本目录三篇主文为准。
+> 原有局部证明、适用条件和撤回提醒保留；旧进度文字仅作历史记录。
+> 固定输入的历史段落如有省略，逐段位置记录于 SOURCE_MANIFEST.json；
+> 主文已用原证明产生的自然参数补上相应数值推导。未新增 Lean 认证。
+
+Marked entry into paper-M: successor-closed forest extraction
+============================================================
+2026-10-16. This note concerns INITIALIZATION of the exact original
+S=R[k][n], k,n>=2, in the paper natural-cutoff domain. It does not claim
+that every later original IBLP step has a paper-M simulation. In
+particular it is not a completed Hardy/FGH comparison for original R.
+
+All actual embeddings below belong to the SAME Iter(j). All named
+cardinals and the final cap remain below the supplied common bound C.
+Application is G(F); ordinary composition is written with a circle.
+
+1. A stronger repair identity than the old open-map observation
+-------------------------------------------------------------
+For embeddings G,F and c=crit(G), one has
+
+                  G(F) equiv_c F,                            (1.1)
+
+where equiv is Laver MEMBERSHIP cutoff:
+  A equiv_c B iff for all x,z in V_c,
+                    x in A(z) iff x in B(z).
+Indeed G(x)=x and G(z)=z. Application covariance gives
+G(F)(z)=G(F)(G(z))=G(F(z)). By elementarity,
+  x in G(F(z)) iff G(x) in G(F(z)) iff x in F(z).
+There is no assumption F(z) in V_c. This last point is why (1.1)
+proves the required membership statement rather than merely an ordinary
+open function restriction.
+
+Suppose an old row r has implicit cap c=theta_(r+1)=F(alpha),
+where alpha is its central source endpoint. A selected extraction changes
+its next named point to c'>c but retains all explicit row points. If G
+has crit(G)=c and G(c)=c', then F'=G(F) realizes exactly the same explicit
+edges and the new implicit edge alpha -> c'. Every other row target
+is <c, so those edges are unchanged. Also F' equiv_c F by (1.1).
+If c'=c, keep F unchanged.
+
+2. Successor-closed-factor extraction theorem
+-------------------------------------------
+Assume a finite actual marked pattern P has strong natural certificates.
+Choose a set U of rows, including the required initial two rows, with:
+
+  E1. Every explicit point/reference of a selected row is selected (or
+      is the fixed initial point 0); all factors of retained exact
+      p-traces are selected; all their syntactic trace arrows commute
+      with increasing reindexing.
+  E2. For EACH factor y occurring in any retained mark word, the physical
+      point y+1 is also selected. Thus the successor of y is unchanged,
+      not merely the next SELECTED point after y.
+  E3. The final retained row and its old implicit cap are retained.
+
+The implicit cap may be treated as a separately retained endpoint, not
+as an additional row. Every cap repair in section 1 is available in
+the same Iter(j), as is proved constructively in section 3.
+
+CONCLUSION. After increasing reindexing and repairing the implicit caps
+of the selected rows independently, the exact extracted syntax again
+has strong natural membership certificates. Its last owner and final
+cap are unchanged. In particular the extraction introduces no final
+potential increase.
+
+PROOF. A factor row y is not repaired: E2 retains exactly its old next
+point theta_(y+1). Consequently every factor in every retained word W
+is globally the old embedding, and W itself is unchanged. Its natural
+cutoff is
+  Delta(W)=j_(v0) circle ... circle j_(v_(t-1))(theta_(v_t+1)).
+The final factor and its next point are unchanged, so Delta is unchanged.
+The inherited trace remains the exact trace by E1. The natural-cutoff
+bound says
+                  Delta(W)<=theta_(y0+1)<=theta_r<c,
+where y0<r is the mark point in carrier row r and c=theta_(r+1) is that
+carrier's OLD implicit cap. If the carrier is repaired, (1.1) therefore
+gives F' equiv_Delta F equiv_Delta W. If the carrier is itself a factor
+elsewhere, E2 prevents its repair, so there is no simultaneous dependency
+problem. The remaining actual row and critical-point equations follow
+from section 1. E3 leaves the last owner untouched. This proves the
+theorem. No global equality between a repaired carrier and a factor is
+needed; the strong membership identity is exactly what is preserved.
+
+This theorem is not valid for arbitrary reference-closed extraction.
+If a factor's physical successor is skipped, both the factor's owner
+and its natural cutoff can change; ordinary open agreement is then not
+enough. That was the gap in applying the old open-extraction lemma
+directly to the paper marked domain.
+
+3. Endpoint transport with no unknown search or M waiting
+-------------------------------------------------------
+Qi's Lemma 2.11 gives an explicit finite construction using the ORIGINAL
+actual forest, before any owner is repaired. Here is the recursion.
+
+For every adjacent pair theta_i<theta_(i+1), build an embedding T_i with
+  crit(T_i)=theta_i, T_i(theta_i)=theta_(i+1).
+The first standard row supplies T_0. Having constructed the earlier T's,
+inspect row i. Its last two target points are theta_i,theta_(i+1), so
+its owner F_i sends two known source points theta_u<theta_v, with
+u<v<=i, to these two target points. From previously available adjacent
+transporters construct G_(u,v):theta_u -> theta_v by the recurrence
+  G_(u,u+1)=T_u,
+  G_(u,t+1)=T_t(G_(u,t))       (u+1<=t<v).
+Application covariance and the critical-point rule prove each step.
+Then set
+                         T_i=F_i(G_(u,v)).
+This is the required adjacent transporter. All dependencies have indices
+strictly below i. Finally compose the T's by the same finite recurrence
+to obtain G_(p,q) for every gap theta_p<theta_q to be repaired.
+
+Thus the repair has an explicitly indexed finite straight-line recipe,
+using only the supplied finite pattern's own rows and index intervals.
+It does not enumerate critical points until an unknown event, and it
+does not iterate modify/M until a canonical form appears. All actors
+remain in Iter(j). These algebraic initialization constructions are not
+being counted as paper-M transitions and do not manufacture extra
+counted descent steps. They merely prove membership in the admissible
+actual-pattern domain below the same final cap.
+
+4. Exact forest induction for factor-successor closure
+------------------------------------------------------
+Write SC for: every mark y of every selected carrier r has BOTH y and
+y+1 selected. For the present entry all marks are direct. The following
+proof does not need an extra claim that the final selected set is convex
+in every transported family.
+
+At the first R[k] forest the raw state has no marks. The root-specific
+native-only scan theorem selects every row of each family born at a
+selected raw row. Its marks point to earlier members of that same
+family; y+1<=r therefore lies in the selected family. This proves SC.
+
+At the second forest the initial selected prefix is contiguous. Each
+parallel tail packet is a union of two whole native families; their
+direct marks point within those families. Thus every selected head in
+that prefix has its successor selected, and every pending live packet
+has all its own marks internal to the packet.
+
+There are only two ways to add selected rows in the exact forest macro:
+
+  A. Select all of the current active packet except its controller.
+     The selection is a contiguous interval. Every direct mark of a
+     retained row has its head y in that packet and y+1<=r strictly
+     below the omitted controller. Hence both y and y+1 are selected.
+
+  B. Select images of already selected source rows under a short copy.
+     If copied carrier r retains mark y, the all-factor-high lemma in
+     section 5 gives P<=y<r<e. Inductive SC supplies selected source
+     row y+1, which also belongs to the source interval [P,e).
+     The high map is translation, so f(y+1)=f(y)+1. Thus the image of
+     the selected source successor is exactly the physical successor
+     required for SC at the new factor. Old selected rows and their
+     physical successors are unchanged.
+
+Whole live packets transported by this same copy retain the internal
+direct-mark property. The final remaining packet minus its controller
+is case A. The final controller cut cannot remove a successor y+1 of
+any surviving carrier, since y+1<=r<the cut row. Induction on precisely
+n-1 short copies proves SC for the second forest. This is the needed E2.
+
+It is not necessary to repair an entire equal-owner family in lockstep.
+The all-factor-high premise is essential: this argument is not a theorem
+for a general retained mixed legacy mark.
+
+5. Application status for the exact two-level original entry
+----------------------------------------------------------
+For the first R[k] forest, all old marks are empty; the deferred scan is
+native-only. The old all-index root-forest proof selects every created
+native family in full. Within a family the marks are direct and all
+owners are literally the same. They therefore have strong natural
+certificates before extraction, without using any questionable legacy
+mixed-copy guard. Section 4 gives E2 and section 2 yields an actual
+strong-natural realization of EXACT original R[k] below the same cap.
+
+For the second R[k][n] forest, the exact quiet-copy syntax and scan
+identity for all k,n>=2 were established in
+  original-audit-root-forest-interface.txt, section 5.
+For the chosen application k,n>=3 is sufficient. The native triangular
+formula has controller minimum a=2 and every direct mark's paired source
+delta>=3>a. In any copied marked row, suppose more generally delta>=a.
+If head y>=P, the factor is high and copied in full. If y<P then either:
+  * y<a, impossible because delta<y and delta>=a; or
+  * a<=y<P, where the only remaining legacy branch requires f(delta)<=a.
+    But f(delta)>=f(a)>a, so it rejects the mark.
+Thus every retained copied mark is direct and all-high. At the next
+active source block the minimum is f(a), and every retained paired
+source is f(delta)>=f(a), so the induction repeats. Complete parallel
+packets preserve the starting inequality and their internal marks.
+This directly checks the actual _copy_mark_filter branches, not just
+an inferred resemblance to the paper guard.
+
+On a short-copy source [P,e), a retained head y and carrier r satisfy
+P<=y<r<e; hence y+1 is also copied and f(y+1)=f(y)+1. Carrier, factor,
+and final-factor successor all transport under the same actual actor.
+Application congruence therefore transports the STRONG natural cutoff
+certificate exactly. There is no appeal to open bounded maps here.
+
+Section 4 gives E2 for the final selection. The quiet scan is the
+identity, so it introduces no additional issue. Section 2 consequently
+gives exact original S=R[k][n] in the strong paper domain. This agrees
+with the independent proof in marked-entry-initializer.txt, sections
+2--4; its branch analysis has been checked against original iblp.py.
+
+The entry line/parallel-packet resource and cap<kappa_4 are separate
+inputs from local-budget2-initializer.txt. This note does not create
+those resources. Subject to those previously audited actual resources
+and the ordinary forest/native realization lemmas, no strong-natural
+membership gap remains at extraction for the exact two-level entry.
+
+6. What the entry would and would not give
+----------------------------------------
+If exact S has the strong-natural certificate, the later descent may
+use PAPER short M and cuts. It need not agree with later legacy IBLP
+expansions. The previously proved bounded last-owner potential can then
+bound that paper descent by <2^q(5), with its own endpoint convention.
+This is an admissible paper-descent bound for exact original S, not a
+claim that it equals or dominates an original-IBLP Hardy computation.
+An independent numerical simulation/comparison is still required for
+the latter. In particular no passage from 'the input is R[k][n]' to
+'its future paper trajectory computes H_R(k)' is licensed here.

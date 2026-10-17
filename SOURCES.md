@@ -1,5 +1,9 @@
 # Sources, versions and licenses · [中文版](SOURCES.zh-CN.md)
 
+## Laver lower-bound collection (2026-10-18)
+
+[laver_table_lower_bounds](laver_table_lower_bounds/README.md) collects the three requested research routes and their local proof dependencies. Its manifest records original and collected hashes, relocated links and the line ranges of obsolete prescribed-input paragraphs omitted from the reading editions. The three main papers derive the natural-input statements explicitly. Original research files remain outside the repository unchanged. The original user-supplied IBLP kernel and the local parent-table BMS reference are pinned for bounded replay; no external PDF or new Lean theorem is imported. See the collection's [bibliography and attribution](laver_table_lower_bounds/BIBLIOGRAPHY.md).
+
 ## CDMN naming, rule revision and source scope (2026-10-10)
 
 CDMN means **Compact Deep Mountain Notation**, the strict-guard candidate previously named **CDM** in the `compact-fs-design-20261008` research snapshot. Names, filenames, registration ID, displayed top and JS factory are now consistently CDMN; the former name is recorded here only as provenance. The original research files are preserved outside the package.

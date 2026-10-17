@@ -6,6 +6,13 @@
 
 记号实现收录 **SRPD、RPD、LRD、Ω-LRD3、ARD、IPD、ARD2、SPD、CWY、CWY2、Ω-CWY、ACD、CSD、ICP、FMP、CTN、DQDN、CDMN**，其中候选、失败版本和伪序记号明确区分；Lean 证明仍只覆盖 **Y、RPD、LRD、Ω-LRD3、ARD、IPD、ARD2**。另保留旧版 ARD-legacy、ARD2-legacy，其他 Ω-LRD 版本不收录。外部 e0MN 实现单独署名，不算本项目发明。
 
+## Laver 表下界整理（2026-10-18）
+
+在 **ZFC + I3** 下，记 $\Lambda=\lim(\mathrm{BMS})$、$\alpha_1=\Lambda$、$\alpha_{n+1}=\Lambda\omega^{\alpha_n}$：
+
+- [**BMS 指数塔下界**](laver_table_lower_bounds/01-blp-tower.zh-CN.md)：$q(5)>F_{\alpha_6}(M-1)$，且 $q(5)>H_{\alpha_7}(M)$，采用文中的基本列及自然输入。
+- [**IBLP modify 次数界**](laver_table_lower_bounds/03-iblp-modify.zh-CN.md)：从指定初值 $S_*$ 出发，保留标记补全的 paper-guard modify＋删行总次数小于 $2^{q(5)}$，其中删行次数小于 $q(5)$。
+
 ## CDMN：前缀零项修改及局部结论（2026-10-10）
 
 [**CDMN — Compact Deep Mountain Notation，紧凑深层山脉记号**](notations/CDMN/definition.zh-CN.md) 收录独立四视图 [NER](notations/CDMN/CDMN.ne-rewritten.js)、[Python 核心](notations/CDMN/cdmn.py)、双语定义、[有限性质论文](proofs/paper/cdmn-properties.zh-CN.md)及[研究索引](research/cdmn/README.zh-CN.md)。两份实现已同步为**前缀零项版**：活动复制层的 `[0]` 删除该层末列，外围只替换受影响的行；正指标不变、不平移。保留默认“BTBMS式”、“列表”、“完整列表”和自然数行“计数序列”，计数范围外自动回退 BTBMS 式。NER 使用新注册 ID，隔离旧零项规则下的保存树。

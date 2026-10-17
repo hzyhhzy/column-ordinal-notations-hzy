@@ -1,0 +1,185 @@
+> 整理阅读版 / Collected reading edition. 数学结论以本目录三篇主文为准。
+> 原有局部证明、适用条件和撤回提醒保留；旧进度文字仅作历史记录。
+> 固定输入的历史段落如有省略，逐段位置记录于 SOURCE_MANIFEST.json；
+> 主文已用原证明产生的自然参数补上相应数值推导。未新增 Lean 认证。
+
+Original IBLP: exact first-root continuation substitution
+=======================================================
+2026-10-15. Companion to hardy-root-bms-interface.txt.
+
+Status. Sections 1--5 are an exact syntactic interface, with the stated
+admissibility hypotheses. Section 6 explains the remaining obstruction. This
+is NOT an upper bound for original I[0][3][0], nor a proof of its termination.
+Original source: 所固定的原版 iblp.py（见 SOURCE_MANIFEST.json）.
+No change is made to its mark filter, its [1], or its native completion.
+
+1. Terminology and hypotheses
+----------------------------
+A row is (c_0<...<c_s=i; L), with its original set of marked coordinates.
+Its pivot is c_(s-L), and its first image is c_(s-L+1).
+Call a row quiet if running _native_completion on it inserts no row. This is
+equivalent to either s+1>2L, or the ordinary parent of its first image being
+at most its pivot. A quiet pattern has every row quiet.
+
+An admissible family of payloads is assumed closed under original O_n and cuts,
+has 1<=L<=s, and has the following q=0 property:
+
+  s=L implies L=1 (a two-coordinate row).
+
+Consequently every non-successor payload has a positive pivot. Assume also
+that its members are quiet. The original initial pattern itself has these
+properties. The following easy preservation facts explain the hypothesis,
+but do NOT alone prove its closure for the full original 030 domain:
+
+* The copying map is strictly increasing on its domain, so it preserves s,L.
+* Native completion inserts a family. If its added predecessor chain is
+  a>s_1>...>s_t>p, the resulting family rows have their new first-image
+  predecessor exactly equal to the new pivot. Thus they are quiet.
+* All new rows are scanned; old prefix rows are unaltered except by increasing
+  address renaming, which does not affect the quiet predicate.
+* A nonempty native packet starting from q=s-L>=1 produces q>=1 throughout.
+  The q=0,L=1 case has first image equal to the current row, whose parent is
+  its pivot, so it inserts no packet. Thus no q=0,L>1 row is introduced.
+* Mark completion is followed by native completion. However its set unions
+  require a freshness/disjointness lemma before one may assert that q rises
+  by exactly the packet length. That lemma is not supplied here. In
+  particular we do not claim the full original I domain admissible merely
+  from these bullets. For A=I01 and its descendants, the previously proved
+  safe-D closure supplies all hypotheses after the first root expansion;
+  A itself can be checked directly.
+
+The statements include first-copy failure: both renamed and original copies
+fail together, and both use the original fallback cut. Mathematical rules
+omit only the implementation's 200000-step trace timeout.
+
+2. Two substitutions, which must not be confused
+----------------------------------------------
+Let B be a nonempty quiet pattern with first row (0,1):1. Put b=|B|.
+
+(a) Frozen global-zero concatenation B ⊕ P renames P by
+       iota(0)=0, iota(i)=b+i for i>0.
+    All steps and marks are renamed in the same way.
+
+(b) First-root continuation J_B(P) consists of B followed by P renamed by
+       phi(0)=1, phi(i)=b+i for i>0.
+    In particular J_B(empty)=B.
+
+(c) Last-root graft L_B(P), used by I021's actual T_m blocks, instead has
+       tau(i)=b+i for ALL i>=0.
+
+Only (b) gives the exact FGH equation below. Substituting (c) for (b) is the
+previously identified freezing/port mistake.
+
+3. Exact one-step equations
+--------------------------
+For a nonempty admissible payload P and n>=2:
+
+  P non-successor:
+    O_n(J_B(P)) = J_B(O_n(P)).                            (3.1)
+
+  P=Q+(0,r):1, a genuine source successor:
+    O_n(J_B(P)) = J_B(Q) ⊕ ... ⊕ J_B(Q) (n copies).      (3.2)
+
+Equation (3.1) also holds for original n=1. Equation (3.2) intentionally does
+NOT claim a whole-block equation for n=1: original [1] copies only its first
+source row, not an entire block. This is irrelevant to Hardy input >=2.
+
+Proof of (3.1). The source pivot p is positive. The target pivot is b+p>b,
+so every copied row is in the payload. On all payload row coordinates the
+copy maps satisfy f_target(phi(i))=phi(f_source(i)). The coordinate 0 is
+handled by the controller's own listed coordinates, never by a nonexistent
+source row 0. Address comparisons are preserved.
+
+Every trace used by _copy_mark_filter stops at its threshold, which is at
+least phi(0)=1. It never reads a row of B: positive payload indices exceed b,
+and upon first reaching address 1 its loop condition is false. The original
+guard compares positions in row lists and inequalities of coordinates, hence
+commutes with phi. In _mark_completion, every t+1 test has t>0 in source:
+it uses an intermediate, not the final minimum of a strictly decreasing
+trace. Therefore phi(t+1)=phi(t)+1. This checks the only apparent non-affine
+hazard at source 0. Native parent-chain walks stop at a threshold >=1 and
+likewise never inspect B. Newly inserted addresses are positive and affine.
+This proves raw-copy, frozen scan, and completion conjugacy. First-copy
+failure and its cut fallback are also conjugate.
+
+Proof of (3.2). The last target row is (1,b+r):1. Its copy map fixes 0 and
+translates every positive address by b+r-1. Its copying interval begins at
+row 1. Thus the n-1 complete raw copies, after controller deletion, leave
+exactly n global-zero-frozen copies of J_B(Q). Each copy is quiet: B is
+quiet, and Q's parent tests are unchanged by phi. The final frozen scan
+therefore records no native packet. With the record empty, mark completion
+adds nothing. Hence raw copies equal the final original result.
+
+4. Hardy evaluation and the generalized FGH
+-----------------------------------------
+Use precisely the original Hardy convention:
+
+  H_empty(x)=x;
+  H_(Q+successor)(x)=H_Q(x+1);
+  H_P(x)=H_(O_x(P))(x) otherwise.
+
+Copy-failure cuts are in the third clause, not numerical successors.
+Frozen concatenation satisfies H_(U⊕V)(x)=H_U(H_V(x)). Every nonempty B
+therefore has base h(x)=H_B(x)>=x+1 whenever its computation terminates.
+
+Define a generalized hierarchy by finite evaluation, or by well-founded
+recursion when the relevant payload descent is already known well-founded:
+
+  F^h_empty(x)=h(x);
+  F^h_(Q+successor)(x)=(F^h_Q)^x(x);
+  F^h_P(x)=F^h_(O_x(P))(x) for P non-successor.
+
+Then for every x>=2,
+
+                 H_(J_B(P))(x) = F^h_P(x).              (4.1)
+
+More precisely their finite evaluation trees correspond, so termination on
+one side is equivalent to termination on the other. No independent proof
+of well-foundedness is smuggled into (4.1). At successor nodes the x copies
+are evaluated from right to left, each next copy receiving the previous
+copy's output; hence this is functional iteration, not x*h(x).
+
+The convention here has x successor iterations, not the common x+1. It is
+important to retain this difference when importing a numerical bound.
+
+For B=(0,1):1, h(x)=x+1. Thus the simple operation
+  W(P)=(0,1):1 followed by every coordinate of P shifted by 1
+implements exactly the x-iteration FGH over original P as an original Hardy
+computation. No BMS identification is required for this exact statement.
+
+For B=A=I[0][1], h(x)=H_A(x)<=g(g(x)), x>=2, by the separately established
+BMS interface in hardy-root-bms-interface.txt. Consequently J_A(P) is a
+genuinely BMS-oracle-indexed continuation, not merely independent repetitions
+of A. This does not by itself give a pointwise comparison with a conventional
+BMS-indexed FGH, because the payload basic sequences still need simulation.
+
+5. Bounded machine regression
+-----------------------------
+hardy-root-continuation-certificate.py tests 180 descendants each of A and R,
+indices 0,1,2,3, and atoms one, omega, and A. It performed 3222 exact
+nontrivial substitution comparisons, with zero failures. All 360 source
+states were native-quiet. Run time 0.403 seconds; limits 10 seconds,
+180 states per root, 150 rows, 12000 coordinate fields, index <=5.
+This is a regression for the proof, not a proof of arbitrary closure.
+
+6. Why this has not yet bounded I021 or I030
+------------------------------------------
+For W=I[0][2][1], original W[n]=T_n, where T_n consists of n copies of A
+with ALL coordinates of copy j shifted by 4j. Thus T_2=L_A(A), not J_A(A).
+The difference is source zero attached to the last row 4 instead of the
+first row 1. On a relative payload successor (0,r):1, its global row is
+(b,b+r):1 and replication begins at row b, not row 1. It copies B's last
+row together with the payload predecessor, retaining B^- as shared context.
+
+For the simplest boundary T_2[0]^3, its original [n], n>=2, is exactly
+  (0,1):1 (0,1,2):1 (0,1,2,3):2
+  (2,3,4):1 (2,3,5):1 ... (2,3,n+3):1.
+Already this fan is not in the previously proved safe-D class; e.g. n=2
+violates its source barrier. The lower caller must retain a continuation
+credit or be represented by a larger closed BMS cover. Merely assigning
+every copied row its original A-block color loses that credit and fails.
+
+A proof that moving the attachment from last row to first row is harmless
+would need an explicit macro simulation with an inflated payload, not an
+ordinal or lexicographic comparison. Neither such a simulation nor a finite
+outer recursion bound for T_n is established here.

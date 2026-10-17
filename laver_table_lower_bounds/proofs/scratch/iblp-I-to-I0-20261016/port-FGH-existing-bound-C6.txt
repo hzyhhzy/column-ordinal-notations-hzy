@@ -1,0 +1,158 @@
+> 整理阅读版 / Collected reading edition. 数学结论以本目录三篇主文为准。
+> 原有局部证明、适用条件和撤回提醒保留；旧进度文字仅作历史记录。
+> 固定输入的历史段落如有省略，逐段位置记录于 SOURCE_MANIFEST.json；
+> 主文已用原证明产生的自然参数补上相应数值推导。未新增 Lean 认证。
+
+An original-IBLP FGH consequence of the established C[7] Hardy bound
+==================================================================
+2026-10-16. parameter_jump_audit. Numerical translation only.
+
+THEOREM, under precisely the explicit foundations of the established
+hardy-root-C7-q5-single-file.txt theorem:
+
+  R=I[0][3][0],  A0=I[0][1],  C=R[0][1]^8,
+
+[固定输入的历史段落在本阅读版省略；自然输入及完整推导见本目录三篇主文。]
+
+F is the ORIGINAL IBLP fast-growing hierarchy with the x+1 convention:
+  F_empty(x)=x+1;
+  F_(Q+1)(x)=F_Q iterated (x+1) times, starting at x;
+  F_Q(x)=F_(Q[x])(x) when Q is not a true successor.
+Here Q+1 means a final (0,last_index):1 row, and Q[x] is the unchanged
+original full basic sequence. No fixed short-M count occurs in this
+translation. It is a proved bound for a specified strict descendant
+C[6]=R[0][1]^8[6], NOT the still-unproved F_R(10^10) target.
+
+The source C[6] is exactly J_A0^5(A0), an actual original 24-row pattern.
+The two conclusions are proved at their specified inputs;
+neither requires input monotonicity of the original Hardy hierarchy.
+
+[固定输入的历史段落在本阅读版省略；自然输入及完整推导见本目录三篇主文。]
+
+The exact original first-root substitution theorem gives, for x>=2,
+  H_(J_A0(Q))(x)=G_Q^h(x),  h(x)=H_A0(x),             (2)
+where the hierarchy on the right uses x, NOT x+1, iterations:
+  G_empty^h(x)=h(x),
+  G_(Q+1)^h(x)=(G_Q^h)^x(x),
+  G_Q^h(x)=G_(Q[x])^h(x) otherwise.
+The old proof establishes h(x)>=x+1 on integers x>=2. In fact the
+argument below only needs this lower bound, not monotonicity of h.
+
+References read directly, all in scratch/iblp030-8h-20261015:
+  hardy-root-C7-q5-single-file.txt, sections1,2,7;
+  hardy-root-continuation-interface.txt, sections3,4;
+  hardy-root-first-root-tower.txt, sections1--4.
+The well-founded grammar and exact substitution are genuine old inputs.
+The x-versus-x+1 comparison is proved below instead of being assumed.
+
+2. Literal prefix properties needed for the numerical induction
+----------------------------------------------------------------
+Write P <=pref Q when every row, step and mark of P is the corresponding
+initial part of Q, with no reindexing of the retained rows.
+
+(P1) For every nonempty original Q and input m>=2 on this closed cone,
+  cut(Q) <=pref Q[m].
+For a true successor this is equality. Otherwise the copying operation
+retains cut(Q), and the frozen completion scan starts beyond it. Hence
+no old prefix core, step or mark is modified. The special original [1]
+is not used in this statement or in the argument below.
+
+(P2) For 2<=m<=n,
+                        Q[m] <=pref Q[n].
+For true successors all terms equal cut(Q). For a non-successor put
+T_r=FullCopy^r(Q). Each FullCopy removes the old controller but retains
+cut(T_r), so the buffers cut(T_r) form an increasing literal-prefix
+sequence. The original m-th term is the frozen scan of cut(T_(m-1)),
+with the same initial scan start for every m.
+
+The scan preserves this prefix relation. At any shared scanned row its
+core/marks and every earlier queried p/q row agree; its earlier record
+also agrees. Both scans therefore make the same inherited-mark change
+and the same native-family insertion. Global insertion renaming shifts
+the remaining shared prefix in the same way. All inserted family rows
+are skipped together. An event strictly beyond the shorter buffer does
+not change an already completed earlier row. Induction over this shared
+finite scan gives P2. This is a syntactic argument including marks,
+not a deduction from ordinal comparison or numerical monotonicity.
+
+All raw copies used here are defined on the closed safe-D/J cone by
+the old closure theorem. Thus a later failed raw copy is not silently
+discarded when proving P2. Cuts preserve membership in this cone, so
+the proper prefixes used below are legitimate source patterns.
+
+3. Extensiveness and fixed-input prefix domination for G
+---------------------------------------------------------
+For every admitted Q and integer y>=2,
+                         G_Q^h(y)>=y+1.              (3)
+This follows by well-founded source induction: it holds at empty by
+h's lower bound; a true successor applies an extensive lower function
+y>=2 times; a limit uses the child induction hypothesis.
+
+At EVERY FIXED input y>=2, one also has
+           P <=pref Q  =>  G_P^h(y)<=G_Q^h(y).        (4)
+Prove (4) by well-founded induction on Q, quantified over all its
+prefixes and all y. Equality P=Q is trivial. If Q=Q0+1, then P<=pref Q0;
+the first of the y lower-function iterations is at least G_P^h(y),
+and (3) ensures further iterations cannot decrease the numerical value.
+If Q is not a successor, P<=pref cut(Q)<=pref Q[y] by P1. Apply the
+induction hypothesis to the child Q[y] to obtain (4). The empty case
+has no strict prefix.
+
+In particular (4) does NOT assume that G_Q^h is nondecreasing as a
+function of its input. Each use is at the one displayed fixed input.
+
+4. The cross-input comparison that pays for x+1 iterations
+-----------------------------------------------------------
+For every admitted Q and integers x>=2,y>=x+1,
+                        G_Q^h(y)>=F_Q(x)+1.          (5)
+Prove this simultaneously for ALL x,y by well-founded induction on Q.
+The same well-founded induction also gives F_Q(z)>=z+1 for every
+z>=2, directly from its three defining clauses. Thus every paired
+successor iterate used below remains in the domain z>=2.
+
+Empty case:
+  G_empty^h(y)=h(y)>=y+1>=x+2=F_empty(x)+1.
+
+Successor case Q=Q0+1:
+  a_0=y, b_0=x,
+  a_(i+1)=G_Q0^h(a_i), b_(i+1)=F_Q0(b_i).
+The induction hypothesis applies at every pair because a_i>=b_i+1
+and all values remain at least2. It yields a_(i+1)>=b_(i+1)+1.
+After x+1 such iterations,
+  a_(x+1)>=F_Q(x)+1.
+The target definition uses y iterations, and y>=x+1. The remaining
+iterations, if any, only increase a by (3). This proves (5).
+No single-input inequality has been used as if it held for the whole
+function: the induction hypothesis was quantified over every x,y.
+
+Limit case:
+  Q[x] <=pref Q[y]                                  by P2,
+  G_Q^h(y)=G_(Q[y])^h(y)
+            >=G_(Q[x])^h(y)                         by (4),
+            >=F_(Q[x])(x)+1                         by the child IH,
+             =F_Q(x)+1.
+Thus (5) also handles the different BASIC-SEQUENCE indices x and y;
+it does not merely repair the successor iteration count.
+
+This proof is valid for arbitrary well-founded prefix basic-sequence
+systems satisfying P1,P2 and the displayed successor convention. It
+does not appeal to ordinal monotonicity of F or H, nor to a generic
+Hardy/FGH comparison theorem requiring a different fundamental sequence.
+
+[固定输入的历史段落在本阅读版省略；自然输入及完整推导见本目录三篇主文。]
+
+[固定输入的历史段落在本阅读版省略；自然输入及完整推导见本目录三篇主文。]
+
+6. Scope and reproducibility
+----------------------------
+This is a conservative numerical consequence of the old C[7] theorem,
+not a reproof of its large-cardinal/geometric foundations. It inherits
+exactly those named foundations and uses only the new elementary
+prefix/recursion comparison to obtain an ORIGINAL x+1-FGH statement.
+
+It does not prove F_R at large input, does not claim C[6] and R have
+the same strength, and does not turn a fixed M count into FGH. No large
+function value, M trajectory or Laver table was evaluated. The only
+needed original syntax identities are already covered by the old
+bounded C[7] certificate and the exact continuation proof; no new
+program process was started for this derivation.

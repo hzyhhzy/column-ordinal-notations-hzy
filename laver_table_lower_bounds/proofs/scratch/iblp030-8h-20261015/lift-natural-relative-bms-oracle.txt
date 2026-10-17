@@ -1,0 +1,233 @@
+> 整理阅读版 / Collected reading edition. 数学结论以本目录三篇主文为准。
+> 原有局部证明、适用条件和撤回提醒保留；旧进度文字仅作历史记录。
+> 固定输入的历史段落如有省略，逐段位置记录于 SOURCE_MANIFEST.json；
+> 主文已用原证明产生的自然参数补上相应数值推导。未新增 Lean 认证。
+
+2026-10-15. Natural scalar BMS diagonal from decorated oracle prefixes.
+
+STATUS: NEW proof draft. Sections 1 and 2 are exact local calculations.
+Sections 3--6 formulate the strengthened induction needed for a genuine
+natural relative-BMS operator. They require independent audit. This does
+NOT yet simulate all finite function types or original IBLP030.
+
+Dependencies: lift-participating-bms-spare.txt, lift-E-window-ribbon.txt,
+lift-fan-source-connectors.txt, and the established front-insertion and
+ordinary E semantic lemmas. Application and ordinary composition are
+always distinguished below.
+
+1. Input linedness directly supplies the needed variable fan height
+------------------------------------------------------------------
+In the established background put K=j11 and E0=L3(K), where
+  L3: kappa3 -> a=theta6 -> c=theta7,
+  K(kappa0)=kappa2, K(kappa1)=kappa3, K(kappa2)=mu.
+Consequently
+  E0(kappa0)=kappa2,
+  E0(kappa1)=a,
+  E0(kappa2)=L3(mu)=beta0<b=tau.                  (1)
+
+Given ANY actual m-linedness witness on (kappa0,kappa1,kappa2), apply
+E0 to every segment and point. Equation (1) gives m-linedness on
+(kappa2,a,beta0). The uniform front-insertion lemma constructs height
+H=m+2, with cap C<beta0<b, from this m-segment chain. No arbitrary
+length chain under a fixed endpoint is postulated: m is supplied by
+the actual input witness.
+
+Use height h=H-1=m+1 for the spare construction. Its three full bands
+encode R_h=(0^h)(1^h)(1^h), start at a, and have final cap T(C)<c,
+where T=L3(f). Thus the relative BMS INDEX can depend on the current
+input m, not only the basic-sequence choices inside a fixed index.
+
+The same proof holds after any single environment application P to
+ALL background data. In particular the actual input may be any
+m-lined witness on (P(kappa0),P(kappa1),P(kappa2)); it need not itself
+be the P-image of an old witness. The construction then uses P(E0)
+and the transported finite background. Its resulting cap is <P(c).
+
+2. Exact background transport in successor double-block extraction
+------------------------------------------------------------------
+Let the first two row owners both be j*=P(j), and their points be
+  theta0=P(kappa0), theta1=P(kappa1),
+  theta2=P(kappa2), theta3=P(kappa3).
+In one auxiliary E-successor doubling, the actual copy actor A has
+crit(A)=theta2 and therefore fixes theta0 and theta1. The new block's
+second row owner is A(j*), with complete point list
+  theta0,theta1,A(theta2),A(theta3).
+The new block extraction takes its first row owner to be THIS SAME
+second-row owner. Therefore its entire new base is exactly
+  j**=A(j*), theta_i**=A(P(kappa_i)), i=0,1,2,3.    (2)
+
+It is not merely agreement at two of the points. For every named
+background owner/point, carry its A-image as proof-only metadata.
+The new environment is the ORDINARY COMPOSITE A o P, acting on
+owners by application. Thus all K,L3,f,mu,a,b,c relations and cutoff
+relations transport. Application distributes over ordinary composition,
+so background composites transport as well.
+
+This statement is immediate for an ACTUAL decorated E construction.
+It is NOT a statement about every naked realization of the raw D(q)
+syntax. The stronger theorem below quantifies over decorated copy
+certificates and retains these backgrounds; one must not silently use
+the old theorem's broader naked-realization quantifier instead.
+
+3. A precise natural base-oracle contract
+---------------------------------------
+Fix a finite background package B, including its original generator j,
+and a named exit d>=kappa3. A scalar function f has contract C(B,d) if:
+
+  for every actual environment P in the same Iter(j), every m>=1,
+  and every supplied m-lined witness on
+    (P(kappa0),P(kappa1),P(kappa2)),
+  one can produce an f(m)-lined witness on
+    (P(kappa0),P(kappa1),P(d)).                    (C)
+
+All construction data must remain in the same Iter(j). The statement
+is conditional on the finite m-lined input, not on the existence of
+all m on a fixed triple. The background B may include additional
+finite actors such as previously chosen promoters. P moves ALL of B.
+The numerical f is independent of P and of the particular input witness.
+
+A physical BASE packet representing this contract consists of the two
+standard real rows, plus a ghost interval endpoint d if d>kappa3.
+Its interpretation is f(m), NOT the default cut interpretation of a
+ghost. Its metadata stores B, P and the established proof of (C).
+No new embedding is falsely claimed for this oracle/ghost row.
+
+If a layout requires this base packet to end at a later named point v,
+with P(d)<=v, append an ordinary ghost interval ending at v. Once the
+oracle produces linedness at P(d), the global critical-endpoint map
+extends the last endpoint to v, fixing all earlier linedness points.
+
+This is an external proof calculus with a certified base operation,
+not a claim that f is computed by a fixed three-row ordinary BLP.
+Every accepted oracle must have a previously proved contract (C).
+
+4. Relative full-band theorem over this base packet
+-------------------------------------------------
+Assume f satisfies (C). Put the base packet before a full-band matrix
+M, and include every base/background decoration in the certificate.
+Define G_M^f exactly as in the spare paper:
+  G_empty^f(m)=f(m),
+  G_(Q Z)^f(m)=(G_Q^f)^[2^m](m),
+  G_M^f(m)=G_(M[2^m])^f(m) for a nonzero last column.
+
+Claim: the full-band certificate implies G_M^f(m)-linedness at its cap.
+The nonzero macro never copies the base packet: the bad-block root is
+strictly to its right. It leaves B,P and all base data untouched. The
+spare repairs likewise occur only among the full bands.
+
+On the zero branch, actively cut to the real E-successor anchor and
+use the ordinary E doubling proof. Each actual double-copy carries
+the old block's decorations and their complete A-images into the
+new block. By (2), its inverse-renumbered base satisfies the same
+contract with environment A o P and the NEW linedness parameter.
+Thus f is invoked at this new parameter, with no assumption that
+the new base triple is an image of its old linedness witness.
+
+Formal induction bookkeeping: auxiliary D^i(q) certificates carry a
+finite binary copy tree. Each leaf contains the base/oracle decoration
+and the ribbon metadata; each internal node records actual old/new
+block copies and the actual copy actor. The strengthened successor
+induction is quantified over ALL such decorated certificates of
+shape D^i(q). Restricting to an old subtree or extracting a new
+subtree retains the decorations. It need not reconstruct a copy
+actor from naked row equations. The tree is built by finite E and
+contains no assertion of the desired numerical result.
+
+There is a simpler induction than the initially proposed finite-table
+potential: use the ALREADY KNOWN well-founded BMS descent tree on the
+admitted parent-table domain (standard seeds and their canonical finite
+ancestor covers, as in the old diagonal-forest theorem). No theorem
+about arbitrary lexicographically ordered nonstandard matrices is used.
+For the positive branch, M[2^m] is a proper BMS descendant. For QZ,
+Q is a proper descendant. Every leaf of D^m(q) is a decorated actual
+Q certificate. The successive leaf endpoints satisfy
+  first leaf's third base = old theta2,
+  next leaf's third base = previous leaf's cap,
+  final leaf's cap = the E-successor cap.
+These are exactly A(theta2)=old-block-cap in each actual E doubling.
+Apply the induction hypothesis for Q at every leaf, using ordinary
+finite induction through its 2^m leaves. This gives the asserted
+iteration at continuously updated inputs. If Q is empty, every leaf
+invokes the already established base-oracle contract instead.
+
+Thus the relative theorem does not need to assign any fictitious
+owner or potential to the oracle ghost endpoint. In particular q empty
+and q nonempty need not be conflated: the former uses only the base
+contract, while the latter uses the strictly smaller BMS index Q.
+Actual copy geometry is still required, but its rank decrease is not
+needed for this external BMS induction. This simplification is valid
+precisely because BMS well-foundedness is already an allowed theorem.
+
+5. One genuine scalar relative-BMS diagonal operator
+---------------------------------------------------
+Suppose d<a in the current background. At arbitrary supplied input m:
+
+  (i) retain the certified base packet with exit d and extend it to a;
+  (ii) construct the height H=m+2 fan from section 1;
+  (iii) attach the full bands for R_(m+1), cap T(C)<c;
+  (iv) apply section 4 and extend the final linedness endpoint to c.
+
+This yields a natural oracle with exit c for the scalar function
+  B(f)(m) := G_(R_(m+1))^f(m).                    (B)
+
+The whole procedure works in every transported background P(B).
+This is a variable-height relative BMS diagonal, not merely repeated
+application of an external function a fixed number of times. The
+input m participates both in h=m+1 and in every later basic-sequence
+index through the G recursion.
+
+The elementary starting oracle f0(m)=m*2^m has exit kappa3<a, by
+the ordinary two-row linedness lemma. Thus B(f0) has exit c.
+
+5a. A free finite preheating of the available FAN HEIGHT
+------------------------------------------------------
+The same two-row lemma gives g(m)=m*2^m-linedness on
+(kappa0,kappa1,kappa3), from the supplied m-lined base. Moreover
+  E0(a)=E0(L3(kappa3))=L3(K(kappa3))=L3(theta5)=b.
+Since kappa3<a, its E0-image is a g(m)-lined chain on
+(kappa2,a,E0(kappa3)), whose endpoint is STRICTLY below b. One may
+extend its last endpoint to b if desired. The earlier equality
+E0(kappa3)=b was an application-versus-composition error; only the
+strict upper bound is used in the construction.
+Front insertion gives H=g(m)+2 with cap STRICTLY below b, so the
+spare construction admits h=g(m)+1, still with final cap <c.
+
+Hence the SAME exit-c contract also holds for
+  Btilde(f)(m)=G_(R_(m*2^m+1))^f(m).              (B+)
+This enlarges the matrix height only; the input of G remains m.
+It does not assert that the original global third base kappa2 has
+g(m)-linedness. A separate pure-BMS comparison is being checked in
+hardy-root work to absorb the typed E0 operator's finite padding.
+
+6. Promoters allow another scalar relative diagonal, with an honest cost
+---------------------------------------------------------------------
+If f's exit d is not below a, let Q be an actual promoter fixing
+kappa0,kappa1,kappa2 and satisfying d<Q(a). Use Q(B)'s fan geometry,
+but KEEP the original base-oracle package B and its exit d. The global
+source triple agrees because Q fixes it. Thus the relative theorem
+gives the SAME numerical B(f), now with exit Q(c).
+
+Under a further outer environment P, the geometry is P(Q)(P(B)),
+the base oracle retains P(B), and d<Q(a) transports. All finite
+backgrounds are stored together; no parameter identity is lost.
+
+Consequently a finite corridor of promoters can support
+  f0, B(f0), B(B(f0)), ...
+with the corresponding actual increasing exits. This does NOT say
+that infinitely many such upgrades fit under c or kappa4. It also
+does NOT yet give the higher-type diagonal D_r from the C upper bound.
+An iterated scalar relative diagonal and a higher-type diagonal are
+distinct constructions and must not be conflated.
+
+7. Audit questions and remaining gap
+-----------------------------------
+The central audit obligation is the decorated binary-copy induction
+in section 4, especially whether every extraction/endpoint step
+retains the exact base-packet exit decoration. Explicit stored proof
+metadata avoids the earlier naked-realization problem but still must
+be checked through all auxiliary operations.
+
+The root's actual promoter chains may supply many finite applications
+of section 6. Whether a sufficiently uniform HIGHER-TYPE version can
+cover all levels needed by original C, much less R030, remains open.
+No original-IBLP full-copy/mark equivalence is asserted here.

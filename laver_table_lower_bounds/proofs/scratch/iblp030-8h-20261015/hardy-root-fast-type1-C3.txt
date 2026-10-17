@@ -1,0 +1,191 @@
+> 整理阅读版 / Collected reading edition. 数学结论以本目录三篇主文为准。
+> 原有局部证明、适用条件和撤回提醒保留；旧进度文字仅作历史记录。
+> 固定输入的历史段落如有省略，逐段位置记录于 SOURCE_MANIFEST.json；
+> 主文已用原证明产生的自然参数补上相应数值推导。未新增 Lean 认证。
+
+No numeric padding is needed for the first typed fast-BMS comparison
+===================================================================
+2026-10-15. Pure numerical/source result, conditional on the already
+established arbitrary safe-D cover and exact first-root identities.
+This does NOT prove the missing actual type-1 seed guard and does NOT
+by itself give a q(5) bound for C[3].
+
+1. Typed conventions and the fast-cover lemma
+--------------------------------------------
+Use the finite types X_r, pointwise order, and final-input diagonals from
+hardy-root-typed-bms-bound.txt. At type 0, X0 consists of nondecreasing
+functions f(x)>=x+1; at type r+1 use monotone extensive operators on X_r.
+All functions may be defined on x>=1. For original-source identities and
+safe-D cover use only x>=2, which is a closed input domain under these
+extensive functions and operators.
+
+The original hierarchy F_P^(r,T) has base T, original basic term P[x],
+and x iterations at a true successor. Define fast BMS K_M^(r,T) with
+base T, basic term M[2^x], and 2^x successor iterations at final input x.
+At r=1, for example,
+  K_empty^T=T,
+  K_(QZ)^T(f)(x)=[(K_Q^T) iterated 2^x on f](x),
+  K_M^T(f)(x)=K_(M[2^x])^T(f)(x) when last column is nonzero.
+The iterations on the second line act on whole FUNCTIONS, not on x.
+
+The same simultaneous BMS well-founded induction gives, at every type:
+  (i) monotonicity in the whole base T and every higher argument;
+  (ii) admissibility and final-input monotonicity;
+  (iii) if Q is a strict prefix of M, then
+        K_M^(r,T)(...)(x)>=I_r^[2^x](K_Q^(r,T))(...)(x),
+        meaning 2^x applications at the corresponding predecessor type;
+  (iv) a finite BMS descent using only indices <=2^x cannot increase
+        evaluation at the fixed final input x and fixed higher arguments.
+In (iii), at type 1 the right side is [(K_Q^T)^iterations(f)](x).
+
+If original safe-D P is covered by standard BMS M, then
+                  F_P^(r,T)<=K_M^(r,T), x>=2.       (1.1)
+For completeness, induct on the target M, with quantifiers over EVERY
+covered P, EVERY admissible T, EVERY higher argument, and EVERY x>=2.
+For a source successor its predecessor has a FIXED strict-prefix target
+cover. Its induction hypothesis is therefore a WHOLE-OBJECT comparison,
+usable at every intermediate argument created by iteration. The source
+x iterations are absorbed by target 2^x iterations and (iii).
+For a source non-successor, after fixing final x, use the existing cover
+macro with indices only 0,1,x-1,0. It produces a strictly smaller target
+M_x covering P[x]. Its universal induction hypothesis may be evaluated
+at the fixed arguments and x. Then (iv), since x<=2^x, gives (1.1).
+No x-specific inequality is iterated as though it were a whole-object
+comparison. The target selected by the limit macro may depend on x.
+
+2. Same-input A-root comparison
+-------------------------------
+Let A=I[0][1], B_h=(0^h)(1^h), and N(x)=2+x(x+1)/2. The existing
+concrete cover is A[x] covered by B_(x+2)[N(x)]. For every x>=3,
+  N(x)<=2^x.                                      (2.1)
+At x=3 both sides are 8; the successive difference of 2^x-N(x) is
+2^x-(x+1)>0 for x>=3. Original BM4 basic terms are nested prefixes, so
+  B_(x+2)[N(x)] is a prefix of B_(x+2)[2^x].
+Using (1.1), prefix monotonicity, and the defining fast limit equation:
+
+  F_A^(r,T)(...)(x)
+    =F_(A[x])^(r,T)(...)(x)
+    <=K_(B_(x+2)[N(x)])^(r,T)(...)(x)
+    <=K_(B_(x+2)[2^x])^(r,T)(...)(x)
+    =K_(B_(x+2))^(r,T)(...)(x).                   (2.2)
+
+The input is x throughout. Thus no final-input polynomial padding, and
+no extra uniform-type machinery to represent such padding, is needed
+in this fast target. Equation (2.2) is valid for all higher arguments
+and bases, but its chosen finite seed B_(x+2) depends on final x. It is
+only used pointwise after x is fixed, never as one fixed whole operator
+bound valid at every input.
+
+3. Exact C[3] is covered by a type-1 fast diagonal based on Btilde
+----------------------------------------------------------------
+Let Phi(f)=F_A^(0,f), h=H_A. Exact first-root substitution gives
+  H_(C[3])(x)=F_A^(1,Phi)(h)(x), x>=2,
+where C=A(015):1 and C[3]=J_A(J_A(A)).
+
+Set T=Btilde, the scalar operator from the proved scalar construction,
+and f0(x)=x*2^x. Previous scalar comparisons prove WHOLE-FUNCTION
+  Phi<=T, h<=f2=T(T(f0)), x>=2.                   (3.1)
+The restriction to x>=2 is harmless: all functions are extensive, so
+iterations whose final evaluation starts at x>=3 remain in that domain.
+
+Define the explicit type-1 fast diagonal
+  V_T(f)(x)=K_(R_(x*2^x+1))^(1,T)(f)(x),
+  R_h=(0^h)(1^h)(1^h).
+For fixed x>=3 put h_x=x*2^x+1, M=B_(h_x), and O=K_M^(1,T).
+M is a strict prefix of R_(h_x), so the strong-prefix lemma gives
+  V_T(f0)(x)>=[O iterated 2^x on f0](x).          (3.2)
+For this fixed finite M, the inequality O>=T is a WHOLE-OPERATOR
+inequality, valid on every admissible function and every numeric input.
+Thus the first two iterations in (3.2) produce
+  O(O(f0))>=T(T(f0))=f2>=h.
+There is at least one iteration left because 2^x>=3. Monotonicity and
+extensiveness permit discarding all but a last iteration, giving
+  V_T(f0)(x)>=O(f2)(x).                           (3.3)
+
+The explicit BM4 seed-height comparison, which is type-uniform by its
+same syntactic prefix/descent proof, applies since h_x>=x+2. Hence
+  O(f2)(x)
+    >=K_(B_(x+2))^(1,T)(f2)(x)
+    >=F_A^(1,T)(f2)(x)
+    >=F_A^(1,Phi)(h)(x)
+    =H_(C[3])(x).                                (3.4)
+The middle inequality is (2.2), and the following one is whole-base and
+argument monotonicity using (3.1). Combining (3.2)--(3.4) proves
+
+                    H_(C[3])(x)<=V_Btilde(f0)(x), x>=3. (3.5)
+
+4. Exact remaining actual obligation
+------------------------------------
+To turn (3.5) into a Laver-table bound, one still needs an actual natural
+contract for V_Btilde(f0), with a usable exit below kappa4. The proposed
+type-1 seed in lift-type1-control-seed.txt has now been REJECTED: the
+strict-sup argument refutes the actual first-band fit G itself, not only
+its simpler sufficient guard G'. A different zero owner or a different
+band geometry is required. This file neither assumes the refuted fit
+nor silently replaces the scalar contract by a polymorphic one.
+
+If a low enough actual exit is eventually proved, a further scalar
+Btilde corridor can earn a large input from the real input 1 and feed it
+back into (3.5), as in the C2/Qbar proofs. Its promoter input guard must
+then be verified separately. This note removes the proposed numerical
+padding obstacle only; it does not remove the geometric one.
+
+The lifting agent independently checked sections 1--3, including the
+whole-object versus same-input quantifiers, and reported no gap relative
+to the stated existing dependencies. That review does not certify any
+replacement actual type-1 seed.
+
+5. A two-column B_h initialization would be numerically sufficient
+-----------------------------------------------------------------
+This is a CONDITIONAL numerical interface, not an approval of the newly
+suggested two-band actual geometry. Its compatible owners still need
+EVERY implicit edge; merely taking two images of a band does not prove
+the required K_i(V0)=V_(i+1) for each distinct i.
+
+For every r>=1 there is an explicit original BM4 path
+  B_(r+1) -> S_r -> P_r -> R_r,
+where
+  S_r=(0^r)(1^r)(2^r),
+  P_r=(0^r)(1^r)(2,0,...,0),
+  R_r=(0^r)(1^r)(1^r).
+The first step is original [2], ignoring globally zero high rows.
+The last step is original [1]. For the middle reduction, use the
+parent-coordinate first-new-column operation r(r+1)/2-1 times. Each
+such operation is a literal original [1], followed by finitely many
+[0] cuts to its first new column. Thus EVERY original index in the
+whole path is at most 2, although the path length depends on r.
+
+To verify the middle count, a last parent column 1^a first becomes
+1^(a-1)0^(r-a+1), then r-a+1 further first-new-column steps remove its
+zero tail, leaving 1^(a-1). Sum r-a+2 for a=r,r-1,...,2. The result is
+r(r+1)/2-1. All preceding columns are unchanged, giving P_r exactly.
+The final original [1] at its one parent entry copies the full source
+column 0^r, producing R_r. These are actual syntactic rewrites, not an
+appeal to B_(r+1)>R_r as abstract ordinals.
+
+Consequently, the typed fast bounded-index lemma gives
+  K_(B_(r+1))^(t,T)(...)(x)>=K_(R_r)^(t,T)(...)(x), x>=1. (5.1)
+There is no bound on the number of preparation steps in (5.1); only
+their indices must be <=2^x, which is true because x>=1.
+
+Suppose a future ACTUAL construction supplies the two-column type-1
+diagonal at height h_x=x*2^x+1. Put r=h_x-1=x*2^x. For x>=3, r>=x+2,
+so (5.1) reduces its numerical lower bound to exactly the R_r estimate
+in section 3. Therefore
+
+  H_(C[3])(x)<=K_(B_(x*2^x+1))^(1,Btilde)(f0)(x), x>=3. (5.2)
+
+Thus losing the third root column would cost only one seed row, which
+the available height already absorbs. It does not require strengthening
+the scalar base or invoking arbitrary ordinal monotonicity. Whether
+the actual two-band permissions and all implicit positive-port edges
+can be realized together remains a separate, currently open question.
+
+The numerical height assumption can in fact be weakened uniformly to
+ANY h_x>=x+3. In the same argument r=h_x-1>=x+2 is the only use of the
+specific formula x*2^x+1. In particular,
+  H_(C[3])(x)<=K_(B_(2^(x+1)+1))^(1,Btilde)(f0)(x), x>=3. (5.3)
+This form fits the newer open-fan candidate. Its remaining finite cap
+condition and all conditional scope are recorded in
+hardy-root-open-fan-crossing.txt section 4. No actual C[3] conclusion
+is inferred from the numerical inequality alone.

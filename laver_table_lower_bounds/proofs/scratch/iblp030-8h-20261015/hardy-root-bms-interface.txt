@@ -1,0 +1,311 @@
+> 整理阅读版 / Collected reading edition. 数学结论以本目录三篇主文为准。
+> 原有局部证明、适用条件和撤回提醒保留；旧进度文字仅作历史记录。
+> 固定输入的历史段落如有省略，逐段位置记录于 SOURCE_MANIFEST.json；
+> 主文已用原证明产生的自然参数补上相应数值推导。未新增 Lean 认证。
+
+Original IBLP Hardy: a quantitative BMS interface and an exact proper subcone
+2026-10-15. Paper deduction from the cited already-proved local interfaces.
+This does NOT establish q(5) > H_{I030}(10^10).
+
+1. Conventions and source facts
+
+Original Python is:
+所固定的原版 iblp.py（见 SOURCE_MANIFEST.json）
+O_n denotes its displayed basic sequence, including its legacy mark guard.
+The Hardy convention throughout is:
+  H_empty(x)=x;
+  H_P(x)=H_cut(P)(x+1) if the last core is (0,N);
+  H_P(x)=H_{O_x(P)}(x) otherwise.
+Copy-failure cut, when it occurs, belongs to the last branch, not successor.
+All arguments below are >=2, so the special original displayed O_1 is never
+used by a Hardy trajectory. No claim about general legacy/paper equality
+is needed for the assertions in this file.
+
+Set A=I[0][1], h(x)=H_A(x), and B_r=(0^r)(1^r) in original BM4.
+Set D(r)=the total number of repeated BM4 [1] steps on
+  (0^r)(1^r)(1^r),
+including all zero-column removals.
+
+Dependencies, all local paper proofs rather than finite tests:
+(a) output/iblp-01-equality-20260923/IBLP-01-no-completion-proof.zh-CN.md:
+    A[n] and all its descendants lie in the closed safe class D.
+(b) output/iblp-01-equality-20260923/IBLP-01-BMS-upper-bound.zh-CN.md:
+    arbitrary-cover BMS simulation, especially sections 3, 4, 8.
+(c) output/iblp-laver-bms-20261013/BMS-fixed-index-to-FGH-summary.zh-CN.md:
+    D(r+2+ceil(log2(t+2))) >= F_{B_r}(t), for r,t>=1.
+(d) output/piblp-q5-enhancement-20261014/
+    audit-BMS-diagonal-input-monotonicity.zh-CN.md:
+    BMS F is increasing in its numerical input and under literal prefixes.
+(e) output/iblp-030-laver-20261014/piblp-02-embedding-progress.zh-CN.md:
+    frozen-zero graft and the exact Z basic sequence.
+(f) output/piblp-iblp-order-20261015/IBLP-common-cone-proof.zh-CN.md:
+    the two-point external forest subcone and V root formula.
+
+The new part here is a numerical Hardy simulation and numerical substitution.
+The older ordinal equalities by themselves would NOT suffice.
+
+2. A prefix-visitation lemma for Hardy
+
+Consider a well-founded finite-word notation with:
+  (i) P[k] contains cut(P) as a literal prefix;
+ (ii) k<=l implies P[k] is a prefix of P[l];
+(iii) successor steps cut the last letter and increase the Hardy parameter;
+ (iv) positive-index non-successor steps do not decrease word length.
+Original standard BM4 has all four properties (irrelevant zero top rows are
+identified). In (iv), a nonzero last column has a nonempty bad part, so
+|P[k]|=|P|-1+k*d >= |P| for k>=1 and d>=1.
+
+Suppose y>=1 and P ->* Q is a finite expansion path using only indices <=y.
+The actual Hardy trajectory starting at (P,y) visits Q with some parameter
+y'>=y. To see this for one desired step k, its actual first child P[y]
+contains P[k]. Until the computation first becomes shorter than P[k], every
+state has P[k] as a prefix. Steps remove at most one letter, so the trajectory
+must hit P[k] exactly before crossing it. Termination supplies that crossing
+unless P[k] is the empty endpoint. Repeat along the finite desired path;
+the current parameter never decreases, so all remaining desired indices
+stay admissible. The same argument covers the case of a successor P.
+
+If Q is a strict literal prefix of P, at least one successor step occurs
+before the visit: a decrease in word length is impossible on a positive-
+index non-successor Hardy step, by (iv). Thus then y'>=y+1.
+
+This lemma is stronger than ordinal comparison but narrower than arbitrary
+order-monotonicity of Hardy. Its hypothesis is an explicit finite path whose
+indices are bounded by the starting numerical parameter.
+
+3. Numerical upgrade of the existing IBLP-to-BMS cover
+
+Suppose P is in safe class D and M is an arbitrary standard BMS cover of P
+in the sense of dependency (b). For every x>=2:
+                    H_P(x) <= H^BMS_M(x).                  (3.1)
+
+Proof. Drive the source and target computations together, keeping the
+current target parameter y at least the source parameter x and retaining
+an arbitrary-cover certificate. For a source non-successor step O_x(P),
+the published cover simulation uses:
+  - finitely many preparation operations BM4 [1] then [0] truncations;
+  - one BM4 [x-1] operation;
+  - finitely many [0] truncations.
+All indices are <=x<=y. The prefix-visitation lemma therefore makes the
+actual target Hardy trajectory visit the new covering target M'. No source
+parameter increase is required at this step.
+
+For a source successor step, the cover proof truncates the target from its
+last represented address e(N) to e(N-1). Since e is strictly increasing,
+this is a strict target prefix. The prefix-visitation lemma supplies at
+least one target successor increment, keeping y'>=x+1. The source's new
+parameter is exactly x+1. At source zero the target's eventual result is
+at least the source result. Every simulated source step consumes a nonempty
+piece of a terminating BMS trajectory, so this also proves source termination
+without assuming it in the numerical induction. This proves (3.1).
+
+Important: the arbitrary-cover statement, rather than a least-order-type
+cover, is essential. Covers must remain reusable after each macro step.
+No bound on the NUMBER of preparation [1] operations is required: the
+target actual trajectory pays for them. Only their indices need be <=y.
+
+4. An explicit bound on h=H_A
+
+For x>=2 put N(x)=2+x(x+1)/2. Dependency (b), equation (8.4), constructs
+the concrete cover
+                    M_x=B_{x+2}[N(x)]
+of A[x]; it has N(x)+1 columns, including the auxiliary zero column.
+Applying (3.1) after the first, non-successor root step gives
+          h(x) <= H^BMS_{B_{x+2}[N(x)]}(x).               (4.1)
+
+For completeness, BMS Hardy is nondecreasing in its numerical input:
+prove this and prefix monotonicity simultaneously by well-founded induction.
+Successor adds one to both compared inputs, and a limit uses
+P[x] prefix P[y]. This is the Hardy version of dependency (d).
+Since N(x)>=x, (4.1) consequently gives
+          h(x) <= H^BMS_{B_{x+2}}(N(x)).                  (4.2)
+
+For every standard BMS M and t>=1, H_M(t)<=F_M(t). Prove by well-founded
+induction. At a non-successor, both functions use M[t]. At M=PZ,
+  H_M(t)=H_P(t+1) <= F_P(t+1) <= F_P(F_P(t))
+          <= F_P^{t+1}(t)=F_M(t),
+using F_P(t)>=t+1 and input monotonicity. Zero is immediate. Thus (4.2)
+and dependency (c) give
+ h(x) <= F_{B_{x+2}}(N(x))
+      <= D(x+4+ceil(log2(N(x)+2)))
+      <= D(2x+5).                                       (4.3)
+The final estimate uses N(x)+2=4+x(x+1)/2 <= 2^{x+1}, x>=2,
+proved by elementary induction. The height-monotonicity of D is part of
+the uniform form of dependency (c); alternatively apply that theorem
+directly with the larger height 2x+5.
+
+Equation (4.3) is a genuine original-IBLP Hardy bound, not a bound on the
+different f_PP / short-tail evaluation. It is a consequence of the existing
+BMS simulation plus the new prefix-visitation accounting above.
+
+There is a convenient diagonal reformulation. Put
+  g(x)=F_Lambda(x)=F_{B_{x+1}}(x).
+The seed-height comparison from dependency (d), with N(x)>=x+1, gives
+  h(x)<=F_{B_{x+2}}(N(x))<=g(N(x)).
+Also g(x)>=F_{B_1}(x)=F_{x+1}(x)>=F_2(x)
+  =2^{x+1}(x+1)-1 >= N(x), for x>=2.
+Here finite subscripts mean the corresponding number of zero columns;
+finite-level comparison uses at least two successor iterations, x>=1.
+Since g is increasing, this proves the compact bound
+                    h(x) <= g(g(x)), x>=2.               (4.4)
+
+5. Exact independent block substitution
+
+For a fixed prefix F of b physical rows define iota_b(0)=0 and
+iota_b(i)=b+i for i>0. E_F(P) is F followed by the transported copy of P.
+For nonempty P, the frozen-zero graft lemma (e) gives, IN THE ORIGINAL
+RULES separately,
+                    O_n(E_F(P))=E_F(O_n(P)).
+It also preserves the original successor predicate. Consequently,
+                    H_{E_F(P)}(x)=H_F(H_P(x))            (5.1)
+whenever the right-side computations terminate. This follows by exact
+trajectory separation, not by comparison of ordinal sums.
+
+Let C_k contain k copies of A grafted in this fashion, each with its own
+positive addresses but common global zero. Then
+                    H_{C_k}(x)=h^k(x).                  (5.2)
+For Z=A (1,5):1 = I[0][2][1]^9, original Z[n]=C_n for n>=2,
+so
+                    H_Z(x)=h^x(x), x>=2.                (5.3)
+
+WARNING: This does not apply to the family T_k in
+output/piblp-iblp-order-20261015/IBLP-021-block-reduction.zh-CN.md.
+There each later block's ZERO ALSO MOVES to the preceding block's end.
+Its apparent successor therefore references a positive address and may
+copy an earlier block. T_k is not C_k and (5.2) is not available for it.
+
+6. Exact relative Hardy on the two-point forest subcone
+
+Use hereditary Cantor-normal-form codes below epsilon_0, represented by
+ordered forests. Each root is an intact A block and each non-root node is
+the external row (parent,its_address):1. Siblings are in nonincreasing CNF
+order. Root A blocks are grafted with global zero fixed. Let E(alpha)
+denote the resulting original IBLP pattern.
+
+At a forest leaf that is an A root, alpha is a successor and its final
+A block runs independently, changing x to h(x), then leaving E(alpha-1).
+At every non-root leaf, the last physical row is a non-successor. Direct
+original copying replaces its parent subtree, after removal of that leaf,
+by exactly x copies, including the retained original copy. Thus for x>=2
+the output is exactly E(alpha[x]), where the CNF fundamental sequence is
+  (gamma+omega^{delta+1})[x]=gamma+omega^delta*x;
+  (gamma+omega^lambda)[x]=gamma+omega^{lambda[x]}.
+There are no effective scans on these intact blocks or external rows.
+
+Define the relative Hardy functions by
+  K^h_0(x)=x;
+  K^h_{alpha+1}(x)=K^h_alpha(h(x));
+  K^h_lambda(x)=K^h_{lambda[x]}(x).
+Well-founded induction on the forest code, using (5.1), gives the exact
+numerical identity
+                    H_{E(alpha)}(x)=K^h_alpha(x).        (6.1)
+This is valid for original full-tail indices >=2, not a cofinal reindexing.
+The original special [1] formula is irrelevant because h(x)>=x.
+
+Let V=A (1,5):1 (1,5,6):1, so
+  V=I[0][2][1]^8[2][0][0].
+Its original basic term V[x] is A followed by an ordinary chain of x
+external nodes. With t_0=1 and t_{j+1}=omega^{t_j}, this is E(t_x).
+Hence
+                    H_V(x)=K^h_{t_x}(x).                 (6.2)
+Equivalently use epsilon_0[x]=t_x and write K^h_epsilon_0(x).
+Both (5.3) and (6.2) refer to actual original Hardy computations, despite
+the older source theorem only having stated their order types.
+
+7. What this does and does not accomplish
+
+The base function h has the explicit BMS descent upper bound (4.3).
+Independent-block and external-forest contexts have exact numerical
+substitution semantics (5.3), (6.2). Thus a nontrivial original proper
+subcone is reduced to a genuinely controlled hierarchy over a BMS-bounded
+base function. This is more information than ordinal equality alone.
+
+No conclusion H_R <= K^h_alpha, or q(5)>H_R, follows yet. R[x] contains
+multi-interface rows and marked families; its later completions do not
+stay in the two-point external forest class or in the safe D class.
+Already max L grows beyond x+1 along its initial Hardy steps. The initial
+triangular geometry is not a fixed BMS-height bound.
+
+The necessary base-function comparison CAN be proved in this forest class.
+For every nondecreasing expansive function b (b(x)>=x on x>=2), simultaneous
+well-founded induction proves both prefix and input monotonicity of K^b:
+at a successor forest, K_{P+1}^b(x)=K_P^b(b(x))>=K_P^b(x);
+at a limit forest, its x-child contains its cut, and its x-child is a
+prefix of its y-child for x<=y. This is exactly the prefix argument used
+for BMS in dependency (d), with b instead of increment.
+If a(x)<=b(x), a(x)>=x, and b has these properties, induction then gives
+K^a_alpha(x)<=K^b_alpha(x): at a successor use first the smaller-alpha
+base comparison, then input monotonicity of K^b_alpha at a(x)<=b(x);
+at a limit the two sides use the SAME alpha[x]. This is not arbitrary
+ordinal-index monotonicity.
+
+Taking b=g composed with g and using (4.4), we therefore have
+                    H_V(x)<=K^{g composed with g}_{t_x}(x)
+                           =K^{g composed with g}_{epsilon_0}(x). (7.1)
+The equality uses epsilon_0[x]=t_x. Likewise H_Z(x)<=g^{2x}(x).
+No evaluation of h, g, or any huge descent is needed.
+
+Equation (7.1) does not automatically fit the existing q5
+F_{Lambda+omega+1} bound: a whole epsilon_0 external hierarchy can ask for
+more than the already constructed finite/omega feedback iteration.
+
+The main unproved quantitative interface remains the original 030 closure
+with active completions and the actual Laver cap/resource bound.
+
+8. A concrete original subroot that DOES fit the existing q5 bound
+
+To avoid confusion with the separate candidate called Q, denote this
+seven-row original pattern by P_dagger:
+  P_dagger = A (1,5):1 (5,6):1 (1,7):1.
+Its external forest code is alpha=omega^(omega+1), so
+  H_{P_dagger}(x)=K^h_{omega^(omega+1)}(x).
+It is an actual descendant, not a handwritten nonstandard pattern:
+  P_dagger=V[3][2][2][2][0],
+  V=I[0][2][1]^8[2][0][0].
+The first equality follows by CNF calculation:
+  t_3 ->[2] omega^(omega^2) ->[2] omega^(omega*2)
+      ->[2] omega^(omega+2) ->[0] omega^(omega+1).
+An exact replay with the original Python confirms the full finite entry,
+including masks, steps and all displayed indices.
+
+Put G_0=g and G_{k+1}(x)=G_k^{x+1}(x), and J(x)=G_{x+1}(x).
+Thus J=F_{Lambda+omega} with the existing convention
+  (Lambda+omega)[x]=Lambda+(x+1).
+For every integer k>=0 and x>=2:
+                  K^h_{omega^k}(x)<=G_{k+1}(x).           (8.1)
+For k=0 use h<=g^2<=G_1. If (8.1) holds for k, the exact CNF rule
+and independent-root concatenation give
+  K^h_{omega^(k+1)}(x)
+     = (K^h_{omega^k})^x(x)
+     <=G_{k+1}^x(x)<=G_{k+2}(x).
+All base functions on the right are increasing and expansive, so the
+iteration comparison tracks the current, growing numerical parameter.
+This proves (8.1) without changing the source fundamental sequence.
+
+Since (omega^omega)[x]=omega^x, equation (8.1) with k=x gives
+                  K^h_{omega^omega}(x)<=J(x).             (8.2)
+Finally the CNF rule and exact concatenation give
+ H_{P_dagger}(x)
+   =(K^h_{omega^omega})^x(x)
+   <=J^x(x)<=J^{x+1}(x)=F_{Lambda+omega+1}(x), x>=2.       (8.3)
+
+[固定输入的历史段落在本阅读版省略；自然输入及完整推导见本目录三篇主文。]
+
+Equation (8.4) is NOT a larger numerical q5 bound than the existing
+F_{Lambda+omega+1}(Y) bound: it identifies an explicit ORIGINAL IBLP
+Hardy computation controlled by that bound. Its source ordinal is only
+Lambda*omega^(omega+1), a proper part of the known common forest subcone,
+and it does not meet the user's requested R=I030 target.
+
+9. Finite checks, kept separate from the proofs
+
+hardy-root-forest-certificate.py performed 240 checks in about 0.025 s:
+  - 22 Z/V root basic-sequence identities, indices 2 through 12;
+  - the P_dagger entry from V and from R;
+  - 200 one-step checks on 100 small two-point forests;
+  - 16 complete tiny Hardy calculations for successor and omega atoms.
+Peak size was 48 rows and 192 stored integer/mark fields.
+Limits: 10 s, 300 rows, 12000 fields, 400 evaluator steps, Hardy index<=12.
+No H_A, H_V, H_R, or enormous fixed-index descent was computed.
+The loop's 100-state limit is deliberate sample selection, not an
+exhaustiveness or termination claim. Every selected test completed.

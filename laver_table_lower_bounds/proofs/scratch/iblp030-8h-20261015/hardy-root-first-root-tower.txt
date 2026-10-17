@@ -1,0 +1,211 @@
+> 整理阅读版 / Collected reading edition. 数学结论以本目录三篇主文为准。
+> 原有局部证明、适用条件和撤回提醒保留；旧进度文字仅作历史记录。
+> 固定输入的历史段落如有省略，逐段位置记录于 SOURCE_MANIFEST.json；
+> 主文已用原证明产生的自然参数补上相应数值推导。未新增 Lean 认证。
+
+A genuine original-IBLP subroot with nested BMS continuations
+===========================================================
+2026-10-15. Main target R=I[0][3][0] remains open. This file isolates a
+strictly smaller actual original subroot, not a modified notation.
+
+Use original Python rules, including the special [1] and original marks.
+A=I[0][1]=01:1 012:1 0123:2 234:1; b=|A|=4.
+Write U⊕V for frozen-global-zero concatenation, and
+  J(P)=J_A(P)=A followed by phi(P), phi(0)=1, phi(i>0)=4+i.
+
+1. Actual root and exact complete basic sequence
+-----------------------------------------------
+Define
+  C = A (0,1,5):1.
+Direct original one-row rewrites give
+  C=I[0][2][1]^8=R[0][1]^8.
+No comparison-only assertion is being used: these are literal pattern
+equalities, including steps and marks. Define S_1=A, S_(r+1)=J(S_r).
+Then
+
+       C[0]=A,
+       C[1]=A (1,5):1 = J((0,1):1),
+       C[n]=S_n=J^(n-1)(A), n>=2.                       (1.1)
+
+Proof. In the initial controller (0,1,5):1, the raw copy map sends 0 to 1
+and shifts every positive address by 4. One complete copy therefore adds
+an A whose zero anchor is the FIRST row of the preceding A, followed by
+the new work controller (1,5,9):1. Inductively, after k full copies there
+are k+1 intact A blocks and work controller (4k-3,4k+1,4k+5):1, where the
+initial k=0 triple is (0,1,5). More uniformly, controller after k>=1 has
+(1+4(k-1),1+4k,1+4(k+1)). Each new copy anchors its zero at the preceding
+block's first row, whose addresses are 1,5,9,... . Every transported A is
+native-quiet and has no marks. Hence the final scan is empty; deleting the
+controller gives (1.1). The separate [1] copies only the first source row.
+
+In particular the previously used V=A(1,5):1(1,5,6):1 is S_2[0]^2.
+This tower is NOT W=I021, whose A blocks anchor zero at preceding LAST rows.
+
+2. A closed grammar for the entire C cone
+----------------------------------------
+Let D be the old safe class with its proved original-rule closure and BMS
+cover. Base components are A and arbitrary D patterns. Close under frozen
+concatenation ⊕ and the operation J. Only finite expressions are allowed.
+Equivalent staged classes K_d may be used: K_0 has finite concatenations
+of A/D components, and K_(d+1) adds J(P), P in K_d, then finite ⊕ closure.
+
+The exact identities needed for closure are:
+
+  O_n(U⊕P)=U⊕O_n(P), for nonempty P;
+  cut(J(P))=J(cut(P)), for nonempty P;
+  O_n(J(P))=J(O_n(P)), for non-successor P, n>=1;
+  O_n(J(Q+1))=J(Q)⊕...⊕J(Q) (n copies), n>=2;
+  O_1(J(Q+1))=J(Q)⊕1;
+  J(empty)=A.
+
+Here Q+1 means appending a genuine source successor (0,r):1. The special
+[1] identity follows because copying B's first row (0,1) through the target
+controller (1,N) yields (0,N), a new genuine global successor. It does not
+depend on the whole-source rule being interchangeable with original [1].
+
+The first-root identities and their mark/trace checks are proved in
+hardy-root-continuation-interface.txt. On this grammar the admissibility
+hypotheses can now be supplied WITHOUT proving them on all of R: D has them
+by its old closure theorem; A's root step enters D; quiet patterns and the
+q=0,L=1 property are preserved by the explicit ⊕ and J constructors. The
+displayed identities reduce every child to smaller-depth payload children
+or to A/D base steps. Thus a structural induction over d proves closure,
+including all cuts and both versions of positive-index processing used
+inside the actual original implementation.
+
+All standard descendants of C first enter one of these finite-depth
+classes by (1.1). This is a full syntactic statement about C's cone, unlike
+the currently incomplete closure analysis of W or R.
+
+3. A clean well-foundedness upper rank (not a q(5) bound)
+-------------------------------------------------------
+Let Lambda be the BMS limit ordinal. Each D component P has a strictly
+decreasing BMS-cover rank mu(P)<Lambda by the existing arbitrary-cover
+theorem (take the least covering ordinal, with empty assigned 0).
+Assign annotated grammar terms the ordinal ranks
+
+  rho(D-pattern P)=mu(P),    rho(A)=Lambda,
+  rho(U⊕V)=rho(U)+rho(V),
+  rho(J(P))=Lambda * omega^(rho(P)).
+
+The last formula uses ordinary ordinal multiplication, not function
+composition. For a source successor, rho(Q)<rho(Q+1), so for every finite n
+
+  (Lambda*omega^rho(Q))*n
+    <Lambda*omega^(rho(Q)+1)
+    <=Lambda*omega^rho(Q+1).
+
+The special [1] output adds only one successor and satisfies the same strict
+bound. For source non-successors, normality in the exponent gives strict
+decrease from the inductive payload decrease. Base A children have rank
+<Lambda; D children decrease their covering rank. Concatenation adds an
+unchanged prefix on the left, preserving strict decrease of the right term.
+
+Because a physical pattern can have more than one parse, use annotated
+terms and transport an annotation by the displayed exact identities. A
+single infinite physical descent from a known annotated root would lift to
+an infinite strictly decreasing ordinal rank sequence. No uniqueness of the
+grammar parse is required.
+
+Let theta be the least fixed point above Lambda of
+  t -> Lambda*omega^t.
+Equivalently theta is the least epsilon number strictly greater than Lambda.
+Set rho(C)=theta. The finite tower ranks rho(S_n) increase to theta, so every
+root child has smaller rank. Hence this grammar proves well-foundedness of
+the entire original C cone from the existing BMS/safe-D result.
+
+The argument so far is an upper rank and does not derive a numerical Hardy
+inequality from ordinal rank alone.
+
+3a. Exact rank of the basic-sequence descent tree
+------------------------------------------------
+There is also an exact statement about DESCENT-TREE rank, now separately
+checked by the original-target audit agent. Write alpha(P) for the rank
+sup_n(alpha(P[n])+1), with alpha(empty)=0. The closed grammar has no
+copy-fallback. Every non-successor has strictly growing positive basic
+terms as literal prefixes, so their ranks are strictly increasing and
+alpha(P)=sup_n alpha(P[n]) is a genuine limit. A true successor has the
+usual alpha(Q+1)=alpha(Q)+1.
+
+Frozen concatenation conjugacy and induction on the right component give
+  alpha(U⊕V)=alpha(U)+alpha(V).
+The earlier BMS equivalence gives alpha(A)=Lambda. The exact J identities,
+induction on the payload, and continuity then give
+  alpha(J(P))=Lambda*omega^alpha(P).
+At a payload successor this is precisely sup_n(alpha(J(Q))*n); its special
+[1] term J(Q)⊕1 is below that supremum. At a payload limit use the normal
+continuity of t->Lambda*omega^t.
+Consequently
+  alpha(C)=theta, the least epsilon number strictly greater than Lambda.
+
+This is an exact rank of the actual basic-sequence descent tree. Identifying
+it with the order type of a separately chosen column-comparison order or
+asserting a concrete order embedding requires that additional compatibility
+argument. Neither is silently included here. The new typed numerical upper
+bound is a separate syntactic proof, not a consequence of this rank equality.
+
+4. Exact numerical hierarchy: operators on bottom functions
+------------------------------------------------------------
+For any bottom function f, let Phi_P(f) be the original x-iteration FGH
+over payload P:
+  Phi_empty(f)(x)=f(x),
+  Phi_(Q+1)(f)(x)=Phi_Q(f)^x(x),
+  Phi_P(f)(x)=Phi_(P[x])(f)(x) otherwise.
+For monotone f>=x+1 and x>=2 these are total on the closed grammar, by the
+preceding well-foundedness proof. Exact frozen concatenation gives
+
+             Phi_(U⊕V)=Phi_V o Phi_U,                  (4.1)
+
+where this composition acts on WHOLE BOTTOM FUNCTIONS, not on their values
+at x. Proof is induction on the right source V; source successors iterate
+the current base and source limits preserve U unchanged.
+
+Let h=H_A. The exact first-root Hardy interface gives
+
+             H_(J(P))(x)=Phi_P(h)(x).                  (4.2)
+
+Define the type-2 operators Psi_P=Phi_(J(P)). Their exact recurrences are
+
+  Psi_empty=Phi_A;
+  Psi_(Q+1)(f)(x)=[Psi_Q^x(f)](x);
+  Psi_P(f)(x)=Psi_(P[x])(f)(x) if P is non-successor.     (4.3)
+
+The middle line follows by (4.1) from n=x independent J(Q) copies. Thus
+it iterates a transformation of FUNCTIONS x times and then evaluates at x.
+It is not the ordinary numerical iterate [Psi_Q(f)]^x(x).
+
+Iterating J repeats this lifting to finite higher types. Formula (1.1)
+therefore gives an explicit original subroot whose input n selects a finite
+type level of BMS-based continuation recursion:
+
+                  H_C(x)=H_(S_x)(x), x>=2.             (4.4)
+
+The bottom numerical interface is already controlled:
+  h(x)<=g(g(x)),
+  Phi_A(f)(x)<=D_f(N(x)),
+where D_f is the f-based BMS diagonal and N(x)=2+x(x+1)/2, as proved in
+hardy-root-oracle-upper.txt. A transfer of this inequality through every
+higher-type lifting requires a tail-uniform operator simulation; it has
+not yet been proved here. In particular we do NOT replace (4.3) by an
+ordinary finite iterate of g.
+
+5. Actual-embedding lead: proposed initialization WITHDRAWN
+-----------------------------------------------------------
+A parallel proposal used a_i=gamma_i and j,j3,j4,j29 as row owners.
+Although j29(gamma0)=gamma1 and j29(gamma1)=gamma5 were valid nonzero
+finite-image equalities, the proposal omitted the implicit NEXT/CAP edges.
+For example row 012:1 also requires owner(a2)=a3, but j(gamma2)=gamma4,
+not the proposed gamma3. The last row 015:1 also needs owner(a5)=a6, an
+additional cap point. Both the parent and proposing agent withdrew the
+claimed initialization. It must NOT be cited as an actual C realization.
+
+Even a correct seed alone would not give a q(5) Hardy estimate: repeated
+large-index full copies need a persistent cap. The target interface is the
+dynamic, higher-type recursion (4.3), not merely seed existence.
+
+[固定输入的历史段落在本阅读版省略；自然输入及完整推导见本目录三篇主文。]
+
+C is R[0][1]^8, and hence a proper original subroot. No argument here
+controls the earlier last-root family W, much less R[x]. Closing C and
+identifying its high-order numerical recursion are substantive partial
+progress, but the requested q(5)>H_R(x), x>=10^10, remains unproved.

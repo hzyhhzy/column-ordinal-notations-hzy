@@ -1,0 +1,97 @@
+> 整理阅读版 / Collected reading edition. 数学结论以本目录三篇主文为准。
+> 原有局部证明、适用条件和撤回提醒保留；旧进度文字仅作历史记录。
+> 固定输入的历史段落如有省略，逐段位置记录于 SOURCE_MANIFEST.json；
+> 主文已用原证明产生的自然参数补上相应数值推导。未新增 Lean 认证。
+
+2026-10-15. First input may use the base box's entry, not just control.
+
+STATUS: local strengthened induction submitted for independent audit.
+It addresses the remaining C[4] input-domain issue after the strict cap
+proof. It does not change any critical-point inequality or copying actor.
+
+1. Separate three roles
+----------------------
+Let w1 be the scalar-oracle domain, w2>w1 the OUTER zero-copy threshold,
+and ell the entry bound of the base type-2 operator U. Assume
+  w2<ell<L,
+where L is the first outer payload-band left. The base U has this
+natural contract:
+  any type-1 T of scalar domain w1 and exit<=ell
+  --> U(T), same scalar domain w1, exit d<=L.
+Naturality includes every outer environment, and accepts arbitrary T
+with the displayed exit bound, not just transported old T's.
+
+The physical outer E tree starts at w2 and ends at its actual cap.
+The U implementation/background is carried as a base BOX between that
+control and L. Its input T is a whole externally certified argument.
+It is not a finite raw prefix that must be fixed pointwise below w2.
+
+2. The correctly strengthened induction statement
+-------------------------------------------------
+For every fixed outer payload M, the compiler realizes K_M^(2,U)(T)
+from ANY natural type-1 T with scalar domain w1 and exit<=ell. It
+returns the same scalar domain w1 and the actual cap of M. The entire
+statement is uniform in arbitrary outer environments P; all endpoints
+and the lower domain then become their P-images.
+
+The empty payload is exactly the stated U contract. Nonzero macros
+leave the base box and its entry ell unchanged: every active/spare
+copying critical point is an outer band left, at or above L>ell.
+They preserve the existing exact positive-port and splice geometry.
+
+For M=QZ, the actual zero-copy tree has 2^m Q leaves. Every leaf's
+environment P_i fixes the lower scalar domain w1 (all exterior copy
+actors have critical point at the current image of w2>w1). The first
+leaf is in the original environment, and accepts the original T
+because exit(T)<=ell. No bound exit(T)<=w2 has been used.
+
+At every subsequent leaf the actual E seam says
+  previous leaf's whole type-1 exit <= P_i(w2).
+The transported Q induction hypothesis accepts any input type-1
+operator with exit<=P_i(ell). Since w2<ell, strict monotonicity gives
+  P_i(w2)<P_i(ell).
+Thus the previous whole output is admissible. It still has scalar
+domain w1 because P_i fixes w1. Ordinary finite induction through the
+actual leaves gives precisely whole type-1 iteration of K_Q^(2,U).
+
+The first input may therefore use the LARGER entry ell, while later
+inputs enjoy the stricter seam bound P_i(w2). There is no requirement
+that the first argument's proof/background be fixed by a copy actor:
+the first leaf invokes its original contract, and every later leaf
+invokes the newly produced whole argument using the all-environment,
+arbitrary-input quantifier. The object being copied is the Q/U box.
+
+3. The concrete C[4] parameters
+-------------------------------
+For the mixed type-2 candidate set
+  w1=E(kappa2)=theta8,
+  w2=E(kappa3),
+  ell=E(a), d=E(delta), L=E(c_exit),
+  F=E(V0), V0=c_actor(e).
+Because kappa3<a<delta<c_exit, all required strict orders hold.
+The generic uniform diagonal U=D1 has scalar domain w1 and accepts
+every type-1 argument T with exit<=ell, producing exit d<L.
+The outer strict-cap proof gives all payload caps<zeta<kappa4.
+
+The concrete lower argument D0=Btilde is realized by its J-promoted
+natural contract. It has scalar domain w1, since w1<J(a), and exit
+J(delta)<J(c_exit)<E(a)=ell. Therefore the strengthened entry lemma
+accepts it without an unproved J(delta)<=E(kappa3) comparison.
+The scalar argument f2 has exit H(c_exit)<w1, as before.
+
+No equation j9(j14(kappa3))=E(kappa3) is used. The correct value of
+the left side is E(theta8). The potentially difficult point comparison
+with E(kappa3) is genuinely unnecessary if this strengthened induction
+is accepted.
+
+4. Scope of the relaxation
+---------------------------
+This relaxes the INITIAL accepted output bound of the type-1 argument.
+It does NOT relax its lower scalar-oracle domain: that remains exactly
+w1 and must be fixed by outer copy actors. At type three, any use of
+this type-2 contract must carry its actual entry ell explicitly. One
+cannot silently replace ell by w2 or assume a new high-level actor
+fixes every lower argument-domain bound.
+
+Thus this lemma potentially closes C[4] with the strict type-2 cap,
+but does not automatically prove arbitrary finite types or full C/R.

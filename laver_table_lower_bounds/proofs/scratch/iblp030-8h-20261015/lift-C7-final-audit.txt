@@ -1,0 +1,41 @@
+> 整理阅读版 / Collected reading edition. 数学结论以本目录三篇主文为准。
+> 原有局部证明、适用条件和撤回提醒保留；旧进度文字仅作历史记录。
+> 固定输入的历史段落如有省略，逐段位置记录于 SOURCE_MANIFEST.json；
+> 主文已用原证明产生的自然参数补上相应数值推导。未新增 Lean 认证。
+
+2026-10-15. Lifting-agent final audit of the C[7] proof assembly.
+
+Audited: hardy-root-C7-q5-single-file.txt, sections 3--7, against the
+low-open-fan, compressed six-type, and low-stack numerical notes.
+
+RESULT: PASS relative to the explicit older E/full-band, BMS well-order,
+source-cover and counting dependencies listed by that assembly. This
+audit does not independently reprove every one of those foundations.
+
+Geometry:
+* Omitting the old closure L does not affect front-insertion, low-owner
+  reconstruction, source connectors, or the two full-band spares.
+* Positive owners still have their implicit final edge. Port-1 lowering
+  preserves it, and the spare index H>=2 is not the changed port.
+* The scalar S height is the actual input m. Only higher mixed-base
+  levels use f0 preheating to g(m)=m*2^m; their helper endpoint is large
+  enough to accept that witness without taking an inverse image.
+* The six environment rows have exact overlapping domain coordinates.
+  Each zero copy fixes all lower domains and moves its CURRENT required
+  admission. Disjoint Qi corridors are not used as if they had this seam.
+* The final actual cap is strictly below theta8<kappa4.
+
+Cap algebra:
+* A(<a)<theta8 uses ordinary c^2, application naturality for strict sup,
+  and regularity at mu to show K(<mu)<a. It does not bound A(a), which
+  is known to exceed kappa4.
+* The compressed T=j10(j3) value T(k1)=theta5 is read from the strict T
+  side below rho=T(k2), so no circular assumption theta5<rho is made.
+* One ordinary-composition sup equality was corrected in section 5:
+  (Z o Q)(<a)<=Z(Q(<a))=A(T(v))<theta8.
+  No continuity of Z at that supremum is assumed. Every actual source
+  cap<a gives a strict concrete output bound, as required.
+
+[固定输入的历史段落在本阅读版省略；自然输入及完整推导见本目录三篇主文。]
+
+[固定输入的历史段落在本阅读版省略；自然输入及完整推导见本目录三篇主文。]

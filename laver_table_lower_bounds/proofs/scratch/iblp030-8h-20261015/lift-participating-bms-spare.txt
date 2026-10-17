@@ -1,0 +1,282 @@
+> 整理阅读版 / Collected reading edition. 数学结论以本目录三篇主文为准。
+> 原有局部证明、适用条件和撤回提醒保留；旧进度文字仅作历史记录。
+> 固定输入的历史段落如有省略，逐段位置记录于 SOURCE_MANIFEST.json；
+> 主文已用原证明产生的自然参数补上相应数值推导。未新增 Lean 认证。
+
+2026-10-15. Participating BMS limit input via a spare E row and root packets.
+
+STATUS: NEW PROOF DRAFT, requesting independent local audit. This is the
+first candidate here whose BMS limit index really depends on the current
+linedness parameter. It is not yet an original IBLP030 result, nor an
+unrestricted higher-type BMS diagonal theorem. All marks are absent.
+
+Dependencies:
+  lift-E-window-ribbon.txt (actual successor anchors; weak raw-BLS lemma)
+  lift-fan-source-connectors.txt (R_i^*, S_i and their actual edges)
+  output/iblp-laver-bms-20261013/diagonal-forest-hardy-proof.zh-CN.md
+  output/iblp-laver-bms-20261013/marked-BLP-quantitative-transfer.zh-CN.md
+
+1. Full bands, root packets, and actual certificate
+--------------------------------------------------
+Fix a BMS height h>=1, including trailing zero coordinates. A FULL band
+has h+2 rows: its ports 0,...,h, followed by a spare row. A ROOT packet
+has only the h+1 ordinary ports and NO spare. The surrounding actual
+prefix F contains the fixed two base rows. Its base is theta0,theta1,
+theta2; all band left endpoints are strictly above theta2.
+
+For a full band with left address b and spare-row address e=b+h+1:
+
+  - port 0 is an actual E-successor core (0,1,2,b):2;
+  - zero coordinate ports k>=1 are ghost rows (immediate cut);
+  - a positive port k with parent band c has the ordinary balanced
+    source/target core (b_c,...,b_c+k,b,...,b+k), step k+1;
+  - its spare is an actual E-limit core (0,1,2,b,e):3.
+
+The implicit cap of the spare is the left point of the following band,
+or the total cap for the last full band. Equivalently its owner S has
+
+  S(theta0)=theta_b,
+  S(theta1)=theta_e,
+  S(theta2)=theta_(e+1).                             (SP)
+
+The positive port owners have the standard ribbon edges. The anchor
+owner has theta0->theta2, theta1->theta_b, theta2->theta_(b+1).
+All real rows have their full ordinary point-image edges; ghosts only
+denote same-Iter(j) critical points. There are no marks. A root packet
+has exactly the same ports and owners, except the spare has been removed.
+
+We distinguish payload BMS parents from the auxiliary low references
+0,1,2. This metadata is explicit; it is not inferred from arbitrary raw
+rows. Under order-preserving address extraction, all implicit caps must
+also be checked, as done in section 5 below.
+
+2. Initial three full bands from one taller fan
+------------------------------------------------
+Take a closed front-insertion fan of height H=h+1, with cap C<b=tau,
+source U0=kappa0,U1=kappa1, and common cutoff epsilon>V1. Use exactly
+the old T=L3(f), the port-1 replacements beta0,beta1,beta2, and actual
+prefix ending at a=theta6 from lift-E-window-ribbon.txt.
+
+Use only ports 0,...,h of each transported fan band as BMS ports.
+The unused index H=h+1 point becomes the spare-row point. Thus the
+three full bands and their right caps are:
+
+  T(U0),...,T(Uh), T(UH) ; cap T(V0),
+  T(V0),...,T(Vh), T(VH) ; cap T(V_(H+1)),
+  T(L(V0)),...,T(L(Vh)), T(L(VH)) ; cap T(C),
+
+with the three index-1 ports lowered as in the E-window construction.
+These are the matrix R_h=(0^h)(1^h)(1^h); the third band still has the
+FIRST band as parent. The fan closure has L(V0)=V_(H+1).
+
+Let R_H^* be the source connector fixing kappa0 and sending
+kappa1->U_H, kappa2->V0. Let S_H=K_H o R_H^*, so
+kappa0->V0, kappa1->V_H, kappa2->V_(H+1).
+
+Choose spare owners
+
+  S_U = T o R_H^*,
+  S_V = T o S_H,
+  S_W = T(L)(S_V).
+
+The FIRST TWO are ORDINARY COMPOSITIONS. They map the ORIGINAL global
+base kappa0,kappa1,kappa2 as required by (SP); they are NOT application
+images T(R_H^*) or T(S_H), which would instead change the source base.
+The final application is valid because T(L) has critical point T(V0),
+above all three original global base points. All spare owners have
+critical point kappa0 and the three stated target images.
+
+The port-1 replacements do not alter these high endpoints (H>=2).
+Anchor and positive-port owners are those already checked in the
+E-window construction. Total cap T(C)<T(b)=c=theta7<kappa4.
+
+3. One auxiliary E creates parallel copies of the WHOLE last column
+------------------------------------------------------------------
+Suppose the last BMS column C is nonzero. Use the last SPARE as an
+E-limit, with its threshold equal to the last band's left point.
+For current finite linedness parameter m>=1, the usual E(m) removes
+the spare and doubles the remaining root packet m times. Therefore
+the result consists of the unchanged earlier full bands followed by
+
+  N=2^m parallel ROOT packets, all copies of the original column C.
+
+Every payload parent of C lies strictly before its band's left point,
+so the auxiliary E maps leave these parent addresses fixed. Internal
+target ports are shifted with each root packet. The low addresses
+0,1,2 are also fixed. Thus these are parallel roots with the same
+parent template, not a falsely chained collection of bad blocks.
+
+This is why copying the original C is important. Repeating a completed
+bad block after the fact would keep its external low parents fixed and
+would generally fail to create the cross-copy parent chains of BMS[n].
+
+The E semantic theorem gives an actual realization with the SAME cap
+and strictly smaller cap/last-owner potential than the original spare
+state. If the last port is a ghost, the immediate required cuts lower
+cap, as in the weak raw-BLS theorem. All global base witnesses persist.
+
+4. The N-root forest macro produces N BMS bad-block copies
+----------------------------------------------------------
+Write the original BMS matrix as A B_0 C_0, where B_0 is its active bad
+block and C_0 the last column. Standard parent nesting ensures every
+payload parent of C_0 is in B_0. With N parallel root packets, use the
+following finite macro N times:
+
+  discard zero high ports of the last root packet;
+  perform exactly one ordinary balanced-ribbon short M at its highest
+  positive payload port.
+
+At stage j the active tail has the form
+
+  frozen prefix, contiguous full-band block B_j,
+  N-j parallel root packets with the C_j template.
+
+The source interval is B_j followed by all but the last root packet.
+The first new full band is the usual splice: retained old root ports
+below the active index, followed by the copied parent-band high ports
+INCLUDING ITS SPARE. This restores a FULL band, not a spareless root.
+Later bands of B_j also copy as full bands. The remaining root packets
+copy without spares. Thus the state becomes
+
+  longer frozen prefix, full-band B_(j+1), N-j-1 roots.
+
+The variable physical widths cause no problem: a full band has h+2
+rows, a root packet h+1, and the source address map is defined on the
+entire ordered source interval. Parent-band low ports are explicitly
+listed by the active core; every later source address is in its high
+translation domain. Spare cores reference only 0,1,2 and their own
+left/spare points, all of which are in this domain.
+
+Each spare is transported as an actual owner. The active copying owner
+has critical point at a parent-band left point >theta2, so it fixes
+the global three base points. Application therefore preserves (SP).
+The same reasoning preserves the actual E-successor anchors. All
+native scans would remain empty on these ordinary ribbon forms, but
+the present auxiliary calculus only needs the raw copies.
+
+After N such macros the last active forest is empty and the current
+last block is B_N. Select original A and B_0,B_1,...,B_N, discarding the
+frozen root packets between them. The diagonal-forest argument, now
+specialized to a forest consisting of N roots, gives the exact direct
+payload-parent table of original BM4 M[N]. The extra bottom diagonal
+row used for arbitrary forests is unnecessary for this all-root case:
+all C_j parents are already within the corresponding B_j.
+
+In particular the macro does not merely count N deletions. It supplies
+the requested BMS fundamental-sequence index N using the CURRENT m.
+
+5. Extracting the selected full bands: the implicit-cap repair
+-------------------------------------------------------------
+The selected full bands need not be adjacent in the actual result.
+Their anchors, positive-port owners, and all within-band implicit caps
+are unchanged by extraction. The direct parent-table property in
+section 4 ensures every displayed positive-port source is also selected.
+The base prefix F and its points/owners remain unchanged.
+
+Only a spare row may have its old implicit cap at a discarded root
+packet's left endpoint. The new cap is the next SELECTED band's left
+point, which is strictly later. Let old/new caps be gamma_p<gamma_q.
+Choose the same-Iter(j) endpoint transporter G with critical point
+gamma_p and G(gamma_p)=gamma_q. It fixes the global three base points,
+the band's left endpoint, and its spare-row point. Replace this spare
+owner S by G(S). Its first two target edges stay fixed and its third
+target becomes the desired new implicit cap. Thus (SP) is repaired.
+
+No mark identity is at issue, since marks are absent. Other owners do
+not refer to the identity of this spare owner; they retain their actual
+point-image equations. Copying a future spare still uses its chosen
+actual owner and preserves its three required edges.
+
+The FINAL selected block B_N ends at the actual current cap. Its last
+spare is the actual last source-copy row of the last forest M; it needs
+no cap repair. Its owner and total cap are retained EXACTLY. Thus the
+extracted smaller BMS state has the same final cap/owner potential as
+the just-constructed state, strictly below the original spare state.
+Repairing earlier spares does not silently reset the last-owner rank.
+
+6. Candidate quantitative induction
+-----------------------------------
+For an arbitrary fixed actual base-prefix syntax F, let f be its
+weak-raw-BLS growth interpretation (initially a partial function).
+Define a relative BMS hierarchy on the same finite height-h domain by
+
+  G_empty^f(m)=f(m),
+  G_(Q Z)^f(m)=(G_Q^f) iterated 2^m times at m,
+  G_M^f(m)=G_(M[2^m])^f(m) for nonzero last column,
+
+where [n] is the original BM4 fundamental sequence. This is a stronger
+index/iteration convention than the usual index m convention.
+
+Claim to audit: any full-band certificate for M with an actual m-lined
+global base gives G_M^f(m)-linedness at its cap, with all calls defined.
+The proof uses the old natural-number finite-table potential, quantified
+over every actual realization and every current finite parameter.
+
+For a nonzero last column, sections 3--5 produce a certificate for
+M[2^m] with lower potential and unchanged parameter m. Apply induction.
+
+For a zero last column, cut its spare and its high ghost ports, exposing
+its genuine E-successor anchor. The cut prefix is exactly F plus the
+full bands of Q. The ordinary E-successor two-block induction gives
+2^m iterations of G_Q^f. In each extracted new block, the global third
+base point changes and the linedness parameter is replaced by the old
+block's output. Crucially the ENTIRE typed full-band syntax, including
+all spare cores and all real/ghost tags, extracts unchanged. Its low
+references are still 0,1,2 after inverse renumbering. Consequently the
+next nonzero clause uses this NEW parameter, not the original input m.
+The first two real base rows supply the usual new-block first-row owner.
+
+This uses no retained Q_j or r,mu decorations after initialization;
+those were only a way to supply the anchor edges initially. The closed
+certificate needs only actual low edges, positive-port edges, and spare
+edges. Thus global-base changes in double-block extraction do not leave
+a hidden requirement that old r,mu remain in some fixed low interval.
+
+The empty-matrix clause calls the base-prefix interpreter, whose own
+potential theorem handles the current realization and finite parameter.
+Successor/extraction calls must be organized with the same simultaneous
+definition/strengthened induction as the old quantitative theorem, not
+by assuming f is already total at every possible future argument.
+
+Important scope correction after independent root review: cutting a
+real spare on the ZERO-column branch is a deliberately chosen lower-cap
+certificate operation. It is NOT the compulsory next clause of the
+fixed weak-raw-BLS interpreter, which would classify that spare as a
+limit. Thus G is an EXTERNAL relative hierarchy proved by quantification
+over certified full-band patterns; no literal equality with the fixed
+weak-raw-BLS interpreter is asserted. Active choice to discard resources
+is sound because every cut lowers cap and its output linedness can be
+extended back to the previous endpoint by the critical-endpoint maps.
+
+7. What this would give, and what remains outside the claim
+----------------------------------------------------------
+If section 6 passes audit, section 2 gives a genuine relative BMS growth
+bound below kappa4 for each actual available taller fan and its chosen
+base prefix F. It improves on merely U^(s_M(1))(f): the limit index is
+now 2^(CURRENT linedness), so finite successor outputs affect later
+BMS limit choices.
+
+Further work is still necessary to turn this into a natural operator
+f -> D_f at arbitrary input/fan height, to obtain arbitrary finite
+function types, or to simulate the original IBLP030 mark/native cone.
+In particular an arbitrary external function f is not automatically
+realized by a finite base prefix F with the needed cap. The current
+proof claim concerns actual certified base programs, not all oracles
+by fiat. No original-IBLP equivalence is claimed for the auxiliary
+spare/root-packet calculus.
+
+8. Bounded independent syntax check
+-----------------------------------
+lift-spare-compiler-probe.py imports only the old raw ordinary Copied
+and BMS parent definitions. It implements actual auxiliary E doublings,
+the variable-width full/root macros, selected-band extraction, and only
+the stated spare-cap repairs. It compares every final row, step, and
+real/ghost tag with the direct encoding of original BM4 M[2^m].
+
+Run: 495 cases, 3300 actual raw-M steps, heights 1..5, m=1..3,
+maximum 466 rows, and 1815 genuine spare-endpoint repairs. All passed.
+85 random input trials were omitted for having an empty/zero last
+column or exceeding the small input-width filter; none was counted as
+a positive-step pass. The fixed run finished in approximately 1 second.
+No huge trajectories or background processes were used. The checks do
+not prove actual embedding existence or the quantitative induction.

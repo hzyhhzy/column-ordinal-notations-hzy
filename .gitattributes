@@ -6,3 +6,6 @@
 
 # ReportLab PDFs can be ASCII-only but must never undergo text conversion.
 *.pdf binary
+
+# Preserve the rule-version hashes of the Laver lower-bound reference kernels.
+laver_table_lower_bounds/code/*.py -text

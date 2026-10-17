@@ -1,0 +1,181 @@
+> 整理阅读版 / Collected reading edition. 数学结论以本目录三篇主文为准。
+> 原有局部证明、适用条件和撤回提醒保留；旧进度文字仅作历史记录。
+> 固定输入的历史段落如有省略，逐段位置记录于 SOURCE_MANIFEST.json；
+> 主文已用原证明产生的自然参数补上相应数值推导。未新增 Lean 认证。
+
+2026-10-15. Mixed numerical/helper bases for a genuine type-1 BMS seed.
+
+STATUS: new explicit local geometry and closure argument, submitted to
+root and Hardy sibling for independent audit. No original R030 bound is
+asserted. Unlike the two earlier zero-owner seeds, the zero owner here
+is read at a GLOBAL source point below its helper source point; strict
+monotonicity supplies the needed upper bound, not an unproved cutoff.
+
+1. Two different bases, and a coordinate-free E doubling lemma
+-------------------------------------------------------------
+Keep the NUMERICAL base k0<k1<k2 fixed. A current supplied m-linedness
+witness on this triple determines the numerical parameter m.
+
+Also retain an actual helper actor D with
+  D(k0)=k0, D(k1)=k1, D(k2)=w>k2.
+The HELPER base is (k0,k1,w), and w is also the operator control. The
+D-image of the supplied numerical witness is an m-linedness witness
+on this helper base. It can be rebuilt at any call from the current D
+and the unchanged numerical witness; no inverse image is assumed.
+
+We use the following elementary coordinate-free form of E. Suppose
+  p0<p1<p2<c<l<r,
+  S(p0)=c, S(p1)=l, S(p2)=r,
+and there is an m-lined chain with owners L_i, common root p0,
+  r_0=p1, r_m=p2, L_i(p0)=r_i, L_i(r_i)=r_(i+1).
+The actors S(L_i) have critical point c, send c to S(r_i), and send
+S(r_i) to S(r_(i+1)). Consequently they double an actual prefix block
+on [c,S(r_i)] into its original copy followed by its application image,
+with endpoint S(r_(i+1)). Starting with endpoint l gives 2^m copies
+ending at r. Everything below c is fixed. This proof uses only the
+displayed actual points, not that p0,p1,p2 have physical addresses
+0,1,2 or that no other global base point lies between them.
+
+This lemma is the ordinary actual E construction with explicit point
+sources. We distinguish two invocations:
+  * operator-zero E: source is numerical (k0,k1,k2), threshold w;
+  * spare E: source is helper (k0,k1,w), threshold a payload-band left.
+Both copying thresholds lie strictly above k2 and fix the numerical
+base. Only the first kind moves the helper third point w.
+
+2. Mixed-base full-band invariant
+---------------------------------
+The payload is the already audited h+2-row full-band BMS compiler.
+Its positive rows are unchanged. Its anchor/spare rows are actual
+HELPER-source rows. In each band j, with left l_j, port-1 v_j,
+spare point s_j and right r_j, retain owners A_j,S_j satisfying
+  A_j(k0)=w, A_j(k1)=l_j, A_j(w)=v_j,
+  S_j(k0)=l_j, S_j(k1)=s_j, S_j(w)=r_j.
+Here w<l_j<v_j<...<s_j<r_j. There may be zero-coordinate ghosts.
+
+Every band additionally has a numerical-source zero permission Z_j:
+  Z_j(k0)=w, Z_j(k1)=l_j, Z_j(k2)=r_j.               (Z)
+
+The program has a transportable base-operator box between w and the
+first band. It accepts ANY natural scalar function whose numerical
+base is (k0,k1,k2) and whose exit is at most w. Its output is Tbase(f),
+with exit at most the first band left. The box includes its complete
+actual generator background as proof-only transportable metadata.
+
+3. The existing low fan supplies the invariant after D=E transport
+------------------------------------------------------------------
+Use the complete existing scalar full-band initialization for
+  R_h=(0^h)(1^h)(1^h), h=m*2^m+1.
+Its old numerical base is (k0,k1,k2), first band left a=theta6, and
+total cap strictly below delta_old<c_exit=theta7. Its old anchor A_j^0
+has three GLOBAL images
+  (k2,l_j^0,v_j^0),
+and old spare S_j^0 has images (l_j^0,s_j^0,r_j^0).
+
+Take the actual actor E=j9(j14), critical point k2, and let
+  D=E, w=E(k2)=theta8.
+Transport the entire old payload by E. Its first band left is E(a),
+total cap is less than E(c_exit)<kappa4, and its anchors/spares are
+  A_j=E(A_j^0), S_j=E(S_j^0).
+They have exactly the helper-source edges in section 2.
+
+Now read THE SAME anchor A_j at the smaller GLOBAL source k2. Because
+  k2<w, A_j(k1)=E(l_j^0), A_j(w)=E(v_j^0),
+strict monotonicity gives
+  E(l_j^0)<delta_j:=A_j(k2)<E(v_j^0)<E(r_j^0).        (3.1)
+Also A_j(k0)=w. Thus A_j already has global images
+  (w,E(l_j^0),delta_j),
+with its third image STRICTLY INSIDE its own band, below the cap.
+
+All displayed points are actual same-Iter(j) critical points. Choose
+G_j with critical point delta_j and G_j(delta_j)=E(r_j^0). It fixes
+w, E(l_j^0), k0,k1,k2. Then Z_j=G_j(A_j) is the exact permission (Z).
+No value at the untransported source k2 was guessed by application
+compatibility. Only its strict position between two KNOWN images was
+used, and that is enough for the endpoint extension.
+
+This construction applies separately to every initial band; it does
+not use a single actor as all the balanced positive-port owners. Those
+owners are the actual E-images of the original compatible fan owners,
+including every implicit edge V0->V_(k+1).
+
+4. A genuinely fitting Btilde base box
+--------------------------------------
+The audited low-point order is
+  w=theta8<J(a)<J(c_exit)<E(a)<E(c_exit)<kappa4,
+where J=j9(j12) fixes the numerical base.
+The scalar relative-BMS theorem with promoter J therefore accepts
+ANY numerical-base scalar oracle with exit<=w<J(a), and produces
+Btilde(f) with exit J(delta_old)<J(c_exit)<E(a).
+Extend the endpoint to E(a). This supplies the required base operator
+Tbase=Btilde, with the CORRECT numerical base; the payload helper base
+is not mistakenly substituted for it.
+
+5. Closure at zero columns: helper moves, numerical base does not
+----------------------------------------------------------------
+For a zero last payload band, discard its interior payload rows and
+use Z_j in the coordinate-free E lemma, source (k0,k1,k2), threshold w.
+It doubles the WHOLE smaller program after w, including its operator
+box and earlier bands, exactly m times. Every copying actor Q has
+critical point w, hence fixes k0,k1,k2.
+
+The first copy implements a whole scalar function Phi_Q(f) with exit
+at its cap. For the next copy, its new control is Q(w), exactly that
+previous cap. Transport helper metadata to D'=Q(D). Then
+  D'(k0)=k0, D'(k1)=k1, D'(k2)=Q(w),
+because Q fixes the numerical base. Its image of the SAME numerical
+m-witness gives the new helper m-witness. The copied base operator
+accepts the previously produced whole function, whose exit is its
+new control. All numerical inputs are still m, not substituted by the
+output of the preceding function. Finite copy-tree induction therefore
+gives the type-1 zero clause
+  Phi_(Q Z)(f)(m)=[Phi_Q iterated 2^m on WHOLE functions](f)(m).
+
+Naturality of the promoter J box is preserved: a copy actor fixes the
+numerical base, and carries the full J/background data along with the
+helper actor and the payload. No assumption that its output under the
+old numerical base equals a moved output is used.
+
+6. Closure at nonzero columns: both bases stay fixed
+----------------------------------------------------
+Invoke the last spare using source (k0,k1,w) and the D-image m-witness.
+Its threshold is the last band left, strictly above w. Thus its E
+root-packet copying actors fix BOTH bases and the helper actor's three
+displayed point images. The old root-packet/short-M compiler applies
+with physical helper references (k0,k1,w), not blindly with address 2.
+Every positive-parent copying owner has critical point a band left>w;
+it too fixes both bases.
+
+Transport helper-source anchors, helper-source spares, numerical-source
+Z permissions, and complete base-operator background by application.
+At a full-band splice the low/high parent port geometry is unchanged,
+because all these source references lie before every active band.
+Spare endpoint repair uses a critical point above the band's spare;
+the same endpoint actor repairs a Z permission's last image while
+fixing its first two images and numerical source triple. Final active
+owner/cap retention is exactly as in the old full-band compiler.
+
+Thus the resulting matrix is literally M[2^m] with the mixed invariant,
+not just an order-equivalent syntax. The BMS well-founded induction
+and the finite zero-copy trees give the fast type-1 BMS hierarchy with
+base operator Btilde, assuming the old full-band/E dependencies.
+
+7. Scope and the remaining audit questions
+-----------------------------------------
+The claimed output family is
+  V_Btilde(f)(m)=K_(R_(m*2^m+1))^(type1,Btilde)(f)(m),
+with a whole natural scalar contract of exit E(c_exit), for input
+functions f of exit<=w. The fan is built separately for each supplied
+m-witness; the exit and numerical function are uniform. The construction
+is natural in every outer application environment.
+
+The pure numerical comparison in hardy-root-fast-type1-C3.txt gives
+H_(original C[3])(m)<=V_Btilde(f0)(m), m>=3, f0(m)=m*2^m, provided f0
+has an admissible scalar exit. The usual f0 exit kappa3<w suffices.
+This is NOT the full original C, R[0], or R030 Hardy target.
+
+Independent audit should particularly check (i) the coordinate-free E
+lemma with two different source triples, (ii) that Q(D) updates the
+helper third point on zero copies while global m stays the input, and
+(iii) that no raw scan/native-completion claim is being imported from
+literal source address 2. This is an auxiliary unmarked compiler.

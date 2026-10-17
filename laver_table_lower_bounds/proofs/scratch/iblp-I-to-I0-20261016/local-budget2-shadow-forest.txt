@@ -1,0 +1,248 @@
+> 整理阅读版 / Collected reading edition. 数学结论以本目录三篇主文为准。
+> 原有局部证明、适用条件和撤回提醒保留；旧进度文字仅作历史记录。
+> 固定输入的历史段落如有省略，逐段位置记录于 SOURCE_MANIFEST.json；
+> 主文已用原证明产生的自然参数补上相应数值推导。未新增 Lean 认证。
+
+2026-10-16. Penultimate shadow lines through an arbitrary finite raw forest
+=========================================================================
+
+Status: a conditional ALL-n transport theorem for the RAW forest, and hence
+for QUIET original expansions. It proves the needed cap bound from the
+owning live packet; it does not assume an arbitrary environment keeps the
+old cap below C. No tests or descent runs were needed.
+
+Dependencies read:
+  local-budget2-initializer.txt, especially sections 9--12;
+  local-budget-full-iblp.txt;
+  old original-audit-root-forest-interface.txt;
+  old original-audit-open-extraction-repair.txt.
+The exact raw-forest syntactic identity and its conditional actual marked
+copy semantics remain explicit premises, not reproved global legacy safety.
+
+1. Data and the three different boundaries
+------------------------------------------
+Let P have r rows, final controller F, implicit cap c=theta_(r+1), and
+final explicit point b=theta_r. Let
+  e_idx = core_r[-L_r],  e=theta_(e_idx).
+Thus [e_idx,r] is its complete original FOREST packet, cap included.
+For its final owner one has F(e)=c. This e is the original raw-forest
+boundary, NOT generally the first image s[L] of its full row.
+
+The penultimate row r-1 has its own full-packet start
+  p_idx = core_(r-1)[-L_(r-1)],  p=theta_(p_idx),
+and implicit cap b. Suppose an actual M-line is supplied on
+  (p,b,D), with b<D<c.                               (1.1)
+Call it the penultimate shadow. Its root p need NOT be below e in the
+generic theorem; it may be inside the last packet. It is always below b.
+
+Separately, suppose the main ready resource is an actual m-line on
+  (e,c,C), c<C<kappa4,                               (1.2)
+with the closed-packet metadata that licenses the E packet supply.
+All witnesses are in the same Iter(j). These two lines have different
+roles and are not to be identified merely by comparing their lengths.
+
+Choose a specified n with 2<=n<=2^m. The direct m-round doubling supplies
+2^m parallel whole packets. Retain their FIRST n complete packets; let
+C_n be their actual final cap, so C_n<=C. The first original packet and
+its actual cap c are unchanged. In particular the shadow (1.1) is still
+available in that first packet's final gap (b,c).
+
+2. The live-forest invariant: track the FIRST, not the consumed last packet
+------------------------------------------------------------------------
+At every stage of the raw forest, discard none of the actual witnesses.
+The syntactic raw-forest induction has an active contiguous source block
+followed by h parallel live packets, h=n,n-1,...,1. Earlier frozen rows
+may also remain. Their existence does not change the following facts:
+
+  (a) The active controller is the last row of the RIGHTMOST live packet.
+      If A is its actual owner and a is the FIRST point of that active
+      packet (the current core[-L] boundary), then
+                         A(a)=C_n.                  (2.1)
+
+  (b) With h>=2, the ENTIRE first live packet is in the copied source
+      interval. Its cap c_1 is at the next live packet's first point, so
+                         c_1<=a.                    (2.2)
+      Equality occurs when only two live packets remain.
+
+  (c) A raw short copy replaces the active tail by the A-image of its
+      source block and its first h-1 live packets. These packets remain
+      contiguous and parallel. Their final cap is A(a)=C_n, unchanged.
+      The first live packet in the next forest is the A-image of the old
+      FIRST live packet, not the old rightmost packet with its cut owner.
+
+These are the actual geometric counterparts of the established raw-forest
+template. They use complete packets, including their implicit caps. Merely
+translating cores without those edges would not justify (2.1)--(2.2).
+
+3. Transport the first packet's penultimate shadow
+--------------------------------------------------
+Inductively retain actual data (p_1,b_1,D_1,c_1) and an M-line
+  (p_1,b_1,D_1), b_1<D_1<c_1,
+where b_1 is the explicit point of the first packet's controller and c_1
+is that packet's implicit cap. The row immediately preceding that controller
+is the current image of the original penultimate row.
+
+For h>=2, apply the active owner A to every shadow-line witness. By (2.2),
+
+  A(b_1)<A(D_1)<A(c_1)<=A(a)=C_n.                  (3.1)
+
+Thus the next shadow is exactly
+  (A(p_1), A(b_1), A(D_1)),
+and its containing packet cap is A(c_1). This establishes the invariant
+for the new FIRST live packet. No hypothesis A(c)<=C_n about the original
+untransported c is used. The inequality follows from the CURRENT owning
+packet's cap c_1<=a before each individual copy.
+
+The shadow root is also correct: its coordinate is an explicit point of
+the current penultimate row, so the raw forest's commuting address square
+maps it to the exact central-tail boundary of that copied row. Its step
+and core length are unchanged by a RAW copy. If p_1 lies below the copy
+critical point it is fixed; otherwise it is genuinely moved. No blanket
+assumption that every shadow root lies below e is necessary.
+
+SINGLETON PACKET CASE. If the last packet has only its controller, the
+penultimate row lies in the adjacent source block, not inside the packet.
+It is nevertheless copied at the same stage: the active pivot precedes
+that source-block last row. Its implicit cap is the first live packet's
+start b_1, so the same transformed cap A(b_1) is obtained. The shadow's
+third point lies inside the first packet's gap (b_1,c_1), and (3.1) applies
+unchanged. This is why it is useful to track that row together with the
+first packet, rather than require every penultimate row to be inside it.
+
+There are exactly n-1 such raw short copies. Therefore the final shadow
+is obtained by a known composite transport T=A_(n-1) ... A_1 and satisfies
+  (T(p),T(b),T(D)) is M-lined,
+  T(b)<T(D)<C_n.                                    (3.2)
+The notation T is ordinary composition on points; witnesses are transported
+by successive applications A_(n-1)(...(A_1(U))...). They stay in Iter(j).
+
+4. The final cut and exact reference-closed extraction
+------------------------------------------------------
+After those n-1 copies, a single live working packet remains. The final
+work-controller cut removes its last row. The actual final row is its
+penultimate row, namely the cumulative image of original row r-1. Its
+implicit cap is T(b), not C_n and not an arbitrary later selected point.
+Its full-packet start is T(p). Thus (3.2) already has the EXACT two endpoints
+needed to supply the next raw full packet:
+
+               new packet start = T(p),
+               new implicit cap = T(b),
+               renewed outer cap = T(D)<C_n<=C.     (4.1)
+
+The raw forest's reference-closed selection retains this final actual row
+and its final cap. Hence this final owner is NOT repaired. Repairs of
+earlier retained owners do not move any selected actual point or alter
+the independently retained shadow witnesses. They cannot replace T(b)
+by an unverified gap endpoint. This is exactly the final-cap clause of
+original-audit-open-extraction-repair.txt section 3.
+
+By the established raw-forest lemma, the extracted syntax is precisely
+  cut(FullCopy^(n-1)(P)).
+Consequently (4.1) is the exact interface of its final raw row, not merely
+an interface of some larger unselected forest.
+
+5. Scope after the ORIGINAL frozen scan
+---------------------------------------
+If the original final scan is QUIET, it changes nothing. In that case the
+above theorem supplies an actual M-line at the precise next packet start
+and implicit cap of ORIGINAL P[n], with renewed outer cap strictly below
+the old one. This is an all-n result, not only the n=2 instance checked in
+local-budget2-initializer.txt.
+
+The actual-copy and old-mark safety premises are still required. For a
+closed quiet q-ribbon/ancestry cone, use the existing quiet legacy theorem;
+for general P, do not infer safety from this shadow-line calculation.
+
+If the scan is NOT quiet, this file does NOT identify the final packet
+start with T(p). Even a proper mark event can add points and change the
+step; one must re-evaluate core[-L] in the final native/marked family.
+Long cores with early target marks are a specific case requiring care.
+It is invalid to say "the cap is preserved, so the required starting
+endpoint is also preserved." A further scan-port ledger is needed.
+
+There is one directly proved useful exception: a scan containing only
+NATIVE completion and no effective inherited-mark event. In a native event
+at row i, write its old consecutive central points as p0,e0, old step L,
+and record size t. Every source point inserted by the native q traversal
+lies strictly between p0 and e0, and every new target coordinate is among
+i+1,...,i+t, hence after e0. These two sets are disjoint from the old core.
+The final/top native row has exactly 2t new points and step L+t. If the
+old core length was h, the old e0 position was h-L; its new position is
+h-L+t=(h+2t)-(L+t). Therefore the top row's core[-(L+t)] is precisely the
+same actual e0. Its implicit cap is also unchanged by native interpolation.
+Earlier native insertions only rename old actual points, preserving this
+identity. Thus the final shadow endpoints survive a NATIVE-ONLY scan.
+
+For the FIRST original expansion R[n], this exception applies for every n:
+R and its raw copies have no inherited marks; newly generated families
+are skipped by the frozen scan, so no generated star causes another mark
+event in that same scan. The exact first-root scan/forest theorem supplies
+its actual native semantics. Hence the generic raw shadow theorem extends
+to the full original R[n], not merely its unscanned buffer.
+
+6. What this buys for numerical updates, and what it does not
+-------------------------------------------------------------
+If the supplied shadow length M is at least m+1, then after the exact
+original quiet macro one may retain or directly compress to m+1 segments
+at the next correct endpoints. This gives the requested STRICT increase
+of the usable linedness parameter in a prescribed finite macro. There is
+no unknown M-until-special-shape normalization:
+  m specified E rounds, n-1 specified raw short copies, final cut,
+  explicit extraction, and the quiet scan.
+
+However, this theorem PRESERVES M; it does not itself enlarge the shadow
+length. A fixed enormous M only pays finitely many chosen +1 renewals.
+To close an unlimited recursive Hardy compiler, the next state needs its
+OWN penultimate shadow with sufficient new length, as well as its main
+ready line. Keeping only (4.1) loses that second resource. A complete ledger
+of deeper-row shadows, or an actual fresh-shadow generation theorem, is
+still necessary. This is a concrete remaining invariant, not an endpoint
+ambiguity in the one-step transport proved here.
+
+7. Independently checked root-R shadow proposed by the main agent
+----------------------------------------------------------------
+In the canonical R certificate its penultimate row is 2345:2, so
+  shadow root p=mu=theta4,
+  shadow second point b=theta6,
+  original packet cap c=theta7.
+The packet itself is the singleton controller row 456:1; thus section 3's
+singleton case is essential, not optional.
+
+Use the audited R[3] actors V=d(K), B=V(K), with
+  B(kappa0)=theta5, B(kappa1)=theta6, B(theta5)=chi,
+  theta6<chi<theta7.
+Transporting the old Qi M-line on (kappa0,kappa1,theta5) by B supplies
+  (theta5,theta6,chi), length M.
+The canonical final owner c_actor has the critical fragment
+  mu->theta5->theta6,
+so it supplies a one-segment lower line on (mu,theta5,theta6). The
+prefix-preserving line product gives a line on (mu,theta5,chi) of length
+2^M, retaining that one-segment prefix exactly. Remove the prefix to get
+
+  (mu,theta6,chi), length 2^M-1, with chi<theta7.     (7.1)
+
+This is precisely the penultimate shadow required by (1.1), not a line at
+merely nearby endpoints. The main root initializer separately supplies
+the main ready line on (theta6,theta7,C), C<kappa4.
+
+Combining (7.1), sections 2--4, and the native-only exception in section 5
+therefore yields, for every specified admissible n>=2, an actual line of
+length 2^M-1 at the EXACT next full-packet start and implicit cap of the
+noncanonical original R[n] forest realization, with renewed outer endpoint
+strictly below the retained forest cap C_n<=C.
+
+This upgrades the initial large-child construction to a genuine first
+ready-state renewal for arbitrary n. It still does not construct the new
+penultimate SHADOW of R[n], or a full recursive ledger for all descendants.
+Keeping the distinction between the main ready line and its shadow remains
+essential for the proposed increasing-parameter iteration.
+
+Verdict
+-------
+The generic raw-forest cap bound works: follow the first live packet's
+shadow, whose cap is below the next active source boundary, and use
+A(boundary)=current outer cap at each copy. For quiet or native-only,
+semantically valid original steps it renews the EXACT next packet line
+for every n. General effective-mark scan transport and repeated
+replenishment of shadow resources remain open. No new H_R bound is
+claimed and no process was started.

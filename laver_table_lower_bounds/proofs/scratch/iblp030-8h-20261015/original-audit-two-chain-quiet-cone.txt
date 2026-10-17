@@ -1,0 +1,196 @@
+> 整理阅读版 / Collected reading edition. 数学结论以本目录三篇主文为准。
+> 原有局部证明、适用条件和撤回提醒保留；旧进度文字仅作历史记录。
+> 固定输入的历史段落如有省略，逐段位置记录于 SOURCE_MANIFEST.json；
+> 主文已用原证明产生的自然参数补上相应数值推导。未新增 Lean 认证。
+
+Two-chain quiet copying: a weaker local interface than a q ribbon
+================================================================
+2026-10-15. Original legacy Python, not a modified rule. This is a LOCAL
+raw-copy theorem and a conditional actual forest interface. It is NOT a
+closure theorem for the Hardy cone of R=I[0][3][0]. In particular the
+mandatory final cut may expose a different controller not covered here.
+
+1. The two chains
+-----------------
+For a controller core c of step L, put
+  a=c[0], P=c[-L-1], e=c[-L], D=c[:-L], I=c[L:].
+Call the controller two-chain if each of D and I separately is a
+consecutive q chain, where q(r)=row_r[-2]. There is NO condition connecting
+the last point of D with the first point of I, or on unpaired bridge points.
+
+For ordinary short/medium/long lengths 2L-1, 2L, 2L+1, these are respectively
+two disjoint chains with one bridge point, two adjacent chains, or two
+chains overlapping in P. The raw map sends D to I position by position.
+Thus this condition is strictly weaker than saying the whole core is a
+q chain. The proved large-input failure in
+original-audit-hardy-tail-ribbon-failure.txt does not by itself refute it.
+
+Say Sat holds if every native-eligible row r satisfies q(e_r)<=p_r, with
+its ordinary central pair p_r=row_r[-L_r-1], e_r=row_r[-L_r]. Assume:
+  T1. Sat holds in the current state.
+  T2. The first full raw copy is defined, and the active controller is
+      two-chain.
+  T3. No native-eligible row in the active source interval [P,N] has e_r=a.
+All ordinary cores are strictly increasing, steps positive, and all
+explicit q references are valid. These syntactic validity premises are
+understood throughout.
+
+LOCAL THEOREM. Arbitrarily many consecutive FULL RAW copies preserve
+T1--T3 and the two-chain property of the working controller. Every scan
+started after these copies and the final controller cut is the identity.
+
+Proof of Sat. The raw map f is strictly increasing on its defined domain,
+so a copied row has central pair f(p_r),f(e_r). If e_r<a, both its old
+q(e_r) and p_r are below a and are fixed. If a<e_r<P, full-copy definedness
+places e_r in D. It is not the first member. Its q parent is the preceding
+member of D, and the q parent of f(e_r) is the corresponding preceding
+member of I. Hence q(f(e_r))=f(q(e_r)). If e_r>=P, the copied row situated
+at f(e_r) gives the same equality directly. In all cases Sat follows from
+q(e_r)<=p_r. The omitted case e_r=a is exactly T3, not an implicit claim
+that q commutes at the minimum.
+
+Preservation of the controller chains. For consecutive x<y in D, y>a.
+If y<P the D/I relation just used gives q(f(y))=f(x); if y=P, the copied
+row at f(P) gives it. For consecutive points in I, the right point is
+strictly above P for each ordinary shape, so its copied row gives the
+same equality. Thus f(D) and f(I) are again consecutive q chains. The
+next active interval consists entirely of newly copied rows. Injectivity
+of f gives f(e_r)!=f(a), establishing T3 at its new minimum. Definedness
+persists: old fixed low references stay below the new minimum, listed
+middle references become listed controller images, and old high references
+become high references. This is the raw domain induction from the forest
+interface, not a scan invariant.
+
+Finally a cut leaves all remaining cores and q arrows unchanged, so Sat
+survives. A fresh scan starts with no record. Sat prevents every native
+record; with no native record, no mark completion can fire. Thus that
+one scan is the identity, whatever the retained mark masks are.
+
+2. What this says about the explicit third Hardy controller
+----------------------------------------------------------
+For n>=3, write A=R[n], a_0=4, a_j=5+j(j-1)/2, N=|A|. Its row N-2 has
+  c=(2,3,a_0,...,a_(n-3),a_(n-1),a_n,...,a_n+n-3), L=n.
+The source chain is (2,3,a_0,...,a_(n-4)), omitting the a-part when n=3.
+The image chain is (a_(n-1),a_n,...,a_n+n-3). Both are consecutive q
+chains. The failure of the WHOLE ribbon occurs across the omitted bridge:
+a_(n-3) is followed by a_(n-1), whose q parent is a_(n-2).
+
+The two quiet raw rounds in the cited third-Hardy computation carry these
+two chains to the final controller of R[n][n][n]. The needed chain edges
+do not use the minimum exception, so the raw q-commutation calculation
+applies to each edge. Therefore the exhibited third controller is still
+two-chain for every n>=3. This does NOT prove T3 for its whole next source
+interval, nor any preservation after another mandatory cut. It narrows
+the obstruction; it does not remove it.
+
+3. A separate raw ancestry lemma
+-------------------------------
+H1 means that the q forest is preorder-numbered (each rooted subtree is
+a physical interval). H2 means every point of every core is a q ancestor
+of its row. A defined full raw copy preserves H1 and H2.
+
+Indeed P and all controller points are ancestors of N, so a is an
+ancestor of P, and every row in [P,N] lies in P's subtree. For r>P,
+q(r)>=P; its copied parent is the corresponding high copied parent.
+The first copied row, at address N=f(P), attaches to f(q(P))<N. If P=a,
+q(P)<a and is fixed. If P>a, q(P) is a listed middle point (it occurs in
+the copied source row P), and f(q(P)) is an old controller image and
+therefore an ancestor of old N. Such a point is on the right frontier
+of the retained prefix 1..N-1. Attaching the isomorphic P-subtree there
+preserves preorder numbering.
+
+For H2, any old core point x>=P has its high image on the copied ancestor
+path. For x<P, it is an ancestor of P. If x<a, then it is an ancestor of
+a and of the controller image chain. If a<=x<P, definedness puts it in
+the controller and H2 makes f(x) an ancestor of old N. Strict increase
+gives f(x)<=f(q(P)) whenever x<=q(P), so these old image points occur in
+the right order on one old ancestor chain. They are consequently ancestors
+of the new copied row at N and of every copied descendant. This proves H2.
+
+This lemma is about raw copies. It does not repeat the invalid claim that
+H2 survives an arbitrary effective frozen-mark completion. The known
+36-row actual counterexample fails precisely at that latter step.
+
+4. Conditional open-mark safety during a quiet forest macro
+-----------------------------------------------------------
+Suppose, in ADDITION to the syntactic quiet hypotheses, that H1/H2 hold
+and the source has a valid OPEN bounded certificate with accurate stars.
+Use the raw forest macro of original-audit-root-forest-interface.txt.
+The required parallel [e,N] packets must be supplied by an ACTUAL auxiliary
+resource which transports BOTH controller N and its implicit cap N+1;
+an ordinary one-endpoint E permission is not automatically such a resource.
+No quantitative supply of this extra permission below kappa_4 is claimed.
+
+For each raw-copy state that satisfies H1/H2 and Sat, every retained mixed
+legacy star is open-safe. To see the strict inequality correctly, let
+delta be its old paired source. The actual code tests f(delta)<=a. Since
+f(x)>a for every defined x>=a, this forces delta<a, despite the code's
+non-strict written <= test. If the bottom trace row is t<P and its source
+endpoint is alpha=e(t), then delta=p(t). Because a is an ancestor of P,
+H1 puts every node in [a,P] in a's subtree. The possibility
+delta<a<alpha<=t<P would imply q(alpha)>=a, contradicting Sat at t.
+Hence alpha<=a. This is exactly the open mixed-copy guard; equality is
+allowed because equality of functions on V_alpha does not evaluate the
+endpoint object alpha. All-high and wholly low traces have their usual
+direct open transport proofs.
+
+Parallel copies of a complete tail subtree preserve H1/H2, and any short
+M output is a prefix of the corresponding full raw output, so the raw
+ancestry proof applies. The two-chain/Sat/T3 calculation must hold for
+each active forest template: it holds when templates are the transported
+parallel copies in the raw-forest induction and all of its copied source
+rows satisfy T3. Stating this condition explicitly avoids inferring it
+from the selected extraction alone. Under that condition every deferred
+scan is quiet, so no unproved effective-mark ancestry closure is used.
+
+Finally extract the selected complete syntax. For an ALREADY valid open
+certificate, original-audit-open-extraction-repair.txt repairs implicit
+right endpoints while preserving each bounded factor function exactly.
+It retains the final owner and cap. Combining these local facts gives a
+conditional actual realization of that one quiet original A[k] macro.
+
+The unresolved global obligations are still substantial: a bounded actual
+two-endpoint forest supply, T3 for successive exposed controllers, and
+closure through nonquiet original scans. No statement here says that the
+entire Hardy-tail cone of R satisfies them.
+
+5. Exact boundary for preservation of ALL row chains
+---------------------------------------------------
+Suppose every source row is two-chain, and the active controller is
+two-chain. For a particular copied row and either of its two chains,
+every consecutive edge x<y is preserved by f EXCEPT POSSIBLY when y=a.
+For y<a both ends are fixed; for a<y<P use the active D/I chains; for
+y>=P use the copied row at f(y). These are all possible cases. Thus the
+following additional full-band condition suffices to preserve two-chain
+for every copied row, not just the next working controller:
+
+  T4. The controller minimum a is never a NONFIRST member of either
+      D_r or I_r of a copied row r in [P,N].
+
+More precisely, if such an exceptional edge exists then x=q(a)<a and
+its image survives exactly when q(f(a))=q(a). Under H2 this equality is
+impossible: a and f(a) are controller core points, hence a is an ancestor
+of f(a)>a, and q(f(a))>=a>q(a). Therefore, under H2, T4 is NECESSARY as
+well as sufficient for preservation of all row two-chains by a raw copy.
+
+Likewise, under H2, every copied eligible row with e_r=a becomes genuinely
+unsaturated: its p_r<a is fixed while q(f(a))>=a. Therefore T3 is exactly
+the Sat boundary in this setting, not merely a convenient sufficient
+condition. A positive scan repairs this boundary by native completion;
+one must then prove the resulting new marks/packets compatible with the
+next controller. Avoiding it is not the same as solving it.
+
+T3 and T4 are distinct. For a medium row, its first image e_r is the FIRST
+member of I_r, so e_r=a need not violate T4. For a short row, e_r is the
+unpaired bridge and belongs to neither D_r nor I_r. This explains the
+actual n=2 Hardy diagnostic: after five positive steps the next copy has
+the unique T3 witness row 3, core (0,1,2,3):2, e_r=a=2, while both chains
+of every row remain intact. Its next native completion is unavoidable.
+
+Companion original-audit-hardy-two-chain-probe.py checks just three fixed
+short Hardy prefixes: n=2 first fails T3 at step 5; n=3 and n=4 preserve
+the tested weak interface through 18 and 13 steps, respectively, before
+the explicit 1200-row resource bound stops them. Runtime 0.125 seconds,
+maximum just-constructed buffer 1455 rows/12293 fields. This is diagnostic
+only. In particular it does not show that initial n>=3 excludes a later
+minimum-boundary native event, and no long descent is proposed here.

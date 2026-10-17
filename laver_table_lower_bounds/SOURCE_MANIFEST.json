@@ -1,0 +1,1743 @@
+{
+  "edition": "2026-10-18-natural-inputs",
+  "items": [
+    {
+      "source": "output/iblp-laver-bms-20261013/BMS-fixed-index-to-FGH-summary.zh-CN.md",
+      "package": "proofs/output/iblp-laver-bms-20261013/BMS-fixed-index-to-FGH-summary.zh-CN.md",
+      "source_sha256": "3ba9c6506b151db70f5f3208c58c642f94a091daf27e8b0b9dd7e4b5548cddcd",
+      "package_sha256": "21663e3dc20258f4546f34e1ab29965b26a2b01cf2929c688137cb03df8883cb",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/ancestor-cover-growth.zh-CN.md",
+      "package": "proofs/output/iblp-laver-bms-20261013/ancestor-cover-growth.zh-CN.md",
+      "source_sha256": "d5dcdf1d3db19aa5d4182bad567e151ef527d006159a48308b96cc287772bb31",
+      "package_sha256": "02f2d1aa6468d3f9bb2f4a221631556c07544e82ab33c58f41ec3a8cf7a53602",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/diagonal-forest-hardy-proof.zh-CN.md",
+      "package": "proofs/output/iblp-laver-bms-20261013/diagonal-forest-hardy-proof.zh-CN.md",
+      "source_sha256": "43a7ebad7c6d99271585723de1b8154849c66a4dd88c8e1cddb69ff308e1320e",
+      "package_sha256": "c20b24f68057f36e2d54ac5fced10db76711e3bb9df6cd5564989f3f63e64119",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/fixed-index-growth-interface.md",
+      "package": "proofs/output/iblp-laver-bms-20261013/fixed-index-growth-interface.md",
+      "source_sha256": "0cc9598905e0871ca407716467978d1185ca3fd428c422ac222e26f088750f1e",
+      "package_sha256": "77b2eb2ff1ae62e86eb0b6127aceef090e39224c44405c1ebd99159a2050ee30",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/balanced-ribbon-bridge.zh-CN.md",
+      "package": "proofs/output/iblp-laver-bms-20261013/balanced-ribbon-bridge.zh-CN.md",
+      "source_sha256": "b14e4c66fc405e045d344562cfd21c8f3a6afb25ebcc9b3b144c8288adc074ea",
+      "package_sha256": "925d661d2d23c5dc9fa6bfa418ef6b8ede4b6107ce03336d7974e41fc574b06a",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/lined-front-insertion.zh-CN.md",
+      "package": "proofs/output/iblp-laver-bms-20261013/lined-front-insertion.zh-CN.md",
+      "source_sha256": "6b600e7f897ff3c393d07bbc7f58dd5e6d53d5afb57072ec7cb61be725af1bbd",
+      "package_sha256": "46f81ac934b891baa3b4f35d2f21b49a33a5223a35515518c65859e04532b4a0",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/short-terminal-initialization.zh-CN.md",
+      "package": "proofs/output/iblp-laver-bms-20261013/short-terminal-initialization.zh-CN.md",
+      "source_sha256": "5ec39241c49f935f6141f01834790704080ede0fb5b51fa5196313cc89ae9716",
+      "package_sha256": "4a5782dc4872026ddfbd6dcd141751fa9ae0a1a0cf6841f1328d97b3c82dd372",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/ribbon-initialization.zh-CN.md",
+      "package": "proofs/output/iblp-laver-bms-20261013/ribbon-initialization.zh-CN.md",
+      "source_sha256": "1a8a624393e9ff2e21ad41374b0f0d30d4946cee82b17867fed56a8f9042aa91",
+      "package_sha256": "c4421b3d3217b7505beba30485c6a800b66579ae46ea75f9b61f9162bdb06854",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/source-lined-E.zh-CN.md",
+      "package": "proofs/output/iblp-laver-bms-20261013/source-lined-E.zh-CN.md",
+      "source_sha256": "88f9db3fa614e56d08cd45f69a7e5c2545d7a5a40bc4655efec57b6da6f06e69",
+      "package_sha256": "205bdc5bf7470a9a78e99631a8cf5d447d3471117e5d7cad14b5fc4c9002faba",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/marked-BLP-quantitative-transfer.zh-CN.md",
+      "package": "proofs/output/iblp-laver-bms-20261013/marked-BLP-quantitative-transfer.zh-CN.md",
+      "source_sha256": "55d5cace7ece3234d7f2e5a5ebeacc4aef1dadf1a580e2f01a2e638ae32afde2",
+      "package_sha256": "f09cc0439150cbbb7ee3045e2a6e928ee54a3294f5496abce642c0dfd2f019bc",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/direct-step-bridge.zh-CN.md",
+      "package": "proofs/output/iblp-laver-bms-20261013/direct-step-bridge.zh-CN.md",
+      "source_sha256": "08eea96a25ed0b5d91ad678ce15925ac36fd6ca8d433aa6bbb56afab5923612f",
+      "package_sha256": "7fa5faa9931addb655671813f4983be688231dc7c7ce01874d7a98db0e354ebc",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/lining-prefix-cutoff.zh-CN.md",
+      "package": "proofs/output/iblp-laver-bms-20261013/lining-prefix-cutoff.zh-CN.md",
+      "source_sha256": "e3930bdefed20e0184b59d1efdcb99ec893c9d00ca8e935167b6c3774ca0ab91",
+      "package_sha256": "c00667caae458aae6492a474202ec65402aeebdb9aabb4efbbd086bf5f8d0892",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/marked-prefix-rebase.zh-CN.md",
+      "package": "proofs/output/iblp-laver-bms-20261013/marked-prefix-rebase.zh-CN.md",
+      "source_sha256": "e93e88457cfc9cdcccbf602332c409312177cbf8346f6e0dda1fce26c6c40443",
+      "package_sha256": "89456a5afd73268f512b1d2f05842b7b316e10dd13335deee5b6d1414d1d8784",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/diagonal-hardy-compiler.zh-CN.md",
+      "package": "proofs/output/iblp-laver-bms-20261013/diagonal-hardy-compiler.zh-CN.md",
+      "source_sha256": "422da6edb4691936823c4f7c72c9429db7b23690c2a06058cfab7eaf0694e080",
+      "package_sha256": "ed603a96fa0c76fbb4a0dc42efc8626a0c345ae69458fac2c95aee5d968a3c8a",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/block-fan-insertion.zh-CN.md",
+      "package": "proofs/output/iblp-laver-bms-20261013/block-fan-insertion.zh-CN.md",
+      "source_sha256": "0825ef5fedbb9aaec74552a34cf3ea673e0796e75e2fa09d725ce55b40c554e7",
+      "package_sha256": "555beb763937b08c962b84bab26096453601672761da23c0423ca1e311baa410",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/laver-period-32-BMS-bound.zh-CN.md",
+      "package": "proofs/output/iblp-laver-bms-20261013/laver-period-32-BMS-bound.zh-CN.md",
+      "source_sha256": "fb4ac8814b1d0a30eaa9a82f81a52cb14ecb6455ed847c48058bdcb15a2d9c60",
+      "package_sha256": "c106c00d77a4da781d72ead5ff3798a577a95154b72e374a15ec1d2c465be127",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/new-notation-20260918/BMS-nonstandard-row-bound.zh-CN.md",
+      "package": "proofs/output/new-notation-20260918/BMS-nonstandard-row-bound.zh-CN.md",
+      "source_sha256": "a882a3e8bb91bab408d7d565f78724c3fe8fb5c564a4142b235dd0578ac82a11",
+      "package_sha256": "2d2be65cff1bc09f50961b1a1c9d1ddaddc3564dc5f27e8041211bad33a1c95c",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-01-equality-20260923/IBLP-01-no-completion-proof.zh-CN.md",
+      "package": "proofs/output/iblp-01-equality-20260923/IBLP-01-no-completion-proof.zh-CN.md",
+      "source_sha256": "3d00178ac3bb715268f83bfa96cf70144a5db0df051cf37ab30e7b48798d6dd6",
+      "package_sha256": "8592329567d975fd23c4d5c129b17040b6e7c8c88167489d59ee59485dd561df",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-01-equality-20260923/IBLP-01-BMS-upper-bound.zh-CN.md",
+      "package": "proofs/output/iblp-01-equality-20260923/IBLP-01-BMS-upper-bound.zh-CN.md",
+      "source_sha256": "811e8c555d5b654917fa13e5670e83d1e28da5927da5f3452017a2e48f51a163",
+      "package_sha256": "047b2b5d9e72d7b1b12718c2c69c89fcff852d69c7f86ee1bcea40cb825c16bb",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-01-equality-20260923/IBLP-01-unconditional-BMS-lower-bound.zh-CN.md",
+      "package": "proofs/output/iblp-01-equality-20260923/IBLP-01-unconditional-BMS-lower-bound.zh-CN.md",
+      "source_sha256": "9efc1b38d63afa4705f7b394b84a1657b2bed67179dba869b5c55f161c5a6a10",
+      "package_sha256": "34ecfcd56318695661b0161dc5ecda4f19abd974bc63f0e0a4b7498b461a9b5f",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-bms-20260918/IBLP-01-BMS-lower-bound.zh-CN.md",
+      "package": "proofs/output/iblp-bms-20260918/IBLP-01-BMS-lower-bound.zh-CN.md",
+      "source_sha256": "c2c6864e3d5338a8aac2220ec1f1019cd1e2545ead89ced49c11923749f835d9",
+      "package_sha256": "1a684c82fc8d37fd6295cde92415bbbd43fd8b009fa24f3208b589b1cdd7f112",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/q5-BMS-successor-single-file-proof.zh-CN.md",
+      "package": "proofs/output/iblp-030-laver-20261014/q5-BMS-successor-single-file-proof.zh-CN.md",
+      "source_sha256": "d348a9ebfcec99ce8613b3f0d8cb5ab2ebb2f071bd4bb1d7e390e0865ca9c81f",
+      "package_sha256": "1c39893492ba0257e712d91ee90ef3aedc173679208e4c957dd9f915269c5eb2",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/FGH-standalone-dependency-audit.zh-CN.md",
+      "package": "proofs/output/iblp-030-laver-20261014/FGH-standalone-dependency-audit.zh-CN.md",
+      "source_sha256": "fa579137b025809830e4deec14c28da7333f2f3ba0d1296aef9738150ca47aff",
+      "package_sha256": "71f828758102077dbfdea70c0479a8c81d901f273d678376f1549dbf4e1b7236",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/small-period-endpoint-Sf.zh-CN.md",
+      "package": "proofs/output/iblp-030-laver-20261014/small-period-endpoint-Sf.zh-CN.md",
+      "source_sha256": "04d02a6a13f7bd80d9eeea29c41cec80f99aedfda14df25f822764794263ed3b",
+      "package_sha256": "242db10cc47f49feab4f812bc8b9990eccf025f06837bdd27341e5ffcb716659",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/small-period-recursive-corridor.zh-CN.md",
+      "package": "proofs/output/iblp-030-laver-20261014/small-period-recursive-corridor.zh-CN.md",
+      "source_sha256": "c03b1a6a6229f516e40af719d4f9210b178de87f62a8d76122649aa20b839f4f",
+      "package_sha256": "1a9b76a1a94a80163d158156b5d37f90210e91a4317b49ab281bfeb9cbc6650a",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/parent-packet-quantitative-transfer.zh-CN.md",
+      "package": "proofs/output/iblp-030-laver-20261014/parent-packet-quantitative-transfer.zh-CN.md",
+      "source_sha256": "479793aa7a2dd49f1712690088792e2c16474c5bdd53d6454a31b7eca7495dbb",
+      "package_sha256": "72a51ec78f3289f56a3278004b03250f601aecb5b3723050eb4470e3d8ff3eb8",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/parent-packet-short-tail-definition.zh-CN.md",
+      "package": "proofs/output/iblp-030-laver-20261014/parent-packet-short-tail-definition.zh-CN.md",
+      "source_sha256": "073f298737d44f4f4a09a500bf5a3409ea64da16a782bf9c16237d1bc6cf8b13",
+      "package_sha256": "a9506d3b35532bdadf1ee76f99c0d47496b9a04a3fa8689935a90f09ee25003f",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/parent-packet-propagation-selector.zh-CN.md",
+      "package": "proofs/output/iblp-030-laver-20261014/parent-packet-propagation-selector.zh-CN.md",
+      "source_sha256": "e12dafc95030a60809c0f8be150570d5cba045882642d43ba6e1228eabe16039",
+      "package_sha256": "f800af485dc51d95239db19497e97a4efc6146b3a3431bb44f31ac52cba97d27",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/same-owner-L3-sat-closure.zh-CN.md",
+      "package": "proofs/output/iblp-030-laver-20261014/same-owner-L3-sat-closure.zh-CN.md",
+      "source_sha256": "ebfd3f349072137f6adc79a40904edc65f891c1be7bf9427b837a6a4169c59a4",
+      "package_sha256": "ed7f7129ecfc7b415e9ec780fa6a841b53cde0062a5d8076b1eaf41491c09cc2",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/short-tail-cofinality.zh-CN.md",
+      "package": "proofs/output/iblp-030-laver-20261014/short-tail-cofinality.zh-CN.md",
+      "source_sha256": "fcd599c7d2bae25313bded0e83ce01edf81e4e3a401fbfd443e63b68d26b833a",
+      "package_sha256": "f7a7970e89ebdd46077278a5a0d81980b4581db574ab66cdb6a88cc61d22610e",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/promoted-bms-feedback.zh-CN.md",
+      "package": "proofs/output/iblp-030-laver-20261014/promoted-bms-feedback.zh-CN.md",
+      "source_sha256": "fead01358b24d3952e82f6bcba57b1dd4e1b2f9e4fb0cb38f0d7a37f00f58796",
+      "package_sha256": "d0cfa71db3bdb1610ef701dedc3e6e19e8fd894b2f768e987fcf86efb76af8fa",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/root-lowered-bms-feedback.zh-CN.md",
+      "package": "proofs/output/iblp-030-laver-20261014/root-lowered-bms-feedback.zh-CN.md",
+      "source_sha256": "7273aeae6016e9ece7f4cbd958ed4b83fbc2a56793803430c7d24dac8915b011",
+      "package_sha256": "75892081b717a42b59c6e8927037fa812184a3b3fffe7675bf06b232fd2dc4d8",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/lined-feedback-corridor.zh-CN.md",
+      "package": "proofs/output/iblp-030-laver-20261014/lined-feedback-corridor.zh-CN.md",
+      "source_sha256": "3cee9cd44e36ea590d736de1bb7f6cea6a0a6552935a1f6cf8dbb137403945e3",
+      "package_sha256": "f7ece18685f51b464bf285a6d60980bf9cfaac37bab8701dba9922154b5a30e8",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/parent-packet-partial-copy-audit.zh-CN.md",
+      "package": "proofs/output/iblp-030-laver-20261014/parent-packet-partial-copy-audit.zh-CN.md",
+      "source_sha256": "efded81ca4c2d8f2816266b3363e9d2b7d5d0a8e6042bd3098ba4227811951c9",
+      "package_sha256": "4c464893ad84aeb29568312198d94b054402fda736e2fbf1245ae6305182ddc7",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/full-gap-short-tail-definition.zh-CN.md",
+      "package": "proofs/output/iblp-030-laver-20261014/full-gap-short-tail-definition.zh-CN.md",
+      "source_sha256": "5386698ed6cbd5b71f796fff3e596da647fe4ea3ebc86e55ebe1c480ba4cdd07",
+      "package_sha256": "b1c3f9ef3a9bc6a9594dc89d179db55edc74a7115516227395b020c8f646025b",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/full-gap-unrestricted-prefix-packet.zh-CN.md",
+      "package": "proofs/output/iblp-030-laver-20261014/full-gap-unrestricted-prefix-packet.zh-CN.md",
+      "source_sha256": "80f7e8f4cba3bf0947a0f50e9a35918c974c517760d76e25e6fdbbdccc3bafa9",
+      "package_sha256": "76f50c3246c9d7f43667c2b2c1d708ceefa8d07d678f043e5b6f3c3bb315fd8d",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/ordinary-l3-native-mark-seed.zh-CN.md",
+      "package": "proofs/output/iblp-030-laver-20261014/ordinary-l3-native-mark-seed.zh-CN.md",
+      "source_sha256": "3645d50a5fc38e768270c14e1a05317e41520c9b4886b9a069397b0d736c0134",
+      "package_sha256": "1b8b9e2e87e299eacd6798e99193a0680e91fbc47d0a958710d13e29b5c9a59d",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/nested-bms-FGH-bound.zh-CN.md",
+      "package": "proofs/output/iblp-030-laver-20261014/nested-bms-FGH-bound.zh-CN.md",
+      "source_sha256": "812fcca83f3462b93b145c3480b67d77657f1d5559928298b85e521908f9b092",
+      "package_sha256": "55f1345d7ffa32a8ebc55d9676500da6490a79a4ed9c5871a8278621eda3e20f",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/q5-BMS-FGH-two-part-summary.zh-CN.md",
+      "package": "proofs/output/iblp-030-laver-20261014/q5-BMS-FGH-two-part-summary.zh-CN.md",
+      "source_sha256": "d3a30cd9152f10733675030fcbf4011fea3a86b9db19204b5a1014aaafca8f17",
+      "package_sha256": "8e271336aa575f8dd329f32e9d30260ccdbdf854d7e6c0e0a1198acf3ff4fe7b",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/full-gap-native-local-closure.zh-CN.md",
+      "package": "proofs/output/iblp-030-laver-20261014/full-gap-native-local-closure.zh-CN.md",
+      "source_sha256": "2e937329aeb5a0f08918771f452c1732b29d95bdbf0857ade759456224f9324d",
+      "package_sha256": "06673082ec09e093a268227da3eb9733e4be9e92ffeb511a673dc2a39af14b0d",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/small-period-native-mark-seed.zh-CN.md",
+      "package": "proofs/output/iblp-030-laver-20261014/small-period-native-mark-seed.zh-CN.md",
+      "source_sha256": "1acb178c26c312baf7762cc19905860b661b64a3bdf97df695461ee0959ee51c",
+      "package_sha256": "e88ffbcbb74e3e90c8ab90181bb32003b9666a0fdf440d566f44107440cd9493",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/bms-height-feedback.zh-CN.md",
+      "package": "proofs/output/iblp-030-laver-20261014/bms-height-feedback.zh-CN.md",
+      "source_sha256": "5c73040233d39952ee2cd36885f888ae7c8047a717488713e1b7c0eaea6d8bc4",
+      "package_sha256": "ffd365d510b5246828c8adddd83537fa0b8d31d2f7529453870d8f19cd92b18d",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/piblp-q5-enhancement-20261014/q5-piblp-enhanced-bound.zh-CN.md",
+      "package": "proofs/output/piblp-q5-enhancement-20261014/q5-piblp-enhanced-bound.zh-CN.md",
+      "source_sha256": "5706bb77aec236c49327cce7beb164f976e57c03f32eb6e9f76f37400df2d0a4",
+      "package_sha256": "85cb9a39646cddc588d86cd8581ce39ba2a1594cee1704cbcbfd025805c20564",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/piblp-q5-enhancement-20261014/quant-self-feedback.zh-CN.md",
+      "package": "proofs/output/piblp-q5-enhancement-20261014/quant-self-feedback.zh-CN.md",
+      "source_sha256": "3d8a5c7c3523cce7a8b9a6b1f295011d4da31ee3ede821f38ea4105bacf1f381",
+      "package_sha256": "06fe30c204d5862253e37b3ecf03317d0291579027be304f874b47793203f8fb",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/piblp-q5-enhancement-20261014/audit-piblp-strict-Cline.zh-CN.md",
+      "package": "proofs/output/piblp-q5-enhancement-20261014/audit-piblp-strict-Cline.zh-CN.md",
+      "source_sha256": "b596b363d377aba920a9d262eaf4b34843efab6c797e5be5bae65bd5687a82c8",
+      "package_sha256": "8e149f9a94f1ec891bfa3111e597b6fc9ea7b7e9cac6be953fea69e6b40d9341",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/piblp-q5-enhancement-20261014/audit-recursive-corridor-FGH.zh-CN.md",
+      "package": "proofs/output/piblp-q5-enhancement-20261014/audit-recursive-corridor-FGH.zh-CN.md",
+      "source_sha256": "758e7110627beba2922d7cc810dcdb87c2436b8d3e20eb20cc80ad9a77d6c012",
+      "package_sha256": "1c55399c16339b2927dc0f59551d59d0d47f55d934e50e51f1ea76b4dc31d0e3",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/piblp-q5-enhancement-20261014/audit-BMS-diagonal-input-monotonicity.zh-CN.md",
+      "package": "proofs/output/piblp-q5-enhancement-20261014/audit-BMS-diagonal-input-monotonicity.zh-CN.md",
+      "source_sha256": "0c9452ba0a6ebc995da44afd4f90b46a49f8cd0f4c3dc1009d870fc25369d226",
+      "package_sha256": "a87bdb9aa28404f835bb3df3c252283a5e4847af3b3d8534b00c823d6cc3c50b",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/piblp-q5-enhancement-20261014/baseline-piblp-Cline-prefix.md",
+      "package": "proofs/output/piblp-q5-enhancement-20261014/baseline-piblp-Cline-prefix.md",
+      "source_sha256": "8c702c24346f732a946d5e4bb610c89443057eeeab5fb911d1b219f787a8109c",
+      "package_sha256": "07166e0cccf6e22e0d64b11f5d1fa760f01cfd9d6767720beed4793e57a98883",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/piblp-external-FGH-20261014/P4-pure-E-collapse.zh-CN.md",
+      "package": "proofs/output/piblp-external-FGH-20261014/P4-pure-E-collapse.zh-CN.md",
+      "source_sha256": "ecda03a1d354cbf5a8d59d4a9640fa117d41224e5eb458d79063d4c8816baa07",
+      "package_sha256": "83117cc1df5ad8f0d145f583f0b26216ed8f43b8dc9a4a0e94ef6110dab97282",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/piblp-external-FGH-20261014/active-E-graft-functional-substitution.zh-CN.md",
+      "package": "proofs/output/piblp-external-FGH-20261014/active-E-graft-functional-substitution.zh-CN.md",
+      "source_sha256": "ac9eb04306f727767f966669ec38536a895105122fad175ad4f01ce31a00f81f",
+      "package_sha256": "13703c225f40d8dbaa6f6ef92865249f333f9af09d6d5d28fde32dc11dc34652",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/q5-further-bound-20261014/dynamic-depth-Lambda-omega-successor.zh-CN.md",
+      "package": "proofs/output/q5-further-bound-20261014/dynamic-depth-Lambda-omega-successor.zh-CN.md",
+      "source_sha256": "f1a4b3f0637ce6909e9b53e313ff5d16aed39798e8de1c98b83161cf9db568f0",
+      "package_sha256": "bbcb1557529650b35d8f4940084a10f0139ecc90ad13d017345ecc843d2aed69",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/q5-further-bound-20261014/P5-uniform-and-large-input.zh-CN.md",
+      "package": "proofs/output/q5-further-bound-20261014/P5-uniform-and-large-input.zh-CN.md",
+      "source_sha256": "20da97bed7d8392cc3ef81d00f3346ffa152f1ed04580049df1a0f2b24878504",
+      "package_sha256": "d92d4fe02cba6d0c047ef38516c1995266a1f0822a10dd9588c15335ee79be2a",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "output/q5-further-bound-20261014/active-port-stronger-initialization.zh-CN.md",
+      "package": "proofs/output/q5-further-bound-20261014/active-port-stronger-initialization.zh-CN.md",
+      "source_sha256": "d3d564891e61f91ad15849f83620b647fcbbea1892d3021292998c10a3160ac0",
+      "package_sha256": "abb8e33e95e88cd4f6ba808001ebd1bf7cdea5bbea42b38b3e70785f4e675728",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "scratch/iblp030-8h-20261015/hardy-root-C7-q5-single-file.txt",
+      "package": "proofs/scratch/iblp030-8h-20261015/hardy-root-C7-q5-single-file.txt",
+      "source_sha256": "743d77c8fdd9540520d456aeb77ddc261e2c2dfcfb58f06072fdbebcf5ed0ca5",
+      "package_sha256": "63dd27f959bca1fea9642c2391d4d84403872c30fb83669eafcb812035e4de18",
+      "omitted_fixed_input_paragraphs": [
+        {
+          "first_line": 6,
+          "last_line": 14,
+          "reason": "superseded-arbitrary-fixed-input"
+        },
+        {
+          "first_line": 314,
+          "last_line": 317,
+          "reason": "superseded-arbitrary-fixed-input"
+        },
+        {
+          "first_line": 330,
+          "last_line": 335,
+          "reason": "superseded-arbitrary-fixed-input"
+        },
+        {
+          "first_line": 355,
+          "last_line": 360,
+          "reason": "superseded-arbitrary-fixed-input"
+        },
+        {
+          "first_line": 383,
+          "last_line": 405,
+          "reason": "superseded-arbitrary-fixed-input"
+        }
+      ],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "scratch/iblp030-8h-20261015/hardy-root-continuation-interface.txt",
+      "package": "proofs/scratch/iblp030-8h-20261015/hardy-root-continuation-interface.txt",
+      "source_sha256": "c5dc14384d9be64018cb5eba65f4769ca5c5f62d1fc2549f64bd997421cedf1f",
+      "package_sha256": "2115b4b32b1d2f6fb9b014f2854a47f459e44a02a2b387f81dc2b1658c2caf69",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "scratch/iblp030-8h-20261015/hardy-root-first-root-tower.txt",
+      "package": "proofs/scratch/iblp030-8h-20261015/hardy-root-first-root-tower.txt",
+      "source_sha256": "50a00199d6941b3c54c7e14fff9667a75e6cf5773ad582ceefbfa93aebb8652f",
+      "package_sha256": "df2f2e7e392afb6e93e5fdbaa4d151f43de1ae41d7a947ca5163926545b561e2",
+      "omitted_fixed_input_paragraphs": [
+        {
+          "first_line": 201,
+          "last_line": 213,
+          "reason": "superseded-arbitrary-fixed-input"
+        }
+      ],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "scratch/iblp030-8h-20261015/hardy-root-typed-bms-bound.txt",
+      "package": "proofs/scratch/iblp030-8h-20261015/hardy-root-typed-bms-bound.txt",
+      "source_sha256": "68a106a060c713b21cca5c7f4a24262aee336023c853d901500d4d918f980bc5",
+      "package_sha256": "9f4ba6c44fd27b100911bfcff4fdd3b8d355e8ca03a75d243b69a3da41fb2ac5",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "scratch/iblp030-8h-20261015/hardy-root-bms-interface.txt",
+      "package": "proofs/scratch/iblp030-8h-20261015/hardy-root-bms-interface.txt",
+      "source_sha256": "0532787e67a42f49e559b1020bca10d25b95d14e162521d64f97586ff11ab68b",
+      "package_sha256": "535bb49bf8edf0621469c257dc5a6f7774cc4dc6a71c5e7499ab5c9f5486da9f",
+      "omitted_fixed_input_paragraphs": [
+        {
+          "first_line": 287,
+          "last_line": 297,
+          "reason": "superseded-arbitrary-fixed-input"
+        }
+      ],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "scratch/iblp030-8h-20261015/hardy-root-oracle-upper.txt",
+      "package": "proofs/scratch/iblp030-8h-20261015/hardy-root-oracle-upper.txt",
+      "source_sha256": "337afbb87734cdf2af0befe71df6f338a4d1d81bad01d654776279dcab9038bb",
+      "package_sha256": "69cd11acb929df479b997d01a50751a01e5b387c91ac2abd7385d48ca68d8f0f",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "scratch/iblp030-8h-20261015/hardy-root-tail-locality.txt",
+      "package": "proofs/scratch/iblp030-8h-20261015/hardy-root-tail-locality.txt",
+      "source_sha256": "77a74916c4b3456a684569610211abc9a3ba4e6d9d98952cd06a6c7f62fbc639",
+      "package_sha256": "402ae99e72ebdd40b4277e8146451053e25782e695ff76acca3c7bc519907b36",
+      "omitted_fixed_input_paragraphs": [
+        {
+          "first_line": 51,
+          "last_line": 58,
+          "reason": "superseded-arbitrary-fixed-input"
+        }
+      ],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "scratch/iblp030-8h-20261015/hardy-root-fast-type1-C3.txt",
+      "package": "proofs/scratch/iblp030-8h-20261015/hardy-root-fast-type1-C3.txt",
+      "source_sha256": "7ca4004ab295cec46a6c0de729d8356c9c54a64dc2161706ddd0f05fe310eb81",
+      "package_sha256": "8e2a8d2431aedba164671e5bd55e44382b74834d4c250cca4292a726426a8f12",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "scratch/iblp030-8h-20261015/hardy-root-low-stack-numeric.txt",
+      "package": "proofs/scratch/iblp030-8h-20261015/hardy-root-low-stack-numeric.txt",
+      "source_sha256": "a63bfee6022fd29cfc09f8c58d713c92b4df48347ce1833371a0ad9d1b00a11e",
+      "package_sha256": "79cb232e04334551ca816cc18d5ea07d481f96634c0ad24b1b6b2bb0975f3920",
+      "omitted_fixed_input_paragraphs": [
+        {
+          "first_line": 71,
+          "last_line": 79,
+          "reason": "superseded-arbitrary-fixed-input"
+        },
+        {
+          "first_line": 88,
+          "last_line": 90,
+          "reason": "superseded-arbitrary-fixed-input"
+        },
+        {
+          "first_line": 92,
+          "last_line": 101,
+          "reason": "superseded-arbitrary-fixed-input"
+        },
+        {
+          "first_line": 118,
+          "last_line": 125,
+          "reason": "superseded-arbitrary-fixed-input"
+        }
+      ],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "scratch/iblp030-8h-20261015/lift-low-open-fan-and-typed-gap.txt",
+      "package": "proofs/scratch/iblp030-8h-20261015/lift-low-open-fan-and-typed-gap.txt",
+      "source_sha256": "4a13efaf8771d7dd2deb3a717c2c9bfdd7bf6d3c3ce7c83c68fc71d5d981c51a",
+      "package_sha256": "0fa51c32b64e7616cb9413f1b7e10b32639b871dd94d6fc8e3f2e1b63405be38",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "scratch/iblp030-8h-20261015/lift-participating-bms-spare.txt",
+      "package": "proofs/scratch/iblp030-8h-20261015/lift-participating-bms-spare.txt",
+      "source_sha256": "28ab70edfcef94ed458da303d28b06d03fa38d7e57c6417b5b24b90d0bf1e0a9",
+      "package_sha256": "391df7f08ff422f5d98a323d22578d7822da2682d8c9d2fefd04b86359a915bb",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "scratch/iblp030-8h-20261015/lift-natural-relative-bms-oracle.txt",
+      "package": "proofs/scratch/iblp030-8h-20261015/lift-natural-relative-bms-oracle.txt",
+      "source_sha256": "ecc35208dd46c52ebc427e4a3d7e83052b1db956eb3fd86cc33b20d7e1b2b878",
+      "package_sha256": "fee8b9b629d7706b180bf8f697d466453e14d8a17c885a290787673abb63a1b6",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "scratch/iblp030-8h-20261015/lift-mixed-base-type1-seed.txt",
+      "package": "proofs/scratch/iblp030-8h-20261015/lift-mixed-base-type1-seed.txt",
+      "source_sha256": "f18be1409e782b65d5198a1ac63cc164846bb856620bebb6fd8873a303e94552",
+      "package_sha256": "cfdb57ac3092220984515f714d8f34c8c5d816a5f5783ab276408b3ea8de378e",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "scratch/iblp030-8h-20261015/lift-type2-entry-relaxation.txt",
+      "package": "proofs/scratch/iblp030-8h-20261015/lift-type2-entry-relaxation.txt",
+      "source_sha256": "4926e8584f17da1a1a70cfa04b75a737ceb3a483aa8b0fcb2a84e7ec71b11502",
+      "package_sha256": "bb9c659c0905ad67b64408fac6a561c038ee3a6406acd00a67050d0495db5b0e",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "scratch/iblp030-8h-20261015/root-low-Q11-strict-cap-proof.txt",
+      "package": "proofs/scratch/iblp030-8h-20261015/root-low-Q11-strict-cap-proof.txt",
+      "source_sha256": "0a28330e26e0aeef351ddd684ff28409e6385b1b28b739ada864ed96ae83c545",
+      "package_sha256": "d7a40298a1da318bf389b429c891197ce3b339f7e8ddb69963465b9d1bacbb87",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "scratch/iblp030-8h-20261015/lift-low-four-type-staircase.txt",
+      "package": "proofs/scratch/iblp030-8h-20261015/lift-low-four-type-staircase.txt",
+      "source_sha256": "fda355f994a962a2404d9c46afcb6862e8c556beaf60b5fabdaccc5a4ec18abd",
+      "package_sha256": "03186a54cfe704159e8d2bcd37268d6e768181237e892d07c78f8f8ef42b8021",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "scratch/iblp030-8h-20261015/lift-low-compressed-six-type-staircase.txt",
+      "package": "proofs/scratch/iblp030-8h-20261015/lift-low-compressed-six-type-staircase.txt",
+      "source_sha256": "3b8697588093bc43b97e0ebfc2fef76f85bbfe3ad921cc7f266071d9c815cd80",
+      "package_sha256": "390203888a4e725de4fd7d2b78016d3625e89a30746e2713f7fc361cd1f060b8",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "scratch/iblp030-8h-20261015/lift-E-window-ribbon.txt",
+      "package": "proofs/scratch/iblp030-8h-20261015/lift-E-window-ribbon.txt",
+      "source_sha256": "d2b706c77f0121e2ce8f32fa03ef17da2683c113295a62086011aa4ab56afb26",
+      "package_sha256": "4217722663be3303090741a9c9d6b75f5f60f0b3e2e15698c1f2dac83c006318",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "scratch/iblp030-8h-20261015/lift-fan-source-connectors.txt",
+      "package": "proofs/scratch/iblp030-8h-20261015/lift-fan-source-connectors.txt",
+      "source_sha256": "7c055d8f7a856dd9c6eeb90a790a486bfa6d9ed3d532b2c5656135641105092f",
+      "package_sha256": "6b659f3199dd5a0f4a0d3965745256595aafa91148ed79dde18cefb2e6c574c1",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "scratch/iblp030-8h-20261015/original-audit-root-forest-interface.txt",
+      "package": "proofs/scratch/iblp030-8h-20261015/original-audit-root-forest-interface.txt",
+      "source_sha256": "f2a7dfe800b3d04850cd69a2b0696b35fa678c842e16ec087823900a9050a76c",
+      "package_sha256": "63446c559288efe17b41ff552aca93f86fcd9f97c8124d8069e49230d2f9278b",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "scratch/iblp030-8h-20261015/original-audit-two-chain-quiet-cone.txt",
+      "package": "proofs/scratch/iblp030-8h-20261015/original-audit-two-chain-quiet-cone.txt",
+      "source_sha256": "896e11a53ac87d621f7bb08d14fbe2fa2f23183018410b4e633b041a520bb911",
+      "package_sha256": "047904f8c01e13da2c6f7d13f32e8d4050a1677aa7231e29f2460cddb90b7f73",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "scratch/iblp030-8h-20261015/lift-C7-final-audit.txt",
+      "package": "proofs/scratch/iblp030-8h-20261015/lift-C7-final-audit.txt",
+      "source_sha256": "0cad5a0275280d4e70441368be816ee63c978700cd4a0c1ff3abf4a0403358de",
+      "package_sha256": "a8816d742b4b29a9ace8cf35be4d22feb05f04dc74fae9ad95f15629973df848",
+      "omitted_fixed_input_paragraphs": [
+        {
+          "first_line": 34,
+          "last_line": 49,
+          "reason": "superseded-arbitrary-fixed-input"
+        },
+        {
+          "first_line": 51,
+          "last_line": 56,
+          "reason": "superseded-arbitrary-fixed-input"
+        }
+      ],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "scratch/iblp030-8h-20261015/original-audit-low-stack-numeric.txt",
+      "package": "proofs/scratch/iblp030-8h-20261015/original-audit-low-stack-numeric.txt",
+      "source_sha256": "8ec995c769011bb270e429896e9dbb53dfc62b5c01a27578149207485ec4ad48",
+      "package_sha256": "cd4de355cc7a0672efc378565c9703adaef3e8fde88d2432380b7e78bf46d503",
+      "omitted_fixed_input_paragraphs": [
+        {
+          "first_line": 27,
+          "last_line": 30,
+          "reason": "superseded-arbitrary-fixed-input"
+        },
+        {
+          "first_line": 43,
+          "last_line": 48,
+          "reason": "superseded-arbitrary-fixed-input"
+        }
+      ],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "scratch/iblp-I-to-I0-20261016/port-FGH-existing-bound-C6.txt",
+      "package": "proofs/scratch/iblp-I-to-I0-20261016/port-FGH-existing-bound-C6.txt",
+      "source_sha256": "e696d3f9a315ada949440aeb7bcb397794911e80ae14082f297769ebd8cdb039",
+      "package_sha256": "704fb08ea38b75feb8647f67acee6eaf14056dd5ee15a49106ee4a2980862737",
+      "omitted_fixed_input_paragraphs": [
+        {
+          "first_line": 10,
+          "last_line": 11,
+          "reason": "superseded-arbitrary-fixed-input"
+        },
+        {
+          "first_line": 26,
+          "last_line": 40,
+          "reason": "superseded-arbitrary-fixed-input"
+        },
+        {
+          "first_line": 152,
+          "last_line": 163,
+          "reason": "superseded-arbitrary-fixed-input"
+        },
+        {
+          "first_line": 165,
+          "last_line": 172,
+          "reason": "superseded-arbitrary-fixed-input"
+        }
+      ],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "scratch/iblp-I-to-I0-20261016/port-root-independent-audit.txt",
+      "package": "proofs/scratch/iblp-I-to-I0-20261016/port-root-independent-audit.txt",
+      "source_sha256": "2955b92240a365af25912c60f9da51108c4a1f01799a4429f16f609d4d4449c1",
+      "package_sha256": "1d56fa7276fc01f6a91b1e4fae49c79b31967a7d404aca3bfdc1eb333e2eca93",
+      "omitted_fixed_input_paragraphs": [
+        {
+          "first_line": 59,
+          "last_line": 64,
+          "reason": "superseded-arbitrary-fixed-input"
+        }
+      ],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "scratch/iblp-I-to-I0-20261016/marked-entry-total-bound.zh-CN.txt",
+      "package": "proofs/scratch/iblp-I-to-I0-20261016/marked-entry-total-bound.zh-CN.txt",
+      "source_sha256": "fbc3d0b42d92adfbf978397defb5e387aed0bb68f803a35e1333420a149e18d4",
+      "package_sha256": "176c04527fa03e25a2ad3985595da7fdde6655e62212b7dc1ec392dfc7b6be6f",
+      "omitted_fixed_input_paragraphs": [
+        {
+          "first_line": 9,
+          "last_line": 16,
+          "reason": "superseded-arbitrary-fixed-input"
+        },
+        {
+          "first_line": 22,
+          "last_line": 24,
+          "reason": "superseded-arbitrary-fixed-input"
+        },
+        {
+          "first_line": 26,
+          "last_line": 46,
+          "reason": "superseded-arbitrary-fixed-input"
+        },
+        {
+          "first_line": 160,
+          "last_line": 161,
+          "reason": "superseded-arbitrary-fixed-input"
+        }
+      ],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "scratch/iblp-I-to-I0-20261016/marked-entry-initializer.txt",
+      "package": "proofs/scratch/iblp-I-to-I0-20261016/marked-entry-initializer.txt",
+      "source_sha256": "988479d131ca61857817a175782dc639537842725e7bed2776e6ca90311399b4",
+      "package_sha256": "6d372f96cb7782fd395eb007573c0b7b3d8cf0d12d148d1c30a4be62d98bdcc6",
+      "omitted_fixed_input_paragraphs": [
+        {
+          "first_line": 5,
+          "last_line": 10,
+          "reason": "superseded-arbitrary-fixed-input"
+        },
+        {
+          "first_line": 180,
+          "last_line": 185,
+          "reason": "superseded-arbitrary-fixed-input"
+        },
+        {
+          "first_line": 204,
+          "last_line": 209,
+          "reason": "superseded-arbitrary-fixed-input"
+        }
+      ],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "scratch/iblp-I-to-I0-20261016/marked-entry-extraction.txt",
+      "package": "proofs/scratch/iblp-I-to-I0-20261016/marked-entry-extraction.txt",
+      "source_sha256": "cf2a7a0460cd4a2f54e14d6e7862c85111e9c3b8799bb620809db95ea1496ac4",
+      "package_sha256": "83ccf64309432b82cf8b0b9823d839108784d6d061cacf43e04fdf07b83861bf",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "scratch/iblp-I-to-I0-20261016/marked-entry-audit.txt",
+      "package": "proofs/scratch/iblp-I-to-I0-20261016/marked-entry-audit.txt",
+      "source_sha256": "410cf9072636ca7783ea71cd681adbe836b71d7d2d9ead9755e85ddeb90c1c6e",
+      "package_sha256": "a45050d418985e7103253a16f3afaa67d6122d32271ba3529cdcce288e816d25",
+      "omitted_fixed_input_paragraphs": [
+        {
+          "first_line": 5,
+          "last_line": 11,
+          "reason": "superseded-arbitrary-fixed-input"
+        },
+        {
+          "first_line": 149,
+          "last_line": 152,
+          "reason": "superseded-arbitrary-fixed-input"
+        },
+        {
+          "first_line": 214,
+          "last_line": 220,
+          "reason": "superseded-arbitrary-fixed-input"
+        }
+      ],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "scratch/iblp-I-to-I0-20261016/local-budget2-initializer.txt",
+      "package": "proofs/scratch/iblp-I-to-I0-20261016/local-budget2-initializer.txt",
+      "source_sha256": "44a3ade23df8ad1262f0559d35989b2065c4bd2cc0c708315725fe9a536b753d",
+      "package_sha256": "aca0e1e388ca8f6a8f38f6f3aeceb39f3482e7a54b94380b09839c5429e9779d",
+      "omitted_fixed_input_paragraphs": [
+        {
+          "first_line": 60,
+          "last_line": 66,
+          "reason": "superseded-arbitrary-fixed-input"
+        },
+        {
+          "first_line": 126,
+          "last_line": 132,
+          "reason": "superseded-arbitrary-fixed-input"
+        },
+        {
+          "first_line": 220,
+          "last_line": 224,
+          "reason": "superseded-arbitrary-fixed-input"
+        },
+        {
+          "first_line": 333,
+          "last_line": 337,
+          "reason": "superseded-arbitrary-fixed-input"
+        },
+        {
+          "first_line": 492,
+          "last_line": 497,
+          "reason": "superseded-arbitrary-fixed-input"
+        },
+        {
+          "first_line": 554,
+          "last_line": 562,
+          "reason": "superseded-arbitrary-fixed-input"
+        },
+        {
+          "first_line": 564,
+          "last_line": 572,
+          "reason": "superseded-arbitrary-fixed-input"
+        },
+        {
+          "first_line": 583,
+          "last_line": 592,
+          "reason": "superseded-arbitrary-fixed-input"
+        }
+      ],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "scratch/iblp-I-to-I0-20261016/local-budget2-shadow-forest.txt",
+      "package": "proofs/scratch/iblp-I-to-I0-20261016/local-budget2-shadow-forest.txt",
+      "source_sha256": "55f8bee674f5bbe7bb63e75d8e646c7aa2d765022b3f495cb6116e5ab80883f9",
+      "package_sha256": "5959c3e3c5808665147f86f742a167c51c839b81e07cb32acc0e604399eddbb8",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "scratch/iblp-I-to-I0-20261016/local-budget-algebra.txt",
+      "package": "proofs/scratch/iblp-I-to-I0-20261016/local-budget-algebra.txt",
+      "source_sha256": "d0b4bf8ef51ce31d12c5149dd4800980dfe917bb563cb0396a50a7957d8b96e7",
+      "package_sha256": "51293c117f97a1392363576b89b9f8cd800ba6403318db55509730b83bce9e26",
+      "omitted_fixed_input_paragraphs": [
+        {
+          "first_line": 199,
+          "last_line": 201,
+          "reason": "superseded-arbitrary-fixed-input"
+        }
+      ],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "scratch/iblp-I-to-I0-20261016/local-budget-independent-audit.txt",
+      "package": "proofs/scratch/iblp-I-to-I0-20261016/local-budget-independent-audit.txt",
+      "source_sha256": "92de112b7adb8d5a24d692b8a9cb5e0d8ca2ab0f872a2ba3431aee3af48fa5d7",
+      "package_sha256": "fa78afb7f8cd68b3264c244bddf8a95e082c93c6d92ece0bc4f398705140da3c",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "natural-mark-lemmas/natural_trace_cutoff_semantics.md",
+      "package": "proofs/natural-mark-lemmas/natural_trace_cutoff_semantics.md",
+      "source_sha256": "11f386a707f12278dbe68b9fce3696b7f29c31743ada75e809e4a536b8512a4c",
+      "package_sha256": "da954fd07d70e6128fc28bef9d08a609d3ca280a03e7365a5fa67d4819b74a4f",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "natural-mark-lemmas/sat_endpoint_packet_theorem.md",
+      "package": "proofs/natural-mark-lemmas/sat_endpoint_packet_theorem.md",
+      "source_sha256": "a16c80e6290fde39e29437e9a8980e282618c7a071d9e1f7f33d38884213d6cd",
+      "package_sha256": "70e9fdcb0bdd8ab515a0d137bba6dc7d23ff60da80783cd48da269beb0494724",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "natural-mark-lemmas/copy_trace_word_identification.md",
+      "package": "proofs/natural-mark-lemmas/copy_trace_word_identification.md",
+      "source_sha256": "95bfaa5f234bb4bbad934488922ae5d88bfcc013058bc10ed661cd7dbd44b694",
+      "package_sha256": "5a537464495dc3f132a32ab42ae5b54de12b2729d89a053ea35519221d418d8c",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "natural-mark-lemmas/marked_blp_order_domain.md",
+      "package": "proofs/natural-mark-lemmas/marked_blp_order_domain.md",
+      "source_sha256": "703d8958ee7ff5cabfdefa475d9d7ff2215ee4fbcde73c5265269ea65ecbc059",
+      "package_sha256": "49e52f699d6ab26046f24cc06e7d977a384408880665cba3ab5a5cd5c6bbd3be",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "natural-mark-lemmas/marked_E_transfer_work.md",
+      "package": "proofs/natural-mark-lemmas/marked_E_transfer_work.md",
+      "source_sha256": "88f5dac07ce8d6c9a89123a6c0236241897e907dd58eec3ea3fb2a95a6d25618",
+      "package_sha256": "90c3afe58922dd0b6384e4ba34187bf7866201418ff5d9d27a3fc5105fa2d1dd",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "natural-mark-lemmas/marked_completion_interval_lemma.md",
+      "package": "proofs/natural-mark-lemmas/marked_completion_interval_lemma.md",
+      "source_sha256": "6ccc01704c72260de9c71f810348299d9c806fee5039de105a33a37721d3117b",
+      "package_sha256": "5dd152ce0ccf65717a85886482785783eb8e55483a5778f1bb5096db305dd793",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "natural-mark-lemmas/multiple_mark_completion_commutation.md",
+      "package": "proofs/natural-mark-lemmas/multiple_mark_completion_commutation.md",
+      "source_sha256": "148acacf8897339f720846d049c68287a1b44741940da44a1bd42d8dd6c90e36",
+      "package_sha256": "ff8c0f6bb964ffe00916b756b5896629ff24ad084e16f08e701c725d0884e5cc",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "natural-mark-lemmas/copy_scan_mark_repair.md",
+      "package": "proofs/natural-mark-lemmas/copy_scan_mark_repair.md",
+      "source_sha256": "45d594498bb9e782c3c30a1ca98a66895ca4766bd8e8546e9c81e324e535a104",
+      "package_sha256": "602d5cd8fe06949d1ee140f9a618f8572963abd9acc74bc01879fa0e67cbbd12",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "natural-mark-lemmas/direct_mark_successor_alignment.md",
+      "package": "proofs/natural-mark-lemmas/direct_mark_successor_alignment.md",
+      "source_sha256": "8506b9b83feb25c05738f50ab44bd414835deda710e7812d4e388e5ff55e9c70",
+      "package_sha256": "d8e1eeba768280a963a2959537dfdbf5fbabea84a57e61e5574cd26d2ad3ac30",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "natural-mark-lemmas/unqualified_successor_mark_scan.md",
+      "package": "proofs/natural-mark-lemmas/unqualified_successor_mark_scan.md",
+      "source_sha256": "dfe756c430fcf51d25f20b97ea03d81090da917727de37a8c6d71c7375002e47",
+      "package_sha256": "a0fd700be189cdb0dbda565f9abc810f16451b577ca642a44a1f882cac53e7d9",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "natural-mark-lemmas/marked_blp_proof.md",
+      "package": "proofs/natural-mark-lemmas/marked_blp_proof.md",
+      "source_sha256": "cee3beedb748200fbb3574aabca71f7bff39d23c480a84673ecbeda250d0d77e",
+      "package_sha256": "8033c5eceff644edb8e343e740e669808d78b6ec602d3ad2029a7dd8a93c297e",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "natural-mark-lemmas/full_marked_blp_natural_cutoff_wellorder.md",
+      "package": "proofs/natural-mark-lemmas/full_marked_blp_natural_cutoff_wellorder.md",
+      "source_sha256": "7e04238179eb64a52274fc3f5ae6cf8e99fa56178feb1d72ad30b3f1db991a9f",
+      "package_sha256": "5121a3add9fae71fc8381dcff1013ff587122748f92e4d18c3a33374a78d47e1",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": [
+        "reading-edition-header-with-leading-h1",
+        "portable-selected-proof-links",
+        "private-path-redaction"
+      ]
+    },
+    {
+      "source": "user-supplied-original-iblp.py",
+      "package": "code/iblp_original.py",
+      "source_sha256": "b8ffa27818ba6104dbb8fd110581c9898930ebf29e00b2c50065b0bbf7a137a3",
+      "package_sha256": "b8ffa27818ba6104dbb8fd110581c9898930ebf29e00b2c50065b0bbf7a137a3",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": []
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/anchored_parent_bms.py",
+      "package": "code/anchored_parent_bms.py",
+      "source_sha256": "9742201d7548d9177862b0fa28f78d16df99cf1f67da211842e03edb1397a983",
+      "package_sha256": "9742201d7548d9177862b0fa28f78d16df99cf1f67da211842e03edb1397a983",
+      "omitted_fixed_input_paragraphs": [],
+      "adaptations": []
+    }
+  ],
+  "unbundled_historical_references": [
+    {
+      "source": "output/iblp-laver-bms-20261013/ancestor-cover-growth.zh-CN.md",
+      "reference": "ancestor_cover_growth.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/diagonal-forest-hardy-proof.zh-CN.md",
+      "reference": "diagonal_forest_compiler.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/fixed-index-growth-interface.md",
+      "reference": "forest_growth.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/fixed-index-growth-interface.md",
+      "reference": "fgh_hardy_compiler.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/balanced-ribbon-bridge.zh-CN.md",
+      "reference": "anchored_parent_bms.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/balanced-ribbon-bridge.zh-CN.md",
+      "reference": "balanced_ribbon_probe.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/lined-front-insertion.zh-CN.md",
+      "reference": "high_start_lining_certificate.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/lined-front-insertion.zh-CN.md",
+      "reference": "lined_front_fan_certificate.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/short-terminal-initialization.zh-CN.md",
+      "reference": "README.zh-CN.md",
+      "kind": ".md"
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/short-terminal-initialization.zh-CN.md",
+      "reference": "three_row_certificate.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/ribbon-initialization.zh-CN.md",
+      "reference": "small_cap_seed_probe.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/ribbon-initialization.zh-CN.md",
+      "reference": "owner_history_probe.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/ribbon-initialization.zh-CN.md",
+      "reference": "gap_completion_probe.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/ribbon-initialization.zh-CN.md",
+      "reference": "compatible_fan_terms.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/ribbon-initialization.zh-CN.md",
+      "reference": "low_gamma_fan_probe.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/source-lined-E.zh-CN.md",
+      "reference": "source_lined_E_probe.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/marked-BLP-quantitative-transfer.zh-CN.md",
+      "reference": "marked_quantitative_probe.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/direct-step-bridge.zh-CN.md",
+      "reference": "copy-budget-obstructions.zh-CN.md",
+      "kind": ".md"
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/lining-prefix-cutoff.zh-CN.md",
+      "reference": "lining_prefix_agreement_probe.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/lining-prefix-cutoff.zh-CN.md",
+      "reference": "concrete_marked_packet_probe.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/marked-prefix-rebase.zh-CN.md",
+      "reference": "prefix_rebase_probe.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/marked-prefix-rebase.zh-CN.md",
+      "reference": "copy-budget-obstructions.zh-CN.md",
+      "kind": ".md"
+    },
+    {
+      "source": "output/iblp-laver-bms-20261013/block-fan-insertion.zh-CN.md",
+      "reference": "rebased_lining_fan_probe.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/new-notation-20260918/BMS-nonstandard-row-bound.zh-CN.md",
+      "reference": "ACD-123595-equals-BMS.zh-CN.md",
+      "kind": ".md"
+    },
+    {
+      "source": "output/iblp-01-equality-20260923/IBLP-01-no-completion-proof.zh-CN.md",
+      "reference": "complete_safe_class.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-01-equality-20260923/IBLP-01-no-completion-proof.zh-CN.md",
+      "reference": "check_complete_safe_closure.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-01-equality-20260923/IBLP-01-no-completion-proof.zh-CN.md",
+      "reference": "check_small_safe_exhaustive.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-01-equality-20260923/IBLP-01-no-completion-proof.zh-CN.md",
+      "reference": "probe_terminal_barrier.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-01-equality-20260923/IBLP-01-no-completion-proof.zh-CN.md",
+      "reference": "probe_typed_barriers.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-01-equality-20260923/IBLP-01-BMS-upper-bound.zh-CN.md",
+      "reference": "probe_frame_bridge_upper.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-01-equality-20260923/IBLP-01-BMS-upper-bound.zh-CN.md",
+      "reference": "check_frame_bridge_upper.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-01-equality-20260923/IBLP-01-BMS-upper-bound.zh-CN.md",
+      "reference": "check_small_upper_exhaustive.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-01-equality-20260923/IBLP-01-unconditional-BMS-lower-bound.zh-CN.md",
+      "reference": "positive_control_class.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-01-equality-20260923/IBLP-01-unconditional-BMS-lower-bound.zh-CN.md",
+      "reference": "IBLP-01-no-completion-and-BMS-progress.zh-CN.md",
+      "kind": ".md"
+    },
+    {
+      "source": "output/iblp-01-equality-20260923/IBLP-01-unconditional-BMS-lower-bound.zh-CN.md",
+      "reference": "check_positive_control_closure.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-01-equality-20260923/IBLP-01-unconditional-BMS-lower-bound.zh-CN.md",
+      "reference": "check_positive_ribbon_macros.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-bms-20260918/IBLP-01-BMS-lower-bound.zh-CN.md",
+      "reference": "IBLP-01-BMS-progress.zh-CN.md",
+      "kind": ".md"
+    },
+    {
+      "source": "output/iblp-bms-20260918/IBLP-01-BMS-lower-bound.zh-CN.md",
+      "reference": "check_ribbon_embedding.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-bms-20260918/IBLP-01-BMS-lower-bound.zh-CN.md",
+      "reference": "check_seed_formula.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/small-period-endpoint-Sf.zh-CN.md",
+      "reference": "small_period_sf_endpoint_certificate.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/small-period-recursive-corridor.zh-CN.md",
+      "reference": "small_period_promoter_probe.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/parent-packet-short-tail-definition.zh-CN.md",
+      "reference": "parent_packet_candidate.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/parent-packet-short-tail-definition.zh-CN.md",
+      "reference": "parent_packet_feedback_witness.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/parent-packet-short-tail-definition.zh-CN.md",
+      "reference": "parent_packet_definition_path_audit.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/short-tail-cofinality.zh-CN.md",
+      "reference": "README.zh-CN.md",
+      "kind": ".md"
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/short-tail-cofinality.zh-CN.md",
+      "reference": "short_tail_candidate.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/short-tail-cofinality.zh-CN.md",
+      "reference": "short_tail_ribbon_probe.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/promoted-bms-feedback.zh-CN.md",
+      "reference": "five_row_certificate.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/promoted-bms-feedback.zh-CN.md",
+      "reference": "promoted_feedback_certificate.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/root-lowered-bms-feedback.zh-CN.md",
+      "reference": "high_start_lining_certificate.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/root-lowered-bms-feedback.zh-CN.md",
+      "reference": "root_lowered_feedback_certificate.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/lined-feedback-corridor.zh-CN.md",
+      "reference": "next_corridor_promoter_probe.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/lined-feedback-corridor.zh-CN.md",
+      "reference": "feedback_corridor_certificate.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/full-gap-short-tail-definition.zh-CN.md",
+      "reference": "finite-window-uniformity-obstruction.zh-CN.md",
+      "kind": ".md"
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/full-gap-short-tail-definition.zh-CN.md",
+      "reference": "native-packet-projection.zh-CN.md",
+      "kind": ".md"
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/full-gap-short-tail-definition.zh-CN.md",
+      "reference": "full-gap-strength-obstructions.zh-CN.md",
+      "kind": ".md"
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/full-gap-short-tail-definition.zh-CN.md",
+      "reference": "full_interval_native_candidate.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/ordinary-l3-native-mark-seed.zh-CN.md",
+      "reference": "ordinary_l3_native_mark_seed_certificate.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/q5-BMS-FGH-two-part-summary.zh-CN.md",
+      "reference": "T3-fixed-BMS-count-bounds.zh-CN.md",
+      "kind": ".md"
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/small-period-native-mark-seed.zh-CN.md",
+      "reference": "small_period_native_mark_seed_certificate.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/iblp-030-laver-20261014/bms-height-feedback.zh-CN.md",
+      "reference": "bms_height_feedback_certificate.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/piblp-q5-enhancement-20261014/audit-piblp-strict-Cline.zh-CN.md",
+      "reference": "audit-P5-strict-prefix.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/piblp-external-FGH-20261014/P4-pure-E-collapse.zh-CN.md",
+      "reference": "canonical-E-family-audit.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/piblp-external-FGH-20261014/active-E-graft-functional-substitution.zh-CN.md",
+      "reference": "canonical-E-family-audit.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/q5-further-bound-20261014/P5-uniform-and-large-input.zh-CN.md",
+      "reference": "P5-block-audit.py",
+      "kind": ".py"
+    },
+    {
+      "source": "output/q5-further-bound-20261014/active-port-stronger-initialization.zh-CN.md",
+      "reference": "active-port-initialization-audit.py",
+      "kind": ".py"
+    }
+  ]
+}

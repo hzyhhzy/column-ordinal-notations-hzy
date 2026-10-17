@@ -1,0 +1,112 @@
+> 整理阅读版 / Collected reading edition. 数学结论以本目录三篇主文为准。
+> 原有局部证明、适用条件和撤回提醒保留；旧进度文字仅作历史记录。
+> 固定输入的历史段落如有省略，逐段位置记录于 SOURCE_MANIFEST.json；
+> 主文已用原证明产生的自然参数补上相应数值推导。未新增 Lean 认证。
+
+2026-10-16. Independent short audit: local budgets and exact endpoints
+====================================================================
+
+Read in full:
+  local-budget-algebra.txt, specifically sections 3--6;
+  local-budget-full-iblp.txt, specifically section 3;
+  old original-audit-root-forest-interface.txt;
+  old marked-BLP quantitative transfer and natural-packet contracts.
+Also checked Qi v5 Lemmas 2.4--2.5 at
+https://arxiv.org/html/2501.06733v5#S2
+
+1. Algebra sections 3--6: no local endpoint defect found
+-------------------------------------------------------
+The prefix-preserving product is correct: an owner of critical point beta
+fixes alpha, and sends an alpha-root line from beta to nu_(i-1) to another
+alpha-root line from nu_(i-1) to nu_i. Appending doubles its length and
+keeps the entire initial m-line. Removing exactly that prefix therefore
+gives R(m)=m(2^m-1) on (alpha,gamma,delta), not on the old triple.
+
+For a FULL row s (implicit cap included), the three source addresses
+c=s[0], p=s[-L-2], e=s[-L-1] and first image a=s[L] satisfy
+  J(theta_c)=theta_a,
+  J(theta_p)=theta_n,
+  J(theta_e)=theta_(n+1).
+Hence the transported chain has root theta_a and its endpoint intervals
+are exactly those needed for finite auxiliary E. The row-count recurrence
+2^t(n-a)+(a-1) correctly starts at cut(P), whose row count is n-1.
+
+For I, the data (c,p,e,a)=(2,3,4,4) are correct. E4 preserves the first
+three rows and copies the fourth row; the original fourth row already
+accounts for the first application of f(x)=x2^x. Thus r=1,m=1 gives
+f(f(1))=8 on (theta2,theta3,cap), not a global 8-line on the old base.
+
+For the new terminal FULL row (0,1,2,3,d,d+1):2, the source triple for
+the next auxiliary E is (theta0,theta2,theta3). Its first image is theta2.
+The second base row gives the required four-point owner, so R(m)-linedness
+of this source triple follows directly from the original global m-line.
+The E2 round count is R(m), while the numerical iteration starts at m.
+These parameters are not interchangeable.
+
+2. Important address distinction in full-iblp section 3
+-------------------------------------------------------
+The original RAW forest packet starts at
+  e_forest = core[-L],
+where core omits the implicit final cap. That formula matches the old
+raw-forest lemma. It is NOT generally the owner's first image s[L].
+
+For the same six-point row:
+  FULL s=(0,1,2,3,d,d+1), CORE=(0,1,2,3,d), L=2;
+  auxiliary-E first image s[L] = 2;
+  original RAW-forest packet start core[-L] = 3.
+
+Therefore full-iblp section 3 should call e_forest the forest packet's
+start/central tail boundary, not the "first central image". Its subsequent
+whole-packet resource (theta_e_forest, old implicit cap, C) is the appropriate
+one for that packet. It must not be replaced by the auxiliary-E source
+triple or by the line on (theta2,theta3,cap) produced in algebra section 5.
+
+The forest lemma needs the COMPLETE packet through its implicit cap. The
+section-3 resource correctly includes that extra endpoint. Its actual mark
+safety and scan/extraction conditions are stated as additional hypotheses,
+not inferred from a large line length. Keep those conditions explicit.
+
+3. Scope of f_new and the every-step requirement
+-----------------------------------------------
+The added successor-type clause
+  f_new(P,m) = (x -> f_new(cut(P),x))^[2^R(m)](m)
+is a legitimate CONDITIONAL extension of the existing natural-certificate
+numerical theorem, provided precisely that theorem's E copying closure,
+arbitrary decorated-realization double-block extraction, and decreasing
+finite-table potential are retained. Its E2 geometry is the same one used
+there. No monotonicity of the inner numerical function is needed: a larger
+actual line can be directly weakened to the claimed exact lower bound.
+
+This is not a proof for every naked legacy-IBLP realization. The original
+long-mark semantic closure remains missing. Nor does it prove f_new>=f_star
+pointwise; adding/replacing a recursion branch does not imply that order.
+
+Most importantly, retaining the old transient branch still permits long
+runs of ordinary M in other shapes. The new E2 clause provides an explicit
+next jump for THIS terminal type; it does not satisfy the user's new demand
+for every original step throughout R's cone. A complete compiler must give
+an a-priori cost bound and update budget for each original step, without an
+unknown wait until some later successor/limit shape.
+
+4. General-root critical counting is allowed
+--------------------------------------------
+Qi v5 Lemma 2.5 explicitly says that ANY m-lined triple theta0,theta1,theta2
+has theta2>=gamma_(2^m), with witnesses in the same Iter(j). It does not
+restrict the first two points to kappa0,kappa1. Thus algebra section 7's
+q(5)>2^Y from a local Y-line ending strictly below kappa4 is supported.
+Some older notes used only the weaker distinct-point count for local roots;
+that was conservative, not an obstruction to the exponential counting here.
+
+5. Direct weakening implementation
+----------------------------------
+For adjacent segment owners U:r->a->b and V:r->b->c, the owner
+V(V)(U) has critical point r and edges r->a->c. Exactly m-k merges weaken
+an m-line to a k-line at unchanged endpoints. This avoids an unsupplied
+critical-endpoint-map search under the new directness requirement. Added
+this operational version to local-budget-hardy-contract.txt section 1.
+
+Verdict: local algebra and direct E4/E2 interfaces are sound under their
+stated old semantic hypotheses. Fix the misleading packet-start label.
+Do not promote the numerical f_new theorem to an original-R every-step
+compiler, nor promote newly large local linedness to the wrong triple.
+No new q(5)>=H_R result follows yet. No experiment or background process.
