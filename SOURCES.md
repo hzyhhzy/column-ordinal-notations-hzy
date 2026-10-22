@@ -1,5 +1,11 @@
 # Sources, versions and licenses · [中文版](SOURCES.zh-CN.md)
 
+## BTnSS fixed-row BMS comparison (2026-10-22)
+
+The [BTnSS/BMS collection](research/btnss-bms/README.md) imports the completed paper comparison and its finite-combinatorial dependencies from the local `bt3ss-bms-comparison-20261019` and `btnss-wellorder-20261013` research snapshots. The [manifest](research/btnss-bms/MANIFEST.json) records original/collected hashes and the exact sections 1–3 excerpt from the earlier main paper. Its later model interpretation and large-cardinal proof are not imported or used as premises. The English main proof is a translation of the collected Chinese proof; local supporting manuscripts retain Chinese. Navigation, display-math delimiters and superseded project-status wording are adapted explicitly.
+
+Both rule sources match NER commit `c539d8f68c5553da2d681c1251ea443b6b735e62` (ignoring line endings), with hashes and permanent source links in the manifest. Hunter's BMS well-ordering paper is cited, not redistributed. The historical finite-audit receipt is retained with LF line endings and is not a new mathematical certificate. No private PDF, external implementation, experiment suite, notation kernel or Lean project is added. The included collector and integrity validator only support provenance and packaging checks; no new license for external material is inferred.
+
 ## Laver lower-bound collection (2026-10-18)
 
 [laver_table_lower_bounds](laver_table_lower_bounds/README.md) collects the three requested research routes and their local proof dependencies. Its manifest records original and collected hashes, relocated links and the line ranges of obsolete prescribed-input paragraphs omitted from the reading editions. The three main papers derive the natural-input statements explicitly. Original research files remain outside the repository unchanged. The original user-supplied IBLP kernel and the local parent-table BMS reference are pinned for bounded replay; no external PDF or new Lean theorem is imported. See the collection's [bibliography and attribution](laver_table_lower_bounds/BIBLIOGRAPHY.md).

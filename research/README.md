@@ -4,6 +4,14 @@ This directory keeps exploratory order-type comparisons separate from the well-o
 
 本目录专门存放推导、比较思路与未完成结论，不与正式良序证明或 Lean 已验证定理混在一起。每份总结区分纸面论证、局部引理、程序核验及未证候选。
 
+## BTnSS versus fixed-row BMS / BTnSS 的固定行数上界（2026-10-22）
+
+[English overview and proof](btnss-bms/README.md) · [中文总览与证明](btnss-bms/README.zh-CN.md).
+
+For every finite $n\ge2$, the paper embeds the whole standard strong BT*(-1)Y-nSS v2 domain below $U_{n+1}=(0^{n+1})(1^{n+1})(2^{n+1})(3^{n+1})$, giving $\lim(\mathrm{BTnSS})\le|U_{n+1}|<|(0^{n+2})(1^{n+2})|$. Target standardness, finite transport and the fixed uniform ceiling are separate parts of the argument. It uses finite source invariants and the BMS well-ordering theorem, not the older BTnSS large-cardinal interpretation. No equality, indexed-FS conjugacy or Lean certification is claimed.
+
+收录中英双语主证明、26份来源文稿（含主证明及有限依赖）、历史检验记录与哈希清单。结论严格小于标准 $(n+1)$ 行 BMS 上确界；不把任意非标准数值矩阵自动当作该初段的序数。私人 PDF、原研究实验脚本、旧模型论良序证明及既有记号实现均不在此次导入范围内。
+
 ## SRPD versus TBMS and Y / SRPD、TBMS、Y 比较（2026-10-06）
 
 [English overview](srpd-tbms/continuation/README.md) · [中文总览](srpd-tbms/continuation/README.zh-CN.md) · [Proof guide / 推导过程](srpd-tbms/continuation/PROOF-ROUTES.zh-CN.md) · [原稿目录](srpd-tbms/continuation/CATALOGUE.md).

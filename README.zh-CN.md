@@ -2,9 +2,20 @@
 
 9 月 11 日 20:00，@Phyrion 公布了 [Y 序列的良序证明](https://github.com/Phyrion1343/1Y-Well-Ordering-Lean)。不久后，@test_alpha0 进一步将所需的公理体系降低到 $KP_\omega+\text{存在不可数序数}$。本仓库收录 GPT6-astra 在阅读上述证明后设计的 RPD、LRD、Ω-LRD3、ARD、IPD、ARD2，以及它们的良序证明。其中，RPD 的定义所需篇幅短得多；下面的纸面比较链证明其序型不小于固定版本 1Y。LRD 和 Ω-LRD3 则是在此基础上进一步扩展得到的记号。ARD 则把行标改为此前列的地址，使行坐标本身也随展开移动。IPD 则使用有限层迭代树轮廓，连嵌套头内的引用也随列搬运。ARD2 回到每组仅三个自然数坐标的形式，允许行与根同时引用本列，并生成覆盖全上下文的根包。六者均有同一公理体系下的纸面良序证明。它们与 omega-Y 的整体比较仍未解决；已知的具体比较和公共初段见下文。
 
-本仓库收录列式记号的定义、可执行基本列展开器与证明／状态说明，也包含明确标注的伪序记号。源码快照更新于 **2026-10-10**，仓库地址为 [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy)。名称中的 `hzy` 来自仓库所有者的名字。
+本仓库收录列式记号的定义、可执行基本列展开器与证明／状态说明，也包含明确标注的伪序记号。源码快照更新于 **2026-10-22**，仓库地址为 [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy)。名称中的 `hzy` 来自仓库所有者的名字。
 
 记号实现收录 **SRPD、RPD、LRD、Ω-LRD3、ARD、IPD、ARD2、SPD、CWY、CWY2、Ω-CWY、ACD、CSD、ICP、FMP、CTN、DQDN、CDMN**，其中候选、失败版本和伪序记号明确区分；Lean 证明仍只覆盖 **Y、RPD、LRD、Ω-LRD3、ARD、IPD、ARD2**。另保留旧版 ARD-legacy、ARD2-legacy，其他 Ω-LRD 版本不收录。外部 e0MN 实现单独署名，不算本项目发明。
+
+## BTnSS 的固定行数 BMS 上界（2026-10-22）
+
+新增[双语纸面证明](research/btnss-bms/upper-bound.zh-CN.md)：对每个有限 $n\ge2$，
+
+$$
+\lim(\mathrm{BTnSS})\le |(0^{n+1})(1^{n+1})(2^{n+1})(3^{n+1})|
+<|(0^{n+2})(1^{n+2})|.
+$$
+
+源对象为 **strong BT*(-1)Y-nSS v2**，右端是**标准 $(n+1)$ 行 BMS 的上确界**，采用 BM4 短基本列。结论是整个标准域的保序嵌入，不是等号或逐指标展开交换。[证明专题](research/btnss-bms/README.zh-CN.md)收录有限不变量、上下文运输等配套引理、来源清单和有界核验记录。**这是纸面证明，尚未 Lean 形式化。** 目标标准性单独证明，不从非标准矩阵的裸字典序界直接推断其序数界；既有记号实现和 Lean 项目均不改动。
 
 ## Laver 表下界整理（2026-10-18）
 

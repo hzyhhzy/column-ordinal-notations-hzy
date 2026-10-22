@@ -1,0 +1,427 @@
+{
+  "collected": "2026-10-22",
+  "scope": "Paper comparison and finite combinatorial dependencies; no Lean theorem, no private PDF, no external source code or historical audit scripts redistributed.",
+  "upstream_repository": "https://github.com/SmileLee-lyx/ne-rewritten",
+  "upstream_revision": "c539d8f68c5553da2d681c1251ea443b6b735e62",
+  "frozen_rules": [
+    {
+      "file": "src/notations/BM-like/Minus1_Y_nSS-series/BT_star_Minus1_Y_nSS-v2.ts",
+      "sha256": "082c38b56f5e01ac33265a1025581ba2cab698c62893d87b9e61191ed8f8251c",
+      "matches_recorded_commit_ignoring_crlf": true,
+      "url": "https://github.com/SmileLee-lyx/ne-rewritten/blob/c539d8f68c5553da2d681c1251ea443b6b735e62/src/notations/BM-like/Minus1_Y_nSS-series/BT_star_Minus1_Y_nSS-v2.ts"
+    },
+    {
+      "file": "src/notations/BM-like/BM.ts",
+      "sha256": "ae719bda5d394f45bd65f13aeac21697c95c35d787582cdf192685f78f59d6d3",
+      "matches_recorded_commit_ignoring_crlf": true,
+      "url": "https://github.com/SmileLee-lyx/ne-rewritten/blob/c539d8f68c5553da2d681c1251ea443b6b735e62/src/notations/BM-like/BM.ts"
+    }
+  ],
+  "manuscripts": [
+    {
+      "source": "output/bt3ss-bms-comparison-20261019/BTnSS极限的固定行数BMS上界.md",
+      "file": "upper-bound.zh-CN.md",
+      "source_sha256": "8fe648b78b5980c6e33497d57e09afcf49146fddcc945250a16a61474a1b3cbc",
+      "collected_sha256": "02d2770362a101f9c0dc513989a56806a6faae84f6279cef2d6e2eb9e29de24d",
+      "source_line_range": null,
+      "changes": [
+        "Normalize CRLF to LF",
+        "Use GitHub display-math delimiters",
+        "Relocate included manuscript links",
+        "Add bilingual navigation, accurate excerpt label and historical-test scope",
+        "Make included inline manuscript filenames into local hyperlinks",
+        "Normalize the final newline"
+      ]
+    },
+    {
+      "source": "output/bt3ss-bms-comparison-20261019/省略所属绑定的上下文编码.md",
+      "file": "lemmas/context-encoder.zh-CN.md",
+      "source_sha256": "3a8466d588f53fd52834824c78c50ca8334b17b0c4b8e314bdd435bf27b19c0f",
+      "collected_sha256": "d2f0084a7b7c7ebb872a471daf394ed42c0b0f5c117fc865191422bad3c3ea47",
+      "source_line_range": null,
+      "changes": [
+        "Normalize CRLF to LF",
+        "Use GitHub display-math delimiters",
+        "Relocate included manuscript links",
+        "Add local-lemma and historical-test scope banner",
+        "Restore the missing display-math closing delimiter after equation (2); formula unchanged",
+        "Make included inline manuscript filenames into local hyperlinks",
+        "Normalize the final newline"
+      ]
+    },
+    {
+      "source": "output/bt3ss-bms-comparison-20261019/最高键条件的跨叶延拓.md",
+      "file": "lemmas/cross-leaf.zh-CN.md",
+      "source_sha256": "f2921f95c677585db1e6bb17f538e0926206bf7855d1f2f624976ac3dc4a6dec",
+      "collected_sha256": "98f864926fc10593ce66ec487842352e42d7e1efef7cb8d9db8c3c8511da2a48",
+      "source_line_range": null,
+      "changes": [
+        "Normalize CRLF to LF",
+        "Use GitHub display-math delimiters",
+        "Relocate included manuscript links",
+        "Add local-lemma and historical-test scope banner",
+        "Make included inline manuscript filenames into local hyperlinks",
+        "Normalize the final newline"
+      ]
+    },
+    {
+      "source": "output/bt3ss-bms-comparison-20261019/任意维最高两行的块运输.md",
+      "file": "lemmas/top-row-transport.zh-CN.md",
+      "source_sha256": "df343247dc5d3e11ab5f32c900c1ce413ddeca0353e7bc2cbd3b79a2efba7b84",
+      "collected_sha256": "d73dcdcae4869c44a113ebd97481071ad2fa2466c3ca5d168902b132270356e5",
+      "source_line_range": null,
+      "changes": [
+        "Normalize CRLF to LF",
+        "Use GitHub display-math delimiters",
+        "Relocate included manuscript links",
+        "Add local-lemma and historical-test scope banner",
+        "Make included inline manuscript filenames into local hyperlinks",
+        "Normalize the final newline"
+      ]
+    },
+    {
+      "source": "output/bt3ss-bms-comparison-20261019/任意维部分变基的键比较.md",
+      "file": "lemmas/partial-key-comparison.zh-CN.md",
+      "source_sha256": "0e79c7662d8a6c03880ad069bbea56693642ab7837161bea748e88b7f0bb4646",
+      "collected_sha256": "b207ada5307e005f567feeea1d49b6baab0f95f4e497ca6dee10174c7b242b41",
+      "source_line_range": null,
+      "changes": [
+        "Normalize CRLF to LF",
+        "Use GitHub display-math delimiters",
+        "Relocate included manuscript links",
+        "Add local-lemma and historical-test scope banner",
+        "Replace superseded whole-project pending sentence; local lemma scope unchanged",
+        "Make included inline manuscript filenames into local hyperlinks",
+        "Normalize the final newline"
+      ]
+    },
+    {
+      "source": "output/bt3ss-bms-comparison-20261019/任意维森林入口键下降.md",
+      "file": "lemmas/owner-entry.zh-CN.md",
+      "source_sha256": "ef594b8604f89e2b26158158f21b6c3b84da4e28125f9034ff171d4621a28bf1",
+      "collected_sha256": "79c93c44944008a5c7a83a18817d5692825fe5b395a485322f869893db270b10",
+      "source_line_range": null,
+      "changes": [
+        "Normalize CRLF to LF",
+        "Use GitHub display-math delimiters",
+        "Relocate included manuscript links",
+        "Add local-lemma and historical-test scope banner",
+        "Make included inline manuscript filenames into local hyperlinks",
+        "Normalize the final newline"
+      ]
+    },
+    {
+      "source": "output/bt3ss-bms-comparison-20261019/任意行数的首对角引理.md",
+      "file": "lemmas/first-diagonal.zh-CN.md",
+      "source_sha256": "c97de7e96adeb159cd56c3c0c7c882cdbcc50aa1a88f10dca69b4d95305c80a8",
+      "collected_sha256": "2ba531d9a171e4d0aa0368cc7d56227148e95a4d8c50f2e9b3183e25cd776c20",
+      "source_line_range": null,
+      "changes": [
+        "Normalize CRLF to LF",
+        "Use GitHub display-math delimiters",
+        "Relocate included manuscript links",
+        "Add local-lemma and historical-test scope banner",
+        "Make included inline manuscript filenames into local hyperlinks",
+        "Normalize the final newline"
+      ]
+    },
+    {
+      "source": "output/btnss-wellorder-20261013/MAIN-PROOF.zh-CN.md",
+      "file": "source-finite/definitions-and-invariants.zh-CN.md",
+      "source_sha256": "1d66526280ecf7198aa3ae09db40d8d03209c2094df2638d5f1bd1fe62b13b0a",
+      "collected_sha256": "dcf5dff10ecd1f1c83bc832b37c2eac45b810ac8a3843e009c52b9e623d0c3c7",
+      "source_line_range": [
+        18,
+        191
+      ],
+      "changes": [
+        "Normalize CRLF to LF",
+        "Use GitHub display-math delimiters",
+        "Relocate included manuscript links",
+        "Extract original sections 1–3 only; append finite-dependency index",
+        "Make included inline manuscript filenames into local hyperlinks",
+        "Normalize the final newline"
+      ]
+    },
+    {
+      "source": "output/btnss-wellorder-20261013/TRANSPORT.zh-CN.md",
+      "file": "source-finite/TRANSPORT.zh-CN.md",
+      "source_sha256": "1007e9fe7ab765240038ebe806aae79d434e560113e933b9d37ae001c17cd18e",
+      "collected_sha256": "6ce32e2b6c3fb1a93d9faac184cbcb9f0bdedcd355a228b58e5ccdef43f5dd9f",
+      "source_line_range": null,
+      "changes": [
+        "Normalize CRLF to LF",
+        "Use GitHub display-math delimiters",
+        "Relocate included manuscript links",
+        "Add local-lemma and historical-test scope banner",
+        "Clarify that the final pending paragraph describes this local lemma, not the collected theorem",
+        "Make included inline manuscript filenames into local hyperlinks",
+        "Normalize the final newline"
+      ]
+    },
+    {
+      "source": "output/btnss-wellorder-20261013/NUMERIC-CHAINS.zh-CN.md",
+      "file": "source-finite/NUMERIC-CHAINS.zh-CN.md",
+      "source_sha256": "0f9dea31621d1230d03e72ffd3437dd2273157bbc96e9a03ce41cace76f0e715",
+      "collected_sha256": "b0d5faf9c9f59628ac7cd04bf2d83af4f9f9d9dd75a462fcb924d6d51aee5cec",
+      "source_line_range": null,
+      "changes": [
+        "Normalize CRLF to LF",
+        "Use GitHub display-math delimiters",
+        "Relocate included manuscript links",
+        "Add local-lemma and historical-test scope banner",
+        "Make included inline manuscript filenames into local hyperlinks",
+        "Normalize the final newline"
+      ]
+    },
+    {
+      "source": "output/btnss-wellorder-20261013/NUMERIC-COPY-TRANSPORT.zh-CN.md",
+      "file": "source-finite/NUMERIC-COPY-TRANSPORT.zh-CN.md",
+      "source_sha256": "9c57c415d55e384667c1042bb3be1a366bfcc4905ab805239387a1363f8df0d9",
+      "collected_sha256": "6e05630b260bc4adc24d9d9ed101a5ee259fbb414ff8ac61e40d917d1832e984",
+      "source_line_range": null,
+      "changes": [
+        "Normalize CRLF to LF",
+        "Use GitHub display-math delimiters",
+        "Relocate included manuscript links",
+        "Add local-lemma and historical-test scope banner",
+        "Make included inline manuscript filenames into local hyperlinks",
+        "Normalize the final newline"
+      ]
+    },
+    {
+      "source": "output/btnss-wellorder-20261013/NUMERIC-EXPANSION.zh-CN.md",
+      "file": "source-finite/NUMERIC-EXPANSION.zh-CN.md",
+      "source_sha256": "f5f7553d3974319f4e5d01fa431e3efd482381e902ce40fec3522f9a5852fe91",
+      "collected_sha256": "3a7d6b74bc58ea12df5e33ab2615189cf4635e02cda972cb826d1556ec2ae63b",
+      "source_line_range": null,
+      "changes": [
+        "Normalize CRLF to LF",
+        "Use GitHub display-math delimiters",
+        "Relocate included manuscript links",
+        "Add local-lemma and historical-test scope banner",
+        "Make included inline manuscript filenames into local hyperlinks",
+        "Normalize the final newline"
+      ]
+    },
+    {
+      "source": "output/btnss-wellorder-20261013/BLOCK-TRANSPORT.zh-CN.md",
+      "file": "source-finite/BLOCK-TRANSPORT.zh-CN.md",
+      "source_sha256": "3bea59cacb420c5109c74cc26591a1806fd96e4d6746dc0379befeb0b4f7aac0",
+      "collected_sha256": "8de54835132ad15c3aaed58ec2c02335bc4ffdb53721b850658e93f848234ad8",
+      "source_line_range": null,
+      "changes": [
+        "Normalize CRLF to LF",
+        "Use GitHub display-math delimiters",
+        "Relocate included manuscript links",
+        "Add local-lemma and historical-test scope banner",
+        "Make included inline manuscript filenames into local hyperlinks",
+        "Normalize the final newline"
+      ]
+    },
+    {
+      "source": "output/btnss-wellorder-20261013/PARTIAL-TRANSPORT.zh-CN.md",
+      "file": "source-finite/PARTIAL-TRANSPORT.zh-CN.md",
+      "source_sha256": "693b0b5dacacfab235b29cae72e6eedd6f9552c312b9486c5a38ea4e890e37e1",
+      "collected_sha256": "c9ecfbf8f17bda91b8f1f5a827ec0489cb7a6e352be69d3e5a50b4a6bb21c064",
+      "source_line_range": null,
+      "changes": [
+        "Normalize CRLF to LF",
+        "Use GitHub display-math delimiters",
+        "Relocate included manuscript links",
+        "Add local-lemma and historical-test scope banner",
+        "Make included inline manuscript filenames into local hyperlinks",
+        "Normalize the final newline"
+      ]
+    },
+    {
+      "source": "output/btnss-wellorder-20261013/PARTIAL-REBASE.zh-CN.md",
+      "file": "source-finite/PARTIAL-REBASE.zh-CN.md",
+      "source_sha256": "bfb61e178844a8b160d001700ab196aad268a2099c7598bdceca44db109a92d6",
+      "collected_sha256": "3bd144dfb67626fb743f58a598b891aa028e8461e1b697c19cb20f7b40b65b71",
+      "source_line_range": null,
+      "changes": [
+        "Normalize CRLF to LF",
+        "Use GitHub display-math delimiters",
+        "Relocate included manuscript links",
+        "Add local-lemma and historical-test scope banner",
+        "Make included inline manuscript filenames into local hyperlinks",
+        "Normalize the final newline"
+      ]
+    },
+    {
+      "source": "output/btnss-wellorder-20261013/KEY-COVARIANCE.zh-CN.md",
+      "file": "source-finite/KEY-COVARIANCE.zh-CN.md",
+      "source_sha256": "4c44fa94d203d118471b184e77d00ef4df986fd86436fa39d7a6ea311b5d1525",
+      "collected_sha256": "3ccd51f73ee26e2e3a6dab7f1abfb3572a14fd3046597753139676e830369a0e",
+      "source_line_range": null,
+      "changes": [
+        "Normalize CRLF to LF",
+        "Use GitHub display-math delimiters",
+        "Relocate included manuscript links",
+        "Add local-lemma and historical-test scope banner",
+        "Make included inline manuscript filenames into local hyperlinks",
+        "Normalize the final newline"
+      ]
+    },
+    {
+      "source": "output/btnss-wellorder-20261013/VIRTUAL-OWNER-KEYS.zh-CN.md",
+      "file": "source-finite/VIRTUAL-OWNER-KEYS.zh-CN.md",
+      "source_sha256": "47515d2691d41b2583ca90d8b1d77595fe036712ddb8b692ed1feecde3e6ef09",
+      "collected_sha256": "18e84467472768fa520cf3559ade5371c0af274f95f947677118261a6dc6e271",
+      "source_line_range": null,
+      "changes": [
+        "Normalize CRLF to LF",
+        "Use GitHub display-math delimiters",
+        "Relocate included manuscript links",
+        "Add local-lemma and historical-test scope banner",
+        "Make included inline manuscript filenames into local hyperlinks",
+        "Normalize the final newline"
+      ]
+    },
+    {
+      "source": "output/btnss-wellorder-20261013/ROOT-BLOCK-PREFIX.zh-CN.md",
+      "file": "source-finite/ROOT-BLOCK-PREFIX.zh-CN.md",
+      "source_sha256": "064b916e738f79c7ebbcc19cd74e2cc3a9156e0c6e226c019162d8968523995a",
+      "collected_sha256": "46ca6f5ebaf95b134ab9b9f84ad86dcabbaa3b2cc48f764c17a269e18bc85037",
+      "source_line_range": null,
+      "changes": [
+        "Normalize CRLF to LF",
+        "Use GitHub display-math delimiters",
+        "Relocate included manuscript links",
+        "Add local-lemma and historical-test scope banner",
+        "Make included inline manuscript filenames into local hyperlinks",
+        "Normalize the final newline"
+      ]
+    },
+    {
+      "source": "output/btnss-wellorder-20261013/BN-HW-CLOSURE.zh-CN.md",
+      "file": "source-finite/BN-HW-CLOSURE.zh-CN.md",
+      "source_sha256": "ce432064ff9cedc3444dfe97e873c0000a0125772f1d9393c52253abb2cc7416",
+      "collected_sha256": "fa221f4d9fafcc6e299a31e850f8c760eacca055ca705ef2ef4e70a6094d37aa",
+      "source_line_range": null,
+      "changes": [
+        "Normalize CRLF to LF",
+        "Use GitHub display-math delimiters",
+        "Relocate included manuscript links",
+        "Add local-lemma and historical-test scope banner",
+        "Make included inline manuscript filenames into local hyperlinks",
+        "Normalize the final newline"
+      ]
+    },
+    {
+      "source": "output/btnss-wellorder-20261013/SB-CLOSURE.zh-CN.md",
+      "file": "source-finite/SB-CLOSURE.zh-CN.md",
+      "source_sha256": "798fb5338a670edd84e252fca401a2cc220f81f466942fde75755fcd4dac87c3",
+      "collected_sha256": "879a797d27923ae1674a1224f8ca191f84d0ea9ef5e3c794ed8dee69e6ebd7f4",
+      "source_line_range": null,
+      "changes": [
+        "Normalize CRLF to LF",
+        "Use GitHub display-math delimiters",
+        "Relocate included manuscript links",
+        "Add local-lemma and historical-test scope banner",
+        "Make included inline manuscript filenames into local hyperlinks",
+        "Normalize the final newline"
+      ]
+    },
+    {
+      "source": "output/btnss-wellorder-20261013/G-CLOSURE.zh-CN.md",
+      "file": "source-finite/G-CLOSURE.zh-CN.md",
+      "source_sha256": "23fc135d2d6328398322cff8bac42976b89310cabc0207079527a08a04a2f74a",
+      "collected_sha256": "edad101d4a2275d3e82802df7fe97656d3c37ae7a6cf0fff225c17f5a14bdc84",
+      "source_line_range": null,
+      "changes": [
+        "Normalize CRLF to LF",
+        "Use GitHub display-math delimiters",
+        "Relocate included manuscript links",
+        "Add local-lemma and historical-test scope banner",
+        "Make included inline manuscript filenames into local hyperlinks",
+        "Normalize the final newline"
+      ]
+    },
+    {
+      "source": "output/btnss-wellorder-20261013/PHASE-PARTITION.zh-CN.md",
+      "file": "source-finite/PHASE-PARTITION.zh-CN.md",
+      "source_sha256": "12a146ba19528d93b41b5ddc55756cf8ed60b49603b52c817309f7ef6eaf006e",
+      "collected_sha256": "3355b3866bedd103e970be501c2b45dcdea242ff504a79e988fbcbc92afcc382",
+      "source_line_range": null,
+      "changes": [
+        "Normalize CRLF to LF",
+        "Use GitHub display-math delimiters",
+        "Relocate included manuscript links",
+        "Add local-lemma and historical-test scope banner",
+        "Make included inline manuscript filenames into local hyperlinks",
+        "Normalize the final newline"
+      ]
+    },
+    {
+      "source": "output/btnss-wellorder-20261013/DELAY-AUDIT.zh-CN.md",
+      "file": "source-finite/DELAY-AUDIT.zh-CN.md",
+      "source_sha256": "d42246ec8706d05901c92db0197ab16266dc60002d440b3f97351dcff88b838a",
+      "collected_sha256": "8196500c79a87bede490cf92a4ad9365e6d1111ce45d7a5606ac9ee2a380ea52",
+      "source_line_range": null,
+      "changes": [
+        "Normalize CRLF to LF",
+        "Use GitHub display-math delimiters",
+        "Relocate included manuscript links",
+        "Add local-lemma and historical-test scope banner",
+        "Make included inline manuscript filenames into local hyperlinks",
+        "Normalize the final newline"
+      ]
+    },
+    {
+      "source": "output/btnss-wellorder-20261013/LOW-COVERAGE.zh-CN.md",
+      "file": "source-finite/LOW-COVERAGE.zh-CN.md",
+      "source_sha256": "0fd3ec9b6ff4602cd5b8d68fdcd5ed1499550f33be7075fc794d1408b6ac04be",
+      "collected_sha256": "8a6bb7fbcf5b07f6be210763b3dda3146db0808a252288f9d021330af05595d5",
+      "source_line_range": null,
+      "changes": [
+        "Normalize CRLF to LF",
+        "Use GitHub display-math delimiters",
+        "Relocate included manuscript links",
+        "Add local-lemma and historical-test scope banner",
+        "Make included inline manuscript filenames into local hyperlinks",
+        "Normalize the final newline"
+      ]
+    },
+    {
+      "source": "output/btnss-wellorder-20261013/LAST-HOLE.zh-CN.md",
+      "file": "source-finite/LAST-HOLE.zh-CN.md",
+      "source_sha256": "e9a5c2665328eb86f31b2e7c38efd4e664b2683865d6edf5d2ba0a1904f5ac18",
+      "collected_sha256": "ff316a4762394e8d87f3288515aac1a52250c3066ec665903ca4456d44ec2721",
+      "source_line_range": null,
+      "changes": [
+        "Normalize CRLF to LF",
+        "Use GitHub display-math delimiters",
+        "Relocate included manuscript links",
+        "Add local-lemma and historical-test scope banner",
+        "Make included inline manuscript filenames into local hyperlinks",
+        "Normalize the final newline"
+      ]
+    },
+    {
+      "source": "output/btnss-wellorder-20261013/LAST-HOLE-AUDIT.zh-CN.md",
+      "file": "source-finite/LAST-HOLE-AUDIT.zh-CN.md",
+      "source_sha256": "7a74fb4d72e44a510ccd634e93e77acd0c5fb24dbd637965c86807422eea5f85",
+      "collected_sha256": "8ff7a87e050c8fbf0144796418f59da38333d74a0160048ae8a09d1b27671c2d",
+      "source_line_range": null,
+      "changes": [
+        "Normalize CRLF to LF",
+        "Use GitHub display-math delimiters",
+        "Relocate included manuscript links",
+        "Add local-lemma and historical-test scope banner",
+        "Make included inline manuscript filenames into local hyperlinks",
+        "Normalize the final newline"
+      ]
+    },
+    {
+      "source": "output/bt3ss-bms-comparison-20261019/BTNSS-UPPER-BOUND-VERIFICATION.json",
+      "file": "verification.json",
+      "source_sha256": "e8f98af27f228d94c4eb202f6ecda15c273af1be747f85ccfdad26cc37b1f3dd",
+      "collected_sha256": "e8f98af27f228d94c4eb202f6ecda15c273af1be747f85ccfdad26cc37b1f3dd",
+      "changes": [
+        "Historical record unchanged except CRLF-to-LF normalization; not a new package-validation result"
+      ]
+    }
+  ]
+}

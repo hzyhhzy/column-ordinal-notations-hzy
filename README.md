@@ -2,9 +2,20 @@
 
 At 20:00 on September 11, @Phyrion published a [well-ordering proof for the Y-sequence system](https://github.com/Phyrion1343/1Y-Well-Ordering-Lean). Shortly afterwards, @test_alpha0 reduced the required axiomatic foundation to $KP_\omega+\text{there exists an uncountable ordinal}$. This repository collects RPD, LRD, Ω-LRD3, ARD, IPD, and ARD2, notation systems devised by GPT6-astra after studying those proofs, together with their well-ordering proofs. RPD admits a much shorter definition than Y; the paper comparison chain below proves it is at least as strong as the fixed 1Y definition. LRD and Ω-LRD3 are further extensions of that construction. ARD makes row labels into references to earlier columns, so the row coordinate itself moves during expansion. IPD uses finite-level iterated tree profiles and relocates references even inside nested heads. ARD2 returns to three natural-number coordinates, allowing both row and root SELF references and full-context root packages. All six admit paper well-ordering proofs in the same axiomatic system. Whole-system comparisons with omega-Y remain open; the specific known comparisons and common initial segments are recorded below.
 
-Definitions, executable fundamental sequences, and proof/status documents for column notations, including explicitly marked pseudo-orders. This source snapshot was updated on **2026-10-10** for [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy). The suffix `hzy` refers to the repository owner's name.
+Definitions, executable fundamental sequences, and proof/status documents for column notations, including explicitly marked pseudo-orders. This source snapshot was updated on **2026-10-22** for [hzyhhzy/column-ordinal-notations-hzy](https://github.com/hzyhhzy/column-ordinal-notations-hzy). The suffix `hzy` refers to the repository owner's name.
 
 The notation implementations are **SRPD, RPD, LRD, Ω-LRD3, ARD, IPD, ARD2, SPD, CWY, CWY2, Ω-CWY, ACD, CSD, ICP, FMP, CTN, DQDN and CDMN**, with the candidate/failed/pseudo-order distinctions below. The Lean proof collection still covers only **Y, RPD, LRD, Ω-LRD3, ARD, IPD and ARD2**. ARD-legacy and ARD2-legacy are retained as explicit previous editions; other Ω-LRD variants are excluded. External e0MN implementations are credited separately, not counted as inventions of this project.
+
+## BTnSS below fixed-row BMS (2026-10-22)
+
+The [new bilingual paper](research/btnss-bms/upper-bound.md) gives, for every finite $n\ge2$,
+
+$$
+\lim(\mathrm{BTnSS})\le |(0^{n+1})(1^{n+1})(2^{n+1})(3^{n+1})|
+<|(0^{n+2})(1^{n+2})|.
+$$
+
+The source is **strong BT*(-1)Y-nSS v2**; the right endpoint is the supremum of **standard $(n+1)$-row BMS**, using BM4's short fundamental sequence. This is an entire-standard-domain order embedding, not equality or indexed-FS commutation. The [proof collection](research/btnss-bms/README.md) includes the finite-invariant and context-transport dependencies, provenance and bounded-audit records. **Paper proof, not Lean-certified.** Target standardness is proved separately; no ordinal bound for arbitrary nonstandard matrices is inferred from their raw lexicographic order. No existing notation implementation or Lean project changes.
 
 ## Laver-table lower bounds (2026-10-18)
 

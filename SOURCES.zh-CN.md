@@ -1,5 +1,11 @@
 # 来源、版本与许可证 · [English](SOURCES.md)
 
+## BTnSS 的固定行数 BMS 上界（2026-10-22）
+
+[BTnSS／BMS 专题](research/btnss-bms/README.zh-CN.md)收录已完成的纸面比较和有限组合依赖，来源为 `bt3ss-bms-comparison-20261019` 与 `btnss-wellorder-20261013` 研究快照。[清单](research/btnss-bms/MANIFEST.json)记录原稿／收录版哈希，以及旧主文第1至3节的准确摘录范围；后续模型解释和大基数证明不收入，也不是此次比较的前提。英文主证明翻译自所收录中文主证明；局部引理保留中文全文。导航、显示公式定界符及已过时的总体进度句均记录了改动。
+
+两份规则源与 NER 提交 `c539d8f68c5553da2d681c1251ea443b6b735e62` 相符（忽略换行差异），清单保存哈希和固定版本链接。Hunter 的 BMS 良序论文只引用，不重新分发。历史有限核验收据只统一为 LF 换行，不是新增数学证书。不新增私人 PDF、上游实现、实验套件、记号核心或 Lean 项目；附带收录／完整性检查脚本只核对来源和打包，不给外部材料推定新许可证。
+
 ## Laver 下界证明整理（2026-10-18）
 
 [laver_table_lower_bounds](laver_table_lower_bounds/README.zh-CN.md)收录本次指定的三条研究路线及实际局部证明依赖。清单记录原稿与整理版哈希、链接迁移、旧固定输入段落的省略行号；三篇主文明确推导自然输入版本。仓库外原研究文件不变。固定随附用户提供的原版 IBLP 核心及本地 BMS 父表参考，供有限重放；没有导入外部 PDF 或增加 Lean 定理。出处及版本边界见[文献表](laver_table_lower_bounds/BIBLIOGRAPHY.md)。
