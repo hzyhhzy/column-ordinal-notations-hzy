@@ -1,6 +1,19 @@
 # Lower bounds for Laver-table q(5) · [中文](README.zh-CN.md)
 
-This directory collects three existing paper-proof routes, their quantitative interfaces and supporting manuscripts. Here $q(5)$ is the first **table-order parameter** at which the first row of the ordinary binary Laver table has period 32; the table has $2^{q(5)}$ elements. The Laver-side arguments use **ZFC + I3**, in one fixed $\operatorname{Iter}(j)$. No new Lean certification is claimed.
+This directory collects three existing paper-proof routes, their quantitative interfaces and supporting manuscripts. Here $q(5)$ is the first **table-order parameter** at which the first row of the ordinary binary Laver table has period 32; the table has $2^{q(5)}$ elements. The archived paper routes use **ZFC + I3**, in one fixed $\operatorname{Iter}(j)$. The separate Lean project below now certifies a conditional bound without I3.
+
+## New Lean result (2026-11-06)
+
+$$
+q(5)\downarrow\ \Longrightarrow\ q(5)>F_{\Lambda+\omega+1}(3),\qquad
+\Lambda=\lim(\mathrm{BMS}).
+$$
+
+The [independent Lean 4.33.1 project](lean/README.md) contains the [final theorem](lean/LaverLowerBounds/OriginalBMSBound.lean), exact numerical BM4/parent-coordinate expansion equivalence, a realized finite FGH evaluation, a portable build command, and [152-module verification receipt](lean/verification/VERIFICATION.json). Its only audited axioms are `propext`, `Classical.choice`, and `Quot.sound`; it assumes neither I3 nor global BMS well-ordering.
+
+**Scope:** input `3`, ordinal level `Lambda+omega+1`, ordinary Lean foundations. This is not an object-language ZFC derivation, a proof that `q(5)` exists, or certification of the larger-input/tower/IBLP paper results below. The theorem is quantified over every family of finite tables satisfying the defining equations. Full conventions and boundaries are in the [project README](lean/README.md).
+
+## Archived paper results
 
 The main papers replace the old arbitrarily prescribed large input with the integer naturally produced by the original proof and derive the resulting numerical bounds.
 

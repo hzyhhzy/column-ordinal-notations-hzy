@@ -56,6 +56,9 @@ def check_package():
     machine_path = re.compile(r"(?:/C:/|C:[/\\]Users[/\\])")
     for path in sorted(ROOT.rglob("*")):
         budget()
+        if any(part in {'.build', '.lake', '__pycache__', '.git'}
+               for part in path.relative_to(ROOT).parts):
+            continue
         if path.suffix not in {".md", ".txt", ".py", ".json"}:
             continue
         text = path.read_text(encoding="utf-8-sig")
@@ -73,7 +76,7 @@ def check_package():
                 continue
             target = target.split("#", 1)[0]
             # Do not confuse fundamental-sequence formulas with Markdown links.
-            if not re.search(r"\.(?:md|txt|py|js|json|pdf)$", target, re.I):
+            if not re.search(r"\.(?:md|txt|py|js|json|pdf|lean|toml|ps1)$", target, re.I):
                 continue
             dest = (path.parent / unquote(target)).resolve()
             assert ROOT.resolve() in (dest, *dest.parents), (path, target, "outside package")
@@ -218,10 +221,12 @@ def bms_checks():
 
 def main():
     manifest = check_package()
+    lean_receipt = load('laver_bounds_lean_verifier', ROOT / 'lean' / 'verify.py').verify()
     syntax_checks()
     bms_checks()
     print(json.dumps({
         "status": "PASS", "proof_certification": False,
+        "edition": "2026-11-06-laver-lean",
         "scope": "hashes, portable links, literal source identities, bounded mark invariants, one-row index convention",
         "checks": CHECKS, "basic_steps": STEPS, "peak_rows": PEAK_ROWS,
         "peak_fields": PEAK_FIELDS, "seconds": round(monotonic() - START, 6),
@@ -230,6 +235,7 @@ def main():
                    "bms_steps_per_small_case": 300, "forest_integer_bits": 128},
         "proof_manuscripts": sum(e["package"].startswith("proofs/") for e in manifest["items"]),
         "large_hierarchy_evaluations": 0, "laver_tables_constructed": 0,
+        "lean_receipt_integrity": lean_receipt,
     }, ensure_ascii=False, indent=2))
 
 

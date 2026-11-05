@@ -1,0 +1,725 @@
+Lean (version 4.33.1, x86_64-w64-windows-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+
+'LaverLowerBounds.iter_simulates_of_le' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.level_mono' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.omegaSuccessor_grows' depends on axioms: [propext, Quot.sound]
+
+PASS LaverLowerBounds/Iteration
+
+'LaverLowerBounds.countingEstimate_of_tower' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.stage_simulates' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.dynamic_simulates' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.numerical_bound_at_100' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.numerical_bound_at_three' depends on axioms: [propext, Quot.sound]
+
+PASS LaverLowerBounds/Numerical
+
+'LaverLowerBounds.CappedAlgebra.guarded_double_action' does not depend on any axioms
+'LaverLowerBounds.CappedAlgebra.j9_four_below' depends on axioms: [propext, Quot.sound]
+
+PASS LaverLowerBounds/CappedAlgebra
+
+'LaverLowerBounds.PrefixDescent.stops_prefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.PrefixDescent.mixed_run_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/PrefixDescent
+
+'LaverLowerBounds.ParentBMS.expand_preserves_stem' depends on axioms: [propext]
+'LaverLowerBounds.ParentBMS.expand_prefix' depends on axioms: [propext]
+'LaverLowerBounds.ParentBMS.smaller_index_is_mixed_step' depends on axioms: [propext]
+
+PASS LaverLowerBounds/ParentBMS
+
+'LaverLowerBounds.FiniteTable.row_recurrence' depends on axioms: [propext]
+'LaverLowerBounds.FiniteTable.zero_mul' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.FiniteTable.row_grows' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.FiniteTable.mul_zero' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.FiniteTable.op_unique' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.FiniteTable.projection' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.FiniteTable.firstZero_dvd_size' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.FiniteTable.firstZero_is_period' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.FiniteTable.comp_mul' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.FiniteTable.mul_comp' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.FiniteTable.firstZero_strict' depends on axioms: [propext, Quot.sound]
+
+PASS LaverLowerBounds/FiniteTable
+
+'LaverLowerBounds.FiniteTable.period_stays_or_doubles' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.FiniteTable.period_is_power_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.periodAtLeast32_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/FinitePeriods
+
+'LaverLowerBounds.FiniteTable.signature_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.act_application' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.act_composition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.act_strict_below_cap' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/Signature
+
+'LaverLowerBounds.FiniteTable.cappedAlgebra' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.guarded_double' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/FiniteCapped
+
+
+PASS LaverLowerBounds/LowProducts/Part000
+
+
+PASS LaverLowerBounds/LowProducts/Part001
+
+
+PASS LaverLowerBounds/LowProducts/Part002
+
+
+PASS LaverLowerBounds/LowProducts/Part003
+
+
+PASS LaverLowerBounds/LowProducts/Part004
+
+
+PASS LaverLowerBounds/LowProducts/Part005
+
+
+PASS LaverLowerBounds/LowProducts/Part006
+
+
+PASS LaverLowerBounds/LowProducts/Part007
+
+
+PASS LaverLowerBounds/LowProducts/Part008
+
+
+PASS LaverLowerBounds/LowProducts/Part009
+
+
+PASS LaverLowerBounds/LowProducts/Part010
+
+
+PASS LaverLowerBounds/LowProducts/Part011
+
+
+PASS LaverLowerBounds/LowProducts/Part012
+
+
+PASS LaverLowerBounds/LowProducts/Part013
+
+
+PASS LaverLowerBounds/LowProducts/Part014
+
+
+PASS LaverLowerBounds/LowProducts/Part015
+
+
+PASS LaverLowerBounds/LowProducts/Part016
+
+
+PASS LaverLowerBounds/LowProducts/Part017
+
+
+PASS LaverLowerBounds/LowProducts/Part018
+
+
+PASS LaverLowerBounds/LowProducts/Part019
+
+
+PASS LaverLowerBounds/LowProducts/Part020
+
+
+PASS LaverLowerBounds/LowProducts/Part021
+
+
+PASS LaverLowerBounds/LowProducts/Part022
+
+
+PASS LaverLowerBounds/LowProducts/Part023
+
+
+PASS LaverLowerBounds/LowProducts/Part024
+
+
+PASS LaverLowerBounds/LowProducts/Part025
+
+
+PASS LaverLowerBounds/LowProducts/Part026
+
+
+PASS LaverLowerBounds/LowProducts/Part027
+
+
+PASS LaverLowerBounds/LowProducts/Part028
+
+
+PASS LaverLowerBounds/LowProducts/Part029
+
+
+PASS LaverLowerBounds/LowProducts/Part030
+
+
+PASS LaverLowerBounds/LowProducts/Part031
+
+
+PASS LaverLowerBounds/LowProducts/Part032
+
+
+PASS LaverLowerBounds/LowProducts/Part033
+
+
+PASS LaverLowerBounds/LowProducts/Part034
+
+
+PASS LaverLowerBounds/LowProducts/Part035
+
+
+PASS LaverLowerBounds/LowProducts/Part036
+
+
+PASS LaverLowerBounds/LowProducts/Part037
+
+
+PASS LaverLowerBounds/LowProducts/Part038
+
+
+PASS LaverLowerBounds/LowProducts/Part039
+
+
+PASS LaverLowerBounds/LowProducts/Part040
+
+
+PASS LaverLowerBounds/LowProducts/Part041
+
+
+PASS LaverLowerBounds/LowProducts/Part042
+
+
+PASS LaverLowerBounds/LowProducts/Part043
+
+
+PASS LaverLowerBounds/LowProducts/Part044
+
+
+PASS LaverLowerBounds/LowProducts/Part045
+
+
+PASS LaverLowerBounds/LowProducts/Part046
+
+
+PASS LaverLowerBounds/LowProducts/Part047
+
+
+PASS LaverLowerBounds/LowProducts/Part048
+
+
+PASS LaverLowerBounds/LowProducts/Part049
+
+
+PASS LaverLowerBounds/LowProducts/Part050
+
+
+PASS LaverLowerBounds/LowProducts/Part051
+
+
+PASS LaverLowerBounds/LowProducts/Part052
+
+
+PASS LaverLowerBounds/LowProducts/Part053
+
+
+PASS LaverLowerBounds/LowProducts/Part054
+
+'LaverLowerBounds.FiniteTable.LowProducts.v1_1' depends on axioms: [propext]
+'LaverLowerBounds.FiniteTable.LowProducts.v1_2' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.FiniteTable.LowProducts.v1_4' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.FiniteTable.LowProducts.v1_8' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.FiniteTable.LowProducts.v1_16' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.FiniteTable.LowProducts.v2_2' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.FiniteTable.LowProducts.v2_4' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.FiniteTable.LowProducts.v3_1' depends on axioms: [propext]
+'LaverLowerBounds.FiniteTable.LowProducts.v3_2' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.FiniteTable.LowProducts.v3_4' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.FiniteTable.LowProducts.v4_4' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.FiniteTable.LowProducts.v4_8' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.FiniteTable.LowProducts.v5_1' depends on axioms: [propext]
+'LaverLowerBounds.FiniteTable.LowProducts.v5_2' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.FiniteTable.LowProducts.v6_2' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.FiniteTable.LowProducts.v7_1' depends on axioms: [propext]
+'LaverLowerBounds.FiniteTable.LowProducts.v7_2' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.FiniteTable.LowProducts.v7_4' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.FiniteTable.LowProducts.v8_1' depends on axioms: [propext]
+'LaverLowerBounds.FiniteTable.LowProducts.v8_2' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.FiniteTable.LowProducts.v8_4' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.FiniteTable.LowProducts.v8_8' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.FiniteTable.LowProducts.v9_1' depends on axioms: [propext]
+'LaverLowerBounds.FiniteTable.LowProducts.v9_2' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.FiniteTable.LowProducts.v10_1' depends on axioms: [propext]
+'LaverLowerBounds.FiniteTable.LowProducts.v10_2' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.FiniteTable.LowProducts.v11_1' depends on axioms: [propext]
+'LaverLowerBounds.FiniteTable.LowProducts.v11_2' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.FiniteTable.LowProducts.v12_4' depends on axioms: [propext, Quot.sound]
+
+PASS LaverLowerBounds/LowProducts
+
+'LaverLowerBounds.FiniteTable.threshold_gt_nine' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.lowData' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.first_endpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.q5_upper_index' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/LowConstants
+
+'LaverLowerBounds.FiniteTable.Lined.map' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.Lined.multiply' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/FiniteLines
+
+'LaverLowerBounds.FiniteTable.k_four_unsaturated' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.short_initial_line' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/ShortInitialization
+
+'LaverLowerBounds.FiniteTable.PointChain.splice' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.BandPort.transport' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/FinitePointChain
+
+'LaverLowerBounds.ParentBMS.expand_one_shape' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.ParentBMS.narrow_clears_ready' depends on axioms: [propext, Quot.sound]
+
+PASS LaverLowerBounds/ParentShape
+
+'LaverLowerBounds.FiniteTable.makeBandCopyGeometry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.BandCopyGeometry.copy_port' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/BandCopyGeometry
+
+'LaverLowerBounds.ParentBMS.expandTail_port_origin' depends on axioms: [propext, Quot.sound]
+
+PASS LaverLowerBounds/ParentCopyOrigins
+
+'LaverLowerBounds.BandBudget.rank_decreases' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.BandBudget.triple_run_lt_endpoint' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.BandBudget.no_infinite_run' depends on axioms: [propext, Quot.sound]
+
+PASS LaverLowerBounds/BandBudget
+
+'LaverLowerBounds.FiniteTable.BandRepresentation.positive_copy' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LaverLowerBounds.FiniteTable.BandRepresentation.delete_last' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/BandRepresentation
+
+'LaverLowerBounds.FiniteTable.BandRepresentation.one_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.BandRepresentation.terminates' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.BandRepresentation.triple_count_below_endpoint' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+PASS LaverLowerBounds/BandTermination
+
+'LaverLowerBounds.FiniteTable.ClosedFan.map' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.ClosedFan.represented' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.ClosedFan.counting_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/ClosedFan
+
+'LaverLowerBounds.FiniteTable.comp_projection' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.FiniteTable.app_comp_congruent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.flatten_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/FiniteCongruence
+
+'LaverLowerBounds.FiniteTable.higherData' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/HigherConstants
+
+'LaverLowerBounds.FiniteTable.fanSeed' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/FanSeed
+
+'LaverLowerBounds.FiniteTable.FanSeed.termData' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/InitialTerms
+
+'LaverLowerBounds.FiniteTable.FanSeed.initialFan' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/InitialFan
+
+'LaverLowerBounds.FiniteTable.FanSeed.windowData' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.FanSeed.initial_sixteen_line' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/InitialWindow
+
+'LaverLowerBounds.FiniteTable.signature_lt_act' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/SignatureMovement
+
+'LaverLowerBounds.FiniteTable.PointChain.insert' depends on axioms: [propext, Quot.sound]
+
+PASS LaverLowerBounds/PointInsertion
+
+'LaverLowerBounds.FiniteTable.OwnedFan.insert' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/FanInsertion
+
+'LaverLowerBounds.FiniteTable.FanSeed.firstSplit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.FanSeed.height_three_fan' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.FanSeed.threshold_three_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/FirstFanInsertion
+
+'LaverLowerBounds.FiniteTable.insertionLowData' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/InsertionLowData
+
+'LaverLowerBounds.FiniteTable.word_strict' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.word_action' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.word_congruent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.pushWord_term' depends on axioms: [propext]
+
+PASS LaverLowerBounds/TransportWord
+
+'LaverLowerBounds.FiniteTable.InsertionInvariant.rebuild' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/InsertionInvariant
+
+'LaverLowerBounds.FiniteTable.InsertionInvariant.advance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.line_to_fan' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.initial_height_eighteen' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/IteratedFanInsertion
+
+'LaverLowerBounds.FiniteTable.InsertionBackground.map' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.nativeInsertionBackground' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/InsertionBackground
+
+'LaverLowerBounds.FiniteTable.InsertionBackground.lowData' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.InsertionBackground.segment_actor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+PASS LaverLowerBounds/BackgroundLowData
+
+'LaverLowerBounds.FiniteTable.InsertionBackground.Context.rebuild' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+PASS LaverLowerBounds/BackgroundInvariant
+
+'LaverLowerBounds.FiniteTable.InsertionBackground.Context.advance' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LaverLowerBounds.FiniteTable.InsertionBackground.firstContext' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LaverLowerBounds.FiniteTable.InsertionBackground.line_to_fan' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+
+PASS LaverLowerBounds/BackgroundIteration
+
+'LaverLowerBounds.FiniteTable.full_low_block' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/DyadicBasics
+
+'LaverLowerBounds.FiniteTable.anchors_to_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/DyadicBounds
+
+'LaverLowerBounds.FiniteTable.dyadic_flatten_block' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.dyadic_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/DyadicStep
+
+'LaverLowerBounds.FiniteTable.dyadic_anchors' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.standard_segment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.standard_line' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/StandardLine
+
+'LaverLowerBounds.FiniteTable.Lined.contract' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.Lined.shorten' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/LineShortening
+
+'LaverLowerBounds.ParentBMS.Ancestor.lower' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.ParentBMS.Cover.comp' depends on axioms: [propext, Quot.sound]
+
+PASS LaverLowerBounds/ParentGraph
+
+'LaverLowerBounds.ParentBMS.prepare_spends_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.ParentBMS.prepare_nested' depends on axioms: [propext, Quot.sound]
+
+PASS LaverLowerBounds/ParentPreparation
+
+'LaverLowerBounds.ParentBMS.Cover.prepared' depends on axioms: [propext, Quot.sound]
+
+PASS LaverLowerBounds/CoverPreparation
+
+'LaverLowerBounds.ParentBMS.align_control' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/ControlAlignment
+
+'LaverLowerBounds.ParentBMS.CopyFrame.lift_ancestry' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.ParentBMS.CopyFrame.out_leftward' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.ParentBMS.CopyFrame.out_nested' depends on axioms: [propext, Quot.sound]
+
+PASS LaverLowerBounds/ParentCopyGraph
+
+'LaverLowerBounds.ParentBMS.GraphEmbedding.toCover' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.ParentBMS.Cover.restrict_cropped_stem' depends on axioms: [propext, Quot.sound]
+
+PASS LaverLowerBounds/GraphEmbedding
+
+'LaverLowerBounds.ParentBMS.AlignedCopy.copiedCover' depends on axioms: [propext, Quot.sound]
+
+PASS LaverLowerBounds/SynchronousCopy
+
+'LaverLowerBounds.ParentBMS.Cover.step_simulation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.ParentBMS.Cover.stops' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/CoverDescent
+
+'LaverLowerBounds.ParentBMS.diagonal_cover' depends on axioms: [propext, Quot.sound]
+
+PASS LaverLowerBounds/DiagonalCover
+
+'LaverLowerBounds.ParentBMS.row_width_trade' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/RowWidthTrade
+
+'LaverLowerBounds.ParentBMS.triple_compiler_envelope' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/TripleCompilerEnvelope
+
+'LaverLowerBounds.ParentBMS.sigma_nested' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.ParentBMS.liftW_nested' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.ParentBMS.transformed_shape' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/ParentTransforms
+
+'LaverLowerBounds.ParentBMS.liftW_expand_nonzero' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.ParentBMS.liftW_expand_successor' depends on axioms: [propext, Quot.sound]
+
+PASS LaverLowerBounds/LiftWExpansion
+
+'LaverLowerBounds.ParentBMS.attached_expand' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.ParentBMS.liftW_expand_nonzero_all' depends on axioms: [propext, Quot.sound]
+
+PASS LaverLowerBounds/BlockIndependence
+
+'LaverLowerBounds.ParentBMS.HardyEval.unique' depends on axioms: [propext]
+'LaverLowerBounds.ParentBMS.FastEval.to_hardy' depends on axioms: [propext, Quot.sound]
+
+PASS LaverLowerBounds/HierarchyEvaluation
+
+'LaverLowerBounds.ParentBMS.bush_stops' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.ParentBMS.sigma_zeros_exponential' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/BinaryBush
+
+'LaverLowerBounds.ParentBMS.sprout_split' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.ParentBMS.sprout_birth' depends on axioms: [propext, Quot.sound]
+
+PASS LaverLowerBounds/SproutDynamics
+
+'LaverLowerBounds.ParentBMS.sprout_run' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.ParentBMS.SproutTrace.mixedRun' depends on axioms: [propext, Quot.sound]
+
+PASS LaverLowerBounds/SproutForest
+
+'LaverLowerBounds.ParentBMS.CopyFrame.next' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.ParentBMS.CopyFrame.toSproutState' depends on axioms: [propext, Quot.sound]
+
+PASS LaverLowerBounds/CompletedCopy
+
+
+PASS LaverLowerBounds/LiveCover
+
+'LaverLowerBounds.ParentBMS.LiveCover.next' depends on axioms: [propext, Quot.sound]
+
+PASS LaverLowerBounds/LiveCoverBirth
+
+'LaverLowerBounds.ParentBMS.CopyFrame.sprout_transport' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.ParentBMS.CopyFrame.sprout_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/SproutTransport
+
+'LaverLowerBounds.ParentBMS.CopyFrame.advance_stem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.ParentBMS.CopyFrame.sprout_index_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/RepeatedCopies
+
+'LaverLowerBounds.ParentBMS.sigma_expand_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/SigmaExpansion
+
+.\LaverLowerBounds\SigmaPadding.lean:86:57: warning: Variable name `hbase` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hbase
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'LaverLowerBounds.ParentBMS.expand_graph_all' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.ParentBMS.sigma_sprout_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.ParentBMS.sigma_padding_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/SigmaPadding
+
+'LaverLowerBounds.ParentBMS.sigma_limit_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/SigmaLimitBudget
+
+.\LaverLowerBounds\HardySigmaCompiler.lean:26:49: warning: This simp argument is unused:
+  Prod.fst
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hardyNext_append, ↓reduceIte, Prod.snd] at ih
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+.\LaverLowerBounds\HardySigmaCompiler.lean:26:59: warning: This simp argument is unused:
+  Prod.snd
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hardyNext_append, ↓reduceIte, Prod.fst] at ih
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+.\LaverLowerBounds\HardySigmaCompiler.lean:29:48: warning: This simp argument is unused:
+  Prod.fst
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hardyNext_append, if_neg hz, Prod.snd] at ih
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+.\LaverLowerBounds\HardySigmaCompiler.lean:29:58: warning: This simp argument is unused:
+  Prod.snd
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [hardyNext_append, if_neg hz, Prod.fst] at ih
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'LaverLowerBounds.ParentBMS.HardyEval.sigma_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.ParentBMS.hardy_exists_of_sigma_stops' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/HardySigmaCompiler
+
+'LaverLowerBounds.ParentBMS.fast_hardy_iff' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.ParentBMS.FastEval.unique' depends on axioms: [propext, Quot.sound]
+
+PASS LaverLowerBounds/FastHardyEquivalence
+
+'LaverLowerBounds.ParentBMS.triple_realizes_fgh' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.ParentBMS.triple_diagonal_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/DiagonalFGH
+
+'LaverLowerBounds.ParentBMS.triple_countingEstimate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.ClosedFan.tripleCount_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/TripleCount
+
+'LaverLowerBounds.FiniteTable.FeedbackWindow.number_to_line' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.FeedbackWindow.base_template' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/FeedbackWindow
+
+'LaverLowerBounds.FiniteTable.NaturalTemplate.along_line' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.upgrade_template' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/FeedbackTemplates
+
+'LaverLowerBounds.FiniteTable.grow_stage_along_line' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.DynamicWindow.dynamic_template' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/DynamicFeedback
+
+'LaverLowerBounds.FiniteTable.upperWindowData' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.nativeFeedbackCap' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/UpperWindow
+
+'LaverLowerBounds.FiniteTable.finite_feedback_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.q5_bound_of_countingEstimate' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/FiniteFeedbackBudget
+
+'LaverLowerBounds.ParentBMS.omegaSuccessorEval_unique' depends on axioms: [propext, Quot.sound]
+'LaverLowerBounds.ParentBMS.omegaSuccessor_realized' depends on axioms: [propext, Quot.sound]
+
+PASS LaverLowerBounds/UpperHierarchyEvaluation
+
+'LaverLowerBounds.FiniteTable.threshold_fgh_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.q5_fgh_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.q5_above_every_fgh_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/FiniteFGHBound
+
+
+PASS YesMetaZFC/BMS/Reference
+
+
+PASS YesMetaZFC/BMS/Array
+
+
+PASS YesMetaZFC/BMS/Parent
+
+
+PASS YesMetaZFC/BMS/Ancestor
+
+
+PASS YesMetaZFC/BMS/Expansion
+
+
+PASS YesMetaZFC/BMS/Generation
+
+
+PASS YesMetaZFC/BMS/Decomposition
+
+
+PASS YesMetaZFC/BMS/Lemma25
+
+'LaverLowerBounds.NumericBMS.parent_expand_indices' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.NumericBMS.parent_map_of_ancestry' depends on axioms: [propext, Quot.sound]
+
+PASS LaverLowerBounds/NumericParentBasics
+
+'LaverLowerBounds.NumericBMS.parent_copied' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/NumericCopyParents
+
+.\LaverLowerBounds\NumericParentEncoding.lean:128:41: warning: Try `simp at hrow` instead of `simpa using hrow`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+'LaverLowerBounds.NumericBMS.encode_parent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.NumericBMS.parents_last_context' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/NumericParentEncoding
+
+.\LaverLowerBounds\NumericExpansionFidelity.lean:155:47: warning: Try `simp at hb` instead of `simpa using hb`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+'LaverLowerBounds.NumericBMS.encode_expand' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/NumericExpansionFidelity
+
+.\LaverLowerBounds\NumericSeedsAndKinds.lean:20:27: warning: Try `simp at hb` instead of `simpa using hb`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+'LaverLowerBounds.NumericBMS.encoded_tail_kind' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.NumericBMS.encode_seed' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/NumericSeedsAndKinds
+
+'LaverLowerBounds.NumericBMS.fastEval_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.NumericBMS.omegaSuccessorEval_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/NumericFGH
+
+'LaverLowerBounds.FiniteTable.threshold_original_bms_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.q5_original_bms_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LaverLowerBounds.FiniteTable.q5_above_original_bms_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+PASS LaverLowerBounds/OriginalBMSBound
+
+
+PASS LaverLowerBounds

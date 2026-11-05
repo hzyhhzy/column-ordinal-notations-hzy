@@ -1,0 +1,797 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "lean": "4.33.1",
+  "full_import_closure_rebuilt": true,
+  "compiled_modules": 152,
+  "target": "q(5) exists implies q(5) > F_(lim(BMS)+omega+1)(3)",
+  "numeric_BM4_fidelity": "Every ValidArray, every expansion index; finite FGH evaluation equivalence",
+  "final_theorem_axioms": {
+    "LaverLowerBounds.FiniteTable.threshold_original_bms_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LaverLowerBounds.FiniteTable.q5_original_bms_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "LaverLowerBounds.FiniteTable.q5_above_original_bms_value": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "I3_assumed": false,
+  "object_language_ZFC_derivation": false,
+  "scope": "Direct Lean theorem for every BinaryFamily satisfying the finite-table defining equations",
+  "limits": {
+    "compiler_threads": 1,
+    "compiler_memory_mb": 2048,
+    "seconds_per_module": 60
+  },
+  "seconds": 421.172,
+  "modules": [
+    {
+      "module": "LaverLowerBounds.Iteration",
+      "path": "LaverLowerBounds/Iteration.lean",
+      "sha256_lf": "c51cc741136a25f0d13cb15e657ae9d2b28c6a70bb5fdeaca0e2dd9089d603f2"
+    },
+    {
+      "module": "LaverLowerBounds.Numerical",
+      "path": "LaverLowerBounds/Numerical.lean",
+      "sha256_lf": "e5a6b2fd899f81dc246bb1dc8b2526c6b2f53af622077c4e77faddbe372c5d06"
+    },
+    {
+      "module": "LaverLowerBounds.CappedAlgebra",
+      "path": "LaverLowerBounds/CappedAlgebra.lean",
+      "sha256_lf": "15b4f87b5dd22d5672d004f921cf3a7fb0a900858abd62e1af39632036fd9423"
+    },
+    {
+      "module": "LaverLowerBounds.PrefixDescent",
+      "path": "LaverLowerBounds/PrefixDescent.lean",
+      "sha256_lf": "cd73bdcd7b53b3168d881a3091f8c522aa0906dfd71acdc5ea0aaf7216ea9b13"
+    },
+    {
+      "module": "LaverLowerBounds.ParentBMS",
+      "path": "LaverLowerBounds/ParentBMS.lean",
+      "sha256_lf": "d60117ebdc94da3cc88e2b6478007f478bad054bc8f119ae854a7e326cb39c09"
+    },
+    {
+      "module": "LaverLowerBounds.FiniteTable",
+      "path": "LaverLowerBounds/FiniteTable.lean",
+      "sha256_lf": "31103a673124d4750da44c3774722604f9d4576594f8dcd7ae1bb62541cb056b"
+    },
+    {
+      "module": "LaverLowerBounds.FinitePeriods",
+      "path": "LaverLowerBounds/FinitePeriods.lean",
+      "sha256_lf": "479cd143353b70f695f36051e7e97d79491922013c56642ba1a4fa1715dba7de"
+    },
+    {
+      "module": "LaverLowerBounds.Signature",
+      "path": "LaverLowerBounds/Signature.lean",
+      "sha256_lf": "3a1174b64c7c7856c6598ac09a1a5120c9a5dfc8c27410f93c8e8ce2f0ee2b38"
+    },
+    {
+      "module": "LaverLowerBounds.FiniteCapped",
+      "path": "LaverLowerBounds/FiniteCapped.lean",
+      "sha256_lf": "fbdf621130904b4b185e67a41c5b6634ced21943b5319be06bfcf0f13331b7d7"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part000",
+      "path": "LaverLowerBounds/LowProducts/Part000.lean",
+      "sha256_lf": "bcdb5e0153683e955d64e4c08d691ae3df3a424720dd44da811b4a46fcf7bef2"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part001",
+      "path": "LaverLowerBounds/LowProducts/Part001.lean",
+      "sha256_lf": "0be7dd5e4efebb21c9493995816739c0034341f603174819b5fd0cfe8f9d07e3"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part002",
+      "path": "LaverLowerBounds/LowProducts/Part002.lean",
+      "sha256_lf": "cecffd607b380ac8bc80a7a9253c7931ad3c47d25ead4109b2780d8cfca666f4"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part003",
+      "path": "LaverLowerBounds/LowProducts/Part003.lean",
+      "sha256_lf": "da3e9a23cba109cd0aa68fbfb92410565c8c94299fa17457e0a34bb5da7209d5"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part004",
+      "path": "LaverLowerBounds/LowProducts/Part004.lean",
+      "sha256_lf": "f1edf17ffc6887f6d99f8aecefe13fbaef36c4d3bb95f106e412881cf7d91850"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part005",
+      "path": "LaverLowerBounds/LowProducts/Part005.lean",
+      "sha256_lf": "dd2318ab00aa55b96d15ac55dde31d3f67b98a81f4d43857c0c6c39a8637314f"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part006",
+      "path": "LaverLowerBounds/LowProducts/Part006.lean",
+      "sha256_lf": "1c83cd755ec002673e609bab5fb5bf41586f2ac9672570a8c07a75cec9517edf"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part007",
+      "path": "LaverLowerBounds/LowProducts/Part007.lean",
+      "sha256_lf": "526cff2f50d48ededd0f5d60fb4b9cbf642c05209f342d905404e5900e20faf7"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part008",
+      "path": "LaverLowerBounds/LowProducts/Part008.lean",
+      "sha256_lf": "6d5692a77306f209cdbfaf738b0d99bc7c28b52392dcbc2ea6dd1037352ebeb7"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part009",
+      "path": "LaverLowerBounds/LowProducts/Part009.lean",
+      "sha256_lf": "f1d9d1a7fbdc9ecf3e87b6b11ec6bcd236caf141b4c2812d4f30c920952abf57"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part010",
+      "path": "LaverLowerBounds/LowProducts/Part010.lean",
+      "sha256_lf": "534e1dbb40c8ee41075dba7875aba00682f54aabda4f30df6bbb506df8d0401a"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part011",
+      "path": "LaverLowerBounds/LowProducts/Part011.lean",
+      "sha256_lf": "51ebfcf0910b911efa297b7b36ced44c5ce38c0cbb00ac62cd3f83015f219a52"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part012",
+      "path": "LaverLowerBounds/LowProducts/Part012.lean",
+      "sha256_lf": "8987608ee3bdd5ad68a94892daacc61e9e6cfa559658b96fa2d964d4728fe9f5"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part013",
+      "path": "LaverLowerBounds/LowProducts/Part013.lean",
+      "sha256_lf": "8e8104c4ed9ef4a4028f5527535a4c49f9343714a14b1075f915f845b50c8051"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part014",
+      "path": "LaverLowerBounds/LowProducts/Part014.lean",
+      "sha256_lf": "bc6ed0b231c815ac9eb8f6af3e7b77ce567127a3d3d379491985eab694fcda86"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part015",
+      "path": "LaverLowerBounds/LowProducts/Part015.lean",
+      "sha256_lf": "e33ce02cff7403e821b70854b149c0e7bebd2a1efbffa14352f75da83ff5dc1b"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part016",
+      "path": "LaverLowerBounds/LowProducts/Part016.lean",
+      "sha256_lf": "67d02b88dbb8b9144daf034fca87aa0af57a5e98196ed295119afe9b612f20c4"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part017",
+      "path": "LaverLowerBounds/LowProducts/Part017.lean",
+      "sha256_lf": "0ac81e87f758722389bb57f5e834b0c80ddcc02b8a1ac33d936b80fdfb130873"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part018",
+      "path": "LaverLowerBounds/LowProducts/Part018.lean",
+      "sha256_lf": "463141c09432377a5e2135b55ea3e64410ebc01effe034f7d3b40c7b49fdfe21"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part019",
+      "path": "LaverLowerBounds/LowProducts/Part019.lean",
+      "sha256_lf": "1533134494b71da8da5a0fff75ef62ec6d99e75fcd0ecde8cf5e6e3badabee7b"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part020",
+      "path": "LaverLowerBounds/LowProducts/Part020.lean",
+      "sha256_lf": "36cecb1b826f808a6fd01c685e6cbba8ef54db21e15da51bdd24f3a25b6678e8"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part021",
+      "path": "LaverLowerBounds/LowProducts/Part021.lean",
+      "sha256_lf": "3311db9686123095d69e2b54168f259b938c94dc40768c32250a5e5683bd3089"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part022",
+      "path": "LaverLowerBounds/LowProducts/Part022.lean",
+      "sha256_lf": "b0abc8bb3ca468b35cc70e7edc69f6d008d517074ecbe444367b6588233bfaf3"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part023",
+      "path": "LaverLowerBounds/LowProducts/Part023.lean",
+      "sha256_lf": "ba0d898220f856cfbb8c39098e25de7814d1a2a1e1bf19ad251021046a757e52"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part024",
+      "path": "LaverLowerBounds/LowProducts/Part024.lean",
+      "sha256_lf": "0dbe91d3b284f3307be9546ffd6be7c616ff13cea82afe604f093cc1e6b7de63"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part025",
+      "path": "LaverLowerBounds/LowProducts/Part025.lean",
+      "sha256_lf": "114b8015fbb2c42e92e8d7401e38e91dedc0f7126964a8bf52a1a3ecf1900547"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part026",
+      "path": "LaverLowerBounds/LowProducts/Part026.lean",
+      "sha256_lf": "5a95d0817dd10f5d85d665c0ff807c185bcaaeb259637d4b5b20fc7c0de83ef5"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part027",
+      "path": "LaverLowerBounds/LowProducts/Part027.lean",
+      "sha256_lf": "99f9f5f32fda13a480d771583250bcfba15f6c65968ba49dadd01eecd7d785be"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part028",
+      "path": "LaverLowerBounds/LowProducts/Part028.lean",
+      "sha256_lf": "9816e5c32d314def6a7fd0d04c2951c263b24c469d96311b75c565c20e95d3f9"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part029",
+      "path": "LaverLowerBounds/LowProducts/Part029.lean",
+      "sha256_lf": "cdd06875c5cfffb3dc9ccc84628500098ca8f3fdf52c5ac2212b53fda001dea0"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part030",
+      "path": "LaverLowerBounds/LowProducts/Part030.lean",
+      "sha256_lf": "20d22b1991a7e9d4a8b72258488f5591b76b12b034c8ba97d4c7a52bc1c835d9"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part031",
+      "path": "LaverLowerBounds/LowProducts/Part031.lean",
+      "sha256_lf": "e0cbe0b22779b925d658d410d2eee5f3316f5f65b492f4f4da95e052fa2059ff"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part032",
+      "path": "LaverLowerBounds/LowProducts/Part032.lean",
+      "sha256_lf": "b874272fe001425bd067cf5bd2a412b9a75bf1aac15fa148207669a6bf194a8b"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part033",
+      "path": "LaverLowerBounds/LowProducts/Part033.lean",
+      "sha256_lf": "db0b11efccfa7e07e020d64592d5a3763cc35bd5ed7867afbaa967c657bfbd8f"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part034",
+      "path": "LaverLowerBounds/LowProducts/Part034.lean",
+      "sha256_lf": "c65106ceeeb2cff61a6ac77a53908b0a4eb04fdbc4e4ffc8b70518bc8a34740b"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part035",
+      "path": "LaverLowerBounds/LowProducts/Part035.lean",
+      "sha256_lf": "efa638423b4680d87fffece6a2469a9265d65e056b3026f847a28fa3b7875bf5"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part036",
+      "path": "LaverLowerBounds/LowProducts/Part036.lean",
+      "sha256_lf": "75d9c64532bac289ffe6ae10c528fda5952c95aa6997da88f80f6673fd16973b"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part037",
+      "path": "LaverLowerBounds/LowProducts/Part037.lean",
+      "sha256_lf": "0286d2d2614c8ec8c3dc762d69915ba97a61b6cf189288ec9aafde2d19f18be3"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part038",
+      "path": "LaverLowerBounds/LowProducts/Part038.lean",
+      "sha256_lf": "c5f885dc3049e28d2664c96cce3a25aea4a7a2eea057a6384eeddb3509e50ef3"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part039",
+      "path": "LaverLowerBounds/LowProducts/Part039.lean",
+      "sha256_lf": "0d6d25c74fecb88d958dbc5b4fb2e023728583b3abb8e323c353486df7ad5620"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part040",
+      "path": "LaverLowerBounds/LowProducts/Part040.lean",
+      "sha256_lf": "e5e091a5a792cf7fba0dcff25200fd2bdf1c80b149f805fe06c1485f12b06c36"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part041",
+      "path": "LaverLowerBounds/LowProducts/Part041.lean",
+      "sha256_lf": "aedec184874b143ae7a5537c4c34664f9eab94eba218a1129debe0791069677f"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part042",
+      "path": "LaverLowerBounds/LowProducts/Part042.lean",
+      "sha256_lf": "d70e4c3012be638e6e81747adcec37f1d00ea3822bc8cffe864087f8b5afd135"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part043",
+      "path": "LaverLowerBounds/LowProducts/Part043.lean",
+      "sha256_lf": "63a0b51427554c75c2cc7b684e20de1aa4d4634aac711eca9ddff937daae3da7"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part044",
+      "path": "LaverLowerBounds/LowProducts/Part044.lean",
+      "sha256_lf": "8c748f95e553d98273039182e69c22088f9069caa1703a3fed0ef19266fec5f6"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part045",
+      "path": "LaverLowerBounds/LowProducts/Part045.lean",
+      "sha256_lf": "2e09e4843dac873075055ac6c737d6b0e33f5789ce6dae1ef6a4a405acc2a36a"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part046",
+      "path": "LaverLowerBounds/LowProducts/Part046.lean",
+      "sha256_lf": "d58e685577ace673bb9937f3a73701a5fb945201c6b859edd049bd8002e90017"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part047",
+      "path": "LaverLowerBounds/LowProducts/Part047.lean",
+      "sha256_lf": "c2a4b1f9a352c03e9064c27c32e272b4d65c9427ce341a039e9a769967200e08"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part048",
+      "path": "LaverLowerBounds/LowProducts/Part048.lean",
+      "sha256_lf": "c770a6360e05cfa8d23d468b56c2a9a12f59313caed652ac47d28c116af65fcc"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part049",
+      "path": "LaverLowerBounds/LowProducts/Part049.lean",
+      "sha256_lf": "2cb66b4bb1869e313056caee517db5d2cade16bf269234d5e9807cdb7f05e34e"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part050",
+      "path": "LaverLowerBounds/LowProducts/Part050.lean",
+      "sha256_lf": "b8211871add2f2629faaad9dd0d6bc9dabb00fd151db411fe6a7e9d8593910e3"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part051",
+      "path": "LaverLowerBounds/LowProducts/Part051.lean",
+      "sha256_lf": "1fd929ea8a9db9df6ed062e66524037ceaa8654ce0044b8342e16979068565bf"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part052",
+      "path": "LaverLowerBounds/LowProducts/Part052.lean",
+      "sha256_lf": "023492011acb92754804605e7cf9746ec581a59a7ab27b472c28f562c380249f"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part053",
+      "path": "LaverLowerBounds/LowProducts/Part053.lean",
+      "sha256_lf": "65d28536863348280bf41edf4a5a31aae83ec74ac88ea8cc30f012eb72be3f45"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts.Part054",
+      "path": "LaverLowerBounds/LowProducts/Part054.lean",
+      "sha256_lf": "6b80db40c520140ea514f4fa1f41417dfe6f8daa65d6b75c07a6751dd5e16efb"
+    },
+    {
+      "module": "LaverLowerBounds.LowProducts",
+      "path": "LaverLowerBounds/LowProducts.lean",
+      "sha256_lf": "867d4d234a6a6be555542b6dc91749499af19a6eb7eade3fe5e9124826fa8167"
+    },
+    {
+      "module": "LaverLowerBounds.LowConstants",
+      "path": "LaverLowerBounds/LowConstants.lean",
+      "sha256_lf": "ad9979dad1c6227cfbc61dc3b6ed52e4282c70c0f57786f520b692c7e2a5cdb0"
+    },
+    {
+      "module": "LaverLowerBounds.FiniteLines",
+      "path": "LaverLowerBounds/FiniteLines.lean",
+      "sha256_lf": "34c36038cc04172f468bdab0c60a3d0c891b869af803edb65e6442b893434c63"
+    },
+    {
+      "module": "LaverLowerBounds.ShortInitialization",
+      "path": "LaverLowerBounds/ShortInitialization.lean",
+      "sha256_lf": "014d38afe2f03d7c38c508efd915511b37190b39c5983b57492a62d7b14325b2"
+    },
+    {
+      "module": "LaverLowerBounds.FinitePointChain",
+      "path": "LaverLowerBounds/FinitePointChain.lean",
+      "sha256_lf": "83c0433ae6cbb100fdfcca2ce46b16295b770717801aa8c690e618e13aebb313"
+    },
+    {
+      "module": "LaverLowerBounds.ParentShape",
+      "path": "LaverLowerBounds/ParentShape.lean",
+      "sha256_lf": "eedf80e02ca72371a542ffe098475de9f5756f63a60881833c39d5ec620935e0"
+    },
+    {
+      "module": "LaverLowerBounds.BandCopyGeometry",
+      "path": "LaverLowerBounds/BandCopyGeometry.lean",
+      "sha256_lf": "309b0ca80e1d03384e6df6c7bb0a02abf41f4cb6e2f39efabdcdc4d0c6097706"
+    },
+    {
+      "module": "LaverLowerBounds.ParentCopyOrigins",
+      "path": "LaverLowerBounds/ParentCopyOrigins.lean",
+      "sha256_lf": "84044505c565695bc6752c3c2d15a36cb1daae2e9105513d348a769b675b3b4d"
+    },
+    {
+      "module": "LaverLowerBounds.BandBudget",
+      "path": "LaverLowerBounds/BandBudget.lean",
+      "sha256_lf": "7c438041953180deb16ea6779662a283a12316e9b1f78a5fe73e193199c69213"
+    },
+    {
+      "module": "LaverLowerBounds.BandRepresentation",
+      "path": "LaverLowerBounds/BandRepresentation.lean",
+      "sha256_lf": "c2d0d2abd72bad4eba371ab45412b0f8706533a63447aa910b5c0c48e27508c0"
+    },
+    {
+      "module": "LaverLowerBounds.BandTermination",
+      "path": "LaverLowerBounds/BandTermination.lean",
+      "sha256_lf": "c3a82a2444474cccf257f5d7d506562eb348df0c64eaf9a4452a149dfdcc7b28"
+    },
+    {
+      "module": "LaverLowerBounds.ClosedFan",
+      "path": "LaverLowerBounds/ClosedFan.lean",
+      "sha256_lf": "ab9196c8cc2206b1831685b83a5b683a0a0918763676835b61fa4df9efa9d871"
+    },
+    {
+      "module": "LaverLowerBounds.FiniteCongruence",
+      "path": "LaverLowerBounds/FiniteCongruence.lean",
+      "sha256_lf": "de9ee65b8cbc6d6f66bd7273e8b669a746727ae9e7584676dc874a52ece16b0a"
+    },
+    {
+      "module": "LaverLowerBounds.HigherConstants",
+      "path": "LaverLowerBounds/HigherConstants.lean",
+      "sha256_lf": "40cfabacacc83f88dbcb8b6b6acb7e9600e3586bd10cf5017a7319ca3b649675"
+    },
+    {
+      "module": "LaverLowerBounds.FanSeed",
+      "path": "LaverLowerBounds/FanSeed.lean",
+      "sha256_lf": "5f240704ec6b58b73299b76024114c32b774d800de9002561e3e13c67ed2b896"
+    },
+    {
+      "module": "LaverLowerBounds.InitialTerms",
+      "path": "LaverLowerBounds/InitialTerms.lean",
+      "sha256_lf": "e0995b5fb2d269e625227e6c51ce7f991ec1df60474f0fe2ac7d5fa45a441f46"
+    },
+    {
+      "module": "LaverLowerBounds.InitialFan",
+      "path": "LaverLowerBounds/InitialFan.lean",
+      "sha256_lf": "b663002b20d51f3a65db6f28142ebf83bd00ce0c1501fd8da2931722ec073f0a"
+    },
+    {
+      "module": "LaverLowerBounds.InitialWindow",
+      "path": "LaverLowerBounds/InitialWindow.lean",
+      "sha256_lf": "ac9b1ee8b851824ee7c590faa85466e83be278239945343744446c0c5fed4464"
+    },
+    {
+      "module": "LaverLowerBounds.SignatureMovement",
+      "path": "LaverLowerBounds/SignatureMovement.lean",
+      "sha256_lf": "1200f92911c82a32b83699dbc7cefa80864284896e80452e07ee0241757d8cac"
+    },
+    {
+      "module": "LaverLowerBounds.PointInsertion",
+      "path": "LaverLowerBounds/PointInsertion.lean",
+      "sha256_lf": "ba1e3ab785d596b8d099a50313844b4f377a626fc04d46d7043f068308fd0bf8"
+    },
+    {
+      "module": "LaverLowerBounds.FanInsertion",
+      "path": "LaverLowerBounds/FanInsertion.lean",
+      "sha256_lf": "9b308c9f55674a5420cbecd040794076b95ae4f65f042b068b4821b480ed9f21"
+    },
+    {
+      "module": "LaverLowerBounds.FirstFanInsertion",
+      "path": "LaverLowerBounds/FirstFanInsertion.lean",
+      "sha256_lf": "047e134a7daeb67f7d70886fbf7ed9dfd6df654ea9062143b8ab13d83d342f47"
+    },
+    {
+      "module": "LaverLowerBounds.InsertionLowData",
+      "path": "LaverLowerBounds/InsertionLowData.lean",
+      "sha256_lf": "b3ff82689170a4d1cd7172a9016f6986401cebd1dab025b2ca9d0064d2b79d13"
+    },
+    {
+      "module": "LaverLowerBounds.TransportWord",
+      "path": "LaverLowerBounds/TransportWord.lean",
+      "sha256_lf": "620d348a7a7811520c88e4afd9b6dcc6385de7c77e0cf4925380d5ad5aef550e"
+    },
+    {
+      "module": "LaverLowerBounds.InsertionInvariant",
+      "path": "LaverLowerBounds/InsertionInvariant.lean",
+      "sha256_lf": "99fb888d80cac94d56d4550722e0681e077bdd00f7ba216633d39ccafee8db2e"
+    },
+    {
+      "module": "LaverLowerBounds.IteratedFanInsertion",
+      "path": "LaverLowerBounds/IteratedFanInsertion.lean",
+      "sha256_lf": "b21e755c335d0888330cc489ee8ed99f08a639ef79b1ec6fbe737734fdb16cbc"
+    },
+    {
+      "module": "LaverLowerBounds.InsertionBackground",
+      "path": "LaverLowerBounds/InsertionBackground.lean",
+      "sha256_lf": "964a70fc51b6d42fe7e2afd4309f946f4a5dede68303274336201db117725c4d"
+    },
+    {
+      "module": "LaverLowerBounds.BackgroundLowData",
+      "path": "LaverLowerBounds/BackgroundLowData.lean",
+      "sha256_lf": "3388537a9642a011857f41bb62d14354c0fb5a0ba3bbb9ae79384e344f65a50f"
+    },
+    {
+      "module": "LaverLowerBounds.BackgroundInvariant",
+      "path": "LaverLowerBounds/BackgroundInvariant.lean",
+      "sha256_lf": "9bad2ce4bf345d1a027efd347e1c63ecdb082fa1637837f2a3781e3491f1dd28"
+    },
+    {
+      "module": "LaverLowerBounds.BackgroundIteration",
+      "path": "LaverLowerBounds/BackgroundIteration.lean",
+      "sha256_lf": "5781f81485570d203675f58d093b070be8461545e8ba6d83d6c0ce14fe0f6e08"
+    },
+    {
+      "module": "LaverLowerBounds.DyadicBasics",
+      "path": "LaverLowerBounds/DyadicBasics.lean",
+      "sha256_lf": "bceb65c8913c8b5a3c2ac65a6b0ec07aa87379064c0a6cb4353812994f33c85d"
+    },
+    {
+      "module": "LaverLowerBounds.DyadicBounds",
+      "path": "LaverLowerBounds/DyadicBounds.lean",
+      "sha256_lf": "7e9643b2a20d1cdc4c1c5257013bd4dc6adb3ae0a9209a16f71760644053c553"
+    },
+    {
+      "module": "LaverLowerBounds.DyadicStep",
+      "path": "LaverLowerBounds/DyadicStep.lean",
+      "sha256_lf": "ce98e0e8aff144b9c3ca65530abd6ab30b85b194853a5b3bc14696418184342d"
+    },
+    {
+      "module": "LaverLowerBounds.StandardLine",
+      "path": "LaverLowerBounds/StandardLine.lean",
+      "sha256_lf": "cc8e473d3e381b37203008d3d04ffe601fab7a345514c485652037a611a41cc8"
+    },
+    {
+      "module": "LaverLowerBounds.LineShortening",
+      "path": "LaverLowerBounds/LineShortening.lean",
+      "sha256_lf": "a49706ee094fe327fed16e09547d1ace3cf86b315ef79d0565ef68eab5acf30d"
+    },
+    {
+      "module": "LaverLowerBounds.ParentGraph",
+      "path": "LaverLowerBounds/ParentGraph.lean",
+      "sha256_lf": "8da42c35dd52afc649a61e3ebbbf13a793063e422c9876557061f9b89a01a36a"
+    },
+    {
+      "module": "LaverLowerBounds.ParentPreparation",
+      "path": "LaverLowerBounds/ParentPreparation.lean",
+      "sha256_lf": "1a288cdba4bc91e25de61d53d21297cab5c8d4e5289ebfdafe653ac6b73d6ec5"
+    },
+    {
+      "module": "LaverLowerBounds.CoverPreparation",
+      "path": "LaverLowerBounds/CoverPreparation.lean",
+      "sha256_lf": "b7c1d35af3c74a6f86338f668b35230a24c0f41db376228797d60100849c7b13"
+    },
+    {
+      "module": "LaverLowerBounds.ControlAlignment",
+      "path": "LaverLowerBounds/ControlAlignment.lean",
+      "sha256_lf": "4683f6783e6b1395bb62dc107afe455a3309811f715f25876aa0d6c0d3e3f9a2"
+    },
+    {
+      "module": "LaverLowerBounds.ParentCopyGraph",
+      "path": "LaverLowerBounds/ParentCopyGraph.lean",
+      "sha256_lf": "e134609076d7d7a7130d095037b3192a94617efc403027d0ad3731366b1bb316"
+    },
+    {
+      "module": "LaverLowerBounds.GraphEmbedding",
+      "path": "LaverLowerBounds/GraphEmbedding.lean",
+      "sha256_lf": "d844f12b0c58296da4e18558f5a3ae2935a9a88be1e9d6d5dabb9f927aa56b43"
+    },
+    {
+      "module": "LaverLowerBounds.SynchronousCopy",
+      "path": "LaverLowerBounds/SynchronousCopy.lean",
+      "sha256_lf": "38026e388fb69c368544188112f890a4769a96b3b547e6d71f4e1307b23398db"
+    },
+    {
+      "module": "LaverLowerBounds.CoverDescent",
+      "path": "LaverLowerBounds/CoverDescent.lean",
+      "sha256_lf": "4e217a73b6bff1c4c2611f9a13f752c7fe5a68641e2b4d2b70a52aaf23504f83"
+    },
+    {
+      "module": "LaverLowerBounds.DiagonalCover",
+      "path": "LaverLowerBounds/DiagonalCover.lean",
+      "sha256_lf": "3a9afad062c1c796169d320af22b492c440820c2a4017af8140ce07e33618d05"
+    },
+    {
+      "module": "LaverLowerBounds.RowWidthTrade",
+      "path": "LaverLowerBounds/RowWidthTrade.lean",
+      "sha256_lf": "3c8749912089666f4ecb7b5ab9a106572d3d7c4ca7dbb5e335194bbe15085e5a"
+    },
+    {
+      "module": "LaverLowerBounds.TripleCompilerEnvelope",
+      "path": "LaverLowerBounds/TripleCompilerEnvelope.lean",
+      "sha256_lf": "d8719e52aedbf3acc424791ebeef47802f0eebac2f047d726ead87774417931e"
+    },
+    {
+      "module": "LaverLowerBounds.ParentTransforms",
+      "path": "LaverLowerBounds/ParentTransforms.lean",
+      "sha256_lf": "2fe69d1b8ea8c8cc133caeb8a9bd7956f98d9a66c974f2f7f9f72f65f31cec68"
+    },
+    {
+      "module": "LaverLowerBounds.LiftWExpansion",
+      "path": "LaverLowerBounds/LiftWExpansion.lean",
+      "sha256_lf": "7f2df8b3eab58cd7f0cc62f3cd0564d149e0de3d18dd886bbff42ee25b3fa51e"
+    },
+    {
+      "module": "LaverLowerBounds.BlockIndependence",
+      "path": "LaverLowerBounds/BlockIndependence.lean",
+      "sha256_lf": "c2d4df96cc3fdab4052e64de2941cd80eb8d9f4bc8edc2552697b2a9529dbef8"
+    },
+    {
+      "module": "LaverLowerBounds.HierarchyEvaluation",
+      "path": "LaverLowerBounds/HierarchyEvaluation.lean",
+      "sha256_lf": "46b0f60b4fcc20e1fb56ae383a56a72468504b523f84d8b40a2d8d815bf0c001"
+    },
+    {
+      "module": "LaverLowerBounds.BinaryBush",
+      "path": "LaverLowerBounds/BinaryBush.lean",
+      "sha256_lf": "ad9cb4ad107c16e117f08728e39fda16f3fd96c83b858d4ccaecaff59acc7506"
+    },
+    {
+      "module": "LaverLowerBounds.SproutDynamics",
+      "path": "LaverLowerBounds/SproutDynamics.lean",
+      "sha256_lf": "f4c40381bf3a39096192be274f9339f02b5c83324187a74a8c2800709418b236"
+    },
+    {
+      "module": "LaverLowerBounds.SproutForest",
+      "path": "LaverLowerBounds/SproutForest.lean",
+      "sha256_lf": "c08112c8289bc2d7d477d5d5f755a39f2906d2eb3437e3ebadcd981615f5c6d5"
+    },
+    {
+      "module": "LaverLowerBounds.CompletedCopy",
+      "path": "LaverLowerBounds/CompletedCopy.lean",
+      "sha256_lf": "5e9b297d666946fedcd813ebba235934fbb0080cf6ca27f5de9babf7d5021703"
+    },
+    {
+      "module": "LaverLowerBounds.LiveCover",
+      "path": "LaverLowerBounds/LiveCover.lean",
+      "sha256_lf": "a5c9ad3660d287d77da031509784fd61ae2fdca097f968f9cd196f69eca64a5d"
+    },
+    {
+      "module": "LaverLowerBounds.LiveCoverBirth",
+      "path": "LaverLowerBounds/LiveCoverBirth.lean",
+      "sha256_lf": "3517c873fc85d7faa4e0aff2b8eb45f8da500c254b5cdb37c23b2e4b1c70d1fa"
+    },
+    {
+      "module": "LaverLowerBounds.SproutTransport",
+      "path": "LaverLowerBounds/SproutTransport.lean",
+      "sha256_lf": "5c06b62aa86ab922eefd0ee9cb6450eae1d73137d0a7f9aa8b35d730407b32ff"
+    },
+    {
+      "module": "LaverLowerBounds.RepeatedCopies",
+      "path": "LaverLowerBounds/RepeatedCopies.lean",
+      "sha256_lf": "9cdd7f3e960c9c56766d2a811fb31e4962bb28d37a3ca1cc045bcc3ef114f0c3"
+    },
+    {
+      "module": "LaverLowerBounds.SigmaExpansion",
+      "path": "LaverLowerBounds/SigmaExpansion.lean",
+      "sha256_lf": "89b6ab1e7aa0e27e3225c1121f97667d20c58ef5f85dd51afbe8949f800657fa"
+    },
+    {
+      "module": "LaverLowerBounds.SigmaPadding",
+      "path": "LaverLowerBounds/SigmaPadding.lean",
+      "sha256_lf": "fc28c89a68f04602fb679f34150fa6a26de613717702c0b1ae0719d614380161"
+    },
+    {
+      "module": "LaverLowerBounds.SigmaLimitBudget",
+      "path": "LaverLowerBounds/SigmaLimitBudget.lean",
+      "sha256_lf": "ae525af61e6e7654603f524e3e29b2546f4431d4017a13fe3ebf46e6b0bdeafd"
+    },
+    {
+      "module": "LaverLowerBounds.HardySigmaCompiler",
+      "path": "LaverLowerBounds/HardySigmaCompiler.lean",
+      "sha256_lf": "3c9f89dddae95b2d8ea21004a408cb887eb785248a581fc0166cef13010a859f"
+    },
+    {
+      "module": "LaverLowerBounds.FastHardyEquivalence",
+      "path": "LaverLowerBounds/FastHardyEquivalence.lean",
+      "sha256_lf": "3d335f7c95943dd5446a02b8c358cd2ab805d0f24ec5c7b062a2ce0bea2731cd"
+    },
+    {
+      "module": "LaverLowerBounds.DiagonalFGH",
+      "path": "LaverLowerBounds/DiagonalFGH.lean",
+      "sha256_lf": "fba27b3a38617ee69c1ba45665f08f889d221f8d83a301cad1874628e8c26729"
+    },
+    {
+      "module": "LaverLowerBounds.TripleCount",
+      "path": "LaverLowerBounds/TripleCount.lean",
+      "sha256_lf": "eec588d9eec94f98aa4c822cd0b6846f957286337a139bd09fbc3f997ac6b770"
+    },
+    {
+      "module": "LaverLowerBounds.FeedbackWindow",
+      "path": "LaverLowerBounds/FeedbackWindow.lean",
+      "sha256_lf": "6aa0d3d7e85dffc18ba880fc6085e2889dc799c573cf0d046d845b6c8c930881"
+    },
+    {
+      "module": "LaverLowerBounds.FeedbackTemplates",
+      "path": "LaverLowerBounds/FeedbackTemplates.lean",
+      "sha256_lf": "5d04f7749ce8476b443733ec0c1986a7986a161a6f893221375d2965465a6248"
+    },
+    {
+      "module": "LaverLowerBounds.DynamicFeedback",
+      "path": "LaverLowerBounds/DynamicFeedback.lean",
+      "sha256_lf": "c7cd43fcbbabcd24f4a7e9f62449905b46b76c1990c309a95c080263045491eb"
+    },
+    {
+      "module": "LaverLowerBounds.UpperWindow",
+      "path": "LaverLowerBounds/UpperWindow.lean",
+      "sha256_lf": "143e701a1f22b1cd2ddf3a91f4a1dda0af2b65ed46c3c1c579b66ef53cddc35e"
+    },
+    {
+      "module": "LaverLowerBounds.FiniteFeedbackBudget",
+      "path": "LaverLowerBounds/FiniteFeedbackBudget.lean",
+      "sha256_lf": "0ca690d9c212b469556015e493982eade90b7036b4921e40ee09d32d2606757a"
+    },
+    {
+      "module": "LaverLowerBounds.UpperHierarchyEvaluation",
+      "path": "LaverLowerBounds/UpperHierarchyEvaluation.lean",
+      "sha256_lf": "9e57c5c75fa02131405531b5ae0679c2c8a035e5fb0a42b758e41ba83d95eee8"
+    },
+    {
+      "module": "LaverLowerBounds.FiniteFGHBound",
+      "path": "LaverLowerBounds/FiniteFGHBound.lean",
+      "sha256_lf": "f93d49bbd22ebd0148e2b78d7cfc2a2813aa4ca83d3306f38f8ed1741bd189bd"
+    },
+    {
+      "module": "YesMetaZFC.BMS.Reference",
+      "path": "YesMetaZFC/BMS/Reference.lean",
+      "sha256_lf": "d11bf85cae9a5f9dfe95f748f05b352fb298db58ab2c63f7cd53d02cba4abf15"
+    },
+    {
+      "module": "YesMetaZFC.BMS.Array",
+      "path": "YesMetaZFC/BMS/Array.lean",
+      "sha256_lf": "22089646061b7dadfe73e0e1d2914ce971266e99d9a739cd35f3aa16c19cabe6"
+    },
+    {
+      "module": "YesMetaZFC.BMS.Parent",
+      "path": "YesMetaZFC/BMS/Parent.lean",
+      "sha256_lf": "21e99ddac5f5467e6242245be48e945f2517557b75a6c3671c1f9e10fd8013fc"
+    },
+    {
+      "module": "YesMetaZFC.BMS.Ancestor",
+      "path": "YesMetaZFC/BMS/Ancestor.lean",
+      "sha256_lf": "a17a1c64094594c635358b1d7485f048fe0722d35a76f12ed7765da1afa7189e"
+    },
+    {
+      "module": "YesMetaZFC.BMS.Expansion",
+      "path": "YesMetaZFC/BMS/Expansion.lean",
+      "sha256_lf": "407ddedcba505d957b66e25ab01ecffae42c92f6ec3648ea33a081080c97d89d"
+    },
+    {
+      "module": "YesMetaZFC.BMS.Generation",
+      "path": "YesMetaZFC/BMS/Generation.lean",
+      "sha256_lf": "4a9d14f8611a4fe2a73615851fce3d9b911ec2604ac4693927a5f167e64f9575"
+    },
+    {
+      "module": "YesMetaZFC.BMS.Decomposition",
+      "path": "YesMetaZFC/BMS/Decomposition.lean",
+      "sha256_lf": "2d1e1dd7152eca4e89db916e770e4fd337c81af65cc57ad0fcf819142f892fd4"
+    },
+    {
+      "module": "YesMetaZFC.BMS.Lemma25",
+      "path": "YesMetaZFC/BMS/Lemma25.lean",
+      "sha256_lf": "12e5f2963502cb9b3c4bb4b9bb49a117a7996b7dfc99fb46f860d3d0e4bf4db4"
+    },
+    {
+      "module": "LaverLowerBounds.NumericParentBasics",
+      "path": "LaverLowerBounds/NumericParentBasics.lean",
+      "sha256_lf": "c559dd1c4c7067fdfaa49047d64ebdbedb54b5b0353fe61cf971063a282b35b8"
+    },
+    {
+      "module": "LaverLowerBounds.NumericCopyParents",
+      "path": "LaverLowerBounds/NumericCopyParents.lean",
+      "sha256_lf": "071f4ab742c7a96e372570d8040fd569e82f38a1b505dd640eb482af2859c170"
+    },
+    {
+      "module": "LaverLowerBounds.NumericParentEncoding",
+      "path": "LaverLowerBounds/NumericParentEncoding.lean",
+      "sha256_lf": "913936407541fb4fa3f945662423f78ff29b192dc0b1f4c616c25b7a7a227a8e"
+    },
+    {
+      "module": "LaverLowerBounds.NumericExpansionFidelity",
+      "path": "LaverLowerBounds/NumericExpansionFidelity.lean",
+      "sha256_lf": "708404b7a1a97d23e4b016758d3f0bf7cf93809e3db231fd4d94b95b9ff91ddd"
+    },
+    {
+      "module": "LaverLowerBounds.NumericSeedsAndKinds",
+      "path": "LaverLowerBounds/NumericSeedsAndKinds.lean",
+      "sha256_lf": "c13d983174a35174ddca53996993738817100a04c6cfba8a08bcf7424515542d"
+    },
+    {
+      "module": "LaverLowerBounds.NumericFGH",
+      "path": "LaverLowerBounds/NumericFGH.lean",
+      "sha256_lf": "f488730d295dc2415decde858381fa19c66340692d0bfa28bdc53cccf3585a49"
+    },
+    {
+      "module": "LaverLowerBounds.OriginalBMSBound",
+      "path": "LaverLowerBounds/OriginalBMSBound.lean",
+      "sha256_lf": "71fe45590552c03f5897a6d4f8fbce0ba71435d07a80ed84ae3757f783919ffb"
+    },
+    {
+      "module": "LaverLowerBounds",
+      "path": "LaverLowerBounds.lean",
+      "sha256_lf": "82976e0308fef672d7dcecb1e16fc8e53e86ec81effa6e57d75e4b82f362f223"
+    }
+  ]
+}

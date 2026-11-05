@@ -1,0 +1,13 @@
+name = "LaverLowerBounds"
+version = "0.1.0"
+defaultTargets = ["LaverLowerBounds"]
+
+[leanOptions]
+autoImplicit = false
+maxRecDepth = 2048
+
+[[lean_lib]]
+name = "LaverLowerBounds"
+
+[[lean_lib]]
+name = "YesMetaZFC"

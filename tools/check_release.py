@@ -101,7 +101,7 @@ NER_HASHES = {
     'notations/SPD/SPD.ne-rewritten.js': 'd693c23564a766ecbbe3072cd200632c49b490d47d18428e1310ea438e85f266',
 }
 SRPD_ARCHIVE_MANIFEST_SHA256 = '41e9b307324156545e05ce64735681aa7014c1da916608f8e4163a78c2329033'
-LAVER_PUBLICATION_MANIFEST_SHA256 = 'cc244f38a9be6907f2427045f6bb9c88fb8684ce735520be57f9db138133c165'
+LAVER_PUBLICATION_MANIFEST_SHA256 = 'df1cdc1b5f644de3f90279a9ea80882ddd1c0a54ab1dbb8ce3a1f6dcabe88a35'
 LEAN_ROOTS = {
     # SPD and FMP have paper manuscripts, but no Lean certificates. Their addition must
     # neither relabel the existing seven proofs nor weaken their receipt checks.
@@ -163,6 +163,14 @@ def check_laver_bounds_collection():
         manuscripts.add(relative)
     print(f'Laver lower bounds: {len(sources["items"])} pinned source files; '
           f'{len(manuscripts)} registered original-language manuscripts/guides')
+    receipt_check = subprocess.run(
+        [sys.executable, '-B', str(directory / 'lean/verify.py')],
+        text=True, encoding='utf-8', capture_output=True, timeout=15)
+    if receipt_check.returncode:
+        raise ValueError('Laver Lean receipt: ' + receipt_check.stdout + receipt_check.stderr)
+    lean_receipt = json.loads(receipt_check.stdout)
+    print(f'Laver Lean: {lean_receipt["compiled_modules"]} compiled modules; '
+          'exact source, log, and final-axiom receipt integrity checked')
     return manuscripts
 
 

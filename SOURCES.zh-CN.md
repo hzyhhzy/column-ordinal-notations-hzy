@@ -6,6 +6,10 @@
 
 两份规则源与 NER 提交 `c539d8f68c5553da2d681c1251ea443b6b735e62` 相符（忽略换行差异），清单保存哈希和固定版本链接。Hunter 的 BMS 良序论文只引用，不重新分发。历史有限核验收据只统一为 LF 换行，不是新增数学证书。不新增私人 PDF、上游实现、实验套件、记号核心或 Lean 项目；附带收录／完整性检查脚本只核对来源和打包，不给外部材料推定新许可证。
 
+## Laver 下界的 Lean 形式化（2026-11-06）
+
+[laver_table_lower_bounds/lean](laver_table_lower_bounds/lean/README.zh-CN.md) 收录已完成的直接 Lean 证明：原版 BM4 意义下，`q(5) 存在 => q(5) > F_(lim(BMS)+omega+1)(3)`。数学源码只统一为 LF 换行；随附[来源清单](laver_table_lower_bounds/lean/PROVENANCE.json)、源码哈希核验和可移植的限时构建工具。八个有限 BM4 组合模块源自 EgoFakeFantasy/BMS-Well-Ordering-Lean，准确的来源／发布哈希及署名[另行记录](laver_table_lower_bounds/lean/YesMetaZFC/VENDORED.zh-CN.md)。不假定上游抽象良序性或集合论接口。此次形式化不认证归档文稿中的更强下界，也不是对 ZFC 语法推导的内部编码；不为上游材料新增许可授权。
+
 ## Laver 下界证明整理（2026-10-18）
 
 [laver_table_lower_bounds](laver_table_lower_bounds/README.zh-CN.md)收录本次指定的三条研究路线及实际局部证明依赖。清单记录原稿与整理版哈希、链接迁移、旧固定输入段落的省略行号；三篇主文明确推导自然输入版本。仓库外原研究文件不变。固定随附用户提供的原版 IBLP 核心及本地 BMS 父表参考，供有限重放；没有导入外部 PDF 或增加 Lean 定理。出处及版本边界见[文献表](laver_table_lower_bounds/BIBLIOGRAPHY.md)。

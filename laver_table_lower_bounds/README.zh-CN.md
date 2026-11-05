@@ -1,6 +1,17 @@
 # Laver 表 q(5) 下界：三条证明链 · [English](README.md)
 
-本目录整理三组已有纸面结果及其实际依赖。$q(5)$ 是普通二元 Laver 表首行周期首次达到 32 的**阶参数**，相应表有 $2^{q(5)}$ 个元素。所有 Laver 端论证使用 **ZFC + I3** 和同一生成元的 $\operatorname{Iter}(j)$；尚未 Lean 形式化。
+本目录整理三组已有纸面结果及其实际依赖。$q(5)$ 是普通二元 Laver 表首行周期首次达到 32 的**阶参数**，相应表有 $2^{q(5)}$ 个元素。原纸面路线使用 **ZFC + I3** 和同一生成元的 $\operatorname{Iter}(j)$；下方新增的独立 Lean 项目已认证一个不依赖 I3 的条件下界。
+
+## 新增 Lean 结果（2026-11-06）
+
+$$
+q(5)\downarrow\ \Longrightarrow\ q(5)>F_{\Lambda+\omega+1}(3),\qquad
+\Lambda=\lim(\mathrm{BMS}).
+$$
+
+[独立 Lean 4.33.1 项目](lean/README.zh-CN.md)包含[最终定理](lean/LaverLowerBounds/OriginalBMSBound.lean)、数值版 BM4 与父表算法的精确展开等价、实际有限 FGH 求值、可移植编译命令及 [152 模块验证收据](lean/verification/VERIFICATION.json)。公理审计仅含 `propext`、`Classical.choice`、`Quot.sound`；不假设 I3 或全体 BMS 良序性。
+
+**范围：** 输入 `3`，序数层级 `Lambda+omega+1`，采用 Lean 通常基础。没有另行编码 ZFC 对象语言推导，不证明 `q(5)` 存在，也不认证下方更大输入、指数塔或 IBLP 的纸面结论。定理量化任意满足定义方程的有限表族；完整约定和范围见[项目 README](lean/README.zh-CN.md)。
 
 主文把旧的任意固定大输入换成原证明自己产生的参数，给出替换后的数值推导。
 

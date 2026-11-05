@@ -1,11 +1,12 @@
 {
   "status": "PASS",
   "proof_certification": false,
+  "edition": "2026-11-06-laver-lean",
   "scope": "hashes, portable links, literal source identities, bounded mark invariants, one-row index convention",
   "checks": {
     "pinned_files": 100,
-    "markdown_files": 77,
-    "local_links": 423,
+    "markdown_files": 81,
+    "local_links": 484,
     "root_identities": 2,
     "exact_tower_terms": 6,
     "small_two_step_entries": 25,
@@ -15,7 +16,7 @@
   "basic_steps": 53,
   "peak_rows": 94,
   "peak_fields": 1021,
-  "seconds": 0.512561,
+  "seconds": 0.907,
   "limits": {
     "seconds": 15,
     "basic_steps": 400,
@@ -28,5 +29,10 @@
   "proof_manuscripts": 98,
   "large_hierarchy_evaluations": 0,
   "laver_tables_constructed": 0,
-  "edition": "2026-10-18-natural-inputs"
+  "lean_receipt_integrity": {
+    "status": "PASS",
+    "compiled_modules": 152,
+    "pinned_import_files": 160,
+    "scope": "published Lean source/log/axiom receipt integrity; no recompilation"
+  }
 }
