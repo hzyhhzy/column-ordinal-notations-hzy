@@ -2,18 +2,22 @@
 
 Assume ZFC + I3 and retain the notation of the [common entrance](endpoints.md). We construct an actual realization of the ordinary 25-row BLP $P_{25}$ with endpoint exactly $\xi$. Thus, if $\xi=\gamma_r$,
 
+**Equation (1)**
+
 $$
-\boxed{r\ge2^{f(P_{25},8)},\qquad
-r\ge2^{\Psi^{\circ4}(8)},\quad \Psi(m)=f(p_{\rm init},m).}
-\tag{1}
+\boxed{\begin{gathered}
+r\ge2^{f(P_{25},8)},\\
+r\ge2^{\Psi^{\circ4}(8)},\qquad\Psi(m)=f(p_{\rm init},m).
+\end{gathered}}
 $$
 
 These are independent bounds, not an assertion that $f(P_{25},8)=\Psi^{\circ4}(8)$. The common entrance proves
 
+**Equation (2)**
+
 $$
 \xi=((J_{11}(J_3))(J_7))(\kappa_2)
 <\eta<J_{13}(\gamma_{16})<J_{11}(\kappa_3).
-\tag{2}
 $$
 
 Ordinary BLPs, BLSs, $f$, and linedness use [Qi v5, Section 2](https://arxiv.org/html/2501.06733v5#S2). We give witnesses for every row rather than inferring realizability from a pattern's shape or row count.
@@ -42,11 +46,12 @@ $$
 
 Consequently $H(\kappa_1)=\chi$. Also
 
+**Equation (3)**
+
 $$
 H(\kappa_0)=\mu,\qquad
 H(\mu)=T(\kappa_2),\qquad
 H(T(\kappa_2))=T(\kappa_3).
-\tag{3}
 $$
 
 All subsequent stages use this $T$, with endpoint $T(\mu)=\xi<\Sigma$, rather than the higher-ending $q(J_{10})$.
@@ -56,8 +61,10 @@ All subsequent stages use this $T$, with endpoint $T(\mu)=\xi<\Sigma$, rather th
 Set
 
 $$
-D_4=J_{14},\quad D_{16}=J_{65534},\qquad
+\begin{gathered}
+D_4=J_{14},\qquad D_{16}=J_{65534},\\
 R_0=j,\quad R_1=D_4(j),\quad R_2=D_{16}(j),\quad R_3=D_{16}(R_1).
+\end{gathered}
 $$
 
 [Dougherty II, Theorem 7.2(c) and Lemma 7.1](https://arxiv.org/pdf/math/9503204) provide the required finite scaling:
@@ -86,16 +93,19 @@ Strict increase gives the opposite constraint $h_i(1)\ge s_i+1$, so $R_i(\kappa_
 
 We also need a finite-quotient fact: if $u(\gamma_0)=v(\gamma_0)=\gamma_s$, then $u\equiv_{\gamma_{s+1}}v$. Indeed, $\operatorname{crit}(u(j))=\gamma_s$, so its residue in $P_{s+1}$ is $2^s$. Right multiplication by the generator adds one modulo $2^{s+1}$; hence the residue of $u$ is $2^s-1$, and likewise for $v$. Ordinary composition is allowed because the quotient correspondence in [Dougherty II, Theorem 2.6](https://arxiv.org/pdf/math/9503204) includes the two-operation algebra $P_j$. It follows that
 
+**Equation (4)**
+
 $$
 R_i\equiv_{\gamma_{s_i+1}}R_{i-1}^{\circ3}\qquad(1\le i\le3).
-\tag{4}
 $$
 
 Let $H_i=T(R_i)$ and define
 
 $$
-a_i=H_i(\kappa_0)=T(\gamma_{s_i}),\quad b_i=H_i(\kappa_1),\quad
+\begin{gathered}
+a_i=H_i(\kappa_0)=T(\gamma_{s_i}),\qquad b_i=H_i(\kappa_1),\\
 c_i=H_i(a_i),\quad d_i=H_i(b_i),\quad e_i=H_i(c_i).
+\end{gathered}
 $$
 
 Then $c_i=T(\gamma_{2s_i})$, $e_i=T(\gamma_{4s_i})$, and
@@ -108,9 +118,10 @@ Transport (4) along $T$. The strict guard
 $b_i=H_i(\kappa_1)<H_i(\mu)=T(\gamma_{s_i+1})$
 allows the reading
 
+**Equation (5)**
+
 $$
 b_i=H_{i-1}^{\circ3}(\kappa_1).
-\tag{5}
 $$
 
 ## 3. Exact low bridges for every stage

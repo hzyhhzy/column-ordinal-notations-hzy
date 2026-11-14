@@ -398,5 +398,37 @@
     "bytes": 741189,
     "sha256": "302f4245fece958f9fd2cbc105d12f8387dd6a38091c10529d5933a058b461b9",
     "warnings": []
+  },
+  {
+    "source": "laver_table_lower_bounds/lower_endpoints/README.zh-CN.md",
+    "pdf": "laver_table_lower_bounds/lower_endpoints/README.zh-CN.pdf",
+    "pages": 1,
+    "bytes": 379758,
+    "sha256": "27a7dc9df1bbf7ff16fb3e30dd1f19f7dad96e48cf9fa9095b9476965912ba85",
+    "warnings": []
+  },
+  {
+    "source": "laver_table_lower_bounds/lower_endpoints/endpoints.zh-CN.md",
+    "pdf": "laver_table_lower_bounds/lower_endpoints/endpoints.zh-CN.pdf",
+    "pages": 3,
+    "bytes": 1137038,
+    "sha256": "9ccfc611248d2eb555bf9f623859e9a2c4060ebed57a73ea3227b09ce13e727d",
+    "warnings": []
+  },
+  {
+    "source": "laver_table_lower_bounds/lower_endpoints/blp.zh-CN.md",
+    "pdf": "laver_table_lower_bounds/lower_endpoints/blp.zh-CN.pdf",
+    "pages": 4,
+    "bytes": 1241248,
+    "sha256": "e6d53e3814fa175caf375d60df636f8377de9af024fe4d9977d965fb44e5c845",
+    "warnings": []
+  },
+  {
+    "source": "laver_table_lower_bounds/lower_endpoints/bms.zh-CN.md",
+    "pdf": "laver_table_lower_bounds/lower_endpoints/bms.zh-CN.pdf",
+    "pages": 5,
+    "bytes": 1619552,
+    "sha256": "666c0f4c745f79cb694edb6cec0014f3f5c98920d204c98fb8e33955802fc892",
+    "warnings": []
   }
 ]

@@ -9,16 +9,18 @@ $$
 
 其中 $I$ 及基本列固定为仓库的[原版 IBLP](../code/iblp_original.py)，$[1]^8$ 表示连续八次操作。本篇证明
 
+**式 (1)**
+
 $$
 \boxed{s>F_{C[6]}(M-1)+1,\qquad M=\mathcal Q(8)\ge2048}
-\tag{1}
 $$
 
 特别有 $s>F_{C[6]}(2047)$、$s>F_C(6)$。$\mathcal Q$ 在第 4 节由快 BMS 算子独立定义，不以 $s$ 为参数。共同入口已证明
 
+**式 (2)**
+
 $$
 \eta<J_{13}(\gamma_{16})<J_{11}(\kappa_3).
-\tag{2}
 $$
 
 证明复用已有的相对 BMS 编译和全类型数值比较；新端点的实际入口、严格上确界及类型接缝在下面重新核查。只知道一个较高端点有下界，并不足以推出 (1)。
@@ -46,12 +48,15 @@ $$
 
 因此 $k\equiv_\xi g\circ g$。对于 $z<\mu$，$k(z)<k(\mu)=\xi$ 是严格守卫，故
 
+**式 (3)**
+
 $$
 k(z)=g(g(z)),\qquad v:=k(<\mu)=(g\circ g)(<\mu).
-\tag{3}
 $$
 
 令 $s_1=j(<\kappa_1)$、$s_2=j(<\kappa_2)$。所需源点严格链为
+
+**式 (4)**
 
 $$
 \begin{aligned}
@@ -60,15 +65,15 @@ J_7(s_1)&=J_8(<\kappa_3)>J_8(s_2)
 &=J_{10}(<\kappa_2)>J_{10}(s_1)
 =J_{11}(<\kappa_2)>J_{11}(s_1).
 \end{aligned}
-\tag{4}
 $$
 
 这些是 [Dougherty I，印刷页 22–24](https://arxiv.org/pdf/math/9205202#page=22) 的小项及上确界关系。$q$ 固定 $s_1$，$e$ 固定 $s_1,\kappa_1,\mu$，所以
 
 $$
-g(<\kappa_1)=x(<\kappa_1)=s_1,\quad
-x(\kappa_1)=J(\kappa_1)=\mu,\quad
-v=J(s_1),\quad J(<\mu)=x(s_1).
+\begin{gathered}
+g(<\kappa_1)=x(<\kappa_1)=s_1,\quad x(\kappa_1)=J(\kappa_1)=\mu,\\
+v=J(s_1),\qquad J(<\mu)=x(s_1).
+\end{gathered}
 $$
 
 因为 $s_1<\mu$ 且 $\mu$ 为极限序数，
@@ -94,9 +99,10 @@ $$
 
 综上得到关键的严格界
 
+**式 (5)**
+
 $$
 \boxed{k^2(k(<\mu))<\eta.}
-\tag{5}
 $$
 
 ## 2. 全部有限输出共用的严格上界
@@ -106,6 +112,7 @@ $$
 $$
 b=k(g),\quad c=k(b),\quad d=c(k),\quad e_1=d(g),\quad f=e_1(k),
 $$
+
 $$
 A=c(d),\quad V=c(e_1),\quad Q=A(k),\qquad
 t=k(\chi),\quad a=k(\xi),\quad c_{\rm out}=k(t).
@@ -126,9 +133,10 @@ $$
 
 生成临界点 $a$ 是正则基数；$\xi<a=k(\xi)$ 给 $k(<\xi)<a$。在实际像 $a=c^2(\xi)$ 处使用上确界协变，
 
+**式 (6)**
+
 $$
 \boxed{A(<a)=c^2(k(<\xi))<c^2(<a)=k^2(v)<\eta.}
-\tag{6}
 $$
 
 这是对所有 $z<a$ 的统一控制。没有假设 $A(a)<\Sigma$，也没有把 $q\equiv_\Sigma q_{\rm old}$ 当作全局相等。
@@ -192,10 +200,11 @@ $V:\mu\mapsto\chi\mapsto a\mapsto c_{\rm out}$。完整环境表为
 
 前六行的闭输出均由 (6) 严格小于 $\eta$。最后一行处理每一个实际封口 $C_0<a$：
 
+**式 (7)**
+
 $$
 Q(C_0)<Q(<a)=A(v),\qquad
 Z(Q(C_0))<Z(A(v))=A(T_*(v))<\eta.
-\tag{7}
 $$
 
 没有将普通复合与上确界无条件交换为等号。
@@ -218,6 +227,8 @@ $$
 
 以下应用从左结合：
 
+**式 (8)**
+
 $$
 \begin{aligned}
 \mathsf T&=\mathsf D_5(\mathsf D_4)(\mathsf D_3)(\mathsf D_2)(\mathsf D_1),\\
@@ -226,21 +237,23 @@ $$
 \mathcal Q=\mathsf U(\mathsf U(f_0)),\\
 M&=\mathcal Q(8),\qquad Y=\mathsf W(\mathsf S)(f_0)(8).
 \end{aligned}
-\tag{8}
 $$
 
 这些自然数不以 $\eta$ 的谱索引为参数。原塔证明的全类型比较给出
+
+**式 (9)**
 
 $$
 \mathsf W(\mathsf S)\ge\mathsf U^4,\qquad
 \mathsf U\ge\mathsf S,\qquad
 \mathcal Q\ge_3 H_{C[7]}.
-\tag{9}
 $$
 
 $\ge_3$ 量化所有最终输入至少 3，以及所有适用的低类型实参。它来自安全类的准确 BMS 覆盖、尾局部性与实际种子下降路径，不是由序型大小猜测函数大小。整个对象的四倍余量及传递见[低层数值比较](../proofs/scratch/iblp030-8h-20261015/hardy-root-low-stack-numeric.txt)。
 
 由 $\mathcal Q\ge f_0$，$M\ge f_0(8)=2048$。强前缀增长给
+
+**式 (10)**
 
 $$
 \begin{aligned}
@@ -250,14 +263,14 @@ Y&\ge\mathsf U^4(f_0)(8)
 &\ge\mathcal Q(\mathcal Q(8))
 =\mathcal Q(M)\ge H_{C[7]}(M).
 \end{aligned}
-\tag{10}
 $$
 
 第 3 节的实际合同将共同入口的 8-line 送到末点不超过 $\eta$ 的实际 $Y$-line。用 [Qi，Lemma 2.5](https://arxiv.org/html/2501.06733v5#S2) 的临界计数，
 
+**式 (11)**
+
 $$
 \boxed{\gamma_{2^Y}\le\eta=\gamma_s<\Sigma,\qquad s\ge2^Y.}
-\tag{11}
 $$
 
 因此下界已经在 $\eta$ 成立，而不只是借用较宽松的 $\Sigma$。
@@ -277,11 +290,12 @@ $H_{C[7]}(y)=G_{C[6]}^h(y)$，其中 $G$ 的后继迭代次数为 $y$。
 
 [跨输入比较，第 2–4 节](../proofs/scratch/iblp-I-to-I0-20261016/port-FGH-existing-bound-C6.txt)对该闭语法类证明
 
+**式 (12)**
+
 $$
 x\ge2,\quad y\ge x+1
 \quad\Longrightarrow\quad
 G_P^h(y)\ge F_P(x)+1.
-\tag{12}
 $$
 
 证明同时量化所有 $x,y$：后继步配对两条迭代轨道，保持数值差至少 1；极限步用准确的字面前缀 $P[x]\preceq P[y]$ 及同输入前缀比较。前缀性质包括冻结扫描及 marks；没有假设任意 FGH 或 Hardy 的输入、下标单调性。终止基础来自[原版安全类和第一根闭语法](../PROOF_DEPENDENCIES.zh-CN.md)第 3 节的完整依赖。
@@ -289,9 +303,11 @@ $$
 在 (12) 分别取 $(x,y)=(M-1,M)$、$(2047,M)$、$(6,M)$，结合 (10)、(11)，得
 
 $$
-\boxed{s>F_{C[6]}(M-1)+1,\qquad
-s>F_{C[6]}(2047),\qquad
-s>F_{C[6]}(6)=F_C(6).}
+\boxed{\begin{gathered}
+s>F_{C[6]}(M-1)+1,\\
+s>F_{C[6]}(2047),\\
+s>F_{C[6]}(6)=F_C(6).
+\end{gathered}}
 $$
 
 最后等式只用固定极限规则 $F_C(6)=F_{C[6]}(6)$。

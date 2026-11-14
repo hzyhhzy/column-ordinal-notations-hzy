@@ -9,16 +9,18 @@ $$
 
 where $I$ and its fundamental sequences are the repository's fixed [original IBLP](../code/iblp_original.py), and $[1]^8$ means eight successive operations. We prove
 
+**Equation (1)**
+
 $$
 \boxed{s>F_{C[6]}(M-1)+1,\qquad M=\mathcal Q(8)\ge2048}
-\tag{1}
 $$
 
 In particular $s>F_{C[6]}(2047)$ and $s>F_C(6)$. Section 4 defines $\mathcal Q$ independently using fast BMS operators, without $s$ as a parameter. The common entrance proves
 
+**Equation (2)**
+
 $$
 \eta<J_{13}(\gamma_{16})<J_{11}(\kappa_3).
-\tag{2}
 $$
 
 The argument reuses the existing relative BMS compiler and whole-type numerical comparisons. The new entrance, strict supremum bound, and type seams are checked below. A bound at a higher endpoint alone would not imply (1).
@@ -46,12 +48,15 @@ $$
 
 Thus $k\equiv_\xi g\circ g$. For $z<\mu$, the strict guard is $k(z)<k(\mu)=\xi$, so
 
+**Equation (3)**
+
 $$
 k(z)=g(g(z)),\qquad v:=k(<\mu)=(g\circ g)(<\mu).
-\tag{3}
 $$
 
 Let $s_1=j(<\kappa_1)$ and $s_2=j(<\kappa_2)$. The required strict source chain is
+
+**Equation (4)**
 
 $$
 \begin{aligned}
@@ -60,15 +65,15 @@ J_7(s_1)&=J_8(<\kappa_3)>J_8(s_2)
 &=J_{10}(<\kappa_2)>J_{10}(s_1)
 =J_{11}(<\kappa_2)>J_{11}(s_1).
 \end{aligned}
-\tag{4}
 $$
 
 These are the small-term and supremum identities of [Dougherty I, printed pages 22–24](https://arxiv.org/pdf/math/9205202#page=22). The embedding $q$ fixes $s_1$, and $e$ fixes $s_1,\kappa_1,\mu$. Consequently
 
 $$
-g(<\kappa_1)=x(<\kappa_1)=s_1,\quad
-x(\kappa_1)=J(\kappa_1)=\mu,\quad
-v=J(s_1),\quad J(<\mu)=x(s_1).
+\begin{gathered}
+g(<\kappa_1)=x(<\kappa_1)=s_1,\quad x(\kappa_1)=J(\kappa_1)=\mu,\\
+v=J(s_1),\qquad J(<\mu)=x(s_1).
+\end{gathered}
 $$
 
 Since $s_1<\mu$ and $\mu$ is a limit ordinal, $k(s_1)<v=J(s_1)<x(s_1)$. Hereafter $k^2$ denotes ordinary composition $k\circ k$. Using $k\circ J=J\circ g$, $J=x(x)$, and $k(s_1)=g^2(s_1)$,
@@ -93,9 +98,10 @@ $$
 
 Therefore
 
+**Equation (5)**
+
 $$
 \boxed{k^2(k(<\mu))<\eta.}
-\tag{5}
 $$
 
 ## 2. A uniform strict bound for all finite outputs
@@ -105,6 +111,7 @@ Define actual application terms
 $$
 b=k(g),\quad c=k(b),\quad d=c(k),\quad e_1=d(g),\quad f=e_1(k),
 $$
+
 $$
 A=c(d),\quad V=c(e_1),\quad Q=A(k),\qquad
 t=k(\chi),\quad a=k(\xi),\quad c_{\rm out}=k(t).
@@ -125,9 +132,10 @@ $$
 
 The generated critical point $a$ is regular. Since $\xi<a=k(\xi)$, we have $k(<\xi)<a$. Supremum covariance at the actual image $a=c^2(\xi)$ yields
 
+**Equation (6)**
+
 $$
 \boxed{A(<a)=c^2(k(<\xi))<c^2(<a)=k^2(v)<\eta.}
-\tag{6}
 $$
 
 This uniformly controls every $z<a$. It assumes neither $A(a)<\Sigma$ nor global equality in place of $q\equiv_\Sigma q_{\rm old}$.
@@ -191,10 +199,11 @@ and $V:\mu\mapsto\chi\mapsto a\mapsto c_{\rm out}$. The full interface table is
 
 The first six closed outputs are strictly below $\eta$ by (6). For the last row, handle each actual closure $C_0<a$:
 
+**Equation (7)**
+
 $$
 Q(C_0)<Q(<a)=A(v),\qquad
 Z(Q(C_0))<Z(A(v))=A(T_*(v))<\eta.
-\tag{7}
 $$
 
 Ordinary composition is not unconditionally interchanged with a supremum.
@@ -217,6 +226,8 @@ $$
 
 Application below is left-associated:
 
+**Equation (8)**
+
 $$
 \begin{aligned}
 \mathsf T&=\mathsf D_5(\mathsf D_4)(\mathsf D_3)(\mathsf D_2)(\mathsf D_1),\\
@@ -225,21 +236,23 @@ $$
 \mathcal Q=\mathsf U(\mathsf U(f_0)),\\
 M&=\mathcal Q(8),\qquad Y=\mathsf W(\mathsf S)(f_0)(8).
 \end{aligned}
-\tag{8}
 $$
 
 These integers do not depend on the spectrum index of $\eta$. The whole-type comparisons in the original tower paper give
+
+**Equation (9)**
 
 $$
 \mathsf W(\mathsf S)\ge\mathsf U^4,\qquad
 \mathsf U\ge\mathsf S,\qquad
 \mathcal Q\ge_3 H_{C[7]}.
-\tag{9}
 $$
 
 Here $\ge_3$ quantifies over all final inputs at least 3 and all applicable lower-type arguments. It follows from exact safe-class BMS covers, tail locality, and explicit seed descent paths, not an inference from ordinal size. Whole-object fourfold slack and its propagation are proved in the [low-stack numerical comparison](../proofs/scratch/iblp030-8h-20261015/hardy-root-low-stack-numeric.txt).
 
 Since $\mathcal Q\ge f_0$, we have $M\ge f_0(8)=2048$. Strong prefix growth gives
+
+**Equation (10)**
 
 $$
 \begin{aligned}
@@ -249,14 +262,14 @@ Y&\ge\mathsf U^4(f_0)(8)
 &\ge\mathcal Q(\mathcal Q(8))
 =\mathcal Q(M)\ge H_{C[7]}(M).
 \end{aligned}
-\tag{10}
 $$
 
 Section 3 turns the common entrance's 8-line into an actual $Y$-line with endpoint at most $\eta$. Critical counting from [Qi, Lemma 2.5](https://arxiv.org/html/2501.06733v5#S2) gives
 
+**Equation (11)**
+
 $$
 \boxed{\gamma_{2^Y}\le\eta=\gamma_s<\Sigma,\qquad s\ge2^Y.}
-\tag{11}
 $$
 
 Thus the bound holds at $\eta$ itself, not merely at the looser $\Sigma$.
@@ -275,11 +288,12 @@ Hardy has empty value $n$, increments the argument at successors, and takes the 
 
 The [cross-input comparison, Sections 2–4](../proofs/scratch/iblp-I-to-I0-20261016/port-FGH-existing-bound-C6.txt) proves for this closed grammar that
 
+**Equation (12)**
+
 $$
 x\ge2,\quad y\ge x+1
 \quad\Longrightarrow\quad
 G_P^h(y)\ge F_P(x)+1.
-\tag{12}
 $$
 
 The induction simultaneously quantifies over all $x,y$. Successors pair the two iteration trajectories, preserving a numerical difference of at least one. Limits use the exact literal prefix $P[x]\preceq P[y]$ and same-input prefix domination. Prefix preservation includes the frozen scan and marks. Arbitrary input or ordinal-index monotonicity of FGH or Hardy is not assumed. Termination rests on the original safe class and first-root closed grammar, with the full dependencies in [Section 3 of the repository's dependency index](../PROOF_DEPENDENCIES.zh-CN.md).
@@ -287,9 +301,11 @@ The induction simultaneously quantifies over all $x,y$. Successors pair the two 
 Apply (12) with $(x,y)=(M-1,M)$, $(2047,M)$, and $(6,M)$. Equations (10), (11) yield
 
 $$
-\boxed{s>F_{C[6]}(M-1)+1,\qquad
-s>F_{C[6]}(2047),\qquad
-s>F_{C[6]}(6)=F_C(6).}
+\boxed{\begin{gathered}
+s>F_{C[6]}(M-1)+1,\\
+s>F_{C[6]}(2047),\\
+s>F_{C[6]}(6)=F_C(6).
+\end{gathered}}
 $$
 
 The final equality uses only the fixed limit clause $F_C(6)=F_{C[6]}(6)$.

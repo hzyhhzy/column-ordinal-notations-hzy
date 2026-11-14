@@ -1,5 +1,7 @@
 # 较小端点的 BLP 与 BMS 下界 · [English](README.md)
 
+中文版 PDF：[总览](README.zh-CN.pdf) · [共同入口](endpoints.zh-CN.pdf) · [BLP 证明](blp.zh-CN.pdf) · [BMS 证明](bms.zh-CN.pdf)。
+
 本组整理 2026-11-09 的两条纸面证明，整理日期为 **2026-11-14**。假设 **ZFC + I3**，始终使用同一个生成元 $j$ 的 $\operatorname{Iter}(j)$。这是纸面证明，不是新增的 Lean 认证，也没有把假设降为仅“有限表的某个表项非零”。
 
 令 $J_1=j$、$J_{n+1}=J_n(j)$。嵌入之间的括号表示 application，并从左结合；$\circ$ 才表示普通复合。$\gamma_n$ 是生成临界点的递增枚举，特别有
@@ -26,10 +28,18 @@ $$
 \boxed{J_{11}(\gamma_3)<\xi<\eta<\Sigma<\Theta.}
 $$
 
-| 路线 | 较小端点上的结论 | 完整正文 |
-|---|---|---|
-| 普通 BLP | $r\ge 2^{f(P_{25},8)}$；独立地，$r\ge 2^{\Psi^{\circ4}(8)}$，$\Psi(m)=f(p_{\rm init},m)$ | [25 行图案及全部实际行边](blp.zh-CN.md) |
-| 相对 BMS 六类型构造 | $s\ge2^Y$，$Y\ge H_{C[7]}(M)$，$M=\mathcal Q(8)\ge2048$；从而 $s>F_{C[6]}(M-1)+1$，特别 $s>F_{C[6]}(2047)$ | [严格上确界、类型接口及数值比较](bms.zh-CN.md) |
+**普通 BLP**
+
+$r\ge 2^{f(P_{25},8)}$；独立地，$r\ge 2^{\Psi^{\circ4}(8)}$，$\Psi(m)=f(p_{\rm init},m)$
+
+[25 行图案及全部实际行边](blp.zh-CN.md)
+
+**相对 BMS 六类型构造**
+
+$s\ge2^Y$，$Y\ge H_{C[7]}(M)$，$M=\mathcal Q(8)\ge2048$；从而 $s>F_{C[6]}(M-1)+1$，特别 $s>F_{C[6]}(2047)$
+
+[严格上确界、类型接口及数值比较](bms.zh-CN.md)
+
 
 普通 BLP 的 $P_{25}$ 是四份七行 $p_{\rm init}$ 首尾拼接，行数为 $7+6+6+6$。BMS 结果中的 $C=I[0][2][1]^8$ 使用固定原版 IBLP 的基本列；$C[6]$ 的 24 行与这个 25 行 BLP 不是同一个图案。$C[6]$ 的准确秩按 $\alpha_1=\Lambda=\lim(\mathrm{BMS})$、$\alpha_{n+1}=\Lambda\omega^{\alpha_n}$ 定义，为 $\alpha_6$；函数值的比较依赖指定基本列，不能只凭序型名称替换。
 

@@ -14,7 +14,8 @@
     "Common strict endpoint comparisons proved separately before either construction.",
     "Preserve distinct xi and eta endpoints, non-strict index inequalities there, and natural input Q(8).",
     "Reuse only explicitly linked public and already collected mathematical dependencies.",
-    "Original scratch paths identify provenance only; they are not reader dependencies."
+    "Original scratch paths identify provenance only; they are not reader dependencies.",
+    "Formatting edition: equation numbers are ordinary Markdown labels; long equations use explicit line breaks; adjacent displays are separate blocks; the overview presents each bound outside narrow table cells. The mathematical token sequence and equation numbering of all eight documents are unchanged."
   ],
   "sources": [
     {
@@ -41,36 +42,77 @@
   "packaged_documents": [
     {
       "path": "blp.md",
-      "sha256_lf": "2ef74ac6bed342e7579c6178e269a6f5f2c9bf684c9d42f457041aea10ba2fda"
+      "sha256_lf": "01442767018d4ac34d905c35a94e6807ea15b47e2a3edb51498e8b7762cb2abd"
     },
     {
       "path": "blp.zh-CN.md",
-      "sha256_lf": "b3f83bf10054774ac42501ac12e7dd9e6bf8a746f4f09f773be6c8c19c21f5a8"
+      "sha256_lf": "84560614e8d0cd3ea73b34828b5bb04ca439a4ed04a673073b939b246600b7f3"
     },
     {
       "path": "bms.md",
-      "sha256_lf": "32198fbe8a384a802dd060af46f29037a7e41ecc22894a48727ec0e72a106f31"
+      "sha256_lf": "c43c1dd89e4d1a0a31657d6e1c7a3eb0e6952b595f3823c5ebd4c551b78fc904"
     },
     {
       "path": "bms.zh-CN.md",
-      "sha256_lf": "bc6c49509c4bcac2eec33e12af75b3561f12df47fd322d2edacb3624d0583b5e"
+      "sha256_lf": "0a257d7d57fedace673c5bdde007e50c0cb2935bf9f4ca36a3b2927d323fd63e"
     },
     {
       "path": "endpoints.md",
-      "sha256_lf": "912c98550a51e3cca5911ceed344754af2056d9fa5d75211e96f532218f52664"
+      "sha256_lf": "44cdfd69676c348db7a03a734ba1f9ac96fdfb00c49b0c4042b41994e1fbc0fb"
     },
     {
       "path": "endpoints.zh-CN.md",
-      "sha256_lf": "2f94a3fce3e69c26cfddd3dcccd4de48de3e435cf13bb0be5fc01c8e43a91712"
+      "sha256_lf": "012f714d23710c88da5c069541b5d18465ac8a7e0029b2d29bae8abe07aab52d"
     },
     {
       "path": "README.md",
-      "sha256_lf": "5992e9ea7840d61d48d1380291f9c5794089a99721b4cb175faf10d804669e13"
+      "sha256_lf": "c70840f046db764a842cb735be28c3fa5134ea20f7becb20ac65509a7e400af2"
     },
     {
       "path": "README.zh-CN.md",
-      "sha256_lf": "2929d72cc92036f72ccc295d92bf05c3a909f87d5a0ac6e8d90e0705b37e6063"
+      "sha256_lf": "94669c12aae791bc2d181a797ac5394afd147450e47315becc4a4f921e24e899"
     }
   ],
-  "existing_dependency_manifest_sha256_lf": "37156de96d7d8b1d4f1f2fd6d3fad7fa55b7165e1fb6486d539b74e6e90cdbe4"
+  "existing_dependency_manifest_sha256_lf": "37156de96d7d8b1d4f1f2fd6d3fad7fa55b7165e1fb6486d539b74e6e90cdbe4",
+  "chinese_pdfs": [
+    {
+      "source": "README.zh-CN.md",
+      "pdf": "README.zh-CN.pdf",
+      "pages": 1,
+      "bytes": 379758,
+      "sha256": "27a7dc9df1bbf7ff16fb3e30dd1f19f7dad96e48cf9fa9095b9476965912ba85",
+      "warnings": []
+    },
+    {
+      "source": "endpoints.zh-CN.md",
+      "pdf": "endpoints.zh-CN.pdf",
+      "pages": 3,
+      "bytes": 1137038,
+      "sha256": "9ccfc611248d2eb555bf9f623859e9a2c4060ebed57a73ea3227b09ce13e727d",
+      "warnings": []
+    },
+    {
+      "source": "blp.zh-CN.md",
+      "pdf": "blp.zh-CN.pdf",
+      "pages": 4,
+      "bytes": 1241248,
+      "sha256": "e6d53e3814fa175caf375d60df636f8377de9af024fe4d9977d965fb44e5c845",
+      "warnings": []
+    },
+    {
+      "source": "bms.zh-CN.md",
+      "pdf": "bms.zh-CN.pdf",
+      "pages": 5,
+      "bytes": 1619552,
+      "sha256": "666c0f4c745f79cb694edb6cec0014f3f5c98920d204c98fb8e33955802fc892",
+      "warnings": []
+    }
+  ],
+  "pdf_rendering": {
+    "edition": "2026-11-14",
+    "renderer": "ReportLab with MathJax SVG formulas rasterized by Sharp; CJK fonts embedded",
+    "pdf_links": "Repository-relative proof references resolve to the corresponding GitHub Markdown sources.",
+    "checks": "Formula-token preservation, bilingual display agreement, numbering, text extraction, and page bounds.",
+    "visual_review": "All 13 final pages rendered with Poppler at 120 dpi and visually reviewed, including equation (5), all tables, and page breaks; no clipping or overlapping formula layout found."
+  }
 }

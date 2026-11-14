@@ -1,5 +1,7 @@
 # BLP and BMS bounds at smaller endpoints · [中文](README.zh-CN.md)
 
+Chinese PDFs: [Overview](README.zh-CN.pdf) · [Common entrance](endpoints.zh-CN.pdf) · [BLP proof](blp.zh-CN.pdf) · [BMS proof](bms.zh-CN.pdf).
+
 This collection edits two paper arguments of 2026-11-09 for inclusion on **2026-11-14**. Assume **ZFC + I3**, using one fixed generator $j$ and its $\operatorname{Iter}(j)$. These are paper proofs, not new Lean certificates or reductions to the assumption that a particular finite-table entry is nonzero.
 
 Write $J_1=j$ and $J_{n+1}=J_n(j)$. Parentheses between embeddings denote application, associated to the left; $\circ$ denotes ordinary composition. The $\gamma_n$ enumerate generated critical points in increasing order. In particular,
@@ -26,10 +28,18 @@ $$
 \boxed{J_{11}(\gamma_3)<\xi<\eta<\Sigma<\Theta.}
 $$
 
-| Construction | Bound at its smaller endpoint | Proof |
-|---|---|---|
-| Ordinary BLP | $r\ge2^{f(P_{25},8)}$ and, independently, $r\ge2^{\Psi^{\circ4}(8)}$, where $\Psi(m)=f(p_{\rm init},m)$ | [All rows and actual witnesses of the 25-row pattern](blp.md) |
-| Six finite types of relative BMS | $s\ge2^Y$, $Y\ge H_{C[7]}(M)$, $M=\mathcal Q(8)\ge2048$; hence $s>F_{C[6]}(M-1)+1$, in particular $s>F_{C[6]}(2047)$ | [Strict supremum bound, type interfaces, and numerical comparison](bms.md) |
+**Ordinary BLP**
+
+$r\ge2^{f(P_{25},8)}$ and, independently, $r\ge2^{\Psi^{\circ4}(8)}$, where $\Psi(m)=f(p_{\rm init},m)$
+
+[All rows and actual witnesses of the 25-row pattern](blp.md)
+
+**Six finite types of relative BMS**
+
+$s\ge2^Y$, $Y\ge H_{C[7]}(M)$, $M=\mathcal Q(8)\ge2048$; hence $s>F_{C[6]}(M-1)+1$, in particular $s>F_{C[6]}(2047)$
+
+[Strict supremum bound, type interfaces, and numerical comparison](bms.md)
+
 
 The ordinary BLP $P_{25}$ joins four seven-row copies of $p_{\rm init}$, retaining $7+6+6+6$ rows. In the BMS statement, $C=I[0][2][1]^8$ uses the fixed original IBLP fundamental sequences. Its 24-row term $C[6]$ is not this 25-row BLP. The exact rank of $C[6]$ is $\alpha_6$, where $\alpha_1=\Lambda=\lim(\mathrm{BMS})$ and $\alpha_{n+1}=\Lambda\omega^{\alpha_n}$. Numerical comparisons use the specified fundamental sequences, not just an ordinal name.
 

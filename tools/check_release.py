@@ -513,6 +513,10 @@ def main():
         for notation in ('RPD','LRD','Omega-LRD3','ARD','ARD-legacy','IPD','ARD2','ARD2-legacy','SPD','CWY','CWY2','Omega-CWY','FMP') for lang in ('','.zh-CN')
     } | {f'proofs/paper/{paper}{lang}.pdf'
          for paper in ('well-ordering','ard-well-ordering', 'ard-legacy-well-ordering', 'rpd-le-ard-a2','ard-le-ard2-13','ipd-well-ordering','ard2-well-ordering','ard2-legacy-well-ordering','spd-well-ordering','cwy2-equivalence','fmp-well-ordering','bms-le-fmp-12242444') for lang in ('','.zh-CN')}
+    expected_pdfs |= {
+        f'laver_table_lower_bounds/lower_endpoints/{paper}.zh-CN.pdf'
+        for paper in ('README', 'endpoints', 'blp', 'bms')
+    }
     actual_pdfs = {p.relative_to(ROOT).as_posix() for p in pdfs}
     if actual_pdfs != expected_pdfs:
         problems.append(f'PDF inventory mismatch: {actual_pdfs ^ expected_pdfs}')
