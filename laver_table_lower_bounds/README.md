@@ -13,6 +13,10 @@ The [independent Lean 4.33.1 project](lean/README.md) contains the [final theore
 
 **Scope:** input `3`, ordinal level `Lambda+omega+1`, ordinary Lean foundations. This is not an object-language ZFC derivation, a proof that `q(5)` exists, or certification of the larger-input/tower/IBLP paper results below. The theorem is quantified over every family of finite tables satisfying the defining equations. Full conventions and boundaries are in the [project README](lean/README.md).
 
+## Lower endpoints (2026-11-12)
+
+The [lower-endpoint extension](lower_endpoint_lean/README.md), added on 2026-11-12, includes the complete conditional $F_{\Lambda+1}(120)$ bound for the stable index of $\kappa^{11}_3$. It also verifies the exact finite-table definition, projection, stability, and low background for $\eta=((J_{11}(J_3))(J_7))(\gamma_3)$. **The BMS tower bound at eta is not yet formalized**; endpoint geometry alone is not that bound.
+
 ## Paper proofs at smaller endpoints (2026-11-14)
 
 The [new bilingual paper collection](lower_endpoints/README.md) separately realizes the ordinary 25-row BLP at $\xi=((J_{11}(J_3))(J_7))(\kappa_2)$ and the six-type BMS tower at $\eta=((J_{11}(J_3))(J_7))(\gamma_3)$. Writing $\xi=\gamma_r$ and $\eta=\gamma_s$, it proves

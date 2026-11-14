@@ -1,0 +1,24 @@
+{
+  "kind": "bounded diagnostic, not a mathematical proof",
+  "script": "tools/coverage-stress.cjs",
+  "random_seed": "0x2287a9",
+  "time_limit_ms": 25000,
+  "node_heap_limit_mib": 512,
+  "source_matrix_columns_max": 17,
+  "witness_index": "target.length * rows + 3",
+  "standardness": "not assumed for either raw matrix",
+  "dimensions": [
+    {"rows": 1, "generated": 1532, "admitted": 350, "pairs": 5251},
+    {"rows": 2, "generated": 2365, "admitted": 350, "pairs": 5975},
+    {"rows": 3, "generated": 2038, "admitted": 350, "pairs": 5203},
+    {"rows": 4, "generated": 2719, "admitted": 350, "pairs": 6471},
+    {"rows": 5, "generated": 2186, "admitted": 350, "pairs": 5253}
+  ],
+  "failure": null,
+  "iterations": 10840,
+  "checked_comparable_pairs": 28153,
+  "elapsed_ms": 4048,
+  "rss_mib": 82,
+  "deadline_reached": false,
+  "conclusion": "No failure in these cases; neither universal coverage nor standardness was proved by this test."
+}

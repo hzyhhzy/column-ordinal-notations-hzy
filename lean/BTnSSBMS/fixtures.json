@@ -1,0 +1,251 @@
+{
+  "kind": "finite executable regression fixtures, not a general equivalence theorem",
+  "sourceEncoderSha256": "5435ee58c199bfd2e63b00deae6f0a1819b2921059ec814b5174c82c0f40655f",
+  "count": 24,
+  "cases": [
+    {
+      "id": 1,
+      "d": 1,
+      "seed": 2,
+      "route": [],
+      "outputColumns": 9
+    },
+    {
+      "id": 2,
+      "d": 1,
+      "seed": 2,
+      "route": [
+        1
+      ],
+      "outputColumns": 10
+    },
+    {
+      "id": 3,
+      "d": 1,
+      "seed": 2,
+      "route": [
+        2
+      ],
+      "outputColumns": 15
+    },
+    {
+      "id": 4,
+      "d": 1,
+      "seed": 2,
+      "route": [
+        2,
+        1
+      ],
+      "outputColumns": 12
+    },
+    {
+      "id": 5,
+      "d": 1,
+      "seed": 2,
+      "route": [
+        2,
+        2
+      ],
+      "outputColumns": 13
+    },
+    {
+      "id": 6,
+      "d": 1,
+      "seed": 2,
+      "route": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        2
+      ],
+      "outputColumns": 0
+    },
+    {
+      "id": 7,
+      "d": 2,
+      "seed": 2,
+      "route": [],
+      "outputColumns": 9
+    },
+    {
+      "id": 8,
+      "d": 2,
+      "seed": 2,
+      "route": [
+        1
+      ],
+      "outputColumns": 10
+    },
+    {
+      "id": 9,
+      "d": 2,
+      "seed": 2,
+      "route": [
+        2
+      ],
+      "outputColumns": 15
+    },
+    {
+      "id": 10,
+      "d": 2,
+      "seed": 2,
+      "route": [
+        2,
+        1
+      ],
+      "outputColumns": 12
+    },
+    {
+      "id": 11,
+      "d": 2,
+      "seed": 2,
+      "route": [
+        2,
+        2
+      ],
+      "outputColumns": 13
+    },
+    {
+      "id": 12,
+      "d": 2,
+      "seed": 2,
+      "route": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        2
+      ],
+      "outputColumns": 6
+    },
+    {
+      "id": 13,
+      "d": 3,
+      "seed": 2,
+      "route": [],
+      "outputColumns": 9
+    },
+    {
+      "id": 14,
+      "d": 3,
+      "seed": 2,
+      "route": [
+        1
+      ],
+      "outputColumns": 10
+    },
+    {
+      "id": 15,
+      "d": 3,
+      "seed": 2,
+      "route": [
+        2
+      ],
+      "outputColumns": 15
+    },
+    {
+      "id": 16,
+      "d": 3,
+      "seed": 2,
+      "route": [
+        2,
+        1
+      ],
+      "outputColumns": 12
+    },
+    {
+      "id": 17,
+      "d": 3,
+      "seed": 2,
+      "route": [
+        2,
+        2
+      ],
+      "outputColumns": 13
+    },
+    {
+      "id": 18,
+      "d": 3,
+      "seed": 2,
+      "route": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        2
+      ],
+      "outputColumns": 13
+    },
+    {
+      "id": 19,
+      "d": 5,
+      "seed": 2,
+      "route": [],
+      "outputColumns": 9
+    },
+    {
+      "id": 20,
+      "d": 5,
+      "seed": 2,
+      "route": [
+        1
+      ],
+      "outputColumns": 10
+    },
+    {
+      "id": 21,
+      "d": 5,
+      "seed": 2,
+      "route": [
+        2
+      ],
+      "outputColumns": 15
+    },
+    {
+      "id": 22,
+      "d": 5,
+      "seed": 2,
+      "route": [
+        2,
+        1
+      ],
+      "outputColumns": 12
+    },
+    {
+      "id": 23,
+      "d": 5,
+      "seed": 2,
+      "route": [
+        2,
+        2
+      ],
+      "outputColumns": 13
+    },
+    {
+      "id": 24,
+      "d": 5,
+      "seed": 2,
+      "route": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        2
+      ],
+      "outputColumns": 13
+    }
+  ]
+}

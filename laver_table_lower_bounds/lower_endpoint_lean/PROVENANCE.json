@@ -1,0 +1,106 @@
+{
+  "date": "2026-11-12",
+  "scope": "K11 BMS+1 bound complete; eta endpoint geometry only; no eta BMS bound yet",
+  "files": [
+    {
+      "source_workspace_relative": "scratch/k11-bound-20261109/lean/K11Bound.lean",
+      "path": "K11Bound.lean",
+      "sha256_lf": "242bed6e30bf7c220022aa11e28061ef4dfe87b9cde2d691b3165b258eba3cd0"
+    },
+    {
+      "source_workspace_relative": "scratch/k11-bound-20261109/lean/K11/Bootstrap.lean",
+      "path": "K11/Bootstrap.lean",
+      "sha256_lf": "30ee3c201944d0f932c503efe762ed23b4c5be20b6c27ac39475c712216da0c6"
+    },
+    {
+      "source_workspace_relative": "scratch/k11-bound-20261109/lean/K11/Core.lean",
+      "path": "K11/Core.lean",
+      "sha256_lf": "8ef301a550bbba8b8b49d30570b626aa9864c30700b09f3ac0317abb64bdc0f6"
+    },
+    {
+      "source_workspace_relative": "scratch/k11-bound-20261109/lean/K11/Counting.lean",
+      "path": "K11/Counting.lean",
+      "sha256_lf": "ab8cc0149a71601e476e3eb51ec6289205fb55b7181f49e6ca540909aa6d1c78"
+    },
+    {
+      "source_workspace_relative": "scratch/k11-bound-20261109/lean/K11/Entrance.lean",
+      "path": "K11/Entrance.lean",
+      "sha256_lf": "eb0f1ad3f861559b08e5830424251a82ff8e768d2457ac198385514f5116b036"
+    },
+    {
+      "source_workspace_relative": "scratch/k11-bound-20261109/lean/K11/FastPostprocess.lean",
+      "path": "K11/FastPostprocess.lean",
+      "sha256_lf": "bcdb1aeae3efa4e6260a9fc0fcad24cafda3a3fc2be68971e9613c03b47ff5bc"
+    },
+    {
+      "source_workspace_relative": "scratch/k11-bound-20261109/lean/K11/Feedback.lean",
+      "path": "K11/Feedback.lean",
+      "sha256_lf": "cec2944286b55bad43e2900384cd8fab0ad9372a2acba0be51b0fdea6804bd5d"
+    },
+    {
+      "source_workspace_relative": "scratch/k11-bound-20261109/lean/K11/Index.lean",
+      "path": "K11/Index.lean",
+      "sha256_lf": "540740ac98674d64bb863eda85681bf199519d629236d5b40ee902dffbd97947"
+    },
+    {
+      "source_workspace_relative": "scratch/k11-bound-20261109/lean/K11/Invariant.lean",
+      "path": "K11/Invariant.lean",
+      "sha256_lf": "b1ec9dba4c0497e666c3127a886059636b97872d1a6c3b902bed28328069ce18"
+    },
+    {
+      "source_workspace_relative": "scratch/k11-bound-20261109/lean/K11/Iteration.lean",
+      "path": "K11/Iteration.lean",
+      "sha256_lf": "43d1f1b53b318f886c5d8a776b62fd3a2778a7d1d37182843fc24e6d90aae01b"
+    },
+    {
+      "source_workspace_relative": "scratch/k11-bound-20261109/lean/K11/Lines.lean",
+      "path": "K11/Lines.lean",
+      "sha256_lf": "9b0db206f0abe06e3865b2e5ce09d79cf0819fdf144cce3c08e32440e0fe2ef5"
+    },
+    {
+      "source_workspace_relative": "scratch/k11-bound-20261109/lean/K11/LocalData.lean",
+      "path": "K11/LocalData.lean",
+      "sha256_lf": "1e3c9cce193967369535263de7653805b3dff5868138fa7b0198b4ebba515e68"
+    },
+    {
+      "source_workspace_relative": "scratch/k11-bound-20261109/lean/K11/LowData.lean",
+      "path": "K11/LowData.lean",
+      "sha256_lf": "7171cc46db0978ea5d8681b7f8414339e4bdf5f0355eac138e99b078004807cb"
+    },
+    {
+      "source_workspace_relative": "scratch/k11-bound-20261109/lean/K11/Map.lean",
+      "path": "K11/Map.lean",
+      "sha256_lf": "a2eee5781a012945b2082ffa82f0052ff797fc7f13b27d1c72b902de1bc9655c"
+    },
+    {
+      "source_workspace_relative": "scratch/k11-bound-20261109/lean/K11/Stability.lean",
+      "path": "K11/Stability.lean",
+      "sha256_lf": "c85d78c4b430a7247105b7d86f94edaa4d5a6b63af4f1b6075c9c20f50db17c2"
+    },
+    {
+      "source_workspace_relative": "scratch/k11-bound-20261109/lean/K11/Successor.lean",
+      "path": "K11/Successor.lean",
+      "sha256_lf": "f29df05b4790d0e9b144e72a1def38fe9c178a4885b2875bc5a8f3f70c14a3a7"
+    },
+    {
+      "source_workspace_relative": "scratch/eta-formalization-20261112/LowerEndpoint/Core.lean",
+      "path": "LowerEndpoint/Core.lean",
+      "sha256_lf": "969299c1ff0e3f8bee101241ce7a715754abd568664de18883fb1ba98e421516"
+    },
+    {
+      "source_workspace_relative": "scratch/eta-formalization-20261112/LowerEndpoint/Entrance.lean",
+      "path": "LowerEndpoint/Entrance.lean",
+      "sha256_lf": "605fc8729953336f1f82fd1fe3d5c8356cff5a342252866a519e00ea85b5cc69"
+    },
+    {
+      "source_workspace_relative": "scratch/eta-formalization-20261112/LowerEndpoint/LocalData.lean",
+      "path": "LowerEndpoint/LocalData.lean",
+      "sha256_lf": "2bfa2295aae911f8f87c81b681a4fc3c5d0b058b70478da3150ccad83a93c231"
+    },
+    {
+      "source_workspace_relative": "scratch/eta-formalization-20261112/LowerEndpoint/Word.lean",
+      "path": "LowerEndpoint/Word.lean",
+      "sha256_lf": "86f10a4591cc6637c0d94244d6385467438429c5927d51eee4683eae5c623ad8"
+    }
+  ]
+}

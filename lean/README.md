@@ -1,5 +1,10 @@
 # Lean proofs for seven notations · [中文版](README.zh-CN.md)
 
+2026-10-22: [BTnSSBMS](BTnSSBMS/README.md) is a new, isolated **partial research
+formalization**, outside the completed seven-notation projects and their receipt
+counts below. Mathematical proof gaps remain in the BTnSS-to-BMS upper-bound
+argument, not merely unfinished formalization; this project does not certify that theorem.
+
 2026-09-17: default ARD2 is the skyline edition; [ARD2-legacy](ARD2-legacy/README.md) retains all 21 unchanged old mathematical modules. The new project owns seven modules with a 57-module closure; legacy has 51. The current [ARD2RevisionFinalAudit](src/ARD2RevisionFinalAudit.lean) covers 338 modules. September 14/16 counts below are historical; project receipts state current certification. Exact isomorphism remains a paper result.
 
 2026-09-16: default ARD is now the skyline edition, with ARD-legacy preserved. The new rule's well-ordering passed 56 modules / 178 reports, including seven newly compiled modules. The relocated legacy project passed 50 modules / 156 reports. The current aggregate receipt contains 330 modules / 897 reports: five aggregate entries freshly compiled and 325 verified modules reused. The dated 2026-09-14 split-verification accounts below are historical. The full legacy isomorphism and cross-notation comparisons remain paper results, not consequences of printed axiom lists.

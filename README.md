@@ -8,14 +8,16 @@ The notation implementations are **SRPD, RPD, LRD, Ω-LRD3, ARD, IPD, ARD2, SPD,
 
 ## BTnSS below fixed-row BMS (2026-10-22)
 
-The [new bilingual paper](research/btnss-bms/upper-bound.md) gives, for every finite $n\ge2$,
+The [new bilingual research argument](research/btnss-bms/upper-bound.md) aims to prove, for every finite $n\ge2$,
 
 $$
 \lim(\mathrm{BTnSS})\le |(0^{n+1})(1^{n+1})(2^{n+1})(3^{n+1})|
 <|(0^{n+2})(1^{n+2})|.
 $$
 
-The source is **strong BT*(-1)Y-nSS v2**; the right endpoint is the supremum of **standard $(n+1)$-row BMS**, using BM4's short fundamental sequence. This is an entire-standard-domain order embedding, not equality or indexed-FS commutation. The [proof collection](research/btnss-bms/README.md) includes the finite-invariant and context-transport dependencies, provenance and bounded-audit records. **Paper proof, not Lean-certified.** Target standardness is proved separately; no ordinal bound for arbitrary nonstandard matrices is inferred from their raw lexicographic order. No existing notation implementation or Lean project changes.
+The source is **strong BT*(-1)Y-nSS v2**; the right endpoint is the supremum of **standard $(n+1)$-row BMS**, using BM4's short fundamental sequence. The goal is an entire-standard-domain order embedding, not equality or indexed-FS commutation. The [research collection](research/btnss-bms/README.md) includes the finite-invariant and context-transport arguments, provenance and bounded-audit records.
+
+**The original completion claim has been withdrawn: mathematical proof gaps remain, not merely a Lean translation.** Standard-domain block invariants, complete block transport, concrete coverage and target standardness still need to be established. An order-preserving raw-matrix encoding and uniform lexicographic ceiling do not suffice for the displayed ordinal bound. No counterexample to the main bound is known from this audit, but it is not an established theorem. The [independent Lean project](lean/BTnSSBMS/README.md) certifies only its completed partial results; existing implementations and the seven previously collected Lean projects are unchanged.
 
 ## Laver-table lower bounds (2026-11-06)
 
