@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "collection": "smaller-endpoint-blp-bms-paper-proofs",
+  "publication_edition": "2026-11-14",
+  "research_edition": "2026-11-09",
+  "foundations": "ZFC + I3, one fixed Iter(j)",
+  "certification": {
+    "paper_proofs": true,
+    "new_lean_proof": false,
+    "independent_mathematical_review": false
+  },
+  "editing": [
+    "Bilingual presentation in four paired documents.",
+    "Common strict endpoint comparisons proved separately before either construction.",
+    "Preserve distinct xi and eta endpoints, non-strict index inequalities there, and natural input Q(8).",
+    "Reuse only explicitly linked public and already collected mathematical dependencies.",
+    "Original scratch paths identify provenance only; they are not reader dependencies."
+  ],
+  "sources": [
+    {
+      "source_workspace_relative": "scratch/j13-gamma16-fgh-lower-20261109/entry-and-parametric-fgh-bound.zh-CN.txt",
+      "source_sha256": "700198b3bd5c928e472a5a29bc026b8c1fe948b6844a3aa3f5958d57a0a5f062",
+      "role": "common entrance, strict comparisons, six-type geometry, natural input"
+    },
+    {
+      "source_workspace_relative": "scratch/j13-gamma16-fgh-lower-20261109/lower-bms-endpoint-eta.zh-CN.txt",
+      "source_sha256": "8066017a2759791356ba9bed01563d96010d08cc96f1b436737f32c028812019",
+      "role": "extract the smaller actual BMS endpoint and distinguish its spectrum index"
+    },
+    {
+      "source_workspace_relative": "scratch/j13-gamma16-fgh-lower-20261109/blp25-strict-transfer.zh-CN.txt",
+      "source_sha256": "f7077d6e9c03d73bd4cc924551726d0e04eeee1d027044473ba01b1f49291e77",
+      "role": "four-stage actual realization of the full ordinary 25-row BLP"
+    },
+    {
+      "source_workspace_relative": "scratch/j13-gamma16-fgh-lower-20261109/blp25-both-completions.zh-CN.txt",
+      "source_sha256": "e3b6b1f1939c432732c765d65780fd910034e58c2ce1d9d21b14af4aaa9999ef",
+      "role": "separate marked-completion certificate and quantitative corollary"
+    }
+  ],
+  "packaged_documents": [
+    {
+      "path": "blp.md",
+      "sha256_lf": "2ef74ac6bed342e7579c6178e269a6f5f2c9bf684c9d42f457041aea10ba2fda"
+    },
+    {
+      "path": "blp.zh-CN.md",
+      "sha256_lf": "b3f83bf10054774ac42501ac12e7dd9e6bf8a746f4f09f773be6c8c19c21f5a8"
+    },
+    {
+      "path": "bms.md",
+      "sha256_lf": "32198fbe8a384a802dd060af46f29037a7e41ecc22894a48727ec0e72a106f31"
+    },
+    {
+      "path": "bms.zh-CN.md",
+      "sha256_lf": "bc6c49509c4bcac2eec33e12af75b3561f12df47fd322d2edacb3624d0583b5e"
+    },
+    {
+      "path": "endpoints.md",
+      "sha256_lf": "912c98550a51e3cca5911ceed344754af2056d9fa5d75211e96f532218f52664"
+    },
+    {
+      "path": "endpoints.zh-CN.md",
+      "sha256_lf": "2f94a3fce3e69c26cfddd3dcccd4de48de3e435cf13bb0be5fc01c8e43a91712"
+    },
+    {
+      "path": "README.md",
+      "sha256_lf": "5992e9ea7840d61d48d1380291f9c5794089a99721b4cb175faf10d804669e13"
+    },
+    {
+      "path": "README.zh-CN.md",
+      "sha256_lf": "2929d72cc92036f72ccc295d92bf05c3a909f87d5a0ac6e8d90e0705b37e6063"
+    }
+  ],
+  "existing_dependency_manifest_sha256_lf": "37156de96d7d8b1d4f1f2fd6d3fad7fa55b7165e1fb6486d539b74e6e90cdbe4"
+}

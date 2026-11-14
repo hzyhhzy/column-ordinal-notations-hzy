@@ -13,6 +13,23 @@ The [independent Lean 4.33.1 project](lean/README.md) contains the [final theore
 
 **Scope:** input `3`, ordinal level `Lambda+omega+1`, ordinary Lean foundations. This is not an object-language ZFC derivation, a proof that `q(5)` exists, or certification of the larger-input/tower/IBLP paper results below. The theorem is quantified over every family of finite tables satisfying the defining equations. Full conventions and boundaries are in the [project README](lean/README.md).
 
+## Paper proofs at smaller endpoints (2026-11-14)
+
+The [new bilingual paper collection](lower_endpoints/README.md) separately realizes the ordinary 25-row BLP at $\xi=((J_{11}(J_3))(J_7))(\kappa_2)$ and the six-type BMS tower at $\eta=((J_{11}(J_3))(J_7))(\gamma_3)$. Writing $\xi=\gamma_r$ and $\eta=\gamma_s$, it proves
+
+$$
+r\ge2^{f(P_{25},8)},\qquad
+s>F_{C[6]}(M-1)+1,\quad M=\mathcal Q(8)\ge2048.
+$$
+
+Here $C=I[0][2][1]^8$; its fundamental sequences and the natural input are fixed in the papers. The [common entrance proof](lower_endpoints/endpoints.md) establishes the full strict chain
+
+$$
+\xi<\eta<J_{13}(\gamma_{16})<J_{11}(\kappa_3).
+$$
+
+Both are **ZFC + I3 paper results**, outside the Lean certification above. Their actual endpoints and quantitative functions are stated separately.
+
 ## Archived paper results
 
 The main papers replace the old arbitrarily prescribed large input with the integer naturally produced by the original proof and derive the resulting numerical bounds.

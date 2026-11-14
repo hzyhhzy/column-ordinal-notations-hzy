@@ -26,6 +26,8 @@ $$
 - [**BMS 指数塔下界**](laver_table_lower_bounds/01-blp-tower.zh-CN.md)：$q(5)>F_{\alpha_6}(M-1)$，且 $q(5)>H_{\alpha_7}(M)$，采用文中的基本列及自然输入。
 - [**IBLP modify 次数界**](laver_table_lower_bounds/03-iblp-modify.zh-CN.md)：从指定初值 $S_*$ 出发，保留标记补全的 paper-guard modify＋删行总次数小于 $2^{q(5)}$，其中删行次数小于 $q(5)$。
 
+另已收录[更小端点的 BLP、BMS 纸面下界及严格端点比较](laver_table_lower_bounds/lower_endpoints/README.zh-CN.md)（2026-11-14，ZFC + I3），包括各自端点小于 $J_{13}(\gamma_{16})<J_{11}(\kappa_3)$ 的证明。
+
 ## CDMN：前缀零项修改及局部结论（2026-10-10）
 
 [**CDMN — Compact Deep Mountain Notation，紧凑深层山脉记号**](notations/CDMN/definition.zh-CN.md) 收录独立四视图 [NER](notations/CDMN/CDMN.ne-rewritten.js)、[Python 核心](notations/CDMN/cdmn.py)、双语定义、[有限性质论文](proofs/paper/cdmn-properties.zh-CN.md)及[研究索引](research/cdmn/README.zh-CN.md)。两份实现已同步为**前缀零项版**：活动复制层的 `[0]` 删除该层末列，外围只替换受影响的行；正指标不变、不平移。保留默认“BTBMS式”、“列表”、“完整列表”和自然数行“计数序列”，计数范围外自动回退 BTBMS 式。NER 使用新注册 ID，隔离旧零项规则下的保存树。

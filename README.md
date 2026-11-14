@@ -26,6 +26,8 @@ Under **ZFC + I3**, put $\alpha_1=\Lambda$ and $\alpha_{n+1}=\Lambda\omega^{\alp
 - [**BMS tower lower bounds**](laver_table_lower_bounds/01-blp-tower.zh-CN.md): $q(5)>F_{\alpha_6}(M-1)$ and $q(5)>H_{\alpha_7}(M)$, with the linked fundamental sequences and natural input.
 - [**IBLP modify-count bound**](laver_table_lower_bounds/03-iblp-modify.zh-CN.md): from the specified $S_*$, paper-guard modify plus cuts total less than $2^{q(5)}$ steps, and cuts total less than $q(5)$, retaining marked completion.
 
+Also collected: [BLP and BMS paper bounds at smaller endpoints, with strict endpoint comparisons](laver_table_lower_bounds/lower_endpoints/README.md) (2026-11-14, ZFC + I3), including both construction endpoints below $J_{13}(\gamma_{16})<J_{11}(\kappa_3)$.
+
 ## CDMN: prefix-zero revision and local results (2026-10-10)
 
 [**CDMN — Compact Deep Mountain Notation**](notations/CDMN/definition.md) includes a self-contained four-view [NER expander](notations/CDMN/CDMN.ne-rewritten.js), independent [Python core](notations/CDMN/cdmn.py), bilingual definition, [finite-properties paper](proofs/paper/cdmn-properties.md) and [research index](research/cdmn/README.md). Both implementations now use the **prefix-zero rule**: at the active copy layer, `[0]` deletes that layer's last column; enclosing layers only replace the affected row. Positive indices are unchanged, not shifted. The default BTBMS-style, List, Full List and natural-row Count Sequence views remain available; counts fall back to BTBMS-style outside their domain. A new registration ID separates saved trees from the old zero rule.
